@@ -40,6 +40,10 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>lib\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="JacksonSoft.CustomTabControl, Version=1.0.1.7, Culture=neutral, PublicKeyToken=53c237210c7e462d, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\JacksonSoft.CustomTabControl.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>lib\mysql\MySql.Data.dll</HintPath>

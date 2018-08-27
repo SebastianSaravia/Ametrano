@@ -97,7 +97,6 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            
             this.customTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
