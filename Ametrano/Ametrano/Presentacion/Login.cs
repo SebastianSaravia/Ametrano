@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ametrano.Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,12 +26,12 @@ namespace Ametrano.Presentacion
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        private void btnCerrar2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -41,14 +42,76 @@ namespace Ametrano.Presentacion
             SendMessage(this.Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void txtUsuario_Enter(object sender, EventArgs e)
         {
+            if (txtUsuario.Text.Equals("Usuario"))
+            {
+                txtUsuario.Text = "";
+                txtUsuario.ForeColor = Color.Black;
+            }
+        }
 
+        private void txtUsuario_Leave(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text.Equals(""))
+            {
+                txtUsuario.Text = "Usuario";
+                txtUsuario.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtPass_Enter(object sender, EventArgs e)
+        {
+            if (txtPass.Text.Equals("Contraseña"))
+            {
+                txtPass.Text = "";
+                txtPass.PasswordChar = '●';
+                txtPass.ForeColor = Color.Black;
+            }else
+            {
+                txtPass.PasswordChar = '●';
+                txtPass.ForeColor = Color.Black;
+            }
+           
+        }
+
+        private void txtPass_Leave(object sender, EventArgs e)
+        {
+            if (txtPass.Text.Equals(""))
+            {
+                txtPass.Text = "Contraseña";
+                txtPass.PasswordChar = '\0';
+                txtPass.ForeColor = Color.Gray;
+            }
+            else
+            {
+                txtPass.PasswordChar = '●';
+                txtPass.ForeColor = Color.Black;
+            }
+            
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            String usuario = txtUsuario.Text;
+            String contrasenia = txtPass.Text;
+
+            //luego se debe verificar que no sean vacios
+
+            Login_Controlador controlador = new Login_Controlador();
+            bool valorRetornado = controlador.loginbtn_function(usuario, contrasenia);
+            if (valorRetornado)
+            {
+                this.Hide();
+            }else
+            {
+                MessageBox.Show(null,"Usuario o contraseña incorrectos\nVuelva a intentarlo","Error de credenciales",MessageBoxButtons.OK,MessageBoxIcon.Error,MessageBoxDefaultButton.Button1);
+            }
         }
 
         private void Login_Load(object sender, EventArgs e)
         {
-
+            txtUsuario.Focus();
         }
     }
 }
