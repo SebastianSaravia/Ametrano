@@ -45,7 +45,7 @@
       <HintPath>lib\JacksonSoft.CustomTabControl.dll</HintPath>
     </Reference>
     <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <HintPath>lib\MaterialSkin.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
@@ -113,9 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Persistencia\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\bg_login.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\close_black.png" />
