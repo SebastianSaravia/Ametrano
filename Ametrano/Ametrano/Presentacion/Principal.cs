@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ametrano.Logica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace Ametrano.Presentacion
 {
     public partial class Principal : Form
@@ -16,5 +18,7 @@ namespace Ametrano.Presentacion
         {
             InitializeComponent();
         }
+
+       
     }
 }

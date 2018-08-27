@@ -39,6 +39,9 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>lib\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="JacksonSoft.CustomTabControl">
+      <HintPath>..\..\..\..\..\Downloads\JacksonSoft.CustomTabControl.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>lib\mysql\MySql.Data.dll</HintPath>
@@ -58,6 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logica\Login_Controlador.cs" />
+    <Compile Include="Logica\Tab.cs" />
     <Compile Include="Presentacion\Login.cs">
       <SubType>Form</SubType>
     </Compile>
