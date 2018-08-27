@@ -8,13 +8,20 @@ namespace Ametrano.Logica
 {
     class Login_Controlador
     {
-        public Boolean loginbtn_function(String usuario, String contrasenia)
-        {
-            
+        public bool loginbtn_function(String usuario, String contrasenia)
+        {   //Metodo que verifica que el usuario y la contraseña existan y sean correctos
+            bool variableParaRetornar = false;//C
+            if(usuario.Equals("admin") && contrasenia.Equals("admin"))
+            {
+                variableParaRetornar = true;
+            }
+            else{
+                variableParaRetornar = false;
+            }
 
 
 
-            return false;
+            return variableParaRetornar;
         }
 
 
