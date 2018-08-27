@@ -44,6 +44,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>lib\JacksonSoft.CustomTabControl.dll</HintPath>
     </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>lib\mysql\MySql.Data.dll</HintPath>
@@ -63,7 +67,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logica\Login_Controlador.cs" />
-    <Compile Include="Logica\Tab.cs" />
     <Compile Include="Presentacion\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +97,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
