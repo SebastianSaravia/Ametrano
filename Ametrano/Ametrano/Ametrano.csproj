@@ -37,9 +37,12 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.5.3">
-      <HintPath>..\..\..\..\..\Desktop\Bunifu_UI_v1.5.3.dll</HintPath>
+      <HintPath>lib\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data">
+      <HintPath>lib\mysql\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -54,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\Login_Controlador.cs" />
     <Compile Include="Presentacion\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,7 +93,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Logica\" />
     <Folder Include="Persistencia\" />
   </ItemGroup>
   <ItemGroup>
