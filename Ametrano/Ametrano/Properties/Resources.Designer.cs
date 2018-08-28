@@ -103,9 +103,29 @@ namespace Ametrano.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap img_curso {
+            get {
+                object obj = ResourceManager.GetObject("img_curso", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_docente {
             get {
                 object obj = ResourceManager.GetObject("img_docente", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap img_options {
+            get {
+                object obj = ResourceManager.GetObject("img_options", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

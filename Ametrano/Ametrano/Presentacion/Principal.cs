@@ -1,5 +1,4 @@
 ﻿using Ametrano.Logica;
-using MaterialSkin.Controls;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,7 +39,32 @@ namespace Ametrano.Presentacion
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
-            tabControl1.SelectedIndex = 1;
+          
+        }
+
+        private void groupBox5_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
