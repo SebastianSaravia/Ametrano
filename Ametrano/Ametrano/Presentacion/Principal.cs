@@ -26,10 +26,21 @@ namespace Ametrano.Presentacion
             Application.Exit();
         }
 
-        private void Principal_Load(object sender, EventArgs e)
+       
+
+        private void label1_Click(object sender, EventArgs e)
         {
-            tabPage1.Parent = null;
-            
+
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 0;
+        }
+
+        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        {
+            tabControl1.SelectedIndex = 1;
         }
     }
 }

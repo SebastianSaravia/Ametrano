@@ -40,14 +40,6 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>lib\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
-    <Reference Include="JacksonSoft.CustomTabControl, Version=1.0.1.7, Culture=neutral, PublicKeyToken=53c237210c7e462d, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>lib\JacksonSoft.CustomTabControl.dll</HintPath>
-    </Reference>
-    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>lib\MaterialSkin.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="MySql.Data">
       <HintPath>lib\mysql\MySql.Data.dll</HintPath>
@@ -125,6 +117,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\blue-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_docente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\img_alumno.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
