@@ -25,46 +25,19 @@ namespace Ametrano.Presentacion
             Application.Exit();
         }
 
-       
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void btnDocentes_Click(object sender, EventArgs e)
         {
             tabControl1.SelectedIndex = 0;
         }
 
-        private void bunifuImageButton2_Click(object sender, EventArgs e)
+        private void btnAlumnos_Click(object sender, EventArgs e)
         {
-          
+            tabControl1.SelectedIndex = 1;
         }
 
-        private void groupBox5_Enter(object sender, EventArgs e)
+        private void btnCursos_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
+            tabControl1.SelectedIndex = 2;
         }
     }
 }

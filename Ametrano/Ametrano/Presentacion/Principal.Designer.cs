@@ -34,6 +34,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnAlumnos = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnDocentes = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,6 +48,7 @@
             this.pageDocente = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tab2Page1 = new System.Windows.Forms.TabPage();
+            this.btnIngresarDocente = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnQuitar = new System.Windows.Forms.Button();
             this.btnAñadir = new System.Windows.Forms.Button();
@@ -59,16 +64,10 @@
             this.txtNombre1Docente = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente = new System.Windows.Forms.TextBox();
             this.tab2Page2 = new System.Windows.Forms.TabPage();
-            this.tab2Page3 = new System.Windows.Forms.TabPage();
-            this.pageAlumno = new System.Windows.Forms.TabPage();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnAlumnos = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnDocentes = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnIngresarDocente = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnQuitar2 = new System.Windows.Forms.Button();
             this.btnAñadir2 = new System.Windows.Forms.Button();
@@ -83,22 +82,28 @@
             this.txtNombre2Docente2 = new System.Windows.Forms.TextBox();
             this.txtNombre1Docente2 = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente2 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.tab2Page3 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.pageAlumno = new System.Windows.Forms.TabPage();
+            this.tabControl3 = new System.Windows.Forms.TabControl();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.pageCursos = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.pageDocente.SuspendLayout();
@@ -107,16 +112,12 @@
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.tab2Page2.SuspendLayout();
-            this.tab2Page3.SuspendLayout();
-            this.pageAlumno.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tab2Page3.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            this.pageAlumno.SuspendLayout();
+            this.tabControl3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -127,7 +128,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.bunifuImageButton1);
-            this.panel1.Controls.Add(this.bunifuImageButton2);
+            this.panel1.Controls.Add(this.btnCursos);
             this.panel1.Controls.Add(this.btnAlumnos);
             this.panel1.Controls.Add(this.btnDocentes);
             this.panel1.Location = new System.Drawing.Point(0, 12);
@@ -146,7 +147,6 @@
             this.label3.Size = new System.Drawing.Size(162, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "              Configuracion          ";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // label4
             // 
@@ -159,7 +159,6 @@
             this.label4.Size = new System.Drawing.Size(122, 16);
             this.label4.TabIndex = 1;
             this.label4.Text = "              Cursos          ";
-            this.label4.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -172,7 +171,6 @@
             this.label2.Size = new System.Drawing.Size(132, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "              Alumnos          ";
-            this.label2.Click += new System.EventHandler(this.label1_Click);
             // 
             // label1
             // 
@@ -185,7 +183,65 @@
             this.label1.Size = new System.Drawing.Size(138, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "              Docentes          ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = global::Ametrano.Properties.Resources.img_options;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(6, 449);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(73, 77);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 0;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 5;
+            // 
+            // btnCursos
+            // 
+            this.btnCursos.BackColor = System.Drawing.Color.Transparent;
+            this.btnCursos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCursos.Image = global::Ametrano.Properties.Resources.img_curso;
+            this.btnCursos.ImageActive = null;
+            this.btnCursos.Location = new System.Drawing.Point(6, 204);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(73, 77);
+            this.btnCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCursos.TabIndex = 0;
+            this.btnCursos.TabStop = false;
+            this.btnCursos.Zoom = 5;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
+            // btnAlumnos
+            // 
+            this.btnAlumnos.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
+            this.btnAlumnos.ImageActive = null;
+            this.btnAlumnos.Location = new System.Drawing.Point(6, 111);
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(73, 77);
+            this.btnAlumnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAlumnos.TabIndex = 0;
+            this.btnAlumnos.TabStop = false;
+            this.btnAlumnos.Zoom = 5;
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            // 
+            // btnDocentes
+            // 
+            this.btnDocentes.BackColor = System.Drawing.Color.Transparent;
+            this.btnDocentes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDocentes.Image = global::Ametrano.Properties.Resources.img_docente;
+            this.btnDocentes.ImageActive = null;
+            this.btnDocentes.Location = new System.Drawing.Point(6, 18);
+            this.btnDocentes.Name = "btnDocentes";
+            this.btnDocentes.Size = new System.Drawing.Size(73, 77);
+            this.btnDocentes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDocentes.TabIndex = 0;
+            this.btnDocentes.TabStop = false;
+            this.btnDocentes.Zoom = 5;
+            this.btnDocentes.Click += new System.EventHandler(this.btnDocentes_Click);
             // 
             // menuStrip1
             // 
@@ -237,6 +293,7 @@
             // 
             this.tabControl1.Controls.Add(this.pageDocente);
             this.tabControl1.Controls.Add(this.pageAlumno);
+            this.tabControl1.Controls.Add(this.pageCursos);
             this.tabControl1.Location = new System.Drawing.Point(87, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -277,6 +334,16 @@
             this.tab2Page1.Size = new System.Drawing.Size(1089, 521);
             this.tab2Page1.TabIndex = 0;
             this.tab2Page1.Text = "Ingresar nuevo";
+            // 
+            // btnIngresarDocente
+            // 
+            this.btnIngresarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarDocente.Location = new System.Drawing.Point(836, 455);
+            this.btnIngresarDocente.Name = "btnIngresarDocente";
+            this.btnIngresarDocente.Size = new System.Drawing.Size(245, 48);
+            this.btnIngresarDocente.TabIndex = 3;
+            this.btnIngresarDocente.Text = "Ingresar docente";
+            this.btnIngresarDocente.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -429,132 +496,49 @@
             this.tab2Page2.TabIndex = 1;
             this.tab2Page2.Text = "Consultar / Modificar";
             // 
-            // tab2Page3
+            // button1
             // 
-            this.tab2Page3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tab2Page3.Controls.Add(this.button4);
-            this.tab2Page3.Controls.Add(this.label9);
-            this.tab2Page3.Controls.Add(this.groupBox5);
-            this.tab2Page3.Controls.Add(this.textBox3);
-            this.tab2Page3.Controls.Add(this.button2);
-            this.tab2Page3.Controls.Add(this.textBox2);
-            this.tab2Page3.Controls.Add(this.comboBox2);
-            this.tab2Page3.Location = new System.Drawing.Point(4, 22);
-            this.tab2Page3.Name = "tab2Page3";
-            this.tab2Page3.Size = new System.Drawing.Size(1089, 521);
-            this.tab2Page3.TabIndex = 2;
-            this.tab2Page3.Text = "Dar de baja";
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(711, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 29);
+            this.button1.TabIndex = 8;
+            this.button1.Text = "Buscar";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // pageAlumno
+            // textBox1
             // 
-            this.pageAlumno.BackColor = System.Drawing.Color.LightGray;
-            this.pageAlumno.Controls.Add(this.tabControl3);
-            this.pageAlumno.Location = new System.Drawing.Point(4, 22);
-            this.pageAlumno.Name = "pageAlumno";
-            this.pageAlumno.Padding = new System.Windows.Forms.Padding(3);
-            this.pageAlumno.Size = new System.Drawing.Size(1089, 536);
-            this.pageAlumno.TabIndex = 1;
-            this.pageAlumno.Text = "tab1Page2";
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(501, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(192, 24);
+            this.textBox1.TabIndex = 7;
             // 
-            // tabControl3
+            // comboBox1
             // 
-            this.tabControl3.Controls.Add(this.tabPage3);
-            this.tabControl3.Controls.Add(this.tabPage4);
-            this.tabControl3.Location = new System.Drawing.Point(-4, 1);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1097, 547);
-            this.tabControl3.TabIndex = 1;
+            this.comboBox1.AccessibleDescription = "";
+            this.comboBox1.DisplayMember = "sadsa";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Nombre",
+            "Cedula"});
+            this.comboBox1.Location = new System.Drawing.Point(363, 50);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(132, 26);
+            this.comboBox1.TabIndex = 6;
+            this.comboBox1.Tag = "";
             // 
-            // tabPage3
+            // button3
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1089, 521);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Ingresar nuevo";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1089, 521);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Consultar / Modificar";
-            // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1.Image = global::Ametrano.Properties.Resources.img_options;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(6, 449);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(73, 77);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 0;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Zoom = 5;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
-            // bunifuImageButton2
-            // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton2.Image = global::Ametrano.Properties.Resources.img_curso;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(6, 204);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(73, 77);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 0;
-            this.bunifuImageButton2.TabStop = false;
-            this.bunifuImageButton2.Zoom = 5;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
-            // btnAlumnos
-            // 
-            this.btnAlumnos.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
-            this.btnAlumnos.ImageActive = null;
-            this.btnAlumnos.Location = new System.Drawing.Point(6, 111);
-            this.btnAlumnos.Name = "btnAlumnos";
-            this.btnAlumnos.Size = new System.Drawing.Size(73, 77);
-            this.btnAlumnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAlumnos.TabIndex = 0;
-            this.btnAlumnos.TabStop = false;
-            this.btnAlumnos.Zoom = 5;
-            this.btnAlumnos.Click += new System.EventHandler(this.bunifuImageButton2_Click);
-            // 
-            // btnDocentes
-            // 
-            this.btnDocentes.BackColor = System.Drawing.Color.Transparent;
-            this.btnDocentes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDocentes.Image = global::Ametrano.Properties.Resources.img_docente;
-            this.btnDocentes.ImageActive = null;
-            this.btnDocentes.Location = new System.Drawing.Point(6, 18);
-            this.btnDocentes.Name = "btnDocentes";
-            this.btnDocentes.Size = new System.Drawing.Size(73, 77);
-            this.btnDocentes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDocentes.TabIndex = 0;
-            this.btnDocentes.TabStop = false;
-            this.btnDocentes.Zoom = 5;
-            this.btnDocentes.Click += new System.EventHandler(this.bunifuImageButton1_Click);
-            // 
-            // btnIngresarDocente
-            // 
-            this.btnIngresarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresarDocente.Location = new System.Drawing.Point(836, 455);
-            this.btnIngresarDocente.Name = "btnIngresarDocente";
-            this.btnIngresarDocente.Size = new System.Drawing.Size(245, 48);
-            this.btnIngresarDocente.TabIndex = 3;
-            this.btnIngresarDocente.Text = "Ingresar docente";
-            this.btnIngresarDocente.UseVisualStyleBackColor = true;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(838, 459);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(245, 48);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Actualizar datos";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -691,49 +675,97 @@
             this.txtCedulaDocente2.Size = new System.Drawing.Size(192, 24);
             this.txtCedulaDocente2.TabIndex = 0;
             // 
-            // button3
+            // tab2Page3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(838, 459);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(245, 48);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Actualizar datos";
-            this.button3.UseVisualStyleBackColor = true;
+            this.tab2Page3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tab2Page3.Controls.Add(this.button4);
+            this.tab2Page3.Controls.Add(this.label9);
+            this.tab2Page3.Controls.Add(this.groupBox5);
+            this.tab2Page3.Controls.Add(this.textBox3);
+            this.tab2Page3.Controls.Add(this.button2);
+            this.tab2Page3.Controls.Add(this.textBox2);
+            this.tab2Page3.Controls.Add(this.comboBox2);
+            this.tab2Page3.Location = new System.Drawing.Point(4, 22);
+            this.tab2Page3.Name = "tab2Page3";
+            this.tab2Page3.Size = new System.Drawing.Size(1089, 521);
+            this.tab2Page3.TabIndex = 2;
+            this.tab2Page3.Text = "Dar de baja";
             // 
-            // comboBox1
+            // button4
             // 
-            this.comboBox1.AccessibleDescription = "";
-            this.comboBox1.DisplayMember = "sadsa";
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Nombre",
-            "Cedula"});
-            this.comboBox1.Location = new System.Drawing.Point(363, 50);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(132, 26);
-            this.comboBox1.TabIndex = 6;
-            this.comboBox1.Tag = "";
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(401, 292);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(245, 48);
+            this.button4.TabIndex = 14;
+            this.button4.Text = "Dar de baja";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // label9
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(501, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 24);
-            this.textBox1.TabIndex = 7;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(537, 120);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(172, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Motivo por el cual se le da de baja:";
             // 
-            // button1
+            // groupBox5
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(711, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 29);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Buscar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.groupBox5.Controls.Add(this.label8);
+            this.groupBox5.Controls.Add(this.label7);
+            this.groupBox5.Controls.Add(this.label6);
+            this.groupBox5.Controls.Add(this.label5);
+            this.groupBox5.Location = new System.Drawing.Point(128, 120);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(349, 129);
+            this.groupBox5.TabIndex = 13;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Datos del docente";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(22, 30);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(43, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Cedula:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(21, 96);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Email:";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(21, 73);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(47, 13);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Apellido:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(21, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(47, 13);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Nombre:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(540, 136);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(375, 113);
+            this.textBox3.TabIndex = 12;
             // 
             // button2
             // 
@@ -769,86 +801,55 @@
             this.comboBox2.TabIndex = 9;
             this.comboBox2.Tag = "";
             // 
-            // textBox3
+            // pageAlumno
             // 
-            this.textBox3.Location = new System.Drawing.Point(540, 136);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(375, 113);
-            this.textBox3.TabIndex = 12;
+            this.pageAlumno.BackColor = System.Drawing.Color.LightGray;
+            this.pageAlumno.Controls.Add(this.tabControl3);
+            this.pageAlumno.Location = new System.Drawing.Point(4, 22);
+            this.pageAlumno.Name = "pageAlumno";
+            this.pageAlumno.Padding = new System.Windows.Forms.Padding(3);
+            this.pageAlumno.Size = new System.Drawing.Size(1089, 536);
+            this.pageAlumno.TabIndex = 1;
+            this.pageAlumno.Text = "tab1Page2";
             // 
-            // groupBox5
+            // tabControl3
             // 
-            this.groupBox5.Controls.Add(this.label8);
-            this.groupBox5.Controls.Add(this.label7);
-            this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.label5);
-            this.groupBox5.Location = new System.Drawing.Point(128, 120);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(349, 129);
-            this.groupBox5.TabIndex = 13;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Datos del docente";
-            this.groupBox5.Enter += new System.EventHandler(this.groupBox5_Enter);
+            this.tabControl3.Controls.Add(this.tabPage3);
+            this.tabControl3.Controls.Add(this.tabPage4);
+            this.tabControl3.Location = new System.Drawing.Point(-4, 1);
+            this.tabControl3.Name = "tabControl3";
+            this.tabControl3.SelectedIndex = 0;
+            this.tabControl3.Size = new System.Drawing.Size(1097, 547);
+            this.tabControl3.TabIndex = 1;
             // 
-            // label5
+            // tabPage3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Nombre:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
+            this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1089, 521);
+            this.tabPage3.TabIndex = 0;
+            this.tabPage3.Text = "Ingresar nuevo";
             // 
-            // label6
+            // tabPage4
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(21, 73);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(47, 13);
-            this.label6.TabIndex = 0;
-            this.label6.Text = "Apellido:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.tabPage4.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(1089, 521);
+            this.tabPage4.TabIndex = 1;
+            this.tabPage4.Text = "Consultar / Modificar";
             // 
-            // label7
+            // pageCursos
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(21, 96);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Email:";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(22, 30);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(43, 13);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Cedula:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(537, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Motivo por el cual se le da de baja:";
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(401, 292);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(245, 48);
-            this.button4.TabIndex = 14;
-            this.button4.Text = "Dar de baja";
-            this.button4.UseVisualStyleBackColor = true;
+            this.pageCursos.BackColor = System.Drawing.Color.LightGray;
+            this.pageCursos.Location = new System.Drawing.Point(4, 22);
+            this.pageCursos.Name = "pageCursos";
+            this.pageCursos.Size = new System.Drawing.Size(1089, 536);
+            this.pageCursos.TabIndex = 2;
+            this.pageCursos.Text = "tab1Page3";
             // 
             // Principal
             // 
@@ -869,6 +870,10 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -880,19 +885,15 @@
             this.groupBox1.PerformLayout();
             this.tab2Page2.ResumeLayout(false);
             this.tab2Page2.PerformLayout();
-            this.tab2Page3.ResumeLayout(false);
-            this.tab2Page3.PerformLayout();
-            this.pageAlumno.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tab2Page3.ResumeLayout(false);
+            this.tab2Page3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
+            this.pageAlumno.ResumeLayout(false);
+            this.tabControl3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -937,7 +938,7 @@
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
         private System.Windows.Forms.Label label4;
-        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
+        private Bunifu.Framework.UI.BunifuImageButton btnCursos;
         private System.Windows.Forms.Button btnIngresarDocente;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox3;
@@ -968,5 +969,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TabPage pageCursos;
     }
 }
