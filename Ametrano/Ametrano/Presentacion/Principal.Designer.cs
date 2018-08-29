@@ -45,9 +45,9 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.pageDocente = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabControlDocente = new System.Windows.Forms.TabControl();
             this.tab2Page1 = new System.Windows.Forms.TabPage();
             this.btnIngresarDocente = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -98,7 +98,7 @@
             this.pageAlumno = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabControlIngresarAlumno = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
@@ -120,15 +120,15 @@
             this.boxEstadoCivilAlumno = new System.Windows.Forms.ComboBox();
             this.TimePickerFechaNac = new System.Windows.Forms.DateTimePicker();
             this.boxSexoAlumno = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtFechaNacimiento = new System.Windows.Forms.TextBox();
             this.txtApellido2Alumno = new System.Windows.Forms.TextBox();
             this.txtApellido1Alumno = new System.Windows.Forms.TextBox();
             this.txtNombre2Alumno = new System.Windows.Forms.TextBox();
             this.txtNombre1Alumno = new System.Windows.Forms.TextBox();
             this.txtCedulaAlumno = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.button5 = new System.Windows.Forms.Button();
-            this.btnSiguinete2 = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
+            this.btnSiguinete_2 = new System.Windows.Forms.Button();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.boxTiempoSinTrabajo = new System.Windows.Forms.ComboBox();
@@ -137,10 +137,10 @@
             this.boxNumeroHijos = new System.Windows.Forms.ComboBox();
             this.boxJefeHogar = new System.Windows.Forms.ComboBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnAtras_2 = new System.Windows.Forms.Button();
+            this.btnFinalizar = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabControl6 = new System.Windows.Forms.TabControl();
+            this.tabControlModificarAlumno = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
@@ -182,7 +182,7 @@
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.pageCursos = new System.Windows.Forms.TabPage();
-            this.tabControl4 = new System.Windows.Forms.TabControl();
+            this.tabControlCronograma = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
@@ -191,9 +191,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabControlPrincipal.SuspendLayout();
             this.pageDocente.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.tabControlDocente.SuspendLayout();
             this.tab2Page1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -205,7 +205,7 @@
             this.pageAlumno.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabControl5.SuspendLayout();
+            this.tabControlIngresarAlumno.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -215,7 +215,7 @@
             this.groupBox9.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabControl6.SuspendLayout();
+            this.tabControlModificarAlumno.SuspendLayout();
             this.tabPage8.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -225,7 +225,7 @@
             this.groupBox15.SuspendLayout();
             this.tabPage10.SuspendLayout();
             this.pageCursos.SuspendLayout();
-            this.tabControl4.SuspendLayout();
+            this.tabControlCronograma.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -404,38 +404,38 @@
             this.manualDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.manualDeUsuarioToolStripMenuItem.Text = "Manual de usuario";
             // 
-            // tabControl1
+            // tabControlPrincipal
             // 
-            this.tabControl1.Controls.Add(this.pageDocente);
-            this.tabControl1.Controls.Add(this.pageAlumno);
-            this.tabControl1.Controls.Add(this.pageCursos);
-            this.tabControl1.Location = new System.Drawing.Point(87, 1);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1097, 562);
-            this.tabControl1.TabIndex = 3;
+            this.tabControlPrincipal.Controls.Add(this.pageDocente);
+            this.tabControlPrincipal.Controls.Add(this.pageAlumno);
+            this.tabControlPrincipal.Controls.Add(this.pageCursos);
+            this.tabControlPrincipal.Location = new System.Drawing.Point(87, 1);
+            this.tabControlPrincipal.Name = "tabControlPrincipal";
+            this.tabControlPrincipal.SelectedIndex = 0;
+            this.tabControlPrincipal.Size = new System.Drawing.Size(1097, 562);
+            this.tabControlPrincipal.TabIndex = 3;
             // 
             // pageDocente
             // 
             this.pageDocente.BackColor = System.Drawing.Color.LightGray;
-            this.pageDocente.Controls.Add(this.tabControl2);
+            this.pageDocente.Controls.Add(this.tabControlDocente);
             this.pageDocente.Location = new System.Drawing.Point(4, 22);
             this.pageDocente.Name = "pageDocente";
             this.pageDocente.Padding = new System.Windows.Forms.Padding(3);
             this.pageDocente.Size = new System.Drawing.Size(1089, 536);
             this.pageDocente.TabIndex = 0;
-            this.pageDocente.Text = "tab1Page1";
+            this.pageDocente.Text = "Docentes";
             // 
-            // tabControl2
+            // tabControlDocente
             // 
-            this.tabControl2.Controls.Add(this.tab2Page1);
-            this.tabControl2.Controls.Add(this.tab2Page2);
-            this.tabControl2.Controls.Add(this.tab2Page3);
-            this.tabControl2.Location = new System.Drawing.Point(-4, 1);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(1097, 547);
-            this.tabControl2.TabIndex = 0;
+            this.tabControlDocente.Controls.Add(this.tab2Page1);
+            this.tabControlDocente.Controls.Add(this.tab2Page2);
+            this.tabControlDocente.Controls.Add(this.tab2Page3);
+            this.tabControlDocente.Location = new System.Drawing.Point(-4, 1);
+            this.tabControlDocente.Name = "tabControlDocente";
+            this.tabControlDocente.SelectedIndex = 0;
+            this.tabControlDocente.Size = new System.Drawing.Size(1097, 547);
+            this.tabControlDocente.TabIndex = 0;
             // 
             // tab2Page1
             // 
@@ -941,7 +941,7 @@
             this.pageAlumno.Padding = new System.Windows.Forms.Padding(3);
             this.pageAlumno.Size = new System.Drawing.Size(1089, 536);
             this.pageAlumno.TabIndex = 1;
-            this.pageAlumno.Text = "tab1Page2";
+            this.pageAlumno.Text = "Alumnos";
             // 
             // tabControl3
             // 
@@ -956,7 +956,7 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage3.Controls.Add(this.tabControl5);
+            this.tabPage3.Controls.Add(this.tabControlIngresarAlumno);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -964,16 +964,16 @@
             this.tabPage3.TabIndex = 0;
             this.tabPage3.Text = "Ingresar nuevo";
             // 
-            // tabControl5
+            // tabControlIngresarAlumno
             // 
-            this.tabControl5.Controls.Add(this.tabPage5);
-            this.tabControl5.Controls.Add(this.tabPage6);
-            this.tabControl5.Controls.Add(this.tabPage7);
-            this.tabControl5.Location = new System.Drawing.Point(2, 1);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(1091, 517);
-            this.tabControl5.TabIndex = 11;
+            this.tabControlIngresarAlumno.Controls.Add(this.tabPage5);
+            this.tabControlIngresarAlumno.Controls.Add(this.tabPage6);
+            this.tabControlIngresarAlumno.Controls.Add(this.tabPage7);
+            this.tabControlIngresarAlumno.Location = new System.Drawing.Point(2, 1);
+            this.tabControlIngresarAlumno.Name = "tabControlIngresarAlumno";
+            this.tabControlIngresarAlumno.SelectedIndex = 0;
+            this.tabControlIngresarAlumno.Size = new System.Drawing.Size(1091, 517);
+            this.tabControlIngresarAlumno.TabIndex = 11;
             // 
             // tabPage5
             // 
@@ -1179,7 +1179,7 @@
             this.groupBox6.Controls.Add(this.boxEstadoCivilAlumno);
             this.groupBox6.Controls.Add(this.TimePickerFechaNac);
             this.groupBox6.Controls.Add(this.boxSexoAlumno);
-            this.groupBox6.Controls.Add(this.textBox11);
+            this.groupBox6.Controls.Add(this.txtFechaNacimiento);
             this.groupBox6.Controls.Add(this.txtApellido2Alumno);
             this.groupBox6.Controls.Add(this.txtApellido1Alumno);
             this.groupBox6.Controls.Add(this.txtNombre2Alumno);
@@ -1230,6 +1230,7 @@
             this.TimePickerFechaNac.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TimePickerFechaNac.Size = new System.Drawing.Size(20, 24);
             this.TimePickerFechaNac.TabIndex = 16;
+            this.TimePickerFechaNac.ValueChanged += new System.EventHandler(this.TimePickerFechaNac_ValueChanged);
             // 
             // boxSexoAlumno
             // 
@@ -1245,15 +1246,15 @@
             this.boxSexoAlumno.Size = new System.Drawing.Size(167, 26);
             this.boxSexoAlumno.TabIndex = 20;
             // 
-            // textBox11
+            // txtFechaNacimiento
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(24, 150);
-            this.textBox11.MaxLength = 10;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(149, 24);
-            this.textBox11.TabIndex = 19;
-            this.textBox11.Text = "Fecha de nacimiento";
+            this.txtFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFechaNacimiento.Location = new System.Drawing.Point(24, 150);
+            this.txtFechaNacimiento.MaxLength = 10;
+            this.txtFechaNacimiento.Name = "txtFechaNacimiento";
+            this.txtFechaNacimiento.Size = new System.Drawing.Size(149, 24);
+            this.txtFechaNacimiento.TabIndex = 19;
+            this.txtFechaNacimiento.Text = "Fecha de nacimiento";
             // 
             // txtApellido2Alumno
             // 
@@ -1305,8 +1306,8 @@
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage6.Controls.Add(this.button5);
-            this.tabPage6.Controls.Add(this.btnSiguinete2);
+            this.tabPage6.Controls.Add(this.btnAtras);
+            this.tabPage6.Controls.Add(this.btnSiguinete_2);
             this.tabPage6.Controls.Add(this.groupBox9);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
@@ -1315,27 +1316,27 @@
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Datos de interes";
             // 
-            // button5
+            // btnAtras
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(781, 444);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(144, 36);
-            this.button5.TabIndex = 15;
-            this.button5.Text = "Atras";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras.Location = new System.Drawing.Point(781, 444);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(144, 36);
+            this.btnAtras.TabIndex = 15;
+            this.btnAtras.Text = "Atras";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.button5_Click);
             // 
-            // btnSiguinete2
+            // btnSiguinete_2
             // 
-            this.btnSiguinete2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguinete2.Location = new System.Drawing.Point(931, 444);
-            this.btnSiguinete2.Name = "btnSiguinete2";
-            this.btnSiguinete2.Size = new System.Drawing.Size(144, 36);
-            this.btnSiguinete2.TabIndex = 14;
-            this.btnSiguinete2.Text = "Siguiente";
-            this.btnSiguinete2.UseVisualStyleBackColor = true;
-            this.btnSiguinete2.Click += new System.EventHandler(this.btnSiguinete2_Click);
+            this.btnSiguinete_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSiguinete_2.Location = new System.Drawing.Point(931, 444);
+            this.btnSiguinete_2.Name = "btnSiguinete_2";
+            this.btnSiguinete_2.Size = new System.Drawing.Size(144, 36);
+            this.btnSiguinete_2.TabIndex = 14;
+            this.btnSiguinete_2.Text = "Siguiente";
+            this.btnSiguinete_2.UseVisualStyleBackColor = true;
+            this.btnSiguinete_2.Click += new System.EventHandler(this.btnSiguinete2_Click);
             // 
             // groupBox9
             // 
@@ -1483,39 +1484,39 @@
             // tabPage7
             // 
             this.tabPage7.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage7.Controls.Add(this.button6);
-            this.tabPage7.Controls.Add(this.button7);
+            this.tabPage7.Controls.Add(this.btnAtras_2);
+            this.tabPage7.Controls.Add(this.btnFinalizar);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Size = new System.Drawing.Size(1083, 491);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Finalizar";
             // 
-            // button6
+            // btnAtras_2
             // 
-            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(781, 448);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(144, 36);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "Atras";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.btnAtras_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtras_2.Location = new System.Drawing.Point(781, 448);
+            this.btnAtras_2.Name = "btnAtras_2";
+            this.btnAtras_2.Size = new System.Drawing.Size(144, 36);
+            this.btnAtras_2.TabIndex = 16;
+            this.btnAtras_2.Text = "Atras";
+            this.btnAtras_2.UseVisualStyleBackColor = true;
+            this.btnAtras_2.Click += new System.EventHandler(this.button6_Click);
             // 
-            // button7
+            // btnFinalizar
             // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(931, 448);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(144, 36);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Finalizar";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinalizar.Location = new System.Drawing.Point(931, 448);
+            this.btnFinalizar.Name = "btnFinalizar";
+            this.btnFinalizar.Size = new System.Drawing.Size(144, 36);
+            this.btnFinalizar.TabIndex = 5;
+            this.btnFinalizar.Text = "Finalizar";
+            this.btnFinalizar.UseVisualStyleBackColor = true;
             // 
             // tabPage4
             // 
             this.tabPage4.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage4.Controls.Add(this.tabControl6);
+            this.tabPage4.Controls.Add(this.tabControlModificarAlumno);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
@@ -1523,16 +1524,16 @@
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Consultar / Modificar";
             // 
-            // tabControl6
+            // tabControlModificarAlumno
             // 
-            this.tabControl6.Controls.Add(this.tabPage8);
-            this.tabControl6.Controls.Add(this.tabPage9);
-            this.tabControl6.Controls.Add(this.tabPage10);
-            this.tabControl6.Location = new System.Drawing.Point(1, 1);
-            this.tabControl6.Name = "tabControl6";
-            this.tabControl6.SelectedIndex = 0;
-            this.tabControl6.Size = new System.Drawing.Size(1091, 517);
-            this.tabControl6.TabIndex = 12;
+            this.tabControlModificarAlumno.Controls.Add(this.tabPage8);
+            this.tabControlModificarAlumno.Controls.Add(this.tabPage9);
+            this.tabControlModificarAlumno.Controls.Add(this.tabPage10);
+            this.tabControlModificarAlumno.Location = new System.Drawing.Point(1, 1);
+            this.tabControlModificarAlumno.Name = "tabControlModificarAlumno";
+            this.tabControlModificarAlumno.SelectedIndex = 0;
+            this.tabControlModificarAlumno.Size = new System.Drawing.Size(1091, 517);
+            this.tabControlModificarAlumno.TabIndex = 12;
             // 
             // tabPage8
             // 
@@ -2070,22 +2071,22 @@
             // pageCursos
             // 
             this.pageCursos.BackColor = System.Drawing.Color.LightGray;
-            this.pageCursos.Controls.Add(this.tabControl4);
+            this.pageCursos.Controls.Add(this.tabControlCronograma);
             this.pageCursos.Location = new System.Drawing.Point(4, 22);
             this.pageCursos.Name = "pageCursos";
             this.pageCursos.Size = new System.Drawing.Size(1089, 536);
             this.pageCursos.TabIndex = 2;
-            this.pageCursos.Text = "tab1Page3";
+            this.pageCursos.Text = "Cursos";
             // 
-            // tabControl4
+            // tabControlCronograma
             // 
-            this.tabControl4.Controls.Add(this.tabPage1);
-            this.tabControl4.Controls.Add(this.tabPage2);
-            this.tabControl4.Location = new System.Drawing.Point(-4, 1);
-            this.tabControl4.Name = "tabControl4";
-            this.tabControl4.SelectedIndex = 0;
-            this.tabControl4.Size = new System.Drawing.Size(1097, 547);
-            this.tabControl4.TabIndex = 2;
+            this.tabControlCronograma.Controls.Add(this.tabPage1);
+            this.tabControlCronograma.Controls.Add(this.tabPage2);
+            this.tabControlCronograma.Location = new System.Drawing.Point(-4, 1);
+            this.tabControlCronograma.Name = "tabControlCronograma";
+            this.tabControlCronograma.SelectedIndex = 0;
+            this.tabControlCronograma.Size = new System.Drawing.Size(1097, 547);
+            this.tabControlCronograma.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -2113,9 +2114,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
@@ -2133,9 +2134,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlPrincipal.ResumeLayout(false);
             this.pageDocente.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
+            this.tabControlDocente.ResumeLayout(false);
             this.tab2Page1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -2152,7 +2153,7 @@
             this.pageAlumno.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabControl5.ResumeLayout(false);
+            this.tabControlIngresarAlumno.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
@@ -2166,7 +2167,7 @@
             this.groupBox9.ResumeLayout(false);
             this.tabPage7.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            this.tabControl6.ResumeLayout(false);
+            this.tabControlModificarAlumno.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
@@ -2180,7 +2181,7 @@
             this.groupBox15.ResumeLayout(false);
             this.tabPage10.ResumeLayout(false);
             this.pageCursos.ResumeLayout(false);
-            this.tabControl4.ResumeLayout(false);
+            this.tabControlCronograma.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2198,10 +2199,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuImageButton btnAlumnos;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabControlPrincipal;
         private System.Windows.Forms.TabPage pageDocente;
         private System.Windows.Forms.TabPage pageAlumno;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl tabControlDocente;
         private System.Windows.Forms.TabPage tab2Page1;
         private System.Windows.Forms.TabPage tab2Page2;
         private System.Windows.Forms.TabPage tab2Page3;
@@ -2258,10 +2259,10 @@
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabControl tabControl4;
+        private System.Windows.Forms.TabControl tabControlCronograma;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabControl tabControlIngresarAlumno;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.TabPage tabPage7;
@@ -2284,7 +2285,7 @@
         private System.Windows.Forms.ComboBox boxEstadoCivilAlumno;
         private System.Windows.Forms.DateTimePicker TimePickerFechaNac;
         private System.Windows.Forms.ComboBox boxSexoAlumno;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtFechaNacimiento;
         private System.Windows.Forms.TextBox txtApellido2Alumno;
         private System.Windows.Forms.TextBox txtApellido1Alumno;
         private System.Windows.Forms.TextBox txtNombre2Alumno;
@@ -2298,11 +2299,11 @@
         private System.Windows.Forms.ComboBox boxNumeroHijos;
         private System.Windows.Forms.ComboBox boxJefeHogar;
         private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.Button btnSiguinete2;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TabControl tabControl6;
+        private System.Windows.Forms.Button btnSiguinete_2;
+        private System.Windows.Forms.Button btnFinalizar;
+        private System.Windows.Forms.Button btnAtras;
+        private System.Windows.Forms.Button btnAtras_2;
+        private System.Windows.Forms.TabControl tabControlModificarAlumno;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.GroupBox groupBox11;
