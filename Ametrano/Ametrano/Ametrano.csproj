@@ -76,6 +76,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\TestingClass.cs" />
+    <Compile Include="Persistencia\ConexionBD.cs" />
     <Compile Include="Logica\Login_Controlador.cs" />
     <Compile Include="Presentacion\Login.cs">
       <SubType>Form</SubType>
@@ -121,9 +123,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Persistencia\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\close_black.png" />
   </ItemGroup>
