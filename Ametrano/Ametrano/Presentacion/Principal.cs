@@ -39,5 +39,25 @@ namespace Ametrano.Presentacion
         {
             tabControl1.SelectedIndex = 2;
         }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            boxSexoAlumno.SelectedIndex = 0;
+            boxEstadoCivilAlumno.SelectedIndex = 0;
+            boxNivelEducativo.SelectedIndex = 0;
+            boxJefeHogar.SelectedIndex = 0;
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {
+            tabControl5.SelectedIndex= 1;
+          
+           
+        }
+
+        private void btnSiguinete2_Click(object sender, EventArgs e)
+        {
+            tabControl5.SelectedIndex = 2;
+        }
     }
 }
