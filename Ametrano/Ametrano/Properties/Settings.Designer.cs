@@ -23,15 +23,12 @@ namespace Ametrano.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
         public string direccion {
             get {
                 return ((string)(this["direccion"]));
-            }
-            set {
-                this["direccion"] = value;
             }
         }
         
@@ -46,7 +43,7 @@ namespace Ametrano.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("root")]
+        [global::System.Configuration.DefaultSettingValueAttribute("login")]
         public string usuario {
             get {
                 return ((string)(this["usuario"]));
@@ -58,7 +55,7 @@ namespace Ametrano.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("login")]
         public string contraseña {
             get {
                 return ((string)(this["contraseña"]));
@@ -77,6 +74,42 @@ namespace Ametrano.Properties {
             }
             set {
                 this["ssl"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string login_rol {
+            get {
+                return ((string)(this["login_rol"]));
+            }
+            set {
+                this["login_rol"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string login_ususario {
+            get {
+                return ((string)(this["login_ususario"]));
+            }
+            set {
+                this["login_ususario"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string login_contraseña {
+            get {
+                return ((string)(this["login_contraseña"]));
+            }
+            set {
+                this["login_contraseña"] = value;
             }
         }
     }
