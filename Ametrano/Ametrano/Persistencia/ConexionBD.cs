@@ -114,14 +114,14 @@ namespace Ametrano.Persistencia
 
             return filasAfectadas;
         }
-        public MySqlDataReader consultarDatos(string comandoSQL)
+        public MySqlDataAdapter consultarDatos(string comandoSQL)
         {//Metodo que realiza consultas a la base de datos y devuelve un datatable con los resultados
             MySqlDataAdapter datos = new MySqlDataAdapter();
             try
             {
                 comando.CommandText = comandoSQL;
                 datos.SelectCommand = comando;//Obtengo los datos de la base de datos
-                //Se debe ver bien como mostrar los datos
+                return datos;
                 
             }
             catch (MySqlException e)
