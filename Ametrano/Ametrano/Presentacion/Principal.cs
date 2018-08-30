@@ -44,6 +44,19 @@ namespace Ametrano.Presentacion
             boxJefeHogar.SelectedIndex = 0;
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
+
+
+            foreach (Control componente in this.Controls)
+            {
+                MessageBox.Show(componente.GetType().ToString());
+                
+            }
+
+            controlador.mapTextBox.Add(
+                txtCedulaDocente.GetHashCode().ToString(),
+                txtCedulaDocente.Text);
+
+
         }
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
@@ -90,6 +103,46 @@ namespace Ametrano.Presentacion
             Properties.Settings.Default.login_ususario = "";
             Properties.Settings.Default.login_contraseña = "";
             Login.ActiveForm.Show();
+        }
+
+
+        private void placeholderEventEnter(object sender, EventArgs e)
+        {
+            placeholder((TextBox)sender, "enter");
+        }
+        private void placeholderEventLeave(object sender, EventArgs e)
+        {
+            placeholder((TextBox)sender, "leave");
+        }
+
+        public TextBox placeholder(TextBox componente, string evento)
+        {
+            string textoCuandoEstaVacio = "";
+            controlador.mapTextBox.TryGetValue(componente.GetHashCode().ToString(), out textoCuandoEstaVacio);
+
+            if (evento.Equals("enter"))
+            {
+                if (componente.Text.Equals(textoCuandoEstaVacio))
+                {
+                    componente.Text = "";
+                    componente.ForeColor = Color.Black;
+                }
+
+            }
+            else
+            {
+
+                if (componente.Text.Equals(""))
+                {
+
+                    componente.Text = textoCuandoEstaVacio;
+                    componente.ForeColor = Color.Gray;
+                }
+
+
+            }
+
+            return null;
         }
     }
 }

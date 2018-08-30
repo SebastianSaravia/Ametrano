@@ -15,47 +15,8 @@ namespace Ametrano.Logica
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
-        /*
-        private void placeholderEventEnter(object sender, EventArgs e)
-        {
 
-            placeholder((TextBox)sender, "enter");
-        }
-        private void placeholderEventLeave(object sender, EventArgs e)
-        {
-            placeholder((TextBox)sender, "leave");
-        }
-
-        public TextBox placeholder(TextBox componente, string evento)
-        {
-            string textoCuandoEstaVacio = "";
-            controlador.mapTextBox.TryGetValue(componente.GetHashCode().ToString(), out textoCuandoEstaVacio);
-
-            if (evento.Equals("enter"))
-            {
-                if (componente.Text.Equals(textoCuandoEstaVacio))
-                {
-                    componente.Text = "";
-                    componente.ForeColor = Color.Black;
-                }
-
-            }
-            else
-            {
-
-                if (componente.Text.Equals(""))
-                {
-
-                    componente.Text = textoCuandoEstaVacio;
-                    componente.ForeColor = Color.Gray;
-                }
-
-
-            }
-
-            return null;
-        }
-        */
+       
 
 
 

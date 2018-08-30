@@ -329,9 +329,6 @@
             this.label91 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -2506,9 +2503,6 @@
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage3.Controls.Add(this.button7);
-            this.tabPage3.Controls.Add(this.textBox29);
-            this.tabPage3.Controls.Add(this.comboBox17);
             this.tabPage3.Controls.Add(this.groupBox11);
             this.tabPage3.Controls.Add(this.button1);
             this.tabPage3.Controls.Add(this.groupBox12);
@@ -2526,9 +2520,9 @@
             // 
             this.groupBox11.Controls.Add(this.comboBox1);
             this.groupBox11.Controls.Add(this.comboBox2);
-            this.groupBox11.Location = new System.Drawing.Point(37, 392);
+            this.groupBox11.Location = new System.Drawing.Point(435, 17);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(387, 75);
+            this.groupBox11.Size = new System.Drawing.Size(379, 75);
             this.groupBox11.TabIndex = 21;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Con respecto al instituto";
@@ -2570,7 +2564,7 @@
             this.groupBox12.Controls.Add(this.textBox4);
             this.groupBox12.Controls.Add(this.textBox5);
             this.groupBox12.Controls.Add(this.textBox6);
-            this.groupBox12.Location = new System.Drawing.Point(823, 107);
+            this.groupBox12.Location = new System.Drawing.Point(823, 93);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(226, 176);
             this.groupBox12.TabIndex = 20;
@@ -2614,7 +2608,7 @@
             this.groupBox13.Controls.Add(this.textBox8);
             this.groupBox13.Controls.Add(this.textBox9);
             this.groupBox13.Controls.Add(this.textBox10);
-            this.groupBox13.Location = new System.Drawing.Point(430, 107);
+            this.groupBox13.Location = new System.Drawing.Point(430, 93);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(387, 176);
             this.groupBox13.TabIndex = 17;
@@ -2707,7 +2701,7 @@
             // 
             this.groupBox14.Controls.Add(this.comboBox5);
             this.groupBox14.Controls.Add(this.textBox11);
-            this.groupBox14.Location = new System.Drawing.Point(430, 285);
+            this.groupBox14.Location = new System.Drawing.Point(430, 271);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(619, 101);
             this.groupBox14.TabIndex = 18;
@@ -2749,8 +2743,8 @@
             this.groupBox15.Controls.Add(this.textBox16);
             this.groupBox15.Controls.Add(this.textBox17);
             this.groupBox15.Controls.Add(this.textBox18);
-            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox15.Location = new System.Drawing.Point(37, 105);
+            this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox15.Location = new System.Drawing.Point(37, 91);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(387, 281);
             this.groupBox15.TabIndex = 19;
@@ -3771,49 +3765,15 @@
             this.button6.Text = "Finalizar";
             this.button6.UseVisualStyleBackColor = true;
             // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(385, 35);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(122, 29);
-            this.button7.TabIndex = 24;
-            this.button7.Text = "Buscar";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // textBox29
-            // 
-            this.textBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox29.Location = new System.Drawing.Point(175, 37);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(192, 24);
-            this.textBox29.TabIndex = 23;
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.AccessibleDescription = "";
-            this.comboBox17.DisplayMember = "sadsa";
-            this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Items.AddRange(new object[] {
-            "Nombre",
-            "Cedula"});
-            this.comboBox17.Location = new System.Drawing.Point(37, 37);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(132, 26);
-            this.comboBox17.TabIndex = 22;
-            this.comboBox17.Tag = "";
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuPrincipal;
@@ -3897,7 +3857,6 @@
             this.groupBox30.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
@@ -4244,8 +4203,5 @@
         private System.Windows.Forms.Label label91;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.TextBox textBox29;
-        private System.Windows.Forms.ComboBox comboBox17;
     }
 }
