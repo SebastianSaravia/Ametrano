@@ -50,7 +50,7 @@
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.pageDocente = new System.Windows.Forms.TabPage();
             this.tabControlDocente = new System.Windows.Forms.TabControl();
-            this.tab2Page1 = new System.Windows.Forms.TabPage();
+            this.tabPageDocentesNuevo = new System.Windows.Forms.TabPage();
             this.btnIngresarDocente = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnQuitar = new System.Windows.Forms.Button();
@@ -66,7 +66,7 @@
             this.txtNombre2Docente = new System.Windows.Forms.TextBox();
             this.txtNombre1Docente = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente = new System.Windows.Forms.TextBox();
-            this.tab2Page2 = new System.Windows.Forms.TabPage();
+            this.tabPageDocentesConsultarModificar = new System.Windows.Forms.TabPage();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.boxBuscar = new System.Windows.Forms.ComboBox();
@@ -85,7 +85,7 @@
             this.txtNombre2Docente_2 = new System.Windows.Forms.TextBox();
             this.txtNombre1Docente_2 = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente_2 = new System.Windows.Forms.TextBox();
-            this.tab2Page3 = new System.Windows.Forms.TabPage();
+            this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
             this.btnDarBaja = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -98,10 +98,10 @@
             this.txtBuscar_2 = new System.Windows.Forms.TextBox();
             this.boxBuscar_2 = new System.Windows.Forms.ComboBox();
             this.pageAlumno = new System.Windows.Forms.TabPage();
-            this.tabControl3 = new System.Windows.Forms.TabControl();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tabControlAlumnos = new System.Windows.Forms.TabControl();
+            this.tabPageAlumnosNuevo = new System.Windows.Forms.TabPage();
             this.tabControlIngresarAlumno = new System.Windows.Forms.TabControl();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.tabPageIngresarAlumnoDatosPersonales = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.boxEstadoAlumno = new System.Windows.Forms.ComboBox();
             this.boxCursoAlumno = new System.Windows.Forms.ComboBox();
@@ -131,7 +131,7 @@
             this.txtNombre2Alumno = new System.Windows.Forms.TextBox();
             this.txtNombre1Alumno = new System.Windows.Forms.TextBox();
             this.txtCedulaAlumno = new System.Windows.Forms.TextBox();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.tabPageIngresarAlumnoDatosInteres = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
@@ -158,12 +158,12 @@
             this.boxTrabajaActualmente = new System.Windows.Forms.ComboBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnSiguinete_2 = new System.Windows.Forms.Button();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPageIngresarAlumnoFinalizar = new System.Windows.Forms.TabPage();
             this.btnAtras_2 = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabPageAlumnosConsultarModificar = new System.Windows.Forms.TabPage();
             this.tabControlModificarAlumno = new System.Windows.Forms.TabControl();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPageConsultarModificarAlumnoDatosPersonales = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
@@ -190,7 +190,7 @@
             this.textBox17 = new System.Windows.Forms.TextBox();
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.textBox19 = new System.Windows.Forms.TextBox();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPageConsultarModificarAlumnoDatosInteres = new System.Windows.Forms.TabPage();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
@@ -200,11 +200,11 @@
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabPageConsultarModificarAlumnoFinalizar = new System.Windows.Forms.TabPage();
             this.button11 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.pageCursos = new System.Windows.Forms.TabPage();
-            this.tabControlCronograma = new System.Windows.Forms.TabControl();
+            this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel1.SuspendLayout();
@@ -216,43 +216,43 @@
             this.tabControlPrincipal.SuspendLayout();
             this.pageDocente.SuspendLayout();
             this.tabControlDocente.SuspendLayout();
-            this.tab2Page1.SuspendLayout();
+            this.tabPageDocentesNuevo.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tab2Page2.SuspendLayout();
+            this.tabPageDocentesConsultarModificar.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.tab2Page3.SuspendLayout();
+            this.tabPageDocentesBaja.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.pageAlumno.SuspendLayout();
-            this.tabControl3.SuspendLayout();
-            this.tabPage3.SuspendLayout();
+            this.tabControlAlumnos.SuspendLayout();
+            this.tabPageAlumnosNuevo.SuspendLayout();
             this.tabControlIngresarAlumno.SuspendLayout();
-            this.tabPage5.SuspendLayout();
+            this.tabPageIngresarAlumnoDatosPersonales.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
-            this.tabPage6.SuspendLayout();
+            this.tabPageIngresarAlumnoDatosInteres.SuspendLayout();
             this.groupBox20.SuspendLayout();
             this.groupBox19.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox16.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage4.SuspendLayout();
+            this.tabPageIngresarAlumnoFinalizar.SuspendLayout();
+            this.tabPageAlumnosConsultarModificar.SuspendLayout();
             this.tabControlModificarAlumno.SuspendLayout();
-            this.tabPage8.SuspendLayout();
+            this.tabPageConsultarModificarAlumnoDatosPersonales.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
-            this.tabPage9.SuspendLayout();
+            this.tabPageConsultarModificarAlumnoDatosInteres.SuspendLayout();
             this.groupBox15.SuspendLayout();
-            this.tabPage10.SuspendLayout();
+            this.tabPageConsultarModificarAlumnoFinalizar.SuspendLayout();
             this.pageCursos.SuspendLayout();
-            this.tabControlCronograma.SuspendLayout();
+            this.tabControlCursos.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -403,14 +403,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -474,27 +474,27 @@
             // 
             // tabControlDocente
             // 
-            this.tabControlDocente.Controls.Add(this.tab2Page1);
-            this.tabControlDocente.Controls.Add(this.tab2Page2);
-            this.tabControlDocente.Controls.Add(this.tab2Page3);
+            this.tabControlDocente.Controls.Add(this.tabPageDocentesNuevo);
+            this.tabControlDocente.Controls.Add(this.tabPageDocentesConsultarModificar);
+            this.tabControlDocente.Controls.Add(this.tabPageDocentesBaja);
             this.tabControlDocente.Location = new System.Drawing.Point(-4, 1);
             this.tabControlDocente.Name = "tabControlDocente";
             this.tabControlDocente.SelectedIndex = 0;
             this.tabControlDocente.Size = new System.Drawing.Size(1097, 547);
             this.tabControlDocente.TabIndex = 0;
             // 
-            // tab2Page1
+            // tabPageDocentesNuevo
             // 
-            this.tab2Page1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tab2Page1.Controls.Add(this.btnIngresarDocente);
-            this.tab2Page1.Controls.Add(this.groupBox2);
-            this.tab2Page1.Controls.Add(this.groupBox1);
-            this.tab2Page1.Location = new System.Drawing.Point(4, 22);
-            this.tab2Page1.Name = "tab2Page1";
-            this.tab2Page1.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2Page1.Size = new System.Drawing.Size(1089, 521);
-            this.tab2Page1.TabIndex = 0;
-            this.tab2Page1.Text = "Ingresar nuevo";
+            this.tabPageDocentesNuevo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesNuevo.Controls.Add(this.btnIngresarDocente);
+            this.tabPageDocentesNuevo.Controls.Add(this.groupBox2);
+            this.tabPageDocentesNuevo.Controls.Add(this.groupBox1);
+            this.tabPageDocentesNuevo.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDocentesNuevo.Name = "tabPageDocentesNuevo";
+            this.tabPageDocentesNuevo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDocentesNuevo.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageDocentesNuevo.TabIndex = 0;
+            this.tabPageDocentesNuevo.Text = "Ingresar nuevo";
             // 
             // btnIngresarDocente
             // 
@@ -649,21 +649,21 @@
             this.txtCedulaDocente.TabIndex = 0;
             this.txtCedulaDocente.Text = "Cedula";
             // 
-            // tab2Page2
+            // tabPageDocentesConsultarModificar
             // 
-            this.tab2Page2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tab2Page2.Controls.Add(this.btnBuscar);
-            this.tab2Page2.Controls.Add(this.txtBuscar);
-            this.tab2Page2.Controls.Add(this.boxBuscar);
-            this.tab2Page2.Controls.Add(this.button3);
-            this.tab2Page2.Controls.Add(this.groupBox3);
-            this.tab2Page2.Controls.Add(this.groupBox4);
-            this.tab2Page2.Location = new System.Drawing.Point(4, 22);
-            this.tab2Page2.Name = "tab2Page2";
-            this.tab2Page2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2Page2.Size = new System.Drawing.Size(1089, 521);
-            this.tab2Page2.TabIndex = 1;
-            this.tab2Page2.Text = "Consultar / Modificar";
+            this.tabPageDocentesConsultarModificar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.btnBuscar);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.txtBuscar);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.boxBuscar);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.button3);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox3);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox4);
+            this.tabPageDocentesConsultarModificar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDocentesConsultarModificar.Name = "tabPageDocentesConsultarModificar";
+            this.tabPageDocentesConsultarModificar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDocentesConsultarModificar.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageDocentesConsultarModificar.TabIndex = 1;
+            this.tabPageDocentesConsultarModificar.Text = "Consultar / Modificar";
             // 
             // btnBuscar
             // 
@@ -852,21 +852,21 @@
             this.txtCedulaDocente_2.TabIndex = 0;
             this.txtCedulaDocente_2.Text = "Cedula";
             // 
-            // tab2Page3
+            // tabPageDocentesBaja
             // 
-            this.tab2Page3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tab2Page3.Controls.Add(this.btnDarBaja);
-            this.tab2Page3.Controls.Add(this.label9);
-            this.tab2Page3.Controls.Add(this.groupBox5);
-            this.tab2Page3.Controls.Add(this.txtMotivo);
-            this.tab2Page3.Controls.Add(this.btnBuscar_2);
-            this.tab2Page3.Controls.Add(this.txtBuscar_2);
-            this.tab2Page3.Controls.Add(this.boxBuscar_2);
-            this.tab2Page3.Location = new System.Drawing.Point(4, 22);
-            this.tab2Page3.Name = "tab2Page3";
-            this.tab2Page3.Size = new System.Drawing.Size(1089, 521);
-            this.tab2Page3.TabIndex = 2;
-            this.tab2Page3.Text = "Dar de baja";
+            this.tabPageDocentesBaja.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesBaja.Controls.Add(this.btnDarBaja);
+            this.tabPageDocentesBaja.Controls.Add(this.label9);
+            this.tabPageDocentesBaja.Controls.Add(this.groupBox5);
+            this.tabPageDocentesBaja.Controls.Add(this.txtMotivo);
+            this.tabPageDocentesBaja.Controls.Add(this.btnBuscar_2);
+            this.tabPageDocentesBaja.Controls.Add(this.txtBuscar_2);
+            this.tabPageDocentesBaja.Controls.Add(this.boxBuscar_2);
+            this.tabPageDocentesBaja.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDocentesBaja.Name = "tabPageDocentesBaja";
+            this.tabPageDocentesBaja.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageDocentesBaja.TabIndex = 2;
+            this.tabPageDocentesBaja.Text = "Dar de baja";
             // 
             // btnDarBaja
             // 
@@ -981,7 +981,7 @@
             // pageAlumno
             // 
             this.pageAlumno.BackColor = System.Drawing.Color.LightGray;
-            this.pageAlumno.Controls.Add(this.tabControl3);
+            this.pageAlumno.Controls.Add(this.tabControlAlumnos);
             this.pageAlumno.Location = new System.Drawing.Point(4, 22);
             this.pageAlumno.Name = "pageAlumno";
             this.pageAlumno.Padding = new System.Windows.Forms.Padding(3);
@@ -989,53 +989,53 @@
             this.pageAlumno.TabIndex = 1;
             this.pageAlumno.Text = "Alumnos";
             // 
-            // tabControl3
+            // tabControlAlumnos
             // 
-            this.tabControl3.Controls.Add(this.tabPage3);
-            this.tabControl3.Controls.Add(this.tabPage4);
-            this.tabControl3.Location = new System.Drawing.Point(-4, 1);
-            this.tabControl3.Name = "tabControl3";
-            this.tabControl3.SelectedIndex = 0;
-            this.tabControl3.Size = new System.Drawing.Size(1097, 547);
-            this.tabControl3.TabIndex = 1;
+            this.tabControlAlumnos.Controls.Add(this.tabPageAlumnosNuevo);
+            this.tabControlAlumnos.Controls.Add(this.tabPageAlumnosConsultarModificar);
+            this.tabControlAlumnos.Location = new System.Drawing.Point(-4, 1);
+            this.tabControlAlumnos.Name = "tabControlAlumnos";
+            this.tabControlAlumnos.SelectedIndex = 0;
+            this.tabControlAlumnos.Size = new System.Drawing.Size(1097, 547);
+            this.tabControlAlumnos.TabIndex = 1;
             // 
-            // tabPage3
+            // tabPageAlumnosNuevo
             // 
-            this.tabPage3.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage3.Controls.Add(this.tabControlIngresarAlumno);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1089, 521);
-            this.tabPage3.TabIndex = 0;
-            this.tabPage3.Text = "Ingresar nuevo";
+            this.tabPageAlumnosNuevo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageAlumnosNuevo.Controls.Add(this.tabControlIngresarAlumno);
+            this.tabPageAlumnosNuevo.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAlumnosNuevo.Name = "tabPageAlumnosNuevo";
+            this.tabPageAlumnosNuevo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAlumnosNuevo.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageAlumnosNuevo.TabIndex = 0;
+            this.tabPageAlumnosNuevo.Text = "Ingresar nuevo";
             // 
             // tabControlIngresarAlumno
             // 
-            this.tabControlIngresarAlumno.Controls.Add(this.tabPage5);
-            this.tabControlIngresarAlumno.Controls.Add(this.tabPage6);
-            this.tabControlIngresarAlumno.Controls.Add(this.tabPage7);
-            this.tabControlIngresarAlumno.Location = new System.Drawing.Point(2, 1);
+            this.tabControlIngresarAlumno.Controls.Add(this.tabPageIngresarAlumnoDatosPersonales);
+            this.tabControlIngresarAlumno.Controls.Add(this.tabPageIngresarAlumnoDatosInteres);
+            this.tabControlIngresarAlumno.Controls.Add(this.tabPageIngresarAlumnoFinalizar);
+            this.tabControlIngresarAlumno.Location = new System.Drawing.Point(0, 1);
             this.tabControlIngresarAlumno.Name = "tabControlIngresarAlumno";
             this.tabControlIngresarAlumno.SelectedIndex = 0;
-            this.tabControlIngresarAlumno.Size = new System.Drawing.Size(1091, 517);
+            this.tabControlIngresarAlumno.Size = new System.Drawing.Size(1091, 515);
             this.tabControlIngresarAlumno.TabIndex = 11;
             // 
-            // tabPage5
+            // tabPageIngresarAlumnoDatosPersonales
             // 
-            this.tabPage5.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage5.Controls.Add(this.groupBox9);
-            this.tabPage5.Controls.Add(this.btnSiguiente);
-            this.tabPage5.Controls.Add(this.groupBox10);
-            this.tabPage5.Controls.Add(this.groupBox8);
-            this.tabPage5.Controls.Add(this.groupBox7);
-            this.tabPage5.Controls.Add(this.groupBox6);
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1083, 491);
-            this.tabPage5.TabIndex = 0;
-            this.tabPage5.Text = "Datos personales";
+            this.tabPageIngresarAlumnoDatosPersonales.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageIngresarAlumnoDatosPersonales.Controls.Add(this.groupBox9);
+            this.tabPageIngresarAlumnoDatosPersonales.Controls.Add(this.btnSiguiente);
+            this.tabPageIngresarAlumnoDatosPersonales.Controls.Add(this.groupBox10);
+            this.tabPageIngresarAlumnoDatosPersonales.Controls.Add(this.groupBox8);
+            this.tabPageIngresarAlumnoDatosPersonales.Controls.Add(this.groupBox7);
+            this.tabPageIngresarAlumnoDatosPersonales.Controls.Add(this.groupBox6);
+            this.tabPageIngresarAlumnoDatosPersonales.Location = new System.Drawing.Point(4, 22);
+            this.tabPageIngresarAlumnoDatosPersonales.Name = "tabPageIngresarAlumnoDatosPersonales";
+            this.tabPageIngresarAlumnoDatosPersonales.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageIngresarAlumnoDatosPersonales.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageIngresarAlumnoDatosPersonales.TabIndex = 0;
+            this.tabPageIngresarAlumnoDatosPersonales.Text = "Datos personales";
             // 
             // groupBox9
             // 
@@ -1383,22 +1383,22 @@
             this.txtCedulaAlumno.TabIndex = 10;
             this.txtCedulaAlumno.Text = "Cedula";
             // 
-            // tabPage6
+            // tabPageIngresarAlumnoDatosInteres
             // 
-            this.tabPage6.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage6.Controls.Add(this.groupBox20);
-            this.tabPage6.Controls.Add(this.groupBox19);
-            this.tabPage6.Controls.Add(this.groupBox18);
-            this.tabPage6.Controls.Add(this.groupBox17);
-            this.tabPage6.Controls.Add(this.groupBox16);
-            this.tabPage6.Controls.Add(this.btnAtras);
-            this.tabPage6.Controls.Add(this.btnSiguinete_2);
-            this.tabPage6.Location = new System.Drawing.Point(4, 22);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1083, 491);
-            this.tabPage6.TabIndex = 1;
-            this.tabPage6.Text = "Datos de interes";
+            this.tabPageIngresarAlumnoDatosInteres.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.groupBox20);
+            this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.groupBox19);
+            this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.groupBox18);
+            this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.groupBox17);
+            this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.groupBox16);
+            this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.btnAtras);
+            this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.btnSiguinete_2);
+            this.tabPageIngresarAlumnoDatosInteres.Location = new System.Drawing.Point(4, 22);
+            this.tabPageIngresarAlumnoDatosInteres.Name = "tabPageIngresarAlumnoDatosInteres";
+            this.tabPageIngresarAlumnoDatosInteres.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageIngresarAlumnoDatosInteres.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageIngresarAlumnoDatosInteres.TabIndex = 1;
+            this.tabPageIngresarAlumnoDatosInteres.Text = "Datos de interes";
             // 
             // groupBox20
             // 
@@ -1699,16 +1699,16 @@
             this.btnSiguinete_2.UseVisualStyleBackColor = true;
             this.btnSiguinete_2.Click += new System.EventHandler(this.btnSiguinete2_Click);
             // 
-            // tabPage7
+            // tabPageIngresarAlumnoFinalizar
             // 
-            this.tabPage7.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage7.Controls.Add(this.btnAtras_2);
-            this.tabPage7.Controls.Add(this.btnFinalizar);
-            this.tabPage7.Location = new System.Drawing.Point(4, 22);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1083, 491);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "Finalizar";
+            this.tabPageIngresarAlumnoFinalizar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageIngresarAlumnoFinalizar.Controls.Add(this.btnAtras_2);
+            this.tabPageIngresarAlumnoFinalizar.Controls.Add(this.btnFinalizar);
+            this.tabPageIngresarAlumnoFinalizar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageIngresarAlumnoFinalizar.Name = "tabPageIngresarAlumnoFinalizar";
+            this.tabPageIngresarAlumnoFinalizar.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageIngresarAlumnoFinalizar.TabIndex = 2;
+            this.tabPageIngresarAlumnoFinalizar.Text = "Finalizar";
             // 
             // btnAtras_2
             // 
@@ -1731,42 +1731,42 @@
             this.btnFinalizar.Text = "Finalizar";
             this.btnFinalizar.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
+            // tabPageAlumnosConsultarModificar
             // 
-            this.tabPage4.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage4.Controls.Add(this.tabControlModificarAlumno);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(1089, 521);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Consultar / Modificar";
+            this.tabPageAlumnosConsultarModificar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageAlumnosConsultarModificar.Controls.Add(this.tabControlModificarAlumno);
+            this.tabPageAlumnosConsultarModificar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAlumnosConsultarModificar.Name = "tabPageAlumnosConsultarModificar";
+            this.tabPageAlumnosConsultarModificar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageAlumnosConsultarModificar.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageAlumnosConsultarModificar.TabIndex = 1;
+            this.tabPageAlumnosConsultarModificar.Text = "Consultar / Modificar";
             // 
             // tabControlModificarAlumno
             // 
-            this.tabControlModificarAlumno.Controls.Add(this.tabPage8);
-            this.tabControlModificarAlumno.Controls.Add(this.tabPage9);
-            this.tabControlModificarAlumno.Controls.Add(this.tabPage10);
-            this.tabControlModificarAlumno.Location = new System.Drawing.Point(1, 1);
+            this.tabControlModificarAlumno.Controls.Add(this.tabPageConsultarModificarAlumnoDatosPersonales);
+            this.tabControlModificarAlumno.Controls.Add(this.tabPageConsultarModificarAlumnoDatosInteres);
+            this.tabControlModificarAlumno.Controls.Add(this.tabPageConsultarModificarAlumnoFinalizar);
+            this.tabControlModificarAlumno.Location = new System.Drawing.Point(0, 1);
             this.tabControlModificarAlumno.Name = "tabControlModificarAlumno";
             this.tabControlModificarAlumno.SelectedIndex = 0;
-            this.tabControlModificarAlumno.Size = new System.Drawing.Size(1091, 517);
+            this.tabControlModificarAlumno.Size = new System.Drawing.Size(1091, 518);
             this.tabControlModificarAlumno.TabIndex = 12;
             // 
-            // tabPage8
+            // tabPageConsultarModificarAlumnoDatosPersonales
             // 
-            this.tabPage8.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage8.Controls.Add(this.button8);
-            this.tabPage8.Controls.Add(this.groupBox11);
-            this.tabPage8.Controls.Add(this.groupBox12);
-            this.tabPage8.Controls.Add(this.groupBox13);
-            this.tabPage8.Controls.Add(this.groupBox14);
-            this.tabPage8.Location = new System.Drawing.Point(4, 22);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(1083, 491);
-            this.tabPage8.TabIndex = 0;
-            this.tabPage8.Text = "Datos personales";
+            this.tabPageConsultarModificarAlumnoDatosPersonales.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Controls.Add(this.button8);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Controls.Add(this.groupBox11);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Controls.Add(this.groupBox12);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Controls.Add(this.groupBox13);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Controls.Add(this.groupBox14);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Location = new System.Drawing.Point(4, 22);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Name = "tabPageConsultarModificarAlumnoDatosPersonales";
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.TabIndex = 0;
+            this.tabPageConsultarModificarAlumnoDatosPersonales.Text = "Datos personales";
             // 
             // button8
             // 
@@ -2079,18 +2079,18 @@
             this.textBox19.TabIndex = 10;
             this.textBox19.Text = "Cedula";
             // 
-            // tabPage9
+            // tabPageConsultarModificarAlumnoDatosInteres
             // 
-            this.tabPage9.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage9.Controls.Add(this.button9);
-            this.tabPage9.Controls.Add(this.button10);
-            this.tabPage9.Controls.Add(this.groupBox15);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1083, 491);
-            this.tabPage9.TabIndex = 1;
-            this.tabPage9.Text = "Datos de interes";
+            this.tabPageConsultarModificarAlumnoDatosInteres.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageConsultarModificarAlumnoDatosInteres.Controls.Add(this.button9);
+            this.tabPageConsultarModificarAlumnoDatosInteres.Controls.Add(this.button10);
+            this.tabPageConsultarModificarAlumnoDatosInteres.Controls.Add(this.groupBox15);
+            this.tabPageConsultarModificarAlumnoDatosInteres.Location = new System.Drawing.Point(4, 22);
+            this.tabPageConsultarModificarAlumnoDatosInteres.Name = "tabPageConsultarModificarAlumnoDatosInteres";
+            this.tabPageConsultarModificarAlumnoDatosInteres.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageConsultarModificarAlumnoDatosInteres.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageConsultarModificarAlumnoDatosInteres.TabIndex = 1;
+            this.tabPageConsultarModificarAlumnoDatosInteres.Text = "Datos de interes";
             // 
             // button9
             // 
@@ -2255,16 +2255,16 @@
             this.comboBox14.Size = new System.Drawing.Size(159, 23);
             this.comboBox14.TabIndex = 23;
             // 
-            // tabPage10
+            // tabPageConsultarModificarAlumnoFinalizar
             // 
-            this.tabPage10.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage10.Controls.Add(this.button11);
-            this.tabPage10.Controls.Add(this.button12);
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1083, 491);
-            this.tabPage10.TabIndex = 2;
-            this.tabPage10.Text = "Finalizar";
+            this.tabPageConsultarModificarAlumnoFinalizar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageConsultarModificarAlumnoFinalizar.Controls.Add(this.button11);
+            this.tabPageConsultarModificarAlumnoFinalizar.Controls.Add(this.button12);
+            this.tabPageConsultarModificarAlumnoFinalizar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageConsultarModificarAlumnoFinalizar.Name = "tabPageConsultarModificarAlumnoFinalizar";
+            this.tabPageConsultarModificarAlumnoFinalizar.Size = new System.Drawing.Size(1083, 492);
+            this.tabPageConsultarModificarAlumnoFinalizar.TabIndex = 2;
+            this.tabPageConsultarModificarAlumnoFinalizar.Text = "Finalizar";
             // 
             // button11
             // 
@@ -2289,22 +2289,22 @@
             // pageCursos
             // 
             this.pageCursos.BackColor = System.Drawing.Color.LightGray;
-            this.pageCursos.Controls.Add(this.tabControlCronograma);
+            this.pageCursos.Controls.Add(this.tabControlCursos);
             this.pageCursos.Location = new System.Drawing.Point(4, 22);
             this.pageCursos.Name = "pageCursos";
             this.pageCursos.Size = new System.Drawing.Size(1089, 536);
             this.pageCursos.TabIndex = 2;
             this.pageCursos.Text = "Cursos";
             // 
-            // tabControlCronograma
+            // tabControlCursos
             // 
-            this.tabControlCronograma.Controls.Add(this.tabPage1);
-            this.tabControlCronograma.Controls.Add(this.tabPage2);
-            this.tabControlCronograma.Location = new System.Drawing.Point(-4, 1);
-            this.tabControlCronograma.Name = "tabControlCronograma";
-            this.tabControlCronograma.SelectedIndex = 0;
-            this.tabControlCronograma.Size = new System.Drawing.Size(1097, 547);
-            this.tabControlCronograma.TabIndex = 2;
+            this.tabControlCursos.Controls.Add(this.tabPage1);
+            this.tabControlCursos.Controls.Add(this.tabPage2);
+            this.tabControlCursos.Location = new System.Drawing.Point(-4, 1);
+            this.tabControlCursos.Name = "tabControlCursos";
+            this.tabControlCursos.SelectedIndex = 0;
+            this.tabControlCursos.Size = new System.Drawing.Size(1097, 547);
+            this.tabControlCursos.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -2322,7 +2322,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1089, 521);
+            this.tabPage2.Size = new System.Drawing.Size(1089, 518);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
             // 
@@ -2355,24 +2355,24 @@
             this.tabControlPrincipal.ResumeLayout(false);
             this.pageDocente.ResumeLayout(false);
             this.tabControlDocente.ResumeLayout(false);
-            this.tab2Page1.ResumeLayout(false);
+            this.tabPageDocentesNuevo.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tab2Page2.ResumeLayout(false);
-            this.tab2Page2.PerformLayout();
+            this.tabPageDocentesConsultarModificar.ResumeLayout(false);
+            this.tabPageDocentesConsultarModificar.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.tab2Page3.ResumeLayout(false);
-            this.tab2Page3.PerformLayout();
+            this.tabPageDocentesBaja.ResumeLayout(false);
+            this.tabPageDocentesBaja.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.pageAlumno.ResumeLayout(false);
-            this.tabControl3.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
+            this.tabControlAlumnos.ResumeLayout(false);
+            this.tabPageAlumnosNuevo.ResumeLayout(false);
             this.tabControlIngresarAlumno.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
+            this.tabPageIngresarAlumnoDatosPersonales.ResumeLayout(false);
             this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
@@ -2382,7 +2382,7 @@
             this.groupBox7.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
-            this.tabPage6.ResumeLayout(false);
+            this.tabPageIngresarAlumnoDatosInteres.ResumeLayout(false);
             this.groupBox20.ResumeLayout(false);
             this.groupBox20.PerformLayout();
             this.groupBox19.ResumeLayout(false);
@@ -2392,10 +2392,10 @@
             this.groupBox17.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
+            this.tabPageIngresarAlumnoFinalizar.ResumeLayout(false);
+            this.tabPageAlumnosConsultarModificar.ResumeLayout(false);
             this.tabControlModificarAlumno.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
+            this.tabPageConsultarModificarAlumnoDatosPersonales.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
             this.groupBox12.ResumeLayout(false);
@@ -2404,11 +2404,11 @@
             this.groupBox13.PerformLayout();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
+            this.tabPageConsultarModificarAlumnoDatosInteres.ResumeLayout(false);
             this.groupBox15.ResumeLayout(false);
-            this.tabPage10.ResumeLayout(false);
+            this.tabPageConsultarModificarAlumnoFinalizar.ResumeLayout(false);
             this.pageCursos.ResumeLayout(false);
-            this.tabControlCronograma.ResumeLayout(false);
+            this.tabControlCursos.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2430,9 +2430,9 @@
         private System.Windows.Forms.TabPage pageDocente;
         private System.Windows.Forms.TabPage pageAlumno;
         private System.Windows.Forms.TabControl tabControlDocente;
-        private System.Windows.Forms.TabPage tab2Page1;
-        private System.Windows.Forms.TabPage tab2Page2;
-        private System.Windows.Forms.TabPage tab2Page3;
+        private System.Windows.Forms.TabPage tabPageDocentesNuevo;
+        private System.Windows.Forms.TabPage tabPageDocentesConsultarModificar;
+        private System.Windows.Forms.TabPage tabPageDocentesBaja;
         private System.Windows.Forms.TextBox txtCedulaDocente;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox txtEmailDocente;
@@ -2482,16 +2482,16 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnDarBaja;
         private System.Windows.Forms.TabPage pageCursos;
-        private System.Windows.Forms.TabControl tabControl3;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabControl tabControlCronograma;
+        private System.Windows.Forms.TabControl tabControlAlumnos;
+        private System.Windows.Forms.TabPage tabPageAlumnosNuevo;
+        private System.Windows.Forms.TabPage tabPageAlumnosConsultarModificar;
+        private System.Windows.Forms.TabControl tabControlCursos;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabControl tabControlIngresarAlumno;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPageIngresarAlumnoDatosPersonales;
+        private System.Windows.Forms.TabPage tabPageIngresarAlumnoDatosInteres;
+        private System.Windows.Forms.TabPage tabPageIngresarAlumnoFinalizar;
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox txtEmailAlumno;
         private System.Windows.Forms.TextBox txtCelularAlumno;
@@ -2525,7 +2525,7 @@
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Button btnAtras_2;
         private System.Windows.Forms.TabControl tabControlModificarAlumno;
-        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPageConsultarModificarAlumnoDatosPersonales;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.TextBox textBox4;
@@ -2552,7 +2552,7 @@
         private System.Windows.Forms.TextBox textBox17;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.TextBox textBox19;
-        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabPageConsultarModificarAlumnoDatosInteres;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.GroupBox groupBox15;
@@ -2562,7 +2562,7 @@
         private System.Windows.Forms.ComboBox comboBox12;
         private System.Windows.Forms.ComboBox comboBox13;
         private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabPageConsultarModificarAlumnoFinalizar;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;

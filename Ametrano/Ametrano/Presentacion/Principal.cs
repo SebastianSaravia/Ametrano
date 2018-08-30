@@ -42,31 +42,31 @@ namespace Ametrano.Presentacion
             boxEstadoCivilAlumno.SelectedIndex = 0;
             boxNivelEducativo.SelectedIndex = 0;
             boxJefeHogar.SelectedIndex = 0;
-            tabControlIngresarAlumno.Controls.Remove(tabPage6);
-            tabControlIngresarAlumno.Controls.Remove(tabPage7);
+            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
+            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
         }
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
-            tabControlIngresarAlumno.Controls.Remove(tabPage5);
-            tabControlIngresarAlumno.Controls.Add(tabPage6);
+            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
+            tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.SelectedIndex= 1;         
         }
         private void btnSiguinete2_Click(object sender, EventArgs e)
         {
-            tabControlIngresarAlumno.Controls.Remove(tabPage6);
-            tabControlIngresarAlumno.Controls.Add(tabPage7);
+            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
+            tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoFinalizar);
             tabControlIngresarAlumno.SelectedIndex = 2;
         }
         private void button5_Click(object sender, EventArgs e)
         {
-            tabControlIngresarAlumno.Controls.Remove(tabPage6);
-            tabControlIngresarAlumno.Controls.Add(tabPage5);
+            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
+            tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosPersonales);
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
         private void button6_Click(object sender, EventArgs e)
         {
-            tabControlIngresarAlumno.Controls.Remove(tabPage7);
-            tabControlIngresarAlumno.Controls.Add(tabPage6);
+            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
+            tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.SelectedIndex = 2;
         }
         private void TimePickerFechaNac_ValueChanged(object sender, EventArgs e)

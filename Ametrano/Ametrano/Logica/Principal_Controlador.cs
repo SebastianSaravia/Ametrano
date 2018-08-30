@@ -13,12 +13,7 @@ namespace Ametrano.Logica
         {
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
-
         }
-
-
-
-
 
 
 

@@ -106,5 +106,17 @@ namespace Ametrano.Properties {
                 this["login_contraseña"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string configuracion_usuario_ {
+            get {
+                return ((string)(this["configuracion_usuario_"]));
+            }
+            set {
+                this["configuracion_usuario_"] = value;
+            }
+        }
     }
 }
