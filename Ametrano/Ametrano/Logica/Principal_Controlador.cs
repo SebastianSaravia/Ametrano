@@ -15,7 +15,7 @@ namespace Ametrano.Logica
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
-
+        /*
         private void placeholderEventEnter(object sender, EventArgs e)
         {
 
@@ -55,6 +55,7 @@ namespace Ametrano.Logica
 
             return null;
         }
+        */
 
 
 
