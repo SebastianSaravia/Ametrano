@@ -254,9 +254,13 @@
             this.ClientSize = new System.Drawing.Size(859, 333);
             this.Controls.Add(this.tabControlConfiguracion);
             this.Controls.Add(this.listaConfiguracion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(875, 372);
             this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(875, 372);
             this.Name = "Configuracion";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuracion";
             this.tabControlConfiguracion.ResumeLayout(false);
             this.tabPageUsuarios.ResumeLayout(false);

@@ -14,7 +14,7 @@ namespace Ametrano
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Presentacion.Configuracion());
+            Application.Run(new Presentacion.Login());
         }
     }
 }

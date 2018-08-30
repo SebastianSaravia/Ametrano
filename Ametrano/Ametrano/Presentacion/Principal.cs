@@ -15,6 +15,7 @@ namespace Ametrano.Presentacion
     public partial class Principal : Form
 
     {
+        private Principal_Controlador controlador = new Principal_Controlador();
         public Principal()
         {
             InitializeComponent();
@@ -73,6 +74,22 @@ namespace Ametrano.Presentacion
             txtFechaNacimiento.Text = TimePickerFechaNac.Text;
         }
 
-      
+        private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            controlador.abrirConfiguracion();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.login_rol = "";
+            Properties.Settings.Default.login_ususario = "";
+            Properties.Settings.Default.login_contraseña = "";
+            Login.ActiveForm.Show();
+        }
     }
 }
