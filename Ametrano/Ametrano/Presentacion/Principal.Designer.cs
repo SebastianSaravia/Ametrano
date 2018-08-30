@@ -102,6 +102,9 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabControlIngresarAlumno = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.boxEstadoAlumno = new System.Windows.Forms.ComboBox();
+            this.boxCursoAlumno = new System.Windows.Forms.ComboBox();
             this.btnSiguiente = new System.Windows.Forms.Button();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtEmailAlumno = new System.Windows.Forms.TextBox();
@@ -129,15 +132,32 @@
             this.txtNombre1Alumno = new System.Windows.Forms.TextBox();
             this.txtCedulaAlumno = new System.Windows.Forms.TextBox();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.groupBox19 = new System.Windows.Forms.GroupBox();
+            this.boxJefeHogar = new System.Windows.Forms.ComboBox();
+            this.boxCantidadHijos = new System.Windows.Forms.ComboBox();
+            this.groupBox18 = new System.Windows.Forms.GroupBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.boxCuentaConApoyo = new System.Windows.Forms.ComboBox();
+            this.boxPersonaDiscapacidad = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt60oMas = new System.Windows.Forms.TextBox();
+            this.txt18a59 = new System.Windows.Forms.TextBox();
+            this.txt0a17 = new System.Windows.Forms.TextBox();
+            this.groupBox17 = new System.Windows.Forms.GroupBox();
+            this.txtMedioAccesoInternet = new System.Windows.Forms.TextBox();
+            this.boxFacilAccesoInternet = new System.Windows.Forms.ComboBox();
+            this.boxUsaInternet = new System.Windows.Forms.ComboBox();
+            this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.txtIngresoMensual = new System.Windows.Forms.TextBox();
+            this.txtHorasJornada = new System.Windows.Forms.TextBox();
+            this.txtTiempoDesempleado = new System.Windows.Forms.TextBox();
+            this.boxTrabajoAlgunaVez = new System.Windows.Forms.ComboBox();
+            this.boxTrabajaActualmente = new System.Windows.Forms.ComboBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnSiguinete_2 = new System.Windows.Forms.Button();
-            this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.boxTiempoSinTrabajo = new System.Windows.Forms.ComboBox();
-            this.boxTrabajaActualmente = new System.Windows.Forms.ComboBox();
-            this.boxTrabajoAlgunaVez = new System.Windows.Forms.ComboBox();
-            this.boxNumeroHijos = new System.Windows.Forms.ComboBox();
-            this.boxJefeHogar = new System.Windows.Forms.ComboBox();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.btnAtras_2 = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
@@ -209,12 +229,17 @@
             this.tabPage3.SuspendLayout();
             this.tabControlIngresarAlumno.SuspendLayout();
             this.tabPage5.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.groupBox9.SuspendLayout();
+            this.groupBox20.SuspendLayout();
+            this.groupBox19.SuspendLayout();
+            this.groupBox18.SuspendLayout();
+            this.groupBox17.SuspendLayout();
+            this.groupBox16.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabControlModificarAlumno.SuspendLayout();
@@ -995,6 +1020,7 @@
             // tabPage5
             // 
             this.tabPage5.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage5.Controls.Add(this.groupBox9);
             this.tabPage5.Controls.Add(this.btnSiguiente);
             this.tabPage5.Controls.Add(this.groupBox10);
             this.tabPage5.Controls.Add(this.groupBox8);
@@ -1006,6 +1032,39 @@
             this.tabPage5.Size = new System.Drawing.Size(1083, 491);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Datos personales";
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.boxEstadoAlumno);
+            this.groupBox9.Controls.Add(this.boxCursoAlumno);
+            this.groupBox9.Location = new System.Drawing.Point(435, 17);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(379, 75);
+            this.groupBox9.TabIndex = 21;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "Con respecto al instituto";
+            // 
+            // boxEstadoAlumno
+            // 
+            this.boxEstadoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxEstadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxEstadoAlumno.Items.AddRange(new object[] {
+            "Estado..."});
+            this.boxEstadoAlumno.Location = new System.Drawing.Point(200, 30);
+            this.boxEstadoAlumno.Name = "boxEstadoAlumno";
+            this.boxEstadoAlumno.Size = new System.Drawing.Size(159, 23);
+            this.boxEstadoAlumno.TabIndex = 27;
+            // 
+            // boxCursoAlumno
+            // 
+            this.boxCursoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoAlumno.Items.AddRange(new object[] {
+            "Curso..."});
+            this.boxCursoAlumno.Location = new System.Drawing.Point(19, 30);
+            this.boxCursoAlumno.Name = "boxCursoAlumno";
+            this.boxCursoAlumno.Size = new System.Drawing.Size(159, 23);
+            this.boxCursoAlumno.TabIndex = 26;
             // 
             // btnSiguiente
             // 
@@ -1323,15 +1382,296 @@
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage6.Controls.Add(this.groupBox20);
+            this.tabPage6.Controls.Add(this.groupBox19);
+            this.tabPage6.Controls.Add(this.groupBox18);
+            this.tabPage6.Controls.Add(this.groupBox17);
+            this.tabPage6.Controls.Add(this.groupBox16);
             this.tabPage6.Controls.Add(this.btnAtras);
             this.tabPage6.Controls.Add(this.btnSiguinete_2);
-            this.tabPage6.Controls.Add(this.groupBox9);
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage6.Size = new System.Drawing.Size(1083, 491);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Datos de interes";
+            // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.textBox3);
+            this.groupBox20.Location = new System.Drawing.Point(611, 195);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(436, 79);
+            this.groupBox20.TabIndex = 20;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Coberura de salud";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox3.Location = new System.Drawing.Point(18, 26);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(404, 24);
+            this.textBox3.TabIndex = 29;
+            this.textBox3.Text = "Cobertura de salud";
+            // 
+            // groupBox19
+            // 
+            this.groupBox19.Controls.Add(this.boxJefeHogar);
+            this.groupBox19.Controls.Add(this.boxCantidadHijos);
+            this.groupBox19.Location = new System.Drawing.Point(668, 114);
+            this.groupBox19.Name = "groupBox19";
+            this.groupBox19.Size = new System.Drawing.Size(379, 75);
+            this.groupBox19.TabIndex = 19;
+            this.groupBox19.TabStop = false;
+            this.groupBox19.Text = "Jefe de hogar";
+            // 
+            // boxJefeHogar
+            // 
+            this.boxJefeHogar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxJefeHogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxJefeHogar.Items.AddRange(new object[] {
+            "Jefe de hogar?",
+            "SI",
+            "NO"});
+            this.boxJefeHogar.Location = new System.Drawing.Point(8, 30);
+            this.boxJefeHogar.Name = "boxJefeHogar";
+            this.boxJefeHogar.Size = new System.Drawing.Size(158, 23);
+            this.boxJefeHogar.TabIndex = 28;
+            // 
+            // boxCantidadHijos
+            // 
+            this.boxCantidadHijos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCantidadHijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCantidadHijos.Items.AddRange(new object[] {
+            "Cantidad hijos",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10"});
+            this.boxCantidadHijos.Location = new System.Drawing.Point(172, 31);
+            this.boxCantidadHijos.Name = "boxCantidadHijos";
+            this.boxCantidadHijos.Size = new System.Drawing.Size(193, 23);
+            this.boxCantidadHijos.TabIndex = 27;
+            // 
+            // groupBox18
+            // 
+            this.groupBox18.Controls.Add(this.textBox2);
+            this.groupBox18.Controls.Add(this.comboBox1);
+            this.groupBox18.Controls.Add(this.boxCuentaConApoyo);
+            this.groupBox18.Controls.Add(this.boxPersonaDiscapacidad);
+            this.groupBox18.Controls.Add(this.textBox1);
+            this.groupBox18.Controls.Add(this.txt60oMas);
+            this.groupBox18.Controls.Add(this.txt18a59);
+            this.groupBox18.Controls.Add(this.txt0a17);
+            this.groupBox18.Location = new System.Drawing.Point(41, 195);
+            this.groupBox18.Name = "groupBox18";
+            this.groupBox18.Size = new System.Drawing.Size(564, 132);
+            this.groupBox18.TabIndex = 18;
+            this.groupBox18.TabStop = false;
+            this.groupBox18.Text = "Personas a cargo";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.Location = new System.Drawing.Point(263, 83);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(274, 24);
+            this.textBox2.TabIndex = 31;
+            this.textBox2.Text = "Experiencia en instituciones de cuidado";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Items.AddRange(new object[] {
+            "Trabajo anteriormente cuidando?",
+            "SI",
+            "NO"});
+            this.comboBox1.Location = new System.Drawing.Point(19, 85);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(238, 23);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // boxCuentaConApoyo
+            // 
+            this.boxCuentaConApoyo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCuentaConApoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCuentaConApoyo.Items.AddRange(new object[] {
+            "Cuenta con apoyo?",
+            "SI",
+            "NO"});
+            this.boxCuentaConApoyo.Location = new System.Drawing.Point(184, 56);
+            this.boxCuentaConApoyo.Name = "boxCuentaConApoyo";
+            this.boxCuentaConApoyo.Size = new System.Drawing.Size(159, 23);
+            this.boxCuentaConApoyo.TabIndex = 29;
+            // 
+            // boxPersonaDiscapacidad
+            // 
+            this.boxPersonaDiscapacidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxPersonaDiscapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxPersonaDiscapacidad.Items.AddRange(new object[] {
+            "Persona con discapacidad?",
+            "SI",
+            "NO"});
+            this.boxPersonaDiscapacidad.Location = new System.Drawing.Point(19, 56);
+            this.boxPersonaDiscapacidad.Name = "boxPersonaDiscapacidad";
+            this.boxPersonaDiscapacidad.Size = new System.Drawing.Size(159, 23);
+            this.boxPersonaDiscapacidad.TabIndex = 29;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(349, 55);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 24);
+            this.textBox1.TabIndex = 27;
+            this.textBox1.Text = "Carga semanal de cuidado";
+            // 
+            // txt60oMas
+            // 
+            this.txt60oMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt60oMas.Location = new System.Drawing.Point(263, 26);
+            this.txt60oMas.Name = "txt60oMas";
+            this.txt60oMas.Size = new System.Drawing.Size(116, 24);
+            this.txt60oMas.TabIndex = 28;
+            this.txt60oMas.Text = "De 60 o mas";
+            // 
+            // txt18a59
+            // 
+            this.txt18a59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt18a59.Location = new System.Drawing.Point(141, 26);
+            this.txt18a59.Name = "txt18a59";
+            this.txt18a59.Size = new System.Drawing.Size(116, 24);
+            this.txt18a59.TabIndex = 28;
+            this.txt18a59.Text = "De 18 a 59 años";
+            // 
+            // txt0a17
+            // 
+            this.txt0a17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt0a17.Location = new System.Drawing.Point(19, 26);
+            this.txt0a17.Name = "txt0a17";
+            this.txt0a17.Size = new System.Drawing.Size(116, 24);
+            this.txt0a17.TabIndex = 28;
+            this.txt0a17.Text = "De 0 a 17 años";
+            // 
+            // groupBox17
+            // 
+            this.groupBox17.Controls.Add(this.txtMedioAccesoInternet);
+            this.groupBox17.Controls.Add(this.boxFacilAccesoInternet);
+            this.groupBox17.Controls.Add(this.boxUsaInternet);
+            this.groupBox17.Location = new System.Drawing.Point(41, 114);
+            this.groupBox17.Name = "groupBox17";
+            this.groupBox17.Size = new System.Drawing.Size(621, 75);
+            this.groupBox17.TabIndex = 17;
+            this.groupBox17.TabStop = false;
+            this.groupBox17.Text = "Acceso a internet";
+            // 
+            // txtMedioAccesoInternet
+            // 
+            this.txtMedioAccesoInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedioAccesoInternet.Location = new System.Drawing.Point(414, 30);
+            this.txtMedioAccesoInternet.Name = "txtMedioAccesoInternet";
+            this.txtMedioAccesoInternet.Size = new System.Drawing.Size(193, 24);
+            this.txtMedioAccesoInternet.TabIndex = 29;
+            this.txtMedioAccesoInternet.Text = "Medio de acceso a internet";
+            // 
+            // boxFacilAccesoInternet
+            // 
+            this.boxFacilAccesoInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxFacilAccesoInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxFacilAccesoInternet.Items.AddRange(new object[] {
+            "Facil acceso a internet?"});
+            this.boxFacilAccesoInternet.Location = new System.Drawing.Point(215, 30);
+            this.boxFacilAccesoInternet.Name = "boxFacilAccesoInternet";
+            this.boxFacilAccesoInternet.Size = new System.Drawing.Size(193, 23);
+            this.boxFacilAccesoInternet.TabIndex = 28;
+            // 
+            // boxUsaInternet
+            // 
+            this.boxUsaInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxUsaInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxUsaInternet.Items.AddRange(new object[] {
+            "Usa internet?",
+            "SI",
+            "NO"});
+            this.boxUsaInternet.Location = new System.Drawing.Point(16, 30);
+            this.boxUsaInternet.Name = "boxUsaInternet";
+            this.boxUsaInternet.Size = new System.Drawing.Size(193, 23);
+            this.boxUsaInternet.TabIndex = 27;
+            // 
+            // groupBox16
+            // 
+            this.groupBox16.Controls.Add(this.txtIngresoMensual);
+            this.groupBox16.Controls.Add(this.txtHorasJornada);
+            this.groupBox16.Controls.Add(this.txtTiempoDesempleado);
+            this.groupBox16.Controls.Add(this.boxTrabajoAlgunaVez);
+            this.groupBox16.Controls.Add(this.boxTrabajaActualmente);
+            this.groupBox16.Location = new System.Drawing.Point(41, 36);
+            this.groupBox16.Name = "groupBox16";
+            this.groupBox16.Size = new System.Drawing.Size(1006, 72);
+            this.groupBox16.TabIndex = 16;
+            this.groupBox16.TabStop = false;
+            this.groupBox16.Text = "Trabajo";
+            // 
+            // txtIngresoMensual
+            // 
+            this.txtIngresoMensual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngresoMensual.Location = new System.Drawing.Point(816, 29);
+            this.txtIngresoMensual.Name = "txtIngresoMensual";
+            this.txtIngresoMensual.Size = new System.Drawing.Size(176, 24);
+            this.txtIngresoMensual.TabIndex = 28;
+            this.txtIngresoMensual.Text = "Ingreso mensual";
+            // 
+            // txtHorasJornada
+            // 
+            this.txtHorasJornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorasJornada.Location = new System.Drawing.Point(617, 29);
+            this.txtHorasJornada.Name = "txtHorasJornada";
+            this.txtHorasJornada.Size = new System.Drawing.Size(176, 24);
+            this.txtHorasJornada.TabIndex = 28;
+            this.txtHorasJornada.Text = "Horas de jornada";
+            // 
+            // txtTiempoDesempleado
+            // 
+            this.txtTiempoDesempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiempoDesempleado.Location = new System.Drawing.Point(418, 29);
+            this.txtTiempoDesempleado.Name = "txtTiempoDesempleado";
+            this.txtTiempoDesempleado.Size = new System.Drawing.Size(176, 24);
+            this.txtTiempoDesempleado.TabIndex = 27;
+            this.txtTiempoDesempleado.Text = "Tiempo desempleado";
+            // 
+            // boxTrabajoAlgunaVez
+            // 
+            this.boxTrabajoAlgunaVez.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajoAlgunaVez.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajoAlgunaVez.Items.AddRange(new object[] {
+            "Trabajo alguna vez?",
+            "SI",
+            "NO"});
+            this.boxTrabajoAlgunaVez.Location = new System.Drawing.Point(19, 29);
+            this.boxTrabajoAlgunaVez.Name = "boxTrabajoAlgunaVez";
+            this.boxTrabajoAlgunaVez.Size = new System.Drawing.Size(176, 23);
+            this.boxTrabajoAlgunaVez.TabIndex = 25;
+            // 
+            // boxTrabajaActualmente
+            // 
+            this.boxTrabajaActualmente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajaActualmente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajaActualmente.Items.AddRange(new object[] {
+            "Trabaja actualmente?",
+            "SI",
+            "NO"});
+            this.boxTrabajaActualmente.Location = new System.Drawing.Point(221, 29);
+            this.boxTrabajaActualmente.Name = "boxTrabajaActualmente";
+            this.boxTrabajaActualmente.Size = new System.Drawing.Size(176, 23);
+            this.boxTrabajaActualmente.TabIndex = 26;
             // 
             // btnAtras
             // 
@@ -1354,149 +1694,6 @@
             this.btnSiguinete_2.Text = "Siguiente";
             this.btnSiguinete_2.UseVisualStyleBackColor = true;
             this.btnSiguinete_2.Click += new System.EventHandler(this.btnSiguinete2_Click);
-            // 
-            // groupBox9
-            // 
-            this.groupBox9.Controls.Add(this.comboBox3);
-            this.groupBox9.Controls.Add(this.boxTiempoSinTrabajo);
-            this.groupBox9.Controls.Add(this.boxTrabajaActualmente);
-            this.groupBox9.Controls.Add(this.boxTrabajoAlgunaVez);
-            this.groupBox9.Controls.Add(this.boxNumeroHijos);
-            this.groupBox9.Controls.Add(this.boxJefeHogar);
-            this.groupBox9.Location = new System.Drawing.Point(16, 15);
-            this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(574, 175);
-            this.groupBox9.TabIndex = 13;
-            this.groupBox9.TabStop = false;
-            this.groupBox9.Text = "Datos de interes";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.Items.AddRange(new object[] {
-            "Cantidad de hijos...",
-            "Sin hijos",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11"});
-            this.comboBox3.Location = new System.Drawing.Point(199, 78);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(159, 23);
-            this.comboBox3.TabIndex = 26;
-            // 
-            // boxTiempoSinTrabajo
-            // 
-            this.boxTiempoSinTrabajo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTiempoSinTrabajo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTiempoSinTrabajo.Items.AddRange(new object[] {
-            "Cantidad de hijos...",
-            "Sin hijos",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11"});
-            this.boxTiempoSinTrabajo.Location = new System.Drawing.Point(34, 78);
-            this.boxTiempoSinTrabajo.Name = "boxTiempoSinTrabajo";
-            this.boxTiempoSinTrabajo.Size = new System.Drawing.Size(159, 23);
-            this.boxTiempoSinTrabajo.TabIndex = 26;
-            // 
-            // boxTrabajaActualmente
-            // 
-            this.boxTrabajaActualmente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTrabajaActualmente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTrabajaActualmente.Items.AddRange(new object[] {
-            "Cantidad de hijos...",
-            "Sin hijos",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11"});
-            this.boxTrabajaActualmente.Location = new System.Drawing.Point(199, 49);
-            this.boxTrabajaActualmente.Name = "boxTrabajaActualmente";
-            this.boxTrabajaActualmente.Size = new System.Drawing.Size(159, 23);
-            this.boxTrabajaActualmente.TabIndex = 26;
-            // 
-            // boxTrabajoAlgunaVez
-            // 
-            this.boxTrabajoAlgunaVez.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTrabajoAlgunaVez.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTrabajoAlgunaVez.Items.AddRange(new object[] {
-            "Cantidad de hijos...",
-            "Sin hijos",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11"});
-            this.boxTrabajoAlgunaVez.Location = new System.Drawing.Point(34, 49);
-            this.boxTrabajoAlgunaVez.Name = "boxTrabajoAlgunaVez";
-            this.boxTrabajoAlgunaVez.Size = new System.Drawing.Size(159, 23);
-            this.boxTrabajoAlgunaVez.TabIndex = 25;
-            // 
-            // boxNumeroHijos
-            // 
-            this.boxNumeroHijos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroHijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroHijos.Items.AddRange(new object[] {
-            "Cantidad de hijos...",
-            "Sin hijos",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11"});
-            this.boxNumeroHijos.Location = new System.Drawing.Point(199, 20);
-            this.boxNumeroHijos.Name = "boxNumeroHijos";
-            this.boxNumeroHijos.Size = new System.Drawing.Size(159, 23);
-            this.boxNumeroHijos.TabIndex = 24;
-            // 
-            // boxJefeHogar
-            // 
-            this.boxJefeHogar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxJefeHogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxJefeHogar.Items.AddRange(new object[] {
-            "Jefe de hogar...",
-            "SI",
-            "NO"});
-            this.boxJefeHogar.Location = new System.Drawing.Point(34, 20);
-            this.boxJefeHogar.Name = "boxJefeHogar";
-            this.boxJefeHogar.Size = new System.Drawing.Size(159, 23);
-            this.boxJefeHogar.TabIndex = 23;
             // 
             // tabPage7
             // 
@@ -2131,9 +2328,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuPrincipal;
@@ -2172,6 +2369,7 @@
             this.tabPage3.ResumeLayout(false);
             this.tabControlIngresarAlumno.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
             this.groupBox10.ResumeLayout(false);
             this.groupBox10.PerformLayout();
             this.groupBox8.ResumeLayout(false);
@@ -2181,7 +2379,15 @@
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.tabPage6.ResumeLayout(false);
-            this.groupBox9.ResumeLayout(false);
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
+            this.groupBox19.ResumeLayout(false);
+            this.groupBox18.ResumeLayout(false);
+            this.groupBox18.PerformLayout();
+            this.groupBox17.ResumeLayout(false);
+            this.groupBox17.PerformLayout();
+            this.groupBox16.ResumeLayout(false);
+            this.groupBox16.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabControlModificarAlumno.ResumeLayout(false);
@@ -2307,13 +2513,8 @@
         private System.Windows.Forms.TextBox txtNombre2Alumno;
         private System.Windows.Forms.TextBox txtNombre1Alumno;
         private System.Windows.Forms.TextBox txtCedulaAlumno;
-        private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox boxTiempoSinTrabajo;
         private System.Windows.Forms.ComboBox boxTrabajaActualmente;
         private System.Windows.Forms.ComboBox boxTrabajoAlgunaVez;
-        private System.Windows.Forms.ComboBox boxNumeroHijos;
-        private System.Windows.Forms.ComboBox boxJefeHogar;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnSiguinete_2;
         private System.Windows.Forms.Button btnFinalizar;
@@ -2363,5 +2564,30 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pruebaDeConexionConBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox16;
+        private System.Windows.Forms.TextBox txtHorasJornada;
+        private System.Windows.Forms.TextBox txtTiempoDesempleado;
+        private System.Windows.Forms.GroupBox groupBox17;
+        private System.Windows.Forms.TextBox txtIngresoMensual;
+        private System.Windows.Forms.GroupBox groupBox18;
+        private System.Windows.Forms.ComboBox boxPersonaDiscapacidad;
+        private System.Windows.Forms.TextBox txt60oMas;
+        private System.Windows.Forms.TextBox txt18a59;
+        private System.Windows.Forms.TextBox txt0a17;
+        private System.Windows.Forms.TextBox txtMedioAccesoInternet;
+        private System.Windows.Forms.ComboBox boxFacilAccesoInternet;
+        private System.Windows.Forms.ComboBox boxUsaInternet;
+        private System.Windows.Forms.ComboBox boxCuentaConApoyo;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ComboBox boxEstadoAlumno;
+        private System.Windows.Forms.ComboBox boxCursoAlumno;
+        private System.Windows.Forms.GroupBox groupBox20;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.GroupBox groupBox19;
+        private System.Windows.Forms.ComboBox boxJefeHogar;
+        private System.Windows.Forms.ComboBox boxCantidadHijos;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

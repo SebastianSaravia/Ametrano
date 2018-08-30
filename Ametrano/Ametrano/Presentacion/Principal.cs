@@ -73,8 +73,6 @@ namespace Ametrano.Presentacion
             txtFechaNacimiento.Text = TimePickerFechaNac.Text;
         }
 
-
-
-
+      
     }
 }
