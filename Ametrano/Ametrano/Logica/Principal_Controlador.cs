@@ -8,5 +8,12 @@ namespace Ametrano.Logica
 {
     class Principal_Controlador
     {
+
+
+
+
+
+
+
     }
 }

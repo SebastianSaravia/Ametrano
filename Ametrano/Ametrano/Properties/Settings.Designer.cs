@@ -41,27 +41,21 @@ namespace Ametrano.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("login")]
         public string usuario {
             get {
                 return ((string)(this["usuario"]));
             }
-            set {
-                this["usuario"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("login")]
         public string contraseña {
             get {
                 return ((string)(this["contraseña"]));
-            }
-            set {
-                this["contraseña"] = value;
             }
         }
         
