@@ -59,8 +59,8 @@ namespace Ametrano.Logica
                 Properties.Settings.Default.login_ususario = usuario;
                 Properties.Settings.Default.login_contraseña = contraseña;
                 Properties.Settings.Default.login_rol = informacionDeUsuario[1];
-                Principal ventanaPrincipal = new Principal();
-                ventanaPrincipal.Show();
+                Principal ventanaPrincipal = new Principal();//Creo nueva ventana principal
+                ventanaPrincipal.Show();//muestro la ventana
                 variableParaRetornar = true;
             }
             else

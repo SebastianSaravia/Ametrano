@@ -40,7 +40,7 @@ namespace Ametrano.Persistencia
             if (datosRetornados[0])
             {
                 comando.Connection = objetoDeConexion;
-                testing.MostrarMessageBox(datosRetornados[1]);
+                
             } else
             {
                 testing.MostrarMessageBox(datosRetornados[1]);

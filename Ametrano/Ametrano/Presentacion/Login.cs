@@ -1,4 +1,5 @@
 ﻿using Ametrano.Logica;
+using Ametrano.Persistencia;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace Ametrano.Presentacion
     {
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
+        private Login_Controlador controlador = new Login_Controlador();
 
         [DllImportAttribute("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
@@ -98,7 +100,7 @@ namespace Ametrano.Presentacion
 
             //luego se debe verificar que no sean vacios
 
-            Login_Controlador controlador = new Login_Controlador();
+            
             bool valorRetornado = controlador.loginbtn_function(usuario, contrasenia);
             if (valorRetornado)
             {
@@ -112,6 +114,9 @@ namespace Ametrano.Presentacion
         private void Login_Load(object sender, EventArgs e)
         {
             txtUsuario.Focus();
+           
+            
+
         }
     }
 }
