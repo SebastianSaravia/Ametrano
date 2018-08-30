@@ -76,6 +76,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\Principal_Controlador.cs" />
     <Compile Include="Logica\TestingClass.cs" />
     <Compile Include="Persistencia\ConexionBD.cs" />
     <Compile Include="Logica\Login_Controlador.cs" />
