@@ -42,6 +42,9 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
@@ -184,9 +187,6 @@
             this.tabControlCronograma = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -377,14 +377,35 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.salirToolStripMenuItem.Text = "Salir";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem,
+            this.configuraciónToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(90, 20);
+            this.toolStripMenuItem1.Text = "Herramientas";
+            // 
+            // pruebaDeConexionConBaseDeDatosToolStripMenuItem
+            // 
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Name = "pruebaDeConexionConBaseDeDatosToolStripMenuItem";
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Text = "Prueba de conexion con base de datos";
+            // 
+            // configuraciónToolStripMenuItem
+            // 
+            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
+            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
             // ayudaToolStripMenuItem
             // 
@@ -475,7 +496,7 @@
             this.btnQuitar.Location = new System.Drawing.Point(12, 51);
             this.btnQuitar.Name = "btnQuitar";
             this.btnQuitar.Size = new System.Drawing.Size(81, 29);
-            this.btnQuitar.TabIndex = 2;
+            this.btnQuitar.TabIndex = 10;
             this.btnQuitar.Text = "Quitar";
             this.btnQuitar.UseVisualStyleBackColor = true;
             // 
@@ -485,7 +506,7 @@
             this.btnAñadir.Location = new System.Drawing.Point(99, 51);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(122, 29);
-            this.btnAñadir.TabIndex = 2;
+            this.btnAñadir.TabIndex = 9;
             this.btnAñadir.Text = "Añadir";
             this.btnAñadir.UseVisualStyleBackColor = true;
             // 
@@ -507,7 +528,7 @@
             this.boxEspecialidades.Location = new System.Drawing.Point(12, 19);
             this.boxEspecialidades.Name = "boxEspecialidades";
             this.boxEspecialidades.Size = new System.Drawing.Size(209, 26);
-            this.boxEspecialidades.TabIndex = 0;
+            this.boxEspecialidades.TabIndex = 8;
             // 
             // groupBox1
             // 
@@ -2103,27 +2124,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1089, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem,
-            this.configuraciónToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(90, 20);
-            this.toolStripMenuItem1.Text = "Herramientas";
-            // 
-            // pruebaDeConexionConBaseDeDatosToolStripMenuItem
-            // 
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Name = "pruebaDeConexionConBaseDeDatosToolStripMenuItem";
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Text = "Prueba de conexion con base de datos";
-            // 
-            // configuraciónToolStripMenuItem
-            // 
-            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.configuraciónToolStripMenuItem.Text = "Configuración";
             // 
             // Principal
             // 
