@@ -26,25 +26,25 @@ namespace Ametrano.Logica
                 cedula + "','" +
                 nombre1 + " " +
                 nombre2 + "','" + 
-                apellido1 + " " + 
+                apellido1 + " " + //Sql de insert de docente
                 apellido2 + "','" + 
                 direccion + "','" + 
                 telefono +"','" + 
                 email + "');";
-            int filasAfectadas = objetoConexion.insertarDatos(insert);
+
+            int filasAfectadas = objetoConexion.insertarDatos(insert);//Se realiza el insert y se guarda la cantidad de filas afectadas
             if (filasAfectadas > 0)
-            {
-                int filasAfectadasEspecialidad = 0;
+            {//Si el docente se ingreso correctamente
+                int filasAfectadasEspecialidad = 0;//Cantidad de especialidades ingresadas en total
                 for (int i = 0; i < especialidades.Length; i++)
-                {
+                {//Se recorre el array de especialidades y se inserta 
                     string especialidadInsert = "INSERT INTO especialidad VALUES('" + cedula + "','" + especialidades[i] + "');";
                     objetoConexion.insertarDatos(especialidadInsert);
-                    filasAfectadasEspecialidad++;
-
+                    filasAfectadasEspecialidad++;//Si se inserta correctamente se aumenta el numero de especialidades ingresadas
                 }
 
                 if (filasAfectadasEspecialidad == especialidades.Length)
-                {
+                {//Si la cantidad de especialidades ingresadas coincide con la cantidad de especialidades recividas para ingresar se devuelve true
                     retorno = true;
                 }else
                 {
@@ -64,13 +64,6 @@ namespace Ametrano.Logica
         }
 
        
-
-
-
-
-
-
-
 
     }
 }
