@@ -13,7 +13,7 @@ namespace Ametrano.Logica
 {
     class Login_Controlador
     {
-        ConexionBD objetoConexion = new ConexionBD();
+        ConexionBD objetoConexion = new ConexionBD(true);
         TestingClass testing = new TestingClass();
         public bool loginbtn_function(String usuario, String contraseña)
         {//Funcion que verifica que el usuario y la contraseña existan y sean correctos
@@ -56,8 +56,8 @@ namespace Ametrano.Logica
        
             if(informacionDeUsuario[0] == usuario)
             {//Si el usuario obtenido desde la base de datos coincide con el usuario ingresado entonces se muestra el mensaje
-                Properties.Settings.Default.login_ususario = usuario;
-                Properties.Settings.Default.login_contraseña = contraseña;
+                Properties.Settings.Default.user_usuario = "root";
+                Properties.Settings.Default.user_contraseña = "";
                 Properties.Settings.Default.login_rol = informacionDeUsuario[1];
                 Principal ventanaPrincipal = new Principal();//Creo nueva ventana principal
                 ventanaPrincipal.Show();//muestro la ventana

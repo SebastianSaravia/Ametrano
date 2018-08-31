@@ -16,7 +16,7 @@ namespace Ametrano.Presentacion
 
     {
         private Principal_Controlador controlador = new Principal_Controlador();
-        
+
         public Principal()
         {
             InitializeComponent();
@@ -38,7 +38,7 @@ namespace Ametrano.Presentacion
             tabControlPrincipal.SelectedIndex = 2;
         }
 
-        
+
 
         private void Principal_Load(object sender, EventArgs e)
         {
@@ -59,7 +59,7 @@ namespace Ametrano.Presentacion
         {
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
-            tabControlIngresarAlumno.SelectedIndex= 1;         
+            tabControlIngresarAlumno.SelectedIndex = 1;
         }
         private void btnSiguinete2_Click(object sender, EventArgs e)
         {
@@ -83,9 +83,9 @@ namespace Ametrano.Presentacion
         {//Evento de click en el timepickerfechanacalumnonuevo
 
             maskedTxtFechaNacimientoAlumnoNuevo.Mask = "00/00/0000";//Asigno maskara a la fecha
-            
+
             string mes, dia;
-            
+
             mes = TimePickerFechaNacAlumnoNuevo.Value.Month.ToString();
             dia = TimePickerFechaNacAlumnoNuevo.Value.Day.ToString();
             if (int.Parse(dia) < 10)
@@ -97,11 +97,11 @@ namespace Ametrano.Presentacion
                 mes = "0" + mes;
             }
             //Muestro la fecha en el masked box
-       
-           maskedTxtFechaNacimientoAlumnoNuevo.Text = dia + "/" + mes+ "/" + TimePickerFechaNacAlumnoNuevo.Value.Year;
 
-           maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
-            
+            maskedTxtFechaNacimientoAlumnoNuevo.Text = dia + "/" + mes + "/" + TimePickerFechaNacAlumnoNuevo.Value.Year;
+
+            maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
+
         }
 
         private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -117,8 +117,8 @@ namespace Ametrano.Presentacion
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.login_rol = "";
-            Properties.Settings.Default.login_ususario = "";
-            Properties.Settings.Default.login_contraseña = "";
+            Properties.Settings.Default.user_usuario = "";
+            Properties.Settings.Default.user_contraseña = "";
             Login.ActiveForm.Show();
         }
 
@@ -139,14 +139,15 @@ namespace Ametrano.Presentacion
                 }
 
             }
-           
+
         }
         private void placeholderEventLeave(object sender, EventArgs e)
         {
             if (sender.GetType().Name.Equals("TextBox"))//Si el componente es un textbox
             {
                 placeholder((TextBox)sender, "leave");
-            }else//si es cualquier otra cosa
+            }
+            else//si es cualquier otra cosa
             {
                 dynamic maskedBox = (MaskedTextBox)sender;
                 if (maskedBox.Text.Equals("  /  /") || maskedBox.Text.Equals(""))
@@ -155,10 +156,10 @@ namespace Ametrano.Presentacion
 
                     maskedBox.Mask = "";
                     maskedBox.Text = "Fecha de nacimiento";
-                    maskedBox.ForeColor = Color.FromArgb(64,64,64);
+                    maskedBox.ForeColor = Color.FromArgb(64, 64, 64);
                 }
             }
-            
+
         }
 
         public TextBox placeholder(TextBox componente, string evento)
@@ -192,20 +193,57 @@ namespace Ametrano.Presentacion
         {
             foreach (Control contHijo in control.Controls)
             {
-                
+
                 if (contHijo.GetType().Name.Equals("TextBox"))
                 {
                     controlador.mapTextBox.Add(contHijo.GetHashCode().ToString(), contHijo.Text);
-                    
-                }else
+
+                }
+                else
                 {
                     if (contHijo.HasChildren)
                     {
                         this.PlaceholderRec(contHijo);
                     }
                 }
-                
+
             }
+        }
+
+        private void btnAñadirEspecialidad_Click(object sender, EventArgs e)
+        {
+            if (listEspecialidades.Items.IndexOf(boxEspecialidades.SelectedItem)==-1){
+                listEspecialidades.Items.Add(boxEspecialidades.SelectedItem);
+            }
+            
+        }
+
+        private void btnQuitarEspecialidad_Click(object sender, EventArgs e)
+        {
+            if(listEspecialidades.SelectedIndex != -1)
+            {
+                listEspecialidades.Items.RemoveAt(listEspecialidades.SelectedIndex);
+            }
+        }
+
+        private void btnIngresarDocente_Click(object sender, EventArgs e)
+        {
+            string cedula = txtCedulaDocente.Text;
+            string apellido1 = txtApellido1Docente.Text;
+            string apellido2 = txtApellido2Docente.Text;
+            string nombre1 = txtNombre1Docente.Text;
+            string nombre2 = txtNombre2Docente.Text;
+            string direccion = txtDireccionDocente.Text;
+            string telefono = txtTelefonoDocente.Text;
+            string email = txtEmailDocente.Text;
+
+
+            controlador.ingresarDocente(cedula, apellido1, apellido2, nombre1, nombre2, direccion, telefono, email);
+
+
+
+
+
         }
     }
 }

@@ -53,8 +53,8 @@
             this.tabPageDocentesNuevo = new System.Windows.Forms.TabPage();
             this.btnIngresarDocente = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnQuitar = new System.Windows.Forms.Button();
-            this.btnAñadir = new System.Windows.Forms.Button();
+            this.btnQuitarEspecialidad = new System.Windows.Forms.Button();
+            this.btnAñadirEspecialidad = new System.Windows.Forms.Button();
             this.listEspecialidades = new System.Windows.Forms.ListBox();
             this.boxEspecialidades = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -70,7 +70,6 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.boxBuscar = new System.Windows.Forms.ComboBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.btnQuitar_2 = new System.Windows.Forms.Button();
             this.btnAñadir_2 = new System.Windows.Forms.Button();
@@ -86,7 +85,6 @@
             this.txtNombre1Docente_2 = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente_2 = new System.Windows.Forms.TextBox();
             this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
-            this.btnDarBaja = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -329,6 +327,8 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.btnActualizarDocente = new System.Windows.Forms.Button();
+            this.btnDarDeBaja = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -652,11 +652,12 @@
             this.btnIngresarDocente.TabIndex = 3;
             this.btnIngresarDocente.Text = "Ingresar docente";
             this.btnIngresarDocente.UseVisualStyleBackColor = true;
+            this.btnIngresarDocente.Click += new System.EventHandler(this.btnIngresarDocente_Click);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.btnQuitar);
-            this.groupBox2.Controls.Add(this.btnAñadir);
+            this.groupBox2.Controls.Add(this.btnQuitarEspecialidad);
+            this.groupBox2.Controls.Add(this.btnAñadirEspecialidad);
             this.groupBox2.Controls.Add(this.listEspecialidades);
             this.groupBox2.Controls.Add(this.boxEspecialidades);
             this.groupBox2.Location = new System.Drawing.Point(583, 59);
@@ -666,25 +667,27 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Especialidades";
             // 
-            // btnQuitar
+            // btnQuitarEspecialidad
             // 
-            this.btnQuitar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitar.Location = new System.Drawing.Point(12, 51);
-            this.btnQuitar.Name = "btnQuitar";
-            this.btnQuitar.Size = new System.Drawing.Size(81, 29);
-            this.btnQuitar.TabIndex = 10;
-            this.btnQuitar.Text = "Quitar";
-            this.btnQuitar.UseVisualStyleBackColor = true;
+            this.btnQuitarEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarEspecialidad.Location = new System.Drawing.Point(12, 51);
+            this.btnQuitarEspecialidad.Name = "btnQuitarEspecialidad";
+            this.btnQuitarEspecialidad.Size = new System.Drawing.Size(81, 29);
+            this.btnQuitarEspecialidad.TabIndex = 10;
+            this.btnQuitarEspecialidad.Text = "Quitar";
+            this.btnQuitarEspecialidad.UseVisualStyleBackColor = true;
+            this.btnQuitarEspecialidad.Click += new System.EventHandler(this.btnQuitarEspecialidad_Click);
             // 
-            // btnAñadir
+            // btnAñadirEspecialidad
             // 
-            this.btnAñadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir.Location = new System.Drawing.Point(99, 51);
-            this.btnAñadir.Name = "btnAñadir";
-            this.btnAñadir.Size = new System.Drawing.Size(122, 29);
-            this.btnAñadir.TabIndex = 9;
-            this.btnAñadir.Text = "Añadir";
-            this.btnAñadir.UseVisualStyleBackColor = true;
+            this.btnAñadirEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirEspecialidad.Location = new System.Drawing.Point(99, 51);
+            this.btnAñadirEspecialidad.Name = "btnAñadirEspecialidad";
+            this.btnAñadirEspecialidad.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadirEspecialidad.TabIndex = 9;
+            this.btnAñadirEspecialidad.Text = "Añadir";
+            this.btnAñadirEspecialidad.UseVisualStyleBackColor = true;
+            this.btnAñadirEspecialidad.Click += new System.EventHandler(this.btnAñadirEspecialidad_Click);
             // 
             // listEspecialidades
             // 
@@ -823,10 +826,10 @@
             // tabPageDocentesConsultarModificar
             // 
             this.tabPageDocentesConsultarModificar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.btnActualizarDocente);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.btnBuscar);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.txtBuscar);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.boxBuscar);
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.button3);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox3);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox4);
             this.tabPageDocentesConsultarModificar.Location = new System.Drawing.Point(4, 22);
@@ -873,16 +876,6 @@
             this.boxBuscar.Size = new System.Drawing.Size(132, 26);
             this.boxBuscar.TabIndex = 6;
             this.boxBuscar.Tag = "";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(838, 459);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(245, 48);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Actualizar datos";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -1054,7 +1047,7 @@
             // tabPageDocentesBaja
             // 
             this.tabPageDocentesBaja.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPageDocentesBaja.Controls.Add(this.btnDarBaja);
+            this.tabPageDocentesBaja.Controls.Add(this.btnDarDeBaja);
             this.tabPageDocentesBaja.Controls.Add(this.label9);
             this.tabPageDocentesBaja.Controls.Add(this.groupBox5);
             this.tabPageDocentesBaja.Controls.Add(this.txtMotivo);
@@ -1066,16 +1059,6 @@
             this.tabPageDocentesBaja.Size = new System.Drawing.Size(1089, 521);
             this.tabPageDocentesBaja.TabIndex = 2;
             this.tabPageDocentesBaja.Text = "Dar de baja";
-            // 
-            // btnDarBaja
-            // 
-            this.btnDarBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarBaja.Location = new System.Drawing.Point(401, 292);
-            this.btnDarBaja.Name = "btnDarBaja";
-            this.btnDarBaja.Size = new System.Drawing.Size(245, 48);
-            this.btnDarBaja.TabIndex = 14;
-            this.btnDarBaja.Text = "Dar de baja";
-            this.btnDarBaja.UseVisualStyleBackColor = true;
             // 
             // label9
             // 
@@ -3965,6 +3948,26 @@
             this.maskedTextBox1.TabIndex = 24;
             this.maskedTextBox1.Text = "Fecha de nacimiento";
             // 
+            // btnActualizarDocente
+            // 
+            this.btnActualizarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarDocente.Location = new System.Drawing.Point(836, 455);
+            this.btnActualizarDocente.Name = "btnActualizarDocente";
+            this.btnActualizarDocente.Size = new System.Drawing.Size(245, 48);
+            this.btnActualizarDocente.TabIndex = 9;
+            this.btnActualizarDocente.Text = "Actualizar docente";
+            this.btnActualizarDocente.UseVisualStyleBackColor = true;
+            // 
+            // btnDarDeBaja
+            // 
+            this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarDeBaja.Location = new System.Drawing.Point(386, 303);
+            this.btnDarDeBaja.Name = "btnDarDeBaja";
+            this.btnDarDeBaja.Size = new System.Drawing.Size(245, 48);
+            this.btnDarDeBaja.TabIndex = 15;
+            this.btnDarDeBaja.Text = "Dar de baja";
+            this.btnDarDeBaja.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4131,8 +4134,8 @@
         private System.Windows.Forms.TextBox txtNombre2Docente;
         private System.Windows.Forms.TextBox txtNombre1Docente;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnQuitar;
-        private System.Windows.Forms.Button btnAñadir;
+        private System.Windows.Forms.Button btnQuitarEspecialidad;
+        private System.Windows.Forms.Button btnAñadirEspecialidad;
         private System.Windows.Forms.ListBox listEspecialidades;
         private System.Windows.Forms.ComboBox boxEspecialidades;
         private System.Windows.Forms.Label label3;
@@ -4140,7 +4143,6 @@
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuImageButton btnCursos;
         private System.Windows.Forms.Button btnIngresarDocente;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button btnQuitar_2;
         private System.Windows.Forms.Button btnAñadir_2;
@@ -4168,7 +4170,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnDarBaja;
         private System.Windows.Forms.TabPage pageCursos;
         private System.Windows.Forms.TabControl tabControlAlumnos;
         private System.Windows.Forms.TabPage tabPageAlumnosNuevo;
@@ -4403,5 +4404,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.MaskedTextBox maskedTxtFechaNacimientoAlumnoNuevo;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.Button btnActualizarDocente;
+        private System.Windows.Forms.Button btnDarDeBaja;
     }
 }

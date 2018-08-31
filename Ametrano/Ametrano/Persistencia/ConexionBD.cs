@@ -27,7 +27,7 @@ namespace Ametrano.Persistencia
 
         public ConexionBD()
         {
-            obtenerConfiguracion();
+            obtenerConfiguracion(1);
             string stringConexion =
                 "Server=" + serverConfiguracion[0] +
                 ";Database=" + serverConfiguracion[1] +
@@ -49,13 +49,50 @@ namespace Ametrano.Persistencia
            
 
         }
-        private void obtenerConfiguracion()
+        public ConexionBD(bool login)
+        {//Se crea conexion con el fin de logearse
+            obtenerConfiguracion(0);
+            string stringConexion =
+                "Server=" + serverConfiguracion[0] +
+                ";Database=" + serverConfiguracion[1] +
+                ";Uid=" + serverConfiguracion[2] +
+                ";Pwd=" + serverConfiguracion[3] +
+                ";sslMode=" + serverConfiguracion[4] +
+                ";";
+            objetoDeConexion.ConnectionString = stringConexion;
+            dynamic[] datosRetornados = intentarConexion();
+            if (datosRetornados[0])
+            {
+                comando.Connection = objetoDeConexion;
+
+            }
+            else
+            {
+                testing.MostrarMessageBox(datosRetornados[1]);
+            }
+
+
+
+        }
+        private void obtenerConfiguracion(int type)
         {//Metodo que obtiene la configuracion del servidor
-            this.serverConfiguracion[0] = Properties.Settings.Default.direccion;
-            this.serverConfiguracion[1] = Properties.Settings.Default.bd;
-            this.serverConfiguracion[2] = Properties.Settings.Default.usuario;
-            this.serverConfiguracion[3] = Properties.Settings.Default.contraseña;
-            this.serverConfiguracion[4] = Properties.Settings.Default.ssl;
+            if (type == 0)
+            {//Conexion utilizando usuario y contraseña de login
+                this.serverConfiguracion[0] = Properties.Settings.Default.direccion;
+                this.serverConfiguracion[1] = Properties.Settings.Default.bd;
+                this.serverConfiguracion[2] = Properties.Settings.Default.usuario_login;
+                this.serverConfiguracion[3] = Properties.Settings.Default.contraseña_login;
+                this.serverConfiguracion[4] = Properties.Settings.Default.ssl;
+            }else
+            {//Conexion de uso normal
+
+                this.serverConfiguracion[0] = Properties.Settings.Default.direccion;
+                this.serverConfiguracion[1] = Properties.Settings.Default.bd;
+                this.serverConfiguracion[2] = Properties.Settings.Default.user_usuario;
+                this.serverConfiguracion[3] = Properties.Settings.Default.user_contraseña;
+                this.serverConfiguracion[4] = Properties.Settings.Default.ssl;
+            }
+            
 
         }
         public dynamic[] intentarConexion()
