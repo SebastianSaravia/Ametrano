@@ -19,8 +19,9 @@ namespace Ametrano.Logica
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
-        public bool ingresarDocente(string cedula,string apellido1,string apellido2,string nombre1,string nombre2,string direccion,string telefono, string email)
+        public bool ingresarDocente(string cedula,string apellido1,string apellido2,string nombre1,string nombre2,string direccion,string telefono, string email,string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
+            bool retorno = false;
             string insert = "INSERT INTO DOCENTE VALUES('" + 
                 cedula + "','" +
                 nombre1 + " " +
@@ -31,12 +32,35 @@ namespace Ametrano.Logica
                 telefono +"','" + 
                 email + "');";
             int filasAfectadas = objetoConexion.insertarDatos(insert);
+            if (filasAfectadas > 0)
+            {
+                int filasAfectadasEspecialidad = 0;
+                for (int i = 0; i < especialidades.Length; i++)
+                {
+                    string especialidadInsert = "INSERT INTO especialidad VALUES('" + cedula + "','" + especialidades[i] + "');";
+                    objetoConexion.insertarDatos(especialidadInsert);
+                    filasAfectadasEspecialidad++;
+
+                }
+
+                if (filasAfectadasEspecialidad == especialidades.Length)
+                {
+                    retorno = true;
+                }else
+                {
+                    retorno = false;
+                }
+
+            }else
+            {
+                retorno = false;
+            }
 
 
             
 
 
-            return false;
+            return retorno;
         }
 
        

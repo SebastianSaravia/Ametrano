@@ -704,6 +704,12 @@
             this.boxEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxEspecialidades.FormattingEnabled = true;
+            this.boxEspecialidades.Items.AddRange(new object[] {
+            "Base de datos",
+            "PHP",
+            "Java",
+            "HTML",
+            "CSS"});
             this.boxEspecialidades.Location = new System.Drawing.Point(12, 19);
             this.boxEspecialidades.Name = "boxEspecialidades";
             this.boxEspecialidades.Size = new System.Drawing.Size(209, 26);

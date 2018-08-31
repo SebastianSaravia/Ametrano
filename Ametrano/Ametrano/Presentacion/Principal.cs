@@ -212,14 +212,18 @@ namespace Ametrano.Presentacion
 
         private void btnAñadirEspecialidad_Click(object sender, EventArgs e)
         {
-            if (listEspecialidades.Items.IndexOf(boxEspecialidades.SelectedItem)==-1){
-                listEspecialidades.Items.Add(boxEspecialidades.SelectedItem);
+            if (boxEspecialidades.SelectedIndex != -1)
+            {//Evento añadir especialidad
+                if (listEspecialidades.Items.IndexOf(boxEspecialidades.SelectedItem) == -1)
+                {
+                    listEspecialidades.Items.Add(boxEspecialidades.SelectedItem);
+                }
             }
             
         }
 
         private void btnQuitarEspecialidad_Click(object sender, EventArgs e)
-        {
+        {//Evento quitar especialidad
             if(listEspecialidades.SelectedIndex != -1)
             {
                 listEspecialidades.Items.RemoveAt(listEspecialidades.SelectedIndex);
@@ -236,10 +240,18 @@ namespace Ametrano.Presentacion
             string direccion = txtDireccionDocente.Text;
             string telefono = txtTelefonoDocente.Text;
             string email = txtEmailDocente.Text;
+            string[] especialidades = new string[listEspecialidades.Items.Count];
+            for(int i = 0; i < listEspecialidades.Items.Count; i++)
+            {
+                especialidades[i] = listEspecialidades.Items[i].ToString();
+            }
 
 
-            controlador.ingresarDocente(cedula, apellido1, apellido2, nombre1, nombre2, direccion, telefono, email);
-
+            bool insert = controlador.ingresarDocente(cedula, apellido1, apellido2, nombre1, nombre2, direccion, telefono, email,especialidades);
+            if (insert)
+            {
+                MessageBox.Show("Docente agregado correctamente");
+            }
 
 
 
