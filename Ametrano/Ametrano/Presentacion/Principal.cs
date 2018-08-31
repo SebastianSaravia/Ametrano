@@ -16,6 +16,7 @@ namespace Ametrano.Presentacion
 
     {
         private Principal_Controlador controlador = new Principal_Controlador();
+        
         public Principal()
         {
             InitializeComponent();
@@ -36,6 +37,9 @@ namespace Ametrano.Presentacion
         {
             tabControlPrincipal.SelectedIndex = 2;
         }
+
+        
+
         private void Principal_Load(object sender, EventArgs e)
         {
             boxSexoAlumno.SelectedIndex = 0;
@@ -45,17 +49,10 @@ namespace Ametrano.Presentacion
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
 
-
-            foreach (Control componente in this.Controls)
+            foreach (Control control in this.Controls)
             {
-                MessageBox.Show(componente.GetType().ToString());
-                
+                PlaceholderRec(control);
             }
-
-            controlador.mapTextBox.Add(
-                txtCedulaDocente.GetHashCode().ToString(),
-                txtCedulaDocente.Text);
-
 
         }
         private void btnSiguiente_Click(object sender, EventArgs e)
@@ -83,8 +80,28 @@ namespace Ametrano.Presentacion
             tabControlIngresarAlumno.SelectedIndex = 2;
         }
         private void TimePickerFechaNac_ValueChanged(object sender, EventArgs e)
-        {
-            txtFechaNacimiento.Text = TimePickerFechaNac.Text;
+        {//Evento de click en el timepickerfechanacalumnonuevo
+
+            maskedTxtFechaNacimientoAlumnoNuevo.Mask = "00/00/0000";//Asigno maskara a la fecha
+            
+            string mes, dia;
+            
+            mes = TimePickerFechaNacAlumnoNuevo.Value.Month.ToString();
+            dia = TimePickerFechaNacAlumnoNuevo.Value.Day.ToString();
+            if (int.Parse(dia) < 10)
+            {//si el dia es menor a 10, le agrego un cero delante
+                dia = "0" + dia;
+            }
+            if (int.Parse(mes) < 10)
+            {//Lo mismo que con dia
+                mes = "0" + mes;
+            }
+            //Muestro la fecha en el masked box
+       
+           maskedTxtFechaNacimientoAlumnoNuevo.Text = dia + "/" + mes+ "/" + TimePickerFechaNacAlumnoNuevo.Value.Year;
+
+           maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
+            
         }
 
         private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
@@ -108,11 +125,40 @@ namespace Ametrano.Presentacion
 
         private void placeholderEventEnter(object sender, EventArgs e)
         {
-            placeholder((TextBox)sender, "enter");
+            if (sender.GetType().Name.Equals("TextBox"))//Si el componente es un textbox
+            {
+                placeholder((TextBox)sender, "enter");
+            }
+            else//si es cualquier otra cosa
+            {
+                dynamic maskedBox = (MaskedTextBox)sender;
+                if (maskedBox.Text.Equals("Fecha de nacimiento") || maskedBox.Text.Equals(""))//Si el campo esta vacio
+                {
+                    maskedBox.Mask = "00/00/0000";
+                    maskedBox.ForeColor = Color.Black;
+                }
+
+            }
+           
         }
         private void placeholderEventLeave(object sender, EventArgs e)
         {
-            placeholder((TextBox)sender, "leave");
+            if (sender.GetType().Name.Equals("TextBox"))//Si el componente es un textbox
+            {
+                placeholder((TextBox)sender, "leave");
+            }else//si es cualquier otra cosa
+            {
+                dynamic maskedBox = (MaskedTextBox)sender;
+                if (maskedBox.Text.Equals("  /  /") || maskedBox.Text.Equals(""))
+                {
+
+
+                    maskedBox.Mask = "";
+                    maskedBox.Text = "Fecha de nacimiento";
+                    maskedBox.ForeColor = Color.FromArgb(64,64,64);
+                }
+            }
+            
         }
 
         public TextBox placeholder(TextBox componente, string evento)
@@ -127,22 +173,39 @@ namespace Ametrano.Presentacion
                     componente.Text = "";
                     componente.ForeColor = Color.Black;
                 }
-
             }
             else
             {
 
                 if (componente.Text.Equals(""))
                 {
-
                     componente.Text = textoCuandoEstaVacio;
-                    componente.ForeColor = Color.Gray;
+                    componente.ForeColor = Color.FromArgb(64, 64, 64);
                 }
 
 
             }
 
             return null;
+        }
+        public void PlaceholderRec(Control control)
+        {
+            foreach (Control contHijo in control.Controls)
+            {
+                
+                if (contHijo.GetType().Name.Equals("TextBox"))
+                {
+                    controlador.mapTextBox.Add(contHijo.GetHashCode().ToString(), contHijo.Text);
+                    
+                }else
+                {
+                    if (contHijo.HasChildren)
+                    {
+                        this.PlaceholderRec(contHijo);
+                    }
+                }
+                
+            }
         }
     }
 }
