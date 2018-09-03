@@ -41,11 +41,28 @@ namespace Ametrano.Presentacion
 
 
         private void Principal_Load(object sender, EventArgs e)
-        {
+        {   
             boxSexoAlumno.SelectedIndex = 0;
-            boxEstadoCivilAlumno.SelectedIndex = 0;
+            boxUsaInternetAlumno.SelectedIndex = 0;
             boxNivelEducativo.SelectedIndex = 0;
-            boxJefeHogar.SelectedIndex = 0;
+            boxJefeHogarAlumno.SelectedIndex = 0;
+            boxCantidadHijosAlumno.SelectedIndex = 0;
+            boxCuentaConApoyoAlumno.SelectedIndex = 0;
+            boxCursoAlumno.SelectedIndex = 0;
+            boxDepartamentoAlumno.SelectedIndex = 0;
+            boxEspecialidades.SelectedIndex = 0;
+            boxEstadoAlumno.SelectedIndex = 0;
+            boxEstadoCivilAlumno.SelectedIndex = 0;
+            boxFacilAccesoInternetAlumno.SelectedIndex = 0;
+            boxJefeHogarAlumno.SelectedIndex = 0;
+            boxNivelEducativo.SelectedIndex = 0;
+            boxPersonaDiscapacidadAlumno.SelectedIndex = 0;
+            boxSexoAlumno.SelectedIndex = 0;
+            boxTrabajaActualmenteAlumno.SelectedIndex = 0;
+            boxTrabajoAlgunaVezAlumno.SelectedIndex = 0;
+            boxTrabajoCuidandoAlumno.SelectedIndex = 0;
+           boxLocalidadAlumno.SelectedIndex = 0;
+
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
@@ -293,5 +310,12 @@ namespace Ametrano.Presentacion
             tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }

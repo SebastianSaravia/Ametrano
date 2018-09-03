@@ -109,9 +109,9 @@
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.txtEmailAlumno = new System.Windows.Forms.TextBox();
             this.txtCelularAlumno = new System.Windows.Forms.TextBox();
-            this.txtTelefonoAlumno = new System.Windows.Forms.TextBox();
+            this.txtTelefono = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.bosLocalidadAlumno = new System.Windows.Forms.ComboBox();
+            this.boxLocalidadAlumno = new System.Windows.Forms.ComboBox();
             this.txtCalleAlumno = new System.Windows.Forms.TextBox();
             this.boxDepartamentoAlumno = new System.Windows.Forms.ComboBox();
             this.txtReferenciaAlumno = new System.Windows.Forms.TextBox();
@@ -133,142 +133,199 @@
             this.txtCedulaAlumno = new System.Windows.Forms.TextBox();
             this.tabPageIngresarAlumnoDatosInteres = new System.Windows.Forms.TabPage();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCoberuraSaludAlumno = new System.Windows.Forms.TextBox();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.boxJefeHogar = new System.Windows.Forms.ComboBox();
-            this.boxCantidadHijos = new System.Windows.Forms.ComboBox();
+            this.boxJefeHogarAlumno = new System.Windows.Forms.ComboBox();
+            this.boxCantidadHijosAlumno = new System.Windows.Forms.ComboBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.boxTrabajoCuidando = new System.Windows.Forms.ComboBox();
-            this.boxCuentaConApoyo = new System.Windows.Forms.ComboBox();
-            this.boxPersonaDiscapacidad = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txt60oMas = new System.Windows.Forms.TextBox();
-            this.txt18a59 = new System.Windows.Forms.TextBox();
-            this.txt0a17 = new System.Windows.Forms.TextBox();
+            this.txtExperienciaInstitucionesCuidadoAlumno = new System.Windows.Forms.TextBox();
+            this.boxTrabajoCuidandoAlumno = new System.Windows.Forms.ComboBox();
+            this.boxCuentaConApoyoAlumno = new System.Windows.Forms.ComboBox();
+            this.boxPersonaDiscapacidadAlumno = new System.Windows.Forms.ComboBox();
+            this.txtCargaSemanalCuidadoAlumno = new System.Windows.Forms.TextBox();
+            this.txt60oMasAlumno = new System.Windows.Forms.TextBox();
+            this.txt18a59Alumno = new System.Windows.Forms.TextBox();
+            this.txt0a17Alumno = new System.Windows.Forms.TextBox();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.txtMedioAccesoInternet = new System.Windows.Forms.TextBox();
-            this.boxFacilAccesoInternet = new System.Windows.Forms.ComboBox();
-            this.boxUsaInternet = new System.Windows.Forms.ComboBox();
+            this.txtMedioAccesoInternetAlumno = new System.Windows.Forms.TextBox();
+            this.boxFacilAccesoInternetAlumno = new System.Windows.Forms.ComboBox();
+            this.boxUsaInternetAlumno = new System.Windows.Forms.ComboBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.txtIngresoMensual = new System.Windows.Forms.TextBox();
-            this.txtHorasJornada = new System.Windows.Forms.TextBox();
-            this.txtTiempoDesempleado = new System.Windows.Forms.TextBox();
-            this.boxTrabajoAlgunaVez = new System.Windows.Forms.ComboBox();
-            this.boxTrabajaActualmente = new System.Windows.Forms.ComboBox();
+            this.txtIngresoMensualAlumno = new System.Windows.Forms.TextBox();
+            this.txtHorasJornadaAlumno = new System.Windows.Forms.TextBox();
+            this.txtTiempoDesempleadoAlumno = new System.Windows.Forms.TextBox();
+            this.boxTrabajoAlgunaVezAlumno = new System.Windows.Forms.ComboBox();
+            this.boxTrabajaActualmenteAlumno = new System.Windows.Forms.ComboBox();
             this.btnAtras = new System.Windows.Forms.Button();
             this.btnSiguinete_2 = new System.Windows.Forms.Button();
             this.tabPageIngresarAlumnoFinalizar = new System.Windows.Forms.TabPage();
             this.groupBox26 = new System.Windows.Forms.GroupBox();
-            this.lblEstado = new System.Windows.Forms.Label();
-            this.lblCurso = new System.Windows.Forms.Label();
+            this.lblEstadoAlumno = new System.Windows.Forms.Label();
+            this.lblCursoAlumno = new System.Windows.Forms.Label();
             this.groupBox22 = new System.Windows.Forms.GroupBox();
-            this.lblCantidadHijos = new System.Windows.Forms.Label();
-            this.lblJefeHogar = new System.Windows.Forms.Label();
+            this.lblCantidadHijosAlumno = new System.Windows.Forms.Label();
+            this.lblJefeHogarAlumno = new System.Windows.Forms.Label();
             this.groupBox27 = new System.Windows.Forms.GroupBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblCelular = new System.Windows.Forms.Label();
-            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblEmailAlumno = new System.Windows.Forms.Label();
+            this.lblCelularAlumno = new System.Windows.Forms.Label();
+            this.lblTelefonoAlumno = new System.Windows.Forms.Label();
             this.groupBox28 = new System.Windows.Forms.GroupBox();
-            this.lblNApartamento = new System.Windows.Forms.Label();
-            this.lblNPuerta = new System.Windows.Forms.Label();
-            this.lblReferencia = new System.Windows.Forms.Label();
-            this.lblCalle = new System.Windows.Forms.Label();
-            this.lblLocalidad = new System.Windows.Forms.Label();
-            this.lblDepartamento = new System.Windows.Forms.Label();
+            this.lblNApartamentoAlumno = new System.Windows.Forms.Label();
+            this.lblNPuertaAlumno = new System.Windows.Forms.Label();
+            this.lblReferenciaAlumno = new System.Windows.Forms.Label();
+            this.lblCalleAlumno = new System.Windows.Forms.Label();
+            this.lblLocalidadAlumno = new System.Windows.Forms.Label();
+            this.lblDepartamentoAlumno = new System.Windows.Forms.Label();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.lblCoberturaSalud = new System.Windows.Forms.Label();
+            this.lblCoberturaSaludAlumno = new System.Windows.Forms.Label();
             this.groupBox29 = new System.Windows.Forms.GroupBox();
-            this.lblUltimoAñoAprobado = new System.Windows.Forms.Label();
-            this.lblNivelEducativo = new System.Windows.Forms.Label();
+            this.lblUltimoAñoAprobadoAlumno = new System.Windows.Forms.Label();
+            this.lblNivelEducativoAlumno = new System.Windows.Forms.Label();
             this.groupBox30 = new System.Windows.Forms.GroupBox();
-            this.lblEstadoCivil = new System.Windows.Forms.Label();
-            this.lblSexo = new System.Windows.Forms.Label();
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.lblFechaNacimiento = new System.Windows.Forms.Label();
-            this.lblApellido2 = new System.Windows.Forms.Label();
-            this.lblApellido1 = new System.Windows.Forms.Label();
-            this.lblNombre2 = new System.Windows.Forms.Label();
-            this.lblNombre1 = new System.Windows.Forms.Label();
-            this.lblCedula = new System.Windows.Forms.Label();
+            this.lblEstadoCivilAlumno = new System.Windows.Forms.Label();
+            this.lblSexoAlumno = new System.Windows.Forms.Label();
+            this.lblEdadAlumno = new System.Windows.Forms.Label();
+            this.lblFechaNacimientoAlumno = new System.Windows.Forms.Label();
+            this.lblApellido2Alumno = new System.Windows.Forms.Label();
+            this.lblApellido1Alumno = new System.Windows.Forms.Label();
+            this.lblNombre2Alumno = new System.Windows.Forms.Label();
+            this.lblNombre1Alumno = new System.Windows.Forms.Label();
+            this.lblCedulaAlumno = new System.Windows.Forms.Label();
             this.groupBox23 = new System.Windows.Forms.GroupBox();
-            this.lblExperienciaInstitucionesCuidado = new System.Windows.Forms.Label();
-            this.lblTrabajoAnteriormenteCuidando = new System.Windows.Forms.Label();
-            this.lblCuentaConApoyo = new System.Windows.Forms.Label();
-            this.lbl0a16 = new System.Windows.Forms.Label();
-            this.lblCargaSemanalCuidado = new System.Windows.Forms.Label();
-            this.lbl60oMas = new System.Windows.Forms.Label();
-            this.lblPersonaConDiscapacidad = new System.Windows.Forms.Label();
-            this.lbl18a59 = new System.Windows.Forms.Label();
+            this.lblExperienciaInstitucionesCuidadoAlumno = new System.Windows.Forms.Label();
+            this.lblTrabajoAnteriormenteCuidandoAlumno = new System.Windows.Forms.Label();
+            this.lblCuentaConApoyoAlumno = new System.Windows.Forms.Label();
+            this.lbl0a16Alumno = new System.Windows.Forms.Label();
+            this.lblCargaSemanalCuidadoAlumno = new System.Windows.Forms.Label();
+            this.lbl60oMasAlumno = new System.Windows.Forms.Label();
+            this.lblPersonaConDiscapacidadAlumno = new System.Windows.Forms.Label();
+            this.lbl18a59Alumno = new System.Windows.Forms.Label();
             this.groupBox24 = new System.Windows.Forms.GroupBox();
-            this.lblFacilAccesoInternet = new System.Windows.Forms.Label();
-            this.lblMedioAccesoInternet = new System.Windows.Forms.Label();
-            this.lblUsaInternet = new System.Windows.Forms.Label();
+            this.lblFacilAccesoInternetAlumno = new System.Windows.Forms.Label();
+            this.lblMedioAccesoInternetAlumno = new System.Windows.Forms.Label();
+            this.lblUsaInternetAlumno = new System.Windows.Forms.Label();
             this.groupBox25 = new System.Windows.Forms.GroupBox();
-            this.lblIngresoMensual = new System.Windows.Forms.Label();
-            this.lblTrabajoAlgunaVez = new System.Windows.Forms.Label();
-            this.lblHorasJornadaLaboral = new System.Windows.Forms.Label();
-            this.lblTrabajaActualmente = new System.Windows.Forms.Label();
-            this.lblTiempoDesempleado = new System.Windows.Forms.Label();
+            this.lblIngresoMensualAlumno = new System.Windows.Forms.Label();
+            this.lblTrabajoAlgunaVezAlumno = new System.Windows.Forms.Label();
+            this.lblHorasJornadaLaboralAlumno = new System.Windows.Forms.Label();
+            this.lblTrabajaActualmenteAlumno = new System.Windows.Forms.Label();
+            this.lblTiempoDesempleadoAlumno = new System.Windows.Forms.Label();
             this.btnAtras_2 = new System.Windows.Forms.Button();
             this.btnFinalizar = new System.Windows.Forms.Button();
             this.tabPageAlumnosModificar = new System.Windows.Forms.TabPage();
             this.tabControlModificarAlumno = new System.Windows.Forms.TabControl();
+            this.tabPageModificarAlumnosInformacion = new System.Windows.Forms.TabPage();
+            this.btnBuscar_3 = new System.Windows.Forms.Button();
+            this.comboBox17 = new System.Windows.Forms.ComboBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.lblEstadoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblCursoAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox47 = new System.Windows.Forms.GroupBox();
+            this.lblCantidadHjosAlumno_2 = new System.Windows.Forms.Label();
+            this.lblJefeHogarAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox48 = new System.Windows.Forms.GroupBox();
+            this.lblEmailAlumno_2 = new System.Windows.Forms.Label();
+            this.lblCelularAlumno_2 = new System.Windows.Forms.Label();
+            this.lblTelefonoAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.lblNApartamentoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblNPuertaAlumno_2 = new System.Windows.Forms.Label();
+            this.lblReferenciaAlumno_2 = new System.Windows.Forms.Label();
+            this.lblCalleAlumno_2 = new System.Windows.Forms.Label();
+            this.lblLocalidadAlumno_2 = new System.Windows.Forms.Label();
+            this.lblDepartamentoAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox50 = new System.Windows.Forms.GroupBox();
+            this.lblCoberturaSaludAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox51 = new System.Windows.Forms.GroupBox();
+            this.lblUltimoAñoAprobadoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblNivelEducativoAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox52 = new System.Windows.Forms.GroupBox();
+            this.lblEstadoCivilAlumno_2 = new System.Windows.Forms.Label();
+            this.lblSexoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblEdadAlumno_2 = new System.Windows.Forms.Label();
+            this.lblFechaNacimientoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblApellido2Alumno_2 = new System.Windows.Forms.Label();
+            this.lblApellido1Alumno_2 = new System.Windows.Forms.Label();
+            this.lblNombre2Alumno_2 = new System.Windows.Forms.Label();
+            this.lblNombe1Alumno_2 = new System.Windows.Forms.Label();
+            this.lblCedulaAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox53 = new System.Windows.Forms.GroupBox();
+            this.lblExperienciaInstitucionesCuidadoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblCuentaApoyoAlumno_2 = new System.Windows.Forms.Label();
+            this.lbl0a17Alumno_2 = new System.Windows.Forms.Label();
+            this.lblCargaSemanalCuidadoAlumno_2 = new System.Windows.Forms.Label();
+            this.lbl60oMasAlumno_2 = new System.Windows.Forms.Label();
+            this.lblPersonaConDiscapacidadAlumno_2 = new System.Windows.Forms.Label();
+            this.lbl18a59Alumno_2 = new System.Windows.Forms.Label();
+            this.groupBox54 = new System.Windows.Forms.GroupBox();
+            this.lblFacilAccesoInternetAlumno_2 = new System.Windows.Forms.Label();
+            this.lblMedioAccesoInternetAlumno_2 = new System.Windows.Forms.Label();
+            this.lblUsaInternetAlumno_2 = new System.Windows.Forms.Label();
+            this.groupBox55 = new System.Windows.Forms.GroupBox();
+            this.lblIngresoMensualAlumno_2 = new System.Windows.Forms.Label();
+            this.lblTrabajoAlgunaVezAlumno_2 = new System.Windows.Forms.Label();
+            this.lblHorasJornadaLaboralAlumno_2 = new System.Windows.Forms.Label();
+            this.lblTrabajaActualmenteAlumno_2 = new System.Windows.Forms.Label();
+            this.lblTiempoDesempleadoAlumno_2 = new System.Windows.Forms.Label();
             this.tabPageModificarAlumnosDatosPersonales = new System.Windows.Forms.TabPage();
+            this.button7 = new System.Windows.Forms.Button();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.boxEstadoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxCursoAlumno_2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.Alumno_2 = new System.Windows.Forms.TextBox();
+            this.txtCelularAlumno_2 = new System.Windows.Forms.TextBox();
+            this.txtTelefonoAlumno_2 = new System.Windows.Forms.TextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.boxLocalidadAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.txtCalleAlumno_2 = new System.Windows.Forms.TextBox();
+            this.boxDepartamentoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.txtReferenciaAlumno_2 = new System.Windows.Forms.TextBox();
+            this.txtNPuertaAlumno_2 = new System.Windows.Forms.TextBox();
+            this.txtNApartamentoAlumno_2 = new System.Windows.Forms.TextBox();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.boxNivelAcademicoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.txtUltimoAñoAprobadoAlumno_2 = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.textBox15 = new System.Windows.Forms.TextBox();
-            this.textBox16 = new System.Windows.Forms.TextBox();
-            this.textBox17 = new System.Windows.Forms.TextBox();
-            this.textBox18 = new System.Windows.Forms.TextBox();
+            this.txtFechaNacimientoAlumno_2 = new System.Windows.Forms.MaskedTextBox();
+            this.txtEdadAlumno_2 = new System.Windows.Forms.TextBox();
+            this.boxEstadoCivilAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.dateTimeFechaNacimientoAlumno_2 = new System.Windows.Forms.DateTimePicker();
+            this.boxSexoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.txtApellido2Alumno_2 = new System.Windows.Forms.TextBox();
+            this.txtApellido1Alumno_2 = new System.Windows.Forms.TextBox();
+            this.txtNombre2Alumno_2 = new System.Windows.Forms.TextBox();
+            this.txtNombre1Alumno_2 = new System.Windows.Forms.TextBox();
+            this.txtCedulaAlumno_2 = new System.Windows.Forms.TextBox();
             this.tabPageModificarAlumnosDatosDeInteres = new System.Windows.Forms.TabPage();
             this.groupBox31 = new System.Windows.Forms.GroupBox();
-            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.txtCoberturaSaludAlumno_2 = new System.Windows.Forms.TextBox();
             this.groupBox32 = new System.Windows.Forms.GroupBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.boxJefeHogarAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxCantidadHijosAlumno_2 = new System.Windows.Forms.ComboBox();
             this.groupBox33 = new System.Windows.Forms.GroupBox();
-            this.textBox20 = new System.Windows.Forms.TextBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.textBox21 = new System.Windows.Forms.TextBox();
-            this.textBox22 = new System.Windows.Forms.TextBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
-            this.textBox24 = new System.Windows.Forms.TextBox();
+            this.txtExperienciaInstitucionesTrabajoAlumno_2 = new System.Windows.Forms.TextBox();
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxCuentaConApoyoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxPersonaConDiscapacidadAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.txtCargaSemanalCuidandoAlumno_2 = new System.Windows.Forms.TextBox();
+            this.txt60oMasAlumno_2 = new System.Windows.Forms.TextBox();
+            this.txt18a59Alumno_2 = new System.Windows.Forms.TextBox();
+            this.txt0a17Alumno_2 = new System.Windows.Forms.TextBox();
             this.groupBox34 = new System.Windows.Forms.GroupBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.txtMedioAccesoInternetAlumno_2 = new System.Windows.Forms.TextBox();
+            this.boxFacilAccesoInternetAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxUsaInternetAlumno_2 = new System.Windows.Forms.ComboBox();
             this.groupBox35 = new System.Windows.Forms.GroupBox();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.txtIngresoMensualAlumno_2 = new System.Windows.Forms.TextBox();
+            this.HorasJornadaAlumno_2 = new System.Windows.Forms.TextBox();
+            this.txtTiempoDesempleadoAlumno_2 = new System.Windows.Forms.TextBox();
+            this.boxTrabajoAlgunaVezAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxTrabajaActualmenteAlumno_2 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.tabPageModificarAlumnosFinalizar = new System.Windows.Forms.TabPage();
@@ -329,63 +386,6 @@
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPageModificarAlumnosInformacion = new System.Windows.Forms.TabPage();
-            this.groupBox46 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.groupBox47 = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox48 = new System.Windows.Forms.GroupBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox49 = new System.Windows.Forms.GroupBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.groupBox50 = new System.Windows.Forms.GroupBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.groupBox51 = new System.Windows.Forms.GroupBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.groupBox52 = new System.Windows.Forms.GroupBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.groupBox53 = new System.Windows.Forms.GroupBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label35 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.label38 = new System.Windows.Forms.Label();
-            this.groupBox54 = new System.Windows.Forms.GroupBox();
-            this.label39 = new System.Windows.Forms.Label();
-            this.label40 = new System.Windows.Forms.Label();
-            this.label41 = new System.Windows.Forms.Label();
-            this.groupBox55 = new System.Windows.Forms.GroupBox();
-            this.label42 = new System.Windows.Forms.Label();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.label46 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -432,6 +432,17 @@
             this.groupBox25.SuspendLayout();
             this.tabPageAlumnosModificar.SuspendLayout();
             this.tabControlModificarAlumno.SuspendLayout();
+            this.tabPageModificarAlumnosInformacion.SuspendLayout();
+            this.groupBox46.SuspendLayout();
+            this.groupBox47.SuspendLayout();
+            this.groupBox48.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            this.groupBox50.SuspendLayout();
+            this.groupBox51.SuspendLayout();
+            this.groupBox52.SuspendLayout();
+            this.groupBox53.SuspendLayout();
+            this.groupBox54.SuspendLayout();
+            this.groupBox55.SuspendLayout();
             this.tabPageModificarAlumnosDatosPersonales.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
@@ -457,17 +468,6 @@
             this.groupBox45.SuspendLayout();
             this.pageCursos.SuspendLayout();
             this.tabControlCursos.SuspendLayout();
-            this.tabPageModificarAlumnosInformacion.SuspendLayout();
-            this.groupBox46.SuspendLayout();
-            this.groupBox47.SuspendLayout();
-            this.groupBox48.SuspendLayout();
-            this.groupBox49.SuspendLayout();
-            this.groupBox50.SuspendLayout();
-            this.groupBox51.SuspendLayout();
-            this.groupBox52.SuspendLayout();
-            this.groupBox53.SuspendLayout();
-            this.groupBox54.SuspendLayout();
-            this.groupBox55.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1365,7 +1365,7 @@
             // 
             this.groupBox10.Controls.Add(this.txtEmailAlumno);
             this.groupBox10.Controls.Add(this.txtCelularAlumno);
-            this.groupBox10.Controls.Add(this.txtTelefonoAlumno);
+            this.groupBox10.Controls.Add(this.txtTelefono);
             this.groupBox10.Location = new System.Drawing.Point(823, 93);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(226, 176);
@@ -1398,22 +1398,22 @@
             this.txtCelularAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCelularAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // txtTelefonoAlumno
+            // txtTelefono
             // 
-            this.txtTelefonoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefonoAlumno.Location = new System.Drawing.Point(34, 37);
-            this.txtTelefonoAlumno.MaxLength = 8;
-            this.txtTelefonoAlumno.Name = "txtTelefonoAlumno";
-            this.txtTelefonoAlumno.Size = new System.Drawing.Size(159, 24);
-            this.txtTelefonoAlumno.TabIndex = 12;
-            this.txtTelefonoAlumno.Text = "Telefono";
-            this.txtTelefonoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtTelefonoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefono.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTelefono.Location = new System.Drawing.Point(34, 37);
+            this.txtTelefono.MaxLength = 8;
+            this.txtTelefono.Name = "txtTelefono";
+            this.txtTelefono.Size = new System.Drawing.Size(159, 24);
+            this.txtTelefono.TabIndex = 12;
+            this.txtTelefono.Text = "Telefono";
+            this.txtTelefono.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtTelefono.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.bosLocalidadAlumno);
+            this.groupBox8.Controls.Add(this.boxLocalidadAlumno);
             this.groupBox8.Controls.Add(this.txtCalleAlumno);
             this.groupBox8.Controls.Add(this.boxDepartamentoAlumno);
             this.groupBox8.Controls.Add(this.txtReferenciaAlumno);
@@ -1426,19 +1426,16 @@
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Dirección";
             // 
-            // bosLocalidadAlumno
+            // boxLocalidadAlumno
             // 
-            this.bosLocalidadAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.bosLocalidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bosLocalidadAlumno.Items.AddRange(new object[] {
-            "Seleccione sexo...",
-            "Hombre",
-            "Mujer",
-            "Otro"});
-            this.bosLocalidadAlumno.Location = new System.Drawing.Point(199, 37);
-            this.bosLocalidadAlumno.Name = "bosLocalidadAlumno";
-            this.bosLocalidadAlumno.Size = new System.Drawing.Size(167, 26);
-            this.bosLocalidadAlumno.TabIndex = 25;
+            this.boxLocalidadAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxLocalidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxLocalidadAlumno.Items.AddRange(new object[] {
+            "Localidad..."});
+            this.boxLocalidadAlumno.Location = new System.Drawing.Point(199, 37);
+            this.boxLocalidadAlumno.Name = "boxLocalidadAlumno";
+            this.boxLocalidadAlumno.Size = new System.Drawing.Size(167, 26);
+            this.boxLocalidadAlumno.TabIndex = 25;
             // 
             // txtCalleAlumno
             // 
@@ -1725,7 +1722,7 @@
             // 
             // groupBox20
             // 
-            this.groupBox20.Controls.Add(this.textBox3);
+            this.groupBox20.Controls.Add(this.txtCoberuraSaludAlumno);
             this.groupBox20.Location = new System.Drawing.Point(611, 195);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(436, 79);
@@ -1733,22 +1730,22 @@
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Coberura de salud";
             // 
-            // textBox3
+            // txtCoberuraSaludAlumno
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox3.Location = new System.Drawing.Point(18, 33);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(404, 24);
-            this.textBox3.TabIndex = 29;
-            this.textBox3.Text = "Cobertura de salud";
-            this.textBox3.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox3.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtCoberuraSaludAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCoberuraSaludAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCoberuraSaludAlumno.Location = new System.Drawing.Point(18, 33);
+            this.txtCoberuraSaludAlumno.Name = "txtCoberuraSaludAlumno";
+            this.txtCoberuraSaludAlumno.Size = new System.Drawing.Size(404, 24);
+            this.txtCoberuraSaludAlumno.TabIndex = 29;
+            this.txtCoberuraSaludAlumno.Text = "Cobertura de salud";
+            this.txtCoberuraSaludAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCoberuraSaludAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.boxJefeHogar);
-            this.groupBox19.Controls.Add(this.boxCantidadHijos);
+            this.groupBox19.Controls.Add(this.boxJefeHogarAlumno);
+            this.groupBox19.Controls.Add(this.boxCantidadHijosAlumno);
             this.groupBox19.Location = new System.Drawing.Point(668, 114);
             this.groupBox19.Name = "groupBox19";
             this.groupBox19.Size = new System.Drawing.Size(379, 75);
@@ -1756,24 +1753,24 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Jefe de hogar";
             // 
-            // boxJefeHogar
+            // boxJefeHogarAlumno
             // 
-            this.boxJefeHogar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxJefeHogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxJefeHogar.Items.AddRange(new object[] {
+            this.boxJefeHogarAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxJefeHogarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxJefeHogarAlumno.Items.AddRange(new object[] {
             "Jefe de hogar?",
             "SI",
             "NO"});
-            this.boxJefeHogar.Location = new System.Drawing.Point(8, 30);
-            this.boxJefeHogar.Name = "boxJefeHogar";
-            this.boxJefeHogar.Size = new System.Drawing.Size(158, 23);
-            this.boxJefeHogar.TabIndex = 28;
+            this.boxJefeHogarAlumno.Location = new System.Drawing.Point(8, 30);
+            this.boxJefeHogarAlumno.Name = "boxJefeHogarAlumno";
+            this.boxJefeHogarAlumno.Size = new System.Drawing.Size(158, 23);
+            this.boxJefeHogarAlumno.TabIndex = 28;
             // 
-            // boxCantidadHijos
+            // boxCantidadHijosAlumno
             // 
-            this.boxCantidadHijos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCantidadHijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCantidadHijos.Items.AddRange(new object[] {
+            this.boxCantidadHijosAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCantidadHijosAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCantidadHijosAlumno.Items.AddRange(new object[] {
             "Cantidad hijos",
             "1",
             "2",
@@ -1785,21 +1782,21 @@
             "8",
             "9",
             "10"});
-            this.boxCantidadHijos.Location = new System.Drawing.Point(172, 31);
-            this.boxCantidadHijos.Name = "boxCantidadHijos";
-            this.boxCantidadHijos.Size = new System.Drawing.Size(193, 23);
-            this.boxCantidadHijos.TabIndex = 27;
+            this.boxCantidadHijosAlumno.Location = new System.Drawing.Point(172, 31);
+            this.boxCantidadHijosAlumno.Name = "boxCantidadHijosAlumno";
+            this.boxCantidadHijosAlumno.Size = new System.Drawing.Size(193, 23);
+            this.boxCantidadHijosAlumno.TabIndex = 27;
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.textBox2);
-            this.groupBox18.Controls.Add(this.boxTrabajoCuidando);
-            this.groupBox18.Controls.Add(this.boxCuentaConApoyo);
-            this.groupBox18.Controls.Add(this.boxPersonaDiscapacidad);
-            this.groupBox18.Controls.Add(this.textBox1);
-            this.groupBox18.Controls.Add(this.txt60oMas);
-            this.groupBox18.Controls.Add(this.txt18a59);
-            this.groupBox18.Controls.Add(this.txt0a17);
+            this.groupBox18.Controls.Add(this.txtExperienciaInstitucionesCuidadoAlumno);
+            this.groupBox18.Controls.Add(this.boxTrabajoCuidandoAlumno);
+            this.groupBox18.Controls.Add(this.boxCuentaConApoyoAlumno);
+            this.groupBox18.Controls.Add(this.boxPersonaDiscapacidadAlumno);
+            this.groupBox18.Controls.Add(this.txtCargaSemanalCuidadoAlumno);
+            this.groupBox18.Controls.Add(this.txt60oMasAlumno);
+            this.groupBox18.Controls.Add(this.txt18a59Alumno);
+            this.groupBox18.Controls.Add(this.txt0a17Alumno);
             this.groupBox18.Location = new System.Drawing.Point(41, 195);
             this.groupBox18.Name = "groupBox18";
             this.groupBox18.Size = new System.Drawing.Size(564, 132);
@@ -1807,110 +1804,110 @@
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Personas a cargo";
             // 
-            // textBox2
+            // txtExperienciaInstitucionesCuidadoAlumno
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox2.Location = new System.Drawing.Point(263, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(274, 24);
-            this.textBox2.TabIndex = 31;
-            this.textBox2.Text = "Experiencia en instituciones de cuidado";
-            this.textBox2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtExperienciaInstitucionesCuidadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExperienciaInstitucionesCuidadoAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtExperienciaInstitucionesCuidadoAlumno.Location = new System.Drawing.Point(263, 83);
+            this.txtExperienciaInstitucionesCuidadoAlumno.Name = "txtExperienciaInstitucionesCuidadoAlumno";
+            this.txtExperienciaInstitucionesCuidadoAlumno.Size = new System.Drawing.Size(274, 24);
+            this.txtExperienciaInstitucionesCuidadoAlumno.TabIndex = 31;
+            this.txtExperienciaInstitucionesCuidadoAlumno.Text = "Experiencia en instituciones de cuidado";
+            this.txtExperienciaInstitucionesCuidadoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtExperienciaInstitucionesCuidadoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // boxTrabajoCuidando
+            // boxTrabajoCuidandoAlumno
             // 
-            this.boxTrabajoCuidando.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTrabajoCuidando.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTrabajoCuidando.Items.AddRange(new object[] {
+            this.boxTrabajoCuidandoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajoCuidandoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajoCuidandoAlumno.Items.AddRange(new object[] {
             "Trabajo anteriormente cuidando?",
             "SI",
             "NO"});
-            this.boxTrabajoCuidando.Location = new System.Drawing.Point(19, 85);
-            this.boxTrabajoCuidando.Name = "boxTrabajoCuidando";
-            this.boxTrabajoCuidando.Size = new System.Drawing.Size(238, 23);
-            this.boxTrabajoCuidando.TabIndex = 30;
+            this.boxTrabajoCuidandoAlumno.Location = new System.Drawing.Point(19, 85);
+            this.boxTrabajoCuidandoAlumno.Name = "boxTrabajoCuidandoAlumno";
+            this.boxTrabajoCuidandoAlumno.Size = new System.Drawing.Size(238, 23);
+            this.boxTrabajoCuidandoAlumno.TabIndex = 30;
             // 
-            // boxCuentaConApoyo
+            // boxCuentaConApoyoAlumno
             // 
-            this.boxCuentaConApoyo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCuentaConApoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCuentaConApoyo.Items.AddRange(new object[] {
+            this.boxCuentaConApoyoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCuentaConApoyoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCuentaConApoyoAlumno.Items.AddRange(new object[] {
             "Cuenta con apoyo?",
             "SI",
             "NO"});
-            this.boxCuentaConApoyo.Location = new System.Drawing.Point(184, 56);
-            this.boxCuentaConApoyo.Name = "boxCuentaConApoyo";
-            this.boxCuentaConApoyo.Size = new System.Drawing.Size(159, 23);
-            this.boxCuentaConApoyo.TabIndex = 29;
+            this.boxCuentaConApoyoAlumno.Location = new System.Drawing.Point(184, 56);
+            this.boxCuentaConApoyoAlumno.Name = "boxCuentaConApoyoAlumno";
+            this.boxCuentaConApoyoAlumno.Size = new System.Drawing.Size(159, 23);
+            this.boxCuentaConApoyoAlumno.TabIndex = 29;
             // 
-            // boxPersonaDiscapacidad
+            // boxPersonaDiscapacidadAlumno
             // 
-            this.boxPersonaDiscapacidad.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxPersonaDiscapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxPersonaDiscapacidad.Items.AddRange(new object[] {
+            this.boxPersonaDiscapacidadAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxPersonaDiscapacidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxPersonaDiscapacidadAlumno.Items.AddRange(new object[] {
             "Persona con discapacidad?",
             "SI",
             "NO"});
-            this.boxPersonaDiscapacidad.Location = new System.Drawing.Point(19, 56);
-            this.boxPersonaDiscapacidad.Name = "boxPersonaDiscapacidad";
-            this.boxPersonaDiscapacidad.Size = new System.Drawing.Size(159, 23);
-            this.boxPersonaDiscapacidad.TabIndex = 29;
+            this.boxPersonaDiscapacidadAlumno.Location = new System.Drawing.Point(19, 56);
+            this.boxPersonaDiscapacidadAlumno.Name = "boxPersonaDiscapacidadAlumno";
+            this.boxPersonaDiscapacidadAlumno.Size = new System.Drawing.Size(159, 23);
+            this.boxPersonaDiscapacidadAlumno.TabIndex = 29;
             // 
-            // textBox1
+            // txtCargaSemanalCuidadoAlumno
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(349, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 24);
-            this.textBox1.TabIndex = 27;
-            this.textBox1.Text = "Carga semanal de cuidado";
-            this.textBox1.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox1.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtCargaSemanalCuidadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargaSemanalCuidadoAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCargaSemanalCuidadoAlumno.Location = new System.Drawing.Point(349, 55);
+            this.txtCargaSemanalCuidadoAlumno.Name = "txtCargaSemanalCuidadoAlumno";
+            this.txtCargaSemanalCuidadoAlumno.Size = new System.Drawing.Size(188, 24);
+            this.txtCargaSemanalCuidadoAlumno.TabIndex = 27;
+            this.txtCargaSemanalCuidadoAlumno.Text = "Carga semanal de cuidado";
+            this.txtCargaSemanalCuidadoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCargaSemanalCuidadoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // txt60oMas
+            // txt60oMasAlumno
             // 
-            this.txt60oMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt60oMas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt60oMas.Location = new System.Drawing.Point(263, 26);
-            this.txt60oMas.Name = "txt60oMas";
-            this.txt60oMas.Size = new System.Drawing.Size(116, 24);
-            this.txt60oMas.TabIndex = 28;
-            this.txt60oMas.Text = "De 60 o mas";
-            this.txt60oMas.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txt60oMas.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txt60oMasAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt60oMasAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt60oMasAlumno.Location = new System.Drawing.Point(263, 26);
+            this.txt60oMasAlumno.Name = "txt60oMasAlumno";
+            this.txt60oMasAlumno.Size = new System.Drawing.Size(116, 24);
+            this.txt60oMasAlumno.TabIndex = 28;
+            this.txt60oMasAlumno.Text = "De 60 o mas";
+            this.txt60oMasAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txt60oMasAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // txt18a59
+            // txt18a59Alumno
             // 
-            this.txt18a59.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt18a59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt18a59.Location = new System.Drawing.Point(141, 26);
-            this.txt18a59.Name = "txt18a59";
-            this.txt18a59.Size = new System.Drawing.Size(116, 24);
-            this.txt18a59.TabIndex = 28;
-            this.txt18a59.Text = "De 18 a 59 años";
-            this.txt18a59.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txt18a59.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txt18a59Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt18a59Alumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt18a59Alumno.Location = new System.Drawing.Point(141, 26);
+            this.txt18a59Alumno.Name = "txt18a59Alumno";
+            this.txt18a59Alumno.Size = new System.Drawing.Size(116, 24);
+            this.txt18a59Alumno.TabIndex = 28;
+            this.txt18a59Alumno.Text = "De 18 a 59 años";
+            this.txt18a59Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txt18a59Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // txt0a17
+            // txt0a17Alumno
             // 
-            this.txt0a17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt0a17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txt0a17.Location = new System.Drawing.Point(19, 26);
-            this.txt0a17.Name = "txt0a17";
-            this.txt0a17.Size = new System.Drawing.Size(116, 24);
-            this.txt0a17.TabIndex = 28;
-            this.txt0a17.Text = "De 0 a 17 años";
-            this.txt0a17.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txt0a17.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txt0a17Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt0a17Alumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt0a17Alumno.Location = new System.Drawing.Point(19, 26);
+            this.txt0a17Alumno.Name = "txt0a17Alumno";
+            this.txt0a17Alumno.Size = new System.Drawing.Size(116, 24);
+            this.txt0a17Alumno.TabIndex = 28;
+            this.txt0a17Alumno.Text = "De 0 a 17 años";
+            this.txt0a17Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txt0a17Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.txtMedioAccesoInternet);
-            this.groupBox17.Controls.Add(this.boxFacilAccesoInternet);
-            this.groupBox17.Controls.Add(this.boxUsaInternet);
+            this.groupBox17.Controls.Add(this.txtMedioAccesoInternetAlumno);
+            this.groupBox17.Controls.Add(this.boxFacilAccesoInternetAlumno);
+            this.groupBox17.Controls.Add(this.boxUsaInternetAlumno);
             this.groupBox17.Location = new System.Drawing.Point(41, 114);
             this.groupBox17.Name = "groupBox17";
             this.groupBox17.Size = new System.Drawing.Size(621, 75);
@@ -1918,49 +1915,51 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Acceso a internet";
             // 
-            // txtMedioAccesoInternet
+            // txtMedioAccesoInternetAlumno
             // 
-            this.txtMedioAccesoInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedioAccesoInternet.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMedioAccesoInternet.Location = new System.Drawing.Point(414, 30);
-            this.txtMedioAccesoInternet.Name = "txtMedioAccesoInternet";
-            this.txtMedioAccesoInternet.Size = new System.Drawing.Size(193, 24);
-            this.txtMedioAccesoInternet.TabIndex = 29;
-            this.txtMedioAccesoInternet.Text = "Medio de acceso a internet";
-            this.txtMedioAccesoInternet.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtMedioAccesoInternet.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtMedioAccesoInternetAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedioAccesoInternetAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMedioAccesoInternetAlumno.Location = new System.Drawing.Point(414, 30);
+            this.txtMedioAccesoInternetAlumno.Name = "txtMedioAccesoInternetAlumno";
+            this.txtMedioAccesoInternetAlumno.Size = new System.Drawing.Size(193, 24);
+            this.txtMedioAccesoInternetAlumno.TabIndex = 29;
+            this.txtMedioAccesoInternetAlumno.Text = "Medio de acceso a internet";
+            this.txtMedioAccesoInternetAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtMedioAccesoInternetAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // boxFacilAccesoInternet
+            // boxFacilAccesoInternetAlumno
             // 
-            this.boxFacilAccesoInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxFacilAccesoInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxFacilAccesoInternet.Items.AddRange(new object[] {
-            "Facil acceso a internet?"});
-            this.boxFacilAccesoInternet.Location = new System.Drawing.Point(215, 30);
-            this.boxFacilAccesoInternet.Name = "boxFacilAccesoInternet";
-            this.boxFacilAccesoInternet.Size = new System.Drawing.Size(193, 23);
-            this.boxFacilAccesoInternet.TabIndex = 28;
+            this.boxFacilAccesoInternetAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxFacilAccesoInternetAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxFacilAccesoInternetAlumno.Items.AddRange(new object[] {
+            "Facil acceso a internet?",
+            "SI",
+            "NO"});
+            this.boxFacilAccesoInternetAlumno.Location = new System.Drawing.Point(215, 30);
+            this.boxFacilAccesoInternetAlumno.Name = "boxFacilAccesoInternetAlumno";
+            this.boxFacilAccesoInternetAlumno.Size = new System.Drawing.Size(193, 23);
+            this.boxFacilAccesoInternetAlumno.TabIndex = 28;
             // 
-            // boxUsaInternet
+            // boxUsaInternetAlumno
             // 
-            this.boxUsaInternet.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxUsaInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxUsaInternet.Items.AddRange(new object[] {
+            this.boxUsaInternetAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxUsaInternetAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxUsaInternetAlumno.Items.AddRange(new object[] {
             "Usa internet?",
             "SI",
             "NO"});
-            this.boxUsaInternet.Location = new System.Drawing.Point(16, 30);
-            this.boxUsaInternet.Name = "boxUsaInternet";
-            this.boxUsaInternet.Size = new System.Drawing.Size(193, 23);
-            this.boxUsaInternet.TabIndex = 27;
+            this.boxUsaInternetAlumno.Location = new System.Drawing.Point(16, 30);
+            this.boxUsaInternetAlumno.Name = "boxUsaInternetAlumno";
+            this.boxUsaInternetAlumno.Size = new System.Drawing.Size(193, 23);
+            this.boxUsaInternetAlumno.TabIndex = 27;
             // 
             // groupBox16
             // 
-            this.groupBox16.Controls.Add(this.txtIngresoMensual);
-            this.groupBox16.Controls.Add(this.txtHorasJornada);
-            this.groupBox16.Controls.Add(this.txtTiempoDesempleado);
-            this.groupBox16.Controls.Add(this.boxTrabajoAlgunaVez);
-            this.groupBox16.Controls.Add(this.boxTrabajaActualmente);
+            this.groupBox16.Controls.Add(this.txtIngresoMensualAlumno);
+            this.groupBox16.Controls.Add(this.txtHorasJornadaAlumno);
+            this.groupBox16.Controls.Add(this.txtTiempoDesempleadoAlumno);
+            this.groupBox16.Controls.Add(this.boxTrabajoAlgunaVezAlumno);
+            this.groupBox16.Controls.Add(this.boxTrabajaActualmenteAlumno);
             this.groupBox16.Location = new System.Drawing.Point(41, 36);
             this.groupBox16.Name = "groupBox16";
             this.groupBox16.Size = new System.Drawing.Size(1006, 72);
@@ -1968,67 +1967,67 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Trabajo";
             // 
-            // txtIngresoMensual
+            // txtIngresoMensualAlumno
             // 
-            this.txtIngresoMensual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIngresoMensual.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtIngresoMensual.Location = new System.Drawing.Point(816, 29);
-            this.txtIngresoMensual.Name = "txtIngresoMensual";
-            this.txtIngresoMensual.Size = new System.Drawing.Size(176, 24);
-            this.txtIngresoMensual.TabIndex = 28;
-            this.txtIngresoMensual.Text = "Ingreso mensual";
-            this.txtIngresoMensual.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtIngresoMensual.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtIngresoMensualAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngresoMensualAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtIngresoMensualAlumno.Location = new System.Drawing.Point(816, 29);
+            this.txtIngresoMensualAlumno.Name = "txtIngresoMensualAlumno";
+            this.txtIngresoMensualAlumno.Size = new System.Drawing.Size(176, 24);
+            this.txtIngresoMensualAlumno.TabIndex = 28;
+            this.txtIngresoMensualAlumno.Text = "Ingreso mensual";
+            this.txtIngresoMensualAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtIngresoMensualAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // txtHorasJornada
+            // txtHorasJornadaAlumno
             // 
-            this.txtHorasJornada.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHorasJornada.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtHorasJornada.Location = new System.Drawing.Point(617, 29);
-            this.txtHorasJornada.Name = "txtHorasJornada";
-            this.txtHorasJornada.Size = new System.Drawing.Size(176, 24);
-            this.txtHorasJornada.TabIndex = 28;
-            this.txtHorasJornada.Text = "Horas de jornada";
-            this.txtHorasJornada.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtHorasJornada.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtHorasJornadaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtHorasJornadaAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtHorasJornadaAlumno.Location = new System.Drawing.Point(617, 29);
+            this.txtHorasJornadaAlumno.Name = "txtHorasJornadaAlumno";
+            this.txtHorasJornadaAlumno.Size = new System.Drawing.Size(176, 24);
+            this.txtHorasJornadaAlumno.TabIndex = 28;
+            this.txtHorasJornadaAlumno.Text = "Horas de jornada";
+            this.txtHorasJornadaAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtHorasJornadaAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // txtTiempoDesempleado
+            // txtTiempoDesempleadoAlumno
             // 
-            this.txtTiempoDesempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTiempoDesempleado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTiempoDesempleado.Location = new System.Drawing.Point(418, 29);
-            this.txtTiempoDesempleado.Name = "txtTiempoDesempleado";
-            this.txtTiempoDesempleado.Size = new System.Drawing.Size(176, 24);
-            this.txtTiempoDesempleado.TabIndex = 27;
-            this.txtTiempoDesempleado.Text = "Tiempo desempleado";
-            this.txtTiempoDesempleado.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtTiempoDesempleado.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtTiempoDesempleadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiempoDesempleadoAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTiempoDesempleadoAlumno.Location = new System.Drawing.Point(419, 29);
+            this.txtTiempoDesempleadoAlumno.Name = "txtTiempoDesempleadoAlumno";
+            this.txtTiempoDesempleadoAlumno.Size = new System.Drawing.Size(176, 24);
+            this.txtTiempoDesempleadoAlumno.TabIndex = 27;
+            this.txtTiempoDesempleadoAlumno.Text = "Tiempo desempleado";
+            this.txtTiempoDesempleadoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtTiempoDesempleadoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // boxTrabajoAlgunaVez
+            // boxTrabajoAlgunaVezAlumno
             // 
-            this.boxTrabajoAlgunaVez.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTrabajoAlgunaVez.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTrabajoAlgunaVez.Items.AddRange(new object[] {
+            this.boxTrabajoAlgunaVezAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajoAlgunaVezAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajoAlgunaVezAlumno.Items.AddRange(new object[] {
             "Trabajo alguna vez?",
             "SI",
             "NO"});
-            this.boxTrabajoAlgunaVez.Location = new System.Drawing.Point(19, 29);
-            this.boxTrabajoAlgunaVez.Name = "boxTrabajoAlgunaVez";
-            this.boxTrabajoAlgunaVez.Size = new System.Drawing.Size(176, 23);
-            this.boxTrabajoAlgunaVez.TabIndex = 25;
+            this.boxTrabajoAlgunaVezAlumno.Location = new System.Drawing.Point(19, 29);
+            this.boxTrabajoAlgunaVezAlumno.Name = "boxTrabajoAlgunaVezAlumno";
+            this.boxTrabajoAlgunaVezAlumno.Size = new System.Drawing.Size(176, 23);
+            this.boxTrabajoAlgunaVezAlumno.TabIndex = 25;
             // 
-            // boxTrabajaActualmente
+            // boxTrabajaActualmenteAlumno
             // 
-            this.boxTrabajaActualmente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTrabajaActualmente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTrabajaActualmente.Items.AddRange(new object[] {
+            this.boxTrabajaActualmenteAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajaActualmenteAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajaActualmenteAlumno.Items.AddRange(new object[] {
             "Trabaja actualmente?",
             "SI",
             "NO"});
-            this.boxTrabajaActualmente.Location = new System.Drawing.Point(221, 29);
-            this.boxTrabajaActualmente.Name = "boxTrabajaActualmente";
-            this.boxTrabajaActualmente.Size = new System.Drawing.Size(176, 23);
-            this.boxTrabajaActualmente.TabIndex = 26;
+            this.boxTrabajaActualmenteAlumno.Location = new System.Drawing.Point(221, 29);
+            this.boxTrabajaActualmenteAlumno.Name = "boxTrabajaActualmenteAlumno";
+            this.boxTrabajaActualmenteAlumno.Size = new System.Drawing.Size(176, 23);
+            this.boxTrabajaActualmenteAlumno.TabIndex = 26;
             // 
             // btnAtras
             // 
@@ -2075,8 +2074,8 @@
             // 
             // groupBox26
             // 
-            this.groupBox26.Controls.Add(this.lblEstado);
-            this.groupBox26.Controls.Add(this.lblCurso);
+            this.groupBox26.Controls.Add(this.lblEstadoAlumno);
+            this.groupBox26.Controls.Add(this.lblCursoAlumno);
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox26.Location = new System.Drawing.Point(39, 36);
             this.groupBox26.Name = "groupBox26";
@@ -2085,30 +2084,30 @@
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Con respecto al instituto";
             // 
-            // lblEstado
+            // lblEstadoAlumno
             // 
-            this.lblEstado.AutoSize = true;
-            this.lblEstado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstado.Location = new System.Drawing.Point(27, 46);
-            this.lblEstado.Name = "lblEstado";
-            this.lblEstado.Size = new System.Drawing.Size(55, 15);
-            this.lblEstado.TabIndex = 27;
-            this.lblEstado.Text = "Estado:";
+            this.lblEstadoAlumno.AutoSize = true;
+            this.lblEstadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoAlumno.Location = new System.Drawing.Point(27, 46);
+            this.lblEstadoAlumno.Name = "lblEstadoAlumno";
+            this.lblEstadoAlumno.Size = new System.Drawing.Size(55, 15);
+            this.lblEstadoAlumno.TabIndex = 27;
+            this.lblEstadoAlumno.Text = "Estado:";
             // 
-            // lblCurso
+            // lblCursoAlumno
             // 
-            this.lblCurso.AutoSize = true;
-            this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(34, 31);
-            this.lblCurso.Name = "lblCurso";
-            this.lblCurso.Size = new System.Drawing.Size(48, 15);
-            this.lblCurso.TabIndex = 26;
-            this.lblCurso.Text = "Curso:";
+            this.lblCursoAlumno.AutoSize = true;
+            this.lblCursoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoAlumno.Location = new System.Drawing.Point(34, 31);
+            this.lblCursoAlumno.Name = "lblCursoAlumno";
+            this.lblCursoAlumno.Size = new System.Drawing.Size(48, 15);
+            this.lblCursoAlumno.TabIndex = 26;
+            this.lblCursoAlumno.Text = "Curso:";
             // 
             // groupBox22
             // 
-            this.groupBox22.Controls.Add(this.lblCantidadHijos);
-            this.groupBox22.Controls.Add(this.lblJefeHogar);
+            this.groupBox22.Controls.Add(this.lblCantidadHijosAlumno);
+            this.groupBox22.Controls.Add(this.lblJefeHogarAlumno);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox22.Location = new System.Drawing.Point(324, 323);
             this.groupBox22.Name = "groupBox22";
@@ -2117,31 +2116,31 @@
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Jefe de hogar";
             // 
-            // lblCantidadHijos
+            // lblCantidadHijosAlumno
             // 
-            this.lblCantidadHijos.AutoSize = true;
-            this.lblCantidadHijos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCantidadHijos.Location = new System.Drawing.Point(16, 40);
-            this.lblCantidadHijos.Name = "lblCantidadHijos";
-            this.lblCantidadHijos.Size = new System.Drawing.Size(123, 15);
-            this.lblCantidadHijos.TabIndex = 36;
-            this.lblCantidadHijos.Text = "Cantidad de hijos:";
+            this.lblCantidadHijosAlumno.AutoSize = true;
+            this.lblCantidadHijosAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadHijosAlumno.Location = new System.Drawing.Point(16, 40);
+            this.lblCantidadHijosAlumno.Name = "lblCantidadHijosAlumno";
+            this.lblCantidadHijosAlumno.Size = new System.Drawing.Size(123, 15);
+            this.lblCantidadHijosAlumno.TabIndex = 36;
+            this.lblCantidadHijosAlumno.Text = "Cantidad de hijos:";
             // 
-            // lblJefeHogar
+            // lblJefeHogarAlumno
             // 
-            this.lblJefeHogar.AutoSize = true;
-            this.lblJefeHogar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJefeHogar.Location = new System.Drawing.Point(40, 24);
-            this.lblJefeHogar.Name = "lblJefeHogar";
-            this.lblJefeHogar.Size = new System.Drawing.Size(99, 15);
-            this.lblJefeHogar.TabIndex = 36;
-            this.lblJefeHogar.Text = "Jefe de hogar:";
+            this.lblJefeHogarAlumno.AutoSize = true;
+            this.lblJefeHogarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJefeHogarAlumno.Location = new System.Drawing.Point(40, 24);
+            this.lblJefeHogarAlumno.Name = "lblJefeHogarAlumno";
+            this.lblJefeHogarAlumno.Size = new System.Drawing.Size(99, 15);
+            this.lblJefeHogarAlumno.TabIndex = 36;
+            this.lblJefeHogarAlumno.Text = "Jefe de hogar:";
             // 
             // groupBox27
             // 
-            this.groupBox27.Controls.Add(this.lblEmail);
-            this.groupBox27.Controls.Add(this.lblCelular);
-            this.groupBox27.Controls.Add(this.lblTelefono);
+            this.groupBox27.Controls.Add(this.lblEmailAlumno);
+            this.groupBox27.Controls.Add(this.lblCelularAlumno);
+            this.groupBox27.Controls.Add(this.lblTelefonoAlumno);
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox27.Location = new System.Drawing.Point(324, 175);
             this.groupBox27.Name = "groupBox27";
@@ -2150,44 +2149,44 @@
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Contacto";
             // 
-            // lblEmail
+            // lblEmailAlumno
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(91, 54);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(48, 15);
-            this.lblEmail.TabIndex = 37;
-            this.lblEmail.Text = "Email:";
+            this.lblEmailAlumno.AutoSize = true;
+            this.lblEmailAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailAlumno.Location = new System.Drawing.Point(91, 54);
+            this.lblEmailAlumno.Name = "lblEmailAlumno";
+            this.lblEmailAlumno.Size = new System.Drawing.Size(48, 15);
+            this.lblEmailAlumno.TabIndex = 37;
+            this.lblEmailAlumno.Text = "Email:";
             // 
-            // lblCelular
+            // lblCelularAlumno
             // 
-            this.lblCelular.AutoSize = true;
-            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelular.Location = new System.Drawing.Point(82, 39);
-            this.lblCelular.Name = "lblCelular";
-            this.lblCelular.Size = new System.Drawing.Size(57, 15);
-            this.lblCelular.TabIndex = 37;
-            this.lblCelular.Text = "Celular:";
+            this.lblCelularAlumno.AutoSize = true;
+            this.lblCelularAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelularAlumno.Location = new System.Drawing.Point(82, 39);
+            this.lblCelularAlumno.Name = "lblCelularAlumno";
+            this.lblCelularAlumno.Size = new System.Drawing.Size(57, 15);
+            this.lblCelularAlumno.TabIndex = 37;
+            this.lblCelularAlumno.Text = "Celular:";
             // 
-            // lblTelefono
+            // lblTelefonoAlumno
             // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(72, 24);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(67, 15);
-            this.lblTelefono.TabIndex = 37;
-            this.lblTelefono.Text = "Telefono:";
+            this.lblTelefonoAlumno.AutoSize = true;
+            this.lblTelefonoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefonoAlumno.Location = new System.Drawing.Point(72, 24);
+            this.lblTelefonoAlumno.Name = "lblTelefonoAlumno";
+            this.lblTelefonoAlumno.Size = new System.Drawing.Size(67, 15);
+            this.lblTelefonoAlumno.TabIndex = 37;
+            this.lblTelefonoAlumno.Text = "Telefono:";
             // 
             // groupBox28
             // 
-            this.groupBox28.Controls.Add(this.lblNApartamento);
-            this.groupBox28.Controls.Add(this.lblNPuerta);
-            this.groupBox28.Controls.Add(this.lblReferencia);
-            this.groupBox28.Controls.Add(this.lblCalle);
-            this.groupBox28.Controls.Add(this.lblLocalidad);
-            this.groupBox28.Controls.Add(this.lblDepartamento);
+            this.groupBox28.Controls.Add(this.lblNApartamentoAlumno);
+            this.groupBox28.Controls.Add(this.lblNPuertaAlumno);
+            this.groupBox28.Controls.Add(this.lblReferenciaAlumno);
+            this.groupBox28.Controls.Add(this.lblCalleAlumno);
+            this.groupBox28.Controls.Add(this.lblLocalidadAlumno);
+            this.groupBox28.Controls.Add(this.lblDepartamentoAlumno);
             this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox28.Location = new System.Drawing.Point(324, 36);
             this.groupBox28.Name = "groupBox28";
@@ -2196,69 +2195,69 @@
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "Dirección";
             // 
-            // lblNApartamento
+            // lblNApartamentoAlumno
             // 
-            this.lblNApartamento.AutoSize = true;
-            this.lblNApartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNApartamento.Location = new System.Drawing.Point(28, 102);
-            this.lblNApartamento.Name = "lblNApartamento";
-            this.lblNApartamento.Size = new System.Drawing.Size(111, 15);
-            this.lblNApartamento.TabIndex = 36;
-            this.lblNApartamento.Text = "Nº apartamento:";
+            this.lblNApartamentoAlumno.AutoSize = true;
+            this.lblNApartamentoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNApartamentoAlumno.Location = new System.Drawing.Point(28, 102);
+            this.lblNApartamentoAlumno.Name = "lblNApartamentoAlumno";
+            this.lblNApartamentoAlumno.Size = new System.Drawing.Size(111, 15);
+            this.lblNApartamentoAlumno.TabIndex = 36;
+            this.lblNApartamentoAlumno.Text = "Nº apartamento:";
             // 
-            // lblNPuerta
+            // lblNPuertaAlumno
             // 
-            this.lblNPuerta.AutoSize = true;
-            this.lblNPuerta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNPuerta.Location = new System.Drawing.Point(68, 87);
-            this.lblNPuerta.Name = "lblNPuerta";
-            this.lblNPuerta.Size = new System.Drawing.Size(71, 15);
-            this.lblNPuerta.TabIndex = 36;
-            this.lblNPuerta.Text = "Nº puerta:";
+            this.lblNPuertaAlumno.AutoSize = true;
+            this.lblNPuertaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNPuertaAlumno.Location = new System.Drawing.Point(68, 87);
+            this.lblNPuertaAlumno.Name = "lblNPuertaAlumno";
+            this.lblNPuertaAlumno.Size = new System.Drawing.Size(71, 15);
+            this.lblNPuertaAlumno.TabIndex = 36;
+            this.lblNPuertaAlumno.Text = "Nº puerta:";
             // 
-            // lblReferencia
+            // lblReferenciaAlumno
             // 
-            this.lblReferencia.AutoSize = true;
-            this.lblReferencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferencia.Location = new System.Drawing.Point(58, 72);
-            this.lblReferencia.Name = "lblReferencia";
-            this.lblReferencia.Size = new System.Drawing.Size(81, 15);
-            this.lblReferencia.TabIndex = 36;
-            this.lblReferencia.Text = "Referencia:";
+            this.lblReferenciaAlumno.AutoSize = true;
+            this.lblReferenciaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReferenciaAlumno.Location = new System.Drawing.Point(58, 72);
+            this.lblReferenciaAlumno.Name = "lblReferenciaAlumno";
+            this.lblReferenciaAlumno.Size = new System.Drawing.Size(81, 15);
+            this.lblReferenciaAlumno.TabIndex = 36;
+            this.lblReferenciaAlumno.Text = "Referencia:";
             // 
-            // lblCalle
+            // lblCalleAlumno
             // 
-            this.lblCalle.AutoSize = true;
-            this.lblCalle.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalle.Location = new System.Drawing.Point(95, 57);
-            this.lblCalle.Name = "lblCalle";
-            this.lblCalle.Size = new System.Drawing.Size(44, 15);
-            this.lblCalle.TabIndex = 36;
-            this.lblCalle.Text = "Calle:";
+            this.lblCalleAlumno.AutoSize = true;
+            this.lblCalleAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalleAlumno.Location = new System.Drawing.Point(95, 57);
+            this.lblCalleAlumno.Name = "lblCalleAlumno";
+            this.lblCalleAlumno.Size = new System.Drawing.Size(44, 15);
+            this.lblCalleAlumno.TabIndex = 36;
+            this.lblCalleAlumno.Text = "Calle:";
             // 
-            // lblLocalidad
+            // lblLocalidadAlumno
             // 
-            this.lblLocalidad.AutoSize = true;
-            this.lblLocalidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidad.Location = new System.Drawing.Point(65, 42);
-            this.lblLocalidad.Name = "lblLocalidad";
-            this.lblLocalidad.Size = new System.Drawing.Size(74, 15);
-            this.lblLocalidad.TabIndex = 36;
-            this.lblLocalidad.Text = "Localidad:";
+            this.lblLocalidadAlumno.AutoSize = true;
+            this.lblLocalidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidadAlumno.Location = new System.Drawing.Point(65, 42);
+            this.lblLocalidadAlumno.Name = "lblLocalidadAlumno";
+            this.lblLocalidadAlumno.Size = new System.Drawing.Size(74, 15);
+            this.lblLocalidadAlumno.TabIndex = 36;
+            this.lblLocalidadAlumno.Text = "Localidad:";
             // 
-            // lblDepartamento
+            // lblDepartamentoAlumno
             // 
-            this.lblDepartamento.AutoSize = true;
-            this.lblDepartamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamento.Location = new System.Drawing.Point(37, 27);
-            this.lblDepartamento.Name = "lblDepartamento";
-            this.lblDepartamento.Size = new System.Drawing.Size(102, 15);
-            this.lblDepartamento.TabIndex = 36;
-            this.lblDepartamento.Text = "Departamento:";
+            this.lblDepartamentoAlumno.AutoSize = true;
+            this.lblDepartamentoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamentoAlumno.Location = new System.Drawing.Point(37, 27);
+            this.lblDepartamentoAlumno.Name = "lblDepartamentoAlumno";
+            this.lblDepartamentoAlumno.Size = new System.Drawing.Size(102, 15);
+            this.lblDepartamentoAlumno.TabIndex = 36;
+            this.lblDepartamentoAlumno.Text = "Departamento:";
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.lblCoberturaSalud);
+            this.groupBox21.Controls.Add(this.lblCoberturaSaludAlumno);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox21.Location = new System.Drawing.Point(324, 268);
             this.groupBox21.Name = "groupBox21";
@@ -2267,20 +2266,20 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Coberura de salud";
             // 
-            // lblCoberturaSalud
+            // lblCoberturaSaludAlumno
             // 
-            this.lblCoberturaSalud.AutoSize = true;
-            this.lblCoberturaSalud.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoberturaSalud.Location = new System.Drawing.Point(6, 22);
-            this.lblCoberturaSalud.Name = "lblCoberturaSalud";
-            this.lblCoberturaSalud.Size = new System.Drawing.Size(133, 15);
-            this.lblCoberturaSalud.TabIndex = 38;
-            this.lblCoberturaSalud.Text = "Cobertura de salud:";
+            this.lblCoberturaSaludAlumno.AutoSize = true;
+            this.lblCoberturaSaludAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoberturaSaludAlumno.Location = new System.Drawing.Point(6, 22);
+            this.lblCoberturaSaludAlumno.Name = "lblCoberturaSaludAlumno";
+            this.lblCoberturaSaludAlumno.Size = new System.Drawing.Size(133, 15);
+            this.lblCoberturaSaludAlumno.TabIndex = 38;
+            this.lblCoberturaSaludAlumno.Text = "Cobertura de salud:";
             // 
             // groupBox29
             // 
-            this.groupBox29.Controls.Add(this.lblUltimoAñoAprobado);
-            this.groupBox29.Controls.Add(this.lblNivelEducativo);
+            this.groupBox29.Controls.Add(this.lblUltimoAñoAprobadoAlumno);
+            this.groupBox29.Controls.Add(this.lblNivelEducativoAlumno);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox29.Location = new System.Drawing.Point(39, 315);
             this.groupBox29.Name = "groupBox29";
@@ -2289,37 +2288,37 @@
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "Formacion academica";
             // 
-            // lblUltimoAñoAprobado
+            // lblUltimoAñoAprobadoAlumno
             // 
-            this.lblUltimoAñoAprobado.AutoSize = true;
-            this.lblUltimoAñoAprobado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUltimoAñoAprobado.Location = new System.Drawing.Point(6, 48);
-            this.lblUltimoAñoAprobado.Name = "lblUltimoAñoAprobado";
-            this.lblUltimoAñoAprobado.Size = new System.Drawing.Size(146, 15);
-            this.lblUltimoAñoAprobado.TabIndex = 36;
-            this.lblUltimoAñoAprobado.Text = "Ultimo año aprobado:";
+            this.lblUltimoAñoAprobadoAlumno.AutoSize = true;
+            this.lblUltimoAñoAprobadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoAñoAprobadoAlumno.Location = new System.Drawing.Point(6, 48);
+            this.lblUltimoAñoAprobadoAlumno.Name = "lblUltimoAñoAprobadoAlumno";
+            this.lblUltimoAñoAprobadoAlumno.Size = new System.Drawing.Size(146, 15);
+            this.lblUltimoAñoAprobadoAlumno.TabIndex = 36;
+            this.lblUltimoAñoAprobadoAlumno.Text = "Ultimo año aprobado:";
             // 
-            // lblNivelEducativo
+            // lblNivelEducativoAlumno
             // 
-            this.lblNivelEducativo.AutoSize = true;
-            this.lblNivelEducativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNivelEducativo.Location = new System.Drawing.Point(44, 33);
-            this.lblNivelEducativo.Name = "lblNivelEducativo";
-            this.lblNivelEducativo.Size = new System.Drawing.Size(108, 15);
-            this.lblNivelEducativo.TabIndex = 36;
-            this.lblNivelEducativo.Text = "Nivel educativo:";
+            this.lblNivelEducativoAlumno.AutoSize = true;
+            this.lblNivelEducativoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNivelEducativoAlumno.Location = new System.Drawing.Point(44, 33);
+            this.lblNivelEducativoAlumno.Name = "lblNivelEducativoAlumno";
+            this.lblNivelEducativoAlumno.Size = new System.Drawing.Size(108, 15);
+            this.lblNivelEducativoAlumno.TabIndex = 36;
+            this.lblNivelEducativoAlumno.Text = "Nivel educativo:";
             // 
             // groupBox30
             // 
-            this.groupBox30.Controls.Add(this.lblEstadoCivil);
-            this.groupBox30.Controls.Add(this.lblSexo);
-            this.groupBox30.Controls.Add(this.lblEdad);
-            this.groupBox30.Controls.Add(this.lblFechaNacimiento);
-            this.groupBox30.Controls.Add(this.lblApellido2);
-            this.groupBox30.Controls.Add(this.lblApellido1);
-            this.groupBox30.Controls.Add(this.lblNombre2);
-            this.groupBox30.Controls.Add(this.lblNombre1);
-            this.groupBox30.Controls.Add(this.lblCedula);
+            this.groupBox30.Controls.Add(this.lblEstadoCivilAlumno);
+            this.groupBox30.Controls.Add(this.lblSexoAlumno);
+            this.groupBox30.Controls.Add(this.lblEdadAlumno);
+            this.groupBox30.Controls.Add(this.lblFechaNacimientoAlumno);
+            this.groupBox30.Controls.Add(this.lblApellido2Alumno);
+            this.groupBox30.Controls.Add(this.lblApellido1Alumno);
+            this.groupBox30.Controls.Add(this.lblNombre2Alumno);
+            this.groupBox30.Controls.Add(this.lblNombre1Alumno);
+            this.groupBox30.Controls.Add(this.lblCedulaAlumno);
             this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox30.Location = new System.Drawing.Point(39, 129);
             this.groupBox30.Name = "groupBox30";
@@ -2328,106 +2327,106 @@
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Datos personales";
             // 
-            // lblEstadoCivil
+            // lblEstadoCivilAlumno
             // 
-            this.lblEstadoCivil.AutoSize = true;
-            this.lblEstadoCivil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoCivil.Location = new System.Drawing.Point(67, 145);
-            this.lblEstadoCivil.Name = "lblEstadoCivil";
-            this.lblEstadoCivil.Size = new System.Drawing.Size(84, 15);
-            this.lblEstadoCivil.TabIndex = 35;
-            this.lblEstadoCivil.Text = "Estado civil:";
+            this.lblEstadoCivilAlumno.AutoSize = true;
+            this.lblEstadoCivilAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoCivilAlumno.Location = new System.Drawing.Point(67, 145);
+            this.lblEstadoCivilAlumno.Name = "lblEstadoCivilAlumno";
+            this.lblEstadoCivilAlumno.Size = new System.Drawing.Size(84, 15);
+            this.lblEstadoCivilAlumno.TabIndex = 35;
+            this.lblEstadoCivilAlumno.Text = "Estado civil:";
             // 
-            // lblSexo
+            // lblSexoAlumno
             // 
-            this.lblSexo.AutoSize = true;
-            this.lblSexo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSexo.Location = new System.Drawing.Point(108, 130);
-            this.lblSexo.Name = "lblSexo";
-            this.lblSexo.Size = new System.Drawing.Size(43, 15);
-            this.lblSexo.TabIndex = 35;
-            this.lblSexo.Text = "Sexo:";
+            this.lblSexoAlumno.AutoSize = true;
+            this.lblSexoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexoAlumno.Location = new System.Drawing.Point(108, 130);
+            this.lblSexoAlumno.Name = "lblSexoAlumno";
+            this.lblSexoAlumno.Size = new System.Drawing.Size(43, 15);
+            this.lblSexoAlumno.TabIndex = 35;
+            this.lblSexoAlumno.Text = "Sexo:";
             // 
-            // lblEdad
+            // lblEdadAlumno
             // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(107, 115);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(44, 15);
-            this.lblEdad.TabIndex = 34;
-            this.lblEdad.Text = "Edad:";
+            this.lblEdadAlumno.AutoSize = true;
+            this.lblEdadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdadAlumno.Location = new System.Drawing.Point(107, 115);
+            this.lblEdadAlumno.Name = "lblEdadAlumno";
+            this.lblEdadAlumno.Size = new System.Drawing.Size(44, 15);
+            this.lblEdadAlumno.TabIndex = 34;
+            this.lblEdadAlumno.Text = "Edad:";
             // 
-            // lblFechaNacimiento
+            // lblFechaNacimientoAlumno
             // 
-            this.lblFechaNacimiento.AutoSize = true;
-            this.lblFechaNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaNacimiento.Location = new System.Drawing.Point(6, 100);
-            this.lblFechaNacimiento.Name = "lblFechaNacimiento";
-            this.lblFechaNacimiento.Size = new System.Drawing.Size(145, 15);
-            this.lblFechaNacimiento.TabIndex = 33;
-            this.lblFechaNacimiento.Text = "Fecha de nacimiento:";
+            this.lblFechaNacimientoAlumno.AutoSize = true;
+            this.lblFechaNacimientoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimientoAlumno.Location = new System.Drawing.Point(6, 100);
+            this.lblFechaNacimientoAlumno.Name = "lblFechaNacimientoAlumno";
+            this.lblFechaNacimientoAlumno.Size = new System.Drawing.Size(145, 15);
+            this.lblFechaNacimientoAlumno.TabIndex = 33;
+            this.lblFechaNacimientoAlumno.Text = "Fecha de nacimiento:";
             // 
-            // lblApellido2
+            // lblApellido2Alumno
             // 
-            this.lblApellido2.AutoSize = true;
-            this.lblApellido2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido2.Location = new System.Drawing.Point(27, 85);
-            this.lblApellido2.Name = "lblApellido2";
-            this.lblApellido2.Size = new System.Drawing.Size(124, 15);
-            this.lblApellido2.TabIndex = 32;
-            this.lblApellido2.Text = "Segundo apellido:";
+            this.lblApellido2Alumno.AutoSize = true;
+            this.lblApellido2Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido2Alumno.Location = new System.Drawing.Point(27, 85);
+            this.lblApellido2Alumno.Name = "lblApellido2Alumno";
+            this.lblApellido2Alumno.Size = new System.Drawing.Size(124, 15);
+            this.lblApellido2Alumno.TabIndex = 32;
+            this.lblApellido2Alumno.Text = "Segundo apellido:";
             // 
-            // lblApellido1
+            // lblApellido1Alumno
             // 
-            this.lblApellido1.AutoSize = true;
-            this.lblApellido1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellido1.Location = new System.Drawing.Point(41, 70);
-            this.lblApellido1.Name = "lblApellido1";
-            this.lblApellido1.Size = new System.Drawing.Size(110, 15);
-            this.lblApellido1.TabIndex = 31;
-            this.lblApellido1.Text = "Primer apellido:";
+            this.lblApellido1Alumno.AutoSize = true;
+            this.lblApellido1Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido1Alumno.Location = new System.Drawing.Point(41, 70);
+            this.lblApellido1Alumno.Name = "lblApellido1Alumno";
+            this.lblApellido1Alumno.Size = new System.Drawing.Size(110, 15);
+            this.lblApellido1Alumno.TabIndex = 31;
+            this.lblApellido1Alumno.Text = "Primer apellido:";
             // 
-            // lblNombre2
+            // lblNombre2Alumno
             // 
-            this.lblNombre2.AutoSize = true;
-            this.lblNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre2.Location = new System.Drawing.Point(30, 55);
-            this.lblNombre2.Name = "lblNombre2";
-            this.lblNombre2.Size = new System.Drawing.Size(121, 15);
-            this.lblNombre2.TabIndex = 30;
-            this.lblNombre2.Text = "Segundo nombre:";
+            this.lblNombre2Alumno.AutoSize = true;
+            this.lblNombre2Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre2Alumno.Location = new System.Drawing.Point(30, 55);
+            this.lblNombre2Alumno.Name = "lblNombre2Alumno";
+            this.lblNombre2Alumno.Size = new System.Drawing.Size(121, 15);
+            this.lblNombre2Alumno.TabIndex = 30;
+            this.lblNombre2Alumno.Text = "Segundo nombre:";
             // 
-            // lblNombre1
+            // lblNombre1Alumno
             // 
-            this.lblNombre1.AutoSize = true;
-            this.lblNombre1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre1.Location = new System.Drawing.Point(44, 40);
-            this.lblNombre1.Name = "lblNombre1";
-            this.lblNombre1.Size = new System.Drawing.Size(107, 15);
-            this.lblNombre1.TabIndex = 29;
-            this.lblNombre1.Text = "Primer nombre:";
+            this.lblNombre1Alumno.AutoSize = true;
+            this.lblNombre1Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre1Alumno.Location = new System.Drawing.Point(44, 40);
+            this.lblNombre1Alumno.Name = "lblNombre1Alumno";
+            this.lblNombre1Alumno.Size = new System.Drawing.Size(107, 15);
+            this.lblNombre1Alumno.TabIndex = 29;
+            this.lblNombre1Alumno.Text = "Primer nombre:";
             // 
-            // lblCedula
+            // lblCedulaAlumno
             // 
-            this.lblCedula.AutoSize = true;
-            this.lblCedula.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedula.Location = new System.Drawing.Point(95, 25);
-            this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(56, 15);
-            this.lblCedula.TabIndex = 28;
-            this.lblCedula.Text = "Cedula:";
+            this.lblCedulaAlumno.AutoSize = true;
+            this.lblCedulaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedulaAlumno.Location = new System.Drawing.Point(95, 25);
+            this.lblCedulaAlumno.Name = "lblCedulaAlumno";
+            this.lblCedulaAlumno.Size = new System.Drawing.Size(56, 15);
+            this.lblCedulaAlumno.TabIndex = 28;
+            this.lblCedulaAlumno.Text = "Cedula:";
             // 
             // groupBox23
             // 
-            this.groupBox23.Controls.Add(this.lblExperienciaInstitucionesCuidado);
-            this.groupBox23.Controls.Add(this.lblTrabajoAnteriormenteCuidando);
-            this.groupBox23.Controls.Add(this.lblCuentaConApoyo);
-            this.groupBox23.Controls.Add(this.lbl0a16);
-            this.groupBox23.Controls.Add(this.lblCargaSemanalCuidado);
-            this.groupBox23.Controls.Add(this.lbl60oMas);
-            this.groupBox23.Controls.Add(this.lblPersonaConDiscapacidad);
-            this.groupBox23.Controls.Add(this.lbl18a59);
+            this.groupBox23.Controls.Add(this.lblExperienciaInstitucionesCuidadoAlumno);
+            this.groupBox23.Controls.Add(this.lblTrabajoAnteriormenteCuidandoAlumno);
+            this.groupBox23.Controls.Add(this.lblCuentaConApoyoAlumno);
+            this.groupBox23.Controls.Add(this.lbl0a16Alumno);
+            this.groupBox23.Controls.Add(this.lblCargaSemanalCuidadoAlumno);
+            this.groupBox23.Controls.Add(this.lbl60oMasAlumno);
+            this.groupBox23.Controls.Add(this.lblPersonaConDiscapacidadAlumno);
+            this.groupBox23.Controls.Add(this.lbl18a59Alumno);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox23.Location = new System.Drawing.Point(609, 159);
             this.groupBox23.Name = "groupBox23";
@@ -2436,91 +2435,91 @@
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Personas a cargo";
             // 
-            // lblExperienciaInstitucionesCuidado
+            // lblExperienciaInstitucionesCuidadoAlumno
             // 
-            this.lblExperienciaInstitucionesCuidado.AutoSize = true;
-            this.lblExperienciaInstitucionesCuidado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblExperienciaInstitucionesCuidado.Location = new System.Drawing.Point(6, 131);
-            this.lblExperienciaInstitucionesCuidado.Name = "lblExperienciaInstitucionesCuidado";
-            this.lblExperienciaInstitucionesCuidado.Size = new System.Drawing.Size(267, 15);
-            this.lblExperienciaInstitucionesCuidado.TabIndex = 36;
-            this.lblExperienciaInstitucionesCuidado.Text = "Experiencia en instituciones de cuidado:";
+            this.lblExperienciaInstitucionesCuidadoAlumno.AutoSize = true;
+            this.lblExperienciaInstitucionesCuidadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExperienciaInstitucionesCuidadoAlumno.Location = new System.Drawing.Point(6, 131);
+            this.lblExperienciaInstitucionesCuidadoAlumno.Name = "lblExperienciaInstitucionesCuidadoAlumno";
+            this.lblExperienciaInstitucionesCuidadoAlumno.Size = new System.Drawing.Size(267, 15);
+            this.lblExperienciaInstitucionesCuidadoAlumno.TabIndex = 36;
+            this.lblExperienciaInstitucionesCuidadoAlumno.Text = "Experiencia en instituciones de cuidado:";
             // 
-            // lblTrabajoAnteriormenteCuidando
+            // lblTrabajoAnteriormenteCuidandoAlumno
             // 
-            this.lblTrabajoAnteriormenteCuidando.AutoSize = true;
-            this.lblTrabajoAnteriormenteCuidando.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrabajoAnteriormenteCuidando.Location = new System.Drawing.Point(56, 116);
-            this.lblTrabajoAnteriormenteCuidando.Name = "lblTrabajoAnteriormenteCuidando";
-            this.lblTrabajoAnteriormenteCuidando.Size = new System.Drawing.Size(217, 15);
-            this.lblTrabajoAnteriormenteCuidando.TabIndex = 36;
-            this.lblTrabajoAnteriormenteCuidando.Text = "Trabajo anteriormente cuidando:";
+            this.lblTrabajoAnteriormenteCuidandoAlumno.AutoSize = true;
+            this.lblTrabajoAnteriormenteCuidandoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajoAnteriormenteCuidandoAlumno.Location = new System.Drawing.Point(56, 116);
+            this.lblTrabajoAnteriormenteCuidandoAlumno.Name = "lblTrabajoAnteriormenteCuidandoAlumno";
+            this.lblTrabajoAnteriormenteCuidandoAlumno.Size = new System.Drawing.Size(217, 15);
+            this.lblTrabajoAnteriormenteCuidandoAlumno.TabIndex = 36;
+            this.lblTrabajoAnteriormenteCuidandoAlumno.Text = "Trabajo anteriormente cuidando:";
             // 
-            // lblCuentaConApoyo
+            // lblCuentaConApoyoAlumno
             // 
-            this.lblCuentaConApoyo.AutoSize = true;
-            this.lblCuentaConApoyo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCuentaConApoyo.Location = new System.Drawing.Point(148, 85);
-            this.lblCuentaConApoyo.Name = "lblCuentaConApoyo";
-            this.lblCuentaConApoyo.Size = new System.Drawing.Size(125, 15);
-            this.lblCuentaConApoyo.TabIndex = 36;
-            this.lblCuentaConApoyo.Text = "Cuenta con apoyo:";
+            this.lblCuentaConApoyoAlumno.AutoSize = true;
+            this.lblCuentaConApoyoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuentaConApoyoAlumno.Location = new System.Drawing.Point(148, 85);
+            this.lblCuentaConApoyoAlumno.Name = "lblCuentaConApoyoAlumno";
+            this.lblCuentaConApoyoAlumno.Size = new System.Drawing.Size(125, 15);
+            this.lblCuentaConApoyoAlumno.TabIndex = 36;
+            this.lblCuentaConApoyoAlumno.Text = "Cuenta con apoyo:";
             // 
-            // lbl0a16
+            // lbl0a16Alumno
             // 
-            this.lbl0a16.AutoSize = true;
-            this.lbl0a16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl0a16.Location = new System.Drawing.Point(165, 25);
-            this.lbl0a16.Name = "lbl0a16";
-            this.lbl0a16.Size = new System.Drawing.Size(108, 15);
-            this.lbl0a16.TabIndex = 36;
-            this.lbl0a16.Text = "De 0 a 17 años:";
+            this.lbl0a16Alumno.AutoSize = true;
+            this.lbl0a16Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl0a16Alumno.Location = new System.Drawing.Point(165, 25);
+            this.lbl0a16Alumno.Name = "lbl0a16Alumno";
+            this.lbl0a16Alumno.Size = new System.Drawing.Size(108, 15);
+            this.lbl0a16Alumno.TabIndex = 36;
+            this.lbl0a16Alumno.Text = "De 0 a 17 años:";
             // 
-            // lblCargaSemanalCuidado
+            // lblCargaSemanalCuidadoAlumno
             // 
-            this.lblCargaSemanalCuidado.AutoSize = true;
-            this.lblCargaSemanalCuidado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCargaSemanalCuidado.Location = new System.Drawing.Point(90, 100);
-            this.lblCargaSemanalCuidado.Name = "lblCargaSemanalCuidado";
-            this.lblCargaSemanalCuidado.Size = new System.Drawing.Size(183, 15);
-            this.lblCargaSemanalCuidado.TabIndex = 36;
-            this.lblCargaSemanalCuidado.Text = "Carga semanal de cuidado:";
+            this.lblCargaSemanalCuidadoAlumno.AutoSize = true;
+            this.lblCargaSemanalCuidadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargaSemanalCuidadoAlumno.Location = new System.Drawing.Point(90, 100);
+            this.lblCargaSemanalCuidadoAlumno.Name = "lblCargaSemanalCuidadoAlumno";
+            this.lblCargaSemanalCuidadoAlumno.Size = new System.Drawing.Size(183, 15);
+            this.lblCargaSemanalCuidadoAlumno.TabIndex = 36;
+            this.lblCargaSemanalCuidadoAlumno.Text = "Carga semanal de cuidado:";
             // 
-            // lbl60oMas
+            // lbl60oMasAlumno
             // 
-            this.lbl60oMas.AutoSize = true;
-            this.lbl60oMas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl60oMas.Location = new System.Drawing.Point(146, 55);
-            this.lbl60oMas.Name = "lbl60oMas";
-            this.lbl60oMas.Size = new System.Drawing.Size(127, 15);
-            this.lbl60oMas.TabIndex = 36;
-            this.lbl60oMas.Text = "De 60 años o mas:";
+            this.lbl60oMasAlumno.AutoSize = true;
+            this.lbl60oMasAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl60oMasAlumno.Location = new System.Drawing.Point(146, 55);
+            this.lbl60oMasAlumno.Name = "lbl60oMasAlumno";
+            this.lbl60oMasAlumno.Size = new System.Drawing.Size(127, 15);
+            this.lbl60oMasAlumno.TabIndex = 36;
+            this.lbl60oMasAlumno.Text = "De 60 años o mas:";
             // 
-            // lblPersonaConDiscapacidad
+            // lblPersonaConDiscapacidadAlumno
             // 
-            this.lblPersonaConDiscapacidad.AutoSize = true;
-            this.lblPersonaConDiscapacidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPersonaConDiscapacidad.Location = new System.Drawing.Point(93, 70);
-            this.lblPersonaConDiscapacidad.Name = "lblPersonaConDiscapacidad";
-            this.lblPersonaConDiscapacidad.Size = new System.Drawing.Size(180, 15);
-            this.lblPersonaConDiscapacidad.TabIndex = 36;
-            this.lblPersonaConDiscapacidad.Text = "Persona con discapacidad:";
+            this.lblPersonaConDiscapacidadAlumno.AutoSize = true;
+            this.lblPersonaConDiscapacidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonaConDiscapacidadAlumno.Location = new System.Drawing.Point(93, 70);
+            this.lblPersonaConDiscapacidadAlumno.Name = "lblPersonaConDiscapacidadAlumno";
+            this.lblPersonaConDiscapacidadAlumno.Size = new System.Drawing.Size(180, 15);
+            this.lblPersonaConDiscapacidadAlumno.TabIndex = 36;
+            this.lblPersonaConDiscapacidadAlumno.Text = "Persona con discapacidad:";
             // 
-            // lbl18a59
+            // lbl18a59Alumno
             // 
-            this.lbl18a59.AutoSize = true;
-            this.lbl18a59.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl18a59.Location = new System.Drawing.Point(157, 40);
-            this.lbl18a59.Name = "lbl18a59";
-            this.lbl18a59.Size = new System.Drawing.Size(116, 15);
-            this.lbl18a59.TabIndex = 36;
-            this.lbl18a59.Text = "De 18 a 59 años:";
+            this.lbl18a59Alumno.AutoSize = true;
+            this.lbl18a59Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl18a59Alumno.Location = new System.Drawing.Point(157, 40);
+            this.lbl18a59Alumno.Name = "lbl18a59Alumno";
+            this.lbl18a59Alumno.Size = new System.Drawing.Size(116, 15);
+            this.lbl18a59Alumno.TabIndex = 36;
+            this.lbl18a59Alumno.Text = "De 18 a 59 años:";
             // 
             // groupBox24
             // 
-            this.groupBox24.Controls.Add(this.lblFacilAccesoInternet);
-            this.groupBox24.Controls.Add(this.lblMedioAccesoInternet);
-            this.groupBox24.Controls.Add(this.lblUsaInternet);
+            this.groupBox24.Controls.Add(this.lblFacilAccesoInternetAlumno);
+            this.groupBox24.Controls.Add(this.lblMedioAccesoInternetAlumno);
+            this.groupBox24.Controls.Add(this.lblUsaInternetAlumno);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox24.Location = new System.Drawing.Point(609, 323);
             this.groupBox24.Name = "groupBox24";
@@ -2529,43 +2528,43 @@
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Acceso a internet";
             // 
-            // lblFacilAccesoInternet
+            // lblFacilAccesoInternetAlumno
             // 
-            this.lblFacilAccesoInternet.AutoSize = true;
-            this.lblFacilAccesoInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFacilAccesoInternet.Location = new System.Drawing.Point(56, 39);
-            this.lblFacilAccesoInternet.Name = "lblFacilAccesoInternet";
-            this.lblFacilAccesoInternet.Size = new System.Drawing.Size(156, 15);
-            this.lblFacilAccesoInternet.TabIndex = 36;
-            this.lblFacilAccesoInternet.Text = "Facil acceso a internet:";
+            this.lblFacilAccesoInternetAlumno.AutoSize = true;
+            this.lblFacilAccesoInternetAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacilAccesoInternetAlumno.Location = new System.Drawing.Point(56, 39);
+            this.lblFacilAccesoInternetAlumno.Name = "lblFacilAccesoInternetAlumno";
+            this.lblFacilAccesoInternetAlumno.Size = new System.Drawing.Size(156, 15);
+            this.lblFacilAccesoInternetAlumno.TabIndex = 36;
+            this.lblFacilAccesoInternetAlumno.Text = "Facil acceso a internet:";
             // 
-            // lblMedioAccesoInternet
+            // lblMedioAccesoInternetAlumno
             // 
-            this.lblMedioAccesoInternet.AutoSize = true;
-            this.lblMedioAccesoInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMedioAccesoInternet.Location = new System.Drawing.Point(27, 54);
-            this.lblMedioAccesoInternet.Name = "lblMedioAccesoInternet";
-            this.lblMedioAccesoInternet.Size = new System.Drawing.Size(185, 15);
-            this.lblMedioAccesoInternet.TabIndex = 36;
-            this.lblMedioAccesoInternet.Text = "Medio de acceso a internet:";
+            this.lblMedioAccesoInternetAlumno.AutoSize = true;
+            this.lblMedioAccesoInternetAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedioAccesoInternetAlumno.Location = new System.Drawing.Point(27, 54);
+            this.lblMedioAccesoInternetAlumno.Name = "lblMedioAccesoInternetAlumno";
+            this.lblMedioAccesoInternetAlumno.Size = new System.Drawing.Size(185, 15);
+            this.lblMedioAccesoInternetAlumno.TabIndex = 36;
+            this.lblMedioAccesoInternetAlumno.Text = "Medio de acceso a internet:";
             // 
-            // lblUsaInternet
+            // lblUsaInternetAlumno
             // 
-            this.lblUsaInternet.AutoSize = true;
-            this.lblUsaInternet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsaInternet.Location = new System.Drawing.Point(123, 25);
-            this.lblUsaInternet.Name = "lblUsaInternet";
-            this.lblUsaInternet.Size = new System.Drawing.Size(89, 15);
-            this.lblUsaInternet.TabIndex = 36;
-            this.lblUsaInternet.Text = "Usa internet:";
+            this.lblUsaInternetAlumno.AutoSize = true;
+            this.lblUsaInternetAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsaInternetAlumno.Location = new System.Drawing.Point(123, 25);
+            this.lblUsaInternetAlumno.Name = "lblUsaInternetAlumno";
+            this.lblUsaInternetAlumno.Size = new System.Drawing.Size(89, 15);
+            this.lblUsaInternetAlumno.TabIndex = 36;
+            this.lblUsaInternetAlumno.Text = "Usa internet:";
             // 
             // groupBox25
             // 
-            this.groupBox25.Controls.Add(this.lblIngresoMensual);
-            this.groupBox25.Controls.Add(this.lblTrabajoAlgunaVez);
-            this.groupBox25.Controls.Add(this.lblHorasJornadaLaboral);
-            this.groupBox25.Controls.Add(this.lblTrabajaActualmente);
-            this.groupBox25.Controls.Add(this.lblTiempoDesempleado);
+            this.groupBox25.Controls.Add(this.lblIngresoMensualAlumno);
+            this.groupBox25.Controls.Add(this.lblTrabajoAlgunaVezAlumno);
+            this.groupBox25.Controls.Add(this.lblHorasJornadaLaboralAlumno);
+            this.groupBox25.Controls.Add(this.lblTrabajaActualmenteAlumno);
+            this.groupBox25.Controls.Add(this.lblTiempoDesempleadoAlumno);
             this.groupBox25.Location = new System.Drawing.Point(609, 36);
             this.groupBox25.Name = "groupBox25";
             this.groupBox25.Size = new System.Drawing.Size(447, 117);
@@ -2573,55 +2572,55 @@
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Trabajo";
             // 
-            // lblIngresoMensual
+            // lblIngresoMensualAlumno
             // 
-            this.lblIngresoMensual.AutoSize = true;
-            this.lblIngresoMensual.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresoMensual.Location = new System.Drawing.Point(155, 87);
-            this.lblIngresoMensual.Name = "lblIngresoMensual";
-            this.lblIngresoMensual.Size = new System.Drawing.Size(118, 15);
-            this.lblIngresoMensual.TabIndex = 36;
-            this.lblIngresoMensual.Text = "Ingreso mensual:";
+            this.lblIngresoMensualAlumno.AutoSize = true;
+            this.lblIngresoMensualAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresoMensualAlumno.Location = new System.Drawing.Point(155, 87);
+            this.lblIngresoMensualAlumno.Name = "lblIngresoMensualAlumno";
+            this.lblIngresoMensualAlumno.Size = new System.Drawing.Size(118, 15);
+            this.lblIngresoMensualAlumno.TabIndex = 36;
+            this.lblIngresoMensualAlumno.Text = "Ingreso mensual:";
             // 
-            // lblTrabajoAlgunaVez
+            // lblTrabajoAlgunaVezAlumno
             // 
-            this.lblTrabajoAlgunaVez.AutoSize = true;
-            this.lblTrabajoAlgunaVez.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrabajoAlgunaVez.Location = new System.Drawing.Point(140, 27);
-            this.lblTrabajoAlgunaVez.Name = "lblTrabajoAlgunaVez";
-            this.lblTrabajoAlgunaVez.Size = new System.Drawing.Size(133, 15);
-            this.lblTrabajoAlgunaVez.TabIndex = 36;
-            this.lblTrabajoAlgunaVez.Text = "Trabajo alguna vez:";
+            this.lblTrabajoAlgunaVezAlumno.AutoSize = true;
+            this.lblTrabajoAlgunaVezAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajoAlgunaVezAlumno.Location = new System.Drawing.Point(140, 27);
+            this.lblTrabajoAlgunaVezAlumno.Name = "lblTrabajoAlgunaVezAlumno";
+            this.lblTrabajoAlgunaVezAlumno.Size = new System.Drawing.Size(133, 15);
+            this.lblTrabajoAlgunaVezAlumno.TabIndex = 36;
+            this.lblTrabajoAlgunaVezAlumno.Text = "Trabajo alguna vez:";
             // 
-            // lblHorasJornadaLaboral
+            // lblHorasJornadaLaboralAlumno
             // 
-            this.lblHorasJornadaLaboral.AutoSize = true;
-            this.lblHorasJornadaLaboral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasJornadaLaboral.Location = new System.Drawing.Point(102, 72);
-            this.lblHorasJornadaLaboral.Name = "lblHorasJornadaLaboral";
-            this.lblHorasJornadaLaboral.Size = new System.Drawing.Size(171, 15);
-            this.lblHorasJornadaLaboral.TabIndex = 36;
-            this.lblHorasJornadaLaboral.Text = "Horas de jornada laboral:";
+            this.lblHorasJornadaLaboralAlumno.AutoSize = true;
+            this.lblHorasJornadaLaboralAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorasJornadaLaboralAlumno.Location = new System.Drawing.Point(102, 72);
+            this.lblHorasJornadaLaboralAlumno.Name = "lblHorasJornadaLaboralAlumno";
+            this.lblHorasJornadaLaboralAlumno.Size = new System.Drawing.Size(171, 15);
+            this.lblHorasJornadaLaboralAlumno.TabIndex = 36;
+            this.lblHorasJornadaLaboralAlumno.Text = "Horas de jornada laboral:";
             // 
-            // lblTrabajaActualmente
+            // lblTrabajaActualmenteAlumno
             // 
-            this.lblTrabajaActualmente.AutoSize = true;
-            this.lblTrabajaActualmente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrabajaActualmente.Location = new System.Drawing.Point(130, 42);
-            this.lblTrabajaActualmente.Name = "lblTrabajaActualmente";
-            this.lblTrabajaActualmente.Size = new System.Drawing.Size(143, 15);
-            this.lblTrabajaActualmente.TabIndex = 36;
-            this.lblTrabajaActualmente.Text = "Trabaja actualmente:";
+            this.lblTrabajaActualmenteAlumno.AutoSize = true;
+            this.lblTrabajaActualmenteAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajaActualmenteAlumno.Location = new System.Drawing.Point(130, 42);
+            this.lblTrabajaActualmenteAlumno.Name = "lblTrabajaActualmenteAlumno";
+            this.lblTrabajaActualmenteAlumno.Size = new System.Drawing.Size(143, 15);
+            this.lblTrabajaActualmenteAlumno.TabIndex = 36;
+            this.lblTrabajaActualmenteAlumno.Text = "Trabaja actualmente:";
             // 
-            // lblTiempoDesempleado
+            // lblTiempoDesempleadoAlumno
             // 
-            this.lblTiempoDesempleado.AutoSize = true;
-            this.lblTiempoDesempleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempoDesempleado.Location = new System.Drawing.Point(123, 57);
-            this.lblTiempoDesempleado.Name = "lblTiempoDesempleado";
-            this.lblTiempoDesempleado.Size = new System.Drawing.Size(150, 15);
-            this.lblTiempoDesempleado.TabIndex = 36;
-            this.lblTiempoDesempleado.Text = "Tiempo desempleado:";
+            this.lblTiempoDesempleadoAlumno.AutoSize = true;
+            this.lblTiempoDesempleadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempoDesempleadoAlumno.Location = new System.Drawing.Point(123, 57);
+            this.lblTiempoDesempleadoAlumno.Name = "lblTiempoDesempleadoAlumno";
+            this.lblTiempoDesempleadoAlumno.Size = new System.Drawing.Size(150, 15);
+            this.lblTiempoDesempleadoAlumno.TabIndex = 36;
+            this.lblTiempoDesempleadoAlumno.Text = "Tiempo desempleado:";
             // 
             // btnAtras_2
             // 
@@ -2667,6 +2666,624 @@
             this.tabControlModificarAlumno.Size = new System.Drawing.Size(1091, 515);
             this.tabControlModificarAlumno.TabIndex = 12;
             // 
+            // tabPageModificarAlumnosInformacion
+            // 
+            this.tabPageModificarAlumnosInformacion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.btnBuscar_3);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.comboBox17);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.textBox13);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.button3);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox46);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox47);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox48);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox49);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox50);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox51);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox52);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox53);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox54);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox55);
+            this.tabPageModificarAlumnosInformacion.Location = new System.Drawing.Point(4, 22);
+            this.tabPageModificarAlumnosInformacion.Name = "tabPageModificarAlumnosInformacion";
+            this.tabPageModificarAlumnosInformacion.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageModificarAlumnosInformacion.TabIndex = 3;
+            this.tabPageModificarAlumnosInformacion.Text = "Informacion";
+            // 
+            // btnBuscar_3
+            // 
+            this.btnBuscar_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar_3.Location = new System.Drawing.Point(642, 25);
+            this.btnBuscar_3.Name = "btnBuscar_3";
+            this.btnBuscar_3.Size = new System.Drawing.Size(113, 28);
+            this.btnBuscar_3.TabIndex = 44;
+            this.btnBuscar_3.Text = "Buscar";
+            this.btnBuscar_3.UseVisualStyleBackColor = true;
+            // 
+            // comboBox17
+            // 
+            this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox17.Items.AddRange(new object[] {
+            "Nombre y apellido",
+            "Cedula"});
+            this.comboBox17.Location = new System.Drawing.Point(313, 27);
+            this.comboBox17.Name = "comboBox17";
+            this.comboBox17.Size = new System.Drawing.Size(150, 26);
+            this.comboBox17.TabIndex = 43;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.textBox13.Location = new System.Drawing.Point(469, 27);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(167, 24);
+            this.textBox13.TabIndex = 42;
+            this.textBox13.Text = "Texto de busqueda";
+            this.textBox13.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.textBox13.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.Location = new System.Drawing.Point(933, 445);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 36);
+            this.button3.TabIndex = 41;
+            this.button3.Text = "Modificar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // groupBox46
+            // 
+            this.groupBox46.Controls.Add(this.lblEstadoAlumno_2);
+            this.groupBox46.Controls.Add(this.lblCursoAlumno_2);
+            this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox46.Location = new System.Drawing.Point(39, 71);
+            this.groupBox46.Name = "groupBox46";
+            this.groupBox46.Size = new System.Drawing.Size(279, 87);
+            this.groupBox46.TabIndex = 40;
+            this.groupBox46.TabStop = false;
+            this.groupBox46.Text = "Con respecto al instituto";
+            // 
+            // lblEstadoAlumno_2
+            // 
+            this.lblEstadoAlumno_2.AutoSize = true;
+            this.lblEstadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoAlumno_2.Location = new System.Drawing.Point(27, 46);
+            this.lblEstadoAlumno_2.Name = "lblEstadoAlumno_2";
+            this.lblEstadoAlumno_2.Size = new System.Drawing.Size(55, 15);
+            this.lblEstadoAlumno_2.TabIndex = 27;
+            this.lblEstadoAlumno_2.Text = "Estado:";
+            // 
+            // lblCursoAlumno_2
+            // 
+            this.lblCursoAlumno_2.AutoSize = true;
+            this.lblCursoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCursoAlumno_2.Location = new System.Drawing.Point(34, 31);
+            this.lblCursoAlumno_2.Name = "lblCursoAlumno_2";
+            this.lblCursoAlumno_2.Size = new System.Drawing.Size(48, 15);
+            this.lblCursoAlumno_2.TabIndex = 26;
+            this.lblCursoAlumno_2.Text = "Curso:";
+            // 
+            // groupBox47
+            // 
+            this.groupBox47.Controls.Add(this.lblCantidadHjosAlumno_2);
+            this.groupBox47.Controls.Add(this.lblJefeHogarAlumno_2);
+            this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox47.Location = new System.Drawing.Point(324, 358);
+            this.groupBox47.Name = "groupBox47";
+            this.groupBox47.Size = new System.Drawing.Size(279, 81);
+            this.groupBox47.TabIndex = 34;
+            this.groupBox47.TabStop = false;
+            this.groupBox47.Text = "Jefe de hogar";
+            // 
+            // lblCantidadHjosAlumno_2
+            // 
+            this.lblCantidadHjosAlumno_2.AutoSize = true;
+            this.lblCantidadHjosAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCantidadHjosAlumno_2.Location = new System.Drawing.Point(16, 40);
+            this.lblCantidadHjosAlumno_2.Name = "lblCantidadHjosAlumno_2";
+            this.lblCantidadHjosAlumno_2.Size = new System.Drawing.Size(123, 15);
+            this.lblCantidadHjosAlumno_2.TabIndex = 36;
+            this.lblCantidadHjosAlumno_2.Text = "Cantidad de hijos:";
+            // 
+            // lblJefeHogarAlumno_2
+            // 
+            this.lblJefeHogarAlumno_2.AutoSize = true;
+            this.lblJefeHogarAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblJefeHogarAlumno_2.Location = new System.Drawing.Point(40, 24);
+            this.lblJefeHogarAlumno_2.Name = "lblJefeHogarAlumno_2";
+            this.lblJefeHogarAlumno_2.Size = new System.Drawing.Size(99, 15);
+            this.lblJefeHogarAlumno_2.TabIndex = 36;
+            this.lblJefeHogarAlumno_2.Text = "Jefe de hogar:";
+            // 
+            // groupBox48
+            // 
+            this.groupBox48.Controls.Add(this.lblEmailAlumno_2);
+            this.groupBox48.Controls.Add(this.lblCelularAlumno_2);
+            this.groupBox48.Controls.Add(this.lblTelefonoAlumno_2);
+            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox48.Location = new System.Drawing.Point(324, 210);
+            this.groupBox48.Name = "groupBox48";
+            this.groupBox48.Size = new System.Drawing.Size(279, 87);
+            this.groupBox48.TabIndex = 39;
+            this.groupBox48.TabStop = false;
+            this.groupBox48.Text = "Contacto";
+            // 
+            // lblEmailAlumno_2
+            // 
+            this.lblEmailAlumno_2.AutoSize = true;
+            this.lblEmailAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmailAlumno_2.Location = new System.Drawing.Point(91, 54);
+            this.lblEmailAlumno_2.Name = "lblEmailAlumno_2";
+            this.lblEmailAlumno_2.Size = new System.Drawing.Size(48, 15);
+            this.lblEmailAlumno_2.TabIndex = 37;
+            this.lblEmailAlumno_2.Text = "Email:";
+            // 
+            // lblCelularAlumno_2
+            // 
+            this.lblCelularAlumno_2.AutoSize = true;
+            this.lblCelularAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelularAlumno_2.Location = new System.Drawing.Point(82, 39);
+            this.lblCelularAlumno_2.Name = "lblCelularAlumno_2";
+            this.lblCelularAlumno_2.Size = new System.Drawing.Size(57, 15);
+            this.lblCelularAlumno_2.TabIndex = 37;
+            this.lblCelularAlumno_2.Text = "Celular:";
+            // 
+            // lblTelefonoAlumno_2
+            // 
+            this.lblTelefonoAlumno_2.AutoSize = true;
+            this.lblTelefonoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefonoAlumno_2.Location = new System.Drawing.Point(72, 24);
+            this.lblTelefonoAlumno_2.Name = "lblTelefonoAlumno_2";
+            this.lblTelefonoAlumno_2.Size = new System.Drawing.Size(67, 15);
+            this.lblTelefonoAlumno_2.TabIndex = 37;
+            this.lblTelefonoAlumno_2.Text = "Telefono:";
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Controls.Add(this.lblNApartamentoAlumno_2);
+            this.groupBox49.Controls.Add(this.lblNPuertaAlumno_2);
+            this.groupBox49.Controls.Add(this.lblReferenciaAlumno_2);
+            this.groupBox49.Controls.Add(this.lblCalleAlumno_2);
+            this.groupBox49.Controls.Add(this.lblLocalidadAlumno_2);
+            this.groupBox49.Controls.Add(this.lblDepartamentoAlumno_2);
+            this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox49.Location = new System.Drawing.Point(324, 71);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Size = new System.Drawing.Size(279, 133);
+            this.groupBox49.TabIndex = 36;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "Dirección";
+            // 
+            // lblNApartamentoAlumno_2
+            // 
+            this.lblNApartamentoAlumno_2.AutoSize = true;
+            this.lblNApartamentoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNApartamentoAlumno_2.Location = new System.Drawing.Point(28, 102);
+            this.lblNApartamentoAlumno_2.Name = "lblNApartamentoAlumno_2";
+            this.lblNApartamentoAlumno_2.Size = new System.Drawing.Size(111, 15);
+            this.lblNApartamentoAlumno_2.TabIndex = 36;
+            this.lblNApartamentoAlumno_2.Text = "Nº apartamento:";
+            // 
+            // lblNPuertaAlumno_2
+            // 
+            this.lblNPuertaAlumno_2.AutoSize = true;
+            this.lblNPuertaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNPuertaAlumno_2.Location = new System.Drawing.Point(68, 87);
+            this.lblNPuertaAlumno_2.Name = "lblNPuertaAlumno_2";
+            this.lblNPuertaAlumno_2.Size = new System.Drawing.Size(71, 15);
+            this.lblNPuertaAlumno_2.TabIndex = 36;
+            this.lblNPuertaAlumno_2.Text = "Nº puerta:";
+            // 
+            // lblReferenciaAlumno_2
+            // 
+            this.lblReferenciaAlumno_2.AutoSize = true;
+            this.lblReferenciaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblReferenciaAlumno_2.Location = new System.Drawing.Point(58, 72);
+            this.lblReferenciaAlumno_2.Name = "lblReferenciaAlumno_2";
+            this.lblReferenciaAlumno_2.Size = new System.Drawing.Size(81, 15);
+            this.lblReferenciaAlumno_2.TabIndex = 36;
+            this.lblReferenciaAlumno_2.Text = "Referencia:";
+            // 
+            // lblCalleAlumno_2
+            // 
+            this.lblCalleAlumno_2.AutoSize = true;
+            this.lblCalleAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCalleAlumno_2.Location = new System.Drawing.Point(95, 57);
+            this.lblCalleAlumno_2.Name = "lblCalleAlumno_2";
+            this.lblCalleAlumno_2.Size = new System.Drawing.Size(44, 15);
+            this.lblCalleAlumno_2.TabIndex = 36;
+            this.lblCalleAlumno_2.Text = "Calle:";
+            // 
+            // lblLocalidadAlumno_2
+            // 
+            this.lblLocalidadAlumno_2.AutoSize = true;
+            this.lblLocalidadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLocalidadAlumno_2.Location = new System.Drawing.Point(65, 42);
+            this.lblLocalidadAlumno_2.Name = "lblLocalidadAlumno_2";
+            this.lblLocalidadAlumno_2.Size = new System.Drawing.Size(74, 15);
+            this.lblLocalidadAlumno_2.TabIndex = 36;
+            this.lblLocalidadAlumno_2.Text = "Localidad:";
+            // 
+            // lblDepartamentoAlumno_2
+            // 
+            this.lblDepartamentoAlumno_2.AutoSize = true;
+            this.lblDepartamentoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDepartamentoAlumno_2.Location = new System.Drawing.Point(37, 27);
+            this.lblDepartamentoAlumno_2.Name = "lblDepartamentoAlumno_2";
+            this.lblDepartamentoAlumno_2.Size = new System.Drawing.Size(102, 15);
+            this.lblDepartamentoAlumno_2.TabIndex = 36;
+            this.lblDepartamentoAlumno_2.Text = "Departamento:";
+            // 
+            // groupBox50
+            // 
+            this.groupBox50.Controls.Add(this.lblCoberturaSaludAlumno_2);
+            this.groupBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox50.Location = new System.Drawing.Point(324, 303);
+            this.groupBox50.Name = "groupBox50";
+            this.groupBox50.Size = new System.Drawing.Size(279, 49);
+            this.groupBox50.TabIndex = 35;
+            this.groupBox50.TabStop = false;
+            this.groupBox50.Text = "Coberura de salud";
+            // 
+            // lblCoberturaSaludAlumno_2
+            // 
+            this.lblCoberturaSaludAlumno_2.AutoSize = true;
+            this.lblCoberturaSaludAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCoberturaSaludAlumno_2.Location = new System.Drawing.Point(6, 22);
+            this.lblCoberturaSaludAlumno_2.Name = "lblCoberturaSaludAlumno_2";
+            this.lblCoberturaSaludAlumno_2.Size = new System.Drawing.Size(133, 15);
+            this.lblCoberturaSaludAlumno_2.TabIndex = 38;
+            this.lblCoberturaSaludAlumno_2.Text = "Cobertura de salud:";
+            // 
+            // groupBox51
+            // 
+            this.groupBox51.Controls.Add(this.lblUltimoAñoAprobadoAlumno_2);
+            this.groupBox51.Controls.Add(this.lblNivelEducativoAlumno_2);
+            this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox51.Location = new System.Drawing.Point(39, 350);
+            this.groupBox51.Name = "groupBox51";
+            this.groupBox51.Size = new System.Drawing.Size(279, 89);
+            this.groupBox51.TabIndex = 37;
+            this.groupBox51.TabStop = false;
+            this.groupBox51.Text = "Formacion academica";
+            // 
+            // lblUltimoAñoAprobadoAlumno_2
+            // 
+            this.lblUltimoAñoAprobadoAlumno_2.AutoSize = true;
+            this.lblUltimoAñoAprobadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUltimoAñoAprobadoAlumno_2.Location = new System.Drawing.Point(6, 48);
+            this.lblUltimoAñoAprobadoAlumno_2.Name = "lblUltimoAñoAprobadoAlumno_2";
+            this.lblUltimoAñoAprobadoAlumno_2.Size = new System.Drawing.Size(146, 15);
+            this.lblUltimoAñoAprobadoAlumno_2.TabIndex = 36;
+            this.lblUltimoAñoAprobadoAlumno_2.Text = "Ultimo año aprobado:";
+            // 
+            // lblNivelEducativoAlumno_2
+            // 
+            this.lblNivelEducativoAlumno_2.AutoSize = true;
+            this.lblNivelEducativoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNivelEducativoAlumno_2.Location = new System.Drawing.Point(44, 33);
+            this.lblNivelEducativoAlumno_2.Name = "lblNivelEducativoAlumno_2";
+            this.lblNivelEducativoAlumno_2.Size = new System.Drawing.Size(108, 15);
+            this.lblNivelEducativoAlumno_2.TabIndex = 36;
+            this.lblNivelEducativoAlumno_2.Text = "Nivel educativo:";
+            // 
+            // groupBox52
+            // 
+            this.groupBox52.Controls.Add(this.lblEstadoCivilAlumno_2);
+            this.groupBox52.Controls.Add(this.lblSexoAlumno_2);
+            this.groupBox52.Controls.Add(this.lblEdadAlumno_2);
+            this.groupBox52.Controls.Add(this.lblFechaNacimientoAlumno_2);
+            this.groupBox52.Controls.Add(this.lblApellido2Alumno_2);
+            this.groupBox52.Controls.Add(this.lblApellido1Alumno_2);
+            this.groupBox52.Controls.Add(this.lblNombre2Alumno_2);
+            this.groupBox52.Controls.Add(this.lblNombe1Alumno_2);
+            this.groupBox52.Controls.Add(this.lblCedulaAlumno_2);
+            this.groupBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox52.Location = new System.Drawing.Point(39, 164);
+            this.groupBox52.Name = "groupBox52";
+            this.groupBox52.Size = new System.Drawing.Size(279, 180);
+            this.groupBox52.TabIndex = 38;
+            this.groupBox52.TabStop = false;
+            this.groupBox52.Text = "Datos personales";
+            // 
+            // lblEstadoCivilAlumno_2
+            // 
+            this.lblEstadoCivilAlumno_2.AutoSize = true;
+            this.lblEstadoCivilAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoCivilAlumno_2.Location = new System.Drawing.Point(67, 145);
+            this.lblEstadoCivilAlumno_2.Name = "lblEstadoCivilAlumno_2";
+            this.lblEstadoCivilAlumno_2.Size = new System.Drawing.Size(84, 15);
+            this.lblEstadoCivilAlumno_2.TabIndex = 35;
+            this.lblEstadoCivilAlumno_2.Text = "Estado civil:";
+            // 
+            // lblSexoAlumno_2
+            // 
+            this.lblSexoAlumno_2.AutoSize = true;
+            this.lblSexoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSexoAlumno_2.Location = new System.Drawing.Point(108, 130);
+            this.lblSexoAlumno_2.Name = "lblSexoAlumno_2";
+            this.lblSexoAlumno_2.Size = new System.Drawing.Size(43, 15);
+            this.lblSexoAlumno_2.TabIndex = 35;
+            this.lblSexoAlumno_2.Text = "Sexo:";
+            // 
+            // lblEdadAlumno_2
+            // 
+            this.lblEdadAlumno_2.AutoSize = true;
+            this.lblEdadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdadAlumno_2.Location = new System.Drawing.Point(107, 115);
+            this.lblEdadAlumno_2.Name = "lblEdadAlumno_2";
+            this.lblEdadAlumno_2.Size = new System.Drawing.Size(44, 15);
+            this.lblEdadAlumno_2.TabIndex = 34;
+            this.lblEdadAlumno_2.Text = "Edad:";
+            // 
+            // lblFechaNacimientoAlumno_2
+            // 
+            this.lblFechaNacimientoAlumno_2.AutoSize = true;
+            this.lblFechaNacimientoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaNacimientoAlumno_2.Location = new System.Drawing.Point(6, 100);
+            this.lblFechaNacimientoAlumno_2.Name = "lblFechaNacimientoAlumno_2";
+            this.lblFechaNacimientoAlumno_2.Size = new System.Drawing.Size(145, 15);
+            this.lblFechaNacimientoAlumno_2.TabIndex = 33;
+            this.lblFechaNacimientoAlumno_2.Text = "Fecha de nacimiento:";
+            // 
+            // lblApellido2Alumno_2
+            // 
+            this.lblApellido2Alumno_2.AutoSize = true;
+            this.lblApellido2Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido2Alumno_2.Location = new System.Drawing.Point(27, 85);
+            this.lblApellido2Alumno_2.Name = "lblApellido2Alumno_2";
+            this.lblApellido2Alumno_2.Size = new System.Drawing.Size(124, 15);
+            this.lblApellido2Alumno_2.TabIndex = 32;
+            this.lblApellido2Alumno_2.Text = "Segundo apellido:";
+            // 
+            // lblApellido1Alumno_2
+            // 
+            this.lblApellido1Alumno_2.AutoSize = true;
+            this.lblApellido1Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblApellido1Alumno_2.Location = new System.Drawing.Point(41, 70);
+            this.lblApellido1Alumno_2.Name = "lblApellido1Alumno_2";
+            this.lblApellido1Alumno_2.Size = new System.Drawing.Size(110, 15);
+            this.lblApellido1Alumno_2.TabIndex = 31;
+            this.lblApellido1Alumno_2.Text = "Primer apellido:";
+            // 
+            // lblNombre2Alumno_2
+            // 
+            this.lblNombre2Alumno_2.AutoSize = true;
+            this.lblNombre2Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre2Alumno_2.Location = new System.Drawing.Point(30, 55);
+            this.lblNombre2Alumno_2.Name = "lblNombre2Alumno_2";
+            this.lblNombre2Alumno_2.Size = new System.Drawing.Size(121, 15);
+            this.lblNombre2Alumno_2.TabIndex = 30;
+            this.lblNombre2Alumno_2.Text = "Segundo nombre:";
+            // 
+            // lblNombe1Alumno_2
+            // 
+            this.lblNombe1Alumno_2.AutoSize = true;
+            this.lblNombe1Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombe1Alumno_2.Location = new System.Drawing.Point(44, 40);
+            this.lblNombe1Alumno_2.Name = "lblNombe1Alumno_2";
+            this.lblNombe1Alumno_2.Size = new System.Drawing.Size(107, 15);
+            this.lblNombe1Alumno_2.TabIndex = 29;
+            this.lblNombe1Alumno_2.Text = "Primer nombre:";
+            // 
+            // lblCedulaAlumno_2
+            // 
+            this.lblCedulaAlumno_2.AutoSize = true;
+            this.lblCedulaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedulaAlumno_2.Location = new System.Drawing.Point(95, 25);
+            this.lblCedulaAlumno_2.Name = "lblCedulaAlumno_2";
+            this.lblCedulaAlumno_2.Size = new System.Drawing.Size(56, 15);
+            this.lblCedulaAlumno_2.TabIndex = 28;
+            this.lblCedulaAlumno_2.Text = "Cedula:";
+            // 
+            // groupBox53
+            // 
+            this.groupBox53.Controls.Add(this.lblExperienciaInstitucionesCuidadoAlumno_2);
+            this.groupBox53.Controls.Add(this.lblTrabajaAnteriormenteCuidandoAlumno_2);
+            this.groupBox53.Controls.Add(this.lblCuentaApoyoAlumno_2);
+            this.groupBox53.Controls.Add(this.lbl0a17Alumno_2);
+            this.groupBox53.Controls.Add(this.lblCargaSemanalCuidadoAlumno_2);
+            this.groupBox53.Controls.Add(this.lbl60oMasAlumno_2);
+            this.groupBox53.Controls.Add(this.lblPersonaConDiscapacidadAlumno_2);
+            this.groupBox53.Controls.Add(this.lbl18a59Alumno_2);
+            this.groupBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox53.Location = new System.Drawing.Point(609, 194);
+            this.groupBox53.Name = "groupBox53";
+            this.groupBox53.Size = new System.Drawing.Size(447, 158);
+            this.groupBox53.TabIndex = 33;
+            this.groupBox53.TabStop = false;
+            this.groupBox53.Text = "Personas a cargo";
+            // 
+            // lblExperienciaInstitucionesCuidadoAlumno_2
+            // 
+            this.lblExperienciaInstitucionesCuidadoAlumno_2.AutoSize = true;
+            this.lblExperienciaInstitucionesCuidadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExperienciaInstitucionesCuidadoAlumno_2.Location = new System.Drawing.Point(6, 131);
+            this.lblExperienciaInstitucionesCuidadoAlumno_2.Name = "lblExperienciaInstitucionesCuidadoAlumno_2";
+            this.lblExperienciaInstitucionesCuidadoAlumno_2.Size = new System.Drawing.Size(267, 15);
+            this.lblExperienciaInstitucionesCuidadoAlumno_2.TabIndex = 36;
+            this.lblExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado:";
+            // 
+            // lblTrabajaAnteriormenteCuidandoAlumno_2
+            // 
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2.AutoSize = true;
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Location = new System.Drawing.Point(56, 116);
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Name = "lblTrabajaAnteriormenteCuidandoAlumno_2";
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Size = new System.Drawing.Size(217, 15);
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2.TabIndex = 36;
+            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando:";
+            // 
+            // lblCuentaApoyoAlumno_2
+            // 
+            this.lblCuentaApoyoAlumno_2.AutoSize = true;
+            this.lblCuentaApoyoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCuentaApoyoAlumno_2.Location = new System.Drawing.Point(148, 85);
+            this.lblCuentaApoyoAlumno_2.Name = "lblCuentaApoyoAlumno_2";
+            this.lblCuentaApoyoAlumno_2.Size = new System.Drawing.Size(125, 15);
+            this.lblCuentaApoyoAlumno_2.TabIndex = 36;
+            this.lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo:";
+            // 
+            // lbl0a17Alumno_2
+            // 
+            this.lbl0a17Alumno_2.AutoSize = true;
+            this.lbl0a17Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl0a17Alumno_2.Location = new System.Drawing.Point(165, 25);
+            this.lbl0a17Alumno_2.Name = "lbl0a17Alumno_2";
+            this.lbl0a17Alumno_2.Size = new System.Drawing.Size(108, 15);
+            this.lbl0a17Alumno_2.TabIndex = 36;
+            this.lbl0a17Alumno_2.Text = "De 0 a 17 años:";
+            // 
+            // lblCargaSemanalCuidadoAlumno_2
+            // 
+            this.lblCargaSemanalCuidadoAlumno_2.AutoSize = true;
+            this.lblCargaSemanalCuidadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCargaSemanalCuidadoAlumno_2.Location = new System.Drawing.Point(90, 100);
+            this.lblCargaSemanalCuidadoAlumno_2.Name = "lblCargaSemanalCuidadoAlumno_2";
+            this.lblCargaSemanalCuidadoAlumno_2.Size = new System.Drawing.Size(183, 15);
+            this.lblCargaSemanalCuidadoAlumno_2.TabIndex = 36;
+            this.lblCargaSemanalCuidadoAlumno_2.Text = "Carga semanal de cuidado:";
+            // 
+            // lbl60oMasAlumno_2
+            // 
+            this.lbl60oMasAlumno_2.AutoSize = true;
+            this.lbl60oMasAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl60oMasAlumno_2.Location = new System.Drawing.Point(146, 55);
+            this.lbl60oMasAlumno_2.Name = "lbl60oMasAlumno_2";
+            this.lbl60oMasAlumno_2.Size = new System.Drawing.Size(127, 15);
+            this.lbl60oMasAlumno_2.TabIndex = 36;
+            this.lbl60oMasAlumno_2.Text = "De 60 años o mas:";
+            // 
+            // lblPersonaConDiscapacidadAlumno_2
+            // 
+            this.lblPersonaConDiscapacidadAlumno_2.AutoSize = true;
+            this.lblPersonaConDiscapacidadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPersonaConDiscapacidadAlumno_2.Location = new System.Drawing.Point(93, 70);
+            this.lblPersonaConDiscapacidadAlumno_2.Name = "lblPersonaConDiscapacidadAlumno_2";
+            this.lblPersonaConDiscapacidadAlumno_2.Size = new System.Drawing.Size(180, 15);
+            this.lblPersonaConDiscapacidadAlumno_2.TabIndex = 36;
+            this.lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad:";
+            // 
+            // lbl18a59Alumno_2
+            // 
+            this.lbl18a59Alumno_2.AutoSize = true;
+            this.lbl18a59Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl18a59Alumno_2.Location = new System.Drawing.Point(157, 40);
+            this.lbl18a59Alumno_2.Name = "lbl18a59Alumno_2";
+            this.lbl18a59Alumno_2.Size = new System.Drawing.Size(116, 15);
+            this.lbl18a59Alumno_2.TabIndex = 36;
+            this.lbl18a59Alumno_2.Text = "De 18 a 59 años:";
+            // 
+            // groupBox54
+            // 
+            this.groupBox54.Controls.Add(this.lblFacilAccesoInternetAlumno_2);
+            this.groupBox54.Controls.Add(this.lblMedioAccesoInternetAlumno_2);
+            this.groupBox54.Controls.Add(this.lblUsaInternetAlumno_2);
+            this.groupBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox54.Location = new System.Drawing.Point(609, 358);
+            this.groupBox54.Name = "groupBox54";
+            this.groupBox54.Size = new System.Drawing.Size(447, 81);
+            this.groupBox54.TabIndex = 32;
+            this.groupBox54.TabStop = false;
+            this.groupBox54.Text = "Acceso a internet";
+            // 
+            // lblFacilAccesoInternetAlumno_2
+            // 
+            this.lblFacilAccesoInternetAlumno_2.AutoSize = true;
+            this.lblFacilAccesoInternetAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFacilAccesoInternetAlumno_2.Location = new System.Drawing.Point(56, 39);
+            this.lblFacilAccesoInternetAlumno_2.Name = "lblFacilAccesoInternetAlumno_2";
+            this.lblFacilAccesoInternetAlumno_2.Size = new System.Drawing.Size(156, 15);
+            this.lblFacilAccesoInternetAlumno_2.TabIndex = 36;
+            this.lblFacilAccesoInternetAlumno_2.Text = "Facil acceso a internet:";
+            // 
+            // lblMedioAccesoInternetAlumno_2
+            // 
+            this.lblMedioAccesoInternetAlumno_2.AutoSize = true;
+            this.lblMedioAccesoInternetAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMedioAccesoInternetAlumno_2.Location = new System.Drawing.Point(27, 54);
+            this.lblMedioAccesoInternetAlumno_2.Name = "lblMedioAccesoInternetAlumno_2";
+            this.lblMedioAccesoInternetAlumno_2.Size = new System.Drawing.Size(185, 15);
+            this.lblMedioAccesoInternetAlumno_2.TabIndex = 36;
+            this.lblMedioAccesoInternetAlumno_2.Text = "Medio de acceso a internet:";
+            // 
+            // lblUsaInternetAlumno_2
+            // 
+            this.lblUsaInternetAlumno_2.AutoSize = true;
+            this.lblUsaInternetAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsaInternetAlumno_2.Location = new System.Drawing.Point(123, 25);
+            this.lblUsaInternetAlumno_2.Name = "lblUsaInternetAlumno_2";
+            this.lblUsaInternetAlumno_2.Size = new System.Drawing.Size(89, 15);
+            this.lblUsaInternetAlumno_2.TabIndex = 36;
+            this.lblUsaInternetAlumno_2.Text = "Usa internet:";
+            // 
+            // groupBox55
+            // 
+            this.groupBox55.Controls.Add(this.lblIngresoMensualAlumno_2);
+            this.groupBox55.Controls.Add(this.lblTrabajoAlgunaVezAlumno_2);
+            this.groupBox55.Controls.Add(this.lblHorasJornadaLaboralAlumno_2);
+            this.groupBox55.Controls.Add(this.lblTrabajaActualmenteAlumno_2);
+            this.groupBox55.Controls.Add(this.lblTiempoDesempleadoAlumno_2);
+            this.groupBox55.Location = new System.Drawing.Point(609, 71);
+            this.groupBox55.Name = "groupBox55";
+            this.groupBox55.Size = new System.Drawing.Size(447, 117);
+            this.groupBox55.TabIndex = 31;
+            this.groupBox55.TabStop = false;
+            this.groupBox55.Text = "Trabajo";
+            // 
+            // lblIngresoMensualAlumno_2
+            // 
+            this.lblIngresoMensualAlumno_2.AutoSize = true;
+            this.lblIngresoMensualAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIngresoMensualAlumno_2.Location = new System.Drawing.Point(155, 87);
+            this.lblIngresoMensualAlumno_2.Name = "lblIngresoMensualAlumno_2";
+            this.lblIngresoMensualAlumno_2.Size = new System.Drawing.Size(118, 15);
+            this.lblIngresoMensualAlumno_2.TabIndex = 36;
+            this.lblIngresoMensualAlumno_2.Text = "Ingreso mensual:";
+            // 
+            // lblTrabajoAlgunaVezAlumno_2
+            // 
+            this.lblTrabajoAlgunaVezAlumno_2.AutoSize = true;
+            this.lblTrabajoAlgunaVezAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajoAlgunaVezAlumno_2.Location = new System.Drawing.Point(140, 27);
+            this.lblTrabajoAlgunaVezAlumno_2.Name = "lblTrabajoAlgunaVezAlumno_2";
+            this.lblTrabajoAlgunaVezAlumno_2.Size = new System.Drawing.Size(133, 15);
+            this.lblTrabajoAlgunaVezAlumno_2.TabIndex = 36;
+            this.lblTrabajoAlgunaVezAlumno_2.Text = "Trabajo alguna vez:";
+            // 
+            // lblHorasJornadaLaboralAlumno_2
+            // 
+            this.lblHorasJornadaLaboralAlumno_2.AutoSize = true;
+            this.lblHorasJornadaLaboralAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHorasJornadaLaboralAlumno_2.Location = new System.Drawing.Point(102, 72);
+            this.lblHorasJornadaLaboralAlumno_2.Name = "lblHorasJornadaLaboralAlumno_2";
+            this.lblHorasJornadaLaboralAlumno_2.Size = new System.Drawing.Size(171, 15);
+            this.lblHorasJornadaLaboralAlumno_2.TabIndex = 36;
+            this.lblHorasJornadaLaboralAlumno_2.Text = "Horas de jornada laboral:";
+            // 
+            // lblTrabajaActualmenteAlumno_2
+            // 
+            this.lblTrabajaActualmenteAlumno_2.AutoSize = true;
+            this.lblTrabajaActualmenteAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajaActualmenteAlumno_2.Location = new System.Drawing.Point(130, 42);
+            this.lblTrabajaActualmenteAlumno_2.Name = "lblTrabajaActualmenteAlumno_2";
+            this.lblTrabajaActualmenteAlumno_2.Size = new System.Drawing.Size(143, 15);
+            this.lblTrabajaActualmenteAlumno_2.TabIndex = 36;
+            this.lblTrabajaActualmenteAlumno_2.Text = "Trabaja actualmente:";
+            // 
+            // lblTiempoDesempleadoAlumno_2
+            // 
+            this.lblTiempoDesempleadoAlumno_2.AutoSize = true;
+            this.lblTiempoDesempleadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempoDesempleadoAlumno_2.Location = new System.Drawing.Point(123, 57);
+            this.lblTiempoDesempleadoAlumno_2.Name = "lblTiempoDesempleadoAlumno_2";
+            this.lblTiempoDesempleadoAlumno_2.Size = new System.Drawing.Size(150, 15);
+            this.lblTiempoDesempleadoAlumno_2.TabIndex = 36;
+            this.lblTiempoDesempleadoAlumno_2.Text = "Tiempo desempleado:";
+            // 
             // tabPageModificarAlumnosDatosPersonales
             // 
             this.tabPageModificarAlumnosDatosPersonales.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -2684,38 +3301,49 @@
             this.tabPageModificarAlumnosDatosPersonales.TabIndex = 0;
             this.tabPageModificarAlumnosDatosPersonales.Text = "Datos personales";
             // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(781, 444);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(144, 36);
+            this.button7.TabIndex = 22;
+            this.button7.Text = "Atras";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // groupBox11
             // 
-            this.groupBox11.Controls.Add(this.comboBox1);
-            this.groupBox11.Controls.Add(this.comboBox2);
-            this.groupBox11.Location = new System.Drawing.Point(435, 17);
+            this.groupBox11.Controls.Add(this.boxEstadoAlumno_2);
+            this.groupBox11.Controls.Add(this.boxCursoAlumno_2);
+            this.groupBox11.Location = new System.Drawing.Point(430, 17);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(379, 75);
+            this.groupBox11.Size = new System.Drawing.Size(387, 75);
             this.groupBox11.TabIndex = 21;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Con respecto al instituto";
             // 
-            // comboBox1
+            // boxEstadoAlumno_2
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.Items.AddRange(new object[] {
+            this.boxEstadoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxEstadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxEstadoAlumno_2.Items.AddRange(new object[] {
             "Estado..."});
-            this.comboBox1.Location = new System.Drawing.Point(200, 30);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(159, 23);
-            this.comboBox1.TabIndex = 27;
+            this.boxEstadoAlumno_2.Location = new System.Drawing.Point(200, 30);
+            this.boxEstadoAlumno_2.Name = "boxEstadoAlumno_2";
+            this.boxEstadoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxEstadoAlumno_2.TabIndex = 27;
             // 
-            // comboBox2
+            // boxCursoAlumno_2
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.Items.AddRange(new object[] {
+            this.boxCursoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoAlumno_2.Items.AddRange(new object[] {
             "Curso..."});
-            this.comboBox2.Location = new System.Drawing.Point(19, 30);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(159, 23);
-            this.comboBox2.TabIndex = 26;
+            this.boxCursoAlumno_2.Location = new System.Drawing.Point(19, 30);
+            this.boxCursoAlumno_2.Name = "boxCursoAlumno_2";
+            this.boxCursoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxCursoAlumno_2.TabIndex = 26;
             // 
             // button1
             // 
@@ -2730,9 +3358,9 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.textBox4);
-            this.groupBox12.Controls.Add(this.textBox5);
-            this.groupBox12.Controls.Add(this.textBox6);
+            this.groupBox12.Controls.Add(this.Alumno_2);
+            this.groupBox12.Controls.Add(this.txtCelularAlumno_2);
+            this.groupBox12.Controls.Add(this.txtTelefonoAlumno_2);
             this.groupBox12.Location = new System.Drawing.Point(823, 93);
             this.groupBox12.Name = "groupBox12";
             this.groupBox12.Size = new System.Drawing.Size(226, 176);
@@ -2740,52 +3368,52 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Contacto";
             // 
-            // textBox4
+            // Alumno_2
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox4.Location = new System.Drawing.Point(34, 125);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(159, 24);
-            this.textBox4.TabIndex = 14;
-            this.textBox4.Text = "Email";
-            this.textBox4.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox4.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.Alumno_2.Location = new System.Drawing.Point(34, 125);
+            this.Alumno_2.Name = "Alumno_2";
+            this.Alumno_2.Size = new System.Drawing.Size(159, 24);
+            this.Alumno_2.TabIndex = 14;
+            this.Alumno_2.Text = "Email";
+            this.Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox5
+            // txtCelularAlumno_2
             // 
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox5.Location = new System.Drawing.Point(34, 83);
-            this.textBox5.MaxLength = 9;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(159, 24);
-            this.textBox5.TabIndex = 13;
-            this.textBox5.Text = "Celular";
-            this.textBox5.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox5.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtCelularAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelularAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCelularAlumno_2.Location = new System.Drawing.Point(34, 83);
+            this.txtCelularAlumno_2.MaxLength = 9;
+            this.txtCelularAlumno_2.Name = "txtCelularAlumno_2";
+            this.txtCelularAlumno_2.Size = new System.Drawing.Size(159, 24);
+            this.txtCelularAlumno_2.TabIndex = 13;
+            this.txtCelularAlumno_2.Text = "Celular";
+            this.txtCelularAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCelularAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox6
+            // txtTelefonoAlumno_2
             // 
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox6.Location = new System.Drawing.Point(34, 37);
-            this.textBox6.MaxLength = 8;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(159, 24);
-            this.textBox6.TabIndex = 12;
-            this.textBox6.Text = "Telefono";
-            this.textBox6.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox6.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtTelefonoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTelefonoAlumno_2.Location = new System.Drawing.Point(34, 37);
+            this.txtTelefonoAlumno_2.MaxLength = 8;
+            this.txtTelefonoAlumno_2.Name = "txtTelefonoAlumno_2";
+            this.txtTelefonoAlumno_2.Size = new System.Drawing.Size(159, 24);
+            this.txtTelefonoAlumno_2.TabIndex = 12;
+            this.txtTelefonoAlumno_2.Text = "Telefono";
+            this.txtTelefonoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtTelefonoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.comboBox3);
-            this.groupBox13.Controls.Add(this.textBox7);
-            this.groupBox13.Controls.Add(this.comboBox4);
-            this.groupBox13.Controls.Add(this.textBox8);
-            this.groupBox13.Controls.Add(this.textBox9);
-            this.groupBox13.Controls.Add(this.textBox10);
+            this.groupBox13.Controls.Add(this.boxLocalidadAlumno_2);
+            this.groupBox13.Controls.Add(this.txtCalleAlumno_2);
+            this.groupBox13.Controls.Add(this.boxDepartamentoAlumno_2);
+            this.groupBox13.Controls.Add(this.txtReferenciaAlumno_2);
+            this.groupBox13.Controls.Add(this.txtNPuertaAlumno_2);
+            this.groupBox13.Controls.Add(this.txtNApartamentoAlumno_2);
             this.groupBox13.Location = new System.Drawing.Point(430, 93);
             this.groupBox13.Name = "groupBox13";
             this.groupBox13.Size = new System.Drawing.Size(387, 176);
@@ -2793,37 +3421,37 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Dirección";
             // 
-            // comboBox3
+            // boxLocalidadAlumno_2
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.Items.AddRange(new object[] {
+            this.boxLocalidadAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxLocalidadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxLocalidadAlumno_2.Items.AddRange(new object[] {
             "Seleccione sexo...",
             "Hombre",
             "Mujer",
             "Otro"});
-            this.comboBox3.Location = new System.Drawing.Point(199, 37);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(167, 26);
-            this.comboBox3.TabIndex = 25;
+            this.boxLocalidadAlumno_2.Location = new System.Drawing.Point(199, 37);
+            this.boxLocalidadAlumno_2.Name = "boxLocalidadAlumno_2";
+            this.boxLocalidadAlumno_2.Size = new System.Drawing.Size(167, 26);
+            this.boxLocalidadAlumno_2.TabIndex = 25;
             // 
-            // textBox7
+            // txtCalleAlumno_2
             // 
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox7.Location = new System.Drawing.Point(24, 74);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(167, 24);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.Text = "Calle";
-            this.textBox7.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox7.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtCalleAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalleAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCalleAlumno_2.Location = new System.Drawing.Point(24, 74);
+            this.txtCalleAlumno_2.Name = "txtCalleAlumno_2";
+            this.txtCalleAlumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtCalleAlumno_2.TabIndex = 12;
+            this.txtCalleAlumno_2.Text = "Calle";
+            this.txtCalleAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCalleAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // comboBox4
+            // boxDepartamentoAlumno_2
             // 
-            this.comboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.Items.AddRange(new object[] {
+            this.boxDepartamentoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxDepartamentoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxDepartamentoAlumno_2.Items.AddRange(new object[] {
             "Departamento...",
             "Artigas",
             "Canelones",
@@ -2844,53 +3472,53 @@
             "Soriano",
             "Tacuarembo",
             "Treinta y Tres"});
-            this.comboBox4.Location = new System.Drawing.Point(24, 37);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(167, 26);
-            this.comboBox4.TabIndex = 21;
+            this.boxDepartamentoAlumno_2.Location = new System.Drawing.Point(24, 37);
+            this.boxDepartamentoAlumno_2.Name = "boxDepartamentoAlumno_2";
+            this.boxDepartamentoAlumno_2.Size = new System.Drawing.Size(167, 26);
+            this.boxDepartamentoAlumno_2.TabIndex = 21;
             // 
-            // textBox8
+            // txtReferenciaAlumno_2
             // 
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox8.Location = new System.Drawing.Point(199, 74);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(167, 24);
-            this.textBox8.TabIndex = 24;
-            this.textBox8.Text = "Referencia";
-            this.textBox8.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox8.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtReferenciaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReferenciaAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtReferenciaAlumno_2.Location = new System.Drawing.Point(199, 74);
+            this.txtReferenciaAlumno_2.Name = "txtReferenciaAlumno_2";
+            this.txtReferenciaAlumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtReferenciaAlumno_2.TabIndex = 24;
+            this.txtReferenciaAlumno_2.Text = "Referencia";
+            this.txtReferenciaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtReferenciaAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox9
+            // txtNPuertaAlumno_2
             // 
-            this.textBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox9.Location = new System.Drawing.Point(24, 109);
-            this.textBox9.MaxLength = 6;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(167, 24);
-            this.textBox9.TabIndex = 22;
-            this.textBox9.Text = "Número de puerta";
-            this.textBox9.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox9.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtNPuertaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNPuertaAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNPuertaAlumno_2.Location = new System.Drawing.Point(24, 109);
+            this.txtNPuertaAlumno_2.MaxLength = 6;
+            this.txtNPuertaAlumno_2.Name = "txtNPuertaAlumno_2";
+            this.txtNPuertaAlumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtNPuertaAlumno_2.TabIndex = 22;
+            this.txtNPuertaAlumno_2.Text = "Número de puerta";
+            this.txtNPuertaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNPuertaAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox10
+            // txtNApartamentoAlumno_2
             // 
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox10.Location = new System.Drawing.Point(199, 109);
-            this.textBox10.MaxLength = 4;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(167, 24);
-            this.textBox10.TabIndex = 23;
-            this.textBox10.Text = "Número de apartamento";
-            this.textBox10.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox10.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtNApartamentoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNApartamentoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNApartamentoAlumno_2.Location = new System.Drawing.Point(199, 109);
+            this.txtNApartamentoAlumno_2.MaxLength = 4;
+            this.txtNApartamentoAlumno_2.Name = "txtNApartamentoAlumno_2";
+            this.txtNApartamentoAlumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtNApartamentoAlumno_2.TabIndex = 23;
+            this.txtNApartamentoAlumno_2.Text = "Número de apartamento";
+            this.txtNApartamentoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNApartamentoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox14
             // 
-            this.groupBox14.Controls.Add(this.comboBox5);
-            this.groupBox14.Controls.Add(this.textBox11);
+            this.groupBox14.Controls.Add(this.boxNivelAcademicoAlumno_2);
+            this.groupBox14.Controls.Add(this.txtUltimoAñoAprobadoAlumno_2);
             this.groupBox14.Location = new System.Drawing.Point(430, 271);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Size = new System.Drawing.Size(619, 101);
@@ -2898,44 +3526,44 @@
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Formacion academica";
             // 
-            // comboBox5
+            // boxNivelAcademicoAlumno_2
             // 
-            this.comboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.Items.AddRange(new object[] {
+            this.boxNivelAcademicoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNivelAcademicoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNivelAcademicoAlumno_2.Items.AddRange(new object[] {
             "Nivel educativo...",
             "Educación Primaria",
             "Educación Secundaria",
             "Educación Terciaria"});
-            this.comboBox5.Location = new System.Drawing.Point(32, 43);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(159, 26);
-            this.comboBox5.TabIndex = 22;
+            this.boxNivelAcademicoAlumno_2.Location = new System.Drawing.Point(32, 43);
+            this.boxNivelAcademicoAlumno_2.Name = "boxNivelAcademicoAlumno_2";
+            this.boxNivelAcademicoAlumno_2.Size = new System.Drawing.Size(159, 26);
+            this.boxNivelAcademicoAlumno_2.TabIndex = 22;
             // 
-            // textBox11
+            // txtUltimoAñoAprobadoAlumno_2
             // 
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox11.Location = new System.Drawing.Point(207, 43);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(159, 24);
-            this.textBox11.TabIndex = 14;
-            this.textBox11.Text = "Ultimo año aprobado";
-            this.textBox11.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox11.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtUltimoAñoAprobadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUltimoAñoAprobadoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtUltimoAñoAprobadoAlumno_2.Location = new System.Drawing.Point(207, 43);
+            this.txtUltimoAñoAprobadoAlumno_2.Name = "txtUltimoAñoAprobadoAlumno_2";
+            this.txtUltimoAñoAprobadoAlumno_2.Size = new System.Drawing.Size(159, 24);
+            this.txtUltimoAñoAprobadoAlumno_2.TabIndex = 14;
+            this.txtUltimoAñoAprobadoAlumno_2.Text = "Ultimo año aprobado";
+            this.txtUltimoAñoAprobadoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtUltimoAñoAprobadoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.maskedTextBox1);
-            this.groupBox15.Controls.Add(this.textBox12);
-            this.groupBox15.Controls.Add(this.comboBox6);
-            this.groupBox15.Controls.Add(this.dateTimePicker1);
-            this.groupBox15.Controls.Add(this.comboBox7);
-            this.groupBox15.Controls.Add(this.textBox14);
-            this.groupBox15.Controls.Add(this.textBox15);
-            this.groupBox15.Controls.Add(this.textBox16);
-            this.groupBox15.Controls.Add(this.textBox17);
-            this.groupBox15.Controls.Add(this.textBox18);
+            this.groupBox15.Controls.Add(this.txtFechaNacimientoAlumno_2);
+            this.groupBox15.Controls.Add(this.txtEdadAlumno_2);
+            this.groupBox15.Controls.Add(this.boxEstadoCivilAlumno_2);
+            this.groupBox15.Controls.Add(this.dateTimeFechaNacimientoAlumno_2);
+            this.groupBox15.Controls.Add(this.boxSexoAlumno_2);
+            this.groupBox15.Controls.Add(this.txtApellido2Alumno_2);
+            this.groupBox15.Controls.Add(this.txtApellido1Alumno_2);
+            this.groupBox15.Controls.Add(this.txtNombre2Alumno_2);
+            this.groupBox15.Controls.Add(this.txtNombre1Alumno_2);
+            this.groupBox15.Controls.Add(this.txtCedulaAlumno_2);
             this.groupBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox15.Location = new System.Drawing.Point(37, 91);
             this.groupBox15.Name = "groupBox15";
@@ -2944,131 +3572,132 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Datos personales";
             // 
-            // maskedTextBox1
+            // txtFechaNacimientoAlumno_2
             // 
-            this.maskedTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.maskedTextBox1.Location = new System.Drawing.Point(24, 150);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(151, 24);
-            this.maskedTextBox1.TabIndex = 24;
-            this.maskedTextBox1.Text = "Fecha de nacimiento";
+            this.txtFechaNacimientoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtFechaNacimientoAlumno_2.Location = new System.Drawing.Point(24, 150);
+            this.txtFechaNacimientoAlumno_2.Name = "txtFechaNacimientoAlumno_2";
+            this.txtFechaNacimientoAlumno_2.Size = new System.Drawing.Size(151, 24);
+            this.txtFechaNacimientoAlumno_2.TabIndex = 24;
+            this.txtFechaNacimientoAlumno_2.Text = "Fecha de nacimiento";
             // 
-            // textBox12
+            // txtEdadAlumno_2
             // 
-            this.textBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox12.Location = new System.Drawing.Point(198, 150);
-            this.textBox12.MaxLength = 3;
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(167, 24);
-            this.textBox12.TabIndex = 22;
-            this.textBox12.Text = "Edad";
-            this.textBox12.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox12.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtEdadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdadAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEdadAlumno_2.Location = new System.Drawing.Point(198, 150);
+            this.txtEdadAlumno_2.MaxLength = 3;
+            this.txtEdadAlumno_2.Name = "txtEdadAlumno_2";
+            this.txtEdadAlumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtEdadAlumno_2.TabIndex = 22;
+            this.txtEdadAlumno_2.Text = "Edad";
+            this.txtEdadAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtEdadAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // comboBox6
+            // boxEstadoCivilAlumno_2
             // 
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.Items.AddRange(new object[] {
+            this.boxEstadoCivilAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxEstadoCivilAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxEstadoCivilAlumno_2.Items.AddRange(new object[] {
             "Estado civil...",
             "Casado/a",
             "Comprometido/a",
             "Soltero/a",
             "Viudo/a"});
-            this.comboBox6.Location = new System.Drawing.Point(198, 187);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(167, 26);
-            this.comboBox6.TabIndex = 21;
+            this.boxEstadoCivilAlumno_2.Location = new System.Drawing.Point(198, 187);
+            this.boxEstadoCivilAlumno_2.Name = "boxEstadoCivilAlumno_2";
+            this.boxEstadoCivilAlumno_2.Size = new System.Drawing.Size(167, 26);
+            this.boxEstadoCivilAlumno_2.TabIndex = 21;
             // 
-            // dateTimePicker1
+            // dateTimeFechaNacimientoAlumno_2
             // 
-            this.dateTimePicker1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(172, 150);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dateTimePicker1.Size = new System.Drawing.Size(20, 24);
-            this.dateTimePicker1.TabIndex = 16;
+            this.dateTimeFechaNacimientoAlumno_2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dateTimeFechaNacimientoAlumno_2.CustomFormat = "";
+            this.dateTimeFechaNacimientoAlumno_2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dateTimeFechaNacimientoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFechaNacimientoAlumno_2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimeFechaNacimientoAlumno_2.Location = new System.Drawing.Point(172, 150);
+            this.dateTimeFechaNacimientoAlumno_2.Name = "dateTimeFechaNacimientoAlumno_2";
+            this.dateTimeFechaNacimientoAlumno_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dateTimeFechaNacimientoAlumno_2.Size = new System.Drawing.Size(20, 24);
+            this.dateTimeFechaNacimientoAlumno_2.TabIndex = 16;
+            this.dateTimeFechaNacimientoAlumno_2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // comboBox7
+            // boxSexoAlumno_2
             // 
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.Items.AddRange(new object[] {
+            this.boxSexoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxSexoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxSexoAlumno_2.Items.AddRange(new object[] {
             "Seleccione sexo...",
             "Hombre",
             "Mujer",
             "Otro"});
-            this.comboBox7.Location = new System.Drawing.Point(24, 187);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(167, 26);
-            this.comboBox7.TabIndex = 20;
+            this.boxSexoAlumno_2.Location = new System.Drawing.Point(24, 187);
+            this.boxSexoAlumno_2.Name = "boxSexoAlumno_2";
+            this.boxSexoAlumno_2.Size = new System.Drawing.Size(167, 26);
+            this.boxSexoAlumno_2.TabIndex = 20;
             // 
-            // textBox14
+            // txtApellido2Alumno_2
             // 
-            this.textBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox14.Location = new System.Drawing.Point(198, 112);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(167, 24);
-            this.textBox14.TabIndex = 14;
-            this.textBox14.Text = "Segundo apellido";
-            this.textBox14.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox14.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtApellido2Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido2Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApellido2Alumno_2.Location = new System.Drawing.Point(198, 112);
+            this.txtApellido2Alumno_2.Name = "txtApellido2Alumno_2";
+            this.txtApellido2Alumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtApellido2Alumno_2.TabIndex = 14;
+            this.txtApellido2Alumno_2.Text = "Segundo apellido";
+            this.txtApellido2Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido2Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox15
+            // txtApellido1Alumno_2
             // 
-            this.textBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox15.Location = new System.Drawing.Point(24, 112);
-            this.textBox15.MaxLength = 255;
-            this.textBox15.Name = "textBox15";
-            this.textBox15.Size = new System.Drawing.Size(167, 24);
-            this.textBox15.TabIndex = 13;
-            this.textBox15.Text = "Primer apellido";
-            this.textBox15.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox15.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtApellido1Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido1Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApellido1Alumno_2.Location = new System.Drawing.Point(24, 112);
+            this.txtApellido1Alumno_2.MaxLength = 255;
+            this.txtApellido1Alumno_2.Name = "txtApellido1Alumno_2";
+            this.txtApellido1Alumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtApellido1Alumno_2.TabIndex = 13;
+            this.txtApellido1Alumno_2.Text = "Primer apellido";
+            this.txtApellido1Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox16
+            // txtNombre2Alumno_2
             // 
-            this.textBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox16.Location = new System.Drawing.Point(198, 74);
-            this.textBox16.Name = "textBox16";
-            this.textBox16.Size = new System.Drawing.Size(167, 24);
-            this.textBox16.TabIndex = 12;
-            this.textBox16.Text = "Segundo nombre";
-            this.textBox16.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox16.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtNombre2Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre2Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre2Alumno_2.Location = new System.Drawing.Point(198, 74);
+            this.txtNombre2Alumno_2.Name = "txtNombre2Alumno_2";
+            this.txtNombre2Alumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtNombre2Alumno_2.TabIndex = 12;
+            this.txtNombre2Alumno_2.Text = "Segundo nombre";
+            this.txtNombre2Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre2Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox17
+            // txtNombre1Alumno_2
             // 
-            this.textBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox17.Location = new System.Drawing.Point(24, 74);
-            this.textBox17.Name = "textBox17";
-            this.textBox17.Size = new System.Drawing.Size(167, 24);
-            this.textBox17.TabIndex = 11;
-            this.textBox17.Text = "Primer nombre";
-            this.textBox17.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox17.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtNombre1Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre1Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre1Alumno_2.Location = new System.Drawing.Point(24, 74);
+            this.txtNombre1Alumno_2.Name = "txtNombre1Alumno_2";
+            this.txtNombre1Alumno_2.Size = new System.Drawing.Size(167, 24);
+            this.txtNombre1Alumno_2.TabIndex = 11;
+            this.txtNombre1Alumno_2.Text = "Primer nombre";
+            this.txtNombre1Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre1Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox18
+            // txtCedulaAlumno_2
             // 
-            this.textBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox18.Location = new System.Drawing.Point(24, 36);
-            this.textBox18.MaxLength = 8;
-            this.textBox18.Name = "textBox18";
-            this.textBox18.Size = new System.Drawing.Size(123, 24);
-            this.textBox18.TabIndex = 10;
-            this.textBox18.Text = "Cedula";
-            this.textBox18.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox18.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtCedulaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedulaAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCedulaAlumno_2.Location = new System.Drawing.Point(24, 36);
+            this.txtCedulaAlumno_2.MaxLength = 8;
+            this.txtCedulaAlumno_2.Name = "txtCedulaAlumno_2";
+            this.txtCedulaAlumno_2.Size = new System.Drawing.Size(123, 24);
+            this.txtCedulaAlumno_2.TabIndex = 10;
+            this.txtCedulaAlumno_2.Text = "Cedula";
+            this.txtCedulaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCedulaAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // tabPageModificarAlumnosDatosDeInteres
             // 
@@ -3089,7 +3718,7 @@
             // 
             // groupBox31
             // 
-            this.groupBox31.Controls.Add(this.textBox19);
+            this.groupBox31.Controls.Add(this.txtCoberturaSaludAlumno_2);
             this.groupBox31.Location = new System.Drawing.Point(611, 195);
             this.groupBox31.Name = "groupBox31";
             this.groupBox31.Size = new System.Drawing.Size(436, 79);
@@ -3097,22 +3726,22 @@
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "Coberura de salud";
             // 
-            // textBox19
+            // txtCoberturaSaludAlumno_2
             // 
-            this.textBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox19.Location = new System.Drawing.Point(18, 26);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(404, 24);
-            this.textBox19.TabIndex = 29;
-            this.textBox19.Text = "Cobertura de salud";
-            this.textBox19.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox19.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtCoberturaSaludAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCoberturaSaludAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCoberturaSaludAlumno_2.Location = new System.Drawing.Point(18, 26);
+            this.txtCoberturaSaludAlumno_2.Name = "txtCoberturaSaludAlumno_2";
+            this.txtCoberturaSaludAlumno_2.Size = new System.Drawing.Size(404, 24);
+            this.txtCoberturaSaludAlumno_2.TabIndex = 29;
+            this.txtCoberturaSaludAlumno_2.Text = "Cobertura de salud";
+            this.txtCoberturaSaludAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCoberturaSaludAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox32
             // 
-            this.groupBox32.Controls.Add(this.comboBox8);
-            this.groupBox32.Controls.Add(this.comboBox9);
+            this.groupBox32.Controls.Add(this.boxJefeHogarAlumno_2);
+            this.groupBox32.Controls.Add(this.boxCantidadHijosAlumno_2);
             this.groupBox32.Location = new System.Drawing.Point(668, 114);
             this.groupBox32.Name = "groupBox32";
             this.groupBox32.Size = new System.Drawing.Size(379, 75);
@@ -3120,24 +3749,24 @@
             this.groupBox32.TabStop = false;
             this.groupBox32.Text = "Jefe de hogar";
             // 
-            // comboBox8
+            // boxJefeHogarAlumno_2
             // 
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.Items.AddRange(new object[] {
+            this.boxJefeHogarAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxJefeHogarAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxJefeHogarAlumno_2.Items.AddRange(new object[] {
             "Jefe de hogar?",
             "SI",
             "NO"});
-            this.comboBox8.Location = new System.Drawing.Point(8, 30);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(158, 23);
-            this.comboBox8.TabIndex = 28;
+            this.boxJefeHogarAlumno_2.Location = new System.Drawing.Point(8, 30);
+            this.boxJefeHogarAlumno_2.Name = "boxJefeHogarAlumno_2";
+            this.boxJefeHogarAlumno_2.Size = new System.Drawing.Size(158, 23);
+            this.boxJefeHogarAlumno_2.TabIndex = 28;
             // 
-            // comboBox9
+            // boxCantidadHijosAlumno_2
             // 
-            this.comboBox9.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox9.Items.AddRange(new object[] {
+            this.boxCantidadHijosAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCantidadHijosAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCantidadHijosAlumno_2.Items.AddRange(new object[] {
             "Cantidad hijos",
             "1",
             "2",
@@ -3149,21 +3778,21 @@
             "8",
             "9",
             "10"});
-            this.comboBox9.Location = new System.Drawing.Point(172, 31);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(193, 23);
-            this.comboBox9.TabIndex = 27;
+            this.boxCantidadHijosAlumno_2.Location = new System.Drawing.Point(172, 31);
+            this.boxCantidadHijosAlumno_2.Name = "boxCantidadHijosAlumno_2";
+            this.boxCantidadHijosAlumno_2.Size = new System.Drawing.Size(193, 23);
+            this.boxCantidadHijosAlumno_2.TabIndex = 27;
             // 
             // groupBox33
             // 
-            this.groupBox33.Controls.Add(this.textBox20);
-            this.groupBox33.Controls.Add(this.comboBox10);
-            this.groupBox33.Controls.Add(this.comboBox11);
-            this.groupBox33.Controls.Add(this.comboBox12);
-            this.groupBox33.Controls.Add(this.textBox21);
-            this.groupBox33.Controls.Add(this.textBox22);
-            this.groupBox33.Controls.Add(this.textBox23);
-            this.groupBox33.Controls.Add(this.textBox24);
+            this.groupBox33.Controls.Add(this.txtExperienciaInstitucionesTrabajoAlumno_2);
+            this.groupBox33.Controls.Add(this.boxTrabajoAnteriormenteCuidandoAlumno_2);
+            this.groupBox33.Controls.Add(this.boxCuentaConApoyoAlumno_2);
+            this.groupBox33.Controls.Add(this.boxPersonaConDiscapacidadAlumno_2);
+            this.groupBox33.Controls.Add(this.txtCargaSemanalCuidandoAlumno_2);
+            this.groupBox33.Controls.Add(this.txt60oMasAlumno_2);
+            this.groupBox33.Controls.Add(this.txt18a59Alumno_2);
+            this.groupBox33.Controls.Add(this.txt0a17Alumno_2);
             this.groupBox33.Location = new System.Drawing.Point(41, 195);
             this.groupBox33.Name = "groupBox33";
             this.groupBox33.Size = new System.Drawing.Size(564, 132);
@@ -3171,110 +3800,110 @@
             this.groupBox33.TabStop = false;
             this.groupBox33.Text = "Personas a cargo";
             // 
-            // textBox20
+            // txtExperienciaInstitucionesTrabajoAlumno_2
             // 
-            this.textBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox20.Location = new System.Drawing.Point(263, 83);
-            this.textBox20.Name = "textBox20";
-            this.textBox20.Size = new System.Drawing.Size(274, 24);
-            this.textBox20.TabIndex = 31;
-            this.textBox20.Text = "Experiencia en instituciones de cuidado";
-            this.textBox20.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox20.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.Location = new System.Drawing.Point(263, 83);
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.Name = "txtExperienciaInstitucionesTrabajoAlumno_2";
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.Size = new System.Drawing.Size(274, 24);
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.TabIndex = 31;
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.Text = "Experiencia en instituciones de cuidado";
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtExperienciaInstitucionesTrabajoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // comboBox10
+            // boxTrabajoAnteriormenteCuidandoAlumno_2
             // 
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox10.Items.AddRange(new object[] {
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2.Items.AddRange(new object[] {
             "Trabajo anteriormente cuidando?",
             "SI",
             "NO"});
-            this.comboBox10.Location = new System.Drawing.Point(19, 85);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(238, 23);
-            this.comboBox10.TabIndex = 30;
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2.Location = new System.Drawing.Point(19, 85);
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2.Name = "boxTrabajoAnteriormenteCuidandoAlumno_2";
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2.Size = new System.Drawing.Size(238, 23);
+            this.boxTrabajoAnteriormenteCuidandoAlumno_2.TabIndex = 30;
             // 
-            // comboBox11
+            // boxCuentaConApoyoAlumno_2
             // 
-            this.comboBox11.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox11.Items.AddRange(new object[] {
+            this.boxCuentaConApoyoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCuentaConApoyoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCuentaConApoyoAlumno_2.Items.AddRange(new object[] {
             "Cuenta con apoyo?",
             "SI",
             "NO"});
-            this.comboBox11.Location = new System.Drawing.Point(184, 56);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(159, 23);
-            this.comboBox11.TabIndex = 29;
+            this.boxCuentaConApoyoAlumno_2.Location = new System.Drawing.Point(184, 56);
+            this.boxCuentaConApoyoAlumno_2.Name = "boxCuentaConApoyoAlumno_2";
+            this.boxCuentaConApoyoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxCuentaConApoyoAlumno_2.TabIndex = 29;
             // 
-            // comboBox12
+            // boxPersonaConDiscapacidadAlumno_2
             // 
-            this.comboBox12.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox12.Items.AddRange(new object[] {
+            this.boxPersonaConDiscapacidadAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxPersonaConDiscapacidadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxPersonaConDiscapacidadAlumno_2.Items.AddRange(new object[] {
             "Persona con discapacidad?",
             "SI",
             "NO"});
-            this.comboBox12.Location = new System.Drawing.Point(19, 56);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(159, 23);
-            this.comboBox12.TabIndex = 29;
+            this.boxPersonaConDiscapacidadAlumno_2.Location = new System.Drawing.Point(19, 56);
+            this.boxPersonaConDiscapacidadAlumno_2.Name = "boxPersonaConDiscapacidadAlumno_2";
+            this.boxPersonaConDiscapacidadAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxPersonaConDiscapacidadAlumno_2.TabIndex = 29;
             // 
-            // textBox21
+            // txtCargaSemanalCuidandoAlumno_2
             // 
-            this.textBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox21.Location = new System.Drawing.Point(349, 55);
-            this.textBox21.Name = "textBox21";
-            this.textBox21.Size = new System.Drawing.Size(188, 24);
-            this.textBox21.TabIndex = 27;
-            this.textBox21.Text = "Carga semanal de cuidado";
-            this.textBox21.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox21.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtCargaSemanalCuidandoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCargaSemanalCuidandoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCargaSemanalCuidandoAlumno_2.Location = new System.Drawing.Point(349, 55);
+            this.txtCargaSemanalCuidandoAlumno_2.Name = "txtCargaSemanalCuidandoAlumno_2";
+            this.txtCargaSemanalCuidandoAlumno_2.Size = new System.Drawing.Size(188, 24);
+            this.txtCargaSemanalCuidandoAlumno_2.TabIndex = 27;
+            this.txtCargaSemanalCuidandoAlumno_2.Text = "Carga semanal de cuidado";
+            this.txtCargaSemanalCuidandoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCargaSemanalCuidandoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox22
+            // txt60oMasAlumno_2
             // 
-            this.textBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox22.Location = new System.Drawing.Point(263, 26);
-            this.textBox22.Name = "textBox22";
-            this.textBox22.Size = new System.Drawing.Size(116, 24);
-            this.textBox22.TabIndex = 28;
-            this.textBox22.Text = "De 60 o mas";
-            this.textBox22.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox22.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txt60oMasAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt60oMasAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt60oMasAlumno_2.Location = new System.Drawing.Point(263, 26);
+            this.txt60oMasAlumno_2.Name = "txt60oMasAlumno_2";
+            this.txt60oMasAlumno_2.Size = new System.Drawing.Size(116, 24);
+            this.txt60oMasAlumno_2.TabIndex = 28;
+            this.txt60oMasAlumno_2.Text = "De 60 o mas";
+            this.txt60oMasAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txt60oMasAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox23
+            // txt18a59Alumno_2
             // 
-            this.textBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox23.Location = new System.Drawing.Point(141, 26);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(116, 24);
-            this.textBox23.TabIndex = 28;
-            this.textBox23.Text = "De 18 a 59 años";
-            this.textBox23.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox23.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txt18a59Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt18a59Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt18a59Alumno_2.Location = new System.Drawing.Point(141, 26);
+            this.txt18a59Alumno_2.Name = "txt18a59Alumno_2";
+            this.txt18a59Alumno_2.Size = new System.Drawing.Size(116, 24);
+            this.txt18a59Alumno_2.TabIndex = 28;
+            this.txt18a59Alumno_2.Text = "De 18 a 59 años";
+            this.txt18a59Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txt18a59Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox24
+            // txt0a17Alumno_2
             // 
-            this.textBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox24.Location = new System.Drawing.Point(19, 26);
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(116, 24);
-            this.textBox24.TabIndex = 28;
-            this.textBox24.Text = "De 0 a 17 años";
-            this.textBox24.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox24.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txt0a17Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt0a17Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txt0a17Alumno_2.Location = new System.Drawing.Point(19, 26);
+            this.txt0a17Alumno_2.Name = "txt0a17Alumno_2";
+            this.txt0a17Alumno_2.Size = new System.Drawing.Size(116, 24);
+            this.txt0a17Alumno_2.TabIndex = 28;
+            this.txt0a17Alumno_2.Text = "De 0 a 17 años";
+            this.txt0a17Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txt0a17Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // groupBox34
             // 
-            this.groupBox34.Controls.Add(this.textBox25);
-            this.groupBox34.Controls.Add(this.comboBox13);
-            this.groupBox34.Controls.Add(this.comboBox14);
+            this.groupBox34.Controls.Add(this.txtMedioAccesoInternetAlumno_2);
+            this.groupBox34.Controls.Add(this.boxFacilAccesoInternetAlumno_2);
+            this.groupBox34.Controls.Add(this.boxUsaInternetAlumno_2);
             this.groupBox34.Location = new System.Drawing.Point(41, 114);
             this.groupBox34.Name = "groupBox34";
             this.groupBox34.Size = new System.Drawing.Size(621, 75);
@@ -3282,49 +3911,49 @@
             this.groupBox34.TabStop = false;
             this.groupBox34.Text = "Acceso a internet";
             // 
-            // textBox25
+            // txtMedioAccesoInternetAlumno_2
             // 
-            this.textBox25.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox25.Location = new System.Drawing.Point(414, 30);
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(193, 24);
-            this.textBox25.TabIndex = 29;
-            this.textBox25.Text = "Medio de acceso a internet";
-            this.textBox25.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox25.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtMedioAccesoInternetAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMedioAccesoInternetAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMedioAccesoInternetAlumno_2.Location = new System.Drawing.Point(414, 30);
+            this.txtMedioAccesoInternetAlumno_2.Name = "txtMedioAccesoInternetAlumno_2";
+            this.txtMedioAccesoInternetAlumno_2.Size = new System.Drawing.Size(193, 24);
+            this.txtMedioAccesoInternetAlumno_2.TabIndex = 29;
+            this.txtMedioAccesoInternetAlumno_2.Text = "Medio de acceso a internet";
+            this.txtMedioAccesoInternetAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtMedioAccesoInternetAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // comboBox13
+            // boxFacilAccesoInternetAlumno_2
             // 
-            this.comboBox13.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox13.Items.AddRange(new object[] {
+            this.boxFacilAccesoInternetAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxFacilAccesoInternetAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxFacilAccesoInternetAlumno_2.Items.AddRange(new object[] {
             "Facil acceso a internet?"});
-            this.comboBox13.Location = new System.Drawing.Point(215, 30);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(193, 23);
-            this.comboBox13.TabIndex = 28;
+            this.boxFacilAccesoInternetAlumno_2.Location = new System.Drawing.Point(215, 30);
+            this.boxFacilAccesoInternetAlumno_2.Name = "boxFacilAccesoInternetAlumno_2";
+            this.boxFacilAccesoInternetAlumno_2.Size = new System.Drawing.Size(193, 23);
+            this.boxFacilAccesoInternetAlumno_2.TabIndex = 28;
             // 
-            // comboBox14
+            // boxUsaInternetAlumno_2
             // 
-            this.comboBox14.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox14.Items.AddRange(new object[] {
+            this.boxUsaInternetAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxUsaInternetAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxUsaInternetAlumno_2.Items.AddRange(new object[] {
             "Usa internet?",
             "SI",
             "NO"});
-            this.comboBox14.Location = new System.Drawing.Point(16, 30);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(193, 23);
-            this.comboBox14.TabIndex = 27;
+            this.boxUsaInternetAlumno_2.Location = new System.Drawing.Point(16, 30);
+            this.boxUsaInternetAlumno_2.Name = "boxUsaInternetAlumno_2";
+            this.boxUsaInternetAlumno_2.Size = new System.Drawing.Size(193, 23);
+            this.boxUsaInternetAlumno_2.TabIndex = 27;
             // 
             // groupBox35
             // 
-            this.groupBox35.Controls.Add(this.textBox26);
-            this.groupBox35.Controls.Add(this.textBox27);
-            this.groupBox35.Controls.Add(this.textBox28);
-            this.groupBox35.Controls.Add(this.comboBox15);
-            this.groupBox35.Controls.Add(this.comboBox16);
+            this.groupBox35.Controls.Add(this.txtIngresoMensualAlumno_2);
+            this.groupBox35.Controls.Add(this.HorasJornadaAlumno_2);
+            this.groupBox35.Controls.Add(this.txtTiempoDesempleadoAlumno_2);
+            this.groupBox35.Controls.Add(this.boxTrabajoAlgunaVezAlumno_2);
+            this.groupBox35.Controls.Add(this.boxTrabajaActualmenteAlumno_2);
             this.groupBox35.Location = new System.Drawing.Point(41, 36);
             this.groupBox35.Name = "groupBox35";
             this.groupBox35.Size = new System.Drawing.Size(1006, 72);
@@ -3332,67 +3961,67 @@
             this.groupBox35.TabStop = false;
             this.groupBox35.Text = "Trabajo";
             // 
-            // textBox26
+            // txtIngresoMensualAlumno_2
             // 
-            this.textBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox26.Location = new System.Drawing.Point(816, 29);
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(176, 24);
-            this.textBox26.TabIndex = 28;
-            this.textBox26.Text = "Ingreso mensual";
-            this.textBox26.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox26.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtIngresoMensualAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtIngresoMensualAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtIngresoMensualAlumno_2.Location = new System.Drawing.Point(816, 29);
+            this.txtIngresoMensualAlumno_2.Name = "txtIngresoMensualAlumno_2";
+            this.txtIngresoMensualAlumno_2.Size = new System.Drawing.Size(176, 24);
+            this.txtIngresoMensualAlumno_2.TabIndex = 28;
+            this.txtIngresoMensualAlumno_2.Text = "Ingreso mensual";
+            this.txtIngresoMensualAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtIngresoMensualAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox27
+            // HorasJornadaAlumno_2
             // 
-            this.textBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox27.Location = new System.Drawing.Point(617, 29);
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(176, 24);
-            this.textBox27.TabIndex = 28;
-            this.textBox27.Text = "Horas de jornada";
-            this.textBox27.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox27.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.HorasJornadaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HorasJornadaAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.HorasJornadaAlumno_2.Location = new System.Drawing.Point(617, 29);
+            this.HorasJornadaAlumno_2.Name = "HorasJornadaAlumno_2";
+            this.HorasJornadaAlumno_2.Size = new System.Drawing.Size(176, 24);
+            this.HorasJornadaAlumno_2.TabIndex = 28;
+            this.HorasJornadaAlumno_2.Text = "Horas de jornada";
+            this.HorasJornadaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.HorasJornadaAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // textBox28
+            // txtTiempoDesempleadoAlumno_2
             // 
-            this.textBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox28.Location = new System.Drawing.Point(418, 29);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(176, 24);
-            this.textBox28.TabIndex = 27;
-            this.textBox28.Text = "Tiempo desempleado";
-            this.textBox28.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox28.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtTiempoDesempleadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTiempoDesempleadoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTiempoDesempleadoAlumno_2.Location = new System.Drawing.Point(418, 29);
+            this.txtTiempoDesempleadoAlumno_2.Name = "txtTiempoDesempleadoAlumno_2";
+            this.txtTiempoDesempleadoAlumno_2.Size = new System.Drawing.Size(176, 24);
+            this.txtTiempoDesempleadoAlumno_2.TabIndex = 27;
+            this.txtTiempoDesempleadoAlumno_2.Text = "Tiempo desempleado";
+            this.txtTiempoDesempleadoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtTiempoDesempleadoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // comboBox15
+            // boxTrabajoAlgunaVezAlumno_2
             // 
-            this.comboBox15.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox15.Items.AddRange(new object[] {
+            this.boxTrabajoAlgunaVezAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajoAlgunaVezAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajoAlgunaVezAlumno_2.Items.AddRange(new object[] {
             "Trabajo alguna vez?",
             "SI",
             "NO"});
-            this.comboBox15.Location = new System.Drawing.Point(19, 29);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(176, 23);
-            this.comboBox15.TabIndex = 25;
+            this.boxTrabajoAlgunaVezAlumno_2.Location = new System.Drawing.Point(19, 29);
+            this.boxTrabajoAlgunaVezAlumno_2.Name = "boxTrabajoAlgunaVezAlumno_2";
+            this.boxTrabajoAlgunaVezAlumno_2.Size = new System.Drawing.Size(176, 23);
+            this.boxTrabajoAlgunaVezAlumno_2.TabIndex = 25;
             // 
-            // comboBox16
+            // boxTrabajaActualmenteAlumno_2
             // 
-            this.comboBox16.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox16.Items.AddRange(new object[] {
+            this.boxTrabajaActualmenteAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTrabajaActualmenteAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTrabajaActualmenteAlumno_2.Items.AddRange(new object[] {
             "Trabaja actualmente?",
             "SI",
             "NO"});
-            this.comboBox16.Location = new System.Drawing.Point(221, 29);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(176, 23);
-            this.comboBox16.TabIndex = 26;
+            this.boxTrabajaActualmenteAlumno_2.Location = new System.Drawing.Point(218, 29);
+            this.boxTrabajaActualmenteAlumno_2.Name = "boxTrabajaActualmenteAlumno_2";
+            this.boxTrabajaActualmenteAlumno_2.Size = new System.Drawing.Size(176, 23);
+            this.boxTrabajaActualmenteAlumno_2.TabIndex = 26;
             // 
             // button2
             // 
@@ -4048,635 +4677,6 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
             // 
-            // tabPageModificarAlumnosInformacion
-            // 
-            this.tabPageModificarAlumnosInformacion.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.button8);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.comboBox17);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.textBox13);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.button3);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox46);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox47);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox48);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox49);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox50);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox51);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox52);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox53);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox54);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox55);
-            this.tabPageModificarAlumnosInformacion.Location = new System.Drawing.Point(4, 22);
-            this.tabPageModificarAlumnosInformacion.Name = "tabPageModificarAlumnosInformacion";
-            this.tabPageModificarAlumnosInformacion.Size = new System.Drawing.Size(1083, 489);
-            this.tabPageModificarAlumnosInformacion.TabIndex = 3;
-            this.tabPageModificarAlumnosInformacion.Text = "Informacion";
-            // 
-            // groupBox46
-            // 
-            this.groupBox46.Controls.Add(this.label5);
-            this.groupBox46.Controls.Add(this.label6);
-            this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox46.Location = new System.Drawing.Point(39, 71);
-            this.groupBox46.Name = "groupBox46";
-            this.groupBox46.Size = new System.Drawing.Size(279, 87);
-            this.groupBox46.TabIndex = 40;
-            this.groupBox46.TabStop = false;
-            this.groupBox46.Text = "Con respecto al instituto";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 46);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 15);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Estado:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(34, 31);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 15);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "Curso:";
-            // 
-            // groupBox47
-            // 
-            this.groupBox47.Controls.Add(this.label7);
-            this.groupBox47.Controls.Add(this.label8);
-            this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox47.Location = new System.Drawing.Point(324, 358);
-            this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(279, 81);
-            this.groupBox47.TabIndex = 34;
-            this.groupBox47.TabStop = false;
-            this.groupBox47.Text = "Jefe de hogar";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(16, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(123, 15);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Cantidad de hijos:";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(40, 24);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(99, 15);
-            this.label8.TabIndex = 36;
-            this.label8.Text = "Jefe de hogar:";
-            // 
-            // groupBox48
-            // 
-            this.groupBox48.Controls.Add(this.label10);
-            this.groupBox48.Controls.Add(this.label11);
-            this.groupBox48.Controls.Add(this.label12);
-            this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox48.Location = new System.Drawing.Point(324, 210);
-            this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Size = new System.Drawing.Size(279, 87);
-            this.groupBox48.TabIndex = 39;
-            this.groupBox48.TabStop = false;
-            this.groupBox48.Text = "Contacto";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(91, 54);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 15);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Email:";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(82, 39);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(57, 15);
-            this.label11.TabIndex = 37;
-            this.label11.Text = "Celular:";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(72, 24);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(67, 15);
-            this.label12.TabIndex = 37;
-            this.label12.Text = "Telefono:";
-            // 
-            // groupBox49
-            // 
-            this.groupBox49.Controls.Add(this.label13);
-            this.groupBox49.Controls.Add(this.label14);
-            this.groupBox49.Controls.Add(this.label15);
-            this.groupBox49.Controls.Add(this.label16);
-            this.groupBox49.Controls.Add(this.label17);
-            this.groupBox49.Controls.Add(this.label18);
-            this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox49.Location = new System.Drawing.Point(324, 71);
-            this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Size = new System.Drawing.Size(279, 133);
-            this.groupBox49.TabIndex = 36;
-            this.groupBox49.TabStop = false;
-            this.groupBox49.Text = "Dirección";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(28, 102);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(111, 15);
-            this.label13.TabIndex = 36;
-            this.label13.Text = "Nº apartamento:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(68, 87);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(71, 15);
-            this.label14.TabIndex = 36;
-            this.label14.Text = "Nº puerta:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(58, 72);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(81, 15);
-            this.label15.TabIndex = 36;
-            this.label15.Text = "Referencia:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(95, 57);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(44, 15);
-            this.label16.TabIndex = 36;
-            this.label16.Text = "Calle:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(65, 42);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(74, 15);
-            this.label17.TabIndex = 36;
-            this.label17.Text = "Localidad:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(37, 27);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(102, 15);
-            this.label18.TabIndex = 36;
-            this.label18.Text = "Departamento:";
-            // 
-            // groupBox50
-            // 
-            this.groupBox50.Controls.Add(this.label19);
-            this.groupBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox50.Location = new System.Drawing.Point(324, 303);
-            this.groupBox50.Name = "groupBox50";
-            this.groupBox50.Size = new System.Drawing.Size(279, 49);
-            this.groupBox50.TabIndex = 35;
-            this.groupBox50.TabStop = false;
-            this.groupBox50.Text = "Coberura de salud";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(6, 22);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(133, 15);
-            this.label19.TabIndex = 38;
-            this.label19.Text = "Cobertura de salud:";
-            // 
-            // groupBox51
-            // 
-            this.groupBox51.Controls.Add(this.label20);
-            this.groupBox51.Controls.Add(this.label21);
-            this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox51.Location = new System.Drawing.Point(39, 350);
-            this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Size = new System.Drawing.Size(279, 89);
-            this.groupBox51.TabIndex = 37;
-            this.groupBox51.TabStop = false;
-            this.groupBox51.Text = "Formacion academica";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(6, 48);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(146, 15);
-            this.label20.TabIndex = 36;
-            this.label20.Text = "Ultimo año aprobado:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(44, 33);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(108, 15);
-            this.label21.TabIndex = 36;
-            this.label21.Text = "Nivel educativo:";
-            // 
-            // groupBox52
-            // 
-            this.groupBox52.Controls.Add(this.label22);
-            this.groupBox52.Controls.Add(this.label23);
-            this.groupBox52.Controls.Add(this.label24);
-            this.groupBox52.Controls.Add(this.label25);
-            this.groupBox52.Controls.Add(this.label26);
-            this.groupBox52.Controls.Add(this.label27);
-            this.groupBox52.Controls.Add(this.label28);
-            this.groupBox52.Controls.Add(this.label29);
-            this.groupBox52.Controls.Add(this.label30);
-            this.groupBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox52.Location = new System.Drawing.Point(39, 164);
-            this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Size = new System.Drawing.Size(279, 180);
-            this.groupBox52.TabIndex = 38;
-            this.groupBox52.TabStop = false;
-            this.groupBox52.Text = "Datos personales";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(67, 145);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(84, 15);
-            this.label22.TabIndex = 35;
-            this.label22.Text = "Estado civil:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(108, 130);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(43, 15);
-            this.label23.TabIndex = 35;
-            this.label23.Text = "Sexo:";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(107, 115);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(44, 15);
-            this.label24.TabIndex = 34;
-            this.label24.Text = "Edad:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(6, 100);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(145, 15);
-            this.label25.TabIndex = 33;
-            this.label25.Text = "Fecha de nacimiento:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(27, 85);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(124, 15);
-            this.label26.TabIndex = 32;
-            this.label26.Text = "Segundo apellido:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(41, 70);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(110, 15);
-            this.label27.TabIndex = 31;
-            this.label27.Text = "Primer apellido:";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(30, 55);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(121, 15);
-            this.label28.TabIndex = 30;
-            this.label28.Text = "Segundo nombre:";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(44, 40);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(107, 15);
-            this.label29.TabIndex = 29;
-            this.label29.Text = "Primer nombre:";
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(95, 25);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(56, 15);
-            this.label30.TabIndex = 28;
-            this.label30.Text = "Cedula:";
-            // 
-            // groupBox53
-            // 
-            this.groupBox53.Controls.Add(this.label31);
-            this.groupBox53.Controls.Add(this.label32);
-            this.groupBox53.Controls.Add(this.label33);
-            this.groupBox53.Controls.Add(this.label34);
-            this.groupBox53.Controls.Add(this.label35);
-            this.groupBox53.Controls.Add(this.label36);
-            this.groupBox53.Controls.Add(this.label37);
-            this.groupBox53.Controls.Add(this.label38);
-            this.groupBox53.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox53.Location = new System.Drawing.Point(609, 194);
-            this.groupBox53.Name = "groupBox53";
-            this.groupBox53.Size = new System.Drawing.Size(447, 158);
-            this.groupBox53.TabIndex = 33;
-            this.groupBox53.TabStop = false;
-            this.groupBox53.Text = "Personas a cargo";
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(6, 131);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(267, 15);
-            this.label31.TabIndex = 36;
-            this.label31.Text = "Experiencia en instituciones de cuidado:";
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(56, 116);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(217, 15);
-            this.label32.TabIndex = 36;
-            this.label32.Text = "Trabajo anteriormente cuidando:";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(148, 85);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(125, 15);
-            this.label33.TabIndex = 36;
-            this.label33.Text = "Cuenta con apoyo:";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(165, 25);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(108, 15);
-            this.label34.TabIndex = 36;
-            this.label34.Text = "De 0 a 17 años:";
-            // 
-            // label35
-            // 
-            this.label35.AutoSize = true;
-            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label35.Location = new System.Drawing.Point(90, 100);
-            this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(183, 15);
-            this.label35.TabIndex = 36;
-            this.label35.Text = "Carga semanal de cuidado:";
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(146, 55);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(127, 15);
-            this.label36.TabIndex = 36;
-            this.label36.Text = "De 60 años o mas:";
-            // 
-            // label37
-            // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(93, 70);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(180, 15);
-            this.label37.TabIndex = 36;
-            this.label37.Text = "Persona con discapacidad:";
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(157, 40);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(116, 15);
-            this.label38.TabIndex = 36;
-            this.label38.Text = "De 18 a 59 años:";
-            // 
-            // groupBox54
-            // 
-            this.groupBox54.Controls.Add(this.label39);
-            this.groupBox54.Controls.Add(this.label40);
-            this.groupBox54.Controls.Add(this.label41);
-            this.groupBox54.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox54.Location = new System.Drawing.Point(609, 358);
-            this.groupBox54.Name = "groupBox54";
-            this.groupBox54.Size = new System.Drawing.Size(447, 81);
-            this.groupBox54.TabIndex = 32;
-            this.groupBox54.TabStop = false;
-            this.groupBox54.Text = "Acceso a internet";
-            // 
-            // label39
-            // 
-            this.label39.AutoSize = true;
-            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label39.Location = new System.Drawing.Point(56, 39);
-            this.label39.Name = "label39";
-            this.label39.Size = new System.Drawing.Size(156, 15);
-            this.label39.TabIndex = 36;
-            this.label39.Text = "Facil acceso a internet:";
-            // 
-            // label40
-            // 
-            this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label40.Location = new System.Drawing.Point(27, 54);
-            this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(185, 15);
-            this.label40.TabIndex = 36;
-            this.label40.Text = "Medio de acceso a internet:";
-            // 
-            // label41
-            // 
-            this.label41.AutoSize = true;
-            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(123, 25);
-            this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(89, 15);
-            this.label41.TabIndex = 36;
-            this.label41.Text = "Usa internet:";
-            // 
-            // groupBox55
-            // 
-            this.groupBox55.Controls.Add(this.label42);
-            this.groupBox55.Controls.Add(this.label43);
-            this.groupBox55.Controls.Add(this.label44);
-            this.groupBox55.Controls.Add(this.label45);
-            this.groupBox55.Controls.Add(this.label46);
-            this.groupBox55.Location = new System.Drawing.Point(609, 71);
-            this.groupBox55.Name = "groupBox55";
-            this.groupBox55.Size = new System.Drawing.Size(447, 117);
-            this.groupBox55.TabIndex = 31;
-            this.groupBox55.TabStop = false;
-            this.groupBox55.Text = "Trabajo";
-            // 
-            // label42
-            // 
-            this.label42.AutoSize = true;
-            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label42.Location = new System.Drawing.Point(155, 87);
-            this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(118, 15);
-            this.label42.TabIndex = 36;
-            this.label42.Text = "Ingreso mensual:";
-            // 
-            // label43
-            // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(140, 27);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(133, 15);
-            this.label43.TabIndex = 36;
-            this.label43.Text = "Trabajo alguna vez:";
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label44.Location = new System.Drawing.Point(102, 72);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(171, 15);
-            this.label44.TabIndex = 36;
-            this.label44.Text = "Horas de jornada laboral:";
-            // 
-            // label45
-            // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label45.Location = new System.Drawing.Point(130, 42);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(143, 15);
-            this.label45.TabIndex = 36;
-            this.label45.Text = "Trabaja actualmente:";
-            // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label46.Location = new System.Drawing.Point(123, 57);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(150, 15);
-            this.label46.TabIndex = 36;
-            this.label46.Text = "Tiempo desempleado:";
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(933, 445);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 36);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox17.Items.AddRange(new object[] {
-            "Nombre y apellido",
-            "Cedula"});
-            this.comboBox17.Location = new System.Drawing.Point(313, 27);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(150, 26);
-            this.comboBox17.TabIndex = 43;
-            // 
-            // textBox13
-            // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox13.Location = new System.Drawing.Point(469, 27);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(167, 24);
-            this.textBox13.TabIndex = 42;
-            this.textBox13.Text = "Texto de busqueda";
-            this.textBox13.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox13.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // button7
-            // 
-            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(781, 444);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(144, 36);
-            this.button7.TabIndex = 22;
-            this.button7.Text = "Atras";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(642, 25);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(113, 28);
-            this.button8.TabIndex = 44;
-            this.button8.Text = "Buscar";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4766,6 +4766,28 @@
             this.groupBox25.PerformLayout();
             this.tabPageAlumnosModificar.ResumeLayout(false);
             this.tabControlModificarAlumno.ResumeLayout(false);
+            this.tabPageModificarAlumnosInformacion.ResumeLayout(false);
+            this.tabPageModificarAlumnosInformacion.PerformLayout();
+            this.groupBox46.ResumeLayout(false);
+            this.groupBox46.PerformLayout();
+            this.groupBox47.ResumeLayout(false);
+            this.groupBox47.PerformLayout();
+            this.groupBox48.ResumeLayout(false);
+            this.groupBox48.PerformLayout();
+            this.groupBox49.ResumeLayout(false);
+            this.groupBox49.PerformLayout();
+            this.groupBox50.ResumeLayout(false);
+            this.groupBox50.PerformLayout();
+            this.groupBox51.ResumeLayout(false);
+            this.groupBox51.PerformLayout();
+            this.groupBox52.ResumeLayout(false);
+            this.groupBox52.PerformLayout();
+            this.groupBox53.ResumeLayout(false);
+            this.groupBox53.PerformLayout();
+            this.groupBox54.ResumeLayout(false);
+            this.groupBox54.PerformLayout();
+            this.groupBox55.ResumeLayout(false);
+            this.groupBox55.PerformLayout();
             this.tabPageModificarAlumnosDatosPersonales.ResumeLayout(false);
             this.groupBox11.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
@@ -4809,28 +4831,6 @@
             this.groupBox45.PerformLayout();
             this.pageCursos.ResumeLayout(false);
             this.tabControlCursos.ResumeLayout(false);
-            this.tabPageModificarAlumnosInformacion.ResumeLayout(false);
-            this.tabPageModificarAlumnosInformacion.PerformLayout();
-            this.groupBox46.ResumeLayout(false);
-            this.groupBox46.PerformLayout();
-            this.groupBox47.ResumeLayout(false);
-            this.groupBox47.PerformLayout();
-            this.groupBox48.ResumeLayout(false);
-            this.groupBox48.PerformLayout();
-            this.groupBox49.ResumeLayout(false);
-            this.groupBox49.PerformLayout();
-            this.groupBox50.ResumeLayout(false);
-            this.groupBox50.PerformLayout();
-            this.groupBox51.ResumeLayout(false);
-            this.groupBox51.PerformLayout();
-            this.groupBox52.ResumeLayout(false);
-            this.groupBox52.PerformLayout();
-            this.groupBox53.ResumeLayout(false);
-            this.groupBox53.PerformLayout();
-            this.groupBox54.ResumeLayout(false);
-            this.groupBox54.PerformLayout();
-            this.groupBox55.ResumeLayout(false);
-            this.groupBox55.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4915,9 +4915,9 @@
         private System.Windows.Forms.GroupBox groupBox10;
         private System.Windows.Forms.TextBox txtEmailAlumno;
         private System.Windows.Forms.TextBox txtCelularAlumno;
-        private System.Windows.Forms.TextBox txtTelefonoAlumno;
+        private System.Windows.Forms.TextBox txtTelefono;
         private System.Windows.Forms.GroupBox groupBox8;
-        private System.Windows.Forms.ComboBox bosLocalidadAlumno;
+        private System.Windows.Forms.ComboBox boxLocalidadAlumno;
         private System.Windows.Forms.TextBox txtCalleAlumno;
         private System.Windows.Forms.ComboBox boxDepartamentoAlumno;
         private System.Windows.Forms.TextBox txtReferenciaAlumno;
@@ -4936,8 +4936,8 @@
         private System.Windows.Forms.TextBox txtNombre2Alumno;
         private System.Windows.Forms.TextBox txtNombre1Alumno;
         private System.Windows.Forms.TextBox txtCedulaAlumno;
-        private System.Windows.Forms.ComboBox boxTrabajaActualmente;
-        private System.Windows.Forms.ComboBox boxTrabajoAlgunaVez;
+        private System.Windows.Forms.ComboBox boxTrabajaActualmenteAlumno;
+        private System.Windows.Forms.ComboBox boxTrabajoAlgunaVezAlumno;
         private System.Windows.Forms.Button btnSiguiente;
         private System.Windows.Forms.Button btnSiguinete_2;
         private System.Windows.Forms.Button btnFinalizar;
@@ -4947,30 +4947,30 @@
         private System.Windows.Forms.ToolStripMenuItem pruebaDeConexionConBaseDeDatosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TextBox txtHorasJornada;
-        private System.Windows.Forms.TextBox txtTiempoDesempleado;
+        private System.Windows.Forms.TextBox txtHorasJornadaAlumno;
+        private System.Windows.Forms.TextBox txtTiempoDesempleadoAlumno;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.TextBox txtIngresoMensual;
+        private System.Windows.Forms.TextBox txtIngresoMensualAlumno;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.ComboBox boxPersonaDiscapacidad;
-        private System.Windows.Forms.TextBox txt60oMas;
-        private System.Windows.Forms.TextBox txt18a59;
-        private System.Windows.Forms.TextBox txt0a17;
-        private System.Windows.Forms.TextBox txtMedioAccesoInternet;
-        private System.Windows.Forms.ComboBox boxFacilAccesoInternet;
-        private System.Windows.Forms.ComboBox boxUsaInternet;
-        private System.Windows.Forms.ComboBox boxCuentaConApoyo;
+        private System.Windows.Forms.ComboBox boxPersonaDiscapacidadAlumno;
+        private System.Windows.Forms.TextBox txt60oMasAlumno;
+        private System.Windows.Forms.TextBox txt18a59Alumno;
+        private System.Windows.Forms.TextBox txt0a17Alumno;
+        private System.Windows.Forms.TextBox txtMedioAccesoInternetAlumno;
+        private System.Windows.Forms.ComboBox boxFacilAccesoInternetAlumno;
+        private System.Windows.Forms.ComboBox boxUsaInternetAlumno;
+        private System.Windows.Forms.ComboBox boxCuentaConApoyoAlumno;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ComboBox boxEstadoAlumno;
         private System.Windows.Forms.ComboBox boxCursoAlumno;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCoberuraSaludAlumno;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.ComboBox boxJefeHogar;
-        private System.Windows.Forms.ComboBox boxCantidadHijos;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox boxTrabajoCuidando;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox boxJefeHogarAlumno;
+        private System.Windows.Forms.ComboBox boxCantidadHijosAlumno;
+        private System.Windows.Forms.TextBox txtExperienciaInstitucionesCuidadoAlumno;
+        private System.Windows.Forms.ComboBox boxTrabajoCuidandoAlumno;
+        private System.Windows.Forms.TextBox txtCargaSemanalCuidadoAlumno;
         private System.Windows.Forms.GroupBox groupBox26;
         private System.Windows.Forms.GroupBox groupBox27;
         private System.Windows.Forms.GroupBox groupBox28;
@@ -4981,102 +4981,102 @@
         private System.Windows.Forms.GroupBox groupBox23;
         private System.Windows.Forms.GroupBox groupBox24;
         private System.Windows.Forms.GroupBox groupBox25;
-        private System.Windows.Forms.Label lblCurso;
-        private System.Windows.Forms.Label lblEstado;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblCelular;
-        private System.Windows.Forms.Label lblTelefono;
-        private System.Windows.Forms.Label lblNApartamento;
-        private System.Windows.Forms.Label lblNPuerta;
-        private System.Windows.Forms.Label lblReferencia;
-        private System.Windows.Forms.Label lblCalle;
-        private System.Windows.Forms.Label lblLocalidad;
-        private System.Windows.Forms.Label lblDepartamento;
-        private System.Windows.Forms.Label lblUltimoAñoAprobado;
-        private System.Windows.Forms.Label lblNivelEducativo;
-        private System.Windows.Forms.Label lblEstadoCivil;
-        private System.Windows.Forms.Label lblSexo;
-        private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.Label lblFechaNacimiento;
-        private System.Windows.Forms.Label lblApellido2;
-        private System.Windows.Forms.Label lblApellido1;
-        private System.Windows.Forms.Label lblNombre2;
-        private System.Windows.Forms.Label lblNombre1;
-        private System.Windows.Forms.Label lblCedula;
-        private System.Windows.Forms.Label lblCoberturaSalud;
-        private System.Windows.Forms.Label lblIngresoMensual;
-        private System.Windows.Forms.Label lblTrabajoAlgunaVez;
-        private System.Windows.Forms.Label lblHorasJornadaLaboral;
-        private System.Windows.Forms.Label lblTrabajaActualmente;
-        private System.Windows.Forms.Label lblTiempoDesempleado;
-        private System.Windows.Forms.Label lblTrabajoAnteriormenteCuidando;
-        private System.Windows.Forms.Label lblCuentaConApoyo;
-        private System.Windows.Forms.Label lbl0a16;
-        private System.Windows.Forms.Label lblCargaSemanalCuidado;
-        private System.Windows.Forms.Label lbl60oMas;
-        private System.Windows.Forms.Label lblPersonaConDiscapacidad;
-        private System.Windows.Forms.Label lbl18a59;
-        private System.Windows.Forms.Label lblCantidadHijos;
-        private System.Windows.Forms.Label lblJefeHogar;
-        private System.Windows.Forms.Label lblExperienciaInstitucionesCuidado;
-        private System.Windows.Forms.Label lblFacilAccesoInternet;
-        private System.Windows.Forms.Label lblMedioAccesoInternet;
-        private System.Windows.Forms.Label lblUsaInternet;
+        private System.Windows.Forms.Label lblCursoAlumno;
+        private System.Windows.Forms.Label lblEstadoAlumno;
+        private System.Windows.Forms.Label lblEmailAlumno;
+        private System.Windows.Forms.Label lblCelularAlumno;
+        private System.Windows.Forms.Label lblTelefonoAlumno;
+        private System.Windows.Forms.Label lblNApartamentoAlumno;
+        private System.Windows.Forms.Label lblNPuertaAlumno;
+        private System.Windows.Forms.Label lblReferenciaAlumno;
+        private System.Windows.Forms.Label lblCalleAlumno;
+        private System.Windows.Forms.Label lblLocalidadAlumno;
+        private System.Windows.Forms.Label lblDepartamentoAlumno;
+        private System.Windows.Forms.Label lblUltimoAñoAprobadoAlumno;
+        private System.Windows.Forms.Label lblNivelEducativoAlumno;
+        private System.Windows.Forms.Label lblEstadoCivilAlumno;
+        private System.Windows.Forms.Label lblSexoAlumno;
+        private System.Windows.Forms.Label lblEdadAlumno;
+        private System.Windows.Forms.Label lblFechaNacimientoAlumno;
+        private System.Windows.Forms.Label lblApellido2Alumno;
+        private System.Windows.Forms.Label lblApellido1Alumno;
+        private System.Windows.Forms.Label lblNombre2Alumno;
+        private System.Windows.Forms.Label lblNombre1Alumno;
+        private System.Windows.Forms.Label lblCedulaAlumno;
+        private System.Windows.Forms.Label lblCoberturaSaludAlumno;
+        private System.Windows.Forms.Label lblIngresoMensualAlumno;
+        private System.Windows.Forms.Label lblTrabajoAlgunaVezAlumno;
+        private System.Windows.Forms.Label lblHorasJornadaLaboralAlumno;
+        private System.Windows.Forms.Label lblTrabajaActualmenteAlumno;
+        private System.Windows.Forms.Label lblTiempoDesempleadoAlumno;
+        private System.Windows.Forms.Label lblTrabajoAnteriormenteCuidandoAlumno;
+        private System.Windows.Forms.Label lblCuentaConApoyoAlumno;
+        private System.Windows.Forms.Label lbl0a16Alumno;
+        private System.Windows.Forms.Label lblCargaSemanalCuidadoAlumno;
+        private System.Windows.Forms.Label lbl60oMasAlumno;
+        private System.Windows.Forms.Label lblPersonaConDiscapacidadAlumno;
+        private System.Windows.Forms.Label lbl18a59Alumno;
+        private System.Windows.Forms.Label lblCantidadHijosAlumno;
+        private System.Windows.Forms.Label lblJefeHogarAlumno;
+        private System.Windows.Forms.Label lblExperienciaInstitucionesCuidadoAlumno;
+        private System.Windows.Forms.Label lblFacilAccesoInternetAlumno;
+        private System.Windows.Forms.Label lblMedioAccesoInternetAlumno;
+        private System.Windows.Forms.Label lblUsaInternetAlumno;
         private System.Windows.Forms.TabControl tabControlModificarAlumno;
         private System.Windows.Forms.TabPage tabPageModificarAlumnosDatosPersonales;
         private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox boxEstadoAlumno_2;
+        private System.Windows.Forms.ComboBox boxCursoAlumno_2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox Alumno_2;
+        private System.Windows.Forms.TextBox txtCelularAlumno_2;
+        private System.Windows.Forms.TextBox txtTelefonoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.ComboBox boxLocalidadAlumno_2;
+        private System.Windows.Forms.TextBox txtCalleAlumno_2;
+        private System.Windows.Forms.ComboBox boxDepartamentoAlumno_2;
+        private System.Windows.Forms.TextBox txtReferenciaAlumno_2;
+        private System.Windows.Forms.TextBox txtNPuertaAlumno_2;
+        private System.Windows.Forms.TextBox txtNApartamentoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.ComboBox boxNivelAcademicoAlumno_2;
+        private System.Windows.Forms.TextBox txtUltimoAñoAprobadoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox15;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.TextBox textBox14;
-        private System.Windows.Forms.TextBox textBox15;
-        private System.Windows.Forms.TextBox textBox16;
-        private System.Windows.Forms.TextBox textBox17;
-        private System.Windows.Forms.TextBox textBox18;
+        private System.Windows.Forms.TextBox txtEdadAlumno_2;
+        private System.Windows.Forms.ComboBox boxEstadoCivilAlumno_2;
+        private System.Windows.Forms.DateTimePicker dateTimeFechaNacimientoAlumno_2;
+        private System.Windows.Forms.ComboBox boxSexoAlumno_2;
+        private System.Windows.Forms.TextBox txtApellido2Alumno_2;
+        private System.Windows.Forms.TextBox txtApellido1Alumno_2;
+        private System.Windows.Forms.TextBox txtNombre2Alumno_2;
+        private System.Windows.Forms.TextBox txtNombre1Alumno_2;
+        private System.Windows.Forms.TextBox txtCedulaAlumno_2;
         private System.Windows.Forms.TabPage tabPageModificarAlumnosDatosDeInteres;
         private System.Windows.Forms.GroupBox groupBox31;
-        private System.Windows.Forms.TextBox textBox19;
+        private System.Windows.Forms.TextBox txtCoberturaSaludAlumno_2;
         private System.Windows.Forms.GroupBox groupBox32;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox boxJefeHogarAlumno_2;
+        private System.Windows.Forms.ComboBox boxCantidadHijosAlumno_2;
         private System.Windows.Forms.GroupBox groupBox33;
-        private System.Windows.Forms.TextBox textBox20;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.ComboBox comboBox11;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.TextBox textBox21;
-        private System.Windows.Forms.TextBox textBox22;
-        private System.Windows.Forms.TextBox textBox23;
-        private System.Windows.Forms.TextBox textBox24;
+        private System.Windows.Forms.TextBox txtExperienciaInstitucionesTrabajoAlumno_2;
+        private System.Windows.Forms.ComboBox boxTrabajoAnteriormenteCuidandoAlumno_2;
+        private System.Windows.Forms.ComboBox boxCuentaConApoyoAlumno_2;
+        private System.Windows.Forms.ComboBox boxPersonaConDiscapacidadAlumno_2;
+        private System.Windows.Forms.TextBox txtCargaSemanalCuidandoAlumno_2;
+        private System.Windows.Forms.TextBox txt60oMasAlumno_2;
+        private System.Windows.Forms.TextBox txt18a59Alumno_2;
+        private System.Windows.Forms.TextBox txt0a17Alumno_2;
         private System.Windows.Forms.GroupBox groupBox34;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.ComboBox comboBox13;
-        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.TextBox txtMedioAccesoInternetAlumno_2;
+        private System.Windows.Forms.ComboBox boxFacilAccesoInternetAlumno_2;
+        private System.Windows.Forms.ComboBox boxUsaInternetAlumno_2;
         private System.Windows.Forms.GroupBox groupBox35;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.ComboBox comboBox15;
-        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.TextBox txtIngresoMensualAlumno_2;
+        private System.Windows.Forms.TextBox HorasJornadaAlumno_2;
+        private System.Windows.Forms.TextBox txtTiempoDesempleadoAlumno_2;
+        private System.Windows.Forms.ComboBox boxTrabajoAlgunaVezAlumno_2;
+        private System.Windows.Forms.ComboBox boxTrabajaActualmenteAlumno_2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TabPage tabPageModificarAlumnosFinalizar;
@@ -5134,7 +5134,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.MaskedTextBox maskedTxtFechaNacimientoAlumnoNuevo;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox txtFechaNacimientoAlumno_2;
         private System.Windows.Forms.Button btnActualizarDocente;
         private System.Windows.Forms.Button btnDarDeBaja;
         private System.Windows.Forms.TabPage tabPageModificarAlumnosInformacion;
@@ -5142,57 +5142,57 @@
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox46;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblEstadoAlumno_2;
+        private System.Windows.Forms.Label lblCursoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox47;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblCantidadHjosAlumno_2;
+        private System.Windows.Forms.Label lblJefeHogarAlumno_2;
         private System.Windows.Forms.GroupBox groupBox48;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblEmailAlumno_2;
+        private System.Windows.Forms.Label lblCelularAlumno_2;
+        private System.Windows.Forms.Label lblTelefonoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox49;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label lblNApartamentoAlumno_2;
+        private System.Windows.Forms.Label lblNPuertaAlumno_2;
+        private System.Windows.Forms.Label lblReferenciaAlumno_2;
+        private System.Windows.Forms.Label lblCalleAlumno_2;
+        private System.Windows.Forms.Label lblLocalidadAlumno_2;
+        private System.Windows.Forms.Label lblDepartamentoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox50;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label lblCoberturaSaludAlumno_2;
         private System.Windows.Forms.GroupBox groupBox51;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label lblUltimoAñoAprobadoAlumno_2;
+        private System.Windows.Forms.Label lblNivelEducativoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox52;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label lblEstadoCivilAlumno_2;
+        private System.Windows.Forms.Label lblSexoAlumno_2;
+        private System.Windows.Forms.Label lblEdadAlumno_2;
+        private System.Windows.Forms.Label lblFechaNacimientoAlumno_2;
+        private System.Windows.Forms.Label lblApellido2Alumno_2;
+        private System.Windows.Forms.Label lblApellido1Alumno_2;
+        private System.Windows.Forms.Label lblNombre2Alumno_2;
+        private System.Windows.Forms.Label lblNombe1Alumno_2;
+        private System.Windows.Forms.Label lblCedulaAlumno_2;
         private System.Windows.Forms.GroupBox groupBox53;
-        private System.Windows.Forms.Label label31;
-        private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
-        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label lblExperienciaInstitucionesCuidadoAlumno_2;
+        private System.Windows.Forms.Label lblTrabajaAnteriormenteCuidandoAlumno_2;
+        private System.Windows.Forms.Label lblCuentaApoyoAlumno_2;
+        private System.Windows.Forms.Label lbl0a17Alumno_2;
+        private System.Windows.Forms.Label lblCargaSemanalCuidadoAlumno_2;
+        private System.Windows.Forms.Label lbl60oMasAlumno_2;
+        private System.Windows.Forms.Label lblPersonaConDiscapacidadAlumno_2;
+        private System.Windows.Forms.Label lbl18a59Alumno_2;
         private System.Windows.Forms.GroupBox groupBox54;
-        private System.Windows.Forms.Label label39;
-        private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label lblFacilAccesoInternetAlumno_2;
+        private System.Windows.Forms.Label lblMedioAccesoInternetAlumno_2;
+        private System.Windows.Forms.Label lblUsaInternetAlumno_2;
         private System.Windows.Forms.GroupBox groupBox55;
-        private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label lblIngresoMensualAlumno_2;
+        private System.Windows.Forms.Label lblTrabajoAlgunaVezAlumno_2;
+        private System.Windows.Forms.Label lblHorasJornadaLaboralAlumno_2;
+        private System.Windows.Forms.Label lblTrabajaActualmenteAlumno_2;
+        private System.Windows.Forms.Label lblTiempoDesempleadoAlumno_2;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnBuscar_3;
     }
 }
