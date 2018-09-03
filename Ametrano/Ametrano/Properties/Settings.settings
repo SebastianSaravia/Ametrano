@@ -17,7 +17,7 @@
     <Setting Name="ssl" Type="System.String" Scope="User">
       <Value Profile="(Default)">none</Value>
     </Setting>
-    <Setting Name="login_rol" Type="System.String" Scope="User">
+    <Setting Name="user_rol" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
     <Setting Name="user_usuario" Type="System.String" Scope="User">

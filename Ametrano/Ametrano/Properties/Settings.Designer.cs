@@ -74,12 +74,12 @@ namespace Ametrano.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string login_rol {
+        public string user_rol {
             get {
-                return ((string)(this["login_rol"]));
+                return ((string)(this["user_rol"]));
             }
             set {
-                this["login_rol"] = value;
+                this["user_rol"] = value;
             }
         }
         

@@ -58,7 +58,7 @@ namespace Ametrano.Logica
             {//Si el usuario obtenido desde la base de datos coincide con el usuario ingresado entonces se muestra el mensaje
                 Properties.Settings.Default.user_usuario = "root";
                 Properties.Settings.Default.user_contraseña = "";
-                Properties.Settings.Default.login_rol = informacionDeUsuario[1];
+                Properties.Settings.Default.user_rol = informacionDeUsuario[1];
                 Principal ventanaPrincipal = new Principal();//Creo nueva ventana principal
                 ventanaPrincipal.Show();//muestro la ventana
                 variableParaRetornar = true;

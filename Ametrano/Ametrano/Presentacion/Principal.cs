@@ -116,8 +116,8 @@ namespace Ametrano.Presentacion
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.login_rol = "";
-            Properties.Settings.Default.user_usuario = "";
+            Properties.Settings.Default.user_rol = "";
+            Properties.Settings.Default.user_usuario= "";
             Properties.Settings.Default.user_contraseña = "";
             Login.ActiveForm.Show();
         }
