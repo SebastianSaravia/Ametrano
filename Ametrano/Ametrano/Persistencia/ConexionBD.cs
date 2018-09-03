@@ -128,7 +128,7 @@ namespace Ametrano.Persistencia
         {//Geter de la conexion
             return objetoDeConexion;
         }
-        public int insertarDatos(string comandoSQL)
+        public int sqlInsertUpdate(string comandoSQL)
         {//Metodo que inserta datos en la base de datos
             int filasAfectadas= 0;//Variable que guarda las filas afectadas
             comando.CommandText = comandoSQL;

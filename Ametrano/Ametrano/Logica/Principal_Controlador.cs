@@ -22,39 +22,41 @@ namespace Ametrano.Logica
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
-        public bool ingresarDocente(string cedula,string apellido1,string apellido2,string nombre1,string nombre2,string direccion,string telefono, string email,string[] especialidades)
+        public bool ingresarDocente(string cedula, string apellido1, string apellido2, string nombre1, string nombre2, string direccion, string telefono, string email, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
             bool retorno = false;
-            string insert = "INSERT INTO DOCENTE VALUES('" + 
+            string insert = "INSERT INTO DOCENTE VALUES('" +
                 cedula + "','" +
                 nombre1 + " " +
-                nombre2 + "','" + 
+                nombre2 + "','" +
                 apellido1 + " " + //Sql de insert de docente
-                apellido2 + "','" + 
-                direccion + "','" + 
-                telefono +"','" + 
+                apellido2 + "','" +
+                direccion + "','" +
+                telefono + "','" +
                 email + "');";
 
-            int filasAfectadas = objetoConexion.insertarDatos(insert);//Se realiza el insert y se guarda la cantidad de filas afectadas
+            int filasAfectadas = objetoConexion.sqlInsertUpdate(insert);//Se realiza el insert y se guarda la cantidad de filas afectadas
             if (filasAfectadas > 0)
             {//Si el docente se ingreso correctamente
                 int filasAfectadasEspecialidad = 0;//Cantidad de especialidades ingresadas en total
                 for (int i = 0; i < especialidades.Length; i++)
                 {//Se recorre el array de especialidades y se inserta 
                     string especialidadInsert = "INSERT INTO especialidad VALUES('" + cedula + "','" + especialidades[i] + "');";
-                    objetoConexion.insertarDatos(especialidadInsert);
+                    objetoConexion.sqlInsertUpdate(especialidadInsert);
                     filasAfectadasEspecialidad++;//Si se inserta correctamente se aumenta el numero de especialidades ingresadas
                 }
 
                 if (filasAfectadasEspecialidad == especialidades.Length)
                 {//Si la cantidad de especialidades ingresadas coincide con la cantidad de especialidades recividas para ingresar se devuelve true
                     retorno = true;
-                }else
+                }
+                else
                 {
                     retorno = false;
                 }
 
-            }else
+            }
+            else
             {
                 retorno = false;
             }
@@ -63,7 +65,7 @@ namespace Ametrano.Logica
 
             return retorno;
         }
-        public dynamic[] consultarPersona(int tipoPersona,int tipoConsulta, string datoDeBusqueda) 
+        public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
         {
 
 
@@ -80,16 +82,18 @@ namespace Ametrano.Logica
              * tipoConsulta==1 -> nombre y apellido
              */
             string consulta = "";
-            if(tipoPersona == 0)
+            if (tipoPersona == 0)
             {//Si es un docente
-                if(tipoConsulta == 0)
+                if (tipoConsulta == 0)
                 {//Si es por cedula
                     consulta = "SELECT * FROM DOCENTE WHERE cedula_docente = '" + datoDeBusqueda + "';";
-                }else
+                }
+                else
                 {//Si es un nombre y apellido
                     consulta = "SELECT * FROM DOCENTE WHERE CONCAT(nombre1,' ',apellido1) LIKE = '%" + datoDeBusqueda + "%';";
                 }
-            }else
+            }
+            else
             {//Si es un alumno
                 if (tipoConsulta == 0)
                 {//Si es por cedula
@@ -100,16 +104,17 @@ namespace Ametrano.Logica
                     consulta = "SELECT * FROM ALUMNO WHERE CONCAT(nombre1,' ',apellido1) LIKE = '%" + datoDeBusqueda + "%';";
                 }
             }
-            
+
+
             MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);//Ejecuto la consulta
 
             DataTable tablaDeDatos = new DataTable();
             datos.Fill(tablaDeDatos);
-            IDictionary<string, string> mapaDeDatos = new Dictionary<string,string>();
+            IDictionary<string, string> mapaDeDatos = new Dictionary<string, string>();
 
-            foreach(DataRow row in tablaDeDatos.Rows)
+            foreach (DataRow row in tablaDeDatos.Rows)
             {
-                foreach(DataColumn column in tablaDeDatos.Columns)
+                foreach (DataColumn column in tablaDeDatos.Columns)
                 {
                     mapaDeDatos.Add(column.ColumnName.ToString(), row[column].ToString());
                     testing.MostrarMessageBox(column.ColumnName.ToString() + " --- " + row[column].ToString());
@@ -130,10 +135,47 @@ namespace Ametrano.Logica
             return datosParaRetornar;
         }
 
+        public bool darBajaPersona(int tipoPersona, string cedulaPersona)
+        {//metodo que da de baja una persona
+            bool retorno = false;
+            string update = "";
 
-        
+            /*TipoPersona explicacion:
+            * Variable que determina si la busqueda se enfoca en un docente o alumno
+            * tipoPersona==0 -> docente
+            * tipoPersona==1 -> alumno
+            */
 
-       
+            if (tipoPersona == 0)
+            {
+                update = "UPDATE DOCENTE SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+            }
+            else{
+                update = "UPDATE ALUMNO SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+            }
+            try
+            {
+                int filasAfectadas = objetoConexion.sqlInsertUpdate(update);
+                if (filasAfectadas > 0)
+                {
+                    retorno = true;
+                }else
+                {
+                    retorno = false;
+                }
+            }
+            catch(Exception e)
+            {
+                retorno = false;
+            }
+
+            return retorno;
+        }
+
+
+
+
+
 
     }
 }
