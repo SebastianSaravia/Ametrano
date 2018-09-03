@@ -48,7 +48,9 @@ namespace Ametrano.Presentacion
             boxJefeHogar.SelectedIndex = 0;
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
-
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
             foreach (Control control in this.Controls)
             {
                 PlaceholderRec(control);
@@ -101,14 +103,11 @@ namespace Ametrano.Presentacion
             maskedTxtFechaNacimientoAlumnoNuevo.Text = dia + "/" + mes + "/" + TimePickerFechaNacAlumnoNuevo.Value.Year;
 
             maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
-
         }
-
         private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador.abrirConfiguracion();
         }
-
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -117,12 +116,10 @@ namespace Ametrano.Presentacion
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.user_rol = "";
-            Properties.Settings.Default.user_usuario= "";
+            Properties.Settings.Default.user_usuario = "";
             Properties.Settings.Default.user_contraseña = "";
             Login.ActiveForm.Show();
         }
-
-
         private void placeholderEventEnter(object sender, EventArgs e)
         {
             if (sender.GetType().Name.Equals("TextBox"))//Si el componente es un textbox
@@ -161,7 +158,6 @@ namespace Ametrano.Presentacion
             }
 
         }
-
         public TextBox placeholder(TextBox componente, string evento)
         {
             string textoCuandoEstaVacio = "";
@@ -209,7 +205,6 @@ namespace Ametrano.Presentacion
 
             }
         }
-
         private void btnAñadirEspecialidad_Click(object sender, EventArgs e)
         {
             if (boxEspecialidades.SelectedIndex != -1)
@@ -221,7 +216,6 @@ namespace Ametrano.Presentacion
             }
             
         }
-
         private void btnQuitarEspecialidad_Click(object sender, EventArgs e)
         {//Evento quitar especialidad
             if(listEspecialidades.SelectedIndex != -1)
@@ -229,7 +223,6 @@ namespace Ametrano.Presentacion
                 listEspecialidades.Items.RemoveAt(listEspecialidades.SelectedIndex);
             }
         }
-
         private void btnIngresarDocente_Click(object sender, EventArgs e)
         {
             string cedula = txtCedulaDocente.Text;
@@ -256,6 +249,49 @@ namespace Ametrano.Presentacion
 
 
 
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
+            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosDeInteres);
+            tabControlIngresarAlumno.SelectedIndex = 2;
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
+            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosFinalizar);
+            tabControlIngresarAlumno.SelectedIndex = 3;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+         
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
+            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
+            tabControlIngresarAlumno.SelectedIndex = 1;
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
+            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosDeInteres);
+            tabControlIngresarAlumno.SelectedIndex = 2;
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
+            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosInformacion);
+            tabControlIngresarAlumno.SelectedIndex = 0;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosInformacion);
+            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
+            tabControlIngresarAlumno.SelectedIndex = 1;
         }
     }
 }
