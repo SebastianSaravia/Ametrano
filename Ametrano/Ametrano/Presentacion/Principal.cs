@@ -1,5 +1,6 @@
 ﻿using Ametrano.Logica;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -241,7 +242,8 @@ namespace Ametrano.Presentacion
             }
         }
         private void btnIngresarDocente_Click(object sender, EventArgs e)
-        {
+        {//Evento click del boton ingresar docente
+            //Datos personales
             string cedula = txtCedulaDocente.Text;
             string apellido1 = txtApellido1Docente.Text;
             string apellido2 = txtApellido2Docente.Text;
@@ -250,7 +252,9 @@ namespace Ametrano.Presentacion
             string direccion = txtDireccionDocente.Text;
             string telefono = txtTelefonoDocente.Text;
             string email = txtEmailDocente.Text;
-            string[] especialidades = new string[listEspecialidades.Items.Count];
+
+            string[] especialidades = new string[listEspecialidades.Items.Count];//array que guarda especialidades de el docente
+
             for(int i = 0; i < listEspecialidades.Items.Count; i++)
             {
                 especialidades[i] = listEspecialidades.Items[i].ToString();
@@ -261,6 +265,7 @@ namespace Ametrano.Presentacion
             if (insert)
             {
                 MessageBox.Show("Docente agregado correctamente");
+               
             }
 
 
@@ -311,10 +316,10 @@ namespace Ametrano.Presentacion
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
+       
 
-        }
+
+       
 
        
     }

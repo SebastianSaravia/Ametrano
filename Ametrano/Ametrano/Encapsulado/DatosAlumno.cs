@@ -40,6 +40,8 @@ namespace Ametrano.Encapsulado
             //Comienza la verificacion de errores
             bool cedulaNumerica = isNumeric(datosPersonalesRecividos[0]);
 
+
+
             dynamic[] datosParaRetornar = new dynamic[2];
             /*Explicacion del array datosParaRetornar
              * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos

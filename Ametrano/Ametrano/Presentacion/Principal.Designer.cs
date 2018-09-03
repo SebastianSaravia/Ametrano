@@ -3621,7 +3621,6 @@
             this.dateTimeFechaNacimientoAlumno_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimeFechaNacimientoAlumno_2.Size = new System.Drawing.Size(20, 24);
             this.dateTimeFechaNacimientoAlumno_2.TabIndex = 16;
-            this.dateTimeFechaNacimientoAlumno_2.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // boxSexoAlumno_2
             // 
