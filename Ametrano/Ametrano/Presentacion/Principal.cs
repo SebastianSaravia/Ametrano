@@ -63,6 +63,8 @@ namespace Ametrano.Presentacion
             boxTrabajoAlgunaVezAlumno.SelectedIndex = 0;
             boxTrabajoCuidandoAlumno.SelectedIndex = 0;
             boxLocalidadAlumno.SelectedIndex = 0;
+            boxBuscar.SelectedIndex = 0;
+            boxBuscar_2.SelectedIndex = 0;
 
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
@@ -334,10 +336,12 @@ namespace Ametrano.Presentacion
                     {
                         clearListBox((ListBox)contHijo);
 
-                    }else if (contHijo.GetType().Name.Equals("ComboBox"))
+                    }
+                    else if (contHijo.GetType().Name.Equals("ComboBox"))
                     {
                         clearComboBox((ComboBox)contHijo);
-                    }else
+                    }
+                    else
                     {
                         if (contHijo.HasChildren)
                         {
@@ -360,11 +364,53 @@ namespace Ametrano.Presentacion
 
         private void btnBuscar_2_Click(object sender, EventArgs e)
         {//Evento del boton buscar docente para dar de baja
-            string textoBusqueda = txtBuscar_2.Text;
-            int tipoBusqueda = boxBuscar_2.SelectedIndex;
+            if (boxBuscar_2.SelectedIndex == 0)
+            {
+                MessageBox.Show("Debes seleccionar un metodo de busqueda");
+            }
+            else
+            {
 
 
-           
+                string textoBusqueda = txtBuscar_2.Text;
+                int tipoBusqueda = 1;
+
+                if (boxBuscar_2.SelectedIndex == 1)
+                {
+                    tipoBusqueda = 0;
+                }
+                else if (boxBuscar_2.SelectedIndex == 2)
+                {
+                    tipoBusqueda = 1;
+                }
+
+                dynamic[] datosRecividos = controlador.consultarPersona(0, tipoBusqueda, textoBusqueda);
+
+                if (datosRecividos[0])
+                {
+                    IDictionary<string, string> datosRecividosDocente = datosRecividos[1];
+                    string cedula, nombre, apellido, email;
+                    //obtengo los datos guardados en el diccionario
+                    datosRecividosDocente.TryGetValue("cedula_docente", out cedula);
+                    datosRecividosDocente.TryGetValue("nombre", out nombre);
+                    datosRecividosDocente.TryGetValue("apellido", out apellido);
+                    datosRecividosDocente.TryGetValue("email", out email);
+
+                    lblCedulaDocente.Text = "Cedula: " + cedula;
+                    lblNombreDocente.Text = "Nombre: " + nombre;
+                    lblApellidoDocente.Text = "Apellido: " + apellido;
+                    lblEmailDocente.Text = "Email: " + email;
+
+
+
+
+                }
+
+
+
+            }
+
+
 
 
         }
