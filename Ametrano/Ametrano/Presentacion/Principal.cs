@@ -42,7 +42,7 @@ namespace Ametrano.Presentacion
 
 
         private void Principal_Load(object sender, EventArgs e)
-        {   
+        {
             boxSexoAlumno.SelectedIndex = 0;
             boxUsaInternetAlumno.SelectedIndex = 0;
             boxNivelEducativo.SelectedIndex = 0;
@@ -62,7 +62,7 @@ namespace Ametrano.Presentacion
             boxTrabajaActualmenteAlumno.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno.SelectedIndex = 0;
             boxTrabajoCuidandoAlumno.SelectedIndex = 0;
-           boxLocalidadAlumno.SelectedIndex = 0;
+            boxLocalidadAlumno.SelectedIndex = 0;
 
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
@@ -232,11 +232,11 @@ namespace Ametrano.Presentacion
                     listEspecialidades.Items.Add(boxEspecialidades.SelectedItem);
                 }
             }
-            
+
         }
         private void btnQuitarEspecialidad_Click(object sender, EventArgs e)
         {//Evento quitar especialidad
-            if(listEspecialidades.SelectedIndex != -1)
+            if (listEspecialidades.SelectedIndex != -1)
             {
                 listEspecialidades.Items.RemoveAt(listEspecialidades.SelectedIndex);
             }
@@ -255,17 +255,18 @@ namespace Ametrano.Presentacion
 
             string[] especialidades = new string[listEspecialidades.Items.Count];//array que guarda especialidades de el docente
 
-            for(int i = 0; i < listEspecialidades.Items.Count; i++)
+            for (int i = 0; i < listEspecialidades.Items.Count; i++)
             {
                 especialidades[i] = listEspecialidades.Items[i].ToString();
             }
 
 
-            bool insert = controlador.ingresarDocente(cedula, apellido1, apellido2, nombre1, nombre2, direccion, telefono, email,especialidades);
+            bool insert = controlador.ingresarDocente(cedula, apellido1, apellido2, nombre1, nombre2, direccion, telefono, email, especialidades);
             if (insert)
             {
                 MessageBox.Show("Docente agregado correctamente");
-               
+                limpiarFormulario(tabPageDocentesNuevo);
+
             }
 
 
@@ -289,7 +290,7 @@ namespace Ametrano.Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-         
+
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
             tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
             tabControlIngresarAlumno.SelectedIndex = 1;
@@ -316,11 +317,47 @@ namespace Ametrano.Presentacion
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
 
-       
+
+        public void limpiarFormulario(Control contenedor)
+        {//metodo que recorre el tabpage pasado y limpia todos los componentes a su estado original
+            {
+                foreach (Control contHijo in contenedor.Controls)
+                {
+
+                    if (contHijo.GetType().Name.Equals("TextBox"))
+                    {
+                        string textoCuandoEstaVacio = "";
+                        controlador.mapTextBox.TryGetValue(contHijo.GetHashCode().ToString(), out textoCuandoEstaVacio);
+                        contHijo.Text = textoCuandoEstaVacio;
+                    }
+                    else if (contHijo.GetType().Name.Equals("ListBox"))
+                    {
+                        clearListBox((ListBox)contHijo);
+
+                    }else if (contHijo.GetType().Name.Equals("ComboBox"))
+                    {
+                        clearComboBox((ComboBox)contHijo);
+                    }else
+                    {
+                        if (contHijo.HasChildren)
+                        {
+                            this.limpiarFormulario(contHijo);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        public void clearListBox(ListBox lista)
+        {
+            lista.Items.Clear();
+        }
+        public void clearComboBox(ComboBox box)
+        {
+            box.SelectedIndex = 0;
+        }
 
 
-       
-
-       
     }
 }
