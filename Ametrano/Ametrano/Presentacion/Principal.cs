@@ -445,6 +445,12 @@ namespace Ametrano.Presentacion
                 txtTelefonoDocente_2.Text = telefono;
                 txtEmailDocente_2.Text = email;
 
+                string[] especialidades = dato[2];
+                for (int i = 0; i < especialidades.Length; i++)
+                {
+                    listEspecialidades_2.Items.Add(especialidades[i]);
+                }
+
             }
         }
     }

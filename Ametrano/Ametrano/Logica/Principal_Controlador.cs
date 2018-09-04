@@ -98,10 +98,7 @@ namespace Ametrano.Logica
                 }
             }
 
-
-          
             MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);//Ejecuto la consulta
-
             DataTable tablaDeDatos = new DataTable();
             datos.Fill(tablaDeDatos);
             IDictionary<string, string> mapaDeDatos = new Dictionary<string, string>();
@@ -116,18 +113,51 @@ namespace Ametrano.Logica
             }
             retorno = true;
 
-            dynamic[] datosParaRetornar = new dynamic[2];
+            dynamic[] datosParaRetornar = new dynamic[3];
             /*Explicacion datosParaRetornar
              * datosParaRetornar[0] == -> variable bool que determina si la consulta se realizo con exito
              * datosParaRetornar[1] == -> IDictionary que almacena los datos
              */
 
+
+            string cedula;
+            mapaDeDatos.TryGetValue("cedula_docente", out cedula);
+
+
+
             datosParaRetornar[0] = retorno;
             datosParaRetornar[1] = mapaDeDatos;
+            if (tipoPersona == 0)
+            {
+                string consulta2 = "SELECT especialidad FROM especialidad WHERE cedula_docente='" + cedula + "'";
+                MySqlDataAdapter datoEspecialidades = objetoConexion.consultarDatos(consulta2);//Ejecuto la consulta
+                testing.MostrarMessageBox(cedula);
+
+
+                DataTable tablaDeDatoEspecialidades= new DataTable();
+                datoEspecialidades.Fill(tablaDeDatoEspecialidades);
+
+                string[] especialidad = new string[tablaDeDatoEspecialidades.Rows.Count];
+                int count = 0;
+                foreach (DataRow row in tablaDeDatoEspecialidades.Rows)
+                {
+                    foreach (DataColumn column in tablaDeDatoEspecialidades.Columns)
+                    {
+                      
+                            especialidad[count] = row[column].ToString();
+                            count++;
+                       
+                    }
+                }
+
+                datosParaRetornar[2] = especialidad;
+            }
 
 
             return datosParaRetornar;
         }
+
+
 
         public bool darBajaPersona(int tipoPersona, string cedulaPersona)
         {//metodo que da de baja una persona
@@ -144,7 +174,8 @@ namespace Ametrano.Logica
             {
                 update = "UPDATE DOCENTE SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
             }
-            else{
+            else
+            {
                 update = "UPDATE ALUMNO SET estado = 0 where cedula_alumno = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
             }
             try
@@ -153,12 +184,13 @@ namespace Ametrano.Logica
                 if (filasAfectadas > 0)
                 {
                     retorno = true;
-                }else
+                }
+                else
                 {
                     retorno = false;
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 retorno = false;
             }
