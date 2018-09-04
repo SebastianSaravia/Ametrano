@@ -1229,6 +1229,7 @@
             this.btnBuscar_2.TabIndex = 11;
             this.btnBuscar_2.Text = "Buscar";
             this.btnBuscar_2.UseVisualStyleBackColor = true;
+            this.btnBuscar_2.Click += new System.EventHandler(this.btnBuscar_2_Click);
             // 
             // txtBuscar_2
             // 
@@ -1250,8 +1251,9 @@
             this.boxBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxBuscar_2.FormattingEnabled = true;
             this.boxBuscar_2.Items.AddRange(new object[] {
-            "Nombre",
-            "Cedula"});
+            "Buscar por...",
+            "Cedula",
+            "Nombre"});
             this.boxBuscar_2.Location = new System.Drawing.Point(316, 54);
             this.boxBuscar_2.Name = "boxBuscar_2";
             this.boxBuscar_2.Size = new System.Drawing.Size(132, 26);

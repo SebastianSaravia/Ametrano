@@ -358,6 +358,15 @@ namespace Ametrano.Presentacion
             box.SelectedIndex = 0;
         }
 
+        private void btnBuscar_2_Click(object sender, EventArgs e)
+        {//Evento del boton buscar docente para dar de baja
+            string textoBusqueda = txtBuscar_2.Text;
+            int tipoBusqueda = boxBuscar_2.SelectedIndex;
 
+
+           
+
+
+        }
     }
 }

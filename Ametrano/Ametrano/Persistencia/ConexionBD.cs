@@ -138,7 +138,7 @@ namespace Ametrano.Persistencia
                 filasAfectadas = comando.ExecuteNonQuery();//ejecuto la operacion
                 objetoDeConexion.Close();
 
-                testing.MostrarMessageBox("Filas Afectadas: " + filasAfectadas);
+                //testing.MostrarMessageBox("Filas Afectadas: " + filasAfectadas);
             }
             catch (MySqlException e)
             {
