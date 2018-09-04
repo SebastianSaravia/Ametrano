@@ -22,15 +22,13 @@ namespace Ametrano.Logica
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
-        public bool ingresarDocente(string cedula, string apellido1, string apellido2, string nombre1, string nombre2, string direccion, string telefono, string email, string[] especialidades)
+        public bool ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
             bool retorno = false;
             string insert = "INSERT INTO DOCENTE VALUES('" +
                 cedula + "','" +
-                nombre1 + " " +
-                nombre2 + "','" +
-                apellido1 + " " + //Sql de insert de docente
-                apellido2 + "','" +
+                nombre + "','" +
+                apellido + "','" + //Sql de insert de docente
                 direccion + "','" +
                 telefono + "','" +
                 email + "');";
@@ -101,6 +99,7 @@ namespace Ametrano.Logica
             }
 
 
+          
             MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);//Ejecuto la consulta
 
             DataTable tablaDeDatos = new DataTable();

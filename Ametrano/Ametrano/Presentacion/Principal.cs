@@ -248,9 +248,9 @@ namespace Ametrano.Presentacion
             //Datos personales
             string cedula = txtCedulaDocente.Text;
             string apellido1 = txtApellido1Docente.Text;
-            string apellido2 = txtApellido2Docente.Text;
+           
             string nombre1 = txtNombre1Docente.Text;
-            string nombre2 = txtNombre2Docente.Text;
+           
             string direccion = txtDireccionDocente.Text;
             string telefono = txtTelefonoDocente.Text;
             string email = txtEmailDocente.Text;
@@ -263,7 +263,7 @@ namespace Ametrano.Presentacion
             }
 
 
-            bool insert = controlador.ingresarDocente(cedula, apellido1, apellido2, nombre1, nombre2, direccion, telefono, email, especialidades);
+            bool insert = controlador.ingresarDocente(cedula, apellido1, nombre1, direccion, telefono, email, especialidades);
             if (insert)
             {
                 MessageBox.Show("Docente agregado correctamente");
@@ -413,6 +413,39 @@ namespace Ametrano.Presentacion
 
 
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            int tipoBusqueda = 3;
+            if (boxBuscar.SelectedIndex == 1)
+            {
+                tipoBusqueda = 0;
+            }
+            else if (boxBuscar.SelectedIndex == 2)
+            {
+                tipoBusqueda = 1;
+            }
+            string datoDeBusqueda = txtBuscar.Text;
+            dynamic[] dato = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
+            if (dato[0] == true)
+            {
+                string cedula, nombre, apellido, direccion, telefono, email;
+                dato[1].TryGetValue("cedula_docente", out cedula);
+                dato[1].TryGetValue("nombre", out nombre);
+                dato[1].TryGetValue("apellido", out apellido);
+                dato[1].TryGetValue("direccion", out direccion);
+                dato[1].TryGetValue("telefono", out telefono);
+                dato[1].TryGetValue("email", out email);
+
+                txtCedulaDocente_2.Text = cedula;
+                txtNombre1Docente_2.Text = nombre;
+                txtApellido1Docente_2.Text = apellido;
+                txtDireccionDocente_2.Text = direccion;
+                txtTelefonoDocente_2.Text = telefono;
+                txtEmailDocente_2.Text = email;
+
+            }
         }
     }
 }

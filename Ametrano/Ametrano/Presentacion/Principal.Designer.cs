@@ -61,9 +61,6 @@
             this.txtEmailDocente = new System.Windows.Forms.TextBox();
             this.txtTelefonoDocente = new System.Windows.Forms.TextBox();
             this.txtDireccionDocente = new System.Windows.Forms.TextBox();
-            this.txtApellido2Docente = new System.Windows.Forms.TextBox();
-            this.txtApellido1Docente = new System.Windows.Forms.TextBox();
-            this.txtNombre2Docente = new System.Windows.Forms.TextBox();
             this.txtNombre1Docente = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente = new System.Windows.Forms.TextBox();
             this.tabPageDocentesConsultarModificar = new System.Windows.Forms.TabPage();
@@ -80,9 +77,7 @@
             this.txtEmailDocente_2 = new System.Windows.Forms.TextBox();
             this.txtTelefonoDocente_2 = new System.Windows.Forms.TextBox();
             this.txtDireccionDocente_2 = new System.Windows.Forms.TextBox();
-            this.txtApellido2Docente_2 = new System.Windows.Forms.TextBox();
             this.txtApellido1Docente_2 = new System.Windows.Forms.TextBox();
-            this.txtNombre2Docente_2 = new System.Windows.Forms.TextBox();
             this.txtNombre1Docente_2 = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente_2 = new System.Windows.Forms.TextBox();
             this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
@@ -386,6 +381,7 @@
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.txtApellido1Docente = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -788,9 +784,7 @@
             this.groupBox1.Controls.Add(this.txtEmailDocente);
             this.groupBox1.Controls.Add(this.txtTelefonoDocente);
             this.groupBox1.Controls.Add(this.txtDireccionDocente);
-            this.groupBox1.Controls.Add(this.txtApellido2Docente);
             this.groupBox1.Controls.Add(this.txtApellido1Docente);
-            this.groupBox1.Controls.Add(this.txtNombre2Docente);
             this.groupBox1.Controls.Add(this.txtNombre1Docente);
             this.groupBox1.Controls.Add(this.txtCedulaDocente);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -805,7 +799,7 @@
             // 
             this.txtEmailDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmailDocente.Location = new System.Drawing.Point(19, 193);
+            this.txtEmailDocente.Location = new System.Drawing.Point(19, 170);
             this.txtEmailDocente.Name = "txtEmailDocente";
             this.txtEmailDocente.Size = new System.Drawing.Size(192, 24);
             this.txtEmailDocente.TabIndex = 7;
@@ -817,7 +811,7 @@
             // 
             this.txtTelefonoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefonoDocente.Location = new System.Drawing.Point(230, 155);
+            this.txtTelefonoDocente.Location = new System.Drawing.Point(230, 124);
             this.txtTelefonoDocente.Name = "txtTelefonoDocente";
             this.txtTelefonoDocente.Size = new System.Drawing.Size(192, 24);
             this.txtTelefonoDocente.TabIndex = 6;
@@ -829,49 +823,13 @@
             // 
             this.txtDireccionDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccionDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDireccionDocente.Location = new System.Drawing.Point(19, 155);
+            this.txtDireccionDocente.Location = new System.Drawing.Point(19, 124);
             this.txtDireccionDocente.Name = "txtDireccionDocente";
             this.txtDireccionDocente.Size = new System.Drawing.Size(192, 24);
             this.txtDireccionDocente.TabIndex = 5;
             this.txtDireccionDocente.Text = "Direccion";
             this.txtDireccionDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtDireccionDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtApellido2Docente
-            // 
-            this.txtApellido2Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido2Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellido2Docente.Location = new System.Drawing.Point(230, 116);
-            this.txtApellido2Docente.Name = "txtApellido2Docente";
-            this.txtApellido2Docente.Size = new System.Drawing.Size(192, 24);
-            this.txtApellido2Docente.TabIndex = 4;
-            this.txtApellido2Docente.Text = "Segundo apellido";
-            this.txtApellido2Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtApellido2Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtApellido1Docente
-            // 
-            this.txtApellido1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellido1Docente.Location = new System.Drawing.Point(19, 116);
-            this.txtApellido1Docente.Name = "txtApellido1Docente";
-            this.txtApellido1Docente.Size = new System.Drawing.Size(192, 24);
-            this.txtApellido1Docente.TabIndex = 3;
-            this.txtApellido1Docente.Text = "Primer apellido";
-            this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtNombre2Docente
-            // 
-            this.txtNombre2Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre2Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre2Docente.Location = new System.Drawing.Point(230, 78);
-            this.txtNombre2Docente.Name = "txtNombre2Docente";
-            this.txtNombre2Docente.Size = new System.Drawing.Size(192, 24);
-            this.txtNombre2Docente.TabIndex = 2;
-            this.txtNombre2Docente.Text = "Segundo nombre";
-            this.txtNombre2Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtNombre2Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre1Docente
             // 
@@ -932,6 +890,7 @@
             this.btnBuscar.TabIndex = 8;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtBuscar
             // 
@@ -1019,9 +978,7 @@
             this.groupBox4.Controls.Add(this.txtEmailDocente_2);
             this.groupBox4.Controls.Add(this.txtTelefonoDocente_2);
             this.groupBox4.Controls.Add(this.txtDireccionDocente_2);
-            this.groupBox4.Controls.Add(this.txtApellido2Docente_2);
             this.groupBox4.Controls.Add(this.txtApellido1Docente_2);
-            this.groupBox4.Controls.Add(this.txtNombre2Docente_2);
             this.groupBox4.Controls.Add(this.txtNombre1Docente_2);
             this.groupBox4.Controls.Add(this.txtCedulaDocente_2);
             this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
@@ -1036,7 +993,7 @@
             // 
             this.txtEmailDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmailDocente_2.Location = new System.Drawing.Point(19, 193);
+            this.txtEmailDocente_2.Location = new System.Drawing.Point(19, 171);
             this.txtEmailDocente_2.Name = "txtEmailDocente_2";
             this.txtEmailDocente_2.Size = new System.Drawing.Size(192, 24);
             this.txtEmailDocente_2.TabIndex = 7;
@@ -1048,7 +1005,7 @@
             // 
             this.txtTelefonoDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefonoDocente_2.Location = new System.Drawing.Point(230, 155);
+            this.txtTelefonoDocente_2.Location = new System.Drawing.Point(217, 125);
             this.txtTelefonoDocente_2.Name = "txtTelefonoDocente_2";
             this.txtTelefonoDocente_2.Size = new System.Drawing.Size(192, 24);
             this.txtTelefonoDocente_2.TabIndex = 6;
@@ -1060,7 +1017,7 @@
             // 
             this.txtDireccionDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccionDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDireccionDocente_2.Location = new System.Drawing.Point(19, 155);
+            this.txtDireccionDocente_2.Location = new System.Drawing.Point(19, 125);
             this.txtDireccionDocente_2.Name = "txtDireccionDocente_2";
             this.txtDireccionDocente_2.Size = new System.Drawing.Size(192, 24);
             this.txtDireccionDocente_2.TabIndex = 5;
@@ -1068,41 +1025,17 @@
             this.txtDireccionDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtDireccionDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // txtApellido2Docente_2
-            // 
-            this.txtApellido2Docente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido2Docente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellido2Docente_2.Location = new System.Drawing.Point(230, 116);
-            this.txtApellido2Docente_2.Name = "txtApellido2Docente_2";
-            this.txtApellido2Docente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtApellido2Docente_2.TabIndex = 4;
-            this.txtApellido2Docente_2.Text = "Segundo apellido";
-            this.txtApellido2Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtApellido2Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
             // txtApellido1Docente_2
             // 
             this.txtApellido1Docente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido1Docente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellido1Docente_2.Location = new System.Drawing.Point(19, 116);
+            this.txtApellido1Docente_2.Location = new System.Drawing.Point(217, 78);
             this.txtApellido1Docente_2.Name = "txtApellido1Docente_2";
             this.txtApellido1Docente_2.Size = new System.Drawing.Size(192, 24);
             this.txtApellido1Docente_2.TabIndex = 3;
-            this.txtApellido1Docente_2.Text = "Primer apellido";
+            this.txtApellido1Docente_2.Text = "Apellido";
             this.txtApellido1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtNombre2Docente_2
-            // 
-            this.txtNombre2Docente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre2Docente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre2Docente_2.Location = new System.Drawing.Point(230, 78);
-            this.txtNombre2Docente_2.Name = "txtNombre2Docente_2";
-            this.txtNombre2Docente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtNombre2Docente_2.TabIndex = 2;
-            this.txtNombre2Docente_2.Text = "Segundo nombre";
-            this.txtNombre2Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtNombre2Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre1Docente_2
             // 
@@ -1112,7 +1045,7 @@
             this.txtNombre1Docente_2.Name = "txtNombre1Docente_2";
             this.txtNombre1Docente_2.Size = new System.Drawing.Size(192, 24);
             this.txtNombre1Docente_2.TabIndex = 1;
-            this.txtNombre1Docente_2.Text = "Primer nombre";
+            this.txtNombre1Docente_2.Text = "Nombre";
             this.txtNombre1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
@@ -4678,6 +4611,18 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
             // 
+            // txtApellido1Docente
+            // 
+            this.txtApellido1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApellido1Docente.Location = new System.Drawing.Point(230, 78);
+            this.txtApellido1Docente.Name = "txtApellido1Docente";
+            this.txtApellido1Docente.Size = new System.Drawing.Size(192, 24);
+            this.txtApellido1Docente.TabIndex = 3;
+            this.txtApellido1Docente.Text = "Primer apellido";
+            this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4861,9 +4806,6 @@
         private System.Windows.Forms.TextBox txtEmailDocente;
         private System.Windows.Forms.TextBox txtTelefonoDocente;
         private System.Windows.Forms.TextBox txtDireccionDocente;
-        private System.Windows.Forms.TextBox txtApellido2Docente;
-        private System.Windows.Forms.TextBox txtApellido1Docente;
-        private System.Windows.Forms.TextBox txtNombre2Docente;
         private System.Windows.Forms.TextBox txtNombre1Docente;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnQuitarEspecialidad;
@@ -4884,9 +4826,7 @@
         private System.Windows.Forms.TextBox txtEmailDocente_2;
         private System.Windows.Forms.TextBox txtTelefonoDocente_2;
         private System.Windows.Forms.TextBox txtDireccionDocente_2;
-        private System.Windows.Forms.TextBox txtApellido2Docente_2;
         private System.Windows.Forms.TextBox txtApellido1Docente_2;
-        private System.Windows.Forms.TextBox txtNombre2Docente_2;
         private System.Windows.Forms.TextBox txtNombre1Docente_2;
         private System.Windows.Forms.TextBox txtCedulaDocente_2;
         private System.Windows.Forms.Button btnBuscar;
@@ -5195,5 +5135,6 @@
         private System.Windows.Forms.Label lblTiempoDesempleadoAlumno_2;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnBuscar_3;
+        private System.Windows.Forms.TextBox txtApellido1Docente;
     }
 }
