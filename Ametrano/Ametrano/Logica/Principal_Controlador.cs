@@ -60,9 +60,6 @@ namespace Ametrano.Logica
             {
                 retorno = false;
             }
-
-
-
             return retorno;
         }
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
