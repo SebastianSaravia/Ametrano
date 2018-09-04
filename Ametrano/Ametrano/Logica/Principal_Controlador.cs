@@ -146,7 +146,7 @@ namespace Ametrano.Logica
                 update = "UPDATE DOCENTE SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
             }
             else{
-                update = "UPDATE ALUMNO SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+                update = "UPDATE ALUMNO SET estado = 0 where cedula_alumno = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
             }
             try
             {
