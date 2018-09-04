@@ -81,6 +81,7 @@
     <Compile Include="Logica\TestingClass.cs" />
     <Compile Include="Persistencia\ConexionBD.cs" />
     <Compile Include="Logica\Login_Controlador.cs" />
+    <Compile Include="Persistencia\ConsultasSQL.cs" />
     <Compile Include="Presentacion\Configuracion.cs">
       <SubType>Form</SubType>
     </Compile>
