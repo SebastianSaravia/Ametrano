@@ -67,8 +67,6 @@ namespace Ametrano.Logica
         }
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
         {
-
-
             bool retorno = false; //Variable de retorno
             /*TipoPersona explicacion:
              * Variable que determina si la busqueda se enfoca en un docente o alumno
