@@ -118,6 +118,53 @@ namespace Ametrano.Encapsulado
 
             return datosParaRetornar;
         }
+        public dynamic[] setCurso(string[] datosCursoRecibidos)
+        {//metodo que guarda los datos del curso
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+
+            datosCurso[0] = datosCursoRecibidos[0];
+            datosCurso[1] = datosCursoRecibidos[1];
+            errores = false;
+
+
+
+
+
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+        public dynamic[] setFormacionAcademica(string[] datosFormacionAcademicaRecibidos)
+        {//metodo que guarda los datos de formacion academica
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+
+
+            
+            
+            
+
+
+
+
+
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
 
         
         public bool isNumeric(string str)
