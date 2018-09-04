@@ -34,13 +34,78 @@ namespace Ametrano.Encapsulado
              */
 
             //Creacion de variables para uso general
-            string mensajeParaRetornar = "";
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
             bool errores = false;
 
-            //Comienza la verificacion de errores
+            //Comienza la verificacion de cedula
             bool cedulaNumerica = isNumeric(datosPersonalesRecividos[0]);
 
+            if (cedulaNumerica)
+            {//Si se cumplen todas las condiciones
+                datosPersonales[0] = datosPersonalesRecividos[0];
+            }else
+            {
+                mensajeParaRetornar += "\n La cedula contiene caracteres no permitidos";
+            }
 
+            //Comienza la verificacion de nombre1
+            bool nombre1ConInt = intInString(datosPersonalesRecividos[1]);
+            if (!nombre1ConInt)
+            {
+                datosPersonales[1] = datosPersonalesRecividos[1];
+            }else
+            {
+                mensajeParaRetornar += "\n El primer nombre contiene numeros o caracteres no permitidos";
+            }
+            //Comienza la verificacion de nombre2
+            bool nombre2ConInt = intInString(datosPersonalesRecividos[2]);
+            if (!nombre2ConInt)
+            {
+                datosPersonales[2] = datosPersonalesRecividos[2];
+            }else
+            {
+                mensajeParaRetornar += "\n El segundo nombre contiene numeros o caracteres no permitidos";
+            }
+            //Comienza la verificacion de apellido1
+            bool apellido1ConInt = intInString(datosPersonalesRecividos[3]);
+            if (!apellido1ConInt)
+            {
+                datosPersonales[3] = datosPersonalesRecividos[3];
+            }
+            else
+            {
+                mensajeParaRetornar += "\n El primer aoellido contiene numeros o caracteres no permitidos";
+            }
+            //Comienza la verificacion de apellido2
+            bool apellido2ConInt = intInString(datosPersonalesRecividos[4]);
+            if (!apellido1ConInt)
+            {
+                datosPersonales[4] = datosPersonalesRecividos[4];
+            }
+            else
+            {
+                mensajeParaRetornar += "\n El segundo aoellido contiene numeros o caracteres no permitidos";
+            }
+            //Comienza la verificacion de edad
+            bool intEdad = isNumeric(datosPersonalesRecividos[6]);
+            if (intEdad)
+            {
+                datosPersonales[6] = datosPersonalesRecividos[6];
+            }
+            else
+            {
+                mensajeParaRetornar += "\n La edad contiene texto  o caracteres no permitidos";
+            }
+
+            if (datosPersonalesRecividos[7].Equals("H") || datosPersonalesRecividos[7].Equals("M"))
+            {
+                datosPersonales[7] = datosPersonalesRecividos[7];
+            }else
+            {
+                mensajeParaRetornar += "\n El sexo debe ser hombre o mujer";
+            }
+            datosPersonales[5] = datosPersonalesRecividos[5];
+            datosPersonales[8] = datosPersonalesRecividos[8];
 
             dynamic[] datosParaRetornar = new dynamic[2];
             /*Explicacion del array datosParaRetornar
