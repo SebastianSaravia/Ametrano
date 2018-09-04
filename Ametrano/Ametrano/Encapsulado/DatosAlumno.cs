@@ -8,10 +8,10 @@ namespace Ametrano.Encapsulado
 {
     class DatosAlumno
     {
-        private string[] datosPersonales = new string[9];
-        private string[] datosCurso = new string[2];
-        private string[] formacionAcademica = new string[2];
-        private string[] direccion = new string[6];
+        private string[] datosPersonales = new string[9];//
+        private string[] datosCurso = new string[2];//
+        private string[] formacionAcademica = new string[2];//
+        private string[] direccion = new string[6];//
         private string[] contacto = new string[3];
         private string coberturaSalud = "";
         private string[] hogar = new string[2];
@@ -146,15 +146,47 @@ namespace Ametrano.Encapsulado
             string mensajeParaRetornar = "Error encontrado en los siguientes campos";
             bool errores = false;
 
+            formacionAcademica[0] = datosFormacionAcademicaRecibidos[0];
+            formacionAcademica[1] = datosFormacionAcademicaRecibidos[1];
 
             
             
-            
 
 
 
 
 
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+
+        public dynamic[] setDireccion(string[] datosDireccionRecibidos)
+        {//Metodo que almacena la direccion 
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+            /*Explicacion del array datosPersonalesRecividos
+             * direccion[0] = -> Departamento
+             * direccion[1] = -> Localidad
+             * direccion[2] = -> Calle
+             * direccion[3] = -> Referencia
+             * direccion[4] = -> Numero de puerta
+             * direccion[5] = -> Apartamento
+             */
+
+            //Guardo los datos
+            direccion[0] = datosDireccionRecibidos[0];
+            direccion[1] = datosDireccionRecibidos[1];
+            direccion[2] = datosDireccionRecibidos[2];
+            direccion[3] = datosDireccionRecibidos[3];
+            direccion[4] = datosDireccionRecibidos[4];
+            direccion[5] = datosDireccionRecibidos[5];
 
             dynamic[] datosParaRetornar = new dynamic[2];
             /*Explicacion del array datosParaRetornar
