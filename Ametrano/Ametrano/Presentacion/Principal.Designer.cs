@@ -75,6 +75,8 @@
             this.listEspecialidades_2 = new System.Windows.Forms.ListBox();
             this.boxEspecialidades_2 = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnCambiarEstadoDocente = new System.Windows.Forms.Button();
+            this.lblEstadoDocente = new System.Windows.Forms.Label();
             this.txtEmailDocente_2 = new System.Windows.Forms.TextBox();
             this.txtTelefonoDocente_2 = new System.Windows.Forms.TextBox();
             this.txtDireccionDocente_2 = new System.Windows.Forms.TextBox();
@@ -381,14 +383,20 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.dataGridViaticos = new System.Windows.Forms.DataGridView();
+            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.colCedulaAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNombreAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiaAlumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblEstadoDocente = new System.Windows.Forms.Label();
-            this.btnCambiarEstadoDocente = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -472,7 +480,7 @@
             this.pageCursos.SuspendLayout();
             this.tabControlCursos.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1011,6 +1019,26 @@
             this.groupBox4.TabIndex = 3;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Datos personales";
+            // 
+            // btnCambiarEstadoDocente
+            // 
+            this.btnCambiarEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarEstadoDocente.Location = new System.Drawing.Point(337, 169);
+            this.btnCambiarEstadoDocente.Name = "btnCambiarEstadoDocente";
+            this.btnCambiarEstadoDocente.Size = new System.Drawing.Size(72, 29);
+            this.btnCambiarEstadoDocente.TabIndex = 9;
+            this.btnCambiarEstadoDocente.Text = "Cambiar";
+            this.btnCambiarEstadoDocente.UseVisualStyleBackColor = true;
+            // 
+            // lblEstadoDocente
+            // 
+            this.lblEstadoDocente.AutoSize = true;
+            this.lblEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoDocente.Location = new System.Drawing.Point(226, 174);
+            this.lblEstadoDocente.Name = "lblEstadoDocente";
+            this.lblEstadoDocente.Size = new System.Drawing.Size(59, 18);
+            this.lblEstadoDocente.TabIndex = 8;
+            this.lblEstadoDocente.Text = "Estado:";
             // 
             // txtEmailDocente_2
             // 
@@ -4618,13 +4646,102 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage1.Controls.Add(this.dataGridView1);
+            this.tabPage1.Controls.Add(this.label8);
+            this.tabPage1.Controls.Add(this.button8);
+            this.tabPage1.Controls.Add(this.label6);
+            this.tabPage1.Controls.Add(this.label7);
+            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.dataGridViaticos);
+            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.listAlumnosViaticos);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(1089, 521);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Viaticos";
+            // 
+            // dataGridViaticos
+            // 
+            this.dataGridViaticos.AllowUserToAddRows = false;
+            this.dataGridViaticos.AllowUserToDeleteRows = false;
+            this.dataGridViaticos.AllowUserToResizeColumns = false;
+            this.dataGridViaticos.AllowUserToResizeRows = false;
+            this.dataGridViaticos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViaticos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViaticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colFechaViaticos,
+            this.colMontoViaticos,
+            this.colRubroViaticos,
+            this.colConceptoViaticos,
+            this.colAbonoViaticos});
+            this.dataGridViaticos.Location = new System.Drawing.Point(257, 77);
+            this.dataGridViaticos.Name = "dataGridViaticos";
+            this.dataGridViaticos.ReadOnly = true;
+            this.dataGridViaticos.RowHeadersVisible = false;
+            this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
+            this.dataGridViaticos.TabIndex = 28;
+            // 
+            // colFechaViaticos
+            // 
+            this.colFechaViaticos.Frozen = true;
+            this.colFechaViaticos.HeaderText = "Fecha";
+            this.colFechaViaticos.Name = "colFechaViaticos";
+            this.colFechaViaticos.ReadOnly = true;
+            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colMontoViaticos
+            // 
+            this.colMontoViaticos.Frozen = true;
+            this.colMontoViaticos.HeaderText = "Monto";
+            this.colMontoViaticos.Name = "colMontoViaticos";
+            this.colMontoViaticos.ReadOnly = true;
+            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colRubroViaticos
+            // 
+            this.colRubroViaticos.Frozen = true;
+            this.colRubroViaticos.HeaderText = "Rubro";
+            this.colRubroViaticos.Name = "colRubroViaticos";
+            this.colRubroViaticos.ReadOnly = true;
+            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colConceptoViaticos
+            // 
+            this.colConceptoViaticos.Frozen = true;
+            this.colConceptoViaticos.HeaderText = "Concepto";
+            this.colConceptoViaticos.Name = "colConceptoViaticos";
+            this.colConceptoViaticos.ReadOnly = true;
+            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAbonoViaticos
+            // 
+            this.colAbonoViaticos.Frozen = true;
+            this.colAbonoViaticos.HeaderText = "Abonado";
+            this.colAbonoViaticos.Name = "colAbonoViaticos";
+            this.colAbonoViaticos.ReadOnly = true;
+            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.Items.AddRange(new object[] {
+            "Curso..."});
+            this.comboBox1.Location = new System.Drawing.Point(39, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(203, 26);
+            this.comboBox1.TabIndex = 27;
+            // 
+            // listAlumnosViaticos
+            // 
+            this.listAlumnosViaticos.FormattingEnabled = true;
+            this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 77);
+            this.listAlumnosViaticos.Name = "listAlumnosViaticos";
+            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 407);
+            this.listAlumnosViaticos.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -4636,69 +4753,55 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
             // 
-            // dataGridView1
+            // label5
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCedulaAlumno,
-            this.colNombreAlumno,
-            this.colFechaAlumno,
-            this.colDiaAlumno});
-            this.dataGridView1.Location = new System.Drawing.Point(399, 108);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
-            this.dataGridView1.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(788, 104);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 18);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Nombre:";
             // 
-            // colCedulaAlumno
+            // label6
             // 
-            this.colCedulaAlumno.Frozen = true;
-            this.colCedulaAlumno.HeaderText = "Cedula";
-            this.colCedulaAlumno.Name = "colCedulaAlumno";
-            this.colCedulaAlumno.ReadOnly = true;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(788, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 18);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Monto por día asistido:";
             // 
-            // colNombreAlumno
+            // label7
             // 
-            this.colNombreAlumno.Frozen = true;
-            this.colNombreAlumno.HeaderText = "Nombre";
-            this.colNombreAlumno.Name = "colNombreAlumno";
-            this.colNombreAlumno.ReadOnly = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(788, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 18);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Cedula:";
             // 
-            // colFechaAlumno
+            // button8
             // 
-            this.colFechaAlumno.Frozen = true;
-            this.colFechaAlumno.HeaderText = "Fecha";
-            this.colFechaAlumno.Name = "colFechaAlumno";
-            this.colFechaAlumno.ReadOnly = true;
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(257, 455);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(122, 29);
+            this.button8.TabIndex = 31;
+            this.button8.Text = "Añadir semana";
+            this.button8.UseVisualStyleBackColor = true;
             // 
-            // colDiaAlumno
+            // label8
             // 
-            this.colDiaAlumno.Frozen = true;
-            this.colDiaAlumno.HeaderText = "Día";
-            this.colDiaAlumno.Name = "colDiaAlumno";
-            this.colDiaAlumno.ReadOnly = true;
-            // 
-            // lblEstadoDocente
-            // 
-            this.lblEstadoDocente.AutoSize = true;
-            this.lblEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoDocente.Location = new System.Drawing.Point(226, 174);
-            this.lblEstadoDocente.Name = "lblEstadoDocente";
-            this.lblEstadoDocente.Size = new System.Drawing.Size(59, 18);
-            this.lblEstadoDocente.TabIndex = 8;
-            this.lblEstadoDocente.Text = "Estado:";
-            // 
-            // btnCambiarEstadoDocente
-            // 
-            this.btnCambiarEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarEstadoDocente.Location = new System.Drawing.Point(337, 169);
-            this.btnCambiarEstadoDocente.Name = "btnCambiarEstadoDocente";
-            this.btnCambiarEstadoDocente.Size = new System.Drawing.Size(72, 29);
-            this.btnCambiarEstadoDocente.TabIndex = 9;
-            this.btnCambiarEstadoDocente.Text = "Cambiar";
-            this.btnCambiarEstadoDocente.UseVisualStyleBackColor = true;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(788, 158);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 18);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Monto total a pagar:";
             // 
             // Principal
             // 
@@ -4855,7 +4958,8 @@
             this.pageCursos.ResumeLayout(false);
             this.tabControlCursos.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5217,10 +5321,18 @@
         private System.Windows.Forms.TextBox txtApellido1Docente;
         private System.Windows.Forms.Button btnCambiarEstadoDocente;
         private System.Windows.Forms.Label lblEstadoDocente;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCedulaAlumno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAlumno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaAlumno;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDiaAlumno;
+        private System.Windows.Forms.DataGridView dataGridViaticos;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox listAlumnosViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
     }
 }
