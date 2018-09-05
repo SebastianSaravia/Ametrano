@@ -15,13 +15,13 @@ namespace Ametrano.Logica
         TestingClass testing = new TestingClass();//--------------------------------------
         public IDictionary<string, string> mapTextBox = new Dictionary<string, string>();
         ConexionBD objetoConexion = new ConexionBD();
-        
+
+
         public void abrirConfiguracion()
         {
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
-
         public bool ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
             bool retorno = false;
@@ -60,7 +60,6 @@ namespace Ametrano.Logica
             }
             return retorno;
         }
-
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
         {
             bool retorno = false; //Variable de retorno
@@ -105,7 +104,7 @@ namespace Ametrano.Logica
             try
             {
                 datos.Fill(tablaDeDatos);//Se llena el datatable con los datos de la base de datos
-               
+
                 foreach (DataRow row in tablaDeDatos.Rows)
                 {
                     foreach (DataColumn column in tablaDeDatos.Columns)
@@ -116,15 +115,15 @@ namespace Ametrano.Logica
                 }
                 retorno = true;
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 retorno = false;
-                if(tablaDeDatos.Rows.Count == 0)
+                if (tablaDeDatos.Rows.Count == 0)
                 {
                     testing.MostrarMessageBox("No se encontraron usuarios que coincidan con: " + datoDeBusqueda);
                 }
             }
-            
+
 
             dynamic[] datosParaRetornar = new dynamic[3];
             /*Explicacion datosParaRetornar
@@ -146,7 +145,7 @@ namespace Ametrano.Logica
                 MySqlDataAdapter datoEspecialidades = objetoConexion.consultarDatos(consulta2);//Ejecuto la consulta
 
 
-                DataTable tablaDeDatoEspecialidades= new DataTable();
+                DataTable tablaDeDatoEspecialidades = new DataTable();
                 datoEspecialidades.Fill(tablaDeDatoEspecialidades);
 
                 string[] especialidad = new string[tablaDeDatoEspecialidades.Rows.Count];
@@ -155,10 +154,10 @@ namespace Ametrano.Logica
                 {
                     foreach (DataColumn column in tablaDeDatoEspecialidades.Columns)
                     {
-                      
-                            especialidad[count] = row[column].ToString();
-                            count++;
-                       
+
+                        especialidad[count] = row[column].ToString();
+                        count++;
+
                     }
                 }
 
@@ -168,8 +167,10 @@ namespace Ametrano.Logica
 
             return datosParaRetornar;
         }
-                
-        public bool darBajaPersona(int tipoPersona, string cedulaPersona)
+
+
+
+        public bool cambiarEstadoPersona(int bajaAlta, int tipoPersona, string cedulaPersona)
         {//metodo que da de baja una persona
             bool retorno = false;
             string update = "";
@@ -180,13 +181,32 @@ namespace Ametrano.Logica
             * tipoPersona==1 -> alumno
             */
 
-            if (tipoPersona == 0)
-            {
-                update = "UPDATE DOCENTE SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+            /*bajaAlta explicación
+             * bajaAlta = 0 -> baja
+             * bajaAlta = 1 -> alta
+             */
+
+            if (bajaAlta == 0)
+            {//Si se esta dando de baja a la persona en cuestion
+                if (tipoPersona == 0)
+                {
+                    update = "UPDATE DOCENTE SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+                }
+                else
+                {
+                    update = "UPDATE ALUMNO SET estado = 0 where cedula_alumno = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+                }
             }
             else
-            {
-                update = "UPDATE ALUMNO SET estado = 0 where cedula_alumno = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+            {//Si se esta dando de alta a la persona en cuestion
+                if (tipoPersona == 0)
+                {
+                    update = "UPDATE DOCENTE SET estado = 1 where cedula_docente = '" + cedulaPersona + "'";
+                }
+                else
+                {
+                    update = "UPDATE ALUMNO SET estado = 1 where cedula_alumno = '" + cedulaPersona + "'";
+                }
             }
             try
             {
@@ -203,6 +223,7 @@ namespace Ametrano.Logica
             catch (Exception e)
             {
                 retorno = false;
+                testing.MostrarMessageBox("ERROR AL DAR DE BAJA O ALTA A LA PERSONA");
             }
 
             return retorno;

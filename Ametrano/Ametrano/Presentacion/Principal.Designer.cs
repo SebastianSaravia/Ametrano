@@ -383,6 +383,11 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
+            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
+            this.lmlMontoDiaViaticos = new System.Windows.Forms.Label();
+            this.lblCedulaViaticos = new System.Windows.Forms.Label();
+            this.lblNombreViaticos = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
             this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -392,11 +397,6 @@
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lblNombreViaticos = new System.Windows.Forms.Label();
-            this.lmlMontoDiaViaticos = new System.Windows.Forms.Label();
-            this.lblCedulaViaticos = new System.Windows.Forms.Label();
-            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
-            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -941,8 +941,9 @@
             this.boxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxBuscar.FormattingEnabled = true;
             this.boxBuscar.Items.AddRange(new object[] {
-            "Nombre",
-            "Cedula"});
+            "Buscar por...",
+            "Cedula",
+            "Nombre y apellido"});
             this.boxBuscar.Location = new System.Drawing.Point(363, 50);
             this.boxBuscar.Name = "boxBuscar";
             this.boxBuscar.Size = new System.Drawing.Size(132, 26);
@@ -1238,7 +1239,7 @@
             this.boxBuscar_2.Items.AddRange(new object[] {
             "Buscar por...",
             "Cedula",
-            "Nombre"});
+            "Nombre y apellido"});
             this.boxBuscar_2.Location = new System.Drawing.Point(316, 54);
             this.boxBuscar_2.Name = "boxBuscar_2";
             this.boxBuscar_2.Size = new System.Drawing.Size(132, 26);
@@ -4661,6 +4662,56 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Viaticos";
             // 
+            // lblMontoTotalViaticos
+            // 
+            this.lblMontoTotalViaticos.AutoSize = true;
+            this.lblMontoTotalViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoTotalViaticos.Location = new System.Drawing.Point(788, 158);
+            this.lblMontoTotalViaticos.Name = "lblMontoTotalViaticos";
+            this.lblMontoTotalViaticos.Size = new System.Drawing.Size(160, 18);
+            this.lblMontoTotalViaticos.TabIndex = 32;
+            this.lblMontoTotalViaticos.Text = "Monto total a pagar:";
+            // 
+            // btnAñadirSemanaViaticos
+            // 
+            this.btnAñadirSemanaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 455);
+            this.btnAñadirSemanaViaticos.Name = "btnAñadirSemanaViaticos";
+            this.btnAñadirSemanaViaticos.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadirSemanaViaticos.TabIndex = 31;
+            this.btnAñadirSemanaViaticos.Text = "Añadir semana";
+            this.btnAñadirSemanaViaticos.UseVisualStyleBackColor = true;
+            // 
+            // lmlMontoDiaViaticos
+            // 
+            this.lmlMontoDiaViaticos.AutoSize = true;
+            this.lmlMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lmlMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
+            this.lmlMontoDiaViaticos.Name = "lmlMontoDiaViaticos";
+            this.lmlMontoDiaViaticos.Size = new System.Drawing.Size(182, 18);
+            this.lmlMontoDiaViaticos.TabIndex = 30;
+            this.lmlMontoDiaViaticos.Text = "Monto por día asistido:";
+            // 
+            // lblCedulaViaticos
+            // 
+            this.lblCedulaViaticos.AutoSize = true;
+            this.lblCedulaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedulaViaticos.Location = new System.Drawing.Point(788, 77);
+            this.lblCedulaViaticos.Name = "lblCedulaViaticos";
+            this.lblCedulaViaticos.Size = new System.Drawing.Size(65, 18);
+            this.lblCedulaViaticos.TabIndex = 29;
+            this.lblCedulaViaticos.Text = "Cedula:";
+            // 
+            // lblNombreViaticos
+            // 
+            this.lblNombreViaticos.AutoSize = true;
+            this.lblNombreViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreViaticos.Location = new System.Drawing.Point(788, 104);
+            this.lblNombreViaticos.Name = "lblNombreViaticos";
+            this.lblNombreViaticos.Size = new System.Drawing.Size(73, 18);
+            this.lblNombreViaticos.TabIndex = 29;
+            this.lblNombreViaticos.Text = "Nombre:";
+            // 
             // dataGridViaticos
             // 
             this.dataGridViaticos.AllowUserToAddRows = false;
@@ -4752,56 +4803,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1089, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
-            // 
-            // lblNombreViaticos
-            // 
-            this.lblNombreViaticos.AutoSize = true;
-            this.lblNombreViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreViaticos.Location = new System.Drawing.Point(788, 104);
-            this.lblNombreViaticos.Name = "lblNombreViaticos";
-            this.lblNombreViaticos.Size = new System.Drawing.Size(73, 18);
-            this.lblNombreViaticos.TabIndex = 29;
-            this.lblNombreViaticos.Text = "Nombre:";
-            // 
-            // lmlMontoDiaViaticos
-            // 
-            this.lmlMontoDiaViaticos.AutoSize = true;
-            this.lmlMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lmlMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
-            this.lmlMontoDiaViaticos.Name = "lmlMontoDiaViaticos";
-            this.lmlMontoDiaViaticos.Size = new System.Drawing.Size(182, 18);
-            this.lmlMontoDiaViaticos.TabIndex = 30;
-            this.lmlMontoDiaViaticos.Text = "Monto por día asistido:";
-            // 
-            // lblCedulaViaticos
-            // 
-            this.lblCedulaViaticos.AutoSize = true;
-            this.lblCedulaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaViaticos.Location = new System.Drawing.Point(788, 77);
-            this.lblCedulaViaticos.Name = "lblCedulaViaticos";
-            this.lblCedulaViaticos.Size = new System.Drawing.Size(65, 18);
-            this.lblCedulaViaticos.TabIndex = 29;
-            this.lblCedulaViaticos.Text = "Cedula:";
-            // 
-            // btnAñadirSemanaViaticos
-            // 
-            this.btnAñadirSemanaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 455);
-            this.btnAñadirSemanaViaticos.Name = "btnAñadirSemanaViaticos";
-            this.btnAñadirSemanaViaticos.Size = new System.Drawing.Size(122, 29);
-            this.btnAñadirSemanaViaticos.TabIndex = 31;
-            this.btnAñadirSemanaViaticos.Text = "Añadir semana";
-            this.btnAñadirSemanaViaticos.UseVisualStyleBackColor = true;
-            // 
-            // lblMontoTotalViaticos
-            // 
-            this.lblMontoTotalViaticos.AutoSize = true;
-            this.lblMontoTotalViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoTotalViaticos.Location = new System.Drawing.Point(788, 158);
-            this.lblMontoTotalViaticos.Name = "lblMontoTotalViaticos";
-            this.lblMontoTotalViaticos.Size = new System.Drawing.Size(160, 18);
-            this.lblMontoTotalViaticos.TabIndex = 32;
-            this.lblMontoTotalViaticos.Text = "Monto total a pagar:";
             // 
             // Principal
             // 

@@ -18,8 +18,10 @@ namespace Ametrano.Presentacion
     {
         private Principal_Controlador controlador = new Principal_Controlador();
 
-        private dynamic[] eventoClickBorrar = new dynamic[2];
-        
+        private dynamic[] eventoClickBuscarBajaDocente = new dynamic[2];
+        private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
+
+
         public Principal()
         {
             InitializeComponent();
@@ -266,9 +268,9 @@ namespace Ametrano.Presentacion
             //Datos personales
             string cedula = txtCedulaDocente.Text;
             string apellido1 = txtApellido1Docente.Text;
-           
+
             string nombre1 = txtNombre1Docente.Text;
-           
+
             string direccion = txtDireccionDocente.Text;
             string telefono = txtTelefonoDocente.Text;
             string email = txtEmailDocente.Text;
@@ -337,7 +339,7 @@ namespace Ametrano.Presentacion
             tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
-        
+
         public void limpiarFormulario(Control contenedor)
         {//metodo que recorre el tabpage pasado y limpia todos los componentes a su estado original
             {
@@ -378,7 +380,10 @@ namespace Ametrano.Presentacion
 
         public void clearComboBox(ComboBox box)
         {
-            box.SelectedIndex = 0;
+            if (box.Items.Count > 0)
+            {
+                box.SelectedIndex = 0;
+            }
         }
 
         private void btnBuscar_2_Click(object sender, EventArgs e)
@@ -420,11 +425,15 @@ namespace Ametrano.Presentacion
                     lblApellidoDocente.Text = "Apellido: " + apellido;
                     lblEmailDocente.Text = "Email: " + email;
 
-                    eventoClickBorrar[0] = true;
-                    eventoClickBorrar[1] = cedula;
+                    eventoClickBuscarBajaDocente[0] = true;
+                    eventoClickBuscarBajaDocente[1] = cedula;
 
 
 
+                }
+                else
+                {
+                    MessageBox.Show("No se ha encontrado a la persona");
                 }
 
 
@@ -438,6 +447,7 @@ namespace Ametrano.Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
+
             int tipoBusqueda = 3;
             if (boxBuscar.SelectedIndex == 1)
             {
@@ -449,15 +459,27 @@ namespace Ametrano.Presentacion
             }
             string datoDeBusqueda = txtBuscar.Text;
             dynamic[] dato = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
+            //try
+            //{
             if (dato[0] == true)
             {
-                string cedula, nombre, apellido, direccion, telefono, email;
+                limpiarFormulario(tabPageDocentesConsultarModificar);
+                string cedula, nombre, apellido, direccion, telefono, email, estado;
                 dato[1].TryGetValue("cedula_docente", out cedula);
                 dato[1].TryGetValue("nombre", out nombre);
                 dato[1].TryGetValue("apellido", out apellido);
                 dato[1].TryGetValue("direccion", out direccion);
                 dato[1].TryGetValue("telefono", out telefono);
                 dato[1].TryGetValue("email", out email);
+                dato[1].TryGetValue("estado", out estado);
+                if (estado == "1")
+                {
+                    btnCambiarEstadoDocente.Visible = false;
+                }
+                else
+                {
+                    btnCambiarEstadoDocente.Visible = true;
+                }
 
                 txtCedulaDocente_2.Text = cedula;
                 txtNombre1Docente_2.Text = nombre;
@@ -465,6 +487,18 @@ namespace Ametrano.Presentacion
                 txtDireccionDocente_2.Text = direccion;
                 txtTelefonoDocente_2.Text = telefono;
                 txtEmailDocente_2.Text = email;
+                if (estado.Equals("0"))
+                {
+                    estado = "Inactivo";
+                }
+                else
+                {
+                    estado = "Activo";
+                }
+                lblEstadoDocente.Text = "Estado: " + estado;
+
+                eventoClickBuscarConsultaDocente[0] = true;
+                eventoClickBuscarConsultaDocente[1] = cedula;
 
                 string[] especialidades = dato[2];
                 for (int i = 0; i < especialidades.Length; i++)
@@ -472,23 +506,59 @@ namespace Ametrano.Presentacion
                     listEspecialidades_2.Items.Add(especialidades[i]);
                 }
 
+
+
             }
+            //}
+            /*catch (Exception)
+            *{
+             *   MessageBox.Show("Error al obtener la informacion de la persona");
+            *}
+            */
         }
 
         private void btnDarDeBaja_Click(object sender, EventArgs e)
         {//Evento del click en el boton de dar de baja
 
-            if (eventoClickBorrar[0])
+            if (eventoClickBuscarBajaDocente[0] == null || eventoClickBuscarBajaDocente[0])
             {//Si se habilito el borrado de un docente
-               if(controlador.darBajaPersona(0, eventoClickBorrar[1]))
+                if (controlador.cambiarEstadoPersona(0, 0, eventoClickBuscarBajaDocente[1]))
                 {
-                    eventoClickBorrar[0] = false;
-                    eventoClickBorrar[1] = "";
-                    MessageBox.Show("Se ha dado de baja el docente con exito");
+                    eventoClickBuscarBajaDocente[0] = false;//Se vacian variables de evento de busqueda con exito
+                    eventoClickBuscarBajaDocente[1] = "";
+                    MessageBox.Show("Se ha dado de baja el docente con exito");//Se avisa al usuario
+                    limpiarFormulario(tabPageDocentesBaja);//Limpieza del formulario
+                    lblNombreDocente.Text = "Nombre: ";
+                    lblCedulaDocente.Text = "Cedula: ";
+                    lblApellidoDocente.Text = "Apellido: ";
+                    lblEmailDocente.Text = "Email: ";
+
+
                 }
             }
-            
+
         }
-              
+
+        private void btnCambiarEstadoDocente_Click(object sender, EventArgs e)
+        {
+            if (eventoClickBuscarConsultaDocente[0])
+            {//Si se realizo la busqueda de una persona:
+
+                if (lblEstadoDocente.Text.Equals("Estado: Inactivo"))
+                {//Si el estado actual es de inactivo
+                    bool baja = controlador.cambiarEstadoPersona(1, 0, eventoClickBuscarConsultaDocente[1]);
+                    if (baja)
+                    {
+                        MessageBox.Show("Se ha cambiado el estado de la persona a Activo");
+                        txtBuscar.Text = eventoClickBuscarConsultaDocente[1];
+                        boxBuscar.SelectedIndex = 1;
+                        btnBuscar_Click(sender, e);
+                    }
+                }
+
+            }
+
+        }
+
     }
 }
