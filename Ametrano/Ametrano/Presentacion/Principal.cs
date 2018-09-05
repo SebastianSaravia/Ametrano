@@ -430,6 +430,9 @@ namespace Ametrano.Presentacion
 
 
 
+                }else
+                {
+                    MessageBox.Show("No se ha encontrado a la persona");
                 }
                 else
                 {
@@ -501,10 +504,10 @@ namespace Ametrano.Presentacion
                 eventoClickBuscarConsultaDocente[1] = cedula;
 
                 string[] especialidades = dato[2];
-                for (int i = 0; i < especialidades.Length; i++)
-                {
-                    listEspecialidades_2.Items.Add(especialidades[i]);
-                }
+                    for (int i = 0; i < especialidades.Length; i++)
+                    {
+                        listEspecialidades_2.Items.Add(especialidades[i]);
+                    }
 
 
 

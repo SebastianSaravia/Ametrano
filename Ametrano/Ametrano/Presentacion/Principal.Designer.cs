@@ -397,6 +397,11 @@
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblNombreViaticos = new System.Windows.Forms.Label();
+            this.lmlMontoDiaViaticos = new System.Windows.Forms.Label();
+            this.lblCedulaViaticos = new System.Windows.Forms.Label();
+            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
+            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -1028,8 +1033,9 @@
             this.btnCambiarEstadoDocente.Name = "btnCambiarEstadoDocente";
             this.btnCambiarEstadoDocente.Size = new System.Drawing.Size(72, 29);
             this.btnCambiarEstadoDocente.TabIndex = 9;
-            this.btnCambiarEstadoDocente.Text = "Cambiar";
+            this.btnCambiarEstadoDocente.Text = "Activar";
             this.btnCambiarEstadoDocente.UseVisualStyleBackColor = true;
+            this.btnCambiarEstadoDocente.Click += new System.EventHandler(this.btnCambiarEstadoDocente_Click);
             // 
             // lblEstadoDocente
             // 
