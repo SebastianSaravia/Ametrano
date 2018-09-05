@@ -405,6 +405,7 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -491,6 +492,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.groupBox56.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -4808,12 +4810,7 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage2.Controls.Add(this.dateTimeAsistencias);
-            this.tabPage2.Controls.Add(this.button8);
-            this.tabPage2.Controls.Add(this.comboBox3);
-            this.tabPage2.Controls.Add(this.comboBox2);
-            this.tabPage2.Controls.Add(this.comboBox1);
-            this.tabPage2.Controls.Add(this.dataGridView1);
+            this.tabPage2.Controls.Add(this.groupBox56);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
@@ -4833,7 +4830,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombreAsistencias,
             this.colAsistenciaAsistencias});
-            this.dataGridView1.Location = new System.Drawing.Point(278, 35);
+            this.dataGridView1.Location = new System.Drawing.Point(302, 28);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
@@ -4843,11 +4840,11 @@
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(39, 170);
+            this.button8.Location = new System.Drawing.Point(41, 154);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(209, 26);
             this.button8.TabIndex = 31;
-            this.button8.Text = "Mostrar lista";
+            this.button8.Text = "Generar lista";
             this.button8.UseVisualStyleBackColor = true;
             // 
             // comboBox1
@@ -4857,7 +4854,7 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Curso..."});
-            this.comboBox1.Location = new System.Drawing.Point(39, 35);
+            this.comboBox1.Location = new System.Drawing.Point(41, 28);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(209, 26);
             this.comboBox1.TabIndex = 30;
@@ -4865,7 +4862,7 @@
             // dateTimeAsistencias
             // 
             this.dateTimeAsistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeAsistencias.Location = new System.Drawing.Point(39, 130);
+            this.dateTimeAsistencias.Location = new System.Drawing.Point(41, 124);
             this.dateTimeAsistencias.Name = "dateTimeAsistencias";
             this.dateTimeAsistencias.Size = new System.Drawing.Size(209, 24);
             this.dateTimeAsistencias.TabIndex = 32;
@@ -4877,7 +4874,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "Curso..."});
-            this.comboBox2.Location = new System.Drawing.Point(39, 97);
+            this.comboBox2.Location = new System.Drawing.Point(41, 92);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(209, 26);
             this.comboBox2.TabIndex = 30;
@@ -4889,7 +4886,7 @@
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Items.AddRange(new object[] {
             "Curso..."});
-            this.comboBox3.Location = new System.Drawing.Point(39, 67);
+            this.comboBox3.Location = new System.Drawing.Point(41, 60);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(209, 26);
             this.comboBox3.TabIndex = 30;
@@ -4908,6 +4905,21 @@
             this.colAsistenciaAsistencias.HeaderText = "Asistencias";
             this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
             this.colAsistenciaAsistencias.ReadOnly = true;
+            // 
+            // groupBox56
+            // 
+            this.groupBox56.Controls.Add(this.comboBox1);
+            this.groupBox56.Controls.Add(this.dataGridView1);
+            this.groupBox56.Controls.Add(this.dateTimeAsistencias);
+            this.groupBox56.Controls.Add(this.comboBox2);
+            this.groupBox56.Controls.Add(this.button8);
+            this.groupBox56.Controls.Add(this.comboBox3);
+            this.groupBox56.Location = new System.Drawing.Point(22, 27);
+            this.groupBox56.Name = "groupBox56";
+            this.groupBox56.Size = new System.Drawing.Size(561, 459);
+            this.groupBox56.TabIndex = 33;
+            this.groupBox56.TabStop = false;
+            this.groupBox56.Text = "groupBox56";
             // 
             // Principal
             // 
@@ -5068,6 +5080,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.groupBox56.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5450,5 +5463,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAsistenciaAsistencias;
+        private System.Windows.Forms.GroupBox groupBox56;
     }
 }
