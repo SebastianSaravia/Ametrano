@@ -383,6 +383,10 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
+            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
+            this.lmlMontoDiaViaticos = new System.Windows.Forms.Label();
+            this.lblCedulaViaticos = new System.Windows.Forms.Label();
             this.lblNombreViaticos = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
             this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -393,10 +397,14 @@
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lmlMontoDiaViaticos = new System.Windows.Forms.Label();
-            this.lblCedulaViaticos = new System.Windows.Forms.Label();
-            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
-            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button8 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimeAsistencias = new System.Windows.Forms.DateTimePicker();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -481,6 +489,8 @@
             this.tabControlCursos.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -1310,9 +1320,9 @@
             // 
             this.groupBox9.Controls.Add(this.boxEstadoAlumno);
             this.groupBox9.Controls.Add(this.boxCursoAlumno);
-            this.groupBox9.Location = new System.Drawing.Point(435, 17);
+            this.groupBox9.Location = new System.Drawing.Point(430, 17);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(379, 75);
+            this.groupBox9.Size = new System.Drawing.Size(387, 75);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Con respecto al instituto";
@@ -4798,12 +4808,106 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPage2.Controls.Add(this.dateTimeAsistencias);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.comboBox2);
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1089, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNombreAsistencias,
+            this.colAsistenciaAsistencias});
+            this.dataGridView1.Location = new System.Drawing.Point(278, 35);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(223, 408);
+            this.dataGridView1.TabIndex = 29;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(39, 170);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(209, 26);
+            this.button8.TabIndex = 31;
+            this.button8.Text = "Mostrar lista";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Curso..."});
+            this.comboBox1.Location = new System.Drawing.Point(39, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(209, 26);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // dateTimeAsistencias
+            // 
+            this.dateTimeAsistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeAsistencias.Location = new System.Drawing.Point(39, 130);
+            this.dateTimeAsistencias.Name = "dateTimeAsistencias";
+            this.dateTimeAsistencias.Size = new System.Drawing.Size(209, 24);
+            this.dateTimeAsistencias.TabIndex = 32;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Curso..."});
+            this.comboBox2.Location = new System.Drawing.Point(39, 97);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(209, 26);
+            this.comboBox2.TabIndex = 30;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Curso..."});
+            this.comboBox3.Location = new System.Drawing.Point(39, 67);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(209, 26);
+            this.comboBox3.TabIndex = 30;
+            // 
+            // colNombreAsistencias
+            // 
+            this.colNombreAsistencias.Frozen = true;
+            this.colNombreAsistencias.HeaderText = "Nombre";
+            this.colNombreAsistencias.Name = "colNombreAsistencias";
+            this.colNombreAsistencias.ReadOnly = true;
+            this.colNombreAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAsistenciaAsistencias
+            // 
+            this.colAsistenciaAsistencias.Frozen = true;
+            this.colAsistenciaAsistencias.HeaderText = "Asistencias";
+            this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
+            this.colAsistenciaAsistencias.ReadOnly = true;
             // 
             // Principal
             // 
@@ -4962,6 +5066,8 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5336,5 +5442,13 @@
         private System.Windows.Forms.Label lblCedulaViaticos;
         private System.Windows.Forms.Label lblNombreViaticos;
         private System.Windows.Forms.Label lblMontoTotalViaticos;
+        private System.Windows.Forms.DateTimePicker dateTimeAsistencias;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colAsistenciaAsistencias;
     }
 }
