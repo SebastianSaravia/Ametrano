@@ -17,31 +17,33 @@ namespace Ametrano.Presentacion
 
     {
         private Principal_Controlador controlador = new Principal_Controlador();
+
         private dynamic[] eventoClickBorrar = new dynamic[2];
         
-
         public Principal()
         {
             InitializeComponent();
         }
+
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }
+
         private void btnDocentes_Click(object sender, EventArgs e)
         {
             tabControlPrincipal.SelectedIndex = 0;
         }
+
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
             tabControlPrincipal.SelectedIndex = 1;
         }
+
         private void btnCursos_Click(object sender, EventArgs e)
         {
             tabControlPrincipal.SelectedIndex = 2;
         }
-
-
 
         private void Principal_Load(object sender, EventArgs e)
         {
@@ -79,30 +81,35 @@ namespace Ametrano.Presentacion
             }
 
         }
+
         private void btnSiguiente_Click(object sender, EventArgs e)
         {
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
+
         private void btnSiguinete2_Click(object sender, EventArgs e)
         {
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoFinalizar);
             tabControlIngresarAlumno.SelectedIndex = 2;
         }
+
         private void button5_Click(object sender, EventArgs e)
         {
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosPersonales);
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
+
         private void button6_Click(object sender, EventArgs e)
         {
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.SelectedIndex = 2;
         }
+
         private void TimePickerFechaNac_ValueChanged(object sender, EventArgs e)
         {//Evento de click en el timepickerfechanacalumnonuevo
 
@@ -126,10 +133,12 @@ namespace Ametrano.Presentacion
 
             maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
         }
+
         private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador.abrirConfiguracion();
         }
+
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -142,6 +151,7 @@ namespace Ametrano.Presentacion
             Properties.Settings.Default.user_contraseña = "";
             Login.ActiveForm.Show();
         }
+
         private void placeholderEventEnter(object sender, EventArgs e)
         {
             if (sender.GetType().Name.Equals("TextBox"))//Si el componente es un textbox
@@ -160,6 +170,7 @@ namespace Ametrano.Presentacion
             }
 
         }
+
         private void placeholderEventLeave(object sender, EventArgs e)
         {
             if (sender.GetType().Name.Equals("TextBox"))//Si el componente es un textbox
@@ -180,6 +191,7 @@ namespace Ametrano.Presentacion
             }
 
         }
+
         public TextBox placeholder(TextBox componente, string evento)
         {
             string textoCuandoEstaVacio = "";
@@ -207,6 +219,7 @@ namespace Ametrano.Presentacion
 
             return null;
         }
+
         public void PlaceholderRec(Control control)
         {
             foreach (Control contHijo in control.Controls)
@@ -227,6 +240,7 @@ namespace Ametrano.Presentacion
 
             }
         }
+
         private void btnAñadirEspecialidad_Click(object sender, EventArgs e)
         {
             if (boxEspecialidades.SelectedIndex != -1)
@@ -238,6 +252,7 @@ namespace Ametrano.Presentacion
             }
 
         }
+
         private void btnQuitarEspecialidad_Click(object sender, EventArgs e)
         {//Evento quitar especialidad
             if (listEspecialidades.SelectedIndex != -1)
@@ -245,6 +260,7 @@ namespace Ametrano.Presentacion
                 listEspecialidades.Items.RemoveAt(listEspecialidades.SelectedIndex);
             }
         }
+
         private void btnIngresarDocente_Click(object sender, EventArgs e)
         {//Evento click del boton ingresar docente
             //Datos personales
@@ -277,6 +293,7 @@ namespace Ametrano.Presentacion
 
 
         }
+
         private void button1_Click(object sender, EventArgs e)
         {
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
@@ -320,8 +337,7 @@ namespace Ametrano.Presentacion
             tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
-
-
+        
         public void limpiarFormulario(Control contenedor)
         {//metodo que recorre el tabpage pasado y limpia todos los componentes a su estado original
             {
@@ -359,6 +375,7 @@ namespace Ametrano.Presentacion
         {
             lista.Items.Clear();
         }
+
         public void clearComboBox(ComboBox box)
         {
             box.SelectedIndex = 0;
