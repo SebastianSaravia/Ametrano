@@ -61,6 +61,7 @@
             this.txtEmailDocente = new System.Windows.Forms.TextBox();
             this.txtTelefonoDocente = new System.Windows.Forms.TextBox();
             this.txtDireccionDocente = new System.Windows.Forms.TextBox();
+            this.txtApellido1Docente = new System.Windows.Forms.TextBox();
             this.txtNombre1Docente = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente = new System.Windows.Forms.TextBox();
             this.tabPageDocentesConsultarModificar = new System.Windows.Forms.TabPage();
@@ -381,7 +382,6 @@
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.txtApellido1Docente = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -831,6 +831,18 @@
             this.txtDireccionDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtDireccionDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
+            // txtApellido1Docente
+            // 
+            this.txtApellido1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApellido1Docente.Location = new System.Drawing.Point(230, 78);
+            this.txtApellido1Docente.Name = "txtApellido1Docente";
+            this.txtApellido1Docente.Size = new System.Drawing.Size(192, 24);
+            this.txtApellido1Docente.TabIndex = 3;
+            this.txtApellido1Docente.Text = "Primer apellido";
+            this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
             // txtNombre1Docente
             // 
             this.txtNombre1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1086,6 +1098,7 @@
             this.btnDarDeBaja.TabIndex = 15;
             this.btnDarDeBaja.Text = "Dar de baja";
             this.btnDarDeBaja.UseVisualStyleBackColor = true;
+            this.btnDarDeBaja.Click += new System.EventHandler(this.btnDarDeBaja_Click);
             // 
             // label9
             // 
@@ -4610,18 +4623,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1089, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
-            // 
-            // txtApellido1Docente
-            // 
-            this.txtApellido1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellido1Docente.Location = new System.Drawing.Point(230, 78);
-            this.txtApellido1Docente.Name = "txtApellido1Docente";
-            this.txtApellido1Docente.Size = new System.Drawing.Size(192, 24);
-            this.txtApellido1Docente.TabIndex = 3;
-            this.txtApellido1Docente.Text = "Primer apellido";
-            this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // Principal
             // 

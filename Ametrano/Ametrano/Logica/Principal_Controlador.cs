@@ -31,7 +31,7 @@ namespace Ametrano.Logica
                 apellido + "','" + //Sql de insert de docente
                 direccion + "','" +
                 telefono + "','" +
-                email + "');";
+                email + "',1);";
 
             int filasAfectadas = objetoConexion.sqlInsertUpdate(insert);//Se realiza el insert y se guarda la cantidad de filas afectadas
             if (filasAfectadas > 0)
@@ -100,18 +100,30 @@ namespace Ametrano.Logica
 
             MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);//Ejecuto la consulta
             DataTable tablaDeDatos = new DataTable();
-            datos.Fill(tablaDeDatos);
             IDictionary<string, string> mapaDeDatos = new Dictionary<string, string>();
-
-            foreach (DataRow row in tablaDeDatos.Rows)
+            try
             {
-                foreach (DataColumn column in tablaDeDatos.Columns)
+                datos.Fill(tablaDeDatos);//Se llena el datatable con los datos de la base de datos
+               
+                foreach (DataRow row in tablaDeDatos.Rows)
                 {
-                    mapaDeDatos.Add(column.ColumnName.ToString(), row[column].ToString());
-                    testing.MostrarMessageBox(column.ColumnName.ToString() + " --- " + row[column].ToString());
+                    foreach (DataColumn column in tablaDeDatos.Columns)
+                    {
+                        mapaDeDatos.Add(column.ColumnName.ToString(), row[column].ToString());
+                        //testing.MostrarMessageBox(column.ColumnName.ToString() + " --- " + row[column].ToString());
+                    }
+                }
+                retorno = true;
+            }
+            catch(Exception e)
+            {
+                retorno = false;
+                if(tablaDeDatos.Rows.Count == 0)
+                {
+                    testing.MostrarMessageBox("No se encontraron usuarios que coincidan con: " + datoDeBusqueda);
                 }
             }
-            retorno = true;
+            
 
             dynamic[] datosParaRetornar = new dynamic[3];
             /*Explicacion datosParaRetornar
@@ -131,7 +143,6 @@ namespace Ametrano.Logica
             {
                 string consulta2 = "SELECT especialidad FROM especialidad WHERE cedula_docente='" + cedula + "'";
                 MySqlDataAdapter datoEspecialidades = objetoConexion.consultarDatos(consulta2);//Ejecuto la consulta
-                testing.MostrarMessageBox(cedula);
 
 
                 DataTable tablaDeDatoEspecialidades= new DataTable();

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Ametrano.Logica
 {
@@ -13,8 +14,13 @@ namespace Ametrano.Logica
         {
             MessageBox.Show(message);
         }
+        public void escribirLog(string mensaje)
+        {
 
-
+        }
+            
 
     }
+
+
 }

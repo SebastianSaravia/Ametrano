@@ -17,6 +17,8 @@ namespace Ametrano.Presentacion
 
     {
         private Principal_Controlador controlador = new Principal_Controlador();
+        private dynamic[] eventoClickBorrar = new dynamic[2];
+        
 
         public Principal()
         {
@@ -401,6 +403,8 @@ namespace Ametrano.Presentacion
                     lblApellidoDocente.Text = "Apellido: " + apellido;
                     lblEmailDocente.Text = "Email: " + email;
 
+                    eventoClickBorrar[0] = true;
+                    eventoClickBorrar[1] = cedula;
 
 
 
@@ -452,6 +456,21 @@ namespace Ametrano.Presentacion
                 }
 
             }
+        }
+
+        private void btnDarDeBaja_Click(object sender, EventArgs e)
+        {//Evento del click en el boton de dar de baja
+
+            if (eventoClickBorrar[0])
+            {//Si se habilito el borrado de un docente
+               if(controlador.darBajaPersona(0, eventoClickBorrar[1]))
+                {
+                    eventoClickBorrar[0] = false;
+                    eventoClickBorrar[1] = "";
+                    MessageBox.Show("Se ha dado de baja el docente con exito");
+                }
+            }
+            
         }
     }
 }
