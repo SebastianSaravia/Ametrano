@@ -458,8 +458,8 @@ namespace Ametrano.Presentacion
             }
             string datoDeBusqueda = txtBuscar.Text;
             dynamic[] dato = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
-            try
-            {
+            //try
+            //{
                 if (dato[0] == true)
                 {
                     limpiarFormulario(tabPageDocentesConsultarModificar);
@@ -471,6 +471,13 @@ namespace Ametrano.Presentacion
                     dato[1].TryGetValue("telefono", out telefono);
                     dato[1].TryGetValue("email", out email);
                     dato[1].TryGetValue("estado", out estado);
+                    if (estado == "1")
+                    {
+                        btnCambiarEstadoDocente.Visible = false;
+                    }else
+                    {
+                        btnCambiarEstadoDocente.Visible = true;
+                    }
 
                     txtCedulaDocente_2.Text = cedula;
                     txtNombre1Docente_2.Text = nombre;
@@ -487,22 +494,25 @@ namespace Ametrano.Presentacion
                         estado = "Activo";
                     }
                     lblEstadoDocente.Text = "Estado: " + estado;
+                    
+                    eventoClickBuscarConsultaDocente[0] = true;
+                    eventoClickBuscarConsultaDocente[1] = cedula;
 
-                    string[] especialidades = dato[2];
+                string[] especialidades = dato[2];
                     for (int i = 0; i < especialidades.Length; i++)
                     {
                         listEspecialidades_2.Items.Add(especialidades[i]);
                     }
 
-                    eventoClickBuscarConsultaDocente[0] = true;
-                    eventoClickBuscarConsultaDocente[1] = cedula;
+                    
 
                 }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Error al obtener la informacion de la persona");
-            }
+            //}
+            /*catch (Exception)
+            *{
+             *   MessageBox.Show("Error al obtener la informacion de la persona");
+            *}
+            */
         }
 
         private void btnDarDeBaja_Click(object sender, EventArgs e)
@@ -512,10 +522,10 @@ namespace Ametrano.Presentacion
             {//Si se habilito el borrado de un docente
                 if (controlador.cambiarEstadoPersona(0, 0, eventoClickBuscarBajaDocente[1]))
                 {
-                    eventoClickBuscarBajaDocente[0] = false;
+                    eventoClickBuscarBajaDocente[0] = false;//Se vacian variables de evento de busqueda con exito
                     eventoClickBuscarBajaDocente[1] = "";
-                    MessageBox.Show("Se ha dado de baja el docente con exito");
-                    limpiarFormulario(tabPageDocentesBaja);
+                    MessageBox.Show("Se ha dado de baja el docente con exito");//Se avisa al usuario
+                    limpiarFormulario(tabPageDocentesBaja);//Limpieza del formulario
                     lblNombreDocente.Text = "Nombre: ";
                     lblCedulaDocente.Text = "Cedula: ";
                     lblApellidoDocente.Text = "Apellido: ";
@@ -538,6 +548,8 @@ namespace Ametrano.Presentacion
                     if (baja)
                     {
                         MessageBox.Show("Se ha cambiado el estado de la persona a Activo");
+                        txtBuscar.Text = eventoClickBuscarConsultaDocente[1];
+                        boxBuscar.SelectedIndex = 1;
                         btnBuscar_Click(sender, e);
                     }
                 }

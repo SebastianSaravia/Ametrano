@@ -222,6 +222,7 @@ namespace Ametrano.Logica
             catch (Exception e)
             {
                 retorno = false;
+                testing.MostrarMessageBox("ERROR AL DAR DE BAJA O ALTA A LA PERSONA");
             }
 
             return retorno;

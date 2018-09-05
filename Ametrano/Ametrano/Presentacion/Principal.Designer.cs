@@ -383,6 +383,11 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button8 = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
             this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -392,11 +397,6 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -941,8 +941,9 @@
             this.boxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxBuscar.FormattingEnabled = true;
             this.boxBuscar.Items.AddRange(new object[] {
-            "Nombre",
-            "Cedula"});
+            "Buscar por...",
+            "Cedula",
+            "Nombre y apellido"});
             this.boxBuscar.Location = new System.Drawing.Point(363, 50);
             this.boxBuscar.Name = "boxBuscar";
             this.boxBuscar.Size = new System.Drawing.Size(132, 26);
@@ -1027,8 +1028,9 @@
             this.btnCambiarEstadoDocente.Name = "btnCambiarEstadoDocente";
             this.btnCambiarEstadoDocente.Size = new System.Drawing.Size(72, 29);
             this.btnCambiarEstadoDocente.TabIndex = 9;
-            this.btnCambiarEstadoDocente.Text = "Cambiar";
+            this.btnCambiarEstadoDocente.Text = "Activar";
             this.btnCambiarEstadoDocente.UseVisualStyleBackColor = true;
+            this.btnCambiarEstadoDocente.Click += new System.EventHandler(this.btnCambiarEstadoDocente_Click);
             // 
             // lblEstadoDocente
             // 
@@ -1238,7 +1240,7 @@
             this.boxBuscar_2.Items.AddRange(new object[] {
             "Buscar por...",
             "Cedula",
-            "Nombre"});
+            "Nombre y apellido"});
             this.boxBuscar_2.Location = new System.Drawing.Point(316, 54);
             this.boxBuscar_2.Name = "boxBuscar_2";
             this.boxBuscar_2.Size = new System.Drawing.Size(132, 26);
@@ -4661,6 +4663,56 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Viaticos";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(788, 158);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(160, 18);
+            this.label8.TabIndex = 32;
+            this.label8.Text = "Monto total a pagar:";
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(257, 455);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(122, 29);
+            this.button8.TabIndex = 31;
+            this.button8.Text = "Añadir semana";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(788, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(182, 18);
+            this.label6.TabIndex = 30;
+            this.label6.Text = "Monto por día asistido:";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(788, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 18);
+            this.label7.TabIndex = 29;
+            this.label7.Text = "Cedula:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(788, 104);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(73, 18);
+            this.label5.TabIndex = 29;
+            this.label5.Text = "Nombre:";
+            // 
             // dataGridViaticos
             // 
             this.dataGridViaticos.AllowUserToAddRows = false;
@@ -4752,56 +4804,6 @@
             this.tabPage2.Size = new System.Drawing.Size(1089, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(788, 104);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 18);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Nombre:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(788, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 18);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Monto por día asistido:";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(788, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 18);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Cedula:";
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(257, 455);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(122, 29);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Añadir semana";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(788, 158);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 18);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Monto total a pagar:";
             // 
             // Principal
             // 
