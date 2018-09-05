@@ -15,13 +15,13 @@ namespace Ametrano.Logica
         TestingClass testing = new TestingClass();//--------------------------------------
         public IDictionary<string, string> mapTextBox = new Dictionary<string, string>();
         ConexionBD objetoConexion = new ConexionBD();
-        
+
+
         public void abrirConfiguracion()
         {
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
-
         public bool ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
             bool retorno = false;
@@ -60,7 +60,6 @@ namespace Ametrano.Logica
             }
             return retorno;
         }
-
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
         {
             bool retorno = false; //Variable de retorno
@@ -168,8 +167,10 @@ namespace Ametrano.Logica
 
             return datosParaRetornar;
         }
-                
-        public bool darBajaPersona(int tipoPersona, string cedulaPersona)
+
+
+
+        public bool cambiarEstadoPersona(int bajaAlta,int tipoPersona, string cedulaPersona)
         {//metodo que da de baja una persona
             bool retorno = false;
             string update = "";
@@ -180,13 +181,31 @@ namespace Ametrano.Logica
             * tipoPersona==1 -> alumno
             */
 
-            if (tipoPersona == 0)
-            {
-                update = "UPDATE DOCENTE SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
-            }
-            else
-            {
-                update = "UPDATE ALUMNO SET estado = 0 where cedula_alumno = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+            /*bajaAlta explicación
+             * bajaAlta = 0 -> baja
+             * bajaAlta = 1 -> alta
+             */
+
+            if (bajaAlta == 0)
+            {//Si se esta dando de baja a la persona en cuestion
+                if (tipoPersona == 0)
+                {
+                    update = "UPDATE DOCENTE SET estado = 0 where cedula_docente = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+                }
+                else
+                {
+                    update = "UPDATE ALUMNO SET estado = 0 where cedula_alumno = '" + cedulaPersona + "';DELETE FROM cuenta_usuario where usuario = '" + cedulaPersona + "';";
+                }
+            }else
+            {//Si se esta dando de alta a la persona en cuestion
+                if (tipoPersona == 0)
+                {
+                    update = "UPDATE DOCENTE SET estado = 1 where cedula_docente = '" + cedulaPersona + "'";
+                }
+                else
+                {
+                    update = "UPDATE ALUMNO SET estado = 1 where cedula_alumno = '" + cedulaPersona + "'";
+                }
             }
             try
             {
