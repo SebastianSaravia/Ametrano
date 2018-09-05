@@ -428,19 +428,11 @@ namespace Ametrano.Presentacion
                     eventoClickBuscarBajaDocente[0] = true;
                     eventoClickBuscarBajaDocente[1] = cedula;
 
-
-
                 }else
                 {
                     MessageBox.Show("No se ha encontrado a la persona");
                 }
-                else
-                {
-                    MessageBox.Show("No se ha encontrado a la persona");
-                }
-
-
-
+             
             }
 
 
