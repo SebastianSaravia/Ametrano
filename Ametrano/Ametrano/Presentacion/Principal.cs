@@ -266,6 +266,7 @@ namespace Ametrano.Presentacion
         private void btnIngresarDocente_Click(object sender, EventArgs e)
         {//Evento click del boton ingresar docente
             //Datos personales
+
             string cedula = txtCedulaDocente.Text;
             string apellido1 = txtApellido1Docente.Text;
 

@@ -270,9 +270,6 @@
             this.lblTiempoDesempleadoAlumno_2 = new System.Windows.Forms.Label();
             this.tabPageModificarAlumnosDatosPersonales = new System.Windows.Forms.TabPage();
             this.button7 = new System.Windows.Forms.Button();
-            this.groupBox11 = new System.Windows.Forms.GroupBox();
-            this.boxEstadoAlumno_2 = new System.Windows.Forms.ComboBox();
-            this.boxCursoAlumno_2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.Alumno_2 = new System.Windows.Forms.TextBox();
@@ -397,15 +394,19 @@
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button8 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimeAsistencias = new System.Windows.Forms.DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox56 = new System.Windows.Forms.GroupBox();
+            this.boxPeriodoAlumno = new System.Windows.Forms.ComboBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.boxPeriodoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxEstadoAlumno_2 = new System.Windows.Forms.ComboBox();
+            this.boxCursoAlumno_2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -464,7 +465,6 @@
             this.groupBox54.SuspendLayout();
             this.groupBox55.SuspendLayout();
             this.tabPageModificarAlumnosDatosPersonales.SuspendLayout();
-            this.groupBox11.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.groupBox14.SuspendLayout();
@@ -492,7 +492,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox56.SuspendLayout();
+            this.groupBox11.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -1320,11 +1320,12 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.boxPeriodoAlumno);
             this.groupBox9.Controls.Add(this.boxEstadoAlumno);
             this.groupBox9.Controls.Add(this.boxCursoAlumno);
-            this.groupBox9.Location = new System.Drawing.Point(430, 17);
+            this.groupBox9.Location = new System.Drawing.Point(353, 12);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(387, 75);
+            this.groupBox9.Size = new System.Drawing.Size(563, 75);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Con respecto al instituto";
@@ -3288,8 +3289,8 @@
             // tabPageModificarAlumnosDatosPersonales
             // 
             this.tabPageModificarAlumnosDatosPersonales.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.button7);
             this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.groupBox11);
+            this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.button7);
             this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.button1);
             this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.groupBox12);
             this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.groupBox13);
@@ -3312,39 +3313,6 @@
             this.button7.Text = "Atras";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // groupBox11
-            // 
-            this.groupBox11.Controls.Add(this.boxEstadoAlumno_2);
-            this.groupBox11.Controls.Add(this.boxCursoAlumno_2);
-            this.groupBox11.Location = new System.Drawing.Point(430, 17);
-            this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(387, 75);
-            this.groupBox11.TabIndex = 21;
-            this.groupBox11.TabStop = false;
-            this.groupBox11.Text = "Con respecto al instituto";
-            // 
-            // boxEstadoAlumno_2
-            // 
-            this.boxEstadoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxEstadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxEstadoAlumno_2.Items.AddRange(new object[] {
-            "Estado..."});
-            this.boxEstadoAlumno_2.Location = new System.Drawing.Point(200, 30);
-            this.boxEstadoAlumno_2.Name = "boxEstadoAlumno_2";
-            this.boxEstadoAlumno_2.Size = new System.Drawing.Size(159, 23);
-            this.boxEstadoAlumno_2.TabIndex = 27;
-            // 
-            // boxCursoAlumno_2
-            // 
-            this.boxCursoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCursoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCursoAlumno_2.Items.AddRange(new object[] {
-            "Curso..."});
-            this.boxCursoAlumno_2.Location = new System.Drawing.Point(19, 30);
-            this.boxCursoAlumno_2.Name = "boxCursoAlumno_2";
-            this.boxCursoAlumno_2.Size = new System.Drawing.Size(159, 23);
-            this.boxCursoAlumno_2.TabIndex = 26;
             // 
             // button1
             // 
@@ -4810,13 +4778,72 @@
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage2.Controls.Add(this.groupBox56);
+            this.tabPage2.Controls.Add(this.dateTimeAsistencias);
+            this.tabPage2.Controls.Add(this.button8);
+            this.tabPage2.Controls.Add(this.comboBox3);
+            this.tabPage2.Controls.Add(this.comboBox2);
+            this.tabPage2.Controls.Add(this.comboBox1);
+            this.tabPage2.Controls.Add(this.dataGridView1);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(1089, 521);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
+            // 
+            // dateTimeAsistencias
+            // 
+            this.dateTimeAsistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeAsistencias.Location = new System.Drawing.Point(39, 130);
+            this.dateTimeAsistencias.Name = "dateTimeAsistencias";
+            this.dateTimeAsistencias.Size = new System.Drawing.Size(209, 24);
+            this.dateTimeAsistencias.TabIndex = 32;
+            // 
+            // button8
+            // 
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Location = new System.Drawing.Point(39, 170);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(209, 26);
+            this.button8.TabIndex = 31;
+            this.button8.Text = "Mostrar lista";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "Curso..."});
+            this.comboBox3.Location = new System.Drawing.Point(39, 67);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(209, 26);
+            this.comboBox3.TabIndex = 30;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Curso..."});
+            this.comboBox2.Location = new System.Drawing.Point(39, 97);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(209, 26);
+            this.comboBox2.TabIndex = 30;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Curso..."});
+            this.comboBox1.Location = new System.Drawing.Point(39, 35);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(209, 26);
+            this.comboBox1.TabIndex = 30;
             // 
             // dataGridView1
             // 
@@ -4830,66 +4857,12 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colNombreAsistencias,
             this.colAsistenciaAsistencias});
-            this.dataGridView1.Location = new System.Drawing.Point(302, 28);
+            this.dataGridView1.Location = new System.Drawing.Point(278, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(223, 408);
             this.dataGridView1.TabIndex = 29;
-            // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(41, 154);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(209, 26);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Generar lista";
-            this.button8.UseVisualStyleBackColor = true;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Curso..."});
-            this.comboBox1.Location = new System.Drawing.Point(41, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(209, 26);
-            this.comboBox1.TabIndex = 30;
-            // 
-            // dateTimeAsistencias
-            // 
-            this.dateTimeAsistencias.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeAsistencias.Location = new System.Drawing.Point(41, 124);
-            this.dateTimeAsistencias.Name = "dateTimeAsistencias";
-            this.dateTimeAsistencias.Size = new System.Drawing.Size(209, 24);
-            this.dateTimeAsistencias.TabIndex = 32;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
-            "Curso..."});
-            this.comboBox2.Location = new System.Drawing.Point(41, 92);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(209, 26);
-            this.comboBox2.TabIndex = 30;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Curso..."});
-            this.comboBox3.Location = new System.Drawing.Point(41, 60);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(209, 26);
-            this.comboBox3.TabIndex = 30;
             // 
             // colNombreAsistencias
             // 
@@ -4906,20 +4879,61 @@
             this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
             this.colAsistenciaAsistencias.ReadOnly = true;
             // 
-            // groupBox56
+            // boxPeriodoAlumno
             // 
-            this.groupBox56.Controls.Add(this.comboBox1);
-            this.groupBox56.Controls.Add(this.dataGridView1);
-            this.groupBox56.Controls.Add(this.dateTimeAsistencias);
-            this.groupBox56.Controls.Add(this.comboBox2);
-            this.groupBox56.Controls.Add(this.button8);
-            this.groupBox56.Controls.Add(this.comboBox3);
-            this.groupBox56.Location = new System.Drawing.Point(22, 27);
-            this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Size = new System.Drawing.Size(561, 459);
-            this.groupBox56.TabIndex = 33;
-            this.groupBox56.TabStop = false;
-            this.groupBox56.Text = "groupBox56";
+            this.boxPeriodoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxPeriodoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxPeriodoAlumno.Items.AddRange(new object[] {
+            "Periodo..."});
+            this.boxPeriodoAlumno.Location = new System.Drawing.Point(380, 30);
+            this.boxPeriodoAlumno.Name = "boxPeriodoAlumno";
+            this.boxPeriodoAlumno.Size = new System.Drawing.Size(159, 23);
+            this.boxPeriodoAlumno.TabIndex = 27;
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.boxPeriodoAlumno_2);
+            this.groupBox11.Controls.Add(this.boxEstadoAlumno_2);
+            this.groupBox11.Controls.Add(this.boxCursoAlumno_2);
+            this.groupBox11.Location = new System.Drawing.Point(353, 12);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(563, 75);
+            this.groupBox11.TabIndex = 23;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "Con respecto al instituto";
+            // 
+            // boxPeriodoAlumno_2
+            // 
+            this.boxPeriodoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxPeriodoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxPeriodoAlumno_2.Items.AddRange(new object[] {
+            "Periodo..."});
+            this.boxPeriodoAlumno_2.Location = new System.Drawing.Point(380, 30);
+            this.boxPeriodoAlumno_2.Name = "boxPeriodoAlumno_2";
+            this.boxPeriodoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxPeriodoAlumno_2.TabIndex = 27;
+            // 
+            // boxEstadoAlumno_2
+            // 
+            this.boxEstadoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxEstadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxEstadoAlumno_2.Items.AddRange(new object[] {
+            "Estado..."});
+            this.boxEstadoAlumno_2.Location = new System.Drawing.Point(200, 30);
+            this.boxEstadoAlumno_2.Name = "boxEstadoAlumno_2";
+            this.boxEstadoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxEstadoAlumno_2.TabIndex = 27;
+            // 
+            // boxCursoAlumno_2
+            // 
+            this.boxCursoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoAlumno_2.Items.AddRange(new object[] {
+            "Curso..."});
+            this.boxCursoAlumno_2.Location = new System.Drawing.Point(19, 30);
+            this.boxCursoAlumno_2.Name = "boxCursoAlumno_2";
+            this.boxCursoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxCursoAlumno_2.TabIndex = 26;
             // 
             // Principal
             // 
@@ -5033,7 +5047,6 @@
             this.groupBox55.ResumeLayout(false);
             this.groupBox55.PerformLayout();
             this.tabPageModificarAlumnosDatosPersonales.ResumeLayout(false);
-            this.groupBox11.ResumeLayout(false);
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox13.ResumeLayout(false);
@@ -5080,7 +5093,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).EndInit();
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox56.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5269,9 +5282,6 @@
         private System.Windows.Forms.Label lblUsaInternetAlumno;
         private System.Windows.Forms.TabControl tabControlModificarAlumno;
         private System.Windows.Forms.TabPage tabPageModificarAlumnosDatosPersonales;
-        private System.Windows.Forms.GroupBox groupBox11;
-        private System.Windows.Forms.ComboBox boxEstadoAlumno_2;
-        private System.Windows.Forms.ComboBox boxCursoAlumno_2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox12;
         private System.Windows.Forms.TextBox Alumno_2;
@@ -5463,6 +5473,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAsistenciaAsistencias;
-        private System.Windows.Forms.GroupBox groupBox56;
+        private System.Windows.Forms.ComboBox boxPeriodoAlumno;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.ComboBox boxPeriodoAlumno_2;
+        private System.Windows.Forms.ComboBox boxEstadoAlumno_2;
+        private System.Windows.Forms.ComboBox boxCursoAlumno_2;
     }
 }
