@@ -389,14 +389,14 @@
             this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button8 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblNombreViaticos = new System.Windows.Forms.Label();
+            this.lmlMontoDiaViaticos = new System.Windows.Forms.Label();
+            this.lblCedulaViaticos = new System.Windows.Forms.Label();
+            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
+            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -4646,13 +4646,13 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPage1.Controls.Add(this.label8);
-            this.tabPage1.Controls.Add(this.button8);
-            this.tabPage1.Controls.Add(this.label6);
-            this.tabPage1.Controls.Add(this.label7);
-            this.tabPage1.Controls.Add(this.label5);
+            this.tabPage1.Controls.Add(this.lblMontoTotalViaticos);
+            this.tabPage1.Controls.Add(this.btnAñadirSemanaViaticos);
+            this.tabPage1.Controls.Add(this.lmlMontoDiaViaticos);
+            this.tabPage1.Controls.Add(this.lblCedulaViaticos);
+            this.tabPage1.Controls.Add(this.lblNombreViaticos);
             this.tabPage1.Controls.Add(this.dataGridViaticos);
-            this.tabPage1.Controls.Add(this.comboBox1);
+            this.tabPage1.Controls.Add(this.boxCursoViaticos);
             this.tabPage1.Controls.Add(this.listAlumnosViaticos);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -4724,16 +4724,16 @@
             this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // comboBox1
+            // boxCursoViaticos
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.Items.AddRange(new object[] {
+            this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoViaticos.Items.AddRange(new object[] {
             "Curso..."});
-            this.comboBox1.Location = new System.Drawing.Point(39, 35);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(203, 26);
-            this.comboBox1.TabIndex = 27;
+            this.boxCursoViaticos.Location = new System.Drawing.Point(39, 35);
+            this.boxCursoViaticos.Name = "boxCursoViaticos";
+            this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxCursoViaticos.TabIndex = 27;
             // 
             // listAlumnosViaticos
             // 
@@ -4753,55 +4753,55 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Asistencias";
             // 
-            // label5
+            // lblNombreViaticos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(788, 104);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 18);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Nombre:";
+            this.lblNombreViaticos.AutoSize = true;
+            this.lblNombreViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreViaticos.Location = new System.Drawing.Point(788, 104);
+            this.lblNombreViaticos.Name = "lblNombreViaticos";
+            this.lblNombreViaticos.Size = new System.Drawing.Size(73, 18);
+            this.lblNombreViaticos.TabIndex = 29;
+            this.lblNombreViaticos.Text = "Nombre:";
             // 
-            // label6
+            // lmlMontoDiaViaticos
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(788, 132);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(182, 18);
-            this.label6.TabIndex = 30;
-            this.label6.Text = "Monto por día asistido:";
+            this.lmlMontoDiaViaticos.AutoSize = true;
+            this.lmlMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lmlMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
+            this.lmlMontoDiaViaticos.Name = "lmlMontoDiaViaticos";
+            this.lmlMontoDiaViaticos.Size = new System.Drawing.Size(182, 18);
+            this.lmlMontoDiaViaticos.TabIndex = 30;
+            this.lmlMontoDiaViaticos.Text = "Monto por día asistido:";
             // 
-            // label7
+            // lblCedulaViaticos
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(788, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(65, 18);
-            this.label7.TabIndex = 29;
-            this.label7.Text = "Cedula:";
+            this.lblCedulaViaticos.AutoSize = true;
+            this.lblCedulaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedulaViaticos.Location = new System.Drawing.Point(788, 77);
+            this.lblCedulaViaticos.Name = "lblCedulaViaticos";
+            this.lblCedulaViaticos.Size = new System.Drawing.Size(65, 18);
+            this.lblCedulaViaticos.TabIndex = 29;
+            this.lblCedulaViaticos.Text = "Cedula:";
             // 
-            // button8
+            // btnAñadirSemanaViaticos
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(257, 455);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(122, 29);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Añadir semana";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnAñadirSemanaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 455);
+            this.btnAñadirSemanaViaticos.Name = "btnAñadirSemanaViaticos";
+            this.btnAñadirSemanaViaticos.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadirSemanaViaticos.TabIndex = 31;
+            this.btnAñadirSemanaViaticos.Text = "Añadir semana";
+            this.btnAñadirSemanaViaticos.UseVisualStyleBackColor = true;
             // 
-            // label8
+            // lblMontoTotalViaticos
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(788, 158);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(160, 18);
-            this.label8.TabIndex = 32;
-            this.label8.Text = "Monto total a pagar:";
+            this.lblMontoTotalViaticos.AutoSize = true;
+            this.lblMontoTotalViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoTotalViaticos.Location = new System.Drawing.Point(788, 158);
+            this.lblMontoTotalViaticos.Name = "lblMontoTotalViaticos";
+            this.lblMontoTotalViaticos.Size = new System.Drawing.Size(160, 18);
+            this.lblMontoTotalViaticos.TabIndex = 32;
+            this.lblMontoTotalViaticos.Text = "Monto total a pagar:";
             // 
             // Principal
             // 
@@ -5322,17 +5322,17 @@
         private System.Windows.Forms.Button btnCambiarEstadoDocente;
         private System.Windows.Forms.Label lblEstadoDocente;
         private System.Windows.Forms.DataGridView dataGridViaticos;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox boxCursoViaticos;
         private System.Windows.Forms.ListBox listAlumnosViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button btnAñadirSemanaViaticos;
+        private System.Windows.Forms.Label lmlMontoDiaViaticos;
+        private System.Windows.Forms.Label lblCedulaViaticos;
+        private System.Windows.Forms.Label lblNombreViaticos;
+        private System.Windows.Forms.Label lblMontoTotalViaticos;
     }
 }
