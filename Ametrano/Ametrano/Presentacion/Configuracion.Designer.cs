@@ -31,28 +31,28 @@
             this.listaConfiguracion = new System.Windows.Forms.ListBox();
             this.tabControlConfiguracion = new System.Windows.Forms.TabControl();
             this.tabPageUsuarios = new System.Windows.Forms.TabPage();
-            this.tabPageBD = new System.Windows.Forms.TabPage();
-            this.btnGuardarConfiguracionBD = new System.Windows.Forms.Button();
-            this.btnCancelarConfiguracionBD = new System.Windows.Forms.Button();
-            this.btnCancelarCambiosUsuarios = new System.Windows.Forms.Button();
-            this.btnGuardarCambiosBD = new System.Windows.Forms.Button();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtDireccionBD = new System.Windows.Forms.TextBox();
-            this.lblUsuarioFuncionario = new System.Windows.Forms.Label();
-            this.txtUsuarioFuncionario = new System.Windows.Forms.TextBox();
             this.tabControlConfiguracionUsuariosElementos = new System.Windows.Forms.TabControl();
             this.tabPageVerUsuarios = new System.Windows.Forms.TabPage();
-            this.tabPageRecuperarContraseña = new System.Windows.Forms.TabPage();
-            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.btnModificarUsuario = new System.Windows.Forms.Button();
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
+            this.btnModificarUsuario = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.dgvUsuarios = new System.Windows.Forms.DataGridView();
+            this.tabPageRecuperarContraseña = new System.Windows.Forms.TabPage();
+            this.btnCancelarCambiosUsuarios = new System.Windows.Forms.Button();
+            this.btnGuardarCambiosBD = new System.Windows.Forms.Button();
+            this.tabPageBD = new System.Windows.Forms.TabPage();
+            this.txtUsuarioFuncionario = new System.Windows.Forms.TextBox();
+            this.lblUsuarioFuncionario = new System.Windows.Forms.Label();
+            this.txtDireccionBD = new System.Windows.Forms.TextBox();
+            this.lblDireccion = new System.Windows.Forms.Label();
+            this.btnCancelarConfiguracionBD = new System.Windows.Forms.Button();
+            this.btnGuardarConfiguracionBD = new System.Windows.Forms.Button();
             this.tabControlConfiguracion.SuspendLayout();
             this.tabPageUsuarios.SuspendLayout();
-            this.tabPageBD.SuspendLayout();
             this.tabControlConfiguracionUsuariosElementos.SuspendLayout();
             this.tabPageVerUsuarios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).BeginInit();
+            this.tabPageBD.SuspendLayout();
             this.SuspendLayout();
             // 
             // listaConfiguracion
@@ -62,8 +62,7 @@
             this.listaConfiguracion.Dock = System.Windows.Forms.DockStyle.Left;
             this.listaConfiguracion.FormattingEnabled = true;
             this.listaConfiguracion.Items.AddRange(new object[] {
-            "Usuarios",
-            "Base de datos"});
+            "Usuarios"});
             this.listaConfiguracion.Location = new System.Drawing.Point(0, 0);
             this.listaConfiguracion.Name = "listaConfiguracion";
             this.listaConfiguracion.Size = new System.Drawing.Size(94, 333);
@@ -93,90 +92,6 @@
             this.tabPageUsuarios.Text = "tabPage1";
             this.tabPageUsuarios.UseVisualStyleBackColor = true;
             // 
-            // tabPageBD
-            // 
-            this.tabPageBD.Controls.Add(this.txtUsuarioFuncionario);
-            this.tabPageBD.Controls.Add(this.lblUsuarioFuncionario);
-            this.tabPageBD.Controls.Add(this.txtDireccionBD);
-            this.tabPageBD.Controls.Add(this.lblDireccion);
-            this.tabPageBD.Controls.Add(this.btnCancelarConfiguracionBD);
-            this.tabPageBD.Controls.Add(this.btnGuardarConfiguracionBD);
-            this.tabPageBD.Location = new System.Drawing.Point(4, 22);
-            this.tabPageBD.Name = "tabPageBD";
-            this.tabPageBD.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBD.Size = new System.Drawing.Size(758, 333);
-            this.tabPageBD.TabIndex = 1;
-            this.tabPageBD.Text = "Bases de datos";
-            this.tabPageBD.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardarConfiguracionBD
-            // 
-            this.btnGuardarConfiguracionBD.Location = new System.Drawing.Point(673, 302);
-            this.btnGuardarConfiguracionBD.Name = "btnGuardarConfiguracionBD";
-            this.btnGuardarConfiguracionBD.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarConfiguracionBD.TabIndex = 0;
-            this.btnGuardarConfiguracionBD.Text = "Guardar";
-            this.btnGuardarConfiguracionBD.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelarConfiguracionBD
-            // 
-            this.btnCancelarConfiguracionBD.Location = new System.Drawing.Point(592, 302);
-            this.btnCancelarConfiguracionBD.Name = "btnCancelarConfiguracionBD";
-            this.btnCancelarConfiguracionBD.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarConfiguracionBD.TabIndex = 1;
-            this.btnCancelarConfiguracionBD.Text = "Cancelar";
-            this.btnCancelarConfiguracionBD.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelarCambiosUsuarios
-            // 
-            this.btnCancelarCambiosUsuarios.Location = new System.Drawing.Point(592, 302);
-            this.btnCancelarCambiosUsuarios.Name = "btnCancelarCambiosUsuarios";
-            this.btnCancelarCambiosUsuarios.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarCambiosUsuarios.TabIndex = 3;
-            this.btnCancelarCambiosUsuarios.Text = "Cancelar";
-            this.btnCancelarCambiosUsuarios.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardarCambiosBD
-            // 
-            this.btnGuardarCambiosBD.Location = new System.Drawing.Point(673, 302);
-            this.btnGuardarCambiosBD.Name = "btnGuardarCambiosBD";
-            this.btnGuardarCambiosBD.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardarCambiosBD.TabIndex = 2;
-            this.btnGuardarCambiosBD.Text = "Guardar";
-            this.btnGuardarCambiosBD.UseVisualStyleBackColor = true;
-            // 
-            // lblDireccion
-            // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(6, 9);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(199, 13);
-            this.lblDireccion.TabIndex = 2;
-            this.lblDireccion.Text = "Direccion del servidor de bases de datos";
-            // 
-            // txtDireccionBD
-            // 
-            this.txtDireccionBD.Location = new System.Drawing.Point(9, 25);
-            this.txtDireccionBD.Name = "txtDireccionBD";
-            this.txtDireccionBD.Size = new System.Drawing.Size(196, 20);
-            this.txtDireccionBD.TabIndex = 3;
-            // 
-            // lblUsuarioFuncionario
-            // 
-            this.lblUsuarioFuncionario.AutoSize = true;
-            this.lblUsuarioFuncionario.Location = new System.Drawing.Point(6, 73);
-            this.lblUsuarioFuncionario.Name = "lblUsuarioFuncionario";
-            this.lblUsuarioFuncionario.Size = new System.Drawing.Size(116, 13);
-            this.lblUsuarioFuncionario.TabIndex = 4;
-            this.lblUsuarioFuncionario.Text = "Usuario de Funcionario";
-            // 
-            // txtUsuarioFuncionario
-            // 
-            this.txtUsuarioFuncionario.Location = new System.Drawing.Point(9, 89);
-            this.txtUsuarioFuncionario.Name = "txtUsuarioFuncionario";
-            this.txtUsuarioFuncionario.Size = new System.Drawing.Size(196, 20);
-            this.txtUsuarioFuncionario.TabIndex = 5;
-            // 
             // tabControlConfiguracionUsuariosElementos
             // 
             this.tabControlConfiguracionUsuariosElementos.Controls.Add(this.tabPageVerUsuarios);
@@ -202,32 +117,14 @@
             this.tabPageVerUsuarios.Text = "Ver Usuarios";
             this.tabPageVerUsuarios.UseVisualStyleBackColor = true;
             // 
-            // tabPageRecuperarContraseña
+            // btnEliminarUsuario
             // 
-            this.tabPageRecuperarContraseña.Location = new System.Drawing.Point(4, 22);
-            this.tabPageRecuperarContraseña.Name = "tabPageRecuperarContraseña";
-            this.tabPageRecuperarContraseña.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRecuperarContraseña.Size = new System.Drawing.Size(744, 301);
-            this.tabPageRecuperarContraseña.TabIndex = 1;
-            this.tabPageRecuperarContraseña.Text = "Cambiar contraseña";
-            this.tabPageRecuperarContraseña.UseVisualStyleBackColor = true;
-            // 
-            // dgvUsuarios
-            // 
-            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUsuarios.Location = new System.Drawing.Point(6, 6);
-            this.dgvUsuarios.Name = "dgvUsuarios";
-            this.dgvUsuarios.Size = new System.Drawing.Size(617, 289);
-            this.dgvUsuarios.TabIndex = 0;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.Location = new System.Drawing.Point(630, 7);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(108, 23);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "Agregar usuario";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnEliminarUsuario.Location = new System.Drawing.Point(629, 65);
+            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
+            this.btnEliminarUsuario.Size = new System.Drawing.Size(108, 23);
+            this.btnEliminarUsuario.TabIndex = 3;
+            this.btnEliminarUsuario.Text = "Eliminar usuario";
+            this.btnEliminarUsuario.UseVisualStyleBackColor = true;
             // 
             // btnModificarUsuario
             // 
@@ -238,14 +135,116 @@
             this.btnModificarUsuario.Text = "Modificar usuario";
             this.btnModificarUsuario.UseVisualStyleBackColor = true;
             // 
-            // btnEliminarUsuario
+            // btnAgregar
             // 
-            this.btnEliminarUsuario.Location = new System.Drawing.Point(629, 65);
-            this.btnEliminarUsuario.Name = "btnEliminarUsuario";
-            this.btnEliminarUsuario.Size = new System.Drawing.Size(108, 23);
-            this.btnEliminarUsuario.TabIndex = 3;
-            this.btnEliminarUsuario.Text = "Eliminar usuario";
-            this.btnEliminarUsuario.UseVisualStyleBackColor = true;
+            this.btnAgregar.Location = new System.Drawing.Point(630, 7);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(108, 23);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "Agregar usuario";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // dgvUsuarios
+            // 
+            this.dgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUsuarios.Location = new System.Drawing.Point(6, 6);
+            this.dgvUsuarios.Name = "dgvUsuarios";
+            this.dgvUsuarios.Size = new System.Drawing.Size(617, 289);
+            this.dgvUsuarios.TabIndex = 0;
+            // 
+            // tabPageRecuperarContraseña
+            // 
+            this.tabPageRecuperarContraseña.Location = new System.Drawing.Point(4, 22);
+            this.tabPageRecuperarContraseña.Name = "tabPageRecuperarContraseña";
+            this.tabPageRecuperarContraseña.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageRecuperarContraseña.Size = new System.Drawing.Size(744, 301);
+            this.tabPageRecuperarContraseña.TabIndex = 1;
+            this.tabPageRecuperarContraseña.Text = "Cambiar contraseña";
+            this.tabPageRecuperarContraseña.UseVisualStyleBackColor = true;
+            // 
+            // btnCancelarCambiosUsuarios
+            // 
+            this.btnCancelarCambiosUsuarios.Location = new System.Drawing.Point(592, 302);
+            this.btnCancelarCambiosUsuarios.Name = "btnCancelarCambiosUsuarios";
+            this.btnCancelarCambiosUsuarios.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarCambiosUsuarios.TabIndex = 3;
+            this.btnCancelarCambiosUsuarios.Text = "Cancelar";
+            this.btnCancelarCambiosUsuarios.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardarCambiosBD
+            // 
+            this.btnGuardarCambiosBD.Location = new System.Drawing.Point(673, 302);
+            this.btnGuardarCambiosBD.Name = "btnGuardarCambiosBD";
+            this.btnGuardarCambiosBD.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarCambiosBD.TabIndex = 2;
+            this.btnGuardarCambiosBD.Text = "Guardar";
+            this.btnGuardarCambiosBD.UseVisualStyleBackColor = true;
+            // 
+            // tabPageBD
+            // 
+            this.tabPageBD.Controls.Add(this.txtUsuarioFuncionario);
+            this.tabPageBD.Controls.Add(this.lblUsuarioFuncionario);
+            this.tabPageBD.Controls.Add(this.txtDireccionBD);
+            this.tabPageBD.Controls.Add(this.lblDireccion);
+            this.tabPageBD.Controls.Add(this.btnCancelarConfiguracionBD);
+            this.tabPageBD.Controls.Add(this.btnGuardarConfiguracionBD);
+            this.tabPageBD.Location = new System.Drawing.Point(4, 22);
+            this.tabPageBD.Name = "tabPageBD";
+            this.tabPageBD.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageBD.Size = new System.Drawing.Size(758, 330);
+            this.tabPageBD.TabIndex = 1;
+            this.tabPageBD.Text = "Bases de datos";
+            this.tabPageBD.UseVisualStyleBackColor = true;
+            // 
+            // txtUsuarioFuncionario
+            // 
+            this.txtUsuarioFuncionario.Location = new System.Drawing.Point(9, 89);
+            this.txtUsuarioFuncionario.Name = "txtUsuarioFuncionario";
+            this.txtUsuarioFuncionario.Size = new System.Drawing.Size(196, 20);
+            this.txtUsuarioFuncionario.TabIndex = 5;
+            // 
+            // lblUsuarioFuncionario
+            // 
+            this.lblUsuarioFuncionario.AutoSize = true;
+            this.lblUsuarioFuncionario.Location = new System.Drawing.Point(6, 73);
+            this.lblUsuarioFuncionario.Name = "lblUsuarioFuncionario";
+            this.lblUsuarioFuncionario.Size = new System.Drawing.Size(116, 13);
+            this.lblUsuarioFuncionario.TabIndex = 4;
+            this.lblUsuarioFuncionario.Text = "Usuario de Funcionario";
+            // 
+            // txtDireccionBD
+            // 
+            this.txtDireccionBD.Location = new System.Drawing.Point(9, 25);
+            this.txtDireccionBD.Name = "txtDireccionBD";
+            this.txtDireccionBD.Size = new System.Drawing.Size(196, 20);
+            this.txtDireccionBD.TabIndex = 3;
+            // 
+            // lblDireccion
+            // 
+            this.lblDireccion.AutoSize = true;
+            this.lblDireccion.Location = new System.Drawing.Point(6, 9);
+            this.lblDireccion.Name = "lblDireccion";
+            this.lblDireccion.Size = new System.Drawing.Size(199, 13);
+            this.lblDireccion.TabIndex = 2;
+            this.lblDireccion.Text = "Direccion del servidor de bases de datos";
+            // 
+            // btnCancelarConfiguracionBD
+            // 
+            this.btnCancelarConfiguracionBD.Location = new System.Drawing.Point(592, 302);
+            this.btnCancelarConfiguracionBD.Name = "btnCancelarConfiguracionBD";
+            this.btnCancelarConfiguracionBD.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelarConfiguracionBD.TabIndex = 1;
+            this.btnCancelarConfiguracionBD.Text = "Cancelar";
+            this.btnCancelarConfiguracionBD.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardarConfiguracionBD
+            // 
+            this.btnGuardarConfiguracionBD.Location = new System.Drawing.Point(673, 302);
+            this.btnGuardarConfiguracionBD.Name = "btnGuardarConfiguracionBD";
+            this.btnGuardarConfiguracionBD.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarConfiguracionBD.TabIndex = 0;
+            this.btnGuardarConfiguracionBD.Text = "Guardar";
+            this.btnGuardarConfiguracionBD.UseVisualStyleBackColor = true;
             // 
             // Configuracion
             // 
@@ -264,11 +263,11 @@
             this.Text = "Configuracion";
             this.tabControlConfiguracion.ResumeLayout(false);
             this.tabPageUsuarios.ResumeLayout(false);
-            this.tabPageBD.ResumeLayout(false);
-            this.tabPageBD.PerformLayout();
             this.tabControlConfiguracionUsuariosElementos.ResumeLayout(false);
             this.tabPageVerUsuarios.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuarios)).EndInit();
+            this.tabPageBD.ResumeLayout(false);
+            this.tabPageBD.PerformLayout();
             this.ResumeLayout(false);
 
         }
