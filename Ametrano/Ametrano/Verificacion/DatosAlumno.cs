@@ -97,7 +97,7 @@ namespace Ametrano.Encapsulado
                 mensajeParaRetornar += "\n La edad contiene texto  o caracteres no permitidos";
             }
 
-            if (datosPersonalesRecividos[7].Equals("H") || datosPersonalesRecividos[7].Equals("M"))
+            if (datosPersonalesRecividos[7].Equals("Hombre") || datosPersonalesRecividos[7].Equals("Mujer"))
             {
                 datosPersonales[7] = datosPersonalesRecividos[7];
             }else
@@ -106,6 +106,14 @@ namespace Ametrano.Encapsulado
             }
             datosPersonales[5] = datosPersonalesRecividos[5];
             datosPersonales[8] = datosPersonalesRecividos[8];
+
+            if(cedulaNumerica && !nombre1ConInt && !nombre2ConInt && !apellido1ConInt && !apellido1ConInt && intEdad && (datosPersonalesRecividos[7].Equals("Hombre") || datosPersonalesRecividos[7].Equals("Mujer")))
+            {//Si todas las verificaciones son correctas
+                errores = false;
+            }else
+            {
+                errores = true;
+            }
 
             dynamic[] datosParaRetornar = new dynamic[2];
             /*Explicacion del array datosParaRetornar
