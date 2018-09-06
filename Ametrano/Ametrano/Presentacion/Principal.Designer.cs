@@ -881,6 +881,7 @@
             this.txtTelefonoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTelefonoDocente.Location = new System.Drawing.Point(230, 124);
+            this.txtTelefonoDocente.MaxLength = 12;
             this.txtTelefonoDocente.Name = "txtTelefonoDocente";
             this.txtTelefonoDocente.Size = new System.Drawing.Size(192, 24);
             this.txtTelefonoDocente.TabIndex = 6;

@@ -280,21 +280,32 @@ namespace Ametrano.Presentacion
 
             if (!verificacion[0])
             {
-                string[] especialidades = new string[listEspecialidades.Items.Count];//array que guarda especialidades de el docente
-
-                for (int i = 0; i < listEspecialidades.Items.Count; i++)
+                if (listEspecialidades.Items.Count == 0)
                 {
-                    especialidades[i] = listEspecialidades.Items[i].ToString();
-                }
-
-
-                bool insert = controlador.ingresarDocente(cedula, apellido1, nombre1, direccion, telefono, email, especialidades);
-                if (insert)
+                    MessageBox.Show("El docente tiene que tener al menos una especialidad");
+                }else
                 {
-                    MessageBox.Show("Docente agregado correctamente");
-                    limpiarFormulario(tabPageDocentesNuevo);
+                    string[] especialidades = new string[listEspecialidades.Items.Count];//array que guarda especialidades de el docente
 
+                    for (int i = 0; i < listEspecialidades.Items.Count; i++)
+                    {
+                        especialidades[i] = listEspecialidades.Items[i].ToString();
+                    }
+
+
+                    dynamic[] insert = controlador.ingresarDocente(cedula, apellido1, nombre1, direccion, telefono, email, especialidades);
+                    if (insert[0])
+                    {
+                        MessageBox.Show(insert[1]);
+                        limpiarFormulario(tabPageDocentesNuevo);
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(insert[1]);
+                    }
                 }
+                
             }else
             {
                 MessageBox.Show(verificacion[1]);

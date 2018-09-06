@@ -22,16 +22,26 @@ namespace Ametrano.Logica
             ventanaConfiguracion.Show();
         }
 
-        public bool ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
+        public dynamic[] ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
+            dynamic[] datosParaRetornar = new dynamic[2];
             bool retorno = false;
+            string mensajeParaRetornar = "";
+
             //Verificacion de si ya existe el docente
             string select = "SELECT estado from docente where cedula_docente = '"+cedula+"';";
-
-
-
-
-            string insert = "INSERT INTO DOCENTE VALUES('" +
+            MySqlDataAdapter datosConsultaCedula = objetoConexion.consultarDatos(select);
+            DataTable selectDT = new DataTable();
+            datosConsultaCedula.Fill(selectDT);
+            if (selectDT.Rows.Count > 0)
+            {
+                retorno = false;
+                datosParaRetornar[0] = retorno;
+                datosParaRetornar[1] = "El docente ya existe";
+                return datosParaRetornar;
+            }else
+            {
+                string insert = "INSERT INTO DOCENTE VALUES('" +
                 cedula + "','" +
                 nombre + "','" +
                 apellido + "','" + //Sql de insert de docente
@@ -39,32 +49,45 @@ namespace Ametrano.Logica
                 telefono + "','" +
                 email + "',1);";
 
-            int filasAfectadas = objetoConexion.sqlInsertUpdate(insert);//Se realiza el insert y se guarda la cantidad de filas afectadas
-            if (filasAfectadas > 0)
-            {//Si el docente se ingreso correctamente
-                int filasAfectadasEspecialidad = 0;//Cantidad de especialidades ingresadas en total
-                for (int i = 0; i < especialidades.Length; i++)
-                {//Se recorre el array de especialidades y se inserta 
-                    string especialidadInsert = "INSERT INTO especialidad VALUES('" + cedula + "','" + especialidades[i] + "');";
-                    objetoConexion.sqlInsertUpdate(especialidadInsert);
-                    filasAfectadasEspecialidad++;//Si se inserta correctamente se aumenta el numero de especialidades ingresadas
-                }
+                int filasAfectadas = objetoConexion.sqlInsertUpdate(insert);//Se realiza el insert y se guarda la cantidad de filas afectadas
+                if (filasAfectadas > 0)
+                {//Si el docente se ingreso correctamente
+                    int filasAfectadasEspecialidad = 0;//Cantidad de especialidades ingresadas en total
+                    for (int i = 0; i < especialidades.Length; i++)
+                    {//Se recorre el array de especialidades y se inserta 
+                        string especialidadInsert = "INSERT INTO especialidad VALUES('" + cedula + "','" + especialidades[i] + "');";
+                        objetoConexion.sqlInsertUpdate(especialidadInsert);
+                        filasAfectadasEspecialidad++;//Si se inserta correctamente se aumenta el numero de especialidades ingresadas
+                    }
 
-                if (filasAfectadasEspecialidad == especialidades.Length)
-                {//Si la cantidad de especialidades ingresadas coincide con la cantidad de especialidades recividas para ingresar se devuelve true
-                    retorno = true;
+                    if (filasAfectadasEspecialidad == especialidades.Length)
+                    {//Si la cantidad de especialidades ingresadas coincide con la cantidad de especialidades recividas para ingresar se devuelve true
+                        retorno = true;
+                        mensajeParaRetornar = "Docente agregado correctamente";
+                    }
+                    else
+                    {
+                        retorno = false;
+                        mensajeParaRetornar = "Error al ingresar las especialidades del docente";
+                    }
+
                 }
                 else
                 {
                     retorno = false;
+                    mensajeParaRetornar = "Error al ingresar al docente";
                 }
+                datosParaRetornar[0] = retorno;
+                datosParaRetornar[1] = mensajeParaRetornar;
+                return datosParaRetornar;
+            }
 
-            }
-            else
-            {
-                retorno = false;
-            }
-            return retorno;
+            
+
+
+
+
+            
         }
         
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
