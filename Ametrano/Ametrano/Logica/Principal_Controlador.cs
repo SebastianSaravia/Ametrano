@@ -113,7 +113,7 @@ namespace Ametrano.Logica
                 }
                 else
                 {//Si es un nombre y apellido
-                    consulta = "SELECT * FROM DOCENTE WHERE CONCAT(nombre1,' ',apellido1) LIKE = '%" + datoDeBusqueda + "%';";
+                    consulta = "SELECT * FROM DOCENTE WHERE CONCAT(nombre,' ',apellido) LIKE '%" + datoDeBusqueda + "%';";
                 }
             }
             else
@@ -124,7 +124,7 @@ namespace Ametrano.Logica
                 }
                 else
                 {//Si es un nombre y apellido
-                    consulta = "SELECT * FROM ALUMNO WHERE CONCAT(nombre1,' ',apellido1) LIKE = '%" + datoDeBusqueda + "%';";
+                    consulta = "SELECT * FROM ALUMNO WHERE CONCAT(nombre1,' ',apellido1) LIKE '%" + datoDeBusqueda + "%';";
                 }
             }
 
@@ -142,12 +142,14 @@ namespace Ametrano.Logica
                         mapaDeDatos.Add(column.ColumnName.ToString(), row[column].ToString());
                         //testing.MostrarMessageBox(column.ColumnName.ToString() + " --- " + row[column].ToString());
                     }
+                    break;//__________________________SE debe arreglar para poder mostrar mas de una persona
                 }
                 retorno = true;
             }
             catch (Exception e)
             {
                 retorno = false;
+                testing.MostrarMessageBox(e.Message);
                 if (tablaDeDatos.Rows.Count == 0)
                 {
                     testing.MostrarMessageBox("No se encontraron usuarios que coincidan con: " + datoDeBusqueda);

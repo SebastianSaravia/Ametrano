@@ -438,6 +438,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.txtMontoViatico = new System.Windows.Forms.TextBox();
             this.txtMontoViatico_2 = new System.Windows.Forms.TextBox();
+            this.listBoxResultados = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -941,6 +942,7 @@
             // tabPageDocentesConsultarModificar
             // 
             this.tabPageDocentesConsultarModificar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.listBoxResultados);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.btnActualizarDocente);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.btnBuscar);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.txtBuscar);
@@ -5319,6 +5321,15 @@
             this.txtMontoViatico_2.TabIndex = 29;
             this.txtMontoViatico_2.Text = "Viatico por dia asistido";
             // 
+            // listBoxResultados
+            // 
+            this.listBoxResultados.FormattingEnabled = true;
+            this.listBoxResultados.Location = new System.Drawing.Point(501, 73);
+            this.listBoxResultados.Name = "listBoxResultados";
+            this.listBoxResultados.Size = new System.Drawing.Size(192, 69);
+            this.listBoxResultados.TabIndex = 10;
+            this.listBoxResultados.Visible = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5906,5 +5917,6 @@
         private System.Windows.Forms.ComboBox comboBox10;
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
+        private System.Windows.Forms.ListBox listBoxResultados;
     }
 }

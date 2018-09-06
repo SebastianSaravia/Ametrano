@@ -462,7 +462,7 @@ namespace Ametrano.Presentacion
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-
+            
             int tipoBusqueda = 3;
             if (boxBuscar.SelectedIndex == 1)
             {
