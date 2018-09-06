@@ -15,13 +15,13 @@ namespace Ametrano.Logica
         TestingClass testing = new TestingClass();//--------------------------------------
         public IDictionary<string, string> mapTextBox = new Dictionary<string, string>();
         ConexionBD objetoConexion = new ConexionBD();
-
-
+        
         public void abrirConfiguracion()
         {
             Configuracion ventanaConfiguracion = new Configuracion();
             ventanaConfiguracion.Show();
         }
+
         public bool ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
             bool retorno = false;
@@ -60,6 +60,7 @@ namespace Ametrano.Logica
             }
             return retorno;
         }
+        
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
         {
             bool retorno = false; //Variable de retorno
@@ -167,9 +168,7 @@ namespace Ametrano.Logica
 
             return datosParaRetornar;
         }
-
-
-
+        
         public bool cambiarEstadoPersona(int bajaAlta, int tipoPersona, string cedulaPersona)
         {//metodo que da de baja una persona
             bool retorno = false;
@@ -228,11 +227,6 @@ namespace Ametrano.Logica
 
             return retorno;
         }
-
-
-
-
-
-
+        
     }
 }
