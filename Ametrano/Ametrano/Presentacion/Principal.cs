@@ -556,5 +556,9 @@ namespace Ametrano.Presentacion
 
         }
 
+        private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
+        {
+            dataGridViaticos.Rows.Add();
+        }
     }
 }
