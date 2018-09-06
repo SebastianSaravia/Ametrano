@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace Ametrano.Verificacion
 {
     
-    class datosDocente
+    class DatosDocente
     {//Clase que almacena y valida los datos del docente
         private string[] datosPersonales;
-        public datosDocente()
+        public DatosDocente()
         {
             datosPersonales = new string[6];
         }
@@ -25,11 +25,13 @@ namespace Ametrano.Verificacion
              * datosPersonalesRecividos[4] = -> Telefono
              * datosPersonalesRecividos[5] = -> Email
              */
-            bool[] verificaciones = new bool[4];
+            bool[] verificaciones = new bool[6];
             /* verificaciones[0] = -> cedula
              * verificaciones[1] = -> nombre
              * verificaciones[2] = -> apellido
              * verificaciones[3] = -> telefono
+             * verificaciones[4] = -> longitud de la cedula
+             * verificaciones[5] = -> longitud del numero telefonico
              */
 
             //Vendecidos if en una linea los cuales analizan y si es true es que no hubieron errores
@@ -41,6 +43,7 @@ namespace Ametrano.Verificacion
             {//Verificacion de la cedula
                 verificaciones[0] = true;
             }
+
             else{
                 mensajeParaRetornar += "\n La cedula contiene caracteres no permitidos";
                 verificaciones[0] = false;
@@ -73,9 +76,27 @@ namespace Ametrano.Verificacion
                 mensajeParaRetornar += "\n El numero telefonico contiene caracteres no permitidos";
                 verificaciones[3] = false;
             }
+            if (datosDocenteRecibidos[0].Length >= 8)
+            {//Verificacion de la longitud de la cedula
+                verificaciones[4] = true;
+            }
+            else
+            {
+                mensajeParaRetornar += "\n La longitud de la cedula no es valida";
+                verificaciones[4] = false;
+            }
+            if (datosDocenteRecibidos[4].Length >= 8)
+            {//Verificacion de la longitud de la cedula
+                verificaciones[5] = true;
+            }
+            else
+            {
+                mensajeParaRetornar += "\n La longitud del numero telefonico no es valida";
+                verificaciones[5] = false;
+            }
 
-            
-            if (verificaciones[0] && verificaciones[1] && verificaciones[2] && verificaciones[3])
+
+            if (verificaciones[0] && verificaciones[1] && verificaciones[2] && verificaciones[3] && verificaciones[4] && verificaciones[5])
             {//Si todos estan correctos
                 this.datosPersonales[0] = datosDocenteRecibidos[0];
                 this.datosPersonales[1] = datosDocenteRecibidos[1];

@@ -25,6 +25,12 @@ namespace Ametrano.Logica
         public bool ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
             bool retorno = false;
+            //Verificacion de si ya existe el docente
+            string select = "SELECT estado from docente where cedula_docente = '"+cedula+"';";
+
+
+
+
             string insert = "INSERT INTO DOCENTE VALUES('" +
                 cedula + "','" +
                 nombre + "','" +

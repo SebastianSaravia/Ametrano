@@ -1,4 +1,5 @@
 ﻿using Ametrano.Logica;
+using Ametrano.Verificacion;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -266,30 +267,37 @@ namespace Ametrano.Presentacion
         private void btnIngresarDocente_Click(object sender, EventArgs e)
         {//Evento click del boton ingresar docente
             //Datos personales
+            DatosDocente infoDocente = new DatosDocente();
 
             string cedula = txtCedulaDocente.Text;
             string apellido1 = txtApellido1Docente.Text;
-
             string nombre1 = txtNombre1Docente.Text;
-
             string direccion = txtDireccionDocente.Text;
             string telefono = txtTelefonoDocente.Text;
             string email = txtEmailDocente.Text;
 
-            string[] especialidades = new string[listEspecialidades.Items.Count];//array que guarda especialidades de el docente
+            dynamic[] verificacion = infoDocente.setDatosDocente(new string[] { cedula, nombre1, apellido1, direccion, telefono, email});
 
-            for (int i = 0; i < listEspecialidades.Items.Count; i++)
+            if (!verificacion[0])
             {
-                especialidades[i] = listEspecialidades.Items[i].ToString();
-            }
+                string[] especialidades = new string[listEspecialidades.Items.Count];//array que guarda especialidades de el docente
+
+                for (int i = 0; i < listEspecialidades.Items.Count; i++)
+                {
+                    especialidades[i] = listEspecialidades.Items[i].ToString();
+                }
 
 
-            bool insert = controlador.ingresarDocente(cedula, apellido1, nombre1, direccion, telefono, email, especialidades);
-            if (insert)
+                bool insert = controlador.ingresarDocente(cedula, apellido1, nombre1, direccion, telefono, email, especialidades);
+                if (insert)
+                {
+                    MessageBox.Show("Docente agregado correctamente");
+                    limpiarFormulario(tabPageDocentesNuevo);
+
+                }
+            }else
             {
-                MessageBox.Show("Docente agregado correctamente");
-                limpiarFormulario(tabPageDocentesNuevo);
-
+                MessageBox.Show(verificacion[1]);
             }
 
 
