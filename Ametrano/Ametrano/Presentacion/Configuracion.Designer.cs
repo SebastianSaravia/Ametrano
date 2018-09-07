@@ -37,7 +37,6 @@
             this.btnModificarUsuario = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.dgvUsuarios = new System.Windows.Forms.DataGridView();
-            this.tabPageRecuperarContraseña = new System.Windows.Forms.TabPage();
             this.btnCancelarCambiosUsuarios = new System.Windows.Forms.Button();
             this.btnGuardarCambiosBD = new System.Windows.Forms.Button();
             this.tabPageBD = new System.Windows.Forms.TabPage();
@@ -95,7 +94,6 @@
             // tabControlConfiguracionUsuariosElementos
             // 
             this.tabControlConfiguracionUsuariosElementos.Controls.Add(this.tabPageVerUsuarios);
-            this.tabControlConfiguracionUsuariosElementos.Controls.Add(this.tabPageRecuperarContraseña);
             this.tabControlConfiguracionUsuariosElementos.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControlConfiguracionUsuariosElementos.Location = new System.Drawing.Point(3, 3);
             this.tabControlConfiguracionUsuariosElementos.Name = "tabControlConfiguracionUsuariosElementos";
@@ -152,16 +150,6 @@
             this.dgvUsuarios.Size = new System.Drawing.Size(617, 289);
             this.dgvUsuarios.TabIndex = 0;
             // 
-            // tabPageRecuperarContraseña
-            // 
-            this.tabPageRecuperarContraseña.Location = new System.Drawing.Point(4, 22);
-            this.tabPageRecuperarContraseña.Name = "tabPageRecuperarContraseña";
-            this.tabPageRecuperarContraseña.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageRecuperarContraseña.Size = new System.Drawing.Size(744, 301);
-            this.tabPageRecuperarContraseña.TabIndex = 1;
-            this.tabPageRecuperarContraseña.Text = "Cambiar contraseña";
-            this.tabPageRecuperarContraseña.UseVisualStyleBackColor = true;
-            // 
             // btnCancelarCambiosUsuarios
             // 
             this.btnCancelarCambiosUsuarios.Location = new System.Drawing.Point(592, 302);
@@ -191,7 +179,7 @@
             this.tabPageBD.Location = new System.Drawing.Point(4, 22);
             this.tabPageBD.Name = "tabPageBD";
             this.tabPageBD.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageBD.Size = new System.Drawing.Size(758, 330);
+            this.tabPageBD.Size = new System.Drawing.Size(758, 333);
             this.tabPageBD.TabIndex = 1;
             this.tabPageBD.Text = "Bases de datos";
             this.tabPageBD.UseVisualStyleBackColor = true;
@@ -290,7 +278,6 @@
         private System.Windows.Forms.Button btnModificarUsuario;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView dgvUsuarios;
-        private System.Windows.Forms.TabPage tabPageRecuperarContraseña;
         private System.Windows.Forms.TextBox txtUsuarioFuncionario;
         private System.Windows.Forms.Label lblUsuarioFuncionario;
     }
