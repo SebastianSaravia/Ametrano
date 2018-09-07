@@ -65,6 +65,7 @@
             this.txtNombre1Docente = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente = new System.Windows.Forms.TextBox();
             this.tabPageDocentesConsultarModificar = new System.Windows.Forms.TabPage();
+            this.listBoxResultados = new System.Windows.Forms.ListBox();
             this.btnActualizarDocente = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -101,6 +102,7 @@
             this.tabControlIngresarAlumno = new System.Windows.Forms.TabControl();
             this.tabPageIngresarAlumnoDatosPersonales = new System.Windows.Forms.TabPage();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.txtMontoViatico = new System.Windows.Forms.TextBox();
             this.boxPeriodoAlumno = new System.Windows.Forms.ComboBox();
             this.boxEstadoAlumno = new System.Windows.Forms.ComboBox();
             this.boxCursoAlumno = new System.Windows.Forms.ComboBox();
@@ -271,6 +273,7 @@
             this.lblTiempoDesempleadoAlumno_2 = new System.Windows.Forms.Label();
             this.tabPageModificarAlumnosDatosPersonales = new System.Windows.Forms.TabPage();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.txtMontoViatico_2 = new System.Windows.Forms.TextBox();
             this.boxPeriodoAlumno_2 = new System.Windows.Forms.ComboBox();
             this.boxEstadoAlumno_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAlumno_2 = new System.Windows.Forms.ComboBox();
@@ -429,16 +432,13 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
-            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.txtMontoViatico = new System.Windows.Forms.TextBox();
-            this.txtMontoViatico_2 = new System.Windows.Forms.TextBox();
-            this.listBoxResultados = new System.Windows.Forms.ListBox();
+            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -684,14 +684,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -955,6 +955,15 @@
             this.tabPageDocentesConsultarModificar.Size = new System.Drawing.Size(1089, 521);
             this.tabPageDocentesConsultarModificar.TabIndex = 1;
             this.tabPageDocentesConsultarModificar.Text = "Consultar / Modificar";
+            // 
+            // listBoxResultados
+            // 
+            this.listBoxResultados.FormattingEnabled = true;
+            this.listBoxResultados.Location = new System.Drawing.Point(501, 73);
+            this.listBoxResultados.Name = "listBoxResultados";
+            this.listBoxResultados.Size = new System.Drawing.Size(192, 69);
+            this.listBoxResultados.TabIndex = 10;
+            this.listBoxResultados.Visible = false;
             // 
             // btnActualizarDocente
             // 
@@ -1374,6 +1383,17 @@
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Con respecto al instituto";
+            // 
+            // txtMontoViatico
+            // 
+            this.txtMontoViatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMontoViatico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMontoViatico.Location = new System.Drawing.Point(559, 30);
+            this.txtMontoViatico.MaxLength = 8;
+            this.txtMontoViatico.Name = "txtMontoViatico";
+            this.txtMontoViatico.Size = new System.Drawing.Size(159, 24);
+            this.txtMontoViatico.TabIndex = 28;
+            this.txtMontoViatico.Text = "Viatico por dia asistido";
             // 
             // boxPeriodoAlumno
             // 
@@ -3372,6 +3392,17 @@
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Con respecto al instituto";
             // 
+            // txtMontoViatico_2
+            // 
+            this.txtMontoViatico_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMontoViatico_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtMontoViatico_2.Location = new System.Drawing.Point(559, 30);
+            this.txtMontoViatico_2.MaxLength = 8;
+            this.txtMontoViatico_2.Name = "txtMontoViatico_2";
+            this.txtMontoViatico_2.Size = new System.Drawing.Size(159, 24);
+            this.txtMontoViatico_2.TabIndex = 29;
+            this.txtMontoViatico_2.Text = "Viatico por dia asistido";
+            // 
             // boxPeriodoAlumno_2
             // 
             this.boxPeriodoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5208,27 +5239,15 @@
             // 
             // groupBox58
             // 
-            this.groupBox58.Controls.Add(this.boxTipoCurso);
             this.groupBox58.Controls.Add(this.groupBox59);
             this.groupBox58.Controls.Add(this.textBox1);
+            this.groupBox58.Controls.Add(this.boxTipoCurso);
             this.groupBox58.Location = new System.Drawing.Point(161, 42);
             this.groupBox58.Name = "groupBox58";
             this.groupBox58.Size = new System.Drawing.Size(760, 218);
             this.groupBox58.TabIndex = 0;
             this.groupBox58.TabStop = false;
             this.groupBox58.Text = "Agregar curso nuevo";
-            // 
-            // boxTipoCurso
-            // 
-            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTipoCurso.FormattingEnabled = true;
-            this.boxTipoCurso.Items.AddRange(new object[] {
-            "Tipo..."});
-            this.boxTipoCurso.Location = new System.Drawing.Point(28, 72);
-            this.boxTipoCurso.Name = "boxTipoCurso";
-            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
-            this.boxTipoCurso.TabIndex = 9;
             // 
             // groupBox59
             // 
@@ -5299,36 +5318,17 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Nombre del curso";
             // 
-            // txtMontoViatico
+            // boxTipoCurso
             // 
-            this.txtMontoViatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoViatico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMontoViatico.Location = new System.Drawing.Point(559, 30);
-            this.txtMontoViatico.MaxLength = 8;
-            this.txtMontoViatico.Name = "txtMontoViatico";
-            this.txtMontoViatico.Size = new System.Drawing.Size(159, 24);
-            this.txtMontoViatico.TabIndex = 28;
-            this.txtMontoViatico.Text = "Viatico por dia asistido";
-            // 
-            // txtMontoViatico_2
-            // 
-            this.txtMontoViatico_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMontoViatico_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMontoViatico_2.Location = new System.Drawing.Point(559, 30);
-            this.txtMontoViatico_2.MaxLength = 8;
-            this.txtMontoViatico_2.Name = "txtMontoViatico_2";
-            this.txtMontoViatico_2.Size = new System.Drawing.Size(159, 24);
-            this.txtMontoViatico_2.TabIndex = 29;
-            this.txtMontoViatico_2.Text = "Viatico por dia asistido";
-            // 
-            // listBoxResultados
-            // 
-            this.listBoxResultados.FormattingEnabled = true;
-            this.listBoxResultados.Location = new System.Drawing.Point(501, 73);
-            this.listBoxResultados.Name = "listBoxResultados";
-            this.listBoxResultados.Size = new System.Drawing.Size(192, 69);
-            this.listBoxResultados.TabIndex = 10;
-            this.listBoxResultados.Visible = false;
+            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTipoCurso.FormattingEnabled = true;
+            this.boxTipoCurso.Items.AddRange(new object[] {
+            "Tipo..."});
+            this.boxTipoCurso.Location = new System.Drawing.Point(28, 72);
+            this.boxTipoCurso.Name = "boxTipoCurso";
+            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
+            this.boxTipoCurso.TabIndex = 8;
             // 
             // Principal
             // 
@@ -5336,9 +5336,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuPrincipal;
@@ -5918,5 +5918,6 @@
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
         private System.Windows.Forms.ListBox listBoxResultados;
+        private System.Windows.Forms.ComboBox boxTipoCurso;
     }
 }
