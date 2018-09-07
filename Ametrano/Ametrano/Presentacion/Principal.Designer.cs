@@ -421,7 +421,7 @@
             this.groupBox61 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
             this.groupBox60 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
@@ -429,7 +429,7 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -5085,7 +5085,7 @@
             // 
             this.nuevoGrupo.BackColor = System.Drawing.Color.LightSteelBlue;
             this.nuevoGrupo.Controls.Add(this.groupBox61);
-            this.nuevoGrupo.Controls.Add(this.comboBox8);
+            this.nuevoGrupo.Controls.Add(this.boxCursoGrupo);
             this.nuevoGrupo.Controls.Add(this.groupBox60);
             this.nuevoGrupo.Location = new System.Drawing.Point(4, 22);
             this.nuevoGrupo.Name = "nuevoGrupo";
@@ -5120,17 +5120,17 @@
             this.dateTimePicker2.Size = new System.Drawing.Size(274, 24);
             this.dateTimePicker2.TabIndex = 33;
             // 
-            // comboBox8
+            // boxCursoGrupo
             // 
-            this.comboBox8.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Items.AddRange(new object[] {
+            this.boxCursoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoGrupo.FormattingEnabled = true;
+            this.boxCursoGrupo.Items.AddRange(new object[] {
             "Curso..."});
-            this.comboBox8.Location = new System.Drawing.Point(65, 49);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(209, 26);
-            this.comboBox8.TabIndex = 9;
+            this.boxCursoGrupo.Location = new System.Drawing.Point(65, 49);
+            this.boxCursoGrupo.Name = "boxCursoGrupo";
+            this.boxCursoGrupo.Size = new System.Drawing.Size(209, 26);
+            this.boxCursoGrupo.TabIndex = 9;
             // 
             // groupBox60
             // 
@@ -5200,7 +5200,7 @@
             // 
             // groupBox58
             // 
-            this.groupBox58.Controls.Add(this.comboBox10);
+            this.groupBox58.Controls.Add(this.boxTipoCurso);
             this.groupBox58.Controls.Add(this.groupBox59);
             this.groupBox58.Controls.Add(this.textBox1);
             this.groupBox58.Location = new System.Drawing.Point(161, 42);
@@ -5210,17 +5210,17 @@
             this.groupBox58.TabStop = false;
             this.groupBox58.Text = "Agregar curso nuevo";
             // 
-            // comboBox10
+            // boxTipoCurso
             // 
-            this.comboBox10.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Items.AddRange(new object[] {
+            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTipoCurso.FormattingEnabled = true;
+            this.boxTipoCurso.Items.AddRange(new object[] {
             "Tipo..."});
-            this.comboBox10.Location = new System.Drawing.Point(28, 72);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(192, 26);
-            this.comboBox10.TabIndex = 9;
+            this.boxTipoCurso.Location = new System.Drawing.Point(28, 72);
+            this.boxTipoCurso.Name = "boxTipoCurso";
+            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
+            this.boxTipoCurso.TabIndex = 9;
             // 
             // groupBox59
             // 
@@ -5867,12 +5867,12 @@
         private System.Windows.Forms.GroupBox groupBox61;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.ComboBox comboBox8;
+        private System.Windows.Forms.ComboBox boxCursoGrupo;
         private System.Windows.Forms.GroupBox groupBox60;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox boxTipoCurso;
     }
 }
