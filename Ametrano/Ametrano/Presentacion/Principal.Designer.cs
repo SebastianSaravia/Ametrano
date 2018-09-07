@@ -430,7 +430,6 @@
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
-            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -683,14 +682,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -5234,27 +5233,15 @@
             // 
             // groupBox58
             // 
-            this.groupBox58.Controls.Add(this.boxTipoCurso);
             this.groupBox58.Controls.Add(this.groupBox59);
             this.groupBox58.Controls.Add(this.textBox1);
+            this.groupBox58.Controls.Add(this.boxTipoCurso);
             this.groupBox58.Location = new System.Drawing.Point(161, 42);
             this.groupBox58.Name = "groupBox58";
             this.groupBox58.Size = new System.Drawing.Size(760, 218);
             this.groupBox58.TabIndex = 0;
             this.groupBox58.TabStop = false;
             this.groupBox58.Text = "Agregar curso nuevo";
-            // 
-            // boxTipoCurso
-            // 
-            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTipoCurso.FormattingEnabled = true;
-            this.boxTipoCurso.Items.AddRange(new object[] {
-            "Tipo..."});
-            this.boxTipoCurso.Location = new System.Drawing.Point(28, 72);
-            this.boxTipoCurso.Name = "boxTipoCurso";
-            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
-            this.boxTipoCurso.TabIndex = 9;
             // 
             // groupBox59
             // 
@@ -5342,9 +5329,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuPrincipal;
