@@ -86,13 +86,11 @@
             this.txtCedulaDocente_2 = new System.Windows.Forms.TextBox();
             this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
             this.btnDarDeBaja = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblCedulaDocente = new System.Windows.Forms.Label();
             this.lblEmailDocente = new System.Windows.Forms.Label();
             this.lblApellidoDocente = new System.Windows.Forms.Label();
             this.lblNombreDocente = new System.Windows.Forms.Label();
-            this.txtMotivo = new System.Windows.Forms.TextBox();
             this.btnBuscar_2 = new System.Windows.Forms.Button();
             this.txtBuscar_2 = new System.Windows.Forms.TextBox();
             this.boxBuscar_2 = new System.Windows.Forms.ComboBox();
@@ -438,7 +436,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
+            this.lblEstadoDocenteBaja = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -974,6 +972,7 @@
             this.btnActualizarDocente.TabIndex = 9;
             this.btnActualizarDocente.Text = "Actualizar docente";
             this.btnActualizarDocente.UseVisualStyleBackColor = true;
+            this.btnActualizarDocente.Click += new System.EventHandler(this.btnActualizarDocente_Click);
             // 
             // btnBuscar
             // 
@@ -994,7 +993,7 @@
             this.txtBuscar.Name = "txtBuscar";
             this.txtBuscar.Size = new System.Drawing.Size(192, 24);
             this.txtBuscar.TabIndex = 7;
-            this.txtBuscar.Text = "Texo de busqueda";
+            this.txtBuscar.Text = "Texto de busqueda";
             this.txtBuscar.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtBuscar.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
@@ -1014,6 +1013,7 @@
             this.boxBuscar.Size = new System.Drawing.Size(132, 26);
             this.boxBuscar.TabIndex = 6;
             this.boxBuscar.Tag = "";
+            this.boxBuscar.SelectedIndexChanged += new System.EventHandler(this.boxBuscar_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -1095,6 +1095,7 @@
             this.btnCambiarEstadoDocente.TabIndex = 9;
             this.btnCambiarEstadoDocente.Text = "Activar";
             this.btnCambiarEstadoDocente.UseVisualStyleBackColor = true;
+            this.btnCambiarEstadoDocente.Visible = false;
             this.btnCambiarEstadoDocente.Click += new System.EventHandler(this.btnCambiarEstadoDocente_Click);
             // 
             // lblEstadoDocente
@@ -1183,9 +1184,7 @@
             // 
             this.tabPageDocentesBaja.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageDocentesBaja.Controls.Add(this.btnDarDeBaja);
-            this.tabPageDocentesBaja.Controls.Add(this.label9);
             this.tabPageDocentesBaja.Controls.Add(this.groupBox5);
-            this.tabPageDocentesBaja.Controls.Add(this.txtMotivo);
             this.tabPageDocentesBaja.Controls.Add(this.btnBuscar_2);
             this.tabPageDocentesBaja.Controls.Add(this.txtBuscar_2);
             this.tabPageDocentesBaja.Controls.Add(this.boxBuscar_2);
@@ -1198,7 +1197,7 @@
             // btnDarDeBaja
             // 
             this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarDeBaja.Location = new System.Drawing.Point(386, 303);
+            this.btnDarDeBaja.Location = new System.Drawing.Point(428, 300);
             this.btnDarDeBaja.Name = "btnDarDeBaja";
             this.btnDarDeBaja.Size = new System.Drawing.Size(245, 48);
             this.btnDarDeBaja.TabIndex = 15;
@@ -1206,24 +1205,16 @@
             this.btnDarDeBaja.UseVisualStyleBackColor = true;
             this.btnDarDeBaja.Click += new System.EventHandler(this.btnDarDeBaja_Click);
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(537, 120);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(172, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Motivo por el cual se le da de baja:";
-            // 
             // groupBox5
             // 
+            this.groupBox5.Controls.Add(this.lblEstadoDocenteBaja);
             this.groupBox5.Controls.Add(this.lblCedulaDocente);
             this.groupBox5.Controls.Add(this.lblEmailDocente);
             this.groupBox5.Controls.Add(this.lblApellidoDocente);
             this.groupBox5.Controls.Add(this.lblNombreDocente);
-            this.groupBox5.Location = new System.Drawing.Point(128, 120);
+            this.groupBox5.Location = new System.Drawing.Point(376, 131);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(349, 129);
+            this.groupBox5.Size = new System.Drawing.Size(349, 145);
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Datos del docente";
@@ -1264,14 +1255,6 @@
             this.lblNombreDocente.TabIndex = 0;
             this.lblNombreDocente.Text = "Nombre:";
             // 
-            // txtMotivo
-            // 
-            this.txtMotivo.Location = new System.Drawing.Point(540, 136);
-            this.txtMotivo.Multiline = true;
-            this.txtMotivo.Name = "txtMotivo";
-            this.txtMotivo.Size = new System.Drawing.Size(375, 113);
-            this.txtMotivo.TabIndex = 12;
-            // 
             // btnBuscar_2
             // 
             this.btnBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1311,6 +1294,7 @@
             this.boxBuscar_2.Size = new System.Drawing.Size(132, 26);
             this.boxBuscar_2.TabIndex = 9;
             this.boxBuscar_2.Tag = "";
+            this.boxBuscar_2.SelectedIndexChanged += new System.EventHandler(this.boxBuscar_2_SelectedIndexChanged);
             // 
             // pageAlumno
             // 
@@ -5318,17 +5302,16 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.Text = "Nombre del curso";
             // 
-            // boxTipoCurso
+            // lblEstadoDocenteBaja
             // 
-            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTipoCurso.FormattingEnabled = true;
-            this.boxTipoCurso.Items.AddRange(new object[] {
-            "Tipo..."});
-            this.boxTipoCurso.Location = new System.Drawing.Point(28, 72);
-            this.boxTipoCurso.Name = "boxTipoCurso";
-            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
-            this.boxTipoCurso.TabIndex = 8;
+            this.lblEstadoDocenteBaja.AutoSize = true;
+            this.lblEstadoDocenteBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoDocenteBaja.ForeColor = System.Drawing.Color.Black;
+            this.lblEstadoDocenteBaja.Location = new System.Drawing.Point(21, 117);
+            this.lblEstadoDocenteBaja.Name = "lblEstadoDocenteBaja";
+            this.lblEstadoDocenteBaja.Size = new System.Drawing.Size(61, 16);
+            this.lblEstadoDocenteBaja.TabIndex = 1;
+            this.lblEstadoDocenteBaja.Text = "Estado:";
             // 
             // Principal
             // 
@@ -5561,8 +5544,6 @@
         private System.Windows.Forms.TextBox txtBuscar_2;
         private System.Windows.Forms.ComboBox boxBuscar_2;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.TextBox txtMotivo;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label lblCedulaDocente;
         private System.Windows.Forms.Label lblEmailDocente;
         private System.Windows.Forms.Label lblApellidoDocente;
@@ -5914,10 +5895,10 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.ComboBox boxTipoCurso;
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
         private System.Windows.Forms.ListBox listBoxResultados;
-        private System.Windows.Forms.ComboBox boxTipoCurso;
+        private System.Windows.Forms.Label lblEstadoDocenteBaja;
     }
 }

@@ -144,7 +144,14 @@ namespace Ametrano.Logica
                     }
                     break;//__________________________SE debe arreglar para poder mostrar mas de una persona
                 }
-                retorno = true;
+                if (tablaDeDatos.Rows.Count == 0)
+                {
+                    retorno = false;
+                }else
+                {
+                    retorno = true;
+                }
+               
             }
             catch (Exception e)
             {

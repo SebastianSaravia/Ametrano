@@ -276,14 +276,15 @@ namespace Ametrano.Presentacion
             string telefono = txtTelefonoDocente.Text;
             string email = txtEmailDocente.Text;
 
-            dynamic[] verificacion = infoDocente.setDatosDocente(new string[] { cedula, nombre1, apellido1, direccion, telefono, email});
+            dynamic[] verificacion = infoDocente.setDatosDocente(new string[] { cedula, nombre1, apellido1, direccion, telefono, email });
 
             if (!verificacion[0])
             {
                 if (listEspecialidades.Items.Count == 0)
                 {
                     MessageBox.Show("El docente tiene que tener al menos una especialidad");
-                }else
+                }
+                else
                 {
                     string[] especialidades = new string[listEspecialidades.Items.Count];//array que guarda especialidades de el docente
 
@@ -305,8 +306,9 @@ namespace Ametrano.Presentacion
                         MessageBox.Show(insert[1]);
                     }
                 }
-                
-            }else
+
+            }
+            else
             {
                 MessageBox.Show(verificacion[1]);
             }
@@ -409,50 +411,81 @@ namespace Ametrano.Presentacion
         private void btnBuscar_2_Click(object sender, EventArgs e)
         {//Evento del boton buscar docente para dar de baja
             if (boxBuscar_2.SelectedIndex == 0)
-            {
-                MessageBox.Show("Debes seleccionar un metodo de busqueda");
+            {//Si el tipo de busqueda es el placeholder
+                MessageBox.Show("Debe seleccionar un metodo de busqueda");
+            }
+            else if (boxBuscar_2.SelectedIndex != 0 && txtBuscar_2.Text.Equals("Texto de busqueda"))
+            {//Si el campo de busqueda es cedula o nombre pero el campo de busqueda esta vacio
+                MessageBox.Show("Se debe ingresar un texto de busqueda");
             }
             else
-            {
+            {//Si se selecciona nombre y apellido y se escribio un dato de busqueda
+                int tipoBusqueda = -1;//Variable que almacena el tipo de busqueda seleccionado
+                bool datoCorrecto = false;//Variable que se usa para verificar si el dato esta ingresado correctamente
+                string datoDeBusqueda = txtBuscar_2.Text; //Dato de busqueda que se ingreso en el textbox
 
-
-                string textoBusqueda = txtBuscar_2.Text;
-                int tipoBusqueda = 1;
 
                 if (boxBuscar_2.SelectedIndex == 1)
-                {
+                {//Si se selecciona cedula
                     tipoBusqueda = 0;
+
                 }
                 else if (boxBuscar_2.SelectedIndex == 2)
-                {
+                {//Si se selecciona nombre
                     tipoBusqueda = 1;
                 }
 
-                dynamic[] datosRecividos = controlador.consultarPersona(0, tipoBusqueda, textoBusqueda);
+                datoCorrecto = verificarDatoCorrecto(tipoBusqueda, datoDeBusqueda);
 
-                if (datosRecividos[0])
+                if (datoCorrecto)
                 {
-                    IDictionary<string, string> datosRecividosDocente = datosRecividos[1];
-                    string cedula, nombre, apellido, email;
-                    //obtengo los datos guardados en el diccionario
-                    datosRecividosDocente.TryGetValue("cedula_docente", out cedula);
-                    datosRecividosDocente.TryGetValue("nombre", out nombre);
-                    datosRecividosDocente.TryGetValue("apellido", out apellido);
-                    datosRecividosDocente.TryGetValue("email", out email);
+                    dynamic[] datosRecividos = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
 
-                    lblCedulaDocente.Text = "Cedula: " + cedula;
-                    lblNombreDocente.Text = "Nombre: " + nombre;
-                    lblApellidoDocente.Text = "Apellido: " + apellido;
-                    lblEmailDocente.Text = "Email: " + email;
+                    if (datosRecividos[0])
+                    {
+                        IDictionary<string, string> datosRecividosDocente = datosRecividos[1];
+                        string cedula, nombre, apellido, email,estado;
+                        //obtengo los datos guardados en el diccionario
+                        datosRecividosDocente.TryGetValue("cedula_docente", out cedula);
+                        datosRecividosDocente.TryGetValue("nombre", out nombre);
+                        datosRecividosDocente.TryGetValue("apellido", out apellido);
+                        datosRecividosDocente.TryGetValue("email", out email);
+                        datosRecividosDocente.TryGetValue("estado", out estado);
 
-                    eventoClickBuscarBajaDocente[0] = true;
-                    eventoClickBuscarBajaDocente[1] = cedula;
+                        lblCedulaDocente.Text = "Cedula: " + cedula;
+                        lblNombreDocente.Text = "Nombre: " + nombre;
+                        lblApellidoDocente.Text = "Apellido: " + apellido;
+                        lblEmailDocente.Text = "Email: " + email;
+                        if (estado.Equals("True"))
+                        {
+                            lblEstadoDocenteBaja.Text = "Estado: Activo";
+                            lblEstadoDocenteBaja.ForeColor = Color.Green;
+                            btnDarDeBaja.Enabled = true;
 
-                }else
-                {
-                    MessageBox.Show("No se ha encontrado a la persona");
+                        }
+                        else
+                        {
+                            lblEstadoDocenteBaja.Text = "Estado: Inactivo";
+                            lblEstadoDocenteBaja.ForeColor = Color.IndianRed;
+                            btnDarDeBaja.Enabled = false;
+                        }
+
+                        eventoClickBuscarBajaDocente[0] = true;
+                        eventoClickBuscarBajaDocente[1] = cedula;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha encontrado a la persona");
+                    }
                 }
-             
+
+
+
+
+
+
+
             }
 
 
@@ -461,75 +494,93 @@ namespace Ametrano.Presentacion
         }
 
         private void btnBuscar_Click(object sender, EventArgs e)
-        {
-            
-            int tipoBusqueda = 3;
-            if (boxBuscar.SelectedIndex == 1)
-            {
-                tipoBusqueda = 0;
+        {//Evento de click en el boton de busqueda de consulta y modificacion
+            if (boxBuscar.SelectedIndex == 0)
+            {//Si el tipo de busqueda es el placeholder
+                MessageBox.Show("Debe seleccionar un metodo de busqueda");
             }
-            else if (boxBuscar.SelectedIndex == 2)
-            {
-                tipoBusqueda = 1;
+            else if (boxBuscar.SelectedIndex != 0 && txtBuscar.Text.Equals("Texto de busqueda"))
+            {//Si el campo de busqueda es cedula o nombre pero el campo de busqueda esta vacio
+                MessageBox.Show("Se debe ingresar un texto de busqueda");
             }
-            string datoDeBusqueda = txtBuscar.Text;
-            dynamic[] dato = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
-            //try
-            //{
-            if (dato[0] == true)
-            {
-                limpiarFormulario(tabPageDocentesConsultarModificar);
-                string cedula, nombre, apellido, direccion, telefono, email, estado;
-                dato[1].TryGetValue("cedula_docente", out cedula);
-                dato[1].TryGetValue("nombre", out nombre);
-                dato[1].TryGetValue("apellido", out apellido);
-                dato[1].TryGetValue("direccion", out direccion);
-                dato[1].TryGetValue("telefono", out telefono);
-                dato[1].TryGetValue("email", out email);
-                dato[1].TryGetValue("estado", out estado);
-                if (estado == "1")
-                {
-                    btnCambiarEstadoDocente.Visible = false;
+            else
+            {//Si se selecciona nombre y apellido/cedula y se escribio un dato de busqueda
+                //Variables
+                int tipoBusqueda = -1;//Variable que almacena el tipo de busqueda seleccionado
+                bool datoCorrecto = false;//Variable que se usa para verificar si el dato esta ingresado correctamente
+                string datoDeBusqueda = txtBuscar.Text; //Dato de busqueda que se ingreso en el textbox
+
+
+                if (boxBuscar.SelectedIndex == 1)
+                {//Si se selecciona cedula
+                    tipoBusqueda = 0;
+
                 }
-                else
-                {
-                    btnCambiarEstadoDocente.Visible = true;
+                else if (boxBuscar.SelectedIndex == 2)
+                {//Si se selecciona nombre
+                    tipoBusqueda = 1;
                 }
 
-                txtCedulaDocente_2.Text = cedula;
-                txtNombre1Docente_2.Text = nombre;
-                txtApellido1Docente_2.Text = apellido;
-                txtDireccionDocente_2.Text = direccion;
-                txtTelefonoDocente_2.Text = telefono;
-                txtEmailDocente_2.Text = email;
-                if (estado.Equals("0"))
-                {
-                    estado = "Inactivo";
-                }
-                else
-                {
-                    estado = "Activo";
-                }
-                lblEstadoDocente.Text = "Estado: " + estado;
+                datoCorrecto = verificarDatoCorrecto(tipoBusqueda, datoDeBusqueda);
 
-                eventoClickBuscarConsultaDocente[0] = true;
-                eventoClickBuscarConsultaDocente[1] = cedula;
+                if (datoCorrecto)
+                {//Si el texto de busqueda supero todas las validaciones
+                    dynamic[] dato = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
 
-                string[] especialidades = dato[2];
-                    for (int i = 0; i < especialidades.Length; i++)
-                    {
-                        listEspecialidades_2.Items.Add(especialidades[i]);
+                    if (dato[0] == true)
+                    {//Si se encontro a la persona
+                        limpiarFormulario(tabPageDocentesConsultarModificar);
+                        string cedula, nombre, apellido, direccion, telefono, email, estado;
+                        dato[1].TryGetValue("cedula_docente", out cedula);
+                        dato[1].TryGetValue("nombre", out nombre);
+                        dato[1].TryGetValue("apellido", out apellido);
+                        dato[1].TryGetValue("direccion", out direccion);
+                        dato[1].TryGetValue("telefono", out telefono);
+                        dato[1].TryGetValue("email", out email);
+                        dato[1].TryGetValue("estado", out estado);
+                        if (estado=="True")
+                        {
+                            btnCambiarEstadoDocente.Visible = false;
+                        }
+                        else
+                        {
+                            btnCambiarEstadoDocente.Visible = true;
+                        }
+
+                        txtCedulaDocente_2.Text = cedula;
+                        txtNombre1Docente_2.Text = nombre;
+                        txtApellido1Docente_2.Text = apellido;
+                        txtDireccionDocente_2.Text = direccion;
+                        txtTelefonoDocente_2.Text = telefono;
+                        txtEmailDocente_2.Text = email;
+                        if (estado.Equals("False"))
+                        {
+                            estado = "Inactivo";
+                        }
+                        else
+                        {
+                            estado = "Activo";
+                        }
+                        lblEstadoDocente.Text = "Estado: " + estado;
+
+                        eventoClickBuscarConsultaDocente[0] = true;
+                        eventoClickBuscarConsultaDocente[1] = cedula;
+
+                        string[] especialidades = dato[2];
+                        for (int i = 0; i < especialidades.Length; i++)
+                        {
+                            listEspecialidades_2.Items.Add(especialidades[i]);
+                        }
                     }
-
+                    else
+                    {//Si no se encontro a la persona
+                        MessageBox.Show("No se ha encontrado a la persona");
+                    }
+                }
 
 
             }
-            //}
-            /*catch (Exception)
-            *{
-             *   MessageBox.Show("Error al obtener la informacion de la persona");
-            *}
-            */
+
         }
 
         private void btnDarDeBaja_Click(object sender, EventArgs e)
@@ -547,6 +598,7 @@ namespace Ametrano.Presentacion
                     lblCedulaDocente.Text = "Cedula: ";
                     lblApellidoDocente.Text = "Apellido: ";
                     lblEmailDocente.Text = "Email: ";
+                    lblEstadoDocenteBaja.Text = "Estado: ";
 
 
                 }
@@ -575,9 +627,120 @@ namespace Ametrano.Presentacion
 
         }
 
+
+
+
+        public bool esInt(string numero)
+        {//Metodo que retorna true si es unicamente numero
+            int numero_convertido;
+            if (int.TryParse(numero, out numero_convertido))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool esSoloString(string texto)
+        {//Metodo que verifica si hay int en un texto, retorna true si es solo string
+            bool retorno = true;
+            int v1;
+            for (int i = 0; i < texto.Length; i++)
+            {
+                if (int.TryParse(texto[i].ToString(), out v1))
+                {
+                    retorno = false;
+                }
+            }
+            return retorno;
+        }
+
+
+
+        public bool verificarDatoCorrecto(int tipoBusqueda, string datoDeBusqueda)
+        {
+            bool datoCorrecto = false;
+
+
+            if (tipoBusqueda == 0)
+            {//Si la busqueda es por cedula
+                bool ci_numerica = esInt(datoDeBusqueda);
+                if (ci_numerica)
+                {//Se verifica que la cedula no contenga texto
+                    if (tipoBusqueda == 0 && datoDeBusqueda.Length < 8)
+                    {//Si la busqueda es por cedula y es menor a 8 caracteres se evita la busqueda
+                        MessageBox.Show("La cedula debe ser de 8 caracteres");
+                        datoCorrecto = false;
+                    }
+                    else
+                    {
+                        datoCorrecto = true;
+                    }
+
+                }
+                else
+                {//Si contiene texto
+                    datoCorrecto = false;
+                    MessageBox.Show("No se pueden buscar cedulas que contengan caracteres no permitidos");
+                }
+            }
+            else
+            {//Si la busqueda es por nombre y apellido
+                bool nombre_sin_numeros = esSoloString(datoDeBusqueda);
+                if (nombre_sin_numeros)
+                {//Se verifica que no contenga numeros
+                    datoCorrecto = true;
+                }
+                else
+                {//Si contiene numeros
+                    datoCorrecto = false;
+                    MessageBox.Show("No se pueden buscar nombres que contengan numeros");
+                }
+            }
+
+            return datoCorrecto;
+        }
+
+        private void boxBuscar_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxBuscar_2.SelectedIndex == 1)
+            {//Si se selecciona cedula se ajusta el largo maximo a 8
+                txtBuscar_2.MaxLength = 8;
+            }
+            else
+            {
+                txtBuscar_2.MaxLength = 255;
+            }
+        }
+        private void boxBuscar_SelectedIndexChanged(object sender, EventArgs e)
+        { 
+            if (boxBuscar.SelectedIndex == 1)
+            {//Si se selecciona cedula se ajusta el largo maximo a 8
+                txtBuscar.MaxLength = 8;
+            }
+            else
+            {
+                txtBuscar.MaxLength = 255;
+            }
+        }
+
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
             dataGridViaticos.Rows.Add();
+        }
+
+        private void btnActualizarDocente_Click(object sender, EventArgs e)
+        {//Evento de click en el boton modificar docente
+            //Datos personales
+            DatosDocente infoDocente = new DatosDocente();
+
+            string cedula = txtCedulaDocente.Text;
+            string apellido1 = txtApellido1Docente.Text;
+            string nombre1 = txtNombre1Docente.Text;
+            string direccion = txtDireccionDocente.Text;
+            string telefono = txtTelefonoDocente.Text;
+            string email = txtEmailDocente.Text;
         }
     }
 }
