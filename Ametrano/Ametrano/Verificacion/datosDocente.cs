@@ -76,9 +76,9 @@ namespace Ametrano.Verificacion
             }
 
             
-            if(datosDocenteRecibidos[1].Equals("Primer nombre"))
+            if(datosDocenteRecibidos[1].Equals("Nombre"))
             {//Si el nombre es igual al placeholder
-                mensajeParaRetornar += "\n el nombre esta vacio";
+                mensajeParaRetornar += "\n El nombre esta vacio";
                 verificaciones[7] = false;
             }else
             {
@@ -94,7 +94,7 @@ namespace Ametrano.Verificacion
                 }
             }
             
-           if(datosDocenteRecibidos[2].Equals("Primer apellido"))
+           if(datosDocenteRecibidos[2].Equals("Apellido"))
             {//Si el apellido es igual al placeholder
                 mensajeParaRetornar += "\n El apellido esta vacio";
                 verificaciones[8] = false;
@@ -178,6 +178,10 @@ namespace Ametrano.Verificacion
             dynamic[] datosParaRetornar = new dynamic[2]{ errores, mensajeParaRetornar };
 
             return datosParaRetornar;
+        }
+        public string[] obtenerDatosDocente()
+        {
+            return datosPersonales;
         }
 
         public bool isNumeric(string str)

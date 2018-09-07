@@ -909,7 +909,7 @@
             this.txtApellido1Docente.Name = "txtApellido1Docente";
             this.txtApellido1Docente.Size = new System.Drawing.Size(192, 24);
             this.txtApellido1Docente.TabIndex = 3;
-            this.txtApellido1Docente.Text = "Primer apellido";
+            this.txtApellido1Docente.Text = "Apellido";
             this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
@@ -921,7 +921,7 @@
             this.txtNombre1Docente.Name = "txtNombre1Docente";
             this.txtNombre1Docente.Size = new System.Drawing.Size(192, 24);
             this.txtNombre1Docente.TabIndex = 1;
-            this.txtNombre1Docente.Text = "Primer nombre";
+            this.txtNombre1Docente.Text = "Nombre";
             this.txtNombre1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
@@ -1038,6 +1038,7 @@
             this.btnQuitar_2.TabIndex = 2;
             this.btnQuitar_2.Text = "Quitar";
             this.btnQuitar_2.UseVisualStyleBackColor = true;
+            this.btnQuitar_2.Click += new System.EventHandler(this.btnQuitar_2_Click);
             // 
             // btnAñadir_2
             // 
@@ -1048,6 +1049,7 @@
             this.btnAñadir_2.TabIndex = 2;
             this.btnAñadir_2.Text = "Añadir";
             this.btnAñadir_2.UseVisualStyleBackColor = true;
+            this.btnAñadir_2.Click += new System.EventHandler(this.btnAñadir_2_Click);
             // 
             // listEspecialidades_2
             // 
@@ -1064,6 +1066,12 @@
             this.boxEspecialidades_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxEspecialidades_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxEspecialidades_2.FormattingEnabled = true;
+            this.boxEspecialidades_2.Items.AddRange(new object[] {
+            "Base de datos",
+            "PHP",
+            "Java",
+            "HTML",
+            "CSS"});
             this.boxEspecialidades_2.Location = new System.Drawing.Point(12, 19);
             this.boxEspecialidades_2.Name = "boxEspecialidades_2";
             this.boxEspecialidades_2.Size = new System.Drawing.Size(209, 26);
@@ -1126,6 +1134,7 @@
             this.txtTelefonoDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTelefonoDocente_2.Location = new System.Drawing.Point(217, 125);
+            this.txtTelefonoDocente_2.MaxLength = 12;
             this.txtTelefonoDocente_2.Name = "txtTelefonoDocente_2";
             this.txtTelefonoDocente_2.Size = new System.Drawing.Size(192, 24);
             this.txtTelefonoDocente_2.TabIndex = 6;
@@ -1173,7 +1182,8 @@
             // 
             this.txtCedulaDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedulaDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCedulaDocente_2.Location = new System.Drawing.Point(19, 38);
+            this.txtCedulaDocente_2.Location = new System.Drawing.Point(19, 34);
+            this.txtCedulaDocente_2.MaxLength = 8;
             this.txtCedulaDocente_2.Name = "txtCedulaDocente_2";
             this.txtCedulaDocente_2.Size = new System.Drawing.Size(192, 24);
             this.txtCedulaDocente_2.TabIndex = 0;

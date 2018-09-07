@@ -1,5 +1,6 @@
 ﻿using Ametrano.Persistencia;
 using Ametrano.Presentacion;
+using Ametrano.Verificacion;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -22,11 +23,17 @@ namespace Ametrano.Logica
             ventanaConfiguracion.Show();
         }
 
-        public dynamic[] ingresarDocente(string cedula, string apellido, string nombre, string direccion, string telefono, string email, string[] especialidades)
+        public dynamic[] ingresarDocente(DatosDocente infoDocente, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos
             dynamic[] datosParaRetornar = new dynamic[2];
             bool retorno = false;
             string mensajeParaRetornar = "";
+            string cedula = infoDocente.obtenerDatosDocente()[0];
+            string nombre = infoDocente.obtenerDatosDocente()[1];
+            string apellido = infoDocente.obtenerDatosDocente()[2];
+            string direccion = infoDocente.obtenerDatosDocente()[3];
+            string telefono = infoDocente.obtenerDatosDocente()[4];
+            string email = infoDocente.obtenerDatosDocente()[5];
 
             //Verificacion de si ya existe el docente
             string select = "SELECT estado from docente where cedula_docente = '"+cedula+"';";
@@ -260,11 +267,136 @@ namespace Ametrano.Logica
             catch (Exception e)
             {
                 retorno = false;
-                testing.MostrarMessageBox("ERROR AL DAR DE BAJA O ALTA A LA PERSONA");
+                testing.MostrarMessageBox("ERROR AL DAR DE BAJA O ALTA A LA PERSONA\n"+e.Message);
             }
 
             return retorno;
         }
-        
+
+        public dynamic[] updateDocente(DatosDocente infoDocente, string[] especialidades,string cedulaAnterior)
+        {//Metodo que se encarga de realizar el update del docente en cuestion
+            dynamic[] datosParaRetornar = new dynamic[2];
+
+            bool retorno = false;
+
+            string mensajeParaRetornar = "";
+
+
+            //Verificacion de si ya existe el docente
+            string cedula = infoDocente.obtenerDatosDocente()[0];
+            string select = "SELECT estado from docente where cedula_docente = '" + cedula + "';";
+            MySqlDataAdapter datosConsultaCedula = objetoConexion.consultarDatos(select);
+            DataTable selectDT = new DataTable();
+            datosConsultaCedula.Fill(selectDT);
+            bool cedulaNuevaValida = false;
+
+            if (cedula.Equals(cedulaAnterior))
+            {
+                cedulaNuevaValida = true;
+            }else
+            {
+                if (selectDT.Rows.Count > 0)
+                {//Si la cedula nueva ya existe
+                    cedulaNuevaValida = false;
+                    retorno = false;
+                    datosParaRetornar[0] = retorno;
+                    datosParaRetornar[1] = "La nueva cedula ingresada pertenece a un docente ya existente";
+                    return datosParaRetornar;
+                }else
+                {
+                    cedulaNuevaValida = true;
+                }
+            }
+
+
+            if(cedulaNuevaValida)
+            {//Si no existe realizo el update
+             //Primero borro especialidades
+                string delete = "DELETE FROM ESPECIALIDAD WHERE cedula_docente = '" + cedulaAnterior + "';";//Sql borrar especialidades
+
+                int filasAfectadasDeleteEspecialidades = 0;//Cantidad de especialidades eliminadas
+
+                try
+                {//intento eliminar especialidades
+                    filasAfectadasDeleteEspecialidades = objetoConexion.sqlInsertUpdate(delete);
+                }
+                catch (Exception e)
+                {
+                    retorno = false;
+                    mensajeParaRetornar = "Error al eliminar especialidades anteriores";
+                    testing.MostrarMessageBox("Error al eliminar especialidades\n" + e.Message);
+                }
+
+                if (filasAfectadasDeleteEspecialidades > 0)
+                {//Si se eliminaron las especialidades
+
+                    string nombre = infoDocente.obtenerDatosDocente()[1];
+                    string apellido = infoDocente.obtenerDatosDocente()[2];
+                    string direccion = infoDocente.obtenerDatosDocente()[3];
+                    string telefono = infoDocente.obtenerDatosDocente()[4];
+                    string email = infoDocente.obtenerDatosDocente()[5];
+
+                    string update = "UPDATE DOCENTE " +
+                    "SET cedula_docente = '" + cedula + "'," +
+                    " nombre = '" + nombre + "'," +
+                    " apellido = '" + apellido + "'," + //Sql de update docente
+                    " direccion = '" + direccion + "'," +
+                    " telefono = '" + telefono + "'," +
+                    " email = '" + email + "'" +
+                    " WHERE cedula_docente = '" + cedulaAnterior + "';";
+                    int filasAfectadas = 0;
+                    try
+                    {
+                        filasAfectadas = objetoConexion.sqlInsertUpdate(update);//Ejecuto la consulta
+                    }
+                    catch (Exception e)
+                    {
+                        retorno = false;
+                        mensajeParaRetornar = "Error al realizar el update del docente";
+                        testing.MostrarMessageBox("Error al realizar el update del docente\n" + e.Message);
+                    }
+
+
+                    if (filasAfectadas > 0)
+                    {//Si se realizo el update correctamente 
+
+                        int filasAfectadasEspecialidad = 0;//Cantidad de especialidades ingresadas en total
+                        for (int i = 0; i < especialidades.Length; i++)
+                        {//Se recorre el array de especialidades y se inserta 
+                            string especialidadInsert = "INSERT INTO especialidad VALUES('" + cedula + "','" + especialidades[i] + "');";
+                            objetoConexion.sqlInsertUpdate(especialidadInsert);
+                            filasAfectadasEspecialidad++;//Si se inserta correctamente se aumenta el numero de especialidades ingresadas
+                        }
+
+                        if (filasAfectadasEspecialidad == especialidades.Length)
+                        {//Si la cantidad de especialidades ingresadas coincide con la cantidad de especialidades recividas para ingresar se devuelve true
+                            retorno = true;
+                            mensajeParaRetornar = "Docente Actualizado correctamente";
+                        }
+                        else
+                        {
+                            retorno = false;
+                            mensajeParaRetornar = "Error al actualizar docente";
+                        }
+                    }
+
+                }
+
+                datosParaRetornar[0] = retorno;
+                datosParaRetornar[1] = mensajeParaRetornar;
+
+                return datosParaRetornar;
+
+            }else
+            {
+                retorno = false;
+                datosParaRetornar[0] = retorno;
+                datosParaRetornar[1] = "La nueva cedula ingresada pertenece a un docente ya existente";
+                return datosParaRetornar;
+            }
+
+
+            
+        }
     }
 }

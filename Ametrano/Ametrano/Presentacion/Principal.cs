@@ -26,6 +26,8 @@ namespace Ametrano.Presentacion
         public Principal()
         {
             InitializeComponent();
+            eventoClickBuscarBajaDocente[0] = false;
+            eventoClickBuscarConsultaDocente[0] = false;
         }
 
         private void Principal_FormClosed(object sender, FormClosedEventArgs e)
@@ -294,7 +296,7 @@ namespace Ametrano.Presentacion
                     }
 
 
-                    dynamic[] insert = controlador.ingresarDocente(cedula, apellido1, nombre1, direccion, telefono, email, especialidades);
+                    dynamic[] insert = controlador.ingresarDocente(infoDocente, especialidades);
                     if (insert[0])
                     {
                         MessageBox.Show(insert[1]);
@@ -599,6 +601,7 @@ namespace Ametrano.Presentacion
                     lblApellidoDocente.Text = "Apellido: ";
                     lblEmailDocente.Text = "Email: ";
                     lblEstadoDocenteBaja.Text = "Estado: ";
+                    lblEstadoDocenteBaja.ForeColor = Color.Black;
 
 
                 }
@@ -616,10 +619,10 @@ namespace Ametrano.Presentacion
                     bool baja = controlador.cambiarEstadoPersona(1, 0, eventoClickBuscarConsultaDocente[1]);
                     if (baja)
                     {
+                        btnCambiarEstadoDocente.Visible = false;
+                        lblEstadoDocente.Text = "Estado: Activo";
                         MessageBox.Show("Se ha cambiado el estado de la persona a Activo");
-                        txtBuscar.Text = eventoClickBuscarConsultaDocente[1];
-                        boxBuscar.SelectedIndex = 1;
-                        btnBuscar_Click(sender, e);
+                       
                     }
                 }
 
@@ -735,12 +738,86 @@ namespace Ametrano.Presentacion
             //Datos personales
             DatosDocente infoDocente = new DatosDocente();
 
-            string cedula = txtCedulaDocente.Text;
-            string apellido1 = txtApellido1Docente.Text;
-            string nombre1 = txtNombre1Docente.Text;
-            string direccion = txtDireccionDocente.Text;
-            string telefono = txtTelefonoDocente.Text;
-            string email = txtEmailDocente.Text;
+            if (eventoClickBuscarConsultaDocente[0])
+            {
+                string cedula = txtCedulaDocente_2.Text;
+                string apellido1 = txtApellido1Docente_2.Text;
+                string nombre1 = txtNombre1Docente_2.Text;
+                string direccion = txtDireccionDocente_2.Text;
+                string telefono = txtTelefonoDocente_2.Text;
+                string email = txtEmailDocente_2.Text;
+
+                dynamic[] verificacion = infoDocente.setDatosDocente(new string[] { cedula, nombre1, apellido1, direccion, telefono, email });
+
+                if (!verificacion[0])
+                {
+                    if (listEspecialidades_2.Items.Count == 0)
+                    {
+                        MessageBox.Show("El docente tiene que tener al menos una especialidad");
+                    }
+                    else
+                    {
+                        string[] especialidades = new string[listEspecialidades_2.Items.Count];//array que guarda especialidades de el docente
+
+                        for (int i = 0; i < listEspecialidades_2.Items.Count; i++)
+                        {
+                            especialidades[i] = listEspecialidades_2.Items[i].ToString();
+                        }
+
+
+                        dynamic[] update = controlador.updateDocente(infoDocente, especialidades,eventoClickBuscarConsultaDocente[1]);
+                        if (update[0])
+                        {
+                            MessageBox.Show(update[1]);
+                            limpiarFormulario(tabPageDocentesConsultarModificar);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show(update[1]);
+                        }
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show(verificacion[1]);
+                }
+            }else
+            {
+                MessageBox.Show("Primero debes buscar un docente");
+            }
+        }
+
+        private void btnAñadir_2_Click(object sender, EventArgs e)
+        {
+            if (eventoClickBuscarConsultaDocente[0])
+            {
+                if (boxEspecialidades_2.SelectedIndex != -1)
+                {//Evento añadir especialidad
+                    if (listEspecialidades_2.Items.IndexOf(boxEspecialidades_2.SelectedItem) == -1)
+                    {
+                        listEspecialidades_2.Items.Add(boxEspecialidades_2.SelectedItem);
+                    }
+                }
+            }
+            else{
+                MessageBox.Show("Primero debes buscar un docente");
+            }
+        }
+
+        private void btnQuitar_2_Click(object sender, EventArgs e)
+        {
+            if (eventoClickBuscarConsultaDocente[0])
+            {
+                if (listEspecialidades_2.SelectedIndex != -1)
+                {
+                    listEspecialidades_2.Items.RemoveAt(listEspecialidades_2.SelectedIndex);
+                }
+            }else
+            {
+                MessageBox.Show("Primero debes buscar un docente");
+            }
         }
     }
 }
