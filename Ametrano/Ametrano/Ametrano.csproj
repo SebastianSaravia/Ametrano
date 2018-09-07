@@ -101,7 +101,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Verificacion\datosDocente.cs" />
+    <Compile Include="Verificacion\DatosDocente.cs" />
     <EmbeddedResource Include="Presentacion\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
     </EmbeddedResource>
