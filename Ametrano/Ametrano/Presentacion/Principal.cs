@@ -1,4 +1,5 @@
-﻿using Ametrano.Logica;
+﻿using Ametrano.Encapsulado;
+using Ametrano.Logica;
 using Ametrano.Verificacion;
 using System;
 using System.Collections;
@@ -21,6 +22,7 @@ namespace Ametrano.Presentacion
 
         private dynamic[] eventoClickBuscarBajaDocente = new dynamic[2];
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
+        private DatosAlumno datosAlumno = new DatosAlumno();
 
 
         public Principal()
@@ -88,7 +90,15 @@ namespace Ametrano.Presentacion
         }
 
         private void btnSiguiente_Click(object sender, EventArgs e)
-        {
+        {//Boton que verificara que todos los datos esten correctos
+            string[] datosPersonales = new string[9];//Array que almacena los datos personales de alumno
+
+
+            datosAlumno.setDatosPersonales(datosPersonales);
+
+
+
+
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.SelectedIndex = 1;
