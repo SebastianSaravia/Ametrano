@@ -100,17 +100,24 @@ namespace Ametrano.Logica
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
         {
             bool retorno = false; //Variable de retorno
-            /*TipoPersona explicacion:
-             * Variable que determina si la busqueda se enfoca en un docente o alumno
-             * tipoPersona==0 -> docente
-             * tipoPersona==1 -> alumno
-             */
+                                  /*TipoPersona explicacion:
+                                   * Variable que determina si la busqueda se enfoca en un docente o alumno
+                                   * tipoPersona==0 -> docente
+                                   * tipoPersona==1 -> alumno
+                                   */
 
             /*TipoConsulta explicacion:
              * Variable que determina si la busqueda se realiza por cedula o nombre y apellido
              * tipoConsulta==0 -> cedula
              * tipoConsulta==1 -> nombre y apellido
              */
+
+            dynamic[] datosParaRetornar = new dynamic[3];
+            /*Explicacion datosParaRetornar
+             * datosParaRetornar[0] == -> variable bool que determina si la consulta se realizo con exito
+             * datosParaRetornar[1] == -> IDictionary que almacena los datos
+             */
+
             string consulta = "";
             if (tipoPersona == 0)
             {//Si es un docente
@@ -137,11 +144,16 @@ namespace Ametrano.Logica
 
             MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);//Ejecuto la consulta
             DataTable tablaDeDatos = new DataTable();
+            
             IDictionary<string, string> mapaDeDatos = new Dictionary<string, string>();
             try
             {
                 datos.Fill(tablaDeDatos);//Se llena el datatable con los datos de la base de datos
+                if (tablaDeDatos.Rows.Count > 1)
+                {
+                    retorno = true;
 
+                }
                 foreach (DataRow row in tablaDeDatos.Rows)
                 {
                     foreach (DataColumn column in tablaDeDatos.Columns)
@@ -171,11 +183,7 @@ namespace Ametrano.Logica
             }
 
 
-            dynamic[] datosParaRetornar = new dynamic[3];
-            /*Explicacion datosParaRetornar
-             * datosParaRetornar[0] == -> variable bool que determina si la consulta se realizo con exito
-             * datosParaRetornar[1] == -> IDictionary que almacena los datos
-             */
+           
 
 
             string cedula;

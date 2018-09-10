@@ -105,9 +105,6 @@ namespace Ametrano.Presentacion
             if (valorRetornado)
             {
                 this.Hide();
-            }else
-            {
-                MessageBox.Show(null,"Usuario o contraseña incorrectos\nVuelva a intentarlo","Error de credenciales",MessageBoxButtons.OK,MessageBoxIcon.Error,MessageBoxDefaultButton.Button1);
             }
         }
 

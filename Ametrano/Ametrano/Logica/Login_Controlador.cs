@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Ametrano.Logica;
+using System.Windows.Forms;
 
 namespace Ametrano.Logica
 {
@@ -51,7 +52,7 @@ namespace Ametrano.Logica
             }
             catch(Exception e)
             {
-                testing.MostrarMessageBox("Error de loginControlador.Loginbtn" + e.Message);
+                testing.MostrarMessageBox("Error al conectar con el servidor");
             }
        
             if(informacionDeUsuario[0] == usuario)
@@ -66,6 +67,7 @@ namespace Ametrano.Logica
             else
             {
                 variableParaRetornar = false;
+                MessageBox.Show(null, "Usuario o contraseña incorrectos\nVuelva a intentarlo", "Error de credenciales", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
                 return variableParaRetornar;
         }

@@ -87,6 +87,7 @@
             this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
             this.btnDarDeBaja = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblEstadoDocenteBaja = new System.Windows.Forms.Label();
             this.lblCedulaDocente = new System.Windows.Forms.Label();
             this.lblEmailDocente = new System.Windows.Forms.Label();
             this.lblApellidoDocente = new System.Windows.Forms.Label();
@@ -426,17 +427,17 @@
             this.groupBox60 = new System.Windows.Forms.GroupBox();
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.listDocentesCurso = new System.Windows.Forms.ListBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button11 = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblEstadoDocenteBaja = new System.Windows.Forms.Label();
+            this.btnQuitarMateriaCurso = new System.Windows.Forms.Button();
+            this.btnAñadirMateriaCurso = new System.Windows.Forms.Button();
+            this.listMateriasCurso = new System.Windows.Forms.ListBox();
+            this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
+            this.txtNombreCurso = new System.Windows.Forms.TextBox();
+            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -957,9 +958,9 @@
             // listBoxResultados
             // 
             this.listBoxResultados.FormattingEnabled = true;
-            this.listBoxResultados.Location = new System.Drawing.Point(501, 73);
+            this.listBoxResultados.Location = new System.Drawing.Point(363, 74);
             this.listBoxResultados.Name = "listBoxResultados";
-            this.listBoxResultados.Size = new System.Drawing.Size(192, 69);
+            this.listBoxResultados.Size = new System.Drawing.Size(460, 69);
             this.listBoxResultados.TabIndex = 10;
             this.listBoxResultados.Visible = false;
             // 
@@ -977,7 +978,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(711, 48);
+            this.btnBuscar.Location = new System.Drawing.Point(701, 47);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(122, 29);
             this.btnBuscar.TabIndex = 8;
@@ -1008,7 +1009,7 @@
             "Buscar por...",
             "Cedula",
             "Nombre y apellido"});
-            this.boxBuscar.Location = new System.Drawing.Point(363, 50);
+            this.boxBuscar.Location = new System.Drawing.Point(363, 48);
             this.boxBuscar.Name = "boxBuscar";
             this.boxBuscar.Size = new System.Drawing.Size(132, 26);
             this.boxBuscar.TabIndex = 6;
@@ -1228,6 +1229,17 @@
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Datos del docente";
+            // 
+            // lblEstadoDocenteBaja
+            // 
+            this.lblEstadoDocenteBaja.AutoSize = true;
+            this.lblEstadoDocenteBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoDocenteBaja.ForeColor = System.Drawing.Color.Black;
+            this.lblEstadoDocenteBaja.Location = new System.Drawing.Point(21, 117);
+            this.lblEstadoDocenteBaja.Name = "lblEstadoDocenteBaja";
+            this.lblEstadoDocenteBaja.Size = new System.Drawing.Size(61, 16);
+            this.lblEstadoDocenteBaja.TabIndex = 1;
+            this.lblEstadoDocenteBaja.Text = "Estado:";
             // 
             // lblCedulaDocente
             // 
@@ -5169,7 +5181,7 @@
             // 
             this.groupBox60.Controls.Add(this.button12);
             this.groupBox60.Controls.Add(this.button13);
-            this.groupBox60.Controls.Add(this.listBox2);
+            this.groupBox60.Controls.Add(this.listDocentesCurso);
             this.groupBox60.Controls.Add(this.comboBox7);
             this.groupBox60.Location = new System.Drawing.Point(65, 94);
             this.groupBox60.Name = "groupBox60";
@@ -5198,15 +5210,15 @@
             this.button13.Text = "Añadir";
             this.button13.UseVisualStyleBackColor = true;
             // 
-            // listBox2
+            // listDocentesCurso
             // 
-            this.listBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 18;
-            this.listBox2.Location = new System.Drawing.Point(239, 19);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(216, 148);
-            this.listBox2.TabIndex = 1;
+            this.listDocentesCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listDocentesCurso.FormattingEnabled = true;
+            this.listDocentesCurso.ItemHeight = 18;
+            this.listDocentesCurso.Location = new System.Drawing.Point(239, 19);
+            this.listDocentesCurso.Name = "listDocentesCurso";
+            this.listDocentesCurso.Size = new System.Drawing.Size(216, 148);
+            this.listDocentesCurso.TabIndex = 1;
             // 
             // comboBox7
             // 
@@ -5234,7 +5246,7 @@
             // groupBox58
             // 
             this.groupBox58.Controls.Add(this.groupBox59);
-            this.groupBox58.Controls.Add(this.textBox1);
+            this.groupBox58.Controls.Add(this.txtNombreCurso);
             this.groupBox58.Controls.Add(this.boxTipoCurso);
             this.groupBox58.Location = new System.Drawing.Point(161, 42);
             this.groupBox58.Name = "groupBox58";
@@ -5245,10 +5257,10 @@
             // 
             // groupBox59
             // 
-            this.groupBox59.Controls.Add(this.button10);
-            this.groupBox59.Controls.Add(this.button11);
-            this.groupBox59.Controls.Add(this.listBox1);
-            this.groupBox59.Controls.Add(this.comboBox6);
+            this.groupBox59.Controls.Add(this.btnQuitarMateriaCurso);
+            this.groupBox59.Controls.Add(this.btnAñadirMateriaCurso);
+            this.groupBox59.Controls.Add(this.listMateriasCurso);
+            this.groupBox59.Controls.Add(this.boxMateriasCurso);
             this.groupBox59.Location = new System.Drawing.Point(274, 19);
             this.groupBox59.Name = "groupBox59";
             this.groupBox59.Size = new System.Drawing.Size(466, 180);
@@ -5256,72 +5268,77 @@
             this.groupBox59.TabStop = false;
             this.groupBox59.Text = "Materias";
             // 
-            // button10
+            // btnQuitarMateriaCurso
             // 
-            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(12, 51);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(81, 29);
-            this.button10.TabIndex = 10;
-            this.button10.Text = "Quitar";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnQuitarMateriaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarMateriaCurso.Location = new System.Drawing.Point(12, 51);
+            this.btnQuitarMateriaCurso.Name = "btnQuitarMateriaCurso";
+            this.btnQuitarMateriaCurso.Size = new System.Drawing.Size(81, 29);
+            this.btnQuitarMateriaCurso.TabIndex = 10;
+            this.btnQuitarMateriaCurso.Text = "Quitar";
+            this.btnQuitarMateriaCurso.UseVisualStyleBackColor = true;
             // 
-            // button11
+            // btnAñadirMateriaCurso
             // 
-            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(99, 51);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(122, 29);
-            this.button11.TabIndex = 9;
-            this.button11.Text = "Añadir";
-            this.button11.UseVisualStyleBackColor = true;
+            this.btnAñadirMateriaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirMateriaCurso.Location = new System.Drawing.Point(99, 51);
+            this.btnAñadirMateriaCurso.Name = "btnAñadirMateriaCurso";
+            this.btnAñadirMateriaCurso.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadirMateriaCurso.TabIndex = 9;
+            this.btnAñadirMateriaCurso.Text = "Añadir";
+            this.btnAñadirMateriaCurso.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listMateriasCurso
             // 
-            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(239, 19);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(216, 148);
-            this.listBox1.TabIndex = 1;
+            this.listMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listMateriasCurso.FormattingEnabled = true;
+            this.listMateriasCurso.ItemHeight = 18;
+            this.listMateriasCurso.Location = new System.Drawing.Point(239, 19);
+            this.listMateriasCurso.Name = "listMateriasCurso";
+            this.listMateriasCurso.Size = new System.Drawing.Size(216, 148);
+            this.listMateriasCurso.TabIndex = 1;
             // 
-            // comboBox6
+            // boxMateriasCurso
             // 
-            this.comboBox6.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
+            this.boxMateriasCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxMateriasCurso.FormattingEnabled = true;
+            this.boxMateriasCurso.Items.AddRange(new object[] {
             "Base de datos",
             "PHP",
             "Java",
             "HTML",
             "CSS"});
-            this.comboBox6.Location = new System.Drawing.Point(12, 19);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(209, 26);
-            this.comboBox6.TabIndex = 8;
+            this.boxMateriasCurso.Location = new System.Drawing.Point(12, 19);
+            this.boxMateriasCurso.Name = "boxMateriasCurso";
+            this.boxMateriasCurso.Size = new System.Drawing.Size(209, 26);
+            this.boxMateriasCurso.TabIndex = 8;
             // 
-            // textBox1
+            // txtNombreCurso
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox1.Location = new System.Drawing.Point(28, 35);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 24);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Nombre del curso";
+            this.txtNombreCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCurso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombreCurso.Location = new System.Drawing.Point(37, 38);
+            this.txtNombreCurso.Name = "txtNombreCurso";
+            this.txtNombreCurso.Size = new System.Drawing.Size(192, 24);
+            this.txtNombreCurso.TabIndex = 1;
+            this.txtNombreCurso.Text = "Nombre del curso";
             // 
-            // lblEstadoDocenteBaja
+            // boxTipoCurso
             // 
-            this.lblEstadoDocenteBaja.AutoSize = true;
-            this.lblEstadoDocenteBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoDocenteBaja.ForeColor = System.Drawing.Color.Black;
-            this.lblEstadoDocenteBaja.Location = new System.Drawing.Point(21, 117);
-            this.lblEstadoDocenteBaja.Name = "lblEstadoDocenteBaja";
-            this.lblEstadoDocenteBaja.Size = new System.Drawing.Size(61, 16);
-            this.lblEstadoDocenteBaja.TabIndex = 1;
-            this.lblEstadoDocenteBaja.Text = "Estado:";
+            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTipoCurso.FormattingEnabled = true;
+            this.boxTipoCurso.Items.AddRange(new object[] {
+            "Base de datos",
+            "PHP",
+            "Java",
+            "HTML",
+            "CSS"});
+            this.boxTipoCurso.Location = new System.Drawing.Point(37, 72);
+            this.boxTipoCurso.Name = "boxTipoCurso";
+            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
+            this.boxTipoCurso.TabIndex = 8;
             // 
             // Principal
             // 
@@ -5329,9 +5346,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuPrincipal;
@@ -5890,11 +5907,11 @@
         private System.Windows.Forms.TabPage nuevoCurso;
         private System.Windows.Forms.GroupBox groupBox58;
         private System.Windows.Forms.GroupBox groupBox59;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button11;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnQuitarMateriaCurso;
+        private System.Windows.Forms.Button btnAñadirMateriaCurso;
+        private System.Windows.Forms.ListBox listMateriasCurso;
+        private System.Windows.Forms.ComboBox boxMateriasCurso;
+        private System.Windows.Forms.TextBox txtNombreCurso;
         private System.Windows.Forms.TabPage nuevoGrupo;
         private System.Windows.Forms.GroupBox groupBox61;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
@@ -5903,12 +5920,12 @@
         private System.Windows.Forms.GroupBox groupBox60;
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listDocentesCurso;
         private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.ComboBox boxTipoCurso;
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
         private System.Windows.Forms.ListBox listBoxResultados;
         private System.Windows.Forms.Label lblEstadoDocenteBaja;
+        private System.Windows.Forms.ComboBox boxTipoCurso;
     }
 }
