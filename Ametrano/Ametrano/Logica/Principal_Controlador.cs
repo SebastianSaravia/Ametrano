@@ -427,9 +427,16 @@ namespace Ametrano.Logica
             {
                 MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);
                 datos.Fill(datosPersonasParaRetornar);
-                retorno = true;
-                datosParaRetornar[0] = retorno;
-                datosParaRetornar[1] = datosPersonasParaRetornar;
+                if (datosPersonasParaRetornar.Rows.Count > 0)
+                {
+                    retorno = true;
+                    datosParaRetornar[0] = retorno;
+                    datosParaRetornar[1] = datosPersonasParaRetornar;
+                }else
+                {
+                    retorno = false;
+                    datosParaRetornar[0] = retorno;
+                }
             }
             catch(Exception e){
                 retorno = false;

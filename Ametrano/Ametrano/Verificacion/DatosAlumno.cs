@@ -19,7 +19,7 @@ namespace Ametrano.Encapsulado
         private string[] personas_a_cargo = new string[8];
         private string[] acceso_a_internet = new string[3];
 
-        public dynamic[] setDatosPersonales(string[] datosPersonalesRecividos)
+        public bool setDatosPersonales(string[] datosPersonalesRecividos)
         {
             /*Explicacion del array datosPersonalesRecividos
              * datosPersonalesRecividos[0] = -> cedula_alumno
@@ -33,98 +33,18 @@ namespace Ametrano.Encapsulado
              * datosPersonalesRecividos[8] = -> estado_civil
              */
 
-            //Creacion de variables para uso general
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
-            bool errores = false;
-
-            //Comienza la verificacion de cedula
-            bool cedulaNumerica = isNumeric(datosPersonalesRecividos[0]);
-
-            if (cedulaNumerica)
-            {//Si se cumplen todas las condiciones
-                datosPersonales[0] = datosPersonalesRecividos[0];
-            }else
-            {
-                mensajeParaRetornar += "\n La cedula contiene caracteres no permitidos";
-            }
-
-            //Comienza la verificacion de nombre1
-            bool nombre1ConInt = intInString(datosPersonalesRecividos[1]);
-            if (!nombre1ConInt)
-            {
-                datosPersonales[1] = datosPersonalesRecividos[1];
-            }else
-            {
-                mensajeParaRetornar += "\n El primer nombre contiene numeros o caracteres no permitidos";
-            }
-            //Comienza la verificacion de nombre2
-            bool nombre2ConInt = intInString(datosPersonalesRecividos[2]);
-            if (!nombre2ConInt)
-            {
-                datosPersonales[2] = datosPersonalesRecividos[2];
-            }else
-            {
-                mensajeParaRetornar += "\n El segundo nombre contiene numeros o caracteres no permitidos";
-            }
-            //Comienza la verificacion de apellido1
-            bool apellido1ConInt = intInString(datosPersonalesRecividos[3]);
-            if (!apellido1ConInt)
-            {
-                datosPersonales[3] = datosPersonalesRecividos[3];
-            }
-            else
-            {
-                mensajeParaRetornar += "\n El primer aoellido contiene numeros o caracteres no permitidos";
-            }
-            //Comienza la verificacion de apellido2
-            bool apellido2ConInt = intInString(datosPersonalesRecividos[4]);
-            if (!apellido1ConInt)
-            {
-                datosPersonales[4] = datosPersonalesRecividos[4];
-            }
-            else
-            {
-                mensajeParaRetornar += "\n El segundo aoellido contiene numeros o caracteres no permitidos";
-            }
-            //Comienza la verificacion de edad
-            bool intEdad = isNumeric(datosPersonalesRecividos[6]);
-            if (intEdad)
-            {
-                datosPersonales[6] = datosPersonalesRecividos[6];
-            }
-            else
-            {
-                mensajeParaRetornar += "\n La edad contiene texto  o caracteres no permitidos";
-            }
-
-            if (datosPersonalesRecividos[7].Equals("Hombre") || datosPersonalesRecividos[7].Equals("Mujer"))
-            {
-                datosPersonales[7] = datosPersonalesRecividos[7];
-            }else
-            {
-                mensajeParaRetornar += "\n El sexo debe ser hombre o mujer";
-            }
+             //Se deben realizar verificaciones
+            datosPersonales[0] = datosPersonalesRecividos[0];
+            datosPersonales[1] = datosPersonalesRecividos[1];
+            datosPersonales[2] = datosPersonalesRecividos[2];
+            datosPersonales[3] = datosPersonalesRecividos[3];
+            datosPersonales[4] = datosPersonalesRecividos[4];
             datosPersonales[5] = datosPersonalesRecividos[5];
+            datosPersonales[6] = datosPersonalesRecividos[6];
+            datosPersonales[7] = datosPersonalesRecividos[7];
             datosPersonales[8] = datosPersonalesRecividos[8];
 
-            if(cedulaNumerica && !nombre1ConInt && !nombre2ConInt && !apellido1ConInt && !apellido1ConInt && intEdad && (datosPersonalesRecividos[7].Equals("Hombre") || datosPersonalesRecividos[7].Equals("Mujer")))
-            {//Si todas las verificaciones son correctas
-                errores = false;
-            }else
-            {
-                errores = true;
-            }
-
-            dynamic[] datosParaRetornar = new dynamic[2];
-            /*Explicacion del array datosParaRetornar
-             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
-             * datosParaRetornar[1] = -> string con mensaje de error completo
-             */
-            datosParaRetornar[0] = errores;
-            datosParaRetornar[1] = mensajeParaRetornar;
-
-
-            return datosParaRetornar;
+            return true;
         }
         public dynamic[] setCurso(string[] datosCursoRecibidos)
         {//metodo que guarda los datos del curso
@@ -135,11 +55,6 @@ namespace Ametrano.Encapsulado
             datosCurso[1] = datosCursoRecibidos[1];
             errores = false;
 
-
-
-
-
-
             dynamic[] datosParaRetornar = new dynamic[2];
             /*Explicacion del array datosParaRetornar
              * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
@@ -147,6 +62,9 @@ namespace Ametrano.Encapsulado
              */
             datosParaRetornar[0] = errores;
             datosParaRetornar[1] = mensajeParaRetornar;
+            datosCurso[0] = datosCursoRecibidos[0];
+            datosCurso[1] = datosCursoRecibidos[1];
+
             return datosParaRetornar;
         }
         public dynamic[] setFormacionAcademica(string[] datosFormacionAcademicaRecibidos)
@@ -156,10 +74,6 @@ namespace Ametrano.Encapsulado
 
             formacionAcademica[0] = datosFormacionAcademicaRecibidos[0];
             formacionAcademica[1] = datosFormacionAcademicaRecibidos[1];
-
-            
-            
-
 
 
 
@@ -205,8 +119,170 @@ namespace Ametrano.Encapsulado
             datosParaRetornar[1] = mensajeParaRetornar;
             return datosParaRetornar;
         }
+        public dynamic[] setContacto(string[] datosContactoRecibidos)
+        {
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+            /*Explicacion del array datosPersonalesRecividos
+             * contacto[0] = -> Telefono
+             * contacto[1] = -> Celular
+             * contacto[2] = -> Email
+             */
 
-        
+            //Guardo los datos
+            contacto[0] = datosContactoRecibidos[0];
+            contacto[1] = datosContactoRecibidos[1];
+            contacto[2] = datosContactoRecibidos[2];
+            
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+
+        public dynamic[] setCobertura(string datosCoberturaRecibidos)
+        {
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+
+     
+            //Guardo los datos
+            coberturaSalud = datosCoberturaRecibidos;
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+
+        public dynamic[] setHogar(string[] datosHogarRecibidos)
+        {
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+            /*Explicacion del array datosPersonalesRecividos
+             * hogar[0] = -> JefeHogar
+             * hogar[1] = -> Cantidad de hijos
+
+             */
+
+            //Guardo los datos
+            hogar[0] = datosHogarRecibidos[0];
+            hogar[1] = datosHogarRecibidos[1];
+          
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+
+        public dynamic[] setTrabajo(string[] datosTrabajoRecibidos)
+        {
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+            /*Explicacion del array datosPersonalesRecividos
+             * trabajo[0] = -> Trabajo alguna vez
+             * trabajo[1] = -> Trabaja actualmente
+             * trabajo[2] = -> Tiempo desempleado
+             * trabajo[3] = -> Horas de jornada
+             * trabajo[4] = -> Ingreso mensual
+             */
+
+            //Guardo los datos
+            trabajo[0] = datosTrabajoRecibidos[0];
+            trabajo[1] = datosTrabajoRecibidos[1];
+            trabajo[2] = datosTrabajoRecibidos[2];
+            trabajo[3] = datosTrabajoRecibidos[3];
+            trabajo[4] = datosTrabajoRecibidos[4];
+
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+
+        public dynamic[] setPersonasACargo(string[] DatosPersonas_A_CargoRecibidos)
+        {
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+            /*Explicacion del array datosPersonalesRecividos
+             * personas_a_cargo[0] = -> De 0 a 17
+             * personas_a_cargo[1] = -> De 0 a 17
+             * personas_a_cargo[2] = -> De 0 a 17
+             * personas_a_cargo[3] = -> Persona con discapacidad
+             * personas_a_cargo[4] = -> Cuenta con apoyo
+             * personas_a_cargo[5] = -> Carga semanal de cuidado
+             * personas_a_cargo[6] = -> Trabajo cuidando
+             * personas_a_cargo[7] = -> Experiencia en instituciones de cuidado 
+             */
+
+            //Guardo los datos
+            personas_a_cargo[0] = DatosPersonas_A_CargoRecibidos[0];
+            personas_a_cargo[1] = DatosPersonas_A_CargoRecibidos[1];
+            personas_a_cargo[2] = DatosPersonas_A_CargoRecibidos[2];
+            personas_a_cargo[3] = DatosPersonas_A_CargoRecibidos[3];
+            personas_a_cargo[4] = DatosPersonas_A_CargoRecibidos[4];
+            personas_a_cargo[5] = DatosPersonas_A_CargoRecibidos[5];
+            personas_a_cargo[6] = DatosPersonas_A_CargoRecibidos[6];
+            personas_a_cargo[7] = DatosPersonas_A_CargoRecibidos[7];
+         
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+        public dynamic[] setAccessoInternet(string[] datosAccessoInternetRecibidos)
+        {
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+            /*Explicacion del array datosPersonalesRecividos
+             * acceso_a_internet[0] = -> Usa internet
+             * acceso_a_internet[1] = -> Facil accesso internet
+             * acceso_a_internet[2] = -> Medio accesso internet
+             */
+
+            //Guardo los datos
+            acceso_a_internet[0] = datosAccessoInternetRecibidos[0];
+            acceso_a_internet[1] = datosAccessoInternetRecibidos[1];
+            acceso_a_internet[2] = datosAccessoInternetRecibidos[2];
+           
+
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+
+
+
+
         public bool isNumeric(string str)
         {
             int numParsed;

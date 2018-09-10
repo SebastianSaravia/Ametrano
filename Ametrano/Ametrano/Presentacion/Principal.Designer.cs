@@ -65,7 +65,7 @@
             this.txtNombre1Docente = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente = new System.Windows.Forms.TextBox();
             this.tabPageDocentesConsultarModificar = new System.Windows.Forms.TabPage();
-            this.listBoxResultados = new System.Windows.Forms.ListBox();
+            this.listResultadosDocentes = new System.Windows.Forms.ListBox();
             this.btnActualizarDocente = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtBuscar = new System.Windows.Forms.TextBox();
@@ -85,6 +85,7 @@
             this.txtNombre1Docente_2 = new System.Windows.Forms.TextBox();
             this.txtCedulaDocente_2 = new System.Windows.Forms.TextBox();
             this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
+            this.listResultadosDocentes_2 = new System.Windows.Forms.ListBox();
             this.btnDarDeBaja = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.lblEstadoDocenteBaja = new System.Windows.Forms.Label();
@@ -683,14 +684,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -941,13 +942,14 @@
             // tabPageDocentesConsultarModificar
             // 
             this.tabPageDocentesConsultarModificar.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.listBoxResultados);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.listResultadosDocentes);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.btnActualizarDocente);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.btnBuscar);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.txtBuscar);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.boxBuscar);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox3);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox4);
+            this.tabPageDocentesConsultarModificar.Cursor = System.Windows.Forms.Cursors.Default;
             this.tabPageDocentesConsultarModificar.Location = new System.Drawing.Point(4, 22);
             this.tabPageDocentesConsultarModificar.Name = "tabPageDocentesConsultarModificar";
             this.tabPageDocentesConsultarModificar.Padding = new System.Windows.Forms.Padding(3);
@@ -955,14 +957,17 @@
             this.tabPageDocentesConsultarModificar.TabIndex = 1;
             this.tabPageDocentesConsultarModificar.Text = "Consultar / Modificar";
             // 
-            // listBoxResultados
+            // listResultadosDocentes
             // 
-            this.listBoxResultados.FormattingEnabled = true;
-            this.listBoxResultados.Location = new System.Drawing.Point(363, 74);
-            this.listBoxResultados.Name = "listBoxResultados";
-            this.listBoxResultados.Size = new System.Drawing.Size(460, 69);
-            this.listBoxResultados.TabIndex = 10;
-            this.listBoxResultados.Visible = false;
+            this.listResultadosDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listResultadosDocentes.FormattingEnabled = true;
+            this.listResultadosDocentes.ItemHeight = 16;
+            this.listResultadosDocentes.Location = new System.Drawing.Point(489, 74);
+            this.listResultadosDocentes.Name = "listResultadosDocentes";
+            this.listResultadosDocentes.Size = new System.Drawing.Size(216, 68);
+            this.listResultadosDocentes.TabIndex = 10;
+            this.listResultadosDocentes.Visible = false;
+            this.listResultadosDocentes.SelectedIndexChanged += new System.EventHandler(this.listBoxResultados_SelectedIndexChanged);
             // 
             // btnActualizarDocente
             // 
@@ -978,7 +983,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(701, 47);
+            this.btnBuscar.Location = new System.Drawing.Point(711, 49);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(122, 29);
             this.btnBuscar.TabIndex = 8;
@@ -990,9 +995,9 @@
             // 
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar.Location = new System.Drawing.Point(501, 50);
+            this.txtBuscar.Location = new System.Drawing.Point(489, 50);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(192, 24);
+            this.txtBuscar.Size = new System.Drawing.Size(216, 24);
             this.txtBuscar.TabIndex = 7;
             this.txtBuscar.Text = "Texto de busqueda";
             this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
@@ -1010,7 +1015,7 @@
             "Buscar por...",
             "Cedula",
             "Nombre y apellido"});
-            this.boxBuscar.Location = new System.Drawing.Point(363, 48);
+            this.boxBuscar.Location = new System.Drawing.Point(351, 50);
             this.boxBuscar.Name = "boxBuscar";
             this.boxBuscar.Size = new System.Drawing.Size(132, 26);
             this.boxBuscar.TabIndex = 6;
@@ -1195,6 +1200,7 @@
             // tabPageDocentesBaja
             // 
             this.tabPageDocentesBaja.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesBaja.Controls.Add(this.listResultadosDocentes_2);
             this.tabPageDocentesBaja.Controls.Add(this.btnDarDeBaja);
             this.tabPageDocentesBaja.Controls.Add(this.groupBox5);
             this.tabPageDocentesBaja.Controls.Add(this.btnBuscar_2);
@@ -1205,6 +1211,18 @@
             this.tabPageDocentesBaja.Size = new System.Drawing.Size(1089, 521);
             this.tabPageDocentesBaja.TabIndex = 2;
             this.tabPageDocentesBaja.Text = "Dar de baja";
+            // 
+            // listResultadosDocentes_2
+            // 
+            this.listResultadosDocentes_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listResultadosDocentes_2.FormattingEnabled = true;
+            this.listResultadosDocentes_2.ItemHeight = 16;
+            this.listResultadosDocentes_2.Location = new System.Drawing.Point(442, 78);
+            this.listResultadosDocentes_2.Name = "listResultadosDocentes_2";
+            this.listResultadosDocentes_2.Size = new System.Drawing.Size(216, 68);
+            this.listResultadosDocentes_2.TabIndex = 16;
+            this.listResultadosDocentes_2.Visible = false;
+            this.listResultadosDocentes_2.SelectedIndexChanged += new System.EventHandler(this.listResultadosDocentes_2_SelectedIndexChanged);
             // 
             // btnDarDeBaja
             // 
@@ -1281,7 +1299,7 @@
             // btnBuscar_2
             // 
             this.btnBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar_2.Location = new System.Drawing.Point(664, 52);
+            this.btnBuscar_2.Location = new System.Drawing.Point(665, 53);
             this.btnBuscar_2.Name = "btnBuscar_2";
             this.btnBuscar_2.Size = new System.Drawing.Size(122, 29);
             this.btnBuscar_2.TabIndex = 11;
@@ -1293,11 +1311,12 @@
             // 
             this.txtBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar_2.Location = new System.Drawing.Point(454, 54);
+            this.txtBuscar_2.Location = new System.Drawing.Point(442, 54);
             this.txtBuscar_2.Name = "txtBuscar_2";
-            this.txtBuscar_2.Size = new System.Drawing.Size(192, 24);
+            this.txtBuscar_2.Size = new System.Drawing.Size(216, 24);
             this.txtBuscar_2.TabIndex = 10;
             this.txtBuscar_2.Text = "Texto de busqueda";
+            this.txtBuscar_2.TextChanged += new System.EventHandler(this.txtBuscar_2_TextChanged);
             this.txtBuscar_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtBuscar_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
@@ -1312,7 +1331,7 @@
             "Buscar por...",
             "Cedula",
             "Nombre y apellido"});
-            this.boxBuscar_2.Location = new System.Drawing.Point(316, 54);
+            this.boxBuscar_2.Location = new System.Drawing.Point(302, 54);
             this.boxBuscar_2.Name = "boxBuscar_2";
             this.boxBuscar_2.Size = new System.Drawing.Size(132, 26);
             this.boxBuscar_2.TabIndex = 9;
@@ -5352,6 +5371,7 @@
             this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MainMenuStrip = this.menuPrincipal;
             this.MaximizeBox = false;
             this.Name = "Principal";
@@ -5359,6 +5379,7 @@
             this.Text = "Principal";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Principal_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
@@ -5925,8 +5946,9 @@
         private System.Windows.Forms.ComboBox comboBox7;
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
-        private System.Windows.Forms.ListBox listBoxResultados;
+        private System.Windows.Forms.ListBox listResultadosDocentes;
         private System.Windows.Forms.Label lblEstadoDocenteBaja;
         private System.Windows.Forms.ComboBox boxTipoCurso;
+        private System.Windows.Forms.ListBox listResultadosDocentes_2;
     }
 }

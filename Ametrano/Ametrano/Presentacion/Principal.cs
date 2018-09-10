@@ -524,7 +524,88 @@ namespace Ametrano.Presentacion
                 }
 
                 datoCorrecto = verificarDatoCorrecto(tipoBusqueda, datoDeBusqueda);
+                buscarDocente(tipoBusqueda, datoDeBusqueda, datoCorrecto,false);
 
+
+            }
+
+        }
+
+        private void btnDarDeBaja_Click(object sender, EventArgs e)
+        {//Evento del click en el boton de dar de baja
+
+            if (eventoClickBuscarBajaDocente[0] == null || eventoClickBuscarBajaDocente[0])
+            {//Si se habilito el borrado de un docente
+                if (controlador.cambiarEstadoPersona(0, 0, eventoClickBuscarBajaDocente[1]))
+                {
+                    eventoClickBuscarBajaDocente[0] = false;//Se vacian variables de evento de busqueda con exito
+                    eventoClickBuscarBajaDocente[1] = "";
+                    MessageBox.Show("Se ha dado de baja el docente con exito");//Se avisa al usuario
+                    limpiarFormulario(tabPageDocentesBaja);//Limpieza del formulario
+                    lblNombreDocente.Text = "Nombre: ";
+                    lblCedulaDocente.Text = "Cedula: ";
+                    lblApellidoDocente.Text = "Apellido: ";
+                    lblEmailDocente.Text = "Email: ";
+                    lblEstadoDocenteBaja.Text = "Estado: ";
+                    lblEstadoDocenteBaja.ForeColor = Color.Black;
+
+
+                }
+            }
+
+        }
+
+        public void buscarDocente(int tipoBusqueda, string datoDeBusqueda, bool datoCorrecto, bool busquedaBaja)
+        {
+            if (busquedaBaja)
+            {//Si es una busqueda de baja
+                if (datoCorrecto)
+                {
+                    dynamic[] datosRecividos = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
+
+                    if (datosRecividos[0])
+                    {
+                        limpiarFormulario(tabPageDocentesBaja);
+                        IDictionary<string, string> datosRecividosDocente = datosRecividos[1];
+                        string cedula, nombre, apellido, email, estado;
+                        //obtengo los datos guardados en el diccionario
+                        datosRecividosDocente.TryGetValue("cedula_docente", out cedula);
+                        datosRecividosDocente.TryGetValue("nombre", out nombre);
+                        datosRecividosDocente.TryGetValue("apellido", out apellido);
+                        datosRecividosDocente.TryGetValue("email", out email);
+                        datosRecividosDocente.TryGetValue("estado", out estado);
+
+                        lblCedulaDocente.Text = "Cedula: " + cedula;
+                        lblNombreDocente.Text = "Nombre: " + nombre;
+                        lblApellidoDocente.Text = "Apellido: " + apellido;
+                        lblEmailDocente.Text = "Email: " + email;
+                        if (estado.Equals("True"))
+                        {
+                            lblEstadoDocenteBaja.Text = "Estado: Activo";
+                            lblEstadoDocenteBaja.ForeColor = Color.Green;
+                            btnDarDeBaja.Enabled = true;
+
+                        }
+                        else
+                        {
+                            lblEstadoDocenteBaja.Text = "Estado: Inactivo";
+                            lblEstadoDocenteBaja.ForeColor = Color.IndianRed;
+                            btnDarDeBaja.Enabled = false;
+                        }
+
+                        eventoClickBuscarBajaDocente[0] = true;
+                        eventoClickBuscarBajaDocente[1] = cedula;
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se ha encontrado a la persona");
+                    }
+                }
+
+
+            }else
+            {//Si se busca una persona para consulta o modificacion
                 if (datoCorrecto)
                 {//Si el texto de busqueda supero todas las validaciones
                     dynamic[] dato = controlador.consultarPersona(0, tipoBusqueda, datoDeBusqueda);
@@ -540,7 +621,7 @@ namespace Ametrano.Presentacion
                         dato[1].TryGetValue("telefono", out telefono);
                         dato[1].TryGetValue("email", out email);
                         dato[1].TryGetValue("estado", out estado);
-                        if (estado=="True")
+                        if (estado == "True")
                         {
                             btnCambiarEstadoDocente.Visible = false;
                         }
@@ -579,34 +660,8 @@ namespace Ametrano.Presentacion
                         MessageBox.Show("No se ha encontrado a la persona");
                     }
                 }
-
-
             }
-
-        }
-
-        private void btnDarDeBaja_Click(object sender, EventArgs e)
-        {//Evento del click en el boton de dar de baja
-
-            if (eventoClickBuscarBajaDocente[0] == null || eventoClickBuscarBajaDocente[0])
-            {//Si se habilito el borrado de un docente
-                if (controlador.cambiarEstadoPersona(0, 0, eventoClickBuscarBajaDocente[1]))
-                {
-                    eventoClickBuscarBajaDocente[0] = false;//Se vacian variables de evento de busqueda con exito
-                    eventoClickBuscarBajaDocente[1] = "";
-                    MessageBox.Show("Se ha dado de baja el docente con exito");//Se avisa al usuario
-                    limpiarFormulario(tabPageDocentesBaja);//Limpieza del formulario
-                    lblNombreDocente.Text = "Nombre: ";
-                    lblCedulaDocente.Text = "Cedula: ";
-                    lblApellidoDocente.Text = "Apellido: ";
-                    lblEmailDocente.Text = "Email: ";
-                    lblEstadoDocenteBaja.Text = "Estado: ";
-                    lblEstadoDocenteBaja.ForeColor = Color.Black;
-
-
-                }
-            }
-
+            
         }
 
         private void btnCambiarEstadoDocente_Click(object sender, EventArgs e)
@@ -821,9 +876,99 @@ namespace Ametrano.Presentacion
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            if(txtBuscar.Text.Length >= 3 && boxBuscar.SelectedIndex ==2)
+            mostrarResultados(txtBuscar, boxBuscar, listResultadosDocentes);
+        }
+
+        private void Principal_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Accessos directos globales
+            //Agregar al manual
+
+            if (!e.Control) return;
+            if (!e.Shift) return;
+            switch (e.KeyCode)
             {
-                dynamic[] datosRecibidos = controlador.busquedaMultiple(0, txtBuscar.Text);
+                case Keys.A:
+                    tabControlPrincipal.SelectedIndex = 1;
+                    
+                    break;
+                case Keys.D:
+                    tabControlPrincipal.SelectedIndex = 0;
+                    
+
+                    break;
+                case Keys.C:
+                    tabControlPrincipal.SelectedIndex = 2;
+                    
+
+                    break;
+                    /* (etc.) */
+            }
+        
+    }
+
+        private void listBoxResultados_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listResultadosDocentes.SelectedIndex != -1)
+            {
+                string ci = listResultadosDocentes.SelectedItem.ToString().Substring(0, 8);
+                buscarDocente(0, ci, true, false);
+            }
+            
+        }
+
+        private void txtBuscar_2_TextChanged(object sender, EventArgs e)
+        {
+            mostrarResultados(txtBuscar_2, boxBuscar_2, listResultadosDocentes_2);
+        }
+
+        public void mostrarResultados(TextBox textbox,ComboBox box, ListBox lista)
+        {
+            if (textbox.Text.Length >= 3 && box.SelectedIndex == 2)
+            {
+                dynamic[] datosRecibidos = controlador.busquedaMultiple(0, textbox.Text);
+                DataTable datos = datosRecibidos[1];
+                if (datosRecibidos[0])
+                {
+                    lista.Items.Clear();
+                    lista.Visible = true;
+                    foreach (DataRow row in datos.Rows)
+                    {
+                        string persona = "";
+                        foreach (DataColumn column in datos.Columns)
+                        {
+                            if (column.ColumnName.Equals("cedula_docente"))
+                            {
+                                persona += row[column].ToString() + " - ";
+                            }
+                            else
+                            {
+                                persona += row[column].ToString() + " ";
+                            }
+
+                        }
+                        lista.Items.Add(persona);
+                    }
+                }
+                else
+                {
+                    lista.Items.Clear();
+                    lista.Visible = false;
+                }
+            }
+            else
+            {
+                lista.Items.Clear();
+                lista.Visible = false;
+            }
+        }
+
+        private void listResultadosDocentes_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listResultadosDocentes_2.SelectedIndex != -1)
+            {
+                string ci = listResultadosDocentes_2.SelectedItem.ToString().Substring(0, 8);
+                buscarDocente(0, ci, true, true);
             }
         }
     }
