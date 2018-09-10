@@ -100,6 +100,7 @@ namespace Ametrano.Logica
         public dynamic[] consultarPersona(int tipoPersona, int tipoConsulta, string datoDeBusqueda)
         {
             bool retorno = false; //Variable de retorno
+
                                   /*TipoPersona explicacion:
                                    * Variable que determina si la busqueda se enfoca en un docente o alumno
                                    * tipoPersona==0 -> docente
@@ -149,11 +150,6 @@ namespace Ametrano.Logica
             try
             {
                 datos.Fill(tablaDeDatos);//Se llena el datatable con los datos de la base de datos
-                if (tablaDeDatos.Rows.Count > 1)
-                {
-                    retorno = true;
-
-                }
                 foreach (DataRow row in tablaDeDatos.Rows)
                 {
                     foreach (DataColumn column in tablaDeDatos.Columns)
@@ -405,6 +401,49 @@ namespace Ametrano.Logica
 
 
             
+        }
+
+        public dynamic[] busquedaMultiple(int tipoPersona, string datoDeBusqueda)
+        {
+            /*TipoPersona explicacion:
+            * Variable que determina si la busqueda se enfoca en un docente o                      
+            * tipoPersona==0 -> docente
+            * tipoPersona==1 -> 
+            */
+
+            bool retorno = false;
+            string consulta;
+            DataTable datosPersonasParaRetornar = new DataTable();
+            dynamic[] datosParaRetornar = new dynamic[2];
+
+            if (tipoPersona == 0)
+            {//Si la persona es un docente
+                consulta = "SELECT cedula_docente,nombre, apellido FROM DOCENTE WHERE CONCAT(nombre, ' ', apellido) LIKE '%" + datoDeBusqueda + "%';";
+            }else
+            {//Si es un alumno
+                consulta = "SELECT cedula_alumno,nombre1, apellido1 FROM ALUMNO WHERE CONCAT(nombre1, ' ', apellido1) LIKE '%" + datoDeBusqueda + "%';";
+            }
+            try
+            {
+                MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);
+                datos.Fill(datosPersonasParaRetornar);
+                retorno = true;
+                datosParaRetornar[0] = retorno;
+                datosParaRetornar[1] = datosPersonasParaRetornar;
+            }
+            catch(Exception e){
+                retorno = false;
+                testing.MostrarMessageBox(e.Message);
+                datosParaRetornar[0] = retorno;
+            }
+
+            
+            
+
+
+
+
+            return datosParaRetornar;
         }
     }
 }

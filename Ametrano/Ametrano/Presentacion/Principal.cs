@@ -732,7 +732,6 @@ namespace Ametrano.Presentacion
         {
             dataGridViaticos.Rows.Add();
         }
-
         private void btnActualizarDocente_Click(object sender, EventArgs e)
         {//Evento de click en el boton modificar docente
             //Datos personales
@@ -817,6 +816,14 @@ namespace Ametrano.Presentacion
             }else
             {
                 MessageBox.Show("Primero debes buscar un docente");
+            }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            if(txtBuscar.Text.Length >= 3 && boxBuscar.SelectedIndex ==2)
+            {
+                dynamic[] datosRecibidos = controlador.busquedaMultiple(0, txtBuscar.Text);
             }
         }
     }
