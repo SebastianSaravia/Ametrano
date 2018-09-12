@@ -986,17 +986,14 @@ namespace Ametrano.Presentacion
         {
             Cursos_Controlador CurContr = new Cursos_Controlador();
 
-            
-            dynamic[] alumn = CurContr.AlumnosCurso();
-            for (int i = 0; i < CurContr.AlumnosCurso().Length; i++)
+            DataTable dt;
+            dynamic[] alumn = CurContr.AlumnosCurso(out dt);
+            listAlumnosViaticos.Items.Clear();
+            for (int i = 0; i < alumn.Length; i++)
             {
                 listAlumnosViaticos.Items.Add(alumn[i]); 
             }
-
-
-            
-               
-
+                 
         }
     }
 }
