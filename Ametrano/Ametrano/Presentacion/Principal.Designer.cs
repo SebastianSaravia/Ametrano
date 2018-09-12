@@ -4917,11 +4917,15 @@
             this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoViaticos.Items.AddRange(new object[] {
-            "Curso..."});
+            "Curso...",
+            "1",
+            "2",
+            "3"});
             this.boxCursoViaticos.Location = new System.Drawing.Point(39, 35);
             this.boxCursoViaticos.Name = "boxCursoViaticos";
             this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);
             this.boxCursoViaticos.TabIndex = 27;
+            this.boxCursoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxCursoViaticos_SelectedIndexChanged);
             // 
             // listAlumnosViaticos
             // 

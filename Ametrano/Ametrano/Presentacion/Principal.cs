@@ -981,5 +981,10 @@ namespace Ametrano.Presentacion
                 buscarDocente(0, ci, true, true);
             }
         }
+
+        private void boxCursoViaticos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
