@@ -26,8 +26,7 @@ namespace Ametrano.Logica
             //Se verifican usuario y contraseña
             string consultaUsuario = "SELECT usuario,rol from cuenta_usuario where usuario = '" + usuario + "' and contraseña = '" + contraseña + "';";
 
-            
-
+           
            try
             {
                 MySqlDataAdapter datos = objetoConexion.consultarDatos(consultaUsuario);//Obtengo los datos de la base de datos
@@ -57,8 +56,8 @@ namespace Ametrano.Logica
        
             if(informacionDeUsuario[0] == usuario)
             {//Si el usuario obtenido desde la base de datos coincide con el usuario ingresado entonces se muestra el mensaje
-                Properties.Settings.Default.user_usuario = "root";
-                Properties.Settings.Default.user_contraseña = "";
+                Properties.Settings.Default.user_usuario = "user";
+                Properties.Settings.Default.user_contraseña = "arekushizu";
                 Properties.Settings.Default.user_rol = informacionDeUsuario[1];
                 Principal ventanaPrincipal = new Principal();//Creo nueva ventana principal
                 ventanaPrincipal.Show();//muestro la ventana
