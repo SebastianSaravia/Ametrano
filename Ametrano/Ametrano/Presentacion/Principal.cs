@@ -984,6 +984,18 @@ namespace Ametrano.Presentacion
 
         private void boxCursoViaticos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            Cursos_Controlador CurContr = new Cursos_Controlador();
+
+            
+            dynamic[] alumn = CurContr.AlumnosCurso();
+            for (int i = 0; i < CurContr.AlumnosCurso().Length; i++)
+            {
+                listAlumnosViaticos.Items.Add(alumn[i]); 
+            }
+
+
+            
+               
 
         }
     }

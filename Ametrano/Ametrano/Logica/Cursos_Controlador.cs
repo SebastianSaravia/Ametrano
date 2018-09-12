@@ -14,43 +14,43 @@ namespace Ametrano.Logica
     {
         ConexionBD objetoConexion = new ConexionBD();
         
-        public dynamic[] AlumnosCurso(string curso, dynamic fecha)
+        public dynamic[] AlumnosCurso()
         {
-            
-            string query = "";
-            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
-            DataTable dataTable = new DataTable();
-            datosConsulta.Fill(dataTable);
-            int count = dataTable.Rows.Count;
 
-            dynamic[] alumnos = new dynamic[count];
 
-            foreach (DataRow row in dataTable.Rows)
+            try
             {
-                foreach (DataColumn colum in dataTable.Columns)
-                {
+                string query = "select nombre1, apellido1 from alumno";
+                MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+                DataTable dataTable = new DataTable();
+                datosConsulta.Fill(dataTable);
+                int count = dataTable.Rows.Count;
 
+                string[] alumnos = new string[count];
+                int i = 0;
+                if (count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        string alumno = "";
+                        foreach (DataColumn column in dataTable.Columns)
+                        {
+                            alumno += row[column].ToString() + " ";
+                        }
+                        alumnos[i] = alumno;
+                        i++;
+                    }
                 }
 
-
-
-
+                return alumnos;
             }
-
-
-
-
-            for (int i = 0; i < count; i++)
+            catch (Exception)
             {
-                alumnos[i]=
+                return null;
+                throw;
             }
-
-
-
-
-            return alumnos;
-
-
+            
+            
 
         }
 

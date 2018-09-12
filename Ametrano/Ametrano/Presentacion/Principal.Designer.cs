@@ -4929,10 +4929,12 @@
             // 
             // listAlumnosViaticos
             // 
+            this.listAlumnosViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAlumnosViaticos.FormattingEnabled = true;
+            this.listAlumnosViaticos.ItemHeight = 20;
             this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 77);
             this.listAlumnosViaticos.Name = "listAlumnosViaticos";
-            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 407);
+            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 404);
             this.listAlumnosViaticos.TabIndex = 0;
             // 
             // asistencias
