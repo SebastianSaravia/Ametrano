@@ -19,8 +19,12 @@ namespace Ametrano.Encapsulado
         private string[] personas_a_cargo = new string[8];
         private string[] acceso_a_internet = new string[3];
 
-        public bool setDatosPersonales(string[] datosPersonalesRecividos)
+        public dynamic[] setDatosPersonales(string[] datosPersonalesRecividos)
         {
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+            dynamic[] datosParaRetornar = new dynamic[2];
+
             /*Explicacion del array datosPersonalesRecividos
              * datosPersonalesRecividos[0] = -> cedula_alumno
              * datosPersonalesRecividos[1] = -> nombre1
@@ -33,7 +37,7 @@ namespace Ametrano.Encapsulado
              * datosPersonalesRecividos[8] = -> estado_civil
              */
 
-             //Se deben realizar verificaciones
+            //Se deben realizar verificaciones
             datosPersonales[0] = datosPersonalesRecividos[0];
             datosPersonales[1] = datosPersonalesRecividos[1];
             datosPersonales[2] = datosPersonalesRecividos[2];
@@ -44,7 +48,12 @@ namespace Ametrano.Encapsulado
             datosPersonales[7] = datosPersonalesRecividos[7];
             datosPersonales[8] = datosPersonalesRecividos[8];
 
-            return true;
+           
+
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+
+            return datosParaRetornar;
         }
         public dynamic[] setCurso(string[] datosCursoRecibidos)
         {//metodo que guarda los datos del curso
@@ -53,7 +62,7 @@ namespace Ametrano.Encapsulado
 
             datosCurso[0] = datosCursoRecibidos[0];
             datosCurso[1] = datosCursoRecibidos[1];
-            errores = false;
+            
 
             dynamic[] datosParaRetornar = new dynamic[2];
             /*Explicacion del array datosParaRetornar

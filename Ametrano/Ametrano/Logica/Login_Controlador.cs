@@ -24,7 +24,7 @@ namespace Ametrano.Logica
             string[] informacionDeUsuario = new string[2];//Array que almacena la informacion obtenida del usuario desde la base de datos
 
             //Se verifican usuario y contraseña
-            string consultaUsuario = "SELECT usuario,rol from cuenta_usuario where usuario = '" + usuario + "' and contraseña = '" + contraseña + "';";
+            string consultaUsuario = "SELECT usuario,rol from cuenta_usuario where usuario = '" + usuario + "' and contraseña = '" + contraseña + "' and estado = 1;";
 
            
            try
