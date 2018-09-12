@@ -88,9 +88,9 @@ namespace Ametrano.Presentacion
             }
 
         }
+        public dynamic[] setDatosPersonalesAlumno()
+        {//metodo que verifica y almacena los datos personales del alumno
 
-        private void btnSiguiente_Click(object sender, EventArgs e)
-        {//Boton que verificara que todos los datos esten correctos
             string[] datosPersonales = new string[9];//Array que almacena los datos personales de alumno
 
             //Lleno array de datos personales para luego realizar la verificacion
@@ -101,54 +101,94 @@ namespace Ametrano.Presentacion
             datosPersonales[4] = txtApellido2Alumno.Text;
             datosPersonales[5] = maskedTxtFechaNacimientoAlumnoNuevo.Text;
             datosPersonales[6] = txtEdadAlumno.Text;
-            datosPersonales[7] = boxSexoAlumno.SelectedValue.ToString();
-            datosPersonales[8] = boxEstadoCivilAlumno.SelectedValue.ToString();
+            datosPersonales[7] = boxSexoAlumno.SelectedItem.ToString();
+            datosPersonales[8] = boxEstadoCivilAlumno.SelectedItem.ToString();
 
-            datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
+           dynamic[] retorno =  datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
+            return retorno;
+        }
+        
 
-            string[] curso = new string[4]; //Array que almacena la informacion del curso
+        public dynamic[] setDatosCursoAlumno()
+        {//metodo que verifica y almacena los datos del curso en datosalumno
+            string[] curso = new string[4];//Array que almacena los datos de contacto del alumno
+            
             //Lleno el array del curso
-            curso[0] = boxCursoAlumno.SelectedValue.ToString();
-            curso[1] = boxEstadoAlumno.SelectedValue.ToString();
-            curso[2] = boxPeriodoAlumno.SelectedValue.ToString();
+            curso[0] = boxCursoAlumno.SelectedItem.ToString();
+            curso[1] = boxEstadoAlumno.SelectedItem.ToString();
+            curso[2] = boxPeriodoAlumno.SelectedItem.ToString();
             curso[3] = txtMontoViatico.Text;
 
-            datosAlumno.setCurso(curso); //Verifico los datos
-
-            string[] direccion = new string[6];//array que almacena los datos de direccion del alumno
-
-            //Lleno array de direccion
-            direccion[0] = boxDepartamentoAlumno.SelectedValue.ToString();
-            direccion[1] = boxLocalidadAlumno.SelectedValue.ToString();
-            direccion[2] = txtCalleAlumno.Text;
-            direccion[3] = txtReferenciaAlumno.Text;
-            direccion[4] = txtNumeroPuertaAlumno.Text;
-            direccion[5] = txtNumeroApartamentoAlumno.Text;
-
-            datosAlumno.setDireccion(direccion);//verifico los datos
-
-            string[] formacionAcademica = new string[2];//Array que almacena los datos de la formacion academica del alumno
-
-            //Lleno los datos del array
-            formacionAcademica[0] = boxNivelEducativo.SelectedItem.ToString();
-            formacionAcademica[1] = txtUltAñoAprobado.Text;
-
-            datosAlumno.setFormacionAcademica(formacionAcademica);//verifico los datos
-
-            string[] contacto = new string[3];//Array que almacena los datos de contacto del alumno
+            dynamic[] retorno = datosAlumno.setCurso(curso); //Verifico los datos
+            return retorno;
+        }
+        public dynamic[] setDatosContactoAlumno()
+        {
+            string[] contacto = new string[3]; //Array que almacena la informacion del curso
 
             //Lleno el array con los datos de contacto
             contacto[0] = txtTelefono.Text;
             contacto[1] = txtCelularAlumno.Text;
             contacto[2] = txtEmailAlumno.Text;
 
-            datosAlumno.setContacto(contacto);//verifico los datos
+            dynamic[] retorno = datosAlumno.setContacto(contacto);//verifico los datos
+            return retorno;
+
+        }
+        public dynamic[] setDatosDireccionAlumno()
+        {
+            string[] direccion = new string[6];//array que almacena los datos de direccion del alumno
+
+            //Lleno array de direccion
+            direccion[0] = boxDepartamentoAlumno.SelectedItem.ToString();
+            direccion[1] = boxLocalidadAlumno.SelectedItem.ToString();
+            direccion[2] = txtCalleAlumno.Text;
+            direccion[3] = txtReferenciaAlumno.Text;
+            direccion[4] = txtNumeroPuertaAlumno.Text;
+            direccion[5] = txtNumeroApartamentoAlumno.Text;
+
+            dynamic[] retorno = datosAlumno.setDireccion(direccion);//verifico los datos
+
+            return retorno;
+        }
+        public dynamic[] setDatosFormacionAcademicaAlumno()
+        {
+            string[] formacionAcademica = new string[2];//Array que almacena los datos de la formacion academica del alumno
+
+            //Lleno los datos del array
+            formacionAcademica[0] = boxNivelEducativo.SelectedItem.ToString();
+            formacionAcademica[1] = txtUltAñoAprobado.Text;
+
+            dynamic[] retorno = datosAlumno.setFormacionAcademica(formacionAcademica);//verifico los datos
+            return retorno;
+        }
+
+        private void btnSiguiente_Click(object sender, EventArgs e)
+        {//Boton que verificara que todos los datos esten correctos
+            dynamic[] setDatosPersonalesAlumnoResultado = setDatosPersonalesAlumno();//objeto que guarda el estado y el mensaje 
+            dynamic[] setDatosCursoAlumnoResultado = setDatosCursoAlumno();
+            dynamic[] setDatosContactoAlumnoResultado = setDatosContactoAlumno();
+            dynamic[] setDatosDireccionAlumnoResultado = setDatosDireccionAlumno();
+            dynamic[] setDatosFormacionAcademicaAlumnoResultado = setDatosFormacionAcademicaAlumno();
+
+            if(!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
+                !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
+            {//Se verifican que todos los datos sean correctos
+                MessageBox.Show("Datos Correctos");
+                //Si todos los datos son correctos permito al pasaje a la segunda parte del formulario 
+
+                tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
+                tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
+                tabControlIngresarAlumno.SelectedIndex = 1;
+            }
+            else
+            {
+               
+                //Si hay errores
+            }
 
 
-
-            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
-            tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
-            tabControlIngresarAlumno.SelectedIndex = 1;
+           
         }
 
         private void btnSiguinete2_Click(object sender, EventArgs e)
