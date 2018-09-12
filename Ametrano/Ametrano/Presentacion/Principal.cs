@@ -93,9 +93,56 @@ namespace Ametrano.Presentacion
         {//Boton que verificara que todos los datos esten correctos
             string[] datosPersonales = new string[9];//Array que almacena los datos personales de alumno
 
+            //Lleno array de datos personales para luego realizar la verificacion
+            datosPersonales[0] = txtCedulaAlumno.Text;
+            datosPersonales[1] = txtNombre1Alumno.Text;
+            datosPersonales[2] = txtNombre2Alumno.Text;
+            datosPersonales[3] = txtApellido1Alumno.Text;
+            datosPersonales[4] = txtApellido2Alumno.Text;
+            datosPersonales[5] = maskedTxtFechaNacimientoAlumnoNuevo.Text;
+            datosPersonales[6] = txtEdadAlumno.Text;
+            datosPersonales[7] = boxSexoAlumno.SelectedValue.ToString();
+            datosPersonales[8] = boxEstadoCivilAlumno.SelectedValue.ToString();
 
-            datosAlumno.setDatosPersonales(datosPersonales);
+            datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
 
+            string[] curso = new string[4]; //Array que almacena la informacion del curso
+            //Lleno el array del curso
+            curso[0] = boxCursoAlumno.SelectedValue.ToString();
+            curso[1] = boxEstadoAlumno.SelectedValue.ToString();
+            curso[2] = boxPeriodoAlumno.SelectedValue.ToString();
+            curso[3] = txtMontoViatico.Text;
+
+            datosAlumno.setCurso(curso); //Verifico los datos
+
+            string[] direccion = new string[6];//array que almacena los datos de direccion del alumno
+
+            //Lleno array de direccion
+            direccion[0] = boxDepartamentoAlumno.SelectedValue.ToString();
+            direccion[1] = boxLocalidadAlumno.SelectedValue.ToString();
+            direccion[2] = txtCalleAlumno.Text;
+            direccion[3] = txtReferenciaAlumno.Text;
+            direccion[4] = txtNumeroPuertaAlumno.Text;
+            direccion[5] = txtNumeroApartamentoAlumno.Text;
+
+            datosAlumno.setDireccion(direccion);//verifico los datos
+
+            string[] formacionAcademica = new string[2];//Array que almacena los datos de la formacion academica del alumno
+
+            //Lleno los datos del array
+            formacionAcademica[0] = boxNivelEducativo.SelectedItem.ToString();
+            formacionAcademica[1] = txtUltAñoAprobado.Text;
+
+            datosAlumno.setFormacionAcademica(formacionAcademica);//verifico los datos
+
+            string[] contacto = new string[3];//Array que almacena los datos de contacto del alumno
+
+            //Lleno el array con los datos de contacto
+            contacto[0] = txtTelefono.Text;
+            contacto[1] = txtCelularAlumno.Text;
+            contacto[2] = txtEmailAlumno.Text;
+
+            datosAlumno.setContacto(contacto);//verifico los datos
 
 
 
