@@ -1433,7 +1433,6 @@
             this.boxPeriodoAlumno.Name = "boxPeriodoAlumno";
             this.boxPeriodoAlumno.Size = new System.Drawing.Size(159, 23);
             this.boxPeriodoAlumno.TabIndex = 27;
-            this.boxPeriodoAlumno.SelectedIndexChanged += new System.EventHandler(this.boxPeriodoAlumno_SelectedIndexChanged);
             // 
             // boxEstadoAlumno
             // 
@@ -4922,8 +4921,7 @@
             this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoViaticos.Items.AddRange(new object[] {
-            "Curso...",
-            "Desarrollo web"});
+            "Curso..."});
             this.boxCursoViaticos.Location = new System.Drawing.Point(39, 35);
             this.boxCursoViaticos.Name = "boxCursoViaticos";
             this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);

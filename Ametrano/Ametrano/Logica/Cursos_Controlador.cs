@@ -97,7 +97,6 @@ namespace Ametrano.Logica
                         int.TryParse(row[column].ToString(), out num);
                         num = -num;
                     }
-
                 }
             }
 
@@ -139,8 +138,7 @@ namespace Ametrano.Logica
 
                     }
                 }
-
-
+                
                 if (nm==0)
                 {
                     string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + monto + ",'','',0)";
@@ -151,13 +149,28 @@ namespace Ametrano.Logica
                     string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + monto + "*" + nm + ",'','',0)";
                     int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
                 }
-               
+                
+                string query5 = "select max(id_viatico) from viatico where fecha = curdate()";
+                MySqlDataAdapter datosConsulta5 = objetoConexion.consultarDatos(query5);
+                DataTable dataTable5 = new DataTable();
+                datosConsulta5.Fill(dataTable5);
+                int contar = dataTable5.Columns.Count;
+                int id=0;
+                if (contar > 0)
+                {
+                    foreach (DataRow row in dataTable5.Rows)
+                    {
+                        foreach (DataColumn column in dataTable5.Columns)
+                        {
+                            int.TryParse(row[column].ToString(), out id);
+                        }
+
+                    }
+                }
 
 
-
-
-               string query5 = "INSERT INTO recive VALUES('','"+cedula+"')";
-               int datosConsulta5 = objetoConexion.sqlInsertUpdate(query5);
+                string query6 = "INSERT INTO recive VALUES('"+id+"','"+cedula+"')";
+               int datosConsulta6 = objetoConexion.sqlInsertUpdate(query6);
             }
            
 

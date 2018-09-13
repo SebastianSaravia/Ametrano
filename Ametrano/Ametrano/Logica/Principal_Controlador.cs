@@ -443,14 +443,62 @@ namespace Ametrano.Logica
                 testing.MostrarMessageBox(e.Message);
                 datosParaRetornar[0] = retorno;
             }
-
             
-            
-
-
-
 
             return datosParaRetornar;
         }
+
+        public string[] ListarCursos()
+        {
+
+            string query = "SELECT nombre_curso FROM curso GROUP BY nombre_curso";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int contador = dataTable.Rows.Count;
+            int i = 0;
+            string[] cursos = new string[contador];                                                    
+            if (contador > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                       cursos[i] = row[column].ToString();
+                    }
+                    i++;
+                }
+                return cursos;
+            }
+            return null;
+        }
+        public string[] ListarMaterias()
+        {
+
+            string query = "SELECT nombre_materia FROM materia GROUP BY nombre_materia";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int contador = dataTable.Rows.Count;
+            int i = 0;
+            string[] materias = new string[contador];
+            if (contador > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                        
+                            materias[i] = row[column].ToString();
+                        
+                      
+                    }
+                    i++;
+                }
+                return materias;
+            }
+            return materias;
+        }
+
     }
 }

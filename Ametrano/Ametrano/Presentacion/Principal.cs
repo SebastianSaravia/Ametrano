@@ -78,6 +78,7 @@ namespace Ametrano.Presentacion
             boxLocalidadAlumno.SelectedIndex = 0;
             boxBuscar.SelectedIndex = 0;
             boxBuscar_2.SelectedIndex = 0;
+            boxCursoViaticos.SelectedIndex = 0;
 
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
@@ -88,6 +89,29 @@ namespace Ametrano.Presentacion
             {
                 PlaceholderRec(control);
             }
+            string[] cursos = controlador.ListarCursos();
+            string[] materias = controlador.ListarMaterias();
+
+            for (int i = 0; i < cursos.Length; i++)
+            {
+                boxCursoViaticos.Items.Add(cursos[i]);
+                boxCursoAsistencia.Items.Add(cursos[i]);
+                boxCursoAsistencia_2.Items.Add(cursos[i]);
+                boxCursoGrupo.Items.Add(cursos[i]);
+                boxCursoAlumno_2.Items.Add(cursos[i]);
+                boxCursoAlumno.Items.Add(cursos[i]);               
+            }
+
+            for (int i = 0; i < materias.Length; i++)
+            {
+                boxMateriaAsisencia.Items.Add(materias[i]);
+                boxMateriaAsistencia_2.Items.Add(materias[i]);
+                boxMateriasCurso.Items.Add(materias[i]);
+                boxEspecialidades.Items.Add(materias[i]);
+                boxEspecialidades_2.Items.Add(materias[i]);
+                
+            }
+            
 
         }
 
@@ -1046,9 +1070,7 @@ namespace Ametrano.Presentacion
                     CurContr.AñadirSemanaViatico(ci);
                     dataGridViaticos.Rows.Add();
                 
-               
             }
-
 
             
         }
