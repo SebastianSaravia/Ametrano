@@ -88,7 +88,12 @@ namespace Ametrano.Presentacion
             }
 
         }
-        public dynamic[] setDatosPersonalesAlumno()
+
+        /// <summary>
+        /// Comienza verificaciones de la primera parte de agregar alumno
+        /// </summary>
+        /// <returns></returns>
+        private dynamic[] setDatosPersonalesAlumno()
         {//metodo que verifica y almacena los datos personales del alumno
 
             string[] datosPersonales = new string[9];//Array que almacena los datos personales de alumno
@@ -109,7 +114,7 @@ namespace Ametrano.Presentacion
         }
         
 
-        public dynamic[] setDatosCursoAlumno()
+        private dynamic[] setDatosCursoAlumno()
         {//metodo que verifica y almacena los datos del curso en datosalumno
             string[] curso = new string[4];//Array que almacena los datos de contacto del alumno
             
@@ -122,7 +127,7 @@ namespace Ametrano.Presentacion
             dynamic[] retorno = datosAlumno.setCurso(curso); //Verifico los datos
             return retorno;
         }
-        public dynamic[] setDatosContactoAlumno()
+        private dynamic[] setDatosContactoAlumno()
         {
             string[] contacto = new string[3]; //Array que almacena la informacion del curso
 
@@ -135,7 +140,7 @@ namespace Ametrano.Presentacion
             return retorno;
 
         }
-        public dynamic[] setDatosDireccionAlumno()
+        private dynamic[] setDatosDireccionAlumno()
         {
             string[] direccion = new string[6];//array que almacena los datos de direccion del alumno
 
@@ -151,7 +156,7 @@ namespace Ametrano.Presentacion
 
             return retorno;
         }
-        public dynamic[] setDatosFormacionAcademicaAlumno()
+        private dynamic[] setDatosFormacionAcademicaAlumno()
         {
             string[] formacionAcademica = new string[2];//Array que almacena los datos de la formacion academica del alumno
 
@@ -163,13 +168,71 @@ namespace Ametrano.Presentacion
             return retorno;
         }
 
+        /// <summary>
+        /// Termina primera parte de ingreso de alumno y comienza segunda parte
+        /// </summary>
+        /// <returns></returns>
+        private dynamic[] setDatosTrabajoAlumno()
+        {//Metodo que verifica la parte del trabajo
+            string[] trabajo = new string[5]; //Array que almacena los datos del trabajo del alumno
+            trabajo[0] = boxTrabajoAlgunaVezAlumno.SelectedItem.ToString();
+            trabajo[1] = boxTrabajaActualmenteAlumno.SelectedItem.ToString();
+            trabajo[2] = txtTiempoDesempleadoAlumno.Text;
+            trabajo[3] = txtHorasJornadaAlumno.Text;
+            trabajo[4] = txtIngresoMensualAlumno.Text;
+
+            dynamic[] retorno = datosAlumno.setTrabajo(trabajo);
+            return retorno;
+        }
+        private dynamic[] setDatosAccessoInternet()
+        {//Metodo que verifica la parte del acceso a internet
+            string[] accesso_a_internet = new string[3];
+            accesso_a_internet[0] = boxUsaInternetAlumno.SelectedItem.ToString();
+            accesso_a_internet[1] = boxFacilAccesoInternetAlumno.SelectedItem.ToString();
+            accesso_a_internet[2] = txtMedioAccesoInternetAlumno.Text;
+            dynamic[] retorno = datosAlumno.setAccessoInternet(accesso_a_internet);
+            return retorno;
+        }
+        private dynamic[] setDatosJefeHogar()
+        {//Metodo que verifica los datos de jefe de hogar
+            string[] jefe_hogar = new string[2];
+            jefe_hogar[0] = boxJefeHogarAlumno.SelectedItem.ToString();
+            jefe_hogar[1] = boxCantidadHijosAlumno.SelectedItem.ToString();
+
+            dynamic[] retorno = datosAlumno.setHogar(jefe_hogar);
+
+            return retorno;
+        }
+        private dynamic[] setDatosCoberturaSalud()
+        {//Metodo que verifica la cobertura de salud
+            string cobertura = txtCoberuraSaludAlumno.Text;
+            dynamic[] retorno = datosAlumno.setCobertura(cobertura);
+            return retorno;
+        }
+        private dynamic[] setDatosPersonasACargo()
+        {
+            string[] personasCargo = new string[8];
+
+            personasCargo[0] = txt0a17Alumno.Text;
+            personasCargo[1] = txt18a59Alumno.Text;
+            personasCargo[2] = txt60oMasAlumno.Text;
+            personasCargo[3] = boxPersonaDiscapacidadAlumno.SelectedItem.ToString();
+            personasCargo[4] = boxCuentaConApoyoAlumno.SelectedItem.ToString();
+            personasCargo[5] = txtCargaSemanalCuidadoAlumno.Text;
+            personasCargo[6] = boxTrabajoCuidandoAlumno.SelectedItem.ToString();
+            personasCargo[7] = txtExperienciaInstitucionesCuidadoAlumno.Text;
+
+            dynamic[] retorno = datosAlumno.setPersonasACargo(personasCargo);
+            return retorno;
+
+        }
         private void btnSiguiente_Click(object sender, EventArgs e)
         {//Boton que verificara que todos los datos esten correctos
-            dynamic[] setDatosPersonalesAlumnoResultado = setDatosPersonalesAlumno();//objeto que guarda el estado y el mensaje 
-            dynamic[] setDatosCursoAlumnoResultado = setDatosCursoAlumno();
-            dynamic[] setDatosContactoAlumnoResultado = setDatosContactoAlumno();
-            dynamic[] setDatosDireccionAlumnoResultado = setDatosDireccionAlumno();
-            dynamic[] setDatosFormacionAcademicaAlumnoResultado = setDatosFormacionAcademicaAlumno();
+            dynamic[] setDatosPersonalesAlumnoResultado = this.setDatosPersonalesAlumno();//objeto que guarda el estado y el mensaje 
+            dynamic[] setDatosCursoAlumnoResultado = this.setDatosCursoAlumno();
+            dynamic[] setDatosContactoAlumnoResultado = this.setDatosContactoAlumno();
+            dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno();
+            dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno();
 
             if(!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
                 !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
@@ -193,9 +256,100 @@ namespace Ametrano.Presentacion
 
         private void btnSiguinete2_Click(object sender, EventArgs e)
         {
-            tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
-            tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoFinalizar);
-            tabControlIngresarAlumno.SelectedIndex = 2;
+            dynamic[] setDatosTrabajoAlumno = this.setDatosTrabajoAlumno();
+            dynamic[] setDatosAccesoInternetAlumno = this.setDatosAccessoInternet();
+            dynamic[] setDatosJefeHogarAlumno = this.setDatosJefeHogar();
+            dynamic[] setDatosPersonasACargoAlumno = this.setDatosPersonasACargo();//Depende del tipo del curso
+            dynamic[] setDatosCoberturaSaludAlumno = this.setDatosCoberturaSalud();
+
+            if(!setDatosTrabajoAlumno[0] && !setDatosAccesoInternetAlumno[0] && 
+                !setDatosJefeHogarAlumno[0] && !setDatosPersonasACargoAlumno[0] //Depende del tipo de curso
+                && !setDatosCoberturaSaludAlumno[0])
+            {//Si todo es correcto
+                MessageBox.Show("Datos Correctos");
+                //Se pasa a la finalizacion
+                IDictionary<string, string> diccionarioDeAlumno = datosAlumno.getDatosPersona();
+                //Datos personales
+                lblCedulaAlumno.Text = "Cedula: " + diccionarioDeAlumno["cedula_alumno"];
+                lblNombre1Alumno.Text = "Primer nombre: " + diccionarioDeAlumno["nombre1"];
+                lblNombre2Alumno.Text = "Segundo nombre: " + diccionarioDeAlumno["nombre2"];
+                lblApellido1Alumno.Text = "Primer apellido: " + diccionarioDeAlumno["apellido1"];
+                lblApellido2Alumno.Text = "Segundo apelldio: " + diccionarioDeAlumno["apellido2"];
+                lblFechaNacimientoAlumno.Text = "Fecha de nacimiento: " + diccionarioDeAlumno["fecha_nac"];
+                lblEdadAlumno.Text = "Edad: " + diccionarioDeAlumno["edad"];
+                lblSexoAlumno.Text = "Sexo: " + diccionarioDeAlumno["sexo"];
+                lblEstadoCivilAlumno.Text = "Estado civil: " + diccionarioDeAlumno["estado_civil"];
+                //datos de curso
+
+                lblCursoAlumno.Text = "Curso: " + diccionarioDeAlumno["curso_alumno"];
+                lblEstadoAlumno.Text = "Estado: " + diccionarioDeAlumno["curso_estado"];
+                //Se deben agregar los dos campos
+
+                //Formacion academica
+
+                lblNivelEducativoAlumno.Text = "Nivel educativo: " + diccionarioDeAlumno["formacion_nivel"];
+                lblUltimoAñoAprobadoAlumno.Text = "Ultimo año aprovado: " + diccionarioDeAlumno["formacion_ultimo_año_aprovado"];
+
+                //Direccion
+
+                lblDepartamentoAlumno.Text = "Departamento: " + diccionarioDeAlumno["direccion_departamento"];
+                lblLocalidadAlumno.Text = "Localidad: " + diccionarioDeAlumno["direccion_localidad"];
+                lblCalleAlumno.Text = "Calle: " + diccionarioDeAlumno["direccion_calle"];
+                lblReferenciaAlumno.Text = "Referencia: " + diccionarioDeAlumno["direccion_referencia"];
+                lblNPuertaAlumno.Text = "Numero de puerta: " + diccionarioDeAlumno["direccion_numero_puerta"];
+                lblNApartamentoAlumno.Text = "Numero de apartamento: " + diccionarioDeAlumno["direccion_apartamento"];
+
+                //Contacto
+
+                lblTelefonoAlumno.Text = "Telefono: " + diccionarioDeAlumno["contacto_telefono"];
+                lblCelularAlumno.Text = "Celular: " + diccionarioDeAlumno["contacto_celular"];
+                lblEmailAlumno.Text = "Email: " + diccionarioDeAlumno["contacto_email"];
+
+                //Cobertura
+
+                lblCoberturaSaludAlumno.Text = "Cobertura de salud: " + diccionarioDeAlumno["cobertura_salud"];
+
+                //Hogar
+
+                lblJefeHogarAlumno.Text = "Jefe de hogar: " + diccionarioDeAlumno["hogar_jefe"];
+                lblCantidadHijos.Text = "Cantidad de hijos: " + diccionarioDeAlumno["hogar_cantidad_hijos"];
+
+                //Trabajo
+
+                lblTrabajoAlgunaVezAlumno.Text = "Trabajo aluna vez: " + diccionarioDeAlumno["trabajo_trabajo_alguna_vez"];
+                lblTrabajaActualmente.Text = "Trabaja actualmente: " + diccionarioDeAlumno["trabajo_trabaja_actualmente"];
+                lblTiempoDesempleadoAlumno.Text = "Tiempo desempleado: " + diccionarioDeAlumno["trabajo_tiempo_desempleado"];
+                lblHorasJornadaLaboralAlumno.Text = "Horas de jornada laboral: " + diccionarioDeAlumno["trabajo_horas_jornada"];
+                lblIngresoMensualAlumno.Text = "Ingreso mensual: " + diccionarioDeAlumno["trabajo_ingreso_mensual"];
+
+                //Personas a cargo
+
+                lbl0a17Alumno.Text = "De 0 a 17 años: " + diccionarioDeAlumno["personas_cargo_0_17"];
+                lbl18a59Alumno.Text = "De 18 a 59 años: " + diccionarioDeAlumno["personas_cargo_18_59"];
+                lbl60oMasAlumno.Text = "De 60 años o mas: " + diccionarioDeAlumno["personas_cargo_60_mas"];
+                lblPersonaConDiscapacidadAlumno.Text = "Persona con discapacidad: " + diccionarioDeAlumno["personas_cargo_con_discapacidad"];
+                lblCuentaConApoyoAlumno.Text = "Cuenta con apoyo: " + diccionarioDeAlumno["personas_cargo_cuenta_con_apoyo"];
+                lblCargaSemanalCuidadoAlumno.Text = "Carga semanal de cuidado: " + diccionarioDeAlumno["personas_cargo_carga_semanal_cuidado"];
+                lblTrabajoAnteriormenteCuidandoAlumno.Text = "Trabajo anteriormente cuidando: " + diccionarioDeAlumno["personas_cargo_trabajo_cuidando"];
+                lblExperienciaInstitucionesCuidadoAlumno.Text = "Experiencia en instituciones de cuidado: " + diccionarioDeAlumno["personas_cargo_experiencia_instituciones_cuidado"];
+
+                //Accesso a internet
+
+                lblUsaInternet.Text = "Usa internet: " + diccionarioDeAlumno["internet_usa_internet"];
+                lblFacilAccesoInternetAlumno.Text = "Facil acceso a internet" + diccionarioDeAlumno["internet_facil_acceso"];
+                lblMedioAccesoInternetAlumno.Text = "Medio de acceso a internet: " + diccionarioDeAlumno["internet_medio_acceso"];
+
+
+                tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
+                tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoFinalizar);
+                tabControlIngresarAlumno.SelectedIndex = 2;
+
+            }
+
+
+
+
+           
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -1081,6 +1235,11 @@ namespace Ametrano.Presentacion
                 listAlumnosViaticos.Items.Add(alumn[i]); 
             }
                  
+        }
+
+        private void boxPeriodoAlumno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

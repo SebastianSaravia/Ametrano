@@ -196,7 +196,7 @@
             this.lblExperienciaInstitucionesCuidadoAlumno = new System.Windows.Forms.Label();
             this.lblTrabajoAnteriormenteCuidandoAlumno = new System.Windows.Forms.Label();
             this.lblCuentaConApoyoAlumno = new System.Windows.Forms.Label();
-            this.lbl0a16Alumno = new System.Windows.Forms.Label();
+            this.lbl0a17Alumno = new System.Windows.Forms.Label();
             this.lblCargaSemanalCuidadoAlumno = new System.Windows.Forms.Label();
             this.lbl60oMasAlumno = new System.Windows.Forms.Label();
             this.lblPersonaConDiscapacidadAlumno = new System.Windows.Forms.Label();
@@ -1420,6 +1420,8 @@
             this.txtMontoViatico.Size = new System.Drawing.Size(159, 24);
             this.txtMontoViatico.TabIndex = 28;
             this.txtMontoViatico.Text = "Viatico por dia asistido";
+            this.txtMontoViatico.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtMontoViatico.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // boxPeriodoAlumno
             // 
@@ -1431,6 +1433,7 @@
             this.boxPeriodoAlumno.Name = "boxPeriodoAlumno";
             this.boxPeriodoAlumno.Size = new System.Drawing.Size(159, 23);
             this.boxPeriodoAlumno.TabIndex = 27;
+            this.boxPeriodoAlumno.SelectedIndexChanged += new System.EventHandler(this.boxPeriodoAlumno_SelectedIndexChanged);
             // 
             // boxEstadoAlumno
             // 
@@ -2526,7 +2529,7 @@
             this.groupBox23.Controls.Add(this.lblExperienciaInstitucionesCuidadoAlumno);
             this.groupBox23.Controls.Add(this.lblTrabajoAnteriormenteCuidandoAlumno);
             this.groupBox23.Controls.Add(this.lblCuentaConApoyoAlumno);
-            this.groupBox23.Controls.Add(this.lbl0a16Alumno);
+            this.groupBox23.Controls.Add(this.lbl0a17Alumno);
             this.groupBox23.Controls.Add(this.lblCargaSemanalCuidadoAlumno);
             this.groupBox23.Controls.Add(this.lbl60oMasAlumno);
             this.groupBox23.Controls.Add(this.lblPersonaConDiscapacidadAlumno);
@@ -2569,15 +2572,15 @@
             this.lblCuentaConApoyoAlumno.TabIndex = 36;
             this.lblCuentaConApoyoAlumno.Text = "Cuenta con apoyo:";
             // 
-            // lbl0a16Alumno
+            // lbl0a17Alumno
             // 
-            this.lbl0a16Alumno.AutoSize = true;
-            this.lbl0a16Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl0a16Alumno.Location = new System.Drawing.Point(165, 25);
-            this.lbl0a16Alumno.Name = "lbl0a16Alumno";
-            this.lbl0a16Alumno.Size = new System.Drawing.Size(108, 15);
-            this.lbl0a16Alumno.TabIndex = 36;
-            this.lbl0a16Alumno.Text = "De 0 a 17 años:";
+            this.lbl0a17Alumno.AutoSize = true;
+            this.lbl0a17Alumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl0a17Alumno.Location = new System.Drawing.Point(165, 25);
+            this.lbl0a17Alumno.Name = "lbl0a17Alumno";
+            this.lbl0a17Alumno.Size = new System.Drawing.Size(108, 15);
+            this.lbl0a17Alumno.TabIndex = 36;
+            this.lbl0a17Alumno.Text = "De 0 a 17 años:";
             // 
             // lblCargaSemanalCuidadoAlumno
             // 
@@ -5713,7 +5716,7 @@
         private System.Windows.Forms.Label lblTiempoDesempleadoAlumno;
         private System.Windows.Forms.Label lblTrabajoAnteriormenteCuidandoAlumno;
         private System.Windows.Forms.Label lblCuentaConApoyoAlumno;
-        private System.Windows.Forms.Label lbl0a16Alumno;
+        private System.Windows.Forms.Label lbl0a17Alumno;
         private System.Windows.Forms.Label lblCargaSemanalCuidadoAlumno;
         private System.Windows.Forms.Label lbl60oMasAlumno;
         private System.Windows.Forms.Label lblPersonaConDiscapacidadAlumno;

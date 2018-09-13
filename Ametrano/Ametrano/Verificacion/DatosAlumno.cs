@@ -9,7 +9,7 @@ namespace Ametrano.Encapsulado
     class DatosAlumno
     {
         private string[] datosPersonales = new string[9];//
-        private string[] datosCurso = new string[2];//
+        private string[] datosCurso = new string[4];//
         private string[] formacionAcademica = new string[2];//
         private string[] direccion = new string[6];//
         private string[] contacto = new string[3];
@@ -18,6 +18,9 @@ namespace Ametrano.Encapsulado
         private string[] trabajo = new string[5];
         private string[] personas_a_cargo = new string[8];
         private string[] acceso_a_internet = new string[3];
+        
+
+        
 
         public dynamic[] setDatosPersonales(string[] datosPersonalesRecividos)
         {
@@ -25,17 +28,7 @@ namespace Ametrano.Encapsulado
             bool errores = false;
             dynamic[] datosParaRetornar = new dynamic[2];
 
-            /*Explicacion del array datosPersonalesRecividos
-             * datosPersonalesRecividos[0] = -> cedula_alumno
-             * datosPersonalesRecividos[1] = -> nombre1
-             * datosPersonalesRecividos[2] = -> nombre2
-             * datosPersonalesRecividos[3] = -> apellido1
-             * datosPersonalesRecividos[4] = -> apellido2
-             * datosPersonalesRecividos[5] = -> fecha_nac
-             * datosPersonalesRecividos[6] = -> edad
-             * datosPersonalesRecividos[7] = -> sexo
-             * datosPersonalesRecividos[8] = -> estado_civil
-             */
+           
 
             //Se deben realizar verificaciones
             datosPersonales[0] = datosPersonalesRecividos[0];
@@ -59,10 +52,18 @@ namespace Ametrano.Encapsulado
         {//metodo que guarda los datos del curso
             string mensajeParaRetornar = "Error encontrado en los siguientes campos";
             bool errores = false;
+            /*Explicacion de datosCursos
+             * datosCurso[0] = -> curso
+             * datosCurso[1] = -> estado
+             * datosCurso[2] = -> periodo
+             * datosCurso[3] = -> viatico por dia asistido
+             */
 
             datosCurso[0] = datosCursoRecibidos[0];
             datosCurso[1] = datosCursoRecibidos[1];
-            
+            datosCurso[2] = datosCursoRecibidos[2];
+            datosCurso[3] = datosCursoRecibidos[3];
+
 
             dynamic[] datosParaRetornar = new dynamic[2];
             /*Explicacion del array datosParaRetornar
@@ -97,12 +98,11 @@ namespace Ametrano.Encapsulado
             datosParaRetornar[1] = mensajeParaRetornar;
             return datosParaRetornar;
         }
-
         public dynamic[] setDireccion(string[] datosDireccionRecibidos)
         {//Metodo que almacena la direccion 
             string mensajeParaRetornar = "Error encontrado en los siguientes campos";
             bool errores = false;
-            /*Explicacion del array datosPersonalesRecividos
+            /*Explicacion del array datosDireccionrecividos
              * direccion[0] = -> Departamento
              * direccion[1] = -> Localidad
              * direccion[2] = -> Calle
@@ -152,7 +152,6 @@ namespace Ametrano.Encapsulado
             datosParaRetornar[1] = mensajeParaRetornar;
             return datosParaRetornar;
         }
-
         public dynamic[] setCobertura(string datosCoberturaRecibidos)
         {
             string mensajeParaRetornar = "Error encontrado en los siguientes campos";
@@ -171,7 +170,6 @@ namespace Ametrano.Encapsulado
             datosParaRetornar[1] = mensajeParaRetornar;
             return datosParaRetornar;
         }
-
         public dynamic[] setHogar(string[] datosHogarRecibidos)
         {
             string mensajeParaRetornar = "Error encontrado en los siguientes campos";
@@ -196,7 +194,6 @@ namespace Ametrano.Encapsulado
             datosParaRetornar[1] = mensajeParaRetornar;
             return datosParaRetornar;
         }
-
         public dynamic[] setTrabajo(string[] datosTrabajoRecibidos)
         {
             string mensajeParaRetornar = "Error encontrado en los siguientes campos";
@@ -226,15 +223,14 @@ namespace Ametrano.Encapsulado
             datosParaRetornar[1] = mensajeParaRetornar;
             return datosParaRetornar;
         }
-
         public dynamic[] setPersonasACargo(string[] DatosPersonas_A_CargoRecibidos)
         {
             string mensajeParaRetornar = "Error encontrado en los siguientes campos";
             bool errores = false;
             /*Explicacion del array datosPersonalesRecividos
              * personas_a_cargo[0] = -> De 0 a 17
-             * personas_a_cargo[1] = -> De 0 a 17
-             * personas_a_cargo[2] = -> De 0 a 17
+             * personas_a_cargo[1] = -> De 18 a 59
+             * personas_a_cargo[2] = -> De 60 o mas
              * personas_a_cargo[3] = -> Persona con discapacidad
              * personas_a_cargo[4] = -> Cuenta con apoyo
              * personas_a_cargo[5] = -> Carga semanal de cuidado
@@ -289,7 +285,86 @@ namespace Ametrano.Encapsulado
             return datosParaRetornar;
         }
 
+        public IDictionary<string,string> getDatosPersona()
+        {
+            IDictionary<string, string> diccionarioPersona = new Dictionary<string, string>();//Diccionario que almacena los datos de la persona
 
+
+            //Datos personales
+            diccionarioPersona.Add("cedula_alumno", datosPersonales[0]);
+            diccionarioPersona.Add("nombre1", datosPersonales[1]);
+            diccionarioPersona.Add("nombre2", datosPersonales[2]);
+            diccionarioPersona.Add("apellido1", datosPersonales[3]);
+            diccionarioPersona.Add("apellido2", datosPersonales[4]);
+            diccionarioPersona.Add("fecha_nac", datosPersonales[5]);
+            diccionarioPersona.Add("edad", datosPersonales[6]);
+            diccionarioPersona.Add("sexo", datosPersonales[7]);
+            diccionarioPersona.Add("estado_civil", datosPersonales[8]);
+
+            //Datos de curso
+           
+            diccionarioPersona.Add("curso_alumno", datosCurso[0]);
+            diccionarioPersona.Add("curso_estado", datosCurso[1]);
+            diccionarioPersona.Add("curso_periodo", datosCurso[2]);
+            diccionarioPersona.Add("curso_monto_viatico", datosCurso[3]);
+
+            //Formacion academica
+
+            diccionarioPersona.Add("formacion_nivel", formacionAcademica[0]);
+            diccionarioPersona.Add("formacion_ultimo_año_aprovado", formacionAcademica[1]);
+
+            //Direccion
+
+            diccionarioPersona.Add("direccion_departamento", direccion[0]);
+            diccionarioPersona.Add("direccion_localidad", direccion[1]);
+            diccionarioPersona.Add("direccion_calle", direccion[2]);
+            diccionarioPersona.Add("direccion_referencia", direccion[3]);
+            diccionarioPersona.Add("direccion_numero_puerta", direccion[4]);
+            diccionarioPersona.Add("direccion_apartamento", direccion[5]);
+
+            //Contacto
+
+            diccionarioPersona.Add("contacto_telefono", contacto[0]);
+            diccionarioPersona.Add("contacto_celular", contacto[1]);
+            diccionarioPersona.Add("contacto_email", contacto[2]);
+
+            //Cobertura
+
+            diccionarioPersona.Add("cobertura_salud",coberturaSalud);
+
+            //Hogar
+
+            diccionarioPersona.Add("hogar_jefe", hogar[0]);
+            diccionarioPersona.Add("hogar_cantidad_hijos", hogar[1]);
+
+            //Trabajo
+
+            diccionarioPersona.Add("trabajo_trabajo_alguna_vez", trabajo[0]);
+            diccionarioPersona.Add("trabajo_trabaja_actualmente", trabajo[1]);
+            diccionarioPersona.Add("trabajo_tiempo_desempleado", trabajo[2]);
+            diccionarioPersona.Add("trabajo_horas_jornada", trabajo[3]);
+            diccionarioPersona.Add("trabajo_ingreso_mensual", trabajo[4]);
+
+            //Personas a cargo
+
+            diccionarioPersona.Add("personas_cargo_0_17", personas_a_cargo[0]);
+            diccionarioPersona.Add("personas_cargo_18_59", personas_a_cargo[1]);
+            diccionarioPersona.Add("personas_cargo_60_mas", personas_a_cargo[2]);
+            diccionarioPersona.Add("personas_cargo_con_discapacidad", personas_a_cargo[3]);
+            diccionarioPersona.Add("personas_cargo_cuenta_con_apoyo", personas_a_cargo[4]);
+            diccionarioPersona.Add("personas_cargo_carga_semanal_cuidado", personas_a_cargo[5]);
+            diccionarioPersona.Add("personas_cargo_trabajo_cuidando", personas_a_cargo[6]);
+            diccionarioPersona.Add("personas_cargo_experiencia_instituciones_cuidado", personas_a_cargo[7]);
+
+            //Acceso a internet
+
+            diccionarioPersona.Add("internet_usa_internet", acceso_a_internet[0]);
+            diccionarioPersona.Add("internet_facil_acceso", acceso_a_internet[1]);
+            diccionarioPersona.Add("internet_medio_acceso", acceso_a_internet[2]);
+
+
+            return diccionarioPersona;
+        }
 
 
         public bool isNumeric(string str)
