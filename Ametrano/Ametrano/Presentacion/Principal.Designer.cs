@@ -390,7 +390,7 @@
             this.viaticos = new System.Windows.Forms.TabPage();
             this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
             this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
-            this.lmlMontoDiaViaticos = new System.Windows.Forms.Label();
+            this.lblMontoDiaViaticos = new System.Windows.Forms.Label();
             this.lblCedulaViaticos = new System.Windows.Forms.Label();
             this.lblNombreViaticos = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
@@ -4791,7 +4791,7 @@
             this.viaticos.BackColor = System.Drawing.Color.LightSteelBlue;
             this.viaticos.Controls.Add(this.lblMontoTotalViaticos);
             this.viaticos.Controls.Add(this.btnAñadirSemanaViaticos);
-            this.viaticos.Controls.Add(this.lmlMontoDiaViaticos);
+            this.viaticos.Controls.Add(this.lblMontoDiaViaticos);
             this.viaticos.Controls.Add(this.lblCedulaViaticos);
             this.viaticos.Controls.Add(this.lblNombreViaticos);
             this.viaticos.Controls.Add(this.dataGridViaticos);
@@ -4825,15 +4825,15 @@
             this.btnAñadirSemanaViaticos.UseVisualStyleBackColor = true;
             this.btnAñadirSemanaViaticos.Click += new System.EventHandler(this.btnAñadirSemanaViaticos_Click);
             // 
-            // lmlMontoDiaViaticos
+            // lblMontoDiaViaticos
             // 
-            this.lmlMontoDiaViaticos.AutoSize = true;
-            this.lmlMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lmlMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
-            this.lmlMontoDiaViaticos.Name = "lmlMontoDiaViaticos";
-            this.lmlMontoDiaViaticos.Size = new System.Drawing.Size(182, 18);
-            this.lmlMontoDiaViaticos.TabIndex = 30;
-            this.lmlMontoDiaViaticos.Text = "Monto por día asistido:";
+            this.lblMontoDiaViaticos.AutoSize = true;
+            this.lblMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
+            this.lblMontoDiaViaticos.Name = "lblMontoDiaViaticos";
+            this.lblMontoDiaViaticos.Size = new System.Drawing.Size(182, 18);
+            this.lblMontoDiaViaticos.TabIndex = 30;
+            this.lblMontoDiaViaticos.Text = "Monto por día asistido:";
             // 
             // lblCedulaViaticos
             // 
@@ -4881,6 +4881,7 @@
             this.colFechaViaticos.Frozen = true;
             this.colFechaViaticos.HeaderText = "Fecha";
             this.colFechaViaticos.Name = "colFechaViaticos";
+            this.colFechaViaticos.ReadOnly = true;
             this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // colMontoViaticos
@@ -4888,6 +4889,7 @@
             this.colMontoViaticos.Frozen = true;
             this.colMontoViaticos.HeaderText = "Monto";
             this.colMontoViaticos.Name = "colMontoViaticos";
+            this.colMontoViaticos.ReadOnly = true;
             this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // colRubroViaticos
@@ -4918,9 +4920,7 @@
             this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoViaticos.Items.AddRange(new object[] {
             "Curso...",
-            "1",
-            "2",
-            "3"});
+            "Desarrollo web"});
             this.boxCursoViaticos.Location = new System.Drawing.Point(39, 35);
             this.boxCursoViaticos.Name = "boxCursoViaticos";
             this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);
@@ -4936,6 +4936,7 @@
             this.listAlumnosViaticos.Name = "listAlumnosViaticos";
             this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 404);
             this.listAlumnosViaticos.TabIndex = 0;
+            this.listAlumnosViaticos.SelectedIndexChanged += new System.EventHandler(this.listAlumnosViaticos_SelectedIndexChanged);
             // 
             // asistencias
             // 
@@ -5899,13 +5900,8 @@
         private System.Windows.Forms.DataGridView dataGridViaticos;
         private System.Windows.Forms.ComboBox boxCursoViaticos;
         private System.Windows.Forms.ListBox listAlumnosViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
         private System.Windows.Forms.Button btnAñadirSemanaViaticos;
-        private System.Windows.Forms.Label lmlMontoDiaViaticos;
+        private System.Windows.Forms.Label lblMontoDiaViaticos;
         private System.Windows.Forms.Label lblCedulaViaticos;
         private System.Windows.Forms.Label lblNombreViaticos;
         private System.Windows.Forms.Label lblMontoTotalViaticos;
@@ -5956,5 +5952,10 @@
         private System.Windows.Forms.Label lblEstadoDocenteBaja;
         private System.Windows.Forms.ComboBox boxTipoCurso;
         private System.Windows.Forms.ListBox listResultadosDocentes_2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
     }
 }

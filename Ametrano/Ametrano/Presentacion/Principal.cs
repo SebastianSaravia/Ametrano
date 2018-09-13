@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,10 @@ namespace Ametrano.Presentacion
 
     {
         private Principal_Controlador controlador = new Principal_Controlador();
-
+        Cursos_Controlador CurContr = new Cursos_Controlador();
         private dynamic[] eventoClickBuscarBajaDocente = new dynamic[2];
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
+        private dynamic[] eventoClickListaAlumnos = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
 
 
@@ -882,7 +884,19 @@ namespace Ametrano.Presentacion
 
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
-            dataGridViaticos.Rows.Add();
+            if (listAlumnosViaticos.SelectedIndex>=0)
+            {
+                DataTable listaAlumnos = eventoClickListaAlumnos[1];
+                int val = listAlumnosViaticos.SelectedIndex;
+                string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
+                    CurContr.AñadirSemanaViatico(ci);
+                    dataGridViaticos.Rows.Add();
+                
+               
+            }
+
+
+            
         }
         private void btnActualizarDocente_Click(object sender, EventArgs e)
         {//Evento de click en el boton modificar docente
@@ -1071,16 +1085,39 @@ namespace Ametrano.Presentacion
 
         private void boxCursoViaticos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Cursos_Controlador CurContr = new Cursos_Controlador();
-
+           
             DataTable dt;
-            dynamic[] alumn = CurContr.AlumnosCurso(out dt);
+            string curso = boxCursoViaticos.SelectedItem.ToString();
+            dynamic[] alumn = CurContr.AlumnosCurso(curso,out dt);
             listAlumnosViaticos.Items.Clear();
             for (int i = 0; i < alumn.Length; i++)
             {
                 listAlumnosViaticos.Items.Add(alumn[i]); 
             }
+            if (alumn.Length > 0)
+            {
+                eventoClickListaAlumnos[0] = true;
+                eventoClickListaAlumnos[1] = dt;
+            }
                  
+        }
+
+        private void listAlumnosViaticos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (eventoClickListaAlumnos[0])
+            {
+                DataTable listaAlumnos = eventoClickListaAlumnos[1];
+                int val = listAlumnosViaticos.SelectedIndex;
+                string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
+               string[] datosAlumno = CurContr.DatosViaticos(ci);
+
+                lblCedulaViaticos.Text = "Cedula: " + ci;
+                lblNombreViaticos.Text = "Nombre: " + datosAlumno[0]+" " + datosAlumno[1];
+                lblMontoDiaViaticos.Text = "Monto por día asistido: " + datosAlumno[2];
+                dataGridViaticos.Rows.Clear();
+                
+            }
+
         }
     }
 }
