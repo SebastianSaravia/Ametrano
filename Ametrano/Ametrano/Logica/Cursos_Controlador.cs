@@ -78,28 +78,56 @@ namespace Ametrano.Logica
             return datos;
         }
 
-        public void AñadirSemanaViatico(string cedula)
+        public bool AñadirSemanaViatico(string cedula)
         {
-                       
-            string query = "SELECT DATEDIFF(g.fecha_inicio, curdate()) from grupo g where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin";
-            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
-            DataTable dataTable = new DataTable();
-            datosConsulta.Fill(dataTable);
             
-            int count = dataTable.Columns.Count;
-            int num=0;           
-            if (count > 0)
+            string sql = "select count(cedula_alumno) from recive where cedula_alumno='"+cedula+"'";
+            MySqlDataAdapter datosCons = objetoConexion.consultarDatos(sql);
+            DataTable dataT = new DataTable();
+            datosCons.Fill(dataT);
+
+            int op = dataT.Columns.Count;
+            int p = 0;
+            if (op > 0)
             {
-                foreach (DataRow row in dataTable.Rows)
+                foreach (DataRow row in dataT.Rows)
                 {
-                    foreach (DataColumn column in dataTable.Columns)
+                    foreach (DataColumn column in dataT.Columns)
                     {
-                        int.TryParse(row[column].ToString(), out num);
-                        num = -num;
+                        int.TryParse(row[column].ToString(), out p);
+                        p = -p;
                     }
                 }
             }
 
+
+            int num=0;
+            if (p==0)
+            {
+                num = 7;
+            }else
+            {
+                string query = "SELECT MAX(DATEDIFF(v.fecha, curdate())) from viatico v JOIN recive r ON r.id_viatico=v.id_viatico JOIN asiste a ON a.cedula_alumno=r.cedula_alumno JOIN grupo g ON g.id_grupo=a.id_grupo WHERE curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and a.cedula_alumno='"+cedula+"'";
+                MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+                DataTable dataTable = new DataTable();
+                datosConsulta.Fill(dataTable);
+
+                int count = dataTable.Columns.Count;
+
+                if (count > 0)
+                {
+                    foreach (DataRow row in dataTable.Rows)
+                    {
+                        foreach (DataColumn column in dataTable.Columns)
+                        {
+                            int.TryParse(row[column].ToString(), out num);
+                            num = -num;
+                        }
+                    }
+                }
+            }
+            
+            //---------------------------------------------
             if (num >=7)
             {
                 string query2 = "SELECT count(abonado) FROM viatico v JOIN recive r ON r.id_viatico=v.id_viatico where abonado = false and r.cedula_alumno='"+cedula+"'";
@@ -171,12 +199,68 @@ namespace Ametrano.Logica
 
                 string query6 = "INSERT INTO recive VALUES('"+id+"','"+cedula+"')";
                int datosConsulta6 = objetoConexion.sqlInsertUpdate(query6);
+                return true;
+            } else
+            {
+                return false;
             }
-           
-
+            
         }
         
+        public dynamic[] AñadirViatico(string cedula)
+        {
+                        
+            string sql = "SELECT fecha, monto, rubro, concepto, abonado FROM viatico v JOIN recive r ON v.id_viatico=r.id_viatico WHERE r.cedula_alumno='"+cedula+"' and v.fecha= curdate()";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(sql);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);            
+            int cont = dataTable.Columns.Count;
+            dynamic[] semanas = new dynamic[cont];
+                        
+            int i = 0;
+            if (cont > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                       semanas[i]=row[column].ToString();
+                       i++; 
+                    }
+                    
+                }
+            }
+            return semanas;
+        }
 
+        public dynamic[] ListarViatico(string cedula)
+        {
+            
+            string sql = "";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(sql);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int cont = dataTable.Columns.Count;
+            dynamic[] semana = new dynamic[cont];
+
+            int i = 0;
+            if (cont > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                        semana[i] = row[column].ToString();
+                        i++;
+                    }
+
+                }
+            }
+
+
+
+            return semana;            
+        }
 
     }
 }
