@@ -80,7 +80,7 @@ namespace Ametrano.Logica
 
         public void AñadirSemanaViatico(string cedula)
         {
-            
+                       
             string query = "SELECT DATEDIFF(g.fecha_inicio, curdate()) from grupo g where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
@@ -175,5 +175,8 @@ namespace Ametrano.Logica
            
 
         }
+        
+
+
     }
 }

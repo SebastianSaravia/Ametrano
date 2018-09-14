@@ -88,12 +88,6 @@ namespace Ametrano.Logica
                 datosParaRetornar[1] = mensajeParaRetornar;
                 return datosParaRetornar;
             }
-
-            
-
-
-
-
             
         }
         
@@ -178,15 +172,9 @@ namespace Ametrano.Logica
                 }
             }
 
-
-           
-
-
             string cedula;
             mapaDeDatos.TryGetValue("cedula_docente", out cedula);
-
-
-
+            
             datosParaRetornar[0] = retorno;
             datosParaRetornar[1] = mapaDeDatos;
             if (tipoPersona == 0)
@@ -468,14 +456,14 @@ namespace Ametrano.Logica
                     }
                     i++;
                 }
-                return cursos;
+               
             }
-            return null;
+            return cursos;
         }
         public string[] ListarMaterias()
         {
 
-            string query = "SELECT nombre_materia FROM materia GROUP BY nombre_materia";
+            string query = "SELECT nombre_materia FROM materia where nombre_materia != 'nuevo' GROUP BY nombre_materia";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
@@ -487,18 +475,39 @@ namespace Ametrano.Logica
                 foreach (DataRow row in dataTable.Rows)
                 {
                     foreach (DataColumn column in dataTable.Columns)
-                    {
-                        
-                            materias[i] = row[column].ToString();
-                        
-                      
+                    {                        
+                            materias[i] = row[column].ToString();                                             
                     }
                     i++;
                 }
-                return materias;
+               
             }
             return materias;
         }
 
+        public string[] ListarDocentes()
+        {
+            string query = "SELECT  CONCAT(nombre,' ',apellido) FROM docente";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int contador = dataTable.Rows.Count;
+            int i = 0;
+            string[] docentes = new string[contador];
+            if (contador > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                        docentes[i] = row[column].ToString();
+                    }
+                    i++;
+                }
+               
+            }
+            return docentes;
+        }
+    
     }
 }

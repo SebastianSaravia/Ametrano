@@ -429,7 +429,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.listDocentesCurso = new System.Windows.Forms.ListBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.boxDocentesNuevoGrupo = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
@@ -439,6 +439,8 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -838,12 +840,6 @@
             this.boxEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxEspecialidades.FormattingEnabled = true;
-            this.boxEspecialidades.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
             this.boxEspecialidades.Location = new System.Drawing.Point(12, 19);
             this.boxEspecialidades.Name = "boxEspecialidades";
             this.boxEspecialidades.Size = new System.Drawing.Size(209, 26);
@@ -1072,12 +1068,6 @@
             this.boxEspecialidades_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxEspecialidades_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxEspecialidades_2.FormattingEnabled = true;
-            this.boxEspecialidades_2.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
             this.boxEspecialidades_2.Location = new System.Drawing.Point(12, 19);
             this.boxEspecialidades_2.Name = "boxEspecialidades_2";
             this.boxEspecialidades_2.Size = new System.Drawing.Size(209, 26);
@@ -5168,6 +5158,8 @@
             // 
             // groupBox61
             // 
+            this.groupBox61.Controls.Add(this.label6);
+            this.groupBox61.Controls.Add(this.label5);
             this.groupBox61.Controls.Add(this.dateTimePicker3);
             this.groupBox61.Controls.Add(this.dateTimePicker2);
             this.groupBox61.Location = new System.Drawing.Point(548, 94);
@@ -5210,7 +5202,7 @@
             this.groupBox60.Controls.Add(this.button12);
             this.groupBox60.Controls.Add(this.button13);
             this.groupBox60.Controls.Add(this.listDocentesCurso);
-            this.groupBox60.Controls.Add(this.comboBox7);
+            this.groupBox60.Controls.Add(this.boxDocentesNuevoGrupo);
             this.groupBox60.Location = new System.Drawing.Point(65, 94);
             this.groupBox60.Name = "groupBox60";
             this.groupBox60.Size = new System.Drawing.Size(466, 180);
@@ -5248,17 +5240,17 @@
             this.listDocentesCurso.Size = new System.Drawing.Size(216, 148);
             this.listDocentesCurso.TabIndex = 1;
             // 
-            // comboBox7
+            // boxDocentesNuevoGrupo
             // 
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.boxDocentesNuevoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxDocentesNuevoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxDocentesNuevoGrupo.FormattingEnabled = true;
+            this.boxDocentesNuevoGrupo.Items.AddRange(new object[] {
             "Docente..."});
-            this.comboBox7.Location = new System.Drawing.Point(12, 19);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(209, 26);
-            this.comboBox7.TabIndex = 8;
+            this.boxDocentesNuevoGrupo.Location = new System.Drawing.Point(12, 19);
+            this.boxDocentesNuevoGrupo.Name = "boxDocentesNuevoGrupo";
+            this.boxDocentesNuevoGrupo.Size = new System.Drawing.Size(209, 26);
+            this.boxDocentesNuevoGrupo.TabIndex = 8;
             // 
             // nuevoCurso
             // 
@@ -5331,12 +5323,6 @@
             this.boxMateriasCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxMateriasCurso.FormattingEnabled = true;
-            this.boxMateriasCurso.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
             this.boxMateriasCurso.Location = new System.Drawing.Point(12, 19);
             this.boxMateriasCurso.Name = "boxMateriasCurso";
             this.boxMateriasCurso.Size = new System.Drawing.Size(209, 26);
@@ -5358,15 +5344,33 @@
             this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxTipoCurso.FormattingEnabled = true;
             this.boxTipoCurso.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
+            "Tipo...",
+            "INEFOP",
+            "Privado"});
             this.boxTipoCurso.Location = new System.Drawing.Point(37, 72);
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(319, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Inicio";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(319, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 18);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Finalización";
             // 
             // Principal
             // 
@@ -5537,6 +5541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).EndInit();
             this.nuevoGrupo.ResumeLayout(false);
             this.groupBox61.ResumeLayout(false);
+            this.groupBox61.PerformLayout();
             this.groupBox60.ResumeLayout(false);
             this.nuevoCurso.ResumeLayout(false);
             this.groupBox58.ResumeLayout(false);
@@ -5946,7 +5951,7 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.ListBox listDocentesCurso;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox boxDocentesNuevoGrupo;
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
         private System.Windows.Forms.ListBox listResultadosDocentes;
@@ -5958,5 +5963,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
     }
 }
