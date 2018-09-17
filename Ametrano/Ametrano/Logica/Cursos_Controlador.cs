@@ -151,8 +151,8 @@ namespace Ametrano.Logica
                 }
                 //-------------------------------------------Calculo de viatico                
                 int val=0;// valor que se pagara teniendo en cuenta que no tiene pagos atrasados
-               
-                
+
+                string consulta ="";
 
 
 
