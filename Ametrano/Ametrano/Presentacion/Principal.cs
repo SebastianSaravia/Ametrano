@@ -1303,7 +1303,25 @@ namespace Ametrano.Presentacion
 
         private void boxCursoViaticos_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
+            dataGridViaticos.DataSource = null;
+            dataGridViaticos.Columns.Clear();
+            DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();
+            DataGridViewCheckBoxColumn col2 = new DataGridViewCheckBoxColumn();
+            DataGridViewCheckBoxColumn col3 = new DataGridViewCheckBoxColumn();
+            DataGridViewCheckBoxColumn col4= new DataGridViewCheckBoxColumn();
+            DataGridViewCheckBoxColumn col5 = new DataGridViewCheckBoxColumn();
+            col.HeaderText = "Fecha";
+            col2.HeaderText = "Monto";
+            col3.HeaderText = "Rubro";
+            col4.HeaderText = "Concepto";
+            col5.HeaderText = "Abonado";
+            dataGridViaticos.Columns.Add(col);
+            dataGridViaticos.Columns.Add(col2);
+            dataGridViaticos.Columns.Add(col3);
+            dataGridViaticos.Columns.Add(col4);
+            dataGridViaticos.Columns.Add(col5);
+
+
             DataTable dt;
             string curso = boxCursoViaticos.SelectedItem.ToString();
             dynamic[] alumn = CurContr.AlumnosCurso(curso,out dt);
