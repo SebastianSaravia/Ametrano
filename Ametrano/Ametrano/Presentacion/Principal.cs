@@ -78,16 +78,19 @@ namespace Ametrano.Presentacion
             boxLocalidadAlumno.SelectedIndex = 0;
             boxBuscar.SelectedIndex = 0;
             boxBuscar_2.SelectedIndex = 0;
+            boxPeriodoAlumno.SelectedIndex = 0;
+            boxPeriodoAlumno_2.SelectedIndex = 0;
 
+            
+            foreach (Control control in this.Controls)
+            {
+                PlaceholderRec(control);
+            }
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
-            foreach (Control control in this.Controls)
-            {
-                PlaceholderRec(control);
-            }
 
         }
 
@@ -298,8 +301,8 @@ namespace Ametrano.Presentacion
                 lblLocalidadAlumno.Text = "Localidad: " + diccionarioDeAlumno["direccion_localidad"];
                 lblCalleAlumno.Text = "Calle: " + diccionarioDeAlumno["direccion_calle"];
                 lblReferenciaAlumno.Text = "Referencia: " + diccionarioDeAlumno["direccion_referencia"];
-                lblNPuertaAlumno.Text = "Numero de puerta: " + diccionarioDeAlumno["direccion_numero_puerta"];
-                lblNApartamentoAlumno.Text = "Numero de apartamento: " + diccionarioDeAlumno["direccion_apartamento"];
+                lblNPuertaAlumno.Text = "Nº puerta: " + diccionarioDeAlumno["direccion_numero_puerta"];
+                lblNApartamentoAlumno.Text = "Nº apartamento: " + diccionarioDeAlumno["direccion_apartamento"];
 
                 //Contacto
 
@@ -314,12 +317,12 @@ namespace Ametrano.Presentacion
                 //Hogar
 
                 lblJefeHogarAlumno.Text = "Jefe de hogar: " + diccionarioDeAlumno["hogar_jefe"];
-                lblCantidadHijos.Text = "Cantidad de hijos: " + diccionarioDeAlumno["hogar_cantidad_hijos"];
+                lblCantidadHijosAlumno.Text = "Cantidad de hijos: " + diccionarioDeAlumno["hogar_cantidad_hijos"];
 
                 //Trabajo
 
                 lblTrabajoAlgunaVezAlumno.Text = "Trabajo aluna vez: " + diccionarioDeAlumno["trabajo_trabajo_alguna_vez"];
-                lblTrabajaActualmente.Text = "Trabaja actualmente: " + diccionarioDeAlumno["trabajo_trabaja_actualmente"];
+                lblTrabajaActualmenteAlumno.Text = "Trabaja actualmente: " + diccionarioDeAlumno["trabajo_trabaja_actualmente"];
                 lblTiempoDesempleadoAlumno.Text = "Tiempo desempleado: " + diccionarioDeAlumno["trabajo_tiempo_desempleado"];
                 lblHorasJornadaLaboralAlumno.Text = "Horas de jornada laboral: " + diccionarioDeAlumno["trabajo_horas_jornada"];
                 lblIngresoMensualAlumno.Text = "Ingreso mensual: " + diccionarioDeAlumno["trabajo_ingreso_mensual"];
@@ -337,8 +340,8 @@ namespace Ametrano.Presentacion
 
                 //Accesso a internet
 
-                lblUsaInternet.Text = "Usa internet: " + diccionarioDeAlumno["internet_usa_internet"];
-                lblFacilAccesoInternetAlumno.Text = "Facil acceso a internet" + diccionarioDeAlumno["internet_facil_acceso"];
+                lblUsaInternetAlumno.Text = "Usa internet: " + diccionarioDeAlumno["internet_usa_internet"];
+                lblFacilAccesoInternetAlumno.Text = "Facil acceso a internet: " + diccionarioDeAlumno["internet_facil_acceso"];
                 lblMedioAccesoInternetAlumno.Text = "Medio de acceso a internet: " + diccionarioDeAlumno["internet_medio_acceso"];
 
 

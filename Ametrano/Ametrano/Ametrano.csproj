@@ -90,6 +90,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logica\Alumnos_Controlador.cs" />
     <Compile Include="Logica\Cursos_Controlador.cs" />
     <Compile Include="Verificacion\DatosAlumno.cs" />
     <Compile Include="Logica\Principal_Controlador.cs" />
