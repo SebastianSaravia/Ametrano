@@ -15,8 +15,10 @@ namespace Ametrano.Logica
 
         public void insertarAlumno(DatosAlumno datos)
         {
-            string insert = "INSERT INTO ALUMNO VALIES(";
-              ////////
+            //string insert = "INSERT INTO ALUMNO VALIES(" +
+              //  "'" + datos.getDatosPersona()["cedula_alumno"] + "'," +
+               // "'" + datos.getDatosPersona()["cedula_alumno"] + "'," +
+
 
         }
 
