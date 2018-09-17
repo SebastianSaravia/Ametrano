@@ -146,7 +146,6 @@ namespace Ametrano.Logica
                         {
                             int.TryParse(row[column].ToString(), out monto);
                         }
-
                     }
                 }
                 //-------------------------------------------Calculo de viatico                
