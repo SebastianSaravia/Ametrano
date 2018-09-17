@@ -127,25 +127,9 @@ namespace Ametrano.Logica
                 }
             }
                         
-            if (num >=7)//cuenta cuantas semanas sin cobrar viatico tiene el alumno
+            if (num >=7)//Valida que hayan pasado los 7 dias
             {
-                string query2 = "SELECT count(abonado) FROM viatico v JOIN recive r ON r.id_viatico=v.id_viatico where abonado = false and r.cedula_alumno='"+cedula+"'";
-                MySqlDataAdapter datosConsulta2 = objetoConexion.consultarDatos(query2);
-                DataTable dataTable2 = new DataTable();
-                datosConsulta2.Fill(dataTable2);
-                int ct = dataTable2.Columns.Count;
-                int nm = 0;
-                if (ct > 0)
-                {
-                    foreach (DataRow row in dataTable2.Rows)
-                    {
-                        foreach (DataColumn column in dataTable2.Columns)
-                        {
-                            int.TryParse(row[column].ToString(), out nm);
-                        }
-
-                    }
-                }
+                
                 //Busca el monto de viatico por dia del alumno seleccionado
                 int monto = 0;
                 string query3 = "SELECT monto_viatico_por_dia FROM alumno WHERE cedula_alumno='"+cedula+"';";
@@ -165,26 +149,32 @@ namespace Ametrano.Logica
 
                     }
                 }
-                //-------------------------------------------Calculo de viatico
+                //-------------------------------------------Calculo de viatico                
+                int val=0;// valor que se pagara teniendo en cuenta que no tiene pagos atrasados
+               
+                
 
 
 
-                int val1=0;// valor que se pagara teniendo en cuenta que no tiene pagos atrasados
-                int val2=0;// valor que se pagara al tener pagos atrasados (pago actual + pagoatrasado1 + pagoatrasado2 + ...)
+
+
+
+
+
+
+
+
+
+
 
 
 
                 //-------------------------------------------Fin calculo de viatico
-                if (nm==0)//si no tiene pagos atrasados
-                {
-                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + val1 + ",'','',0)";
-                    int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
-                }
-                else//si tiene pagos atrasados
-                {
-                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + val2 +",'','',0)";
-                    int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
-                }
+
+                //Incerta los datos del viatico en la bd
+                string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + val + ",'','',0)";
+                int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
+                               
                 //selecciona la id de viatico de la operacion actual
                 string query5 = "select max(id_viatico) from viatico where fecha = curdate()";
                 MySqlDataAdapter datosConsulta5 = objetoConexion.consultarDatos(query5);
