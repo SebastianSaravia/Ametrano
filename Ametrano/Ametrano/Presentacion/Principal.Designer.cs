@@ -4809,11 +4809,11 @@
             // btnAñadirSemanaViaticos
             // 
             this.btnAñadirSemanaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 455);
+            this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 34);
             this.btnAñadirSemanaViaticos.Name = "btnAñadirSemanaViaticos";
-            this.btnAñadirSemanaViaticos.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadirSemanaViaticos.Size = new System.Drawing.Size(173, 29);
             this.btnAñadirSemanaViaticos.TabIndex = 31;
-            this.btnAñadirSemanaViaticos.Text = "Añadir semana";
+            this.btnAñadirSemanaViaticos.Text = "Añadir pago de viaticos";
             this.btnAñadirSemanaViaticos.UseVisualStyleBackColor = true;
             this.btnAñadirSemanaViaticos.Click += new System.EventHandler(this.btnAñadirSemanaViaticos_Click);
             // 

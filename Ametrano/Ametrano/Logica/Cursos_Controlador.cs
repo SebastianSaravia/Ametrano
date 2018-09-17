@@ -99,14 +99,13 @@ namespace Ametrano.Logica
                     }
                 }
             }
-
-
+            
             int num=0;
             if (p==0)
-            {
+            {//compueva que hayan pasado 7 dias desde el ultimo pago de viatico
                 num = 7;
             }else
-            {//compueva que hayan pasado 7 dias desde el ultimo pago de viatico
+            {//Se comprueva que el viatico se genere dentro del tiempo de vida del curso actual
                 string query = "SELECT MAX(DATEDIFF(v.fecha, curdate())) from viatico v JOIN recive r ON r.id_viatico=v.id_viatico JOIN asiste a ON a.cedula_alumno=r.cedula_alumno JOIN grupo g ON g.id_grupo=a.id_grupo WHERE curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and a.cedula_alumno='"+cedula+"'";
                 MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
                 DataTable dataTable = new DataTable();
@@ -169,6 +168,13 @@ namespace Ametrano.Logica
 
 
                 //-------------------------------------------Fin calculo de viatico
+
+
+                //Calculo de fecha de inicio y fecha de fin
+
+                string consulta_fecha_inicio = "select 
+
+
 
                 //Incerta los datos del viatico en la bd
                 string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + val + ",'','',0)";

@@ -1085,13 +1085,24 @@ namespace Ametrano.Presentacion
 
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
-            if (listAlumnosViaticos.SelectedIndex>=0)
+            //if (listAlumnosViaticos.SelectedIndex>=0)
+            //{
+            DataTable listaAlumnos = eventoClickListaAlumnos[1];
+            foreach(DataRow row in listaAlumnos.Rows)
             {
-                DataTable listaAlumnos = eventoClickListaAlumnos[1];
-                int val = listAlumnosViaticos.SelectedIndex;
-                string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
-              if (CurContr.AñadirSemanaViatico(ci))
-              {
+                string ci = "";
+                foreach(DataColumn column in listaAlumnos.Columns)
+                {
+
+                    if (column.ColumnName.Equals("cedula_alumno"))
+                    {
+                        ci = row[column].ToString();
+                    }
+                }
+
+                
+                if (CurContr.AñadirSemanaViatico(ci))
+                {
                     try
                     {
                         dataGridViaticos.Columns.Clear();
@@ -1106,12 +1117,17 @@ namespace Ametrano.Presentacion
                     }
 
                 }
-               else
-               {
+                else
+                {
                     MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
-               }
-
+                }
             }
+
+
+
+            
+
+            //}
 
             
         }
