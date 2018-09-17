@@ -233,33 +233,15 @@ namespace Ametrano.Logica
             return semanas;
         }
 
-        public dynamic[] ListarViatico(string cedula)
+        public DataTable ListarViatico(string cedula)
         {
             
-            string sql = "";
+            string sql = "select v.fecha, v.monto, v.rubro, v.concepto, v.abonado from viatico v join recive r ON v.id_viatico=r.id_viatico where r.cedula_alumno = '"+cedula+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(sql);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
-            int cont = dataTable.Columns.Count;
-            dynamic[] semana = new dynamic[cont];
-
-            int i = 0;
-            if (cont > 0)
-            {
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    foreach (DataColumn column in dataTable.Columns)
-                    {
-                        semana[i] = row[column].ToString();
-                        i++;
-                    }
-
-                }
-            }
-
-
-
-            return semana;            
+                       
+             return dataTable;
         }
 
     }

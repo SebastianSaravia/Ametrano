@@ -1092,12 +1092,23 @@ namespace Ametrano.Presentacion
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
               if (CurContr.AñadirSemanaViatico(ci))
               {
-                    dynamic[] semana = CurContr.AñadirViatico(ci);
-                    dataGridViaticos.Rows.Add(semana[0], semana[1], semana[2], semana[3], semana[4]);
-              }
+                    try
+                    {
+                        dataGridViaticos.Columns.Clear();
+                        dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                        dataGridViaticos.Columns[0].ReadOnly = true;
+                        dataGridViaticos.Columns[1].ReadOnly = true;
+
+                    }
+                    catch (Exception ew)
+                    {
+                        MessageBox.Show("error " + ew);
+                    }
+
+                }
                else
                {
-                    MessageBox.Show("Error al generar nueva semana de pago de viaticos, ahun no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago ahun");
+                    MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
                }
 
             }
@@ -1313,19 +1324,35 @@ namespace Ametrano.Presentacion
         {
             if (eventoClickListaAlumnos[0])
             {
+               
                 DataTable listaAlumnos = eventoClickListaAlumnos[1];
                 int val = listAlumnosViaticos.SelectedIndex;
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
                 string[] datosAlumno = CurContr.DatosViaticos(ci);
-
-
-
-
                 lblCedulaViaticos.Text = "Cedula: " + ci;
                 lblNombreViaticos.Text = "Nombre: " + datosAlumno[0]+" " + datosAlumno[1];
                 lblMontoDiaViaticos.Text = "Monto por día asistido: " + datosAlumno[2];
-                dataGridViaticos.Rows.Clear();
+
+                try
+                {
+                    dataGridViaticos.Columns.Clear();
+                    dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                    dataGridViaticos.Columns[0].ReadOnly = true;
+                    dataGridViaticos.Columns[1].ReadOnly = true;
+
+                }
+                catch (Exception ew)
+                {
+                    MessageBox.Show("error "+ew);                
+                }
                 
+                
+               
+               
+
+                
+
+
             }
 
         }

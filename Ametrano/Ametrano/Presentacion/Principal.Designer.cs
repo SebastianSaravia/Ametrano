@@ -394,11 +394,6 @@
             this.lblCedulaViaticos = new System.Windows.Forms.Label();
             this.lblNombreViaticos = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
-            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
@@ -422,6 +417,8 @@
             this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
@@ -439,8 +436,11 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -4868,44 +4868,6 @@
             this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
             this.dataGridViaticos.TabIndex = 28;
             // 
-            // colFechaViaticos
-            // 
-            this.colFechaViaticos.Frozen = true;
-            this.colFechaViaticos.HeaderText = "Fecha";
-            this.colFechaViaticos.Name = "colFechaViaticos";
-            this.colFechaViaticos.ReadOnly = true;
-            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colMontoViaticos
-            // 
-            this.colMontoViaticos.Frozen = true;
-            this.colMontoViaticos.HeaderText = "Monto";
-            this.colMontoViaticos.Name = "colMontoViaticos";
-            this.colMontoViaticos.ReadOnly = true;
-            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colRubroViaticos
-            // 
-            this.colRubroViaticos.Frozen = true;
-            this.colRubroViaticos.HeaderText = "Rubro";
-            this.colRubroViaticos.Name = "colRubroViaticos";
-            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colConceptoViaticos
-            // 
-            this.colConceptoViaticos.Frozen = true;
-            this.colConceptoViaticos.HeaderText = "Concepto";
-            this.colConceptoViaticos.Name = "colConceptoViaticos";
-            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAbonoViaticos
-            // 
-            this.colAbonoViaticos.Frozen = true;
-            this.colAbonoViaticos.HeaderText = "Abonado";
-            this.colAbonoViaticos.Name = "colAbonoViaticos";
-            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // boxCursoViaticos
             // 
             this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5169,6 +5131,26 @@
             this.groupBox61.TabStop = false;
             this.groupBox61.Text = "Periodo";
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(319, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 18);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Finalización";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(319, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Inicio";
+            // 
             // dateTimePicker3
             // 
             this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5352,25 +5334,43 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // label5
+            // colAbonoViaticos
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(319, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 18);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Inicio";
+            this.colAbonoViaticos.Frozen = true;
+            this.colAbonoViaticos.HeaderText = "Abonado";
+            this.colAbonoViaticos.Name = "colAbonoViaticos";
+            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // label6
+            // colConceptoViaticos
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(319, 79);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 18);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Finalización";
+            this.colConceptoViaticos.Frozen = true;
+            this.colConceptoViaticos.HeaderText = "Concepto";
+            this.colConceptoViaticos.Name = "colConceptoViaticos";
+            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colRubroViaticos
+            // 
+            this.colRubroViaticos.Frozen = true;
+            this.colRubroViaticos.HeaderText = "Rubro";
+            this.colRubroViaticos.Name = "colRubroViaticos";
+            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colMontoViaticos
+            // 
+            this.colMontoViaticos.Frozen = true;
+            this.colMontoViaticos.HeaderText = "Monto";
+            this.colMontoViaticos.Name = "colMontoViaticos";
+            this.colMontoViaticos.ReadOnly = true;
+            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colFechaViaticos
+            // 
+            this.colFechaViaticos.Frozen = true;
+            this.colFechaViaticos.HeaderText = "Fecha";
+            this.colFechaViaticos.Name = "colFechaViaticos";
+            this.colFechaViaticos.ReadOnly = true;
+            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // Principal
             // 
@@ -5958,12 +5958,12 @@
         private System.Windows.Forms.Label lblEstadoDocenteBaja;
         private System.Windows.Forms.ComboBox boxTipoCurso;
         private System.Windows.Forms.ListBox listResultadosDocentes_2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
     }
 }
