@@ -394,6 +394,11 @@
             this.lblCedulaViaticos = new System.Windows.Forms.Label();
             this.lblNombreViaticos = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
+            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
@@ -405,7 +410,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnConsultarLista = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
@@ -413,7 +418,7 @@
             this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
             this.boxDocenteAsistencia = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnGenerarLista = new System.Windows.Forms.Button();
             this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
@@ -436,11 +441,6 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -4868,6 +4868,44 @@
             this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
             this.dataGridViaticos.TabIndex = 28;
             // 
+            // colFechaViaticos
+            // 
+            this.colFechaViaticos.Frozen = true;
+            this.colFechaViaticos.HeaderText = "Fecha";
+            this.colFechaViaticos.Name = "colFechaViaticos";
+            this.colFechaViaticos.ReadOnly = true;
+            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colMontoViaticos
+            // 
+            this.colMontoViaticos.Frozen = true;
+            this.colMontoViaticos.HeaderText = "Monto";
+            this.colMontoViaticos.Name = "colMontoViaticos";
+            this.colMontoViaticos.ReadOnly = true;
+            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colRubroViaticos
+            // 
+            this.colRubroViaticos.Frozen = true;
+            this.colRubroViaticos.HeaderText = "Rubro";
+            this.colRubroViaticos.Name = "colRubroViaticos";
+            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colConceptoViaticos
+            // 
+            this.colConceptoViaticos.Frozen = true;
+            this.colConceptoViaticos.HeaderText = "Concepto";
+            this.colConceptoViaticos.Name = "colConceptoViaticos";
+            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAbonoViaticos
+            // 
+            this.colAbonoViaticos.Frozen = true;
+            this.colAbonoViaticos.HeaderText = "Abonado";
+            this.colAbonoViaticos.Name = "colAbonoViaticos";
+            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // boxCursoViaticos
             // 
             this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -4910,7 +4948,7 @@
             this.groupBox57.Controls.Add(this.boxCursoAsistencia_2);
             this.groupBox57.Controls.Add(this.dataGridListaAsistencias_2);
             this.groupBox57.Controls.Add(this.dateTimeFechaAsistencia_2);
-            this.groupBox57.Controls.Add(this.button9);
+            this.groupBox57.Controls.Add(this.btnConsultarLista);
             this.groupBox57.Location = new System.Drawing.Point(554, 33);
             this.groupBox57.Name = "groupBox57";
             this.groupBox57.Size = new System.Drawing.Size(489, 459);
@@ -4994,15 +5032,15 @@
             this.dateTimeFechaAsistencia_2.Size = new System.Drawing.Size(209, 24);
             this.dateTimeFechaAsistencia_2.TabIndex = 32;
             // 
-            // button9
+            // btnConsultarLista
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(23, 182);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(209, 32);
-            this.button9.TabIndex = 31;
-            this.button9.Text = "Consultar lista";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnConsultarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarLista.Location = new System.Drawing.Point(23, 182);
+            this.btnConsultarLista.Name = "btnConsultarLista";
+            this.btnConsultarLista.Size = new System.Drawing.Size(209, 32);
+            this.btnConsultarLista.TabIndex = 31;
+            this.btnConsultarLista.Text = "Consultar lista";
+            this.btnConsultarLista.UseVisualStyleBackColor = true;
             // 
             // groupBox56
             // 
@@ -5010,7 +5048,7 @@
             this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
             this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
             this.groupBox56.Controls.Add(this.boxDocenteAsistencia);
-            this.groupBox56.Controls.Add(this.button8);
+            this.groupBox56.Controls.Add(this.btnGenerarLista);
             this.groupBox56.Controls.Add(this.boxMateriaAsisencia);
             this.groupBox56.Location = new System.Drawing.Point(46, 33);
             this.groupBox56.Name = "groupBox56";
@@ -5084,15 +5122,16 @@
             this.boxDocenteAsistencia.Size = new System.Drawing.Size(209, 26);
             this.boxDocenteAsistencia.TabIndex = 30;
             // 
-            // button8
+            // btnGenerarLista
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(23, 154);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(209, 32);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Generar lista";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnGenerarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarLista.Location = new System.Drawing.Point(23, 154);
+            this.btnGenerarLista.Name = "btnGenerarLista";
+            this.btnGenerarLista.Size = new System.Drawing.Size(209, 32);
+            this.btnGenerarLista.TabIndex = 31;
+            this.btnGenerarLista.Text = "Generar lista";
+            this.btnGenerarLista.UseVisualStyleBackColor = true;
+            this.btnGenerarLista.Click += new System.EventHandler(this.btnGenerarLista_Click);
             // 
             // boxMateriaAsisencia
             // 
@@ -5334,53 +5373,15 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // colAbonoViaticos
-            // 
-            this.colAbonoViaticos.Frozen = true;
-            this.colAbonoViaticos.HeaderText = "Abonado";
-            this.colAbonoViaticos.Name = "colAbonoViaticos";
-            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colConceptoViaticos
-            // 
-            this.colConceptoViaticos.Frozen = true;
-            this.colConceptoViaticos.HeaderText = "Concepto";
-            this.colConceptoViaticos.Name = "colConceptoViaticos";
-            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colRubroViaticos
-            // 
-            this.colRubroViaticos.Frozen = true;
-            this.colRubroViaticos.HeaderText = "Rubro";
-            this.colRubroViaticos.Name = "colRubroViaticos";
-            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colMontoViaticos
-            // 
-            this.colMontoViaticos.Frozen = true;
-            this.colMontoViaticos.HeaderText = "Monto";
-            this.colMontoViaticos.Name = "colMontoViaticos";
-            this.colMontoViaticos.ReadOnly = true;
-            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colFechaViaticos
-            // 
-            this.colFechaViaticos.Frozen = true;
-            this.colFechaViaticos.HeaderText = "Fecha";
-            this.colFechaViaticos.Name = "colFechaViaticos";
-            this.colFechaViaticos.ReadOnly = true;
-            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -5924,7 +5925,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia_2;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnConsultarLista;
         private System.Windows.Forms.GroupBox groupBox56;
         private System.Windows.Forms.ComboBox boxCursoAsistencia;
         private System.Windows.Forms.DataGridView dataGridListaAsistencias;
@@ -5932,7 +5933,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAsistenciaAsistencias;
         private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia;
         private System.Windows.Forms.ComboBox boxDocenteAsistencia;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnGenerarLista;
         private System.Windows.Forms.ComboBox boxMateriaAsisencia;
         private System.Windows.Forms.TabPage nuevoCurso;
         private System.Windows.Forms.GroupBox groupBox58;

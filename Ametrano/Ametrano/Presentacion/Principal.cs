@@ -1345,19 +1345,28 @@ namespace Ametrano.Presentacion
                 {
                     MessageBox.Show("error "+ew);                
                 }
-                
-                
-               
-               
-
-                
-
-
             }
 
         }
 
-
-
+        private void btnGenerarLista_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string curso = "Desarrollo web"; //boxCursoAsistencia.SelectedItem();
+                dataGridListaAsistencias.Columns.Clear();
+                dataGridListaAsistencias.DataSource = CurContr.ListarLista(curso);
+                dataGridListaAsistencias.Columns[0].ReadOnly = true;
+               
+                DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();                              
+                col.HeaderText="Asistencias";              
+                dataGridListaAsistencias.Columns.Add(col);
+                                
+            }
+            catch (Exception ew)
+            {
+                MessageBox.Show("error " + ew);
+            }
+        }
     }
 }

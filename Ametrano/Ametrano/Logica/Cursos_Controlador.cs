@@ -106,7 +106,7 @@ namespace Ametrano.Logica
             {
                 num = 7;
             }else
-            {
+            {//compueva que hayan pasado 7 dias desde el ultimo pago de viatico
                 string query = "SELECT MAX(DATEDIFF(v.fecha, curdate())) from viatico v JOIN recive r ON r.id_viatico=v.id_viatico JOIN asiste a ON a.cedula_alumno=r.cedula_alumno JOIN grupo g ON g.id_grupo=a.id_grupo WHERE curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and a.cedula_alumno='"+cedula+"'";
                 MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
                 DataTable dataTable = new DataTable();
@@ -126,9 +126,8 @@ namespace Ametrano.Logica
                     }
                 }
             }
-            
-            //---------------------------------------------
-            if (num >=7)
+                        
+            if (num >=7)//cuenta cuantas semanas sin cobrar viatico tiene el alumno
             {
                 string query2 = "SELECT count(abonado) FROM viatico v JOIN recive r ON r.id_viatico=v.id_viatico where abonado = false and r.cedula_alumno='"+cedula+"'";
                 MySqlDataAdapter datosConsulta2 = objetoConexion.consultarDatos(query2);
@@ -147,7 +146,7 @@ namespace Ametrano.Logica
 
                     }
                 }
-
+                //Busca el monto de viatico por dia del alumno seleccionado
                 int monto = 0;
                 string query3 = "SELECT monto_viatico_por_dia FROM alumno WHERE cedula_alumno='"+cedula+"';";
                 MySqlDataAdapter datosConsulta3 = objetoConexion.consultarDatos(query3);
@@ -166,18 +165,27 @@ namespace Ametrano.Logica
 
                     }
                 }
-                
-                if (nm==0)
+                //-------------------------------------------Calculo de viatico
+
+
+
+                int val1=0;// valor que se pagara teniendo en cuenta que no tiene pagos atrasados
+                int val2=0;// valor que se pagara al tener pagos atrasados (pago actual + pagoatrasado1 + pagoatrasado2 + ...)
+
+
+
+                //-------------------------------------------Fin calculo de viatico
+                if (nm==0)//si no tiene pagos atrasados
                 {
-                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + monto + ",'','',0)";
+                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + val1 + ",'','',0)";
                     int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
                 }
-                else
+                else//si tiene pagos atrasados
                 {
-                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + monto + "*" + nm + ",'','',0)";
+                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado) VALUES(curdate()," + val2 +",'','',0)";
                     int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
                 }
-                
+                //selecciona la id de viatico de la operacion actual
                 string query5 = "select max(id_viatico) from viatico where fecha = curdate()";
                 MySqlDataAdapter datosConsulta5 = objetoConexion.consultarDatos(query5);
                 DataTable dataTable5 = new DataTable();
@@ -195,8 +203,7 @@ namespace Ametrano.Logica
 
                     }
                 }
-
-
+                //Se incertan los datos del viatico pagado en la tabla recive
                 string query6 = "INSERT INTO recive VALUES('"+id+"','"+cedula+"')";
                int datosConsulta6 = objetoConexion.sqlInsertUpdate(query6);
                 return true;
@@ -236,7 +243,7 @@ namespace Ametrano.Logica
         public DataTable ListarViatico(string cedula)
         {
             
-            string sql = "select v.fecha, v.monto, v.rubro, v.concepto, v.abonado from viatico v join recive r ON v.id_viatico=r.id_viatico where r.cedula_alumno = '"+cedula+"'";
+            string sql = "select v.fecha as Fecha, v.monto as Monto, v.rubro as Rubro, v.concepto as Concepto, v.abonado as Abonado from viatico v join recive r ON v.id_viatico=r.id_viatico where r.cedula_alumno = '"+cedula+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(sql);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
@@ -244,5 +251,28 @@ namespace Ametrano.Logica
              return dataTable;
         }
 
+        public DataTable ListarLista(string curso) {
+            
+            string sql = "select concat(nombre1,' ',apellido1) as Nombre from alumno a join asiste asi on a.cedula_alumno=asi.cedula_alumno join grupo g on g.id_grupo=asi.id_grupo where curdate() between g.fecha_inicio and g.fecha_fin and g.nombre_curso='"+curso+"'";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(sql);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+
+            return dataTable;
+            
+        }
+
+        public int AgregarCurso(string nombre, string tipo)
+        {
+            string sql = "insert into curso values('"+nombre+"','"+tipo+"');";
+            int datosCons = objetoConexion.sqlInsertUpdate(sql);
+
+
+
+
+
+            return datosCons;
+        }
     }
+
 }
