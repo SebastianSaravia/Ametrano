@@ -410,7 +410,7 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
-            this.button9 = new System.Windows.Forms.Button();
+            this.btnConsultarLista = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
@@ -418,10 +418,12 @@
             this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
             this.boxDocenteAsistencia = new System.Windows.Forms.ComboBox();
-            this.button8 = new System.Windows.Forms.Button();
+            this.btnGenerarLista = new System.Windows.Forms.Button();
             this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
@@ -429,7 +431,7 @@
             this.button12 = new System.Windows.Forms.Button();
             this.button13 = new System.Windows.Forms.Button();
             this.listDocentesCurso = new System.Windows.Forms.ListBox();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.boxDocentesNuevoGrupo = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
@@ -838,12 +840,6 @@
             this.boxEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxEspecialidades.FormattingEnabled = true;
-            this.boxEspecialidades.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
             this.boxEspecialidades.Location = new System.Drawing.Point(12, 19);
             this.boxEspecialidades.Name = "boxEspecialidades";
             this.boxEspecialidades.Size = new System.Drawing.Size(209, 26);
@@ -1072,12 +1068,6 @@
             this.boxEspecialidades_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxEspecialidades_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxEspecialidades_2.FormattingEnabled = true;
-            this.boxEspecialidades_2.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
             this.boxEspecialidades_2.Location = new System.Drawing.Point(12, 19);
             this.boxEspecialidades_2.Name = "boxEspecialidades_2";
             this.boxEspecialidades_2.Size = new System.Drawing.Size(209, 26);
@@ -4921,8 +4911,7 @@
             this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoViaticos.Items.AddRange(new object[] {
-            "Curso...",
-            "Desarrollo web"});
+            "Curso..."});
             this.boxCursoViaticos.Location = new System.Drawing.Point(39, 35);
             this.boxCursoViaticos.Name = "boxCursoViaticos";
             this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);
@@ -4959,7 +4948,7 @@
             this.groupBox57.Controls.Add(this.boxCursoAsistencia_2);
             this.groupBox57.Controls.Add(this.dataGridListaAsistencias_2);
             this.groupBox57.Controls.Add(this.dateTimeFechaAsistencia_2);
-            this.groupBox57.Controls.Add(this.button9);
+            this.groupBox57.Controls.Add(this.btnConsultarLista);
             this.groupBox57.Location = new System.Drawing.Point(554, 33);
             this.groupBox57.Name = "groupBox57";
             this.groupBox57.Size = new System.Drawing.Size(489, 459);
@@ -5043,15 +5032,15 @@
             this.dateTimeFechaAsistencia_2.Size = new System.Drawing.Size(209, 24);
             this.dateTimeFechaAsistencia_2.TabIndex = 32;
             // 
-            // button9
+            // btnConsultarLista
             // 
-            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(23, 182);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(209, 32);
-            this.button9.TabIndex = 31;
-            this.button9.Text = "Consultar lista";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnConsultarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarLista.Location = new System.Drawing.Point(23, 182);
+            this.btnConsultarLista.Name = "btnConsultarLista";
+            this.btnConsultarLista.Size = new System.Drawing.Size(209, 32);
+            this.btnConsultarLista.TabIndex = 31;
+            this.btnConsultarLista.Text = "Consultar lista";
+            this.btnConsultarLista.UseVisualStyleBackColor = true;
             // 
             // groupBox56
             // 
@@ -5059,7 +5048,7 @@
             this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
             this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
             this.groupBox56.Controls.Add(this.boxDocenteAsistencia);
-            this.groupBox56.Controls.Add(this.button8);
+            this.groupBox56.Controls.Add(this.btnGenerarLista);
             this.groupBox56.Controls.Add(this.boxMateriaAsisencia);
             this.groupBox56.Location = new System.Drawing.Point(46, 33);
             this.groupBox56.Name = "groupBox56";
@@ -5133,15 +5122,16 @@
             this.boxDocenteAsistencia.Size = new System.Drawing.Size(209, 26);
             this.boxDocenteAsistencia.TabIndex = 30;
             // 
-            // button8
+            // btnGenerarLista
             // 
-            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(23, 154);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(209, 32);
-            this.button8.TabIndex = 31;
-            this.button8.Text = "Generar lista";
-            this.button8.UseVisualStyleBackColor = true;
+            this.btnGenerarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarLista.Location = new System.Drawing.Point(23, 154);
+            this.btnGenerarLista.Name = "btnGenerarLista";
+            this.btnGenerarLista.Size = new System.Drawing.Size(209, 32);
+            this.btnGenerarLista.TabIndex = 31;
+            this.btnGenerarLista.Text = "Generar lista";
+            this.btnGenerarLista.UseVisualStyleBackColor = true;
+            this.btnGenerarLista.Click += new System.EventHandler(this.btnGenerarLista_Click);
             // 
             // boxMateriaAsisencia
             // 
@@ -5169,6 +5159,8 @@
             // 
             // groupBox61
             // 
+            this.groupBox61.Controls.Add(this.label6);
+            this.groupBox61.Controls.Add(this.label5);
             this.groupBox61.Controls.Add(this.dateTimePicker3);
             this.groupBox61.Controls.Add(this.dateTimePicker2);
             this.groupBox61.Location = new System.Drawing.Point(548, 94);
@@ -5177,6 +5169,26 @@
             this.groupBox61.TabIndex = 35;
             this.groupBox61.TabStop = false;
             this.groupBox61.Text = "Periodo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(319, 79);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 18);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Finalización";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(319, 39);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Inicio";
             // 
             // dateTimePicker3
             // 
@@ -5211,7 +5223,7 @@
             this.groupBox60.Controls.Add(this.button12);
             this.groupBox60.Controls.Add(this.button13);
             this.groupBox60.Controls.Add(this.listDocentesCurso);
-            this.groupBox60.Controls.Add(this.comboBox7);
+            this.groupBox60.Controls.Add(this.boxDocentesNuevoGrupo);
             this.groupBox60.Location = new System.Drawing.Point(65, 94);
             this.groupBox60.Name = "groupBox60";
             this.groupBox60.Size = new System.Drawing.Size(466, 180);
@@ -5249,17 +5261,17 @@
             this.listDocentesCurso.Size = new System.Drawing.Size(216, 148);
             this.listDocentesCurso.TabIndex = 1;
             // 
-            // comboBox7
+            // boxDocentesNuevoGrupo
             // 
-            this.comboBox7.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
+            this.boxDocentesNuevoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxDocentesNuevoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxDocentesNuevoGrupo.FormattingEnabled = true;
+            this.boxDocentesNuevoGrupo.Items.AddRange(new object[] {
             "Docente..."});
-            this.comboBox7.Location = new System.Drawing.Point(12, 19);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(209, 26);
-            this.comboBox7.TabIndex = 8;
+            this.boxDocentesNuevoGrupo.Location = new System.Drawing.Point(12, 19);
+            this.boxDocentesNuevoGrupo.Name = "boxDocentesNuevoGrupo";
+            this.boxDocentesNuevoGrupo.Size = new System.Drawing.Size(209, 26);
+            this.boxDocentesNuevoGrupo.TabIndex = 8;
             // 
             // nuevoCurso
             // 
@@ -5332,12 +5344,6 @@
             this.boxMateriasCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxMateriasCurso.FormattingEnabled = true;
-            this.boxMateriasCurso.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
             this.boxMateriasCurso.Location = new System.Drawing.Point(12, 19);
             this.boxMateriasCurso.Name = "boxMateriasCurso";
             this.boxMateriasCurso.Size = new System.Drawing.Size(209, 26);
@@ -5359,11 +5365,9 @@
             this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxTipoCurso.FormattingEnabled = true;
             this.boxTipoCurso.Items.AddRange(new object[] {
-            "Base de datos",
-            "PHP",
-            "Java",
-            "HTML",
-            "CSS"});
+            "Tipo...",
+            "INEFOP",
+            "Privado"});
             this.boxTipoCurso.Location = new System.Drawing.Point(37, 72);
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
@@ -5375,9 +5379,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -5538,6 +5542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).EndInit();
             this.nuevoGrupo.ResumeLayout(false);
             this.groupBox61.ResumeLayout(false);
+            this.groupBox61.PerformLayout();
             this.groupBox60.ResumeLayout(false);
             this.nuevoCurso.ResumeLayout(false);
             this.groupBox58.ResumeLayout(false);
@@ -5920,7 +5925,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia_2;
-        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button btnConsultarLista;
         private System.Windows.Forms.GroupBox groupBox56;
         private System.Windows.Forms.ComboBox boxCursoAsistencia;
         private System.Windows.Forms.DataGridView dataGridListaAsistencias;
@@ -5928,7 +5933,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colAsistenciaAsistencias;
         private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia;
         private System.Windows.Forms.ComboBox boxDocenteAsistencia;
-        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button btnGenerarLista;
         private System.Windows.Forms.ComboBox boxMateriaAsisencia;
         private System.Windows.Forms.TabPage nuevoCurso;
         private System.Windows.Forms.GroupBox groupBox58;
@@ -5947,13 +5952,15 @@
         private System.Windows.Forms.Button button12;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.ListBox listDocentesCurso;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.ComboBox boxDocentesNuevoGrupo;
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
         private System.Windows.Forms.ListBox listResultadosDocentes;
         private System.Windows.Forms.Label lblEstadoDocenteBaja;
         private System.Windows.Forms.ComboBox boxTipoCurso;
         private System.Windows.Forms.ListBox listResultadosDocentes_2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;

@@ -56,6 +56,7 @@ namespace Ametrano.Presentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
+
             boxSexoAlumno.SelectedIndex = 0;
             boxUsaInternetAlumno.SelectedIndex = 0;
             boxNivelEducativo.SelectedIndex = 0;
@@ -64,7 +65,6 @@ namespace Ametrano.Presentacion
             boxCuentaConApoyoAlumno.SelectedIndex = 0;
             boxCursoAlumno.SelectedIndex = 0;
             boxDepartamentoAlumno.SelectedIndex = 0;
-            boxEspecialidades.SelectedIndex = 0;
             boxEstadoAlumno.SelectedIndex = 0;
             boxEstadoCivilAlumno.SelectedIndex = 0;
             boxFacilAccesoInternetAlumno.SelectedIndex = 0;
@@ -78,19 +78,73 @@ namespace Ametrano.Presentacion
             boxLocalidadAlumno.SelectedIndex = 0;
             boxBuscar.SelectedIndex = 0;
             boxBuscar_2.SelectedIndex = 0;
+            boxCursoViaticos.SelectedIndex = 0;
+            boxCursoGrupo.SelectedIndex = 0;
+            boxDocentesNuevoGrupo.SelectedIndex = 0;
+            boxTipoCurso.SelectedIndex = 0;
+            boxCursoAsistencia.SelectedIndex = 0;
+            boxCursoAsistencia_2.SelectedIndex = 0;
+            boxMateriaAsisencia.SelectedIndex = 0;
+            boxMateriaAsistencia_2.SelectedIndex = 0;
+            boxDocenteAsistencia.SelectedIndex = 0;
+            boxCursoViaticos.SelectedIndex = 0;
             boxPeriodoAlumno.SelectedIndex = 0;
             boxPeriodoAlumno_2.SelectedIndex = 0;
-
+            boxSexoAlumno_2.SelectedIndex = 0;
+            boxTrabajaActualmenteAlumno_2.SelectedIndex = 0;
+            boxTrabajoAnteriormenteCuidandoAlumno_2.SelectedIndex = 0;
+            boxUsaInternetAlumno_2.SelectedIndex = 0;
+            boxPersonaConDiscapacidadAlumno_2.SelectedIndex = 0;
+            boxNivelAcademicoAlumno_2.SelectedIndex = 0;
+            boxLocalidadAlumno_2.SelectedIndex = 0;
+            boxJefeHogarAlumno_2.SelectedIndex = 0;
+            boxFacilAccesoInternetAlumno_2.SelectedIndex = 0;
+            boxEstadoCivilAlumno_2.SelectedIndex = 0;
+            boxEstadoAlumno_2.SelectedIndex = 0;
+            boxDepartamentoAlumno_2.SelectedIndex = 0;
+            boxCursoAlumno_2.SelectedIndex = 0;
+            boxCuentaConApoyoAlumno_2.SelectedIndex = 0;
+            boxCantidadHijosAlumno_2.SelectedIndex = 0;
+            boxTrabajoAlgunaVezAlumno_2.SelectedIndex = 0;
             
-            foreach (Control control in this.Controls)
-            {
-                PlaceholderRec(control);
-            }
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
+            foreach (Control control in this.Controls)
+            {
+                PlaceholderRec(control);
+            }
+            string[] cursos = controlador.ListarCursos();
+            string[] materias = controlador.ListarMaterias();
+            string[] docentes = controlador.ListarDocentes();
+            for (int i = 0; i < cursos.Length; i++)
+            {
+                boxCursoViaticos.Items.Add(cursos[i]);
+                boxCursoAsistencia.Items.Add(cursos[i]);
+                boxCursoAsistencia_2.Items.Add(cursos[i]);
+                boxCursoGrupo.Items.Add(cursos[i]);
+                boxCursoAlumno_2.Items.Add(cursos[i]);
+                boxCursoAlumno.Items.Add(cursos[i]);               
+            }
+
+            for (int i = 0; i < materias.Length; i++)
+            {
+                boxMateriaAsisencia.Items.Add(materias[i]);
+                boxMateriaAsistencia_2.Items.Add(materias[i]);
+                boxMateriasCurso.Items.Add(materias[i]);
+                boxEspecialidades.Items.Add(materias[i]);
+                boxEspecialidades_2.Items.Add(materias[i]);
+                
+            }
+
+            for (int i = 0; i < docentes.Length; i++)
+            {
+                boxDocenteAsistencia.Items.Add(docentes[i]);
+                boxDocentesNuevoGrupo.Items.Add(docentes[i]);
+            }
+            
 
         }
 
@@ -118,7 +172,6 @@ namespace Ametrano.Presentacion
             return retorno;
         }
         
-
         private dynamic[] setDatosCursoAlumno()
         {//metodo que verifica y almacena los datos del curso en datosalumno
             string[] curso = new string[4];//Array que almacena los datos de contacto del alumno
@@ -258,7 +311,6 @@ namespace Ametrano.Presentacion
 
            
         }
-
         private void btnSiguinete2_Click(object sender, EventArgs e)
         {
             dynamic[] setDatosTrabajoAlumno = this.setDatosTrabajoAlumno();
@@ -356,21 +408,18 @@ namespace Ametrano.Presentacion
 
            
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosPersonales);
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
             tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.SelectedIndex = 2;
         }
-
         private void TimePickerFechaNac_ValueChanged(object sender, EventArgs e)
         {//Evento de click en el timepickerfechanacalumnonuevo
 
@@ -394,7 +443,6 @@ namespace Ametrano.Presentacion
 
             maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
         }
-
         private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             controlador.abrirConfiguracion();
@@ -940,10 +988,7 @@ namespace Ametrano.Presentacion
             }
 
         }
-
-
-
-
+        
         public bool esInt(string numero)
         {//Metodo que retorna true si es unicamente numero
             int numero_convertido;
@@ -969,9 +1014,7 @@ namespace Ametrano.Presentacion
             }
             return retorno;
         }
-
-
-
+        
         public bool verificarDatoCorrecto(int tipoBusqueda, string datoDeBusqueda)
         {
             bool datoCorrecto = false;
@@ -1027,6 +1070,7 @@ namespace Ametrano.Presentacion
                 txtBuscar_2.MaxLength = 255;
             }
         }
+
         private void boxBuscar_SelectedIndexChanged(object sender, EventArgs e)
         { 
             if (boxBuscar.SelectedIndex == 1)
@@ -1046,15 +1090,32 @@ namespace Ametrano.Presentacion
                 DataTable listaAlumnos = eventoClickListaAlumnos[1];
                 int val = listAlumnosViaticos.SelectedIndex;
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
-                    CurContr.AñadirSemanaViatico(ci);
-                    dataGridViaticos.Rows.Add();
-                
-               
-            }
+              if (CurContr.AñadirSemanaViatico(ci))
+              {
+                    try
+                    {
+                        dataGridViaticos.Columns.Clear();
+                        dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                        dataGridViaticos.Columns[0].ReadOnly = true;
+                        dataGridViaticos.Columns[1].ReadOnly = true;
 
+                    }
+                    catch (Exception ew)
+                    {
+                        MessageBox.Show("error " + ew);
+                    }
+
+                }
+               else
+               {
+                    MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
+               }
+
+            }
 
             
         }
+
         private void btnActualizarDocente_Click(object sender, EventArgs e)
         {//Evento de click en el boton modificar docente
             //Datos personales
@@ -1263,18 +1324,49 @@ namespace Ametrano.Presentacion
         {
             if (eventoClickListaAlumnos[0])
             {
+               
                 DataTable listaAlumnos = eventoClickListaAlumnos[1];
                 int val = listAlumnosViaticos.SelectedIndex;
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
-               string[] datosAlumno = CurContr.DatosViaticos(ci);
-
+                string[] datosAlumno = CurContr.DatosViaticos(ci);
                 lblCedulaViaticos.Text = "Cedula: " + ci;
                 lblNombreViaticos.Text = "Nombre: " + datosAlumno[0]+" " + datosAlumno[1];
                 lblMontoDiaViaticos.Text = "Monto por día asistido: " + datosAlumno[2];
-                dataGridViaticos.Rows.Clear();
-                
+
+                try
+                {
+                    dataGridViaticos.Columns.Clear();
+                    dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                    dataGridViaticos.Columns[0].ReadOnly = true;
+                    dataGridViaticos.Columns[1].ReadOnly = true;
+
+                }
+                catch (Exception ew)
+                {
+                    MessageBox.Show("error "+ew);                
+                }
             }
 
+        }
+
+        private void btnGenerarLista_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string curso = "Desarrollo web"; //boxCursoAsistencia.SelectedItem();
+                dataGridListaAsistencias.Columns.Clear();
+                dataGridListaAsistencias.DataSource = CurContr.ListarLista(curso);
+                dataGridListaAsistencias.Columns[0].ReadOnly = true;
+               
+                DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();                              
+                col.HeaderText="Asistencias";              
+                dataGridListaAsistencias.Columns.Add(col);
+                                
+            }
+            catch (Exception ew)
+            {
+                MessageBox.Show("error " + ew);
+            }
         }
     }
 }
