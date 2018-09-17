@@ -4863,10 +4863,13 @@
             this.colConceptoViaticos,
             this.colAbonoViaticos});
             this.dataGridViaticos.Location = new System.Drawing.Point(257, 77);
+            this.dataGridViaticos.MultiSelect = false;
             this.dataGridViaticos.Name = "dataGridViaticos";
             this.dataGridViaticos.RowHeadersVisible = false;
+            this.dataGridViaticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
             this.dataGridViaticos.TabIndex = 28;
+            this.dataGridViaticos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
             // 
             // colFechaViaticos
             // 

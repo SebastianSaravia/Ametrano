@@ -18,7 +18,7 @@ namespace Ametrano.Logica
         {
             try
             {
-                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin";
+                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin group by cedula_alumno";
                 MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
                 dataTable = new DataTable();
                 datosConsulta.Fill(dataTable);
@@ -261,6 +261,48 @@ namespace Ametrano.Logica
 
 
             return datosCons;
+        }
+        public bool updatePago(string ci, string fecha,bool estado)
+        {
+            //Primero debo consultar el id de el viatico
+            string consulta = "select v.id_viatico from viatico v join recive r on r.id_viatico = v.id_viatico where fecha = '" + fecha + "' and r.cedula_alumno = '" + ci + "';";
+            MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);
+
+            DataTable viaticos = new DataTable();
+            try
+            {
+
+                datos.Fill(viaticos);
+
+            }
+            catch (Exception)
+            {
+
+            }
+            int idViatico;
+
+            int nuevoEstado;
+            if (estado == true)
+            {
+                nuevoEstado = 1;
+            }else
+            {
+                nuevoEstado = 0;
+            }
+
+            int.TryParse(viaticos.Rows[0][viaticos.Columns[0]].ToString(),out idViatico);//guardo el id del viatico en la variable
+
+            string update = "UPDATE viatico SET abonado = " + nuevoEstado + " where id_viatico = " + idViatico + ";";
+
+            int filasAfectadas = objetoConexion.sqlInsertUpdate(update);
+
+            if (filasAfectadas > 0)
+            {
+                return true;
+            }else
+            {
+                return false;
+            }
         }
     }
 

@@ -1386,5 +1386,51 @@ namespace Ametrano.Presentacion
                 MessageBox.Show("error " + ew);
             }
         }
+
+        private void dataGridViaticos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridViaticos.SelectedRows.Count > 0)
+            {
+               
+                int rowIndex = dataGridViaticos.SelectedRows[0].Index;
+                DataTable listaAlumnos = eventoClickListaAlumnos[1];
+
+                DataGridViewRow alumnoSeleccionado = dataGridViaticos.Rows[rowIndex];
+
+                bool estadoNuevo;
+
+                if (alumnoSeleccionado.Cells[4].FormattedValue.Equals(true))
+                {
+                    estadoNuevo = true;
+                }else
+                {
+                    estadoNuevo = false;
+                }
+
+                string fecha = alumnoSeleccionado.Cells[0].FormattedValue.ToString();
+                DateTime formatFecha;
+
+                DateTime.TryParse(fecha,out formatFecha);
+
+                fecha = formatFecha.ToString("yyyy/MM/dd");
+                
+
+                int val = listAlumnosViaticos.SelectedIndex;
+                string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
+
+                bool resultado = CurContr.updatePago(ci, fecha, estadoNuevo);
+
+                if (resultado)
+                {
+                    MessageBox.Show("Se ha actualizado el pago del viatico");
+                }else
+                {
+                    MessageBox.Show("Error actualizando el pago del viatico");
+                }
+
+            }
+        }
+
+       
     }
 }
