@@ -2184,7 +2184,7 @@
             // 
             this.lblEstadoAlumno.AutoSize = true;
             this.lblEstadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoAlumno.Location = new System.Drawing.Point(27, 46);
+            this.lblEstadoAlumno.Location = new System.Drawing.Point(96, 46);
             this.lblEstadoAlumno.Name = "lblEstadoAlumno";
             this.lblEstadoAlumno.Size = new System.Drawing.Size(55, 15);
             this.lblEstadoAlumno.TabIndex = 27;
@@ -2194,7 +2194,7 @@
             // 
             this.lblCursoAlumno.AutoSize = true;
             this.lblCursoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoAlumno.Location = new System.Drawing.Point(34, 31);
+            this.lblCursoAlumno.Location = new System.Drawing.Point(103, 31);
             this.lblCursoAlumno.Name = "lblCursoAlumno";
             this.lblCursoAlumno.Size = new System.Drawing.Size(48, 15);
             this.lblCursoAlumno.TabIndex = 26;
