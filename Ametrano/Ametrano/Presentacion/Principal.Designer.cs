@@ -4863,10 +4863,13 @@
             this.colConceptoViaticos,
             this.colAbonoViaticos});
             this.dataGridViaticos.Location = new System.Drawing.Point(257, 77);
+            this.dataGridViaticos.MultiSelect = false;
             this.dataGridViaticos.Name = "dataGridViaticos";
             this.dataGridViaticos.RowHeadersVisible = false;
+            this.dataGridViaticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
             this.dataGridViaticos.TabIndex = 28;
+            this.dataGridViaticos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
             // 
             // colFechaViaticos
             // 
@@ -5379,9 +5382,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
