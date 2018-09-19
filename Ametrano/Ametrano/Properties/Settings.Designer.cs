@@ -25,7 +25,7 @@ namespace Ametrano.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("192.168.0.220")]
+        [global::System.Configuration.DefaultSettingValueAttribute("localhost")]
         public string direccion {
             get {
                 return ((string)(this["direccion"]));

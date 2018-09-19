@@ -1351,7 +1351,9 @@ namespace Ametrano.Presentacion
                 eventoClickListaAlumnos[0] = true;
                 eventoClickListaAlumnos[1] = dt;
             }
-                 
+
+            
+
         }
 
         private void listAlumnosViaticos_SelectedIndexChanged(object sender, EventArgs e)
@@ -1424,13 +1426,14 @@ namespace Ametrano.Presentacion
                 }
 
                 string fecha = alumnoSeleccionado.Cells[0].FormattedValue.ToString();
+
                 DateTime formatFecha;
 
                 DateTime.TryParse(fecha,out formatFecha);
 
-                fecha = formatFecha.ToString("yyyy/MM/dd");
+                fecha = formatFecha.ToString("yyyy-MM-dd");
                 
-
+                
                 int val = listAlumnosViaticos.SelectedIndex;
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
 
