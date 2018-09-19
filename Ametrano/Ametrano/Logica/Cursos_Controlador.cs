@@ -172,7 +172,7 @@ namespace Ametrano.Logica
 
                 //Calculo de fecha de inicio y fecha de fin
 
-                string consulta_fecha_inicio = "select 
+                
 
 
 
