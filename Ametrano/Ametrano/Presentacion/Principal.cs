@@ -1450,6 +1450,10 @@ namespace Ametrano.Presentacion
             }
         }
 
-       
+        private void btnFinalizar_Click(object sender, EventArgs e)
+        {
+            Alumnos_Controlador al = new Alumnos_Controlador();
+            
+        }
     }
 }
