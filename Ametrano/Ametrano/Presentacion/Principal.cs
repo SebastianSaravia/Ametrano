@@ -1109,6 +1109,7 @@ namespace Ametrano.Presentacion
                         dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
                         dataGridViaticos.Columns[0].ReadOnly = true;
                         dataGridViaticos.Columns[1].ReadOnly = true;
+                        dataGridViaticos.Columns[5].Visible = false;
 
                     }
                     catch (Exception ew)
@@ -1375,6 +1376,7 @@ namespace Ametrano.Presentacion
                     dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
                     dataGridViaticos.Columns[0].ReadOnly = true;
                     dataGridViaticos.Columns[1].ReadOnly = true;
+                    dataGridViaticos.Columns[5].Visible = false;
 
                 }
                 catch (Exception ew)
@@ -1426,6 +1428,7 @@ namespace Ametrano.Presentacion
                 }
 
                 string fecha = alumnoSeleccionado.Cells[0].FormattedValue.ToString();
+                string semana = alumnoSeleccionado.Cells[5].FormattedValue.ToString();
 
                 DateTime formatFecha;
 
@@ -1436,8 +1439,8 @@ namespace Ametrano.Presentacion
                 
                 int val = listAlumnosViaticos.SelectedIndex;
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
-
-                bool resultado = CurContr.updatePago(ci, fecha, estadoNuevo);
+                
+                bool resultado = CurContr.updatePago(ci, fecha,semana,estadoNuevo);
 
                 if (resultado)
                 {

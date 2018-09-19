@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -204,8 +205,11 @@ namespace Ametrano.Logica
 
                     int montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
 
+                    DateTime fechaSemanas = DateTime.Parse(fechaFinNueva);
+                    int semana = CultureInfo.CurrentUICulture.Calendar.GetWeekOfYear(fechaSemanas, CalendarWeekRule.FirstDay, fechaSemanas.DayOfWeek);
+
                     //Incerta los datos del viatico en la bd
-                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin) VALUES(curdate()," + montoTotal + ",'','',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "')";
+                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana "+semana+"',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','"+semana+")";
                     int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
 
                     //selecciona la id de viatico de la operacion actual
@@ -251,12 +255,11 @@ namespace Ametrano.Logica
                         nombreDiaUltimoViatico2 = row[fechaFin_table.Columns[1]].ToString();
                     }
 
-                    testing.MostrarMessageBox(fecha_fin_ultimo_viatico2);
+                    
 
                     TimeSpan cantDiasDesdeUlimoViatico = DateTime.Parse(fechahoy) - DateTime.Parse(fecha_fin_ultimo_viatico2);
 
-                    testing.MostrarMessageBox(cantDiasDesdeUlimoViatico.Days / 7 + "");
-                    testing.MostrarMessageBox(cantDiasDesdeUlimoViatico.Days+  "");
+                   
 
                     fechaDT = DateTime.Parse(fecha_fin_ultimo_viatico2);
 
@@ -283,11 +286,14 @@ namespace Ametrano.Logica
                     {
                         //Calculo del monto
 
+                        
 
                         int montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
+                        DateTime FechaSemanas = DateTime.Parse(fechaFinNueva);
+                        int semana = CultureInfo.CurrentUICulture.Calendar.GetWeekOfYear(FechaSemanas, CalendarWeekRule.FirstDay, FechaSemanas.DayOfWeek);
 
                         //Incerta los datos del viatico en la bd
-                        string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin) VALUES(curdate()," + montoTotal + ",'','',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "')";
+                        string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana " + semana + "',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','"+semana+"')";
                         int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
 
                         //selecciona la id de viatico de la operacion actual
@@ -313,7 +319,7 @@ namespace Ametrano.Logica
                         int datosConsulta6 = objetoConexion.sqlInsertUpdate(query6);
                     }
 
-                    testing.MostrarMessageBox(cantDiasDesdeUlimoViatico.Days / 7 + "");
+                   
 
                     if(cantDiasDesdeUlimoViatico.Days / 7 >= 2)
                     {
@@ -382,7 +388,7 @@ namespace Ametrano.Logica
         public DataTable ListarViatico(string cedula)
         {
             
-            string sql = "select DATE_FORMAT(v.fecha,'%d-%m-%Y') as Fecha, v.monto as Monto, v.rubro as Rubro, v.concepto as Concepto, v.abonado as Abonado from viatico v join recive r ON v.id_viatico=r.id_viatico where r.cedula_alumno = '" + cedula+"'";
+            string sql = "select v.fecha as Fecha, v.monto as Monto, v.rubro as Rubro, v.concepto as Concepto, v.abonado as Abonado,semana as Semana from viatico v join recive r ON v.id_viatico=r.id_viatico where r.cedula_alumno = '" + cedula+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(sql);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
@@ -412,10 +418,10 @@ namespace Ametrano.Logica
 
             return datosCons;
         }
-        public bool updatePago(string ci, string fecha,bool estado)
+        public bool updatePago(string ci, string fecha,string semana,bool estado)
         {
             //Primero debo consultar el id de el viatico
-            string consulta = "select v.id_viatico from viatico v join recive r on r.id_viatico = v.id_viatico where fecha = '" + fecha + "' and r.cedula_alumno = '" + ci + "';";
+            string consulta = "select v.id_viatico from viatico v join recive r on r.id_viatico = v.id_viatico where fecha = '" + fecha + "' and semana = "+semana+" and r.cedula_alumno = '" + ci + "';";
             MySqlDataAdapter datos = objetoConexion.consultarDatos(consulta);
 
             DataTable viaticos = new DataTable();
