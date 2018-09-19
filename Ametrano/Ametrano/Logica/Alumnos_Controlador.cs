@@ -72,12 +72,10 @@ namespace Ametrano.Logica
                                          "'" + datos.getDatosPersona()["internet_facil_acceso"] + "'," +
                                          "'" + datos.getDatosPersona()["internet_medio_acceso"] + "';";
 
-            //QUERY PRINCIPAL ***Incompleta***
-            string query = "INSERT INTO alumno(cedula_alumno, nombre1, nombre2, apellido1, apellido2, fecha_nac, edad, sexo, estado_civil, estado, nivel_educativo, ultimo_año_aprobado, departamento, localidad, calle, referencia, numero_puerta, apartamento)"+
+            //QUERY PRINCIPAL 
+            string query = "INSERT INTO alumno(cedula_alumno, nombre1, nombre2, apellido1, apellido2, fecha_nac, edad, sexo, estado_civil, estado, nivel_educativo, ultimo_año_aprobado, departamento, localidad, calle, referencia, numero_puerta, apartamento, telefono_fijo, celular, email, cobertura_salud, jefe_hogar, cant_hijos, trabajo_alguna_vez, trabaja_actualmente, tiempo_sin_trabajo, horas_trabajo, ingreso_mensual, cant_personas_cargo_17, cant_personas_cargo_18_59, cant_personas_cargo_60, persona_tiene_discapacidad, cuenta_con_apoyo, carga_semanal_cuidado, trabajo_anteriormente_cuidando, experiencia_instituciones_cuidado, usa_internet, facil_acceso_internet, medio_acceso_internet) "+
                 "VALUES("+datosPersonales+datosCurso+datosFormacionAcademica+datosDireccion+datosContacto+datosCoberura+datosHogar+datosTrabajo+datosPersonasCargo+datosAccesoInternet+")";
-
-
-
+            int datosConsulta = objetoConexion.sqlInsertUpdate(query);
         }
 
 
