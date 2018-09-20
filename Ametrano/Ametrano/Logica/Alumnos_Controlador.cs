@@ -32,7 +32,7 @@ namespace Ametrano.Logica
                                      "'" + datos.getDatosPersona()["sexo"] + "'," +
                                      "'" + datos.getDatosPersona()["estado_civil"] + "',";
             // query datos con respeco al curso
-            string datosCurso = "'" + datos.getDatosPersona()["estado_alumno"] + "',";
+            string datosCurso = "'" + datos.getDatosPersona()["curso_estado"] + "',";
             //query formacion academica
             string datosFormacionAcademica = "'" + datos.getDatosPersona()["formacion_nivel"] + "'," +
                                              "'" + datos.getDatosPersona()["formacion_ultimo_año_aprovado"] + "',";
@@ -42,7 +42,7 @@ namespace Ametrano.Logica
                                     "'" + datos.getDatosPersona()["direccion_calle"] + "'," +
                                     "'" + datos.getDatosPersona()["direccion_referencia"] + "'," +
                                     "'" + datos.getDatosPersona()["direccion_numero_puerta"] + "'," +
-                                    "'" + datos.getDatosPersona()["direccion_apartaento"] + "',";
+                                    "'" + datos.getDatosPersona()["direccion_apartamento"] + "',";
             //query contacto
             string datosContacto = "'" + datos.getDatosPersona()["contacto_telefono"] + "'," +
                                    "'" + datos.getDatosPersona()["contacto_celular"] + "'," +
@@ -70,11 +70,11 @@ namespace Ametrano.Logica
             //query acceso a internet
             string datosAccesoInternet = "'" + datos.getDatosPersona()["internet_usa_internet"] + "'," +
                                          "'" + datos.getDatosPersona()["internet_facil_acceso"] + "'," +
-                                         "'" + datos.getDatosPersona()["internet_medio_acceso"] + "';";
+                                         "'" + datos.getDatosPersona()["internet_medio_acceso"] + "'";
 
             //QUERY PRINCIPAL 
             string query = "INSERT INTO alumno(cedula_alumno, nombre1, nombre2, apellido1, apellido2, fecha_nac, edad, sexo, estado_civil, estado, nivel_educativo, ultimo_año_aprobado, departamento, localidad, calle, referencia, numero_puerta, apartamento, telefono_fijo, celular, email, cobertura_salud, jefe_hogar, cant_hijos, trabajo_alguna_vez, trabaja_actualmente, tiempo_sin_trabajo, horas_trabajo, ingreso_mensual, cant_personas_cargo_17, cant_personas_cargo_18_59, cant_personas_cargo_60, persona_tiene_discapacidad, cuenta_con_apoyo, carga_semanal_cuidado, trabajo_anteriormente_cuidando, experiencia_instituciones_cuidado, usa_internet, facil_acceso_internet, medio_acceso_internet) "+
-                "VALUES("+datosPersonales+datosCurso+datosFormacionAcademica+datosDireccion+datosContacto+datosCoberura+datosHogar+datosTrabajo+datosPersonasCargo+datosAccesoInternet+")";
+                "VALUES("+datosPersonales+datosCurso+datosFormacionAcademica+datosDireccion+datosContacto+datosCoberura+datosHogar+datosTrabajo+datosPersonasCargo+datosAccesoInternet+");";
             int datosConsulta = objetoConexion.sqlInsertUpdate(query);
         }
 

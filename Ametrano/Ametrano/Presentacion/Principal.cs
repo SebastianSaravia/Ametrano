@@ -1389,22 +1389,23 @@ namespace Ametrano.Presentacion
 
         private void btnGenerarLista_Click(object sender, EventArgs e)
         {
-            try
+            string curso= boxCursoAsistencia.SelectedItem.ToString();
+
+            if (curso=="Curso...")
             {
-                string curso = "Desarrollo web"; //boxCursoAsistencia.SelectedItem();
-                dataGridListaAsistencias.Columns.Clear();
-                dataGridListaAsistencias.DataSource = CurContr.ListarLista(curso);
-                dataGridListaAsistencias.Columns[0].ReadOnly = true;
-               
-                DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();                              
-                col.HeaderText="Asistencias";              
-                dataGridListaAsistencias.Columns.Add(col);
-                                
-            }
-            catch (Exception ew)
+                MessageBox.Show("Debe seleccionar un curso primero.");
+            }else
             {
-                MessageBox.Show("error " + ew);
+
+                string[] alumnos = CurContr.ListarAlumnosGrupo(curso);
+
+                for (int i = 0; i < alumnos.Length; i++)
+                {
+                    dataGridListaAsistencias.Rows.Add(alumnos[i]);
+                }
             }
+
+           
         }
 
         private void dataGridViaticos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -1456,6 +1457,7 @@ namespace Ametrano.Presentacion
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             Alumnos_Controlador al = new Alumnos_Controlador();
+            al.insertarAlumno(datosAlumno);
             
         }
     }

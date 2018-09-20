@@ -20,7 +20,8 @@ namespace Ametrano.Encapsulado
         private string[] acceso_a_internet = new string[3];
         
 
-        
+
+
 
         public dynamic[] setDatosPersonales(string[] datosPersonalesRecividos)
         {
@@ -287,11 +288,11 @@ namespace Ametrano.Encapsulado
 
         public IDictionary<string,string> getDatosPersona()
         {
-            IDictionary<string, string> diccionarioPersona = new Dictionary<string, string>();//Diccionario que almacena los datos de la persona
+            //Diccionario que almacena los datos de la persona
+            IDictionary<string, string> diccionarioPersona = new Dictionary<string, string>();
 
-
-            //Datos personales
-            diccionarioPersona.Add("cedula_alumno", datosPersonales[0]);
+        //Datos personales
+        diccionarioPersona.Add("cedula_alumno", datosPersonales[0]);
             diccionarioPersona.Add("nombre1", datosPersonales[1]);
             diccionarioPersona.Add("nombre2", datosPersonales[2]);
             diccionarioPersona.Add("apellido1", datosPersonales[3]);
