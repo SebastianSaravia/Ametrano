@@ -217,7 +217,13 @@ namespace Ametrano.Logica
                
                 if (fecha_ulimo_viatico.Equals(""))
                 {//Primer viatico generado
-                    fechaDT = fechaDT.AddDays(-11);
+                    if (fechaDT.DayOfWeek == DayOfWeek.Friday)
+                    {
+                        fechaDT = fechaDT.AddDays(-11);
+                    }else
+                    {
+                        fechaDT = fechaDT.AddDays(-10);
+                    }
                     
                     fechaInicioNueva = fechaDT.ToString("yyyy-MM-dd");
 
@@ -391,7 +397,21 @@ namespace Ametrano.Logica
 
             return montoTotal;
         }
-        
+        public int calcularMontoTotal(string cedula)
+        {
+            string consulta = "select sum(monto) from viatico v join recive r on r.id_viatico = v.id_viatico where v.abonado = 0 and r.cedula_alumno = '" + cedula + "';";
+            MySqlDataAdapter consulta_resultados = objetoConexion.consultarDatos(consulta);
+            DataTable consulta_table = new DataTable();
+            consulta_resultados.Fill(consulta_table);
+
+            int monto = 0;
+
+            int.TryParse(consulta_table.Rows[0][consulta_table.Columns[0]].ToString(), out monto);
+
+            return monto;
+
+            return 0;
+        }
         public dynamic[] AñadirViatico(string cedula)
         {
                         
