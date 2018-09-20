@@ -55,11 +55,11 @@ namespace Ametrano.Logica
             }
         }
 
-        public string[] ListarAlumnosGrupo(string curso)
+        public string[] ListarAlumnosGrupo(string curso,string turno)
         {
             
 
-            string query = "SELECT CONCAT(a.nombre1,' ',a.apellido1) FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin GROUP BY a.cedula_alumno;";
+            string query = "SELECT CONCAT(a.nombre1,' ',a.apellido1) FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+"' GROUP BY a.cedula_alumno;";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);

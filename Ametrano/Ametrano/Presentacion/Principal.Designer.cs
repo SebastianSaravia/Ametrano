@@ -5160,7 +5160,7 @@
             // dateTimeFechaAsistencia
             // 
             this.dateTimeFechaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 124);
+            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 182);
             this.dateTimeFechaAsistencia.Name = "dateTimeFechaAsistencia";
             this.dateTimeFechaAsistencia.Size = new System.Drawing.Size(209, 24);
             this.dateTimeFechaAsistencia.TabIndex = 32;
@@ -5179,11 +5179,12 @@
             this.boxTurnoAsistencia.Name = "boxTurnoAsistencia";
             this.boxTurnoAsistencia.Size = new System.Drawing.Size(209, 26);
             this.boxTurnoAsistencia.TabIndex = 30;
+            this.boxTurnoAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_SelectedIndexChanged);
             // 
             // btnGenerarLista
             // 
             this.btnGenerarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarLista.Location = new System.Drawing.Point(23, 154);
+            this.btnGenerarLista.Location = new System.Drawing.Point(23, 92);
             this.btnGenerarLista.Name = "btnGenerarLista";
             this.btnGenerarLista.Size = new System.Drawing.Size(209, 32);
             this.btnGenerarLista.TabIndex = 31;
@@ -5198,7 +5199,7 @@
             this.boxMateriaAsisencia.FormattingEnabled = true;
             this.boxMateriaAsisencia.Items.AddRange(new object[] {
             "Materia..."});
-            this.boxMateriaAsisencia.Location = new System.Drawing.Point(23, 93);
+            this.boxMateriaAsisencia.Location = new System.Drawing.Point(23, 151);
             this.boxMateriaAsisencia.Name = "boxMateriaAsisencia";
             this.boxMateriaAsisencia.Size = new System.Drawing.Size(209, 26);
             this.boxMateriaAsisencia.TabIndex = 30;
