@@ -423,12 +423,14 @@
             this.btnGenerarLista = new System.Windows.Forms.Button();
             this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
+            this.dataGridGruposActivos = new System.Windows.Forms.DataGridView();
             this.btnCrearGrupo = new System.Windows.Forms.Button();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimeFinalizacionGrupo = new System.Windows.Forms.DateTimePicker();
             this.dateTimeInicioGrupo = new System.Windows.Forms.DateTimePicker();
+            this.boxTurnoGrupo = new System.Windows.Forms.ComboBox();
             this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.btnCrearCurso = new System.Windows.Forms.Button();
@@ -440,8 +442,6 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.boxTurnoGrupo = new System.Windows.Forms.ComboBox();
-            this.dataGridGruposActivos = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -532,11 +532,11 @@
             this.groupBox56.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).BeginInit();
             this.nuevoGrupo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).BeginInit();
             this.groupBox61.SuspendLayout();
             this.nuevoCurso.SuspendLayout();
             this.groupBox58.SuspendLayout();
             this.groupBox59.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -689,14 +689,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -5217,6 +5217,21 @@
             this.nuevoGrupo.TabIndex = 3;
             this.nuevoGrupo.Text = "Nuevo Grupo";
             // 
+            // dataGridGruposActivos
+            // 
+            this.dataGridGruposActivos.AllowUserToAddRows = false;
+            this.dataGridGruposActivos.AllowUserToDeleteRows = false;
+            this.dataGridGruposActivos.AllowUserToResizeColumns = false;
+            this.dataGridGruposActivos.AllowUserToResizeRows = false;
+            this.dataGridGruposActivos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridGruposActivos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridGruposActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridGruposActivos.Location = new System.Drawing.Point(616, 49);
+            this.dataGridGruposActivos.Name = "dataGridGruposActivos";
+            this.dataGridGruposActivos.RowHeadersVisible = false;
+            this.dataGridGruposActivos.Size = new System.Drawing.Size(439, 408);
+            this.dataGridGruposActivos.TabIndex = 37;
+            // 
             // btnCrearGrupo
             // 
             this.btnCrearGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5227,16 +5242,6 @@
             this.btnCrearGrupo.Text = "Crear";
             this.btnCrearGrupo.UseVisualStyleBackColor = true;
             this.btnCrearGrupo.Click += new System.EventHandler(this.btnCrearGrupo_Click);
-            // 
-            // btnCrearGrupo
-            // 
-            this.btnCrearGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearGrupo.Location = new System.Drawing.Point(409, 266);
-            this.btnCrearGrupo.Name = "btnCrearGrupo";
-            this.btnCrearGrupo.Size = new System.Drawing.Size(122, 29);
-            this.btnCrearGrupo.TabIndex = 36;
-            this.btnCrearGrupo.Text = "Crear";
-            this.btnCrearGrupo.UseVisualStyleBackColor = true;
             // 
             // groupBox61
             // 
@@ -5286,6 +5291,21 @@
             this.dateTimeInicioGrupo.Name = "dateTimeInicioGrupo";
             this.dateTimeInicioGrupo.Size = new System.Drawing.Size(274, 24);
             this.dateTimeInicioGrupo.TabIndex = 33;
+            // 
+            // boxTurnoGrupo
+            // 
+            this.boxTurnoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoGrupo.FormattingEnabled = true;
+            this.boxTurnoGrupo.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Verpertino",
+            "Nocturno"});
+            this.boxTurnoGrupo.Location = new System.Drawing.Point(290, 49);
+            this.boxTurnoGrupo.Name = "boxTurnoGrupo";
+            this.boxTurnoGrupo.Size = new System.Drawing.Size(151, 26);
+            this.boxTurnoGrupo.TabIndex = 9;
             // 
             // boxCursoGrupo
             // 
@@ -5409,36 +5429,6 @@
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
-            // 
-            // boxTurnoGrupo
-            // 
-            this.boxTurnoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTurnoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTurnoGrupo.FormattingEnabled = true;
-            this.boxTurnoGrupo.Items.AddRange(new object[] {
-            "Turno...",
-            "Matutino",
-            "Verpertino",
-            "Nocturno"});
-            this.boxTurnoGrupo.Location = new System.Drawing.Point(290, 49);
-            this.boxTurnoGrupo.Name = "boxTurnoGrupo";
-            this.boxTurnoGrupo.Size = new System.Drawing.Size(151, 26);
-            this.boxTurnoGrupo.TabIndex = 9;
-            // 
-            // dataGridGruposActivos
-            // 
-            this.dataGridGruposActivos.AllowUserToAddRows = false;
-            this.dataGridGruposActivos.AllowUserToDeleteRows = false;
-            this.dataGridGruposActivos.AllowUserToResizeColumns = false;
-            this.dataGridGruposActivos.AllowUserToResizeRows = false;
-            this.dataGridGruposActivos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridGruposActivos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridGruposActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridGruposActivos.Location = new System.Drawing.Point(616, 49);
-            this.dataGridGruposActivos.Name = "dataGridGruposActivos";
-            this.dataGridGruposActivos.RowHeadersVisible = false;
-            this.dataGridGruposActivos.Size = new System.Drawing.Size(439, 408);
-            this.dataGridGruposActivos.TabIndex = 37;
             // 
             // Principal
             // 
@@ -5608,13 +5598,13 @@
             this.groupBox56.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).EndInit();
             this.nuevoGrupo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).EndInit();
             this.groupBox61.ResumeLayout(false);
             this.groupBox61.PerformLayout();
             this.nuevoCurso.ResumeLayout(false);
             this.groupBox58.ResumeLayout(false);
             this.groupBox58.PerformLayout();
             this.groupBox59.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

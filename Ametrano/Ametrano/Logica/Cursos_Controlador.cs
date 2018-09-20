@@ -532,6 +532,19 @@ namespace Ametrano.Logica
             return cursos;
         }
 
+
+        public bool AgregarGrupo(string curso, string inicio, string fin, string turno)
+        {
+            string query = "INSERT INTO grupo(nombre_curso, fecha_inicio, fecha_fin,turno) VALUES('{0}','{1}','{2}','{3}')";
+            query = string.Format(query, curso, inicio, fin, turno);
+            int datosCons = objetoConexion.sqlInsertUpdate(query);
+            bool resultado = false;
+            if (datosCons == 1)
+            {
+                resultado = true;
+            }
+            return resultado;
+        }
     }
 
 }
