@@ -16,11 +16,11 @@ namespace Ametrano.Logica
         ConexionBD objetoConexion = new ConexionBD();
         TestingClass testing = new TestingClass();
 
-        public dynamic[] AlumnosCurso(string curso, out DataTable dataTable)
+        public dynamic[] AlumnosCurso(string curso, string turno, out DataTable dataTable)
         {
             try
             {
-                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin group by a.cedula_alumno";
+                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' group by a.cedula_alumno";
                 MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
                 dataTable = new DataTable();
                 datosConsulta.Fill(dataTable);
@@ -154,7 +154,7 @@ namespace Ametrano.Logica
             {
                 
                 //Busca el monto de viatico por dia del alumno seleccionado
-                int monto = 0;
+                double monto = 0;
                 string query3 = "SELECT monto_viatico_por_dia FROM alumno WHERE cedula_alumno='"+cedula+"';";
                 MySqlDataAdapter datosConsulta3 = objetoConexion.consultarDatos(query3);
                 DataTable dataTable3 = new DataTable();
@@ -167,7 +167,7 @@ namespace Ametrano.Logica
                     {
                         foreach (DataColumn column in dataTable3.Columns)
                         {
-                            int.TryParse(row[column].ToString(), out monto);
+                            double.TryParse(row[column].ToString(), out monto);
                         }
                     }
                 }
@@ -232,7 +232,7 @@ namespace Ametrano.Logica
 
                     fechaFinNueva = fechaDT.ToString("yyyy-MM-dd");
 
-                    int montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
+                    double montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
 
                     int semana = 1;
 
@@ -316,7 +316,7 @@ namespace Ametrano.Logica
 
                         
 
-                        int montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
+                        double montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
 
                         string consultarSemana = "Select max(semana) from viatico v join recive r on r.id_viatico = v.id_viatico where r.cedula_alumno = '" + cedula + "';";
                         MySqlDataAdapter consultarSemana_resultados = objetoConexion.consultarDatos(consultarSemana);
@@ -378,37 +378,35 @@ namespace Ametrano.Logica
             }
             
         }
-        public int calcularMonto(string fecha_inicio, string fecha_fin,string cedula,int montoDia)
+        public double calcularMonto(string fecha_inicio, string fecha_fin,string cedula,double montoDia)
         {
             int diasAsistidosEnSemana = 0;
 
-            string consultarAsistencias = "select count(cedula_alumno) from asiste a where fecha between '" + fecha_inicio + "' and '" + fecha_fin + "' and cedula_alumno = '" + cedula + "';";
+            string consultarAsistencias = "select count(cedula_alumno) from asiste a where fecha between '" + fecha_inicio + "' and '" + fecha_fin + "' and cedula_alumno = '" + cedula + "' and a.asistencia = 1;";
             MySqlDataAdapter consultarAsistencias_resultado = objetoConexion.consultarDatos(consultarAsistencias);
 
             DataTable consultarAsistencias_table = new DataTable();
 
             consultarAsistencias_resultado.Fill(consultarAsistencias_table);
 
-           int.TryParse(consultarAsistencias_table.Rows[0][consultarAsistencias_table.Columns[0]].ToString(),out diasAsistidosEnSemana);
+            int.TryParse(consultarAsistencias_table.Rows[0][consultarAsistencias_table.Columns[0]].ToString(),out diasAsistidosEnSemana);
 
-            int montoTotal = montoDia * diasAsistidosEnSemana; //Calculo el monto
+            double montoTotal = montoDia * diasAsistidosEnSemana; //Calculo el monto
 
             return montoTotal;
         }
-        public int calcularMontoTotal(string cedula)
+        public double calcularMontoTotal(string cedula)
         {
             string consulta = "select sum(monto) from viatico v join recive r on r.id_viatico = v.id_viatico where v.abonado = 0 and r.cedula_alumno = '" + cedula + "';";
             MySqlDataAdapter consulta_resultados = objetoConexion.consultarDatos(consulta);
             DataTable consulta_table = new DataTable();
             consulta_resultados.Fill(consulta_table);
 
-            int monto = 0;
+            double monto = 0;
 
-            int.TryParse(consulta_table.Rows[0][consulta_table.Columns[0]].ToString(), out monto);
+            double.TryParse(consulta_table.Rows[0][consulta_table.Columns[0]].ToString(), out monto);
 
             return monto;
-
-            return 0;
         }
         public dynamic[] AñadirViatico(string cedula)
         {
@@ -448,7 +446,6 @@ namespace Ametrano.Logica
         }
 
         public DataTable ListarLista(string curso) {
-            
             string sql = "select concat(nombre1,' ',apellido1) as Nombre from alumno a join asiste asi on a.cedula_alumno=asi.cedula_alumno join grupo g on g.id_grupo=asi.id_grupo where curdate() between g.fecha_inicio and g.fecha_fin and g.nombre_curso='"+curso+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(sql);
             DataTable dataTable = new DataTable();
@@ -479,9 +476,7 @@ namespace Ametrano.Logica
             DataTable viaticos = new DataTable();
             try
             {
-
                 datos.Fill(viaticos);
-
             }
             catch (Exception)
             {
@@ -513,24 +508,29 @@ namespace Ametrano.Logica
             }
         }
 
-        public bool AgregarGrupo(string curso, string inicio, string fin,string turno)
+        public string[] listarCursoPorTurno(string turno)
         {
-            string query = "INSERT INTO grupo(nombre_curso, fecha_inicio, fecha_fin,turno) VALUES('{0}','{1}','{2}','{3}')";
-            query = string.Format(query, curso, inicio, fin,turno);
-            int datosCons = objetoConexion.sqlInsertUpdate(query);
-            bool resultado = false;
-            if (datosCons==1)
+            string query = "SELECT nombre_curso FROM grupo where turno = '"+turno+"' and curdate() between fecha_inicio and fecha_fin;";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int contador = dataTable.Rows.Count;
+            int i = 0;
+            string[] cursos = new string[contador];
+            if (contador > 0)
             {
-                resultado = true;
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                        cursos[i] = row[column].ToString();
+                    }
+                    i++;
+                }
+
             }
-            return resultado;
+            return cursos;
         }
-
-
-
-
-
-
 
     }
 

@@ -54,6 +54,7 @@ namespace Ametrano.Presentacion
         {
             tabControlPrincipal.SelectedIndex = 2;
             btnAñadirSemanaViaticos.Enabled = false;
+            boxCursoViaticos.SelectedIndex = 0;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -87,7 +88,7 @@ namespace Ametrano.Presentacion
             boxCursoAsistencia_2.SelectedIndex = 0;
             boxMateriaAsisencia.SelectedIndex = 0;
             boxMateriaAsistencia_2.SelectedIndex = 0;
-            boxDocenteAsistencia.SelectedIndex = 0;
+            boxTurnoAsistencia.SelectedIndex = 0;
             boxCursoViaticos.SelectedIndex = 0;
             boxPeriodoAlumno.SelectedIndex = 0;
             boxPeriodoAlumno_2.SelectedIndex = 0;
@@ -107,6 +108,8 @@ namespace Ametrano.Presentacion
             boxCuentaConApoyoAlumno_2.SelectedIndex = 0;
             boxCantidadHijosAlumno_2.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno_2.SelectedIndex = 0;
+            boxTurnoViaticos.SelectedIndex = 0;
+            boxTurnoAsistencia.SelectedIndex = 0;
             
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
@@ -122,8 +125,8 @@ namespace Ametrano.Presentacion
             string[] docentes = controlador.ListarDocentes();
             for (int i = 0; i < cursos.Length; i++)
             {
-                boxCursoViaticos.Items.Add(cursos[i]);
-                boxCursoAsistencia.Items.Add(cursos[i]);
+                
+                
                 boxCursoAsistencia_2.Items.Add(cursos[i]);
                 boxCursoGrupo.Items.Add(cursos[i]);
                 boxCursoAlumno_2.Items.Add(cursos[i]);
@@ -142,7 +145,7 @@ namespace Ametrano.Presentacion
 
             for (int i = 0; i < docentes.Length; i++)
             {
-                boxDocenteAsistencia.Items.Add(docentes[i]);               
+                boxTurnoAsistencia.Items.Add(docentes[i]);               
             }
 
             DateTime fecha = DateTime.Now;
@@ -1158,11 +1161,11 @@ namespace Ametrano.Presentacion
 
         public void actualizarMontoTotal()
         {
-            int montoTotal = 0;
+            double montoTotal = 0;
             DataTable datos = eventoClickListaAlumnos[1];
             string ci = datos.Rows[listAlumnosViaticos.SelectedIndex][datos.Columns[0]].ToString();
             montoTotal = CurContr.calcularMontoTotal(ci);
-            lblMontoTotalViaticos.Text = "Monto total a pagar: $" + montoTotal + ".00";
+            lblMontoTotalViaticos.Text = "Monto total a pagar: $" + montoTotal ;
         }
 
         private void btnActualizarDocente_Click(object sender, EventArgs e)
@@ -1352,49 +1355,62 @@ namespace Ametrano.Presentacion
 
         private void boxCursoViaticos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (boxCursoViaticos.SelectedIndex != 0 && diaViatico)
-            {
-                btnAñadirSemanaViaticos.Enabled = true;
-            }else
-            {
-                btnAñadirSemanaViaticos.Enabled = false;
-            }
+            if (boxTurnoViaticos.SelectedIndex != 0)
+            {//Si hay un turno seleccionado
+                if (boxCursoViaticos.SelectedIndex != 0 && diaViatico)
+                {
+                    btnAñadirSemanaViaticos.Enabled = true;
+                }
+                else
+                {
+                    btnAñadirSemanaViaticos.Enabled = false;
+                }
 
-            dataGridViaticos.DataSource = null;
-            dataGridViaticos.Columns.Clear();
-            DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();
-            DataGridViewCheckBoxColumn col2 = new DataGridViewCheckBoxColumn();
-            DataGridViewCheckBoxColumn col3 = new DataGridViewCheckBoxColumn();
-            DataGridViewCheckBoxColumn col4= new DataGridViewCheckBoxColumn();
-            DataGridViewCheckBoxColumn col5 = new DataGridViewCheckBoxColumn();
-            col.HeaderText = "Fecha";
-            col2.HeaderText = "Monto";
-            col3.HeaderText = "Rubro";
-            col4.HeaderText = "Concepto";
-            col5.HeaderText = "Abonado";
-            dataGridViaticos.Columns.Add(col);
-            dataGridViaticos.Columns.Add(col2);
-            dataGridViaticos.Columns.Add(col3);
-            dataGridViaticos.Columns.Add(col4);
-            dataGridViaticos.Columns.Add(col5);
-
-
-            DataTable dt;
-            string curso = boxCursoViaticos.SelectedItem.ToString();
-            dynamic[] alumn = CurContr.AlumnosCurso(curso,out dt);
-            listAlumnosViaticos.Items.Clear();
-            for (int i = 0; i < alumn.Length; i++)
-            {
-                listAlumnosViaticos.Items.Add(alumn[i]); 
-            }
-            if (alumn.Length > 0)
-            {
-                eventoClickListaAlumnos[0] = true;
-                eventoClickListaAlumnos[1] = dt;
+                dataGridViaticos.DataSource = null;
+                dataGridViaticos.Columns.Clear();
+                DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col2 = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col3 = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col4 = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col5 = new DataGridViewCheckBoxColumn();
+                col.HeaderText = "Fecha";
+                col2.HeaderText = "Monto";
+                col3.HeaderText = "Rubro";
+                col4.HeaderText = "Concepto";
+                col5.HeaderText = "Abonado";
+                dataGridViaticos.Columns.Add(col);
+                dataGridViaticos.Columns.Add(col2);
+                dataGridViaticos.Columns.Add(col3);
+                dataGridViaticos.Columns.Add(col4);
+                dataGridViaticos.Columns.Add(col5);
 
 
+                DataTable dt;
+                string curso = boxCursoViaticos.SelectedItem.ToString();
+                string turno = "";
+                if (boxTurnoViaticos.SelectedItem != null)
+                {
+                   turno = boxTurnoViaticos.SelectedItem.ToString();
+                }
+
+                dynamic[] alumn = CurContr.AlumnosCurso(curso,turno, out dt);
+                listAlumnosViaticos.Items.Clear();
+                for (int i = 0; i < alumn.Length; i++)
+                {
+                    listAlumnosViaticos.Items.Add(alumn[i]);
+                }
+                if (alumn.Length > 0)
+                {
+                    eventoClickListaAlumnos[0] = true;
+                    eventoClickListaAlumnos[1] = dt;
+
+                    btnAñadirSemanaViaticos.Enabled = true;
 
 
+                }else
+                {
+                    btnAñadirSemanaViaticos.Enabled = false;
+                }
             }
 
             
@@ -1437,8 +1453,9 @@ namespace Ametrano.Presentacion
         private void btnGenerarLista_Click(object sender, EventArgs e)
         {
             string curso= boxCursoAsistencia.SelectedItem.ToString();
+            dataGridListaAsistencias.Rows.Clear();
 
-            if (curso=="Curso...")
+            if (boxCursoAsistencia.SelectedIndex==0)
             {
                 MessageBox.Show("Debe seleccionar un curso primero.");
             }else
@@ -1513,25 +1530,59 @@ namespace Ametrano.Presentacion
             
         }
 
-        private void btnCrearGrupo_Click(object sender, EventArgs e)
+        private void boxCursoAsistencia_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string turno = boxTurnoGrupo.SelectedItem.ToString();
-            string curso = boxCursoGrupo.SelectedItem.ToString();
-            string inicio = dateTimeInicioGrupo.Value.ToString();
-            string fin = dateTimeFinalizacionGrupo.Value.ToString();
-                       
-            DateTime fechaInicio = DateTime.Parse(inicio);
-            DateTime fechaFin = DateTime.Parse(fin);
-            string formattedFechaInicio = fechaInicio.ToString("yyyy-MM-dd");
-            string formattedFechaFin = fechaFin.ToString("yyyy-MM-dd");
-            
-            if (CurContr.AgregarGrupo(curso, formattedFechaInicio, formattedFechaFin, turno))
-            {
-                MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
-            }
-            
-            
 
+        }
+
+        private void dataGridViaticos_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dataGridViaticos.IsCurrentCellDirty)
+            {
+                dataGridViaticos.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void dataGridListaAsistencias_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dataGridListaAsistencias.IsCurrentCellDirty)
+            {
+                dataGridListaAsistencias.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+
+        private void dataGridListaAsistencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridListaAsistencias.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = dataGridListaAsistencias.SelectedRows[0];
+
+
+
+
+            }
+        }
+
+        private void boxTurnoViaticos_SelectedIndexChanged(object sender, EventArgs e)
+        {//Seleccion de turno
+            if(boxTurnoViaticos.SelectedIndex != 0)
+            {
+                boxCursoViaticos.Items.Clear();
+                boxCursoViaticos.Items.Add("Curso...");
+                boxCursoViaticos.SelectedIndex = 0;
+                string[] cursos = CurContr.listarCursoPorTurno(boxTurnoViaticos.SelectedItem.ToString());
+
+                for (int i = 0; i < cursos.Length; i++)
+                {
+                    boxCursoViaticos.Items.Add(cursos[i]);
+                }
+
+
+                boxCursoViaticos.Enabled = true;
+            }
+            else{
+                boxCursoViaticos.Enabled = false;
+            }
         }
     }
 }
