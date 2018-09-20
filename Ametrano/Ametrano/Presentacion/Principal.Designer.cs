@@ -44,7 +44,6 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.configuraciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
@@ -388,6 +387,7 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.viaticos = new System.Windows.Forms.TabPage();
+            this.boxTurnoViaticos = new System.Windows.Forms.ComboBox();
             this.lblBlockViaticos = new System.Windows.Forms.Label();
             this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
             this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
@@ -419,10 +419,11 @@
             this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
-            this.boxDocenteAsistencia = new System.Windows.Forms.ComboBox();
+            this.boxTurnoAsistencia = new System.Windows.Forms.ComboBox();
             this.btnGenerarLista = new System.Windows.Forms.Button();
             this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
+            this.btnCrearGrupo = new System.Windows.Forms.Button();
             this.groupBox61 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -430,6 +431,7 @@
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
+            this.btnCrearCurso = new System.Windows.Forms.Button();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
             this.btnQuitarMateriaCurso = new System.Windows.Forms.Button();
@@ -438,8 +440,6 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.btnCrearGrupo = new System.Windows.Forms.Button();
-            this.btnCrearCurso = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -700,8 +700,7 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem,
-            this.configuraciónToolStripMenuItem});
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(90, 20);
             this.toolStripMenuItem1.Text = "Herramientas";
@@ -711,13 +710,6 @@
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Name = "pruebaDeConexionConBaseDeDatosToolStripMenuItem";
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Text = "Prueba de conexion con base de datos";
-            // 
-            // configuraciónToolStripMenuItem
-            // 
-            this.configuraciónToolStripMenuItem.Name = "configuraciónToolStripMenuItem";
-            this.configuraciónToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.configuraciónToolStripMenuItem.Text = "Configuración";
-            this.configuraciónToolStripMenuItem.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -1405,7 +1397,7 @@
             this.txtMontoViatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMontoViatico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMontoViatico.Location = new System.Drawing.Point(559, 30);
-            this.txtMontoViatico.MaxLength = 8;
+            this.txtMontoViatico.MaxLength = 4;
             this.txtMontoViatico.Name = "txtMontoViatico";
             this.txtMontoViatico.Size = new System.Drawing.Size(159, 24);
             this.txtMontoViatico.TabIndex = 28;
@@ -3420,7 +3412,7 @@
             this.txtMontoViatico_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMontoViatico_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMontoViatico_2.Location = new System.Drawing.Point(559, 30);
-            this.txtMontoViatico_2.MaxLength = 8;
+            this.txtMontoViatico_2.MaxLength = 4;
             this.txtMontoViatico_2.Name = "txtMontoViatico_2";
             this.txtMontoViatico_2.Size = new System.Drawing.Size(159, 24);
             this.txtMontoViatico_2.TabIndex = 29;
@@ -4787,6 +4779,7 @@
             // viaticos
             // 
             this.viaticos.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.viaticos.Controls.Add(this.boxTurnoViaticos);
             this.viaticos.Controls.Add(this.lblBlockViaticos);
             this.viaticos.Controls.Add(this.lblMontoTotalViaticos);
             this.viaticos.Controls.Add(this.btnAñadirSemanaViaticos);
@@ -4802,6 +4795,21 @@
             this.viaticos.Size = new System.Drawing.Size(1089, 521);
             this.viaticos.TabIndex = 0;
             this.viaticos.Text = "Viaticos";
+            // 
+            // boxTurnoViaticos
+            // 
+            this.boxTurnoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoViaticos.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoViaticos.Location = new System.Drawing.Point(39, 35);
+            this.boxTurnoViaticos.Name = "boxTurnoViaticos";
+            this.boxTurnoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxTurnoViaticos.TabIndex = 34;
+            this.boxTurnoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxTurnoViaticos_SelectedIndexChanged);
             // 
             // lblBlockViaticos
             // 
@@ -4889,7 +4897,8 @@
             this.dataGridViaticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
             this.dataGridViaticos.TabIndex = 28;
-            this.dataGridViaticos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
+            this.dataGridViaticos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
+            this.dataGridViaticos.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridViaticos_CurrentCellDirtyStateChanged);
             // 
             // colFechaViaticos
             // 
@@ -4935,7 +4944,7 @@
             this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoViaticos.Items.AddRange(new object[] {
             "Curso..."});
-            this.boxCursoViaticos.Location = new System.Drawing.Point(39, 35);
+            this.boxCursoViaticos.Location = new System.Drawing.Point(39, 77);
             this.boxCursoViaticos.Name = "boxCursoViaticos";
             this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);
             this.boxCursoViaticos.TabIndex = 27;
@@ -4946,9 +4955,9 @@
             this.listAlumnosViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAlumnosViaticos.FormattingEnabled = true;
             this.listAlumnosViaticos.ItemHeight = 20;
-            this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 77);
+            this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 117);
             this.listAlumnosViaticos.Name = "listAlumnosViaticos";
-            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 404);
+            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 364);
             this.listAlumnosViaticos.TabIndex = 0;
             this.listAlumnosViaticos.SelectedIndexChanged += new System.EventHandler(this.listAlumnosViaticos_SelectedIndexChanged);
             // 
@@ -5073,7 +5082,7 @@
             this.groupBox56.Controls.Add(this.boxCursoAsistencia);
             this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
             this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
-            this.groupBox56.Controls.Add(this.boxDocenteAsistencia);
+            this.groupBox56.Controls.Add(this.boxTurnoAsistencia);
             this.groupBox56.Controls.Add(this.btnGenerarLista);
             this.groupBox56.Controls.Add(this.boxMateriaAsisencia);
             this.groupBox56.Location = new System.Drawing.Point(46, 33);
@@ -5100,10 +5109,11 @@
             this.boxCursoAsistencia.FormattingEnabled = true;
             this.boxCursoAsistencia.Items.AddRange(new object[] {
             "Curso..."});
-            this.boxCursoAsistencia.Location = new System.Drawing.Point(23, 28);
+            this.boxCursoAsistencia.Location = new System.Drawing.Point(23, 61);
             this.boxCursoAsistencia.Name = "boxCursoAsistencia";
             this.boxCursoAsistencia.Size = new System.Drawing.Size(209, 26);
             this.boxCursoAsistencia.TabIndex = 30;
+            this.boxCursoAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxCursoAsistencia_SelectedIndexChanged);
             // 
             // dataGridListaAsistencias
             // 
@@ -5120,8 +5130,11 @@
             this.dataGridListaAsistencias.Location = new System.Drawing.Point(248, 28);
             this.dataGridListaAsistencias.Name = "dataGridListaAsistencias";
             this.dataGridListaAsistencias.RowHeadersVisible = false;
+            this.dataGridListaAsistencias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridListaAsistencias.Size = new System.Drawing.Size(240, 408);
             this.dataGridListaAsistencias.TabIndex = 29;
+            this.dataGridListaAsistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridListaAsistencias_CellContentClick);
+            this.dataGridListaAsistencias.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridListaAsistencias_CurrentCellDirtyStateChanged);
             // 
             // colNombreAsistencias
             // 
@@ -5149,17 +5162,20 @@
             this.dateTimeFechaAsistencia.Size = new System.Drawing.Size(209, 24);
             this.dateTimeFechaAsistencia.TabIndex = 32;
             // 
-            // boxDocenteAsistencia
+            // boxTurnoAsistencia
             // 
-            this.boxDocenteAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxDocenteAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxDocenteAsistencia.FormattingEnabled = true;
-            this.boxDocenteAsistencia.Items.AddRange(new object[] {
-            "Docente..."});
-            this.boxDocenteAsistencia.Location = new System.Drawing.Point(23, 92);
-            this.boxDocenteAsistencia.Name = "boxDocenteAsistencia";
-            this.boxDocenteAsistencia.Size = new System.Drawing.Size(209, 26);
-            this.boxDocenteAsistencia.TabIndex = 30;
+            this.boxTurnoAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoAsistencia.FormattingEnabled = true;
+            this.boxTurnoAsistencia.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoAsistencia.Location = new System.Drawing.Point(23, 28);
+            this.boxTurnoAsistencia.Name = "boxTurnoAsistencia";
+            this.boxTurnoAsistencia.Size = new System.Drawing.Size(209, 26);
+            this.boxTurnoAsistencia.TabIndex = 30;
             // 
             // btnGenerarLista
             // 
@@ -5179,7 +5195,7 @@
             this.boxMateriaAsisencia.FormattingEnabled = true;
             this.boxMateriaAsisencia.Items.AddRange(new object[] {
             "Materia..."});
-            this.boxMateriaAsisencia.Location = new System.Drawing.Point(23, 60);
+            this.boxMateriaAsisencia.Location = new System.Drawing.Point(23, 93);
             this.boxMateriaAsisencia.Name = "boxMateriaAsisencia";
             this.boxMateriaAsisencia.Size = new System.Drawing.Size(209, 26);
             this.boxMateriaAsisencia.TabIndex = 30;
@@ -5195,6 +5211,16 @@
             this.nuevoGrupo.Size = new System.Drawing.Size(1089, 521);
             this.nuevoGrupo.TabIndex = 3;
             this.nuevoGrupo.Text = "Nuevo Grupo";
+            // 
+            // btnCrearGrupo
+            // 
+            this.btnCrearGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearGrupo.Location = new System.Drawing.Point(409, 266);
+            this.btnCrearGrupo.Name = "btnCrearGrupo";
+            this.btnCrearGrupo.Size = new System.Drawing.Size(122, 29);
+            this.btnCrearGrupo.TabIndex = 36;
+            this.btnCrearGrupo.Text = "Crear";
+            this.btnCrearGrupo.UseVisualStyleBackColor = true;
             // 
             // groupBox61
             // 
@@ -5268,6 +5294,16 @@
             this.nuevoCurso.Size = new System.Drawing.Size(1089, 521);
             this.nuevoCurso.TabIndex = 2;
             this.nuevoCurso.Text = "Nuevo Curso";
+            // 
+            // btnCrearCurso
+            // 
+            this.btnCrearCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCurso.Location = new System.Drawing.Point(799, 266);
+            this.btnCrearCurso.Name = "btnCrearCurso";
+            this.btnCrearCurso.Size = new System.Drawing.Size(122, 29);
+            this.btnCrearCurso.TabIndex = 37;
+            this.btnCrearCurso.Text = "Crear";
+            this.btnCrearCurso.UseVisualStyleBackColor = true;
             // 
             // groupBox58
             // 
@@ -5358,35 +5394,15 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // btnCrearGrupo
-            // 
-            this.btnCrearGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearGrupo.Location = new System.Drawing.Point(409, 266);
-            this.btnCrearGrupo.Name = "btnCrearGrupo";
-            this.btnCrearGrupo.Size = new System.Drawing.Size(122, 29);
-            this.btnCrearGrupo.TabIndex = 36;
-            this.btnCrearGrupo.Text = "Crear";
-            this.btnCrearGrupo.UseVisualStyleBackColor = true;
-            // 
-            // btnCrearCurso
-            // 
-            this.btnCrearCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCurso.Location = new System.Drawing.Point(799, 266);
-            this.btnCrearCurso.Name = "btnCrearCurso";
-            this.btnCrearCurso.Size = new System.Drawing.Size(122, 29);
-            this.btnCrearCurso.TabIndex = 37;
-            this.btnCrearCurso.Text = "Crear";
-            this.btnCrearCurso.UseVisualStyleBackColor = true;
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -5659,7 +5675,6 @@
         private System.Windows.Forms.Button btnAtras_2;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pruebaDeConexionConBaseDeDatosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem configuraciónToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBox16;
         private System.Windows.Forms.TextBox txtHorasJornadaAlumno;
         private System.Windows.Forms.TextBox txtTiempoDesempleadoAlumno;
@@ -5932,7 +5947,7 @@
         private System.Windows.Forms.ComboBox boxCursoAsistencia;
         private System.Windows.Forms.DataGridView dataGridListaAsistencias;
         private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia;
-        private System.Windows.Forms.ComboBox boxDocenteAsistencia;
+        private System.Windows.Forms.ComboBox boxTurnoAsistencia;
         private System.Windows.Forms.Button btnGenerarLista;
         private System.Windows.Forms.ComboBox boxMateriaAsisencia;
         private System.Windows.Forms.TabPage nuevoCurso;
@@ -5969,5 +5984,6 @@
         private System.Windows.Forms.Label lblBlockViaticos;
         private System.Windows.Forms.Button btnCrearGrupo;
         private System.Windows.Forms.Button btnCrearCurso;
+        private System.Windows.Forms.ComboBox boxTurnoViaticos;
     }
 }
