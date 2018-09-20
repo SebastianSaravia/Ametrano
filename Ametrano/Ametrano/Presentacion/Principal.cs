@@ -25,6 +25,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
+        bool diaViatico = false;
 
 
         public Principal()
@@ -52,6 +53,7 @@ namespace Ametrano.Presentacion
         private void btnCursos_Click(object sender, EventArgs e)
         {
             tabControlPrincipal.SelectedIndex = 2;
+            btnAñadirSemanaViaticos.Enabled = false;
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -148,12 +150,14 @@ namespace Ametrano.Presentacion
             string nombreDia = fecha.DayOfWeek.ToString();
 
             if(nombreDia.Equals("Thursday") || nombreDia.Equals("Friday"))
-            {
+            {//Si es un jueves o viernes
                 btnAñadirSemanaViaticos.Enabled = true;
+                diaViatico = true;
             }else
             {
                 btnAñadirSemanaViaticos.Enabled = false;
                 lblBlockViaticos.Visible = true;
+                diaViatico = false;
             }
 
 
@@ -1103,50 +1107,62 @@ namespace Ametrano.Presentacion
             //if (listAlumnosViaticos.SelectedIndex>=0)
             //{
             DataTable listaAlumnos = eventoClickListaAlumnos[1];
-            foreach(DataRow row in listaAlumnos.Rows)
+            if (boxCursoViaticos.SelectedIndex != 0)
             {
-                string ci = "";
-                foreach(DataColumn column in listaAlumnos.Columns)
+                foreach (DataRow row in listaAlumnos.Rows)
                 {
-
-                    if (column.ColumnName.Equals("cedula_alumno"))
+                    string ci = "";
+                    foreach (DataColumn column in listaAlumnos.Columns)
                     {
-                        ci = row[column].ToString();
+
+                        if (column.ColumnName.Equals("cedula_alumno"))
+                        {
+                            ci = row[column].ToString();
+                        }
+                    }
+
+
+                    if (CurContr.AñadirSemanaViatico(ci))
+                    {
+                        try
+                        {
+                            dataGridViaticos.Columns.Clear();
+                            dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                            dataGridViaticos.Columns[0].ReadOnly = true;
+                            dataGridViaticos.Columns[1].ReadOnly = true;
+                            dataGridViaticos.Columns[5].Visible = false;
+
+                        }
+                        catch (Exception ew)
+                        {
+                            MessageBox.Show("error " + ew);
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
+                        break;
                     }
                 }
 
-                
-                if (CurContr.AñadirSemanaViatico(ci))
-                {
-                    try
-                    {
-                        dataGridViaticos.Columns.Clear();
-                        dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
-                        dataGridViaticos.Columns[0].ReadOnly = true;
-                        dataGridViaticos.Columns[1].ReadOnly = true;
-                        dataGridViaticos.Columns[5].Visible = false;
-
-                    }
-                    catch (Exception ew)
-                    {
-                        MessageBox.Show("error " + ew);
-                    }
-
-                }
-                else
-                {
-                    MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
-                    break;
-                }
             }
 
 
 
-            
 
             //}
 
-            
+
+        }
+
+        public void actualizarMontoTotal()
+        {
+            int montoTotal = 0;
+            DataTable datos = eventoClickListaAlumnos[1];
+            string ci = datos.Rows[listAlumnosViaticos.SelectedIndex][datos.Columns[0]].ToString();
+            montoTotal = CurContr.calcularMontoTotal(ci);
+            lblMontoTotalViaticos.Text = "Monto total a pagar: $" + montoTotal + ".00";
         }
 
         private void btnActualizarDocente_Click(object sender, EventArgs e)
@@ -1336,6 +1352,14 @@ namespace Ametrano.Presentacion
 
         private void boxCursoViaticos_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (boxCursoViaticos.SelectedIndex != 0 && diaViatico)
+            {
+                btnAñadirSemanaViaticos.Enabled = true;
+            }else
+            {
+                btnAñadirSemanaViaticos.Enabled = false;
+            }
+
             dataGridViaticos.DataSource = null;
             dataGridViaticos.Columns.Clear();
             DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();
@@ -1367,6 +1391,10 @@ namespace Ametrano.Presentacion
             {
                 eventoClickListaAlumnos[0] = true;
                 eventoClickListaAlumnos[1] = dt;
+
+
+
+
             }
 
             
@@ -1395,7 +1423,7 @@ namespace Ametrano.Presentacion
                         dataGridViaticos.Columns[0].ReadOnly = true;
                         dataGridViaticos.Columns[1].ReadOnly = true;
                         dataGridViaticos.Columns[5].Visible = false;
-
+                        actualizarMontoTotal();
                     }
                     catch (Exception ew)
                     {
@@ -1464,8 +1492,9 @@ namespace Ametrano.Presentacion
 
                 if (resultado)
                 {
-                    MessageBox.Show("Se ha actualizado el pago del viatico");
-                }else
+                    actualizarMontoTotal();
+                }
+                else
                 {
                     MessageBox.Show("Error actualizando el pago del viatico");
                 }
