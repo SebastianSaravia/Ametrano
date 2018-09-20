@@ -145,6 +145,8 @@ namespace Ametrano.Presentacion
                 boxDocentesNuevoGrupo.Items.Add(docentes[i]);
             }
 
+            DateTime fecha = DateTime.Now;
+
 
 
 
@@ -427,7 +429,7 @@ namespace Ametrano.Presentacion
         private void TimePickerFechaNac_ValueChanged(object sender, EventArgs e)
         {//Evento de click en el timepickerfechanacalumnonuevo
 
-            maskedTxtFechaNacimientoAlumnoNuevo.Mask = "00/00/0000";//Asigno maskara a la fecha
+            maskedTxtFechaNacimientoAlumnoNuevo.Mask = "0000-00-00";//Asigno maskara a la fecha
 
             string mes, dia;
 
@@ -443,7 +445,7 @@ namespace Ametrano.Presentacion
             }
             //Muestro la fecha en el masked box
 
-            maskedTxtFechaNacimientoAlumnoNuevo.Text = dia + "/" + mes + "/" + TimePickerFechaNacAlumnoNuevo.Value.Year;
+            maskedTxtFechaNacimientoAlumnoNuevo.Text =  TimePickerFechaNacAlumnoNuevo.Value.Year + "/" + mes + "/" + dia ;
 
             maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
         }
@@ -476,7 +478,7 @@ namespace Ametrano.Presentacion
                 dynamic maskedBox = (MaskedTextBox)sender;
                 if (maskedBox.Text.Equals("Fecha de nacimiento") || maskedBox.Text.Equals(""))//Si el campo esta vacio
                 {
-                    maskedBox.Mask = "00/00/0000";
+                    maskedBox.Mask = "0000-00-00";
                     maskedBox.ForeColor = Color.Black;
                 }
 
@@ -493,7 +495,7 @@ namespace Ametrano.Presentacion
             else//si es cualquier otra cosa
             {
                 dynamic maskedBox = (MaskedTextBox)sender;
-                if (maskedBox.Text.Equals("  /  /") || maskedBox.Text.Equals(""))
+                if (maskedBox.Text.Equals("    -  -") || maskedBox.Text.Equals(""))
                 {
 
 
@@ -1464,5 +1466,7 @@ namespace Ametrano.Presentacion
             al.insertarAlumno(datosAlumno);
             
         }
+
+        
     }
 }
