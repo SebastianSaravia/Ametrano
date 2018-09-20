@@ -146,7 +146,8 @@ namespace Ametrano.Persistencia
                 {//Cierro la conexion si esta abierta
                     objetoDeConexion.Close();
                 }
-                testing.MostrarMessageBox(e.Message);
+                
+                testing.MostrarMessageBox("Error al ingresar datos: "+e.Message);
             }
 
             return filasAfectadas;

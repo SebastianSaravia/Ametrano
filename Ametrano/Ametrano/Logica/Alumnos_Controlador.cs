@@ -50,26 +50,70 @@ namespace Ametrano.Logica
             //query cobertura de salud
             string datosCoberura = "'" + datos.getDatosPersona()["cobertura_salud"] + "',";
             //query datos del hogar
-            string datosHogar = "'" + datos.getDatosPersona()["hogar_jefe"] + "'," +
+            byte jefehogar=0;
+            if (datos.getDatosPersona()["hogar_jefe"]=="SI")
+            {
+                jefehogar = 1;
+            }
+            
+            string datosHogar = "'" + jefehogar + "'," +
                                 "'" + datos.getDatosPersona()["hogar_cantidad_hijos"] + "',";
             //query trabajo
-            string datosTrabajo = "'" + datos.getDatosPersona()["trabajo_trabajo_alguna_vez"] + "'," +
-                                  "'" + datos.getDatosPersona()["trabajo_trabaja_actualmente"] + "'," +
+            byte trabajo_alguna_vez = 0, trabaja_actualmente = 0;
+            
+            if (datos.getDatosPersona()["trabajo_trabajo_alguna_vez"]=="SI")
+            {
+                trabajo_alguna_vez = 1;
+            }
+            if (datos.getDatosPersona()["trabajo_trabaja_actualmente"]=="SI")
+            {
+                trabaja_actualmente = 1;
+            }
+            
+            string datosTrabajo = "'" + trabajo_alguna_vez + "'," +
+                                  "'" + trabaja_actualmente + "'," +
                                   "'" + datos.getDatosPersona()["trabajo_tiempo_desempleado"] + "'," +
                                   "'" + datos.getDatosPersona()["trabajo_horas_jornada"] + "'," +
                                   "'" + datos.getDatosPersona()["trabajo_ingreso_mensual"] + "',";
             //query personas a cargo
+
+            byte discapacidad = 0, apoyo = 0, trabajo_cuidando = 0;
+            if (datos.getDatosPersona()["personas_cargo_con_discapacidad"]=="SI")
+            {
+                discapacidad = 1;
+            }
+            if (datos.getDatosPersona()["personas_cargo_cuenta_con_apoyo"]=="SI")
+            {
+                apoyo = 1;
+            }
+            if (datos.getDatosPersona()["personas_cargo_trabajo_cuidando"]=="SI")
+            {
+                trabajo_cuidando = 1;
+            }
+
             string datosPersonasCargo = "'" + datos.getDatosPersona()["personas_cargo_0_17"] + "'," +
                                         "'" + datos.getDatosPersona()["personas_cargo_18_59"] + "'," +
                                         "'" + datos.getDatosPersona()["personas_cargo_60_mas"] + "'," +
-                                        "'" + datos.getDatosPersona()["personas_cargo_con_discapacidad"] + "'," +
-                                        "'" + datos.getDatosPersona()["personas_cargo_cuenta_con_apoyo"] + "'," +
+                                        "'" + discapacidad + "'," +
+                                        "'" + apoyo + "'," +
                                         "'" + datos.getDatosPersona()["personas_cargo_carga_semanal_cuidado"] + "'," +
-                                        "'" + datos.getDatosPersona()["personas_cargo_trabajo_cuidando"] + "'," +
+                                        "'" + trabajo_cuidando + "'," +
                                         "'" + datos.getDatosPersona()["personas_cargo_experiencia_instituciones_cuidado"] + "',";
             //query acceso a internet
-            string datosAccesoInternet = "'" + datos.getDatosPersona()["internet_usa_internet"] + "'," +
-                                         "'" + datos.getDatosPersona()["internet_facil_acceso"] + "'," +
+
+            byte usa_internet = 0, facil_acceso = 0;
+            if (datos.getDatosPersona()["internet_usa_internet"]=="SI")
+            {
+                usa_internet = 1;
+            }
+            if (datos.getDatosPersona()["internet_facil_acceso"]=="SI")
+            {
+                facil_acceso = 1;
+            }
+            
+
+            string datosAccesoInternet = "'" + usa_internet + "'," +
+                                         "'" + facil_acceso + "'," +
                                          "'" + datos.getDatosPersona()["internet_medio_acceso"] + "'";
 
             //QUERY PRINCIPAL 

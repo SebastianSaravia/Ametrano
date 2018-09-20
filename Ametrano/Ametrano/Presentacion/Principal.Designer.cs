@@ -429,11 +429,6 @@
             this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
-            this.groupBox60 = new System.Windows.Forms.GroupBox();
-            this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
-            this.listDocentesCurso = new System.Windows.Forms.ListBox();
-            this.boxDocentesNuevoGrupo = new System.Windows.Forms.ComboBox();
             this.nuevoCurso = new System.Windows.Forms.TabPage();
             this.groupBox58 = new System.Windows.Forms.GroupBox();
             this.groupBox59 = new System.Windows.Forms.GroupBox();
@@ -443,6 +438,8 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
+            this.btnCrearGrupo = new System.Windows.Forms.Button();
+            this.btnCrearCurso = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -534,7 +531,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).BeginInit();
             this.nuevoGrupo.SuspendLayout();
             this.groupBox61.SuspendLayout();
-            this.groupBox60.SuspendLayout();
             this.nuevoCurso.SuspendLayout();
             this.groupBox58.SuspendLayout();
             this.groupBox59.SuspendLayout();
@@ -567,6 +563,7 @@
             this.label3.Size = new System.Drawing.Size(162, 16);
             this.label3.TabIndex = 1;
             this.label3.Text = "              Configuracion          ";
+            this.label3.Visible = false;
             // 
             // label4
             // 
@@ -616,6 +613,7 @@
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton1.TabIndex = 0;
             this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Visible = false;
             this.bunifuImageButton1.Zoom = 5;
             this.bunifuImageButton1.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
             // 
@@ -3557,10 +3555,7 @@
             this.boxLocalidadAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxLocalidadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxLocalidadAlumno_2.Items.AddRange(new object[] {
-            "Seleccione sexo...",
-            "Hombre",
-            "Mujer",
-            "Otro"});
+            "Localidad..."});
             this.boxLocalidadAlumno_2.Location = new System.Drawing.Point(199, 37);
             this.boxLocalidadAlumno_2.Name = "boxLocalidadAlumno_2";
             this.boxLocalidadAlumno_2.Size = new System.Drawing.Size(167, 26);
@@ -5192,9 +5187,9 @@
             // nuevoGrupo
             // 
             this.nuevoGrupo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.nuevoGrupo.Controls.Add(this.btnCrearGrupo);
             this.nuevoGrupo.Controls.Add(this.groupBox61);
             this.nuevoGrupo.Controls.Add(this.boxCursoGrupo);
-            this.nuevoGrupo.Controls.Add(this.groupBox60);
             this.nuevoGrupo.Location = new System.Drawing.Point(4, 22);
             this.nuevoGrupo.Name = "nuevoGrupo";
             this.nuevoGrupo.Size = new System.Drawing.Size(1089, 521);
@@ -5207,9 +5202,9 @@
             this.groupBox61.Controls.Add(this.label5);
             this.groupBox61.Controls.Add(this.dateTimePicker3);
             this.groupBox61.Controls.Add(this.dateTimePicker2);
-            this.groupBox61.Location = new System.Drawing.Point(548, 94);
+            this.groupBox61.Location = new System.Drawing.Point(65, 108);
             this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Size = new System.Drawing.Size(466, 180);
+            this.groupBox61.Size = new System.Drawing.Size(466, 152);
             this.groupBox61.TabIndex = 35;
             this.groupBox61.TabStop = false;
             this.groupBox61.Text = "Periodo";
@@ -5218,7 +5213,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(319, 79);
+            this.label6.Location = new System.Drawing.Point(318, 91);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(98, 18);
             this.label6.TabIndex = 35;
@@ -5228,7 +5223,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(319, 39);
+            this.label5.Location = new System.Drawing.Point(318, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 18);
             this.label5.TabIndex = 35;
@@ -5237,7 +5232,7 @@
             // dateTimePicker3
             // 
             this.dateTimePicker3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Location = new System.Drawing.Point(26, 76);
+            this.dateTimePicker3.Location = new System.Drawing.Point(30, 88);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(274, 24);
             this.dateTimePicker3.TabIndex = 34;
@@ -5245,7 +5240,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(26, 36);
+            this.dateTimePicker2.Location = new System.Drawing.Point(30, 45);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(274, 24);
             this.dateTimePicker2.TabIndex = 33;
@@ -5262,64 +5257,10 @@
             this.boxCursoGrupo.Size = new System.Drawing.Size(209, 26);
             this.boxCursoGrupo.TabIndex = 9;
             // 
-            // groupBox60
-            // 
-            this.groupBox60.Controls.Add(this.button12);
-            this.groupBox60.Controls.Add(this.button13);
-            this.groupBox60.Controls.Add(this.listDocentesCurso);
-            this.groupBox60.Controls.Add(this.boxDocentesNuevoGrupo);
-            this.groupBox60.Location = new System.Drawing.Point(65, 94);
-            this.groupBox60.Name = "groupBox60";
-            this.groupBox60.Size = new System.Drawing.Size(466, 180);
-            this.groupBox60.TabIndex = 5;
-            this.groupBox60.TabStop = false;
-            this.groupBox60.Text = "Docentes";
-            // 
-            // button12
-            // 
-            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button12.Location = new System.Drawing.Point(12, 51);
-            this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(81, 29);
-            this.button12.TabIndex = 10;
-            this.button12.Text = "Quitar";
-            this.button12.UseVisualStyleBackColor = true;
-            // 
-            // button13
-            // 
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.Location = new System.Drawing.Point(99, 51);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(122, 29);
-            this.button13.TabIndex = 9;
-            this.button13.Text = "Añadir";
-            this.button13.UseVisualStyleBackColor = true;
-            // 
-            // listDocentesCurso
-            // 
-            this.listDocentesCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listDocentesCurso.FormattingEnabled = true;
-            this.listDocentesCurso.ItemHeight = 18;
-            this.listDocentesCurso.Location = new System.Drawing.Point(239, 19);
-            this.listDocentesCurso.Name = "listDocentesCurso";
-            this.listDocentesCurso.Size = new System.Drawing.Size(216, 148);
-            this.listDocentesCurso.TabIndex = 1;
-            // 
-            // boxDocentesNuevoGrupo
-            // 
-            this.boxDocentesNuevoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxDocentesNuevoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxDocentesNuevoGrupo.FormattingEnabled = true;
-            this.boxDocentesNuevoGrupo.Items.AddRange(new object[] {
-            "Docente..."});
-            this.boxDocentesNuevoGrupo.Location = new System.Drawing.Point(12, 19);
-            this.boxDocentesNuevoGrupo.Name = "boxDocentesNuevoGrupo";
-            this.boxDocentesNuevoGrupo.Size = new System.Drawing.Size(209, 26);
-            this.boxDocentesNuevoGrupo.TabIndex = 8;
-            // 
             // nuevoCurso
             // 
             this.nuevoCurso.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.nuevoCurso.Controls.Add(this.btnCrearCurso);
             this.nuevoCurso.Controls.Add(this.groupBox58);
             this.nuevoCurso.Location = new System.Drawing.Point(4, 22);
             this.nuevoCurso.Name = "nuevoCurso";
@@ -5417,15 +5358,35 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
+            // btnCrearGrupo
+            // 
+            this.btnCrearGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearGrupo.Location = new System.Drawing.Point(409, 266);
+            this.btnCrearGrupo.Name = "btnCrearGrupo";
+            this.btnCrearGrupo.Size = new System.Drawing.Size(122, 29);
+            this.btnCrearGrupo.TabIndex = 36;
+            this.btnCrearGrupo.Text = "Crear";
+            this.btnCrearGrupo.UseVisualStyleBackColor = true;
+            // 
+            // btnCrearCurso
+            // 
+            this.btnCrearCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCurso.Location = new System.Drawing.Point(799, 266);
+            this.btnCrearCurso.Name = "btnCrearCurso";
+            this.btnCrearCurso.Size = new System.Drawing.Size(122, 29);
+            this.btnCrearCurso.TabIndex = 37;
+            this.btnCrearCurso.Text = "Crear";
+            this.btnCrearCurso.UseVisualStyleBackColor = true;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -5587,7 +5548,6 @@
             this.nuevoGrupo.ResumeLayout(false);
             this.groupBox61.ResumeLayout(false);
             this.groupBox61.PerformLayout();
-            this.groupBox60.ResumeLayout(false);
             this.nuevoCurso.ResumeLayout(false);
             this.groupBox58.ResumeLayout(false);
             this.groupBox58.PerformLayout();
@@ -5988,11 +5948,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.ComboBox boxCursoGrupo;
-        private System.Windows.Forms.GroupBox groupBox60;
-        private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
-        private System.Windows.Forms.ListBox listDocentesCurso;
-        private System.Windows.Forms.ComboBox boxDocentesNuevoGrupo;
         private System.Windows.Forms.TextBox txtMontoViatico;
         private System.Windows.Forms.TextBox txtMontoViatico_2;
         private System.Windows.Forms.ListBox listResultadosDocentes;
@@ -6012,5 +5967,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
         private System.Windows.Forms.Button btnGuardarLista;
         private System.Windows.Forms.Label lblBlockViaticos;
+        private System.Windows.Forms.Button btnCrearGrupo;
+        private System.Windows.Forms.Button btnCrearCurso;
     }
 }

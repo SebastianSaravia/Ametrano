@@ -79,8 +79,7 @@ namespace Ametrano.Presentacion
             boxBuscar.SelectedIndex = 0;
             boxBuscar_2.SelectedIndex = 0;
             boxCursoViaticos.SelectedIndex = 0;
-            boxCursoGrupo.SelectedIndex = 0;
-            boxDocentesNuevoGrupo.SelectedIndex = 0;
+            boxCursoGrupo.SelectedIndex = 0;           
             boxTipoCurso.SelectedIndex = 0;
             boxCursoAsistencia.SelectedIndex = 0;
             boxCursoAsistencia_2.SelectedIndex = 0;
@@ -141,8 +140,7 @@ namespace Ametrano.Presentacion
 
             for (int i = 0; i < docentes.Length; i++)
             {
-                boxDocenteAsistencia.Items.Add(docentes[i]);
-                boxDocentesNuevoGrupo.Items.Add(docentes[i]);
+                boxDocenteAsistencia.Items.Add(docentes[i]);               
             }
 
             DateTime fecha = DateTime.Now;
@@ -312,7 +310,7 @@ namespace Ametrano.Presentacion
             if(!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
                 !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
             {//Se verifican que todos los datos sean correctos
-                MessageBox.Show("Datos Correctos");
+                
                 //Si todos los datos son correctos permito al pasaje a la segunda parte del formulario 
 
                 tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
@@ -340,7 +338,7 @@ namespace Ametrano.Presentacion
                 !setDatosJefeHogarAlumno[0] && !setDatosPersonasACargoAlumno[0] //Depende del tipo de curso
                 && !setDatosCoberturaSaludAlumno[0])
             {//Si todo es correcto
-                MessageBox.Show("Datos Correctos");
+               
                 //Se pasa a la finalizacion
                 IDictionary<string, string> diccionarioDeAlumno = datosAlumno.getDatosPersona();
                 //Datos personales
@@ -1478,7 +1476,11 @@ namespace Ametrano.Presentacion
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
             Alumnos_Controlador al = new Alumnos_Controlador();
-            al.insertarAlumno(datosAlumno);
+                   
+                al.insertarAlumno(datosAlumno);
+            
+            
+            
             
         }
 
