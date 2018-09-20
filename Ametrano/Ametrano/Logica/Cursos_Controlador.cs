@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Ametrano.Logica
 {
    
@@ -75,9 +76,7 @@ namespace Ametrano.Logica
             }
             return alumnos;
         }
-
-
-
+        
         public string[] DatosViaticos(string cedula)
         {
             string query = "SELECT nombre1, apellido1, monto_viatico_por_dia FROM alumno WHERE cedula_alumno='"+cedula+"'";
