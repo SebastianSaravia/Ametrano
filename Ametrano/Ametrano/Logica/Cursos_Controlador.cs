@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Ametrano.Logica
 {
    
@@ -75,9 +76,7 @@ namespace Ametrano.Logica
             }
             return alumnos;
         }
-
-
-
+        
         public string[] DatosViaticos(string cedula)
         {
             string query = "SELECT nombre1, apellido1, monto_viatico_por_dia FROM alumno WHERE cedula_alumno='"+cedula+"'";
@@ -379,7 +378,6 @@ namespace Ametrano.Logica
             }
             
         }
-
         public int calcularMonto(string fecha_inicio, string fecha_fin,string cedula,int montoDia)
         {
             int diasAsistidosEnSemana = 0;
@@ -514,6 +512,26 @@ namespace Ametrano.Logica
                 return false;
             }
         }
+
+        public bool AgregarGrupo(string curso, string inicio, string fin,string turno)
+        {
+            string query = "INSERT INTO grupo(nombre_curso, fecha_inicio, fecha_fin,turno) VALUES('{0}','{1}','{2}','{3}')";
+            query = string.Format(query, curso, inicio, fin,turno);
+            int datosCons = objetoConexion.sqlInsertUpdate(query);
+            bool resultado = false;
+            if (datosCons==1)
+            {
+                resultado = true;
+            }
+            return resultado;
+        }
+
+
+
+
+
+
+
     }
 
 }

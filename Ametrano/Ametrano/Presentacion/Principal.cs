@@ -1513,6 +1513,25 @@ namespace Ametrano.Presentacion
             
         }
 
-        
+        private void btnCrearGrupo_Click(object sender, EventArgs e)
+        {
+            string turno = boxTurnoGrupo.SelectedItem.ToString();
+            string curso = boxCursoGrupo.SelectedItem.ToString();
+            string inicio = dateTimeInicioGrupo.Value.ToString();
+            string fin = dateTimeFinalizacionGrupo.Value.ToString();
+                       
+            DateTime fechaInicio = DateTime.Parse(inicio);
+            DateTime fechaFin = DateTime.Parse(fin);
+            string formattedFechaInicio = fechaInicio.ToString("yyyy-MM-dd");
+            string formattedFechaFin = fechaFin.ToString("yyyy-MM-dd");
+            
+            if (CurContr.AgregarGrupo(curso, formattedFechaInicio, formattedFechaFin, turno))
+            {
+                MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
+            }
+            
+            
+
+        }
     }
 }
