@@ -388,6 +388,7 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.viaticos = new System.Windows.Forms.TabPage();
+            this.lblBlockViaticos = new System.Windows.Forms.Label();
             this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
             this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
             this.lblMontoDiaViaticos = new System.Windows.Forms.Label();
@@ -4791,6 +4792,7 @@
             // viaticos
             // 
             this.viaticos.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.viaticos.Controls.Add(this.lblBlockViaticos);
             this.viaticos.Controls.Add(this.lblMontoTotalViaticos);
             this.viaticos.Controls.Add(this.btnAñadirSemanaViaticos);
             this.viaticos.Controls.Add(this.lblMontoDiaViaticos);
@@ -4806,6 +4808,18 @@
             this.viaticos.TabIndex = 0;
             this.viaticos.Text = "Viaticos";
             // 
+            // lblBlockViaticos
+            // 
+            this.lblBlockViaticos.AutoSize = true;
+            this.lblBlockViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockViaticos.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblBlockViaticos.Location = new System.Drawing.Point(436, 39);
+            this.lblBlockViaticos.Name = "lblBlockViaticos";
+            this.lblBlockViaticos.Size = new System.Drawing.Size(410, 16);
+            this.lblBlockViaticos.TabIndex = 33;
+            this.lblBlockViaticos.Text = "Solo se permite agregar viaticos los dias jueves y viernes";
+            this.lblBlockViaticos.Visible = false;
+            // 
             // lblMontoTotalViaticos
             // 
             this.lblMontoTotalViaticos.AutoSize = true;
@@ -4818,6 +4832,7 @@
             // 
             // btnAñadirSemanaViaticos
             // 
+            this.btnAñadirSemanaViaticos.Enabled = false;
             this.btnAñadirSemanaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 34);
             this.btnAñadirSemanaViaticos.Name = "btnAñadirSemanaViaticos";
@@ -5996,5 +6011,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
         private System.Windows.Forms.Button btnGuardarLista;
+        private System.Windows.Forms.Label lblBlockViaticos;
     }
 }

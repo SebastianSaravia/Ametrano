@@ -145,6 +145,19 @@ namespace Ametrano.Presentacion
                 boxDocentesNuevoGrupo.Items.Add(docentes[i]);
             }
 
+            DateTime fecha = DateTime.Now;
+
+            string nombreDia = fecha.DayOfWeek.ToString();
+
+            if(nombreDia.Equals("Thursday") || nombreDia.Equals("Friday"))
+            {
+                btnAñadirSemanaViaticos.Enabled = true;
+            }else
+            {
+                btnAñadirSemanaViaticos.Enabled = false;
+                lblBlockViaticos.Visible = true;
+            }
+
 
 
 
@@ -427,7 +440,7 @@ namespace Ametrano.Presentacion
         private void TimePickerFechaNac_ValueChanged(object sender, EventArgs e)
         {//Evento de click en el timepickerfechanacalumnonuevo
 
-            maskedTxtFechaNacimientoAlumnoNuevo.Mask = "00/00/0000";//Asigno maskara a la fecha
+            maskedTxtFechaNacimientoAlumnoNuevo.Mask = "0000-00-00";//Asigno maskara a la fecha
 
             string mes, dia;
 
@@ -443,7 +456,7 @@ namespace Ametrano.Presentacion
             }
             //Muestro la fecha en el masked box
 
-            maskedTxtFechaNacimientoAlumnoNuevo.Text = dia + "/" + mes + "/" + TimePickerFechaNacAlumnoNuevo.Value.Year;
+            maskedTxtFechaNacimientoAlumnoNuevo.Text =  TimePickerFechaNacAlumnoNuevo.Value.Year + "/" + mes + "/" + dia ;
 
             maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
         }
@@ -476,7 +489,7 @@ namespace Ametrano.Presentacion
                 dynamic maskedBox = (MaskedTextBox)sender;
                 if (maskedBox.Text.Equals("Fecha de nacimiento") || maskedBox.Text.Equals(""))//Si el campo esta vacio
                 {
-                    maskedBox.Mask = "00/00/0000";
+                    maskedBox.Mask = "0000-00-00";
                     maskedBox.ForeColor = Color.Black;
                 }
 
@@ -493,7 +506,7 @@ namespace Ametrano.Presentacion
             else//si es cualquier otra cosa
             {
                 dynamic maskedBox = (MaskedTextBox)sender;
-                if (maskedBox.Text.Equals("  /  /") || maskedBox.Text.Equals(""))
+                if (maskedBox.Text.Equals("    -  -") || maskedBox.Text.Equals(""))
                 {
 
 
@@ -1103,6 +1116,7 @@ namespace Ametrano.Presentacion
                         ci = row[column].ToString();
                     }
                 }
+
                 
                 if (CurContr.AñadirSemanaViatico(ci))
                 {
@@ -1124,6 +1138,7 @@ namespace Ametrano.Presentacion
                 else
                 {
                     MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
+                    break;
                 }
             }
 
@@ -1367,24 +1382,27 @@ namespace Ametrano.Presentacion
                
                 DataTable listaAlumnos = eventoClickListaAlumnos[1];
                 int val = listAlumnosViaticos.SelectedIndex;
-                string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
-                string[] datosAlumno = CurContr.DatosViaticos(ci);
-                lblCedulaViaticos.Text = "Cedula: " + ci;
-                lblNombreViaticos.Text = "Nombre: " + datosAlumno[0]+" " + datosAlumno[1];
-                lblMontoDiaViaticos.Text = "Monto por día asistido: " + datosAlumno[2];
-
-                try
+                if (listAlumnosViaticos.SelectedIndex != -1)
                 {
-                    dataGridViaticos.Columns.Clear();
-                    dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
-                    dataGridViaticos.Columns[0].ReadOnly = true;
-                    dataGridViaticos.Columns[1].ReadOnly = true;
-                    dataGridViaticos.Columns[5].Visible = false;
+                    string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
+                    string[] datosAlumno = CurContr.DatosViaticos(ci);
+                    lblCedulaViaticos.Text = "Cedula: " + ci;
+                    lblNombreViaticos.Text = "Nombre: " + datosAlumno[0] + " " + datosAlumno[1];
+                    lblMontoDiaViaticos.Text = "Monto por día asistido: " + datosAlumno[2];
 
-                }
-                catch (Exception ew)
-                {
-                    MessageBox.Show("error "+ew);                
+                    try
+                    {
+                        dataGridViaticos.Columns.Clear();
+                        dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                        dataGridViaticos.Columns[0].ReadOnly = true;
+                        dataGridViaticos.Columns[1].ReadOnly = true;
+                        dataGridViaticos.Columns[5].Visible = false;
+
+                    }
+                    catch (Exception ew)
+                    {
+                        MessageBox.Show("error " + ew);
+                    }
                 }
             }
 
@@ -1463,5 +1481,7 @@ namespace Ametrano.Presentacion
             al.insertarAlumno(datosAlumno);
             
         }
+
+        
     }
 }
