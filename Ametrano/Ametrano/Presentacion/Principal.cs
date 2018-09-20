@@ -1382,24 +1382,27 @@ namespace Ametrano.Presentacion
                
                 DataTable listaAlumnos = eventoClickListaAlumnos[1];
                 int val = listAlumnosViaticos.SelectedIndex;
-                string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
-                string[] datosAlumno = CurContr.DatosViaticos(ci);
-                lblCedulaViaticos.Text = "Cedula: " + ci;
-                lblNombreViaticos.Text = "Nombre: " + datosAlumno[0]+" " + datosAlumno[1];
-                lblMontoDiaViaticos.Text = "Monto por día asistido: " + datosAlumno[2];
-
-                try
+                if (listAlumnosViaticos.SelectedIndex != -1)
                 {
-                    dataGridViaticos.Columns.Clear();
-                    dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
-                    dataGridViaticos.Columns[0].ReadOnly = true;
-                    dataGridViaticos.Columns[1].ReadOnly = true;
-                    dataGridViaticos.Columns[5].Visible = false;
+                    string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
+                    string[] datosAlumno = CurContr.DatosViaticos(ci);
+                    lblCedulaViaticos.Text = "Cedula: " + ci;
+                    lblNombreViaticos.Text = "Nombre: " + datosAlumno[0] + " " + datosAlumno[1];
+                    lblMontoDiaViaticos.Text = "Monto por día asistido: " + datosAlumno[2];
 
-                }
-                catch (Exception ew)
-                {
-                    MessageBox.Show("error "+ew);                
+                    try
+                    {
+                        dataGridViaticos.Columns.Clear();
+                        dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                        dataGridViaticos.Columns[0].ReadOnly = true;
+                        dataGridViaticos.Columns[1].ReadOnly = true;
+                        dataGridViaticos.Columns[5].Visible = false;
+
+                    }
+                    catch (Exception ew)
+                    {
+                        MessageBox.Show("error " + ew);
+                    }
                 }
             }
 
