@@ -144,7 +144,11 @@ namespace Ametrano.Presentacion
                 boxDocenteAsistencia.Items.Add(docentes[i]);
                 boxDocentesNuevoGrupo.Items.Add(docentes[i]);
             }
-            
+
+
+
+
+
 
         }
 

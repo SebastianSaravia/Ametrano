@@ -3,7 +3,6 @@ using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -205,11 +204,10 @@ namespace Ametrano.Logica
 
                     int montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
 
-                    DateTime fechaSemanas = DateTime.Parse(fechaFinNueva);
-                    int semana = CultureInfo.CurrentUICulture.Calendar.GetWeekOfYear(fechaSemanas, CalendarWeekRule.FirstDay, fechaSemanas.DayOfWeek);
+                    int semana = 1;
 
                     //Incerta los datos del viatico en la bd
-                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana "+semana+"',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','"+semana+")";
+                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana "+semana+"',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','"+semana+"')";
                     int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
 
                     //selecciona la id de viatico de la operacion actual
@@ -289,8 +287,17 @@ namespace Ametrano.Logica
                         
 
                         int montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
-                        DateTime FechaSemanas = DateTime.Parse(fechaFinNueva);
-                        int semana = CultureInfo.CurrentUICulture.Calendar.GetWeekOfYear(FechaSemanas, CalendarWeekRule.FirstDay, FechaSemanas.DayOfWeek);
+
+                        string consultarSemana = "Select max(semana) from viatico v join recive r on r.id_viatico = v.id_viatico where r.cedula_alumno = '" + cedula + "';";
+                        MySqlDataAdapter consultarSemana_resultados = objetoConexion.consultarDatos(consultarSemana);
+                        DataTable consultarSemana_table = new DataTable();
+                        consultarSemana_resultados.Fill(consultarSemana_table);
+
+                        int semana = 0;
+
+                        int.TryParse(consultarSemana_table.Rows[0][consultarSemana_table.Columns[0]].ToString(), out semana);
+
+                        semana++;
 
                         //Incerta los datos del viatico en la bd
                         string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana " + semana + "',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','"+semana+"')";

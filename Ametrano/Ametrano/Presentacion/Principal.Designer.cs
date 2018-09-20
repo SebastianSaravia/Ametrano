@@ -441,6 +441,7 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
+            this.lblBlockViaticos = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -4782,6 +4783,7 @@
             // viaticos
             // 
             this.viaticos.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.viaticos.Controls.Add(this.lblBlockViaticos);
             this.viaticos.Controls.Add(this.lblMontoTotalViaticos);
             this.viaticos.Controls.Add(this.btnAñadirSemanaViaticos);
             this.viaticos.Controls.Add(this.lblMontoDiaViaticos);
@@ -5377,6 +5379,18 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
+            // lblBlockViaticos
+            // 
+            this.lblBlockViaticos.AutoSize = true;
+            this.lblBlockViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockViaticos.ForeColor = System.Drawing.Color.IndianRed;
+            this.lblBlockViaticos.Location = new System.Drawing.Point(436, 43);
+            this.lblBlockViaticos.Name = "lblBlockViaticos";
+            this.lblBlockViaticos.Size = new System.Drawing.Size(435, 16);
+            this.lblBlockViaticos.TabIndex = 33;
+            this.lblBlockViaticos.Text = "Solo esta permitido generar viaticos los dias jueves y viernes";
+            this.lblBlockViaticos.Visible = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5970,5 +5984,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
+        private System.Windows.Forms.Label lblBlockViaticos;
     }
 }
