@@ -111,7 +111,7 @@ namespace Ametrano.Presentacion
             boxCantidadHijosAlumno_2.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno_2.SelectedIndex = 0;
             boxTurnoViaticos.SelectedIndex = 0;
-            boxTurnoAsistencia.SelectedIndex = 0;
+            
             
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
@@ -145,10 +145,7 @@ namespace Ametrano.Presentacion
                 
             }
 
-            for (int i = 0; i < docentes.Length; i++)
-            {
-                boxTurnoAsistencia.Items.Add(docentes[i]);               
-            }
+            
 
             DateTime fecha = DateTime.Now;
 
@@ -1454,7 +1451,9 @@ namespace Ametrano.Presentacion
 
         private void btnGenerarLista_Click(object sender, EventArgs e)
         {
-            string curso= boxCursoAsistencia.SelectedItem.ToString();
+            string curso = boxCursoAsistencia.SelectedItem.ToString();
+            string turno = boxTurnoAsistencia.SelectedItem.ToString();
+           
             dataGridListaAsistencias.Rows.Clear();
 
             if (boxCursoAsistencia.SelectedIndex==0)
@@ -1463,7 +1462,7 @@ namespace Ametrano.Presentacion
             }else
             {
 
-                string[] alumnos = CurContr.ListarAlumnosGrupo(curso);
+                string[] alumnos = CurContr.ListarAlumnosGrupo(curso,turno);
 
                 for (int i = 0; i < alumnos.Length; i++)
                 {
@@ -1604,6 +1603,29 @@ namespace Ametrano.Presentacion
             {
                 dataGridGruposActivos.DataSource = CurContr.GruposActivos();
                 MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
+            }
+        }
+
+        private void boxTurnoAsistencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxTurnoAsistencia.SelectedIndex != 0)
+            {
+                boxCursoAsistencia.Items.Clear();
+                boxCursoAsistencia.Items.Add("Curso...");
+                boxCursoAsistencia.SelectedIndex = 0;
+                string[] cursos = CurContr.listarCursoPorTurno(boxTurnoAsistencia.SelectedItem.ToString());
+
+                for (int i = 0; i < cursos.Length; i++)
+                {
+                    boxCursoAsistencia.Items.Add(cursos[i]);
+                }
+
+
+                boxCursoAsistencia.Enabled = true;
+            }
+            else
+            {
+                boxCursoAsistencia.Enabled = false;
             }
         }
     }
