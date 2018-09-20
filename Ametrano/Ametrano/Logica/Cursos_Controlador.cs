@@ -14,11 +14,12 @@ namespace Ametrano.Logica
     {
         ConexionBD objetoConexion = new ConexionBD();
         TestingClass testing = new TestingClass();
+
         public dynamic[] AlumnosCurso(string curso, out DataTable dataTable)
         {
             try
             {
-                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin group by cedula_alumno";
+                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin group by a.cedula_alumno";
                 MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
                 dataTable = new DataTable();
                 datosConsulta.Fill(dataTable);
@@ -52,6 +53,30 @@ namespace Ametrano.Logica
                 throw;
             }
         }
+
+        public string[] ListarAlumnosGrupo(string curso)
+        {
+            
+
+            string query = "SELECT CONCAT(a.nombre1,' ',a.apellido1) FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin GROUP BY a.cedula_alumno;";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int count = dataTable.Rows.Count;
+            string[] alumnos = new string[count];
+            int i = 0;
+            if (count > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {                                                         
+                    alumnos[i] += row[0].ToString();
+                    i++;
+                }
+            }
+            return alumnos;
+        }
+
+
 
         public string[] DatosViaticos(string cedula)
         {
@@ -176,8 +201,8 @@ namespace Ametrano.Logica
                 DataTable consultaMaxViatico_Table = new DataTable();
 
                 consulta_max_viatico_resultado.Fill(consultaMaxViatico_Table);
-                string fecha_ulimo_viatico = ""; //     <----------------------------Fecha ultimo viatico
-                string nombreDiaUltimoViatico = ""; //   <---------------------------- nombre del dia que se cobro el ultimo viatico
+                string fecha_ulimo_viatico = "";    //  <----------------------------- Fecha ultimo viatico
+                string nombreDiaUltimoViatico = ""; //  <----------------------------- nombre del dia que se cobro el ultimo viatico
                 foreach(DataRow row in consultaMaxViatico_Table.Rows){
                     fecha_ulimo_viatico = row[consultaMaxViatico_Table.Columns[0]].ToString();
                     nombreDiaUltimoViatico = row[consultaMaxViatico_Table.Columns[1]].ToString();
@@ -348,6 +373,7 @@ namespace Ametrano.Logica
             }
             
         }
+
         public int calcularMonto(string fecha_inicio, string fecha_fin,string cedula,int montoDia)
         {
             int diasAsistidosEnSemana = 0;
@@ -425,6 +451,7 @@ namespace Ametrano.Logica
 
             return datosCons;
         }
+
         public bool updatePago(string ci, string fecha,string semana,bool estado)
         {
             //Primero debo consultar el id de el viatico
