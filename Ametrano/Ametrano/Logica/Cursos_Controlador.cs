@@ -545,6 +545,17 @@ namespace Ametrano.Logica
             }
             return resultado;
         }
+
+        public DataTable GruposActivos()
+        {
+            string query = "SELECT nombre_curso as 'Nombre', fecha_inicio as 'Fecha de inicio', fecha_fin as 'Fecha de finalizacion', turno as 'Turno' FROM grupo WHERE curdate() BETWEEN fecha_inicio AND fecha_fin";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+
+            return dataTable;
+
+        }
     }
 
 }

@@ -59,7 +59,9 @@ namespace Ametrano.Presentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            
+            dataGridGruposActivos.DataSource = CurContr.GruposActivos();
+            dataGridGruposActivos.ReadOnly = true;
             boxSexoAlumno.SelectedIndex = 0;
             boxUsaInternetAlumno.SelectedIndex = 0;
             boxNivelEducativo.SelectedIndex = 0;
@@ -1587,6 +1589,7 @@ namespace Ametrano.Presentacion
 
         private void btnCrearGrupo_Click(object sender, EventArgs e)
         {
+            
             string turno = boxTurnoGrupo.SelectedItem.ToString();
             string curso = boxCursoGrupo.SelectedItem.ToString();
             string inicio = dateTimeInicioGrupo.Value.ToString();
@@ -1599,6 +1602,7 @@ namespace Ametrano.Presentacion
 
             if (CurContr.AgregarGrupo(curso, formattedFechaInicio, formattedFechaFin, turno))
             {
+                dataGridGruposActivos.DataSource = CurContr.GruposActivos();
                 MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
             }
         }

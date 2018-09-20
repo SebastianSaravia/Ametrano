@@ -5223,13 +5223,14 @@
             this.dataGridGruposActivos.AllowUserToDeleteRows = false;
             this.dataGridGruposActivos.AllowUserToResizeColumns = false;
             this.dataGridGruposActivos.AllowUserToResizeRows = false;
+            this.dataGridGruposActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridGruposActivos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridGruposActivos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridGruposActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridGruposActivos.Location = new System.Drawing.Point(616, 49);
+            this.dataGridGruposActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridGruposActivos.Location = new System.Drawing.Point(599, 49);
             this.dataGridGruposActivos.Name = "dataGridGruposActivos";
             this.dataGridGruposActivos.RowHeadersVisible = false;
-            this.dataGridGruposActivos.Size = new System.Drawing.Size(439, 408);
+            this.dataGridGruposActivos.Size = new System.Drawing.Size(447, 408);
             this.dataGridGruposActivos.TabIndex = 37;
             // 
             // btnCrearGrupo
