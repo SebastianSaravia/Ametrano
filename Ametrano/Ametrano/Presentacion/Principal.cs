@@ -24,7 +24,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickBuscarBajaDocente = new dynamic[2];
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
-        private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[2];
+        private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[4];
         private DatosAlumno datosAlumno = new DatosAlumno();
         bool diaViatico = false;
 
@@ -1478,6 +1478,8 @@ namespace Ametrano.Presentacion
                 boxMateriaAsisencia.Enabled = true;
                 eventoClickGenerarListaAsistencias[0] = true;
                 eventoClickGenerarListaAsistencias[1] = datosAlumnos;
+                eventoClickGenerarListaAsistencias[2] = curso;
+                eventoClickGenerarListaAsistencias[3] = turno;
             }
 
            
@@ -1631,6 +1633,7 @@ namespace Ametrano.Presentacion
                 boxCursoAsistencia.Items.Clear();
                 boxCursoAsistencia.Items.Add("Curso...");
                 boxCursoAsistencia.SelectedIndex = 0;
+
                 string[] cursos = CurContr.listarCursoPorTurno(boxTurnoAsistencia.SelectedItem.ToString());
 
                 for (int i = 0; i < cursos.Length; i++)
@@ -1717,36 +1720,60 @@ namespace Ametrano.Presentacion
 
         private void btnGuardarLista_Click(object sender, EventArgs e)
         {//evento que sube la lista a asistencias
-            
+            bool insertFail = false;
             if (eventoClickGenerarListaAsistencias[0])
             {
-                string materia = "";
-                string fecha_asistencia = "";
-                string cedula = "";
-                int asistencia = 0;
-
-
-                if (boxMateriaAsisencia.SelectedIndex != 0)
+               for(int i = 0; i < dataGridListaAsistencias.Rows.Count; i++)
                 {
-                    materia = boxMateriaAsisencia.SelectedItem.ToString();
+                    string materia = "";
+                    string fecha_asistencia = "";
+                    string cedula = "";
+                    int asistencia = 0;
+                    string nombre_curso = "";
+                    string turno = "";
+
+
+                    if (boxMateriaAsisencia.SelectedIndex != 0)
+                    {
+                        materia = boxMateriaAsisencia.SelectedItem.ToString();
+                    }
+                    fecha_asistencia = dateTimeFechaAsistencia.Value.ToString("yyyy-MM-dd");
+
+                    DataTable listaAlumnos = eventoClickGenerarListaAsistencias[1];
+
+                    nombre_curso = eventoClickGenerarListaAsistencias[2];
+
+
+                    turno = eventoClickGenerarListaAsistencias[3];
+
+                    if (dataGridListaAsistencias.SelectedRows[0].Cells[1].FormattedValue.ToString().Equals("True"))
+                    {
+                        asistencia = 1;
+                    }
+                    else
+                    {
+                        asistencia = 0;
+                    }
+
+                    cedula = listaAlumnos.Rows[i][listaAlumnos.Columns[1]].ToString();
+
+
+
+                    if(!CurContr.agregarAsistencia(cedula, nombre_curso, turno, materia, fecha_asistencia, asistencia))
+                    {
+                        insertFail = true;
+                    }
+
+
                 }
-                fecha_asistencia = dateTimeFechaAsistencia.Value.ToString("%Y-%m-%d");
 
-                DataTable listaAlumnos = eventoClickGenerarListaAsistencias[1];
-
-                
-
-                if (dataGridListaAsistencias.SelectedRows[0].Cells[1].FormattedValue.ToString().Equals("True"))
+                if (insertFail)
                 {
-                    asistencia = 1;
+                    MessageBox.Show("hubieron errores al insertar los datos");
                 }else
                 {
-                    asistencia = 0;
+                    MessageBox.Show("Lista registrada correctamente");
                 }
-
-                cedula = listaAlumnos.Rows[indiceRowSelected][listaAlumnos.Columns[1]].ToString();
-
-
 
             }
             

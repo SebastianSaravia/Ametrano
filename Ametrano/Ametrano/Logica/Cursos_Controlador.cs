@@ -581,6 +581,31 @@ namespace Ametrano.Logica
                         
         }
         
+        public bool agregarAsistencia(string cedula, string curso, string turno, string materia, string fecha, int asistencia)
+        {//metodo que agrega asistencia de alumno
+            string query1_buscar_curso = "select id_grupo from grupo g where g.nombre_curso = '" + curso + "' and g.turno = '" + turno + "' and curdate() between g.fecha_inicio and g.fecha_fin;";
+            MySqlDataAdapter query1_buscar_curso_resultados = objetoConexion.consultarDatos(query1_buscar_curso);
+            DataTable query1_buscar_curso_table = new DataTable();
+            query1_buscar_curso_resultados.Fill(query1_buscar_curso_table);
+
+            int id_grupo = 0;
+
+            int.TryParse(query1_buscar_curso_table.Rows[0][0].ToString(),out id_grupo);
+
+            string query2_insertar_asistencia = "insert into asiste values('"+curso+"',"+id_grupo+",'"+cedula+"','"+materia+"','"+fecha+"',"+asistencia+");";
+
+            int filasAfectadas = objetoConexion.sqlInsertUpdate(query2_insertar_asistencia);
+
+            bool retorno = false;
+
+            if (filasAfectadas > 0)
+            {
+                retorno = true;
+            }
+
+            return retorno;
+        }
+
     }
 
 }
