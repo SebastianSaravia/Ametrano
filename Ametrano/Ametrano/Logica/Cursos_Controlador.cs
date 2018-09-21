@@ -531,8 +531,7 @@ namespace Ametrano.Logica
             }
             return cursos;
         }
-
-
+        
         public bool AgregarGrupo(string curso, string inicio, string fin, string turno)
         {
             string query = "INSERT INTO grupo(nombre_curso, fecha_inicio, fecha_fin,turno) VALUES('{0}','{1}','{2}','{3}')";
@@ -556,6 +555,36 @@ namespace Ametrano.Logica
             return dataTable;
 
         }
+
+        public string[] ListarPeriodos(string curso)
+        {
+            
+            string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin))  from grupo WHERE nombre_curso = '" + curso+ "' AND fecha_inicio>=curdate()";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int filas = dataTable.Rows.Count;            
+            string[] periodo = new string[filas];            
+            int i = 0;
+            
+            if (filas > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                       periodo[i] = row[column].ToString();
+                       i++;
+                    }
+                    
+                }
+
+            }
+                        
+            return periodo;
+                        
+        }
+        
     }
 
 }

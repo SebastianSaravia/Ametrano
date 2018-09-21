@@ -79,8 +79,7 @@ namespace Ametrano.Presentacion
             boxSexoAlumno.SelectedIndex = 0;
             boxTrabajaActualmenteAlumno.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno.SelectedIndex = 0;
-            boxTrabajoCuidandoAlumno.SelectedIndex = 0;
-            boxLocalidadAlumno.SelectedIndex = 0;
+            boxTrabajoCuidandoAlumno.SelectedIndex = 0;            
             boxBuscar.SelectedIndex = 0;
             boxBuscar_2.SelectedIndex = 0;
             boxCursoViaticos.SelectedIndex = 0;
@@ -122,13 +121,15 @@ namespace Ametrano.Presentacion
             {
                 PlaceholderRec(control);
             }
+           
             string[] cursos = controlador.ListarCursos();
             string[] materias = controlador.ListarMaterias();
             string[] docentes = controlador.ListarDocentes();
+            
+
             for (int i = 0; i < cursos.Length; i++)
             {
-                
-                
+                                
                 boxCursoAsistencia_2.Items.Add(cursos[i]);
                 boxCursoGrupo.Items.Add(cursos[i]);
                 boxCursoAlumno_2.Items.Add(cursos[i]);
@@ -225,7 +226,7 @@ namespace Ametrano.Presentacion
 
             //Lleno array de direccion
             direccion[0] = boxDepartamentoAlumno.SelectedItem.ToString();
-            direccion[1] = boxLocalidadAlumno.SelectedItem.ToString();
+            direccion[1] = txtLocalidadAlumno.Text;
             direccion[2] = txtCalleAlumno.Text;
             direccion[3] = txtReferenciaAlumno.Text;
             direccion[4] = txtNumeroPuertaAlumno.Text;
@@ -1627,6 +1628,28 @@ namespace Ametrano.Presentacion
             {
                 boxCursoAsistencia.Enabled = false;
             }
+        }
+
+        private void boxCursoAlumno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxCursoAlumno.SelectedIndex != 0)
+            {
+                boxPeriodoAlumno.Enabled = true;
+            }else
+            {
+                boxPeriodoAlumno.Enabled = false;
+            }
+            string curso = boxCursoAlumno.SelectedItem.ToString();
+            string[] periodos = CurContr.ListarPeriodos(curso);
+            boxPeriodoAlumno.Items.Clear();
+            boxPeriodoAlumno.Items.Add("Periodo...");
+            boxPeriodoAlumno.SelectedIndex = 0;
+            for (int i = 0; i < periodos.Length; i++)
+            {
+                boxPeriodoAlumno.Items.Add(periodos[i]);
+            }
+
+
         }
     }
 }

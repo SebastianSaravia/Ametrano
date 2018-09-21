@@ -2,6 +2,7 @@
 using Ametrano.Persistencia;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +13,7 @@ namespace Ametrano.Logica
     {
         ConexionBD objetoConexion = new ConexionBD();
         TestingClass testing = new TestingClass();//--------------------------------------
-
-        /// <summary>
-        /// 
-        /// </summary>
+               
         /// <param name="datos"></param>
         public void insertarAlumno(DatosAlumno datos)
         {
@@ -120,10 +118,29 @@ namespace Ametrano.Logica
             string query = "INSERT INTO alumno(cedula_alumno, nombre1, nombre2, apellido1, apellido2, fecha_nac, edad, sexo, estado_civil, estado, nivel_educativo, ultimo_año_aprobado, departamento, localidad, calle, referencia, numero_puerta, apartamento, telefono_fijo, celular, email, cobertura_salud, jefe_hogar, cant_hijos, trabajo_alguna_vez, trabaja_actualmente, tiempo_sin_trabajo, horas_trabajo, ingreso_mensual, cant_personas_cargo_17, cant_personas_cargo_18_59, cant_personas_cargo_60, persona_tiene_discapacidad, cuenta_con_apoyo, carga_semanal_cuidado, trabajo_anteriormente_cuidando, experiencia_instituciones_cuidado, usa_internet, facil_acceso_internet, medio_acceso_internet) "+
                 "VALUES("+datosPersonales+datosCurso+datosFormacionAcademica+datosDireccion+datosContacto+datosCoberura+datosHogar+datosTrabajo+datosPersonasCargo+datosAccesoInternet+");";
             int datosConsulta = objetoConexion.sqlInsertUpdate(query);
-        }
+                        
+            string query2 = "";
+            MySql.Data.MySqlClient.MySqlDataAdapter datoConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datoConsulta.Fill(dataTable);
+            int contador = dataTable.Rows.Count;
+            int i = 0;
+            string id_grupo = "";
+            if (contador > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    id_grupo = row[0].ToString();
+                }
 
+            }
+            string cedula = datos.getDatosPersona()["cedula_alumno"];
+            string curso = datos.getDatosPersona()["curso_alumno"];
+            string query3 = "INSERT INTO asiste(curso, id_grupo, cedula_alumno, nombre_materia, fecha, asistencia) VALUES('{0}',{1},'{2}','{3}','{4}',{5})";
+            query3 = string.Format(query2, curso, id_grupo, cedula, "nuevo", "0001-01-01",0);
+            int Consulta = objetoConexion.sqlInsertUpdate(query3);
 
-
-
-    }
-}
+        }//Fin InsertarAlumno
+        
+    }//Fin class
+}//Fin namespace
