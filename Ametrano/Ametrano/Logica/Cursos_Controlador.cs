@@ -552,12 +552,12 @@ namespace Ametrano.Logica
 
         }
 
-        public string[] ListarPeriodos(string curso,string turno)
+        public string[] ListarPeriodos(string curso,string turno,out DataTable dataTable)
         {
             
-            string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin))  from grupo WHERE nombre_curso = '" + curso+ "' AND fecha_inicio>=curdate() AND turno='"+turno+"'";
+            string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin)), id_grupo  from grupo WHERE nombre_curso = '" + curso+ "' AND fecha_inicio>=curdate() AND turno='"+turno+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
-            DataTable dataTable = new DataTable();
+            dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
             int filas = dataTable.Rows.Count;            
             string[] periodo = new string[filas];            
@@ -567,12 +567,10 @@ namespace Ametrano.Logica
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-                    foreach (DataColumn column in dataTable.Columns)
-                    {
-                       periodo[i] = row[column].ToString();
-                       i++;
-                    }
                     
+                       periodo[i] = row[0].ToString();
+                       i++;
+                                       
                 }
 
             }

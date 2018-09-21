@@ -15,7 +15,7 @@ namespace Ametrano.Logica
         TestingClass testing = new TestingClass();//--------------------------------------
                
         /// <param name="datos"></param>
-        public void insertarAlumno(DatosAlumno datos)
+        public bool insertarAlumno(DatosAlumno datos, int id_grupo)
         {
 
            
@@ -119,27 +119,32 @@ namespace Ametrano.Logica
                 "VALUES("+datosPersonales+datosCurso+datosFormacionAcademica+datosDireccion+datosContacto+datosCoberura+datosHogar+datosTrabajo+datosPersonasCargo+datosAccesoInternet+");";
             int datosConsulta = objetoConexion.sqlInsertUpdate(query);
                         
-            string query2 = "";
-            MySql.Data.MySqlClient.MySqlDataAdapter datoConsulta = objetoConexion.consultarDatos(query);
-            DataTable dataTable = new DataTable();
-            datoConsulta.Fill(dataTable);
-            int contador = dataTable.Rows.Count;
-            int i = 0;
-            string id_grupo = "";
-            if (contador > 0)
-            {
-                foreach (DataRow row in dataTable.Rows)
-                {
-                    id_grupo = row[0].ToString();
-                }
 
-            }
+           
             string cedula = datos.getDatosPersona()["cedula_alumno"];
-            string curso = datos.getDatosPersona()["curso_alumno"];
+            string curso = "";
+            if (id_grupo == 0)
+            {
+                curso = "Pendientes";
+            }
+            else
+            {
+            curso = datos.getDatosPersona()["curso_alumno"];
+            }
+           
 
-            string query3 = "INSERT INTO asiste(curso, id_grupo, cedula_alumno, nombre_materia, fecha, asistencia) VALUES('{0}',{1},'{2}','{3}','{4}',{5})";
-            query3 = string.Format(query2, curso, id_grupo, cedula, "nuevo", "0001-01-01",0);
+            string query3 = "INSERT INTO asiste(nombre_curso, id_grupo, cedula_alumno, nombre_materia, fecha, asistencia) VALUES('{0}',{1},'{2}','{3}','{4}',{5})";
+            query3 = string.Format(query3, curso, id_grupo, cedula, "nuevo", "0001-01-01",0);
             int Consulta = objetoConexion.sqlInsertUpdate(query3);
+            bool exito=false;
+
+            if (Consulta>0 && datosConsulta > 0)
+            {
+                exito = true;
+            }
+
+            return exito;
+            
 
         }//Fin InsertarAlumno
         
