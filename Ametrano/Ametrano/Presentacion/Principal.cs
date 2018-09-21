@@ -25,6 +25,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
         private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[2];
+        private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
         bool diaViatico = false;
 
@@ -1532,13 +1533,46 @@ namespace Ametrano.Presentacion
 
         private void btnFinalizar_Click(object sender, EventArgs e)
         {
+
+
+
             Alumnos_Controlador al = new Alumnos_Controlador();
-                   
-                al.insertarAlumno(datosAlumno);
-            
-            
-            
-            
+            int periodoSeleccionado = boxPeriodoAlumno.SelectedIndex;
+            int id_grupo = 0;
+            if (periodoSeleccionado == 1)
+            {
+                id_grupo = 0;
+            }else if(periodoSeleccionado>1)
+            {
+                if (eventoClickAgregarAlumnoCurso[0])
+                {
+                    DataTable datosPeriodos = eventoClickAgregarAlumnoCurso[1];
+                    int.TryParse(datosPeriodos.Rows[periodoSeleccionado - 2][1].ToString(), out id_grupo);
+                }
+            }
+            DialogResult dialogResult = MessageBox.Show("Esta seguro que todos los datos son correctos?", "Continuar?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+
+                if (al.insertarAlumno(datosAlumno, id_grupo))
+                {
+                    MessageBox.Show("El alumno ha sigo guardado con exito");
+                }else
+                {
+                    MessageBox.Show("Error al ingresar alumno, verifique que los campos contienen la informacion correcta", "Error al ingresar alumno");
+                }
+                
+               
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+               
+            }
+
+           
+
+
+
         }
 
         private void boxCursoAsistencia_SelectedIndexChanged(object sender, EventArgs e)
@@ -1670,9 +1704,9 @@ namespace Ametrano.Presentacion
             {
              turno = boxTurnoAlumno.SelectedItem.ToString();
             }
-            
 
-            string[] periodos = CurContr.ListarPeriodos(curso,turno);
+            DataTable datos = new DataTable();
+            string[] periodos = CurContr.ListarPeriodos(curso,turno, out datos);
             boxPeriodoAlumno.Items.Clear();
             boxPeriodoAlumno.Items.Add("Periodo...");
             boxPeriodoAlumno.Items.Add("Pendiente");
@@ -1681,6 +1715,8 @@ namespace Ametrano.Presentacion
             {
                 boxPeriodoAlumno.Items.Add(periodos[i]);
             }
+            eventoClickAgregarAlumnoCurso[0] = true;
+            eventoClickAgregarAlumnoCurso[1] = datos;
 
 
         }
@@ -1702,8 +1738,8 @@ namespace Ametrano.Presentacion
                 turno = boxTurnoAlumno.SelectedItem.ToString();
             }
 
-
-            string[] periodos = CurContr.ListarPeriodos(curso, turno);
+            DataTable datos = new DataTable();
+            string[] periodos = CurContr.ListarPeriodos(curso, turno, out datos);
             boxPeriodoAlumno.Items.Clear();
             boxPeriodoAlumno.Items.Add("Periodo...");
             boxPeriodoAlumno.Items.Add("Pendiente");
@@ -1712,6 +1748,8 @@ namespace Ametrano.Presentacion
             {
                 boxPeriodoAlumno.Items.Add(periodos[i]);
             }
+            eventoClickAgregarAlumnoCurso[0] = true;
+            eventoClickAgregarAlumnoCurso[1] = datos;
 
         }
 
@@ -1744,7 +1782,7 @@ namespace Ametrano.Presentacion
                     asistencia = 0;
                 }
 
-                cedula = listaAlumnos.Rows[indiceRowSelected][listaAlumnos.Columns[1]].ToString();
+                //cedula = listaAlumnos.Rows[indiceRowSelected][listaAlumnos.Columns[1]].ToString();
 
 
 
