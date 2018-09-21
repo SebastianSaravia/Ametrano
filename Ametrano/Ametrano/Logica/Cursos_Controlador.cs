@@ -590,16 +590,43 @@ namespace Ametrano.Logica
 
             int.TryParse(query1_buscar_curso_table.Rows[0][0].ToString(),out id_grupo);
 
-            string query2_insertar_asistencia = "insert into asiste values('"+curso+"',"+id_grupo+",'"+cedula+"','"+materia+"','"+fecha+"',"+asistencia+");";
+            //busco si ya esta el registro
 
-            int filasAfectadas = objetoConexion.sqlInsertUpdate(query2_insertar_asistencia);
+            string query2_buscar_asistencia = "select cedula_alumno from asiste a where a.nombre_curso = '"+curso+"' and id_grupo = "+id_grupo+" and cedula_alumno = '" + cedula + "' and nombre_materia = '"+materia+"' and fecha = '" + fecha + "'";
+
+            MySqlDataAdapter query2_buscar_asistencia_resultados = objetoConexion.consultarDatos(query2_buscar_asistencia);
+
+            DataTable query2_buscar_asistencia_table = new DataTable();
+
+            query2_buscar_asistencia_resultados.Fill(query2_buscar_asistencia_table);
+
+            testing.MostrarMessageBox(query2_buscar_asistencia_table.Rows.Count+"");
 
             bool retorno = false;
 
-            if (filasAfectadas > 0)
+            if (query2_buscar_asistencia_table.Rows.Count == 0)
             {
-                retorno = true;
+                string query3_insertar_asistencia = "insert into asiste values('" + curso + "'," + id_grupo + ",'" + cedula + "','" + materia + "','" + fecha + "'," + asistencia + ");";
+
+                int filasAfectadas = objetoConexion.sqlInsertUpdate(query3_insertar_asistencia);
+
+                if (filasAfectadas > 0)
+                {
+                    retorno = true;
+                }
+            }else
+            {
+                string query3_insertar_asistencia = "update asiste set asistencia = "+asistencia+" where nombre_curso = '"+curso+"' and id_grupo = "+id_grupo+" and cedula_alumno = '" + cedula + "' and nombre_materia = '"+materia+"' and fecha = '" + fecha + "'";
+
+                int filasAfectadas = objetoConexion.sqlInsertUpdate(query3_insertar_asistencia);
+
+                if (filasAfectadas > 0)
+                {
+                    retorno = true;
+                }
             }
+
+
 
             return retorno;
         }

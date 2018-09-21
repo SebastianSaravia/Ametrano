@@ -25,7 +25,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
         private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[4];
-        private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[2];
+       
         private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
         bool diaViatico = false;
