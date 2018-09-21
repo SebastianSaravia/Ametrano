@@ -55,13 +55,13 @@ namespace Ametrano.Logica
             }
         }
 
-        public string[] ListarAlumnosGrupo(string curso,string turno)
+        public string[] ListarAlumnosGrupo(string curso,string turno,out DataTable dataTable)
         {
             
 
-            string query = "SELECT CONCAT(a.nombre1,' ',a.apellido1) FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+"' GROUP BY a.cedula_alumno;";
+            string query = "SELECT CONCAT(a.nombre1,' ',a.apellido1), a.cedula_alumno FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+"' GROUP BY a.cedula_alumno;";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
-            DataTable dataTable = new DataTable();
+            dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
             int count = dataTable.Rows.Count;
             string[] alumnos = new string[count];
@@ -270,7 +270,7 @@ namespace Ametrano.Logica
                     string nombreDiaUltimoViatico2 = "";
                     fechaInicioNueva = ""; //Variable que guardara la fecha de inicio
                     fechaFinNueva = ""; //variable que guardara la fecha de fifn
-                    string fechaFinConsulta = "select max(DATE_FORMAT(v.fecha_fin,'%Y-%m-%d')) as fecha, dayname(v.fecha) as nombreDia from viatico v join recive r on r.id_viatico = v.id_viatico where r.cedula_alumno = '" + cedula + "';";
+                    string fechaFinConsulta = "set lc_time_names = es_ES;select max(DATE_FORMAT(v.fecha_fin,'%Y-%m-%d')) as fecha, dayname(v.fecha) as nombreDia from viatico v join recive r on r.id_viatico = v.id_viatico where r.cedula_alumno = '" + cedula + "';";
                     MySqlDataAdapter fechaFin_resultado = objetoConexion.consultarDatos(fechaFinConsulta);
 
                     DataTable fechaFin_table = new DataTable();
@@ -291,12 +291,12 @@ namespace Ametrano.Logica
 
                     fechaDT = DateTime.Parse(fecha_fin_ultimo_viatico2);
 
-                    if (nombreDiaUltimoViatico2.Equals("Thursday"))
+                    if (nombreDiaUltimoViatico2.Equals("jueves"))
                     {//Si es jueves agrego 4 dias para llegar a lunes
                         fechaDT = fechaDT.AddDays(4);
 
                     }
-                    else if (nombreDiaUltimoViatico2.Equals("Friday"))
+                    else if (nombreDiaUltimoViatico2.Equals("viernes"))
                     {//Agrego 3 dias mas si es viernes
                         fechaDT = fechaDT.AddDays(3);
                     }

@@ -24,6 +24,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickBuscarBajaDocente = new dynamic[2];
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
+        private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
         bool diaViatico = false;
 
@@ -110,17 +111,20 @@ namespace Ametrano.Presentacion
             boxCantidadHijosAlumno_2.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno_2.SelectedIndex = 0;
             boxTurnoViaticos.SelectedIndex = 0;
-            
-            
+            dateTimeFechaAsistencia.MaxDate = DateTime.Now;
+
+
+            foreach (Control control in this.Controls)
+            {
+                PlaceholderRec(control);
+            }
+
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
-            foreach (Control control in this.Controls)
-            {
-                PlaceholderRec(control);
-            }
+            
            
             string[] cursos = controlador.ListarCursos();
             string[] materias = controlador.ListarMaterias();
@@ -1129,12 +1133,12 @@ namespace Ametrano.Presentacion
                     {
                         try
                         {
-                            dataGridViaticos.Columns.Clear();
-                            dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
-                            dataGridViaticos.Columns[0].ReadOnly = true;
-                            dataGridViaticos.Columns[1].ReadOnly = true;
-                            dataGridViaticos.Columns[5].Visible = false;
-
+                            //dataGridViaticos.Columns.Clear();
+                            //dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
+                            //dataGridViaticos.Columns[0].ReadOnly = true;
+                            //dataGridViaticos.Columns[1].ReadOnly = true;
+                            //dataGridViaticos.Columns[5].Visible = false;
+                            
                         }
                         catch (Exception ew)
                         {
@@ -1462,13 +1466,18 @@ namespace Ametrano.Presentacion
                 MessageBox.Show("Debe seleccionar un curso primero.");
             }else
             {
-
-                string[] alumnos = CurContr.ListarAlumnosGrupo(curso,turno);
+                DataTable datosAlumnos = new DataTable();
+                string[] alumnos = CurContr.ListarAlumnosGrupo(curso,turno,out datosAlumnos);
 
                 for (int i = 0; i < alumnos.Length; i++)
                 {
                     dataGridListaAsistencias.Rows.Add(alumnos[i]);
                 }
+                btnGuardarLista.Enabled = true;
+                dateTimeFechaAsistencia.Enabled = true;
+                boxMateriaAsisencia.Enabled = true;
+                eventoClickGenerarListaAsistencias[0] = true;
+                eventoClickGenerarListaAsistencias[1] = datosAlumnos;
             }
 
            
@@ -1623,10 +1632,18 @@ namespace Ametrano.Presentacion
 
 
                 boxCursoAsistencia.Enabled = true;
+               
+                boxMateriaAsisencia.Enabled = true;
+                btnGuardarLista.Enabled = true;
+                dateTimeFechaAsistencia.Enabled = true;
             }
             else
             {
                 boxCursoAsistencia.Enabled = false;
+                boxMateriaAsisencia.Enabled = false;
+                btnGuardarLista.Enabled = false;
+                dateTimeFechaAsistencia.Enabled = false;
+
             }
         }
 
@@ -1648,6 +1665,45 @@ namespace Ametrano.Presentacion
             {
                 boxPeriodoAlumno.Items.Add(periodos[i]);
             }
+
+
+        }
+
+        private void btnGuardarLista_Click(object sender, EventArgs e)
+        {//evento que sube la lista a asistencias
+            
+            if (eventoClickGenerarListaAsistencias[0])
+            {
+                string materia = "";
+                string fecha_asistencia = "";
+                string cedula = "";
+                int asistencia = 0;
+
+
+                if (boxMateriaAsisencia.SelectedIndex != 0)
+                {
+                    materia = boxMateriaAsisencia.SelectedItem.ToString();
+                }
+                fecha_asistencia = dateTimeFechaAsistencia.Value.ToString("%Y-%m-%d");
+
+                DataTable listaAlumnos = eventoClickGenerarListaAsistencias[1];
+
+                
+
+                if (dataGridListaAsistencias.SelectedRows[0].Cells[1].FormattedValue.ToString().Equals("True"))
+                {
+                    asistencia = 1;
+                }else
+                {
+                    asistencia = 0;
+                }
+
+                cedula = listaAlumnos.Rows[indiceRowSelected][listaAlumnos.Columns[1]].ToString();
+
+
+
+            }
+            
 
 
         }

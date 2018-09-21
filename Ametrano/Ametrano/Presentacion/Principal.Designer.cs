@@ -111,6 +111,7 @@
             this.txtCelularAlumno = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.txtLocalidadAlumno = new System.Windows.Forms.TextBox();
             this.txtCalleAlumno = new System.Windows.Forms.TextBox();
             this.boxDepartamentoAlumno = new System.Windows.Forms.ComboBox();
             this.txtReferenciaAlumno = new System.Windows.Forms.TextBox();
@@ -412,15 +413,12 @@
             this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
             this.btnConsultarLista = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
-            this.btnGuardarLista = new System.Windows.Forms.Button();
             this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
             this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
             this.boxTurnoAsistencia = new System.Windows.Forms.ComboBox();
             this.btnGenerarLista = new System.Windows.Forms.Button();
-            this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
             this.dataGridGruposActivos = new System.Windows.Forms.DataGridView();
             this.btnCrearGrupo = new System.Windows.Forms.Button();
@@ -441,7 +439,9 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.txtLocalidadAlumno = new System.Windows.Forms.TextBox();
+            this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
+            this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
+            this.btnGuardarLista = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -1522,6 +1522,18 @@
             this.groupBox8.TabIndex = 17;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Dirección";
+            // 
+            // txtLocalidadAlumno
+            // 
+            this.txtLocalidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalidadAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtLocalidadAlumno.Location = new System.Drawing.Point(199, 37);
+            this.txtLocalidadAlumno.Name = "txtLocalidadAlumno";
+            this.txtLocalidadAlumno.Size = new System.Drawing.Size(167, 24);
+            this.txtLocalidadAlumno.TabIndex = 25;
+            this.txtLocalidadAlumno.Text = "Localidad";
+            this.txtLocalidadAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtLocalidadAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtCalleAlumno
             // 
@@ -5077,28 +5089,18 @@
             // groupBox56
             // 
             this.groupBox56.Controls.Add(this.btnGuardarLista);
+            this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
+            this.groupBox56.Controls.Add(this.boxMateriaAsisencia);
             this.groupBox56.Controls.Add(this.boxCursoAsistencia);
             this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
-            this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
             this.groupBox56.Controls.Add(this.boxTurnoAsistencia);
             this.groupBox56.Controls.Add(this.btnGenerarLista);
-            this.groupBox56.Controls.Add(this.boxMateriaAsisencia);
             this.groupBox56.Location = new System.Drawing.Point(46, 33);
             this.groupBox56.Name = "groupBox56";
             this.groupBox56.Size = new System.Drawing.Size(494, 459);
             this.groupBox56.TabIndex = 34;
             this.groupBox56.TabStop = false;
             this.groupBox56.Text = "Generar nueva lista";
-            // 
-            // btnGuardarLista
-            // 
-            this.btnGuardarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarLista.Location = new System.Drawing.Point(23, 211);
-            this.btnGuardarLista.Name = "btnGuardarLista";
-            this.btnGuardarLista.Size = new System.Drawing.Size(209, 43);
-            this.btnGuardarLista.TabIndex = 33;
-            this.btnGuardarLista.Text = "Guardar lista";
-            this.btnGuardarLista.UseVisualStyleBackColor = true;
             // 
             // boxCursoAsistencia
             // 
@@ -5152,14 +5154,6 @@
             this.colAsistenciaAsistencias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.colAsistenciaAsistencias.Width = 80;
             // 
-            // dateTimeFechaAsistencia
-            // 
-            this.dateTimeFechaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 182);
-            this.dateTimeFechaAsistencia.Name = "dateTimeFechaAsistencia";
-            this.dateTimeFechaAsistencia.Size = new System.Drawing.Size(209, 24);
-            this.dateTimeFechaAsistencia.TabIndex = 32;
-            // 
             // boxTurnoAsistencia
             // 
             this.boxTurnoAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5186,18 +5180,6 @@
             this.btnGenerarLista.Text = "Generar lista";
             this.btnGenerarLista.UseVisualStyleBackColor = true;
             this.btnGenerarLista.Click += new System.EventHandler(this.btnGenerarLista_Click);
-            // 
-            // boxMateriaAsisencia
-            // 
-            this.boxMateriaAsisencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxMateriaAsisencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxMateriaAsisencia.FormattingEnabled = true;
-            this.boxMateriaAsisencia.Items.AddRange(new object[] {
-            "Materia..."});
-            this.boxMateriaAsisencia.Location = new System.Drawing.Point(23, 151);
-            this.boxMateriaAsisencia.Name = "boxMateriaAsisencia";
-            this.boxMateriaAsisencia.Size = new System.Drawing.Size(209, 26);
-            this.boxMateriaAsisencia.TabIndex = 30;
             // 
             // nuevoGrupo
             // 
@@ -5427,17 +5409,42 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // txtLocalidadAlumno
+            // boxMateriaAsisencia
             // 
-            this.txtLocalidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLocalidadAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtLocalidadAlumno.Location = new System.Drawing.Point(199, 37);
-            this.txtLocalidadAlumno.Name = "txtLocalidadAlumno";
-            this.txtLocalidadAlumno.Size = new System.Drawing.Size(167, 24);
-            this.txtLocalidadAlumno.TabIndex = 25;
-            this.txtLocalidadAlumno.Text = "Localidad";
-            this.txtLocalidadAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtLocalidadAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.boxMateriaAsisencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxMateriaAsisencia.Enabled = false;
+            this.boxMateriaAsisencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxMateriaAsisencia.FormattingEnabled = true;
+            this.boxMateriaAsisencia.Items.AddRange(new object[] {
+            "Materia..."});
+            this.boxMateriaAsisencia.Location = new System.Drawing.Point(23, 162);
+            this.boxMateriaAsisencia.Name = "boxMateriaAsisencia";
+            this.boxMateriaAsisencia.Size = new System.Drawing.Size(209, 26);
+            this.boxMateriaAsisencia.TabIndex = 37;
+            // 
+            // dateTimeFechaAsistencia
+            // 
+            this.dateTimeFechaAsistencia.Enabled = false;
+            this.dateTimeFechaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 194);
+            this.dateTimeFechaAsistencia.MaxDate = new System.DateTime(2999, 9, 21, 0, 0, 0, 0);
+            this.dateTimeFechaAsistencia.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimeFechaAsistencia.Name = "dateTimeFechaAsistencia";
+            this.dateTimeFechaAsistencia.Size = new System.Drawing.Size(209, 24);
+            this.dateTimeFechaAsistencia.TabIndex = 38;
+            this.dateTimeFechaAsistencia.Value = new System.DateTime(2018, 9, 21, 0, 0, 0, 0);
+            // 
+            // btnGuardarLista
+            // 
+            this.btnGuardarLista.Enabled = false;
+            this.btnGuardarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarLista.Location = new System.Drawing.Point(23, 224);
+            this.btnGuardarLista.Name = "btnGuardarLista";
+            this.btnGuardarLista.Size = new System.Drawing.Size(209, 43);
+            this.btnGuardarLista.TabIndex = 39;
+            this.btnGuardarLista.Text = "Guardar lista";
+            this.btnGuardarLista.UseVisualStyleBackColor = true;
+            this.btnGuardarLista.Click += new System.EventHandler(this.btnGuardarLista_Click);
             // 
             // Principal
             // 
@@ -5991,10 +5998,8 @@
         private System.Windows.Forms.GroupBox groupBox56;
         private System.Windows.Forms.ComboBox boxCursoAsistencia;
         private System.Windows.Forms.DataGridView dataGridListaAsistencias;
-        private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia;
         private System.Windows.Forms.ComboBox boxTurnoAsistencia;
         private System.Windows.Forms.Button btnGenerarLista;
-        private System.Windows.Forms.ComboBox boxMateriaAsisencia;
         private System.Windows.Forms.TabPage nuevoCurso;
         private System.Windows.Forms.GroupBox groupBox58;
         private System.Windows.Forms.GroupBox groupBox59;
@@ -6025,7 +6030,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
-        private System.Windows.Forms.Button btnGuardarLista;
         private System.Windows.Forms.Label lblBlockViaticos;
         private System.Windows.Forms.Button btnCrearGrupo;
         private System.Windows.Forms.Button btnCrearCurso;
@@ -6033,5 +6037,8 @@
         private System.Windows.Forms.ComboBox boxTurnoGrupo;
         private System.Windows.Forms.DataGridView dataGridGruposActivos;
         private System.Windows.Forms.TextBox txtLocalidadAlumno;
+        private System.Windows.Forms.Button btnGuardarLista;
+        private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia;
+        private System.Windows.Forms.ComboBox boxMateriaAsisencia;
     }
 }
