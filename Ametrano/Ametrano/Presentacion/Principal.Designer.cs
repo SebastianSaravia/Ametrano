@@ -111,7 +111,7 @@
             this.txtCelularAlumno = new System.Windows.Forms.TextBox();
             this.txtTelefono = new System.Windows.Forms.TextBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.txtLocalidadAlumno = new System.Windows.Forms.TextBox();
+           
             this.txtCalleAlumno = new System.Windows.Forms.TextBox();
             this.boxDepartamentoAlumno = new System.Windows.Forms.ComboBox();
             this.txtReferenciaAlumno = new System.Windows.Forms.TextBox();
