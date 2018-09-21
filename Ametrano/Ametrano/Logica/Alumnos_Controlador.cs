@@ -136,6 +136,7 @@ namespace Ametrano.Logica
             }
             string cedula = datos.getDatosPersona()["cedula_alumno"];
             string curso = datos.getDatosPersona()["curso_alumno"];
+
             string query3 = "INSERT INTO asiste(curso, id_grupo, cedula_alumno, nombre_materia, fecha, asistencia) VALUES('{0}',{1},'{2}','{3}','{4}',{5})";
             query3 = string.Format(query2, curso, id_grupo, cedula, "nuevo", "0001-01-01",0);
             int Consulta = objetoConexion.sqlInsertUpdate(query3);

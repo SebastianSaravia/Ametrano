@@ -459,11 +459,7 @@ namespace Ametrano.Logica
         {
             string sql = "insert into curso values('"+nombre+"','"+tipo+"');";
             int datosCons = objetoConexion.sqlInsertUpdate(sql);
-
-
-
-
-
+            
             return datosCons;
         }
 
@@ -547,7 +543,7 @@ namespace Ametrano.Logica
 
         public DataTable GruposActivos()
         {
-            string query = "SELECT nombre_curso as 'Nombre', fecha_inicio as 'Fecha de inicio', fecha_fin as 'Fecha de finalizacion', turno as 'Turno' FROM grupo WHERE curdate() BETWEEN fecha_inicio AND fecha_fin";
+            string query = "SELECT nombre_curso as 'Nombre', fecha_inicio as 'Fecha de inicio', fecha_fin as 'Fecha de finalizacion', turno as 'Turno' FROM grupo WHERE curdate() BETWEEN fecha_inicio AND fecha_fin OR fecha_inicio>=curdate()";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
@@ -556,10 +552,10 @@ namespace Ametrano.Logica
 
         }
 
-        public string[] ListarPeriodos(string curso)
+        public string[] ListarPeriodos(string curso,string turno)
         {
             
-            string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin))  from grupo WHERE nombre_curso = '" + curso+ "' AND fecha_inicio>=curdate()";
+            string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin))  from grupo WHERE nombre_curso = '" + curso+ "' AND fecha_inicio>=curdate() AND turno='"+turno+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);

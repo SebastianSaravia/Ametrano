@@ -110,8 +110,9 @@ namespace Ametrano.Presentacion
             boxCantidadHijosAlumno_2.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno_2.SelectedIndex = 0;
             boxTurnoViaticos.SelectedIndex = 0;
-            
-            
+            boxTurnoAlumno.SelectedIndex = 0;
+            boxTurnoAlumno_2.SelectedIndex = 0;
+
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
@@ -1589,22 +1590,30 @@ namespace Ametrano.Presentacion
 
         private void btnCrearGrupo_Click(object sender, EventArgs e)
         {
-            
-            string turno = boxTurnoGrupo.SelectedItem.ToString();
-            string curso = boxCursoGrupo.SelectedItem.ToString();
-            string inicio = dateTimeInicioGrupo.Value.ToString();
-            string fin = dateTimeFinalizacionGrupo.Value.ToString();
 
-            DateTime fechaInicio = DateTime.Parse(inicio);
-            DateTime fechaFin = DateTime.Parse(fin);
-            string formattedFechaInicio = fechaInicio.ToString("yyyy-MM-dd");
-            string formattedFechaFin = fechaFin.ToString("yyyy-MM-dd");
-
-            if (CurContr.AgregarGrupo(curso, formattedFechaInicio, formattedFechaFin, turno))
+            if (boxTurnoGrupo.SelectedIndex !=0 && boxCursoGrupo.SelectedIndex != 0)
             {
-                dataGridGruposActivos.DataSource = CurContr.GruposActivos();
-                MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
+                string turno = boxTurnoGrupo.SelectedItem.ToString();
+                string curso = boxCursoGrupo.SelectedItem.ToString();
+                string inicio = dateTimeInicioGrupo.Value.ToString();
+                string fin = dateTimeFinalizacionGrupo.Value.ToString();
+
+                DateTime fechaInicio = DateTime.Parse(inicio);
+                DateTime fechaFin = DateTime.Parse(fin);
+                string formattedFechaInicio = fechaInicio.ToString("yyyy-MM-dd");
+                string formattedFechaFin = fechaFin.ToString("yyyy-MM-dd");
+
+                if (CurContr.AgregarGrupo(curso, formattedFechaInicio, formattedFechaFin, turno))
+                {
+                    dataGridGruposActivos.DataSource = CurContr.GruposActivos();
+                    MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
+                }
+            }else 
+            {
+                MessageBox.Show("Error, comprueve que todos los campos son correctos.");
             }
+
+           
         }
 
         private void boxTurnoAsistencia_SelectedIndexChanged(object sender, EventArgs e)
@@ -1640,15 +1649,53 @@ namespace Ametrano.Presentacion
                 boxPeriodoAlumno.Enabled = false;
             }
             string curso = boxCursoAlumno.SelectedItem.ToString();
-            string[] periodos = CurContr.ListarPeriodos(curso);
+            string turno = "";
+            if (boxTurnoAlumno.SelectedItem != null)
+            {
+             turno = boxTurnoAlumno.SelectedItem.ToString();
+            }
+            
+
+            string[] periodos = CurContr.ListarPeriodos(curso,turno);
             boxPeriodoAlumno.Items.Clear();
             boxPeriodoAlumno.Items.Add("Periodo...");
+            boxPeriodoAlumno.Items.Add("Pendiente");
             boxPeriodoAlumno.SelectedIndex = 0;
             for (int i = 0; i < periodos.Length; i++)
             {
                 boxPeriodoAlumno.Items.Add(periodos[i]);
             }
 
+
+        }
+
+        private void boxTurnoAlumno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxTurnoAlumno.SelectedIndex != 0)
+            {
+                boxCursoAlumno.Enabled = true;
+            }
+            else
+            {
+                boxCursoAlumno.Enabled = false;
+            }
+            string curso = boxCursoAlumno.SelectedItem.ToString();
+            string turno = "";
+            if (boxTurnoAlumno.SelectedItem != null)
+            {
+                turno = boxTurnoAlumno.SelectedItem.ToString();
+            }
+
+
+            string[] periodos = CurContr.ListarPeriodos(curso, turno);
+            boxPeriodoAlumno.Items.Clear();
+            boxPeriodoAlumno.Items.Add("Periodo...");
+            boxPeriodoAlumno.Items.Add("Pendiente");
+            boxPeriodoAlumno.SelectedIndex = 0;
+            for (int i = 0; i < periodos.Length; i++)
+            {
+                boxPeriodoAlumno.Items.Add(periodos[i]);
+            }
 
         }
     }

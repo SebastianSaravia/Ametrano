@@ -442,6 +442,8 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.txtLocalidadAlumno = new System.Windows.Forms.TextBox();
+            this.boxTurnoAlumno = new System.Windows.Forms.ComboBox();
+            this.boxTurnoAlumno_2 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -1384,13 +1386,14 @@
             // 
             // groupBox9
             // 
+            this.groupBox9.Controls.Add(this.boxTurnoAlumno);
             this.groupBox9.Controls.Add(this.txtMontoViatico);
             this.groupBox9.Controls.Add(this.boxPeriodoAlumno);
             this.groupBox9.Controls.Add(this.boxEstadoAlumno);
             this.groupBox9.Controls.Add(this.boxCursoAlumno);
-            this.groupBox9.Location = new System.Drawing.Point(169, 10);
+            this.groupBox9.Location = new System.Drawing.Point(37, 10);
             this.groupBox9.Name = "groupBox9";
-            this.groupBox9.Size = new System.Drawing.Size(823, 75);
+            this.groupBox9.Size = new System.Drawing.Size(1012, 75);
             this.groupBox9.TabIndex = 21;
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Con respecto al instituto";
@@ -1399,7 +1402,7 @@
             // 
             this.txtMontoViatico.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMontoViatico.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMontoViatico.Location = new System.Drawing.Point(615, 30);
+            this.txtMontoViatico.Location = new System.Drawing.Point(820, 26);
             this.txtMontoViatico.MaxLength = 4;
             this.txtMontoViatico.Name = "txtMontoViatico";
             this.txtMontoViatico.Size = new System.Drawing.Size(159, 24);
@@ -1415,7 +1418,7 @@
             this.boxPeriodoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxPeriodoAlumno.Items.AddRange(new object[] {
             "Periodo..."});
-            this.boxPeriodoAlumno.Location = new System.Drawing.Point(380, 30);
+            this.boxPeriodoAlumno.Location = new System.Drawing.Point(403, 26);
             this.boxPeriodoAlumno.Name = "boxPeriodoAlumno";
             this.boxPeriodoAlumno.Size = new System.Drawing.Size(216, 23);
             this.boxPeriodoAlumno.TabIndex = 27;
@@ -1430,7 +1433,7 @@
             "Reprobado",
             "Cursando",
             "Desertó"});
-            this.boxEstadoAlumno.Location = new System.Drawing.Point(200, 30);
+            this.boxEstadoAlumno.Location = new System.Drawing.Point(638, 26);
             this.boxEstadoAlumno.Name = "boxEstadoAlumno";
             this.boxEstadoAlumno.Size = new System.Drawing.Size(159, 23);
             this.boxEstadoAlumno.TabIndex = 27;
@@ -1438,10 +1441,11 @@
             // boxCursoAlumno
             // 
             this.boxCursoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoAlumno.Enabled = false;
             this.boxCursoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoAlumno.Items.AddRange(new object[] {
             "Curso..."});
-            this.boxCursoAlumno.Location = new System.Drawing.Point(19, 30);
+            this.boxCursoAlumno.Location = new System.Drawing.Point(224, 26);
             this.boxCursoAlumno.Name = "boxCursoAlumno";
             this.boxCursoAlumno.Size = new System.Drawing.Size(159, 23);
             this.boxCursoAlumno.TabIndex = 26;
@@ -3390,13 +3394,14 @@
             // 
             // groupBox11
             // 
+            this.groupBox11.Controls.Add(this.boxTurnoAlumno_2);
             this.groupBox11.Controls.Add(this.txtMontoViatico_2);
             this.groupBox11.Controls.Add(this.boxPeriodoAlumno_2);
             this.groupBox11.Controls.Add(this.boxEstadoAlumno_2);
             this.groupBox11.Controls.Add(this.boxCursoAlumno_2);
-            this.groupBox11.Location = new System.Drawing.Point(254, 12);
+            this.groupBox11.Location = new System.Drawing.Point(37, 12);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(738, 75);
+            this.groupBox11.Size = new System.Drawing.Size(1012, 75);
             this.groupBox11.TabIndex = 23;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Con respecto al instituto";
@@ -3405,7 +3410,7 @@
             // 
             this.txtMontoViatico_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMontoViatico_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtMontoViatico_2.Location = new System.Drawing.Point(559, 30);
+            this.txtMontoViatico_2.Location = new System.Drawing.Point(833, 29);
             this.txtMontoViatico_2.MaxLength = 4;
             this.txtMontoViatico_2.Name = "txtMontoViatico_2";
             this.txtMontoViatico_2.Size = new System.Drawing.Size(159, 24);
@@ -3420,9 +3425,9 @@
             this.boxPeriodoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxPeriodoAlumno_2.Items.AddRange(new object[] {
             "Periodo..."});
-            this.boxPeriodoAlumno_2.Location = new System.Drawing.Point(380, 30);
+            this.boxPeriodoAlumno_2.Location = new System.Drawing.Point(423, 29);
             this.boxPeriodoAlumno_2.Name = "boxPeriodoAlumno_2";
-            this.boxPeriodoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxPeriodoAlumno_2.Size = new System.Drawing.Size(216, 23);
             this.boxPeriodoAlumno_2.TabIndex = 27;
             // 
             // boxEstadoAlumno_2
@@ -3435,7 +3440,7 @@
             "Reprobado",
             "Cursando",
             "Desertó"});
-            this.boxEstadoAlumno_2.Location = new System.Drawing.Point(200, 30);
+            this.boxEstadoAlumno_2.Location = new System.Drawing.Point(655, 29);
             this.boxEstadoAlumno_2.Name = "boxEstadoAlumno_2";
             this.boxEstadoAlumno_2.Size = new System.Drawing.Size(159, 23);
             this.boxEstadoAlumno_2.TabIndex = 27;
@@ -3446,7 +3451,7 @@
             this.boxCursoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoAlumno_2.Items.AddRange(new object[] {
             "Curso..."});
-            this.boxCursoAlumno_2.Location = new System.Drawing.Point(19, 30);
+            this.boxCursoAlumno_2.Location = new System.Drawing.Point(244, 29);
             this.boxCursoAlumno_2.Name = "boxCursoAlumno_2";
             this.boxCursoAlumno_2.Size = new System.Drawing.Size(159, 23);
             this.boxCursoAlumno_2.TabIndex = 26;
@@ -5439,6 +5444,35 @@
             this.txtLocalidadAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtLocalidadAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
+            // boxTurnoAlumno
+            // 
+            this.boxTurnoAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoAlumno.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoAlumno.Location = new System.Drawing.Point(46, 27);
+            this.boxTurnoAlumno.Name = "boxTurnoAlumno";
+            this.boxTurnoAlumno.Size = new System.Drawing.Size(159, 23);
+            this.boxTurnoAlumno.TabIndex = 29;
+            this.boxTurnoAlumno.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAlumno_SelectedIndexChanged);
+            // 
+            // boxTurnoAlumno_2
+            // 
+            this.boxTurnoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoAlumno_2.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoAlumno_2.Location = new System.Drawing.Point(62, 29);
+            this.boxTurnoAlumno_2.Name = "boxTurnoAlumno_2";
+            this.boxTurnoAlumno_2.Size = new System.Drawing.Size(159, 23);
+            this.boxTurnoAlumno_2.TabIndex = 30;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -6033,5 +6067,7 @@
         private System.Windows.Forms.ComboBox boxTurnoGrupo;
         private System.Windows.Forms.DataGridView dataGridGruposActivos;
         private System.Windows.Forms.TextBox txtLocalidadAlumno;
+        private System.Windows.Forms.ComboBox boxTurnoAlumno;
+        private System.Windows.Forms.ComboBox boxTurnoAlumno_2;
     }
 }

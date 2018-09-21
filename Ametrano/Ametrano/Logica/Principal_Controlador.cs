@@ -439,7 +439,7 @@ namespace Ametrano.Logica
         public string[] ListarCursos()
         {
 
-            string query = "SELECT nombre_curso FROM curso GROUP BY nombre_curso";
+            string query = "SELECT nombre_curso FROM curso WHERE nombre_curso !='Pendientes' GROUP BY nombre_curso";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
