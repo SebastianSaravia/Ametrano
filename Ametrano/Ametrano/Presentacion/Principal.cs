@@ -25,9 +25,11 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
         private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[4];
+        private dynamic[] eventoClickBuscarConsultaAlumno = new dynamic[2];
        
         private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
+        private DatosAlumno datosAlumnoConsulta = new DatosAlumno();
         bool diaViatico = false;
 
 
@@ -114,6 +116,7 @@ namespace Ametrano.Presentacion
             boxTurnoViaticos.SelectedIndex = 0;
             boxTurnoAsistencia.SelectedIndex = 0;
             boxTurnoAsistencia_2.SelectedIndex = 0;
+            boxBuscarAlumno.SelectedIndex = 0;
 
             dateTimeFechaAsistencia.Value = DateTime.Now;
             dateTimeFechaAsistencia_2.Value = DateTime.Now;
@@ -998,6 +1001,128 @@ namespace Ametrano.Presentacion
             }
             
         }
+        public void buscarAlumno(int tipoBusqueda,string datoDeBusqueda,bool datoCorrecto)
+        {
+            if (datoCorrecto)
+            {//Si el texto de busqueda supero todas las validaciones
+                dynamic[] dato = controlador.consultarPersona(1, tipoBusqueda, datoDeBusqueda);
+
+                if (dato[0] == true)
+                {//Si se encontro a la persona
+                    limpiarFormulario(tabPageModificarAlumnosDatosPersonales);
+                    limpiarFormulario(tabPageIngresarAlumnoDatosInteres);
+                    limpiarFormulario(tabPageAlumnosModificar);
+
+                    IDictionary<string,string> datosAlumnoDiccionario = dato[1];
+
+                    string cedula = "";
+
+                    datosAlumnoDiccionario.TryGetValue("cedula_alumno", out cedula);
+
+                    //Relleno datosAlumno de consulta
+                    dynamic[] datosAlumnoFeedback =  datosAlumnoConsulta.rellenarDesdeDiccionario(datosAlumnoDiccionario);
+
+                    if (datosAlumnoFeedback[0])
+                    {//Si hay error
+                        MessageBox.Show(datosAlumnoFeedback[1]);
+                    }
+
+                    eventoClickBuscarConsultaAlumno[0] = true;
+                    eventoClickBuscarConsultaAlumno[1] = cedula;
+
+                    rellenarConsultaAlumnoPrimeraParte();
+
+
+                }
+                else
+                {//Si no se encontro a la persona
+                    MessageBox.Show("No se ha encontrado a la persona");
+                }
+            }
+        }
+
+        public void rellenarConsultaAlumnoPrimeraParte()
+        {
+            if (eventoClickBuscarConsultaAlumno[0])
+            {
+                IDictionary<string, string> datosAlumnoDiccionario = datosAlumnoConsulta.getDatosPersona();
+                
+                //Primera parte
+                //Curso
+                lblCursoAlumno_2.Text = "Curso: " + datosAlumnoDiccionario["curso_alumno"];
+                lblEstadoAlumno_2.Text = "Estado: " + datosAlumnoDiccionario["curso_estado"];
+
+                //Datos Personales
+
+                lblCedulaAlumno_2.Text = "Cedula: " + datosAlumnoDiccionario["cedula_alumno"];
+                lblNombe1Alumno_2.Text = "Primer nombre: " + datosAlumnoDiccionario["nombre1"];
+                lblNombre2Alumno_2.Text = "Segundo nombre: " + datosAlumnoDiccionario["nombre2"];
+                lblApellido1Alumno_2.Text = "Primer apellido: " + datosAlumnoDiccionario["apellido1"];
+                lblApellido2Alumno_2.Text = "Segundo apellido: " + datosAlumnoDiccionario["apellido2"];
+                lblFechaNacimientoAlumno_2.Text = "Fecha de nacimiento: " + datosAlumnoDiccionario["fecha_nac"];
+                lblEdadAlumno_2.Text = "Edad: " + datosAlumnoDiccionario["edad"];
+                lblSexoAlumno_2.Text = "Sexo: " + datosAlumnoDiccionario["sexo"];
+                lblEstadoCivilAlumno_2.Text = "Estado civil: " + datosAlumnoDiccionario["estado_civil"];
+
+                //Formacion Academimca
+
+                lblNivelEducativoAlumno_2.Text = "Nivel educativo: " + datosAlumnoDiccionario["formacion_nivel"];
+                lblUltimoAñoAprobadoAlumno_2.Text = "Ultimo año aprovado: "+ datosAlumnoDiccionario["formacion_ultimo_año_aprovado"];
+
+                //Direccion
+
+                lblDepartamentoAlumno_2.Text = "Departamento: " + datosAlumnoDiccionario["direccion_departamento"];
+                lblLocalidadAlumno_2.Text = "Localidad: " + datosAlumnoDiccionario["direccion_localidad"];
+                lblCalleAlumno_2.Text = "Calle: " + datosAlumnoDiccionario["direccion_calle"];
+                lblReferenciaAlumno_2.Text = "Referencia: " + datosAlumnoDiccionario["direccion_referencia"];
+                lblNPuertaAlumno_2.Text = "Nº puerta: " + datosAlumnoDiccionario["direccion_numero_puerta"];
+                lblNApartamentoAlumno_2.Text = "Nº apartamento: " + datosAlumnoDiccionario["direccion_apartamento"];
+
+                //Contacto
+
+                lblTelefonoAlumno_2.Text = "Telefono: " + datosAlumnoDiccionario["contacto_telefono"];
+                lblCelularAlumno_2.Text = "Celular: " + datosAlumnoDiccionario["contacto_celular"];
+                lblEmailAlumno_2.Text = "Email: " + datosAlumnoDiccionario["contacto_email"];
+
+                //Coberturna
+
+                lblCoberturaSaludAlumno_2.Text = "Cobertura de salud: " + datosAlumnoDiccionario["cobertura_salud"];
+
+                //Hogar
+
+                lblJefeHogarAlumno_2.Text = "Jefe de hogar: " + datosAlumnoDiccionario["contacto_email"];
+                lblCantidadHjosAlumno_2.Text = "Cantidad de hijos: " + datosAlumnoDiccionario["hogar_cantidad_hijos"];
+
+                //Trabajo
+
+                lblTrabajoAlgunaVezAlumno_2.Text = "Trabajo alguna vez: " + datosAlumnoDiccionario["trabajo_trabajo_alguna_vez"];
+                lblTrabajaActualmenteAlumno_2.Text = "Trabaja Actualmente: " + datosAlumnoDiccionario["trabajo_trabaja_actualmente"];
+                lblTiempoDesempleadoAlumno_2.Text = "Tiempo desempleado: " + datosAlumnoDiccionario["trabajo_tiempo_desempleado"];
+                lblHorasJornadaLaboralAlumno_2.Text = "Horas de jornada laboral: " + datosAlumnoDiccionario["trabajo_horas_jornada"];
+                lblIngresoMensualAlumno_2.Text = "Ingreso mensual: " + datosAlumnoDiccionario["trabajo_ingreso_mensual"];
+
+                //Personas a Cargo
+
+                lbl0a17Alumno_2.Text = "De 0 a 17 años: " + datosAlumnoDiccionario["personas_cargo_0_17"];
+                lbl18a59Alumno_2.Text = "De 18 a 59 años: " + datosAlumnoDiccionario["personas_cargo_18_59"];
+                lbl60oMasAlumno_2.Text = "De 60 años o mas: " + datosAlumnoDiccionario["personas_cargo_60_mas"];
+                lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: " + datosAlumnoDiccionario["personas_cargo_con_discapacidad"];
+                lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo: " + datosAlumnoDiccionario["personas_cargo_cuenta_con_apoyo"];
+                lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: " + datosAlumnoDiccionario["personas_cargo_carga_semanal_cuidado"];
+                lblTrabajoAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando: " + datosAlumnoDiccionario["personas_cargo_trabajo_cuidando"];
+                lblExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado: " + datosAlumnoDiccionario["personas_cargo_experiencia_instituciones_cuidado"];
+
+                //Acceso a Internet
+
+                lblUsaInternetAlumno_2.Text = "Usa internet: " + datosAlumnoDiccionario["internet_usa_internet"];
+                lblFacilAccesoInternetAlumno_2.Text = "Facil acceso a internet: " + datosAlumnoDiccionario["internet_facil_acceso"];
+                lblMedioAccesoInternetAlumno_2.Text = "Medio de acceso a internet: " + datosAlumnoDiccionario["internet_medio_acceso"];
+
+                btnModificarAlumno.Enabled = true;
+
+            }
+        }
+        
 
         private void btnCambiarEstadoDocente_Click(object sender, EventArgs e)
         {
@@ -1116,8 +1241,7 @@ namespace Ametrano.Presentacion
 
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
-            //if (listAlumnosViaticos.SelectedIndex>=0)
-            //{
+            bool viaticoExitoso = true;
             DataTable listaAlumnos = eventoClickListaAlumnos[1];
             if (boxCursoViaticos.SelectedIndex != 0)
             {
@@ -1134,36 +1258,27 @@ namespace Ametrano.Presentacion
                     }
 
 
-                    if (CurContr.AñadirSemanaViatico(ci))
+                    if (!CurContr.AñadirSemanaViatico(ci))
                     {
-                        try
-                        {
-                            //dataGridViaticos.Columns.Clear();
-                            //dataGridViaticos.DataSource = CurContr.ListarViatico(ci);
-                            //dataGridViaticos.Columns[0].ReadOnly = true;
-                            //dataGridViaticos.Columns[1].ReadOnly = true;
-                            //dataGridViaticos.Columns[5].Visible = false;
-                            
-                        }
-                        catch (Exception ew)
-                        {
-                            MessageBox.Show("error " + ew);
-                        }
-
-                    }
-                    else
-                    {
+                        
                         MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
+                        viaticoExitoso = false;
                         break;
                     }
+                    
                 }
 
             }
 
+            if (viaticoExitoso)
+            {
+                MessageBox.Show("Se ha generado el viatico correctamente", "Viatico generado con exito");
+                listAlumnosViaticos.SelectedIndex = listaAlumnos.Rows.Count-1;
+                listAlumnosViaticos.SelectedIndex = 0;
+            }
 
 
-
-            //}
+          
 
 
         }
@@ -1266,7 +1381,7 @@ namespace Ametrano.Presentacion
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            mostrarResultados(txtBuscar, boxBuscar, listResultadosDocentes);
+            mostrarResultados(txtBuscar, boxBuscar, listResultadosDocentes,0);
         }
 
         private void Principal_KeyDown(object sender, KeyEventArgs e)
@@ -1309,35 +1424,45 @@ namespace Ametrano.Presentacion
 
         private void txtBuscar_2_TextChanged(object sender, EventArgs e)
         {
-            mostrarResultados(txtBuscar_2, boxBuscar_2, listResultadosDocentes_2);
+            mostrarResultados(txtBuscar_2, boxBuscar_2, listResultadosDocentes_2,0);
         }
 
-        public void mostrarResultados(TextBox textbox,ComboBox box, ListBox lista)
+        public void mostrarResultados(TextBox textbox,ComboBox box, ListBox lista, int type)
         {
-            if (textbox.Text.Length >= 3 && box.SelectedIndex == 2)
+            //type=0 -> docente
+            //type=1 -> alumno
+            if (type == 0)
             {
-                dynamic[] datosRecibidos = controlador.busquedaMultiple(0, textbox.Text);
-                DataTable datos = datosRecibidos[1];
-                if (datosRecibidos[0])
+                if (textbox.Text.Length >= 3 && box.SelectedIndex == 2)
                 {
-                    lista.Items.Clear();
-                    lista.Visible = true;
-                    foreach (DataRow row in datos.Rows)
+                    dynamic[] datosRecibidos = controlador.busquedaMultiple(0, textbox.Text);
+                    DataTable datos = datosRecibidos[1];
+                    if (datosRecibidos[0])
                     {
-                        string persona = "";
-                        foreach (DataColumn column in datos.Columns)
+                        lista.Items.Clear();
+                        lista.Visible = true;
+                        foreach (DataRow row in datos.Rows)
                         {
-                            if (column.ColumnName.Equals("cedula_docente"))
+                            string persona = "";
+                            foreach (DataColumn column in datos.Columns)
                             {
-                                persona += row[column].ToString() + " - ";
-                            }
-                            else
-                            {
-                                persona += row[column].ToString() + " ";
-                            }
+                                if (column.ColumnName.Equals("cedula_docente"))
+                                {
+                                    persona += row[column].ToString() + " - ";
+                                }
+                                else
+                                {
+                                    persona += row[column].ToString() + " ";
+                                }
 
+                            }
+                            lista.Items.Add(persona);
                         }
-                        lista.Items.Add(persona);
+                    }
+                    else
+                    {
+                        lista.Items.Clear();
+                        lista.Visible = false;
                     }
                 }
                 else
@@ -1347,10 +1472,46 @@ namespace Ametrano.Presentacion
                 }
             }
             else
-            {
-                lista.Items.Clear();
-                lista.Visible = false;
-            }
+            {//Si es alumno
+
+                if (textbox.Text.Length >= 3 && box.SelectedIndex == 2)
+                {
+                    dynamic[] datosRecibidos = controlador.busquedaMultiple(1, textbox.Text);
+                    DataTable datos = datosRecibidos[1];
+                    if (datosRecibidos[0])
+                    {
+                        lista.Items.Clear();
+                        lista.Visible = true;
+                        foreach (DataRow row in datos.Rows)
+                        {
+                            string persona = "";
+                            foreach (DataColumn column in datos.Columns)
+                            {
+                                if (column.ColumnName.Equals("cedula_alumno"))
+                                {
+                                    persona += row[column].ToString() + " - ";
+                                }
+                                else
+                                {
+                                    persona += row[column].ToString() + " ";
+                                }
+
+                            }
+                            lista.Items.Add(persona);
+                        }
+                    }
+                    else
+                    {
+                        lista.Items.Clear();
+                        lista.Visible = false;
+                    }
+                }
+                else
+                {
+                    lista.Items.Clear();
+                    lista.Visible = false;
+                }
+            }//fin si es alumno
         }
 
         private void listResultadosDocentes_2_SelectedIndexChanged(object sender, EventArgs e)
@@ -1963,6 +2124,32 @@ namespace Ametrano.Presentacion
             }else
             {
                 btnConsultarLista.Enabled = false;
+            }
+        }
+
+        private void txtBuscarAlumno_TextChanged(object sender, EventArgs e)
+        {
+            mostrarResultados(txtBuscarAlumno, boxBuscarAlumno, listResultadosAlumnos, 1);
+        }
+
+        private void boxBuscarAlumno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxBuscarAlumno.SelectedIndex == 1)
+            {//Si se selecciona cedula se ajusta el largo maximo a 8
+                txtBuscarAlumno.MaxLength = 8;
+            }
+            else
+            {
+                txtBuscarAlumno.MaxLength = 255;
+            }
+        }
+
+        private void listResultadosAlumnos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listResultadosAlumnos.SelectedIndex != -1)
+            {
+                string ci = listResultadosAlumnos.SelectedItem.ToString().Substring(0, 8);
+                buscarAlumno(0, ci, true);
             }
         }
     }

@@ -396,7 +396,7 @@ namespace Ametrano.Logica
             /*TipoPersona explicacion:
             * Variable que determina si la busqueda se enfoca en un docente o                      
             * tipoPersona==0 -> docente
-            * tipoPersona==1 -> 
+            * tipoPersona==1 -> alumno
             */
 
             bool retorno = false;

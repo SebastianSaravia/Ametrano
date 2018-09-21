@@ -216,10 +216,11 @@
             this.tabPageAlumnosModificar = new System.Windows.Forms.TabPage();
             this.tabControlModificarAlumno = new System.Windows.Forms.TabControl();
             this.tabPageModificarAlumnosInformacion = new System.Windows.Forms.TabPage();
+            this.listResultadosAlumnos = new System.Windows.Forms.ListBox();
             this.btnBuscar_3 = new System.Windows.Forms.Button();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.boxBuscarAlumno = new System.Windows.Forms.ComboBox();
+            this.txtBuscarAlumno = new System.Windows.Forms.TextBox();
+            this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.groupBox46 = new System.Windows.Forms.GroupBox();
             this.lblEstadoAlumno_2 = new System.Windows.Forms.Label();
             this.lblCursoAlumno_2 = new System.Windows.Forms.Label();
@@ -254,7 +255,7 @@
             this.lblCedulaAlumno_2 = new System.Windows.Forms.Label();
             this.groupBox53 = new System.Windows.Forms.GroupBox();
             this.lblExperienciaInstitucionesCuidadoAlumno_2 = new System.Windows.Forms.Label();
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2 = new System.Windows.Forms.Label();
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2 = new System.Windows.Forms.Label();
             this.lblCuentaApoyoAlumno_2 = new System.Windows.Forms.Label();
             this.lbl0a17Alumno_2 = new System.Windows.Forms.Label();
             this.lblCargaSemanalCuidadoAlumno_2 = new System.Windows.Forms.Label();
@@ -406,9 +407,12 @@
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
             this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxMateriaAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias_2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
             this.btnConsultarLista = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
@@ -441,9 +445,6 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -2787,10 +2788,11 @@
             // tabPageModificarAlumnosInformacion
             // 
             this.tabPageModificarAlumnosInformacion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.listResultadosAlumnos);
             this.tabPageModificarAlumnosInformacion.Controls.Add(this.btnBuscar_3);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.comboBox17);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.textBox13);
-            this.tabPageModificarAlumnosInformacion.Controls.Add(this.button3);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.boxBuscarAlumno);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.txtBuscarAlumno);
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.btnModificarAlumno);
             this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox46);
             this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox47);
             this.tabPageModificarAlumnosInformacion.Controls.Add(this.groupBox48);
@@ -2807,50 +2809,67 @@
             this.tabPageModificarAlumnosInformacion.TabIndex = 3;
             this.tabPageModificarAlumnosInformacion.Text = "Informacion";
             // 
+            // listResultadosAlumnos
+            // 
+            this.listResultadosAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listResultadosAlumnos.FormattingEnabled = true;
+            this.listResultadosAlumnos.ItemHeight = 16;
+            this.listResultadosAlumnos.Location = new System.Drawing.Point(422, 51);
+            this.listResultadosAlumnos.Name = "listResultadosAlumnos";
+            this.listResultadosAlumnos.Size = new System.Drawing.Size(216, 68);
+            this.listResultadosAlumnos.TabIndex = 45;
+            this.listResultadosAlumnos.Visible = false;
+            this.listResultadosAlumnos.SelectedIndexChanged += new System.EventHandler(this.listResultadosAlumnos_SelectedIndexChanged);
+            // 
             // btnBuscar_3
             // 
             this.btnBuscar_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar_3.Location = new System.Drawing.Point(642, 25);
+            this.btnBuscar_3.Location = new System.Drawing.Point(642, 23);
             this.btnBuscar_3.Name = "btnBuscar_3";
             this.btnBuscar_3.Size = new System.Drawing.Size(113, 28);
             this.btnBuscar_3.TabIndex = 44;
             this.btnBuscar_3.Text = "Buscar";
             this.btnBuscar_3.UseVisualStyleBackColor = true;
             // 
-            // comboBox17
+            // boxBuscarAlumno
             // 
-            this.comboBox17.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox17.Items.AddRange(new object[] {
-            "Nombre y apellido",
-            "Cedula"});
-            this.comboBox17.Location = new System.Drawing.Point(313, 27);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(150, 26);
-            this.comboBox17.TabIndex = 43;
+            this.boxBuscarAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxBuscarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxBuscarAlumno.Items.AddRange(new object[] {
+            "Buscar por...",
+            "Cedula",
+            "Nombre y apellido"});
+            this.boxBuscarAlumno.Location = new System.Drawing.Point(266, 25);
+            this.boxBuscarAlumno.Name = "boxBuscarAlumno";
+            this.boxBuscarAlumno.Size = new System.Drawing.Size(150, 26);
+            this.boxBuscarAlumno.TabIndex = 43;
+            this.boxBuscarAlumno.SelectedIndexChanged += new System.EventHandler(this.boxBuscarAlumno_SelectedIndexChanged);
             // 
-            // textBox13
+            // txtBuscarAlumno
             // 
-            this.textBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.textBox13.Location = new System.Drawing.Point(469, 27);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(167, 24);
-            this.textBox13.TabIndex = 42;
-            this.textBox13.Text = "Texto de busqueda";
-            this.textBox13.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.textBox13.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtBuscarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscarAlumno.Location = new System.Drawing.Point(422, 27);
+            this.txtBuscarAlumno.MaxLength = 8;
+            this.txtBuscarAlumno.Name = "txtBuscarAlumno";
+            this.txtBuscarAlumno.Size = new System.Drawing.Size(216, 24);
+            this.txtBuscarAlumno.TabIndex = 42;
+            this.txtBuscarAlumno.Text = "Texto de busqueda";
+            this.txtBuscarAlumno.TextChanged += new System.EventHandler(this.txtBuscarAlumno_TextChanged);
+            this.txtBuscarAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtBuscarAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
-            // button3
+            // btnModificarAlumno
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(933, 445);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 36);
-            this.button3.TabIndex = 41;
-            this.button3.Text = "Modificar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnModificarAlumno.Enabled = false;
+            this.btnModificarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificarAlumno.Location = new System.Drawing.Point(933, 445);
+            this.btnModificarAlumno.Name = "btnModificarAlumno";
+            this.btnModificarAlumno.Size = new System.Drawing.Size(144, 36);
+            this.btnModificarAlumno.TabIndex = 41;
+            this.btnModificarAlumno.Text = "Modificar";
+            this.btnModificarAlumno.UseVisualStyleBackColor = true;
+            this.btnModificarAlumno.Click += new System.EventHandler(this.button3_Click);
             // 
             // groupBox46
             // 
@@ -3200,7 +3219,7 @@
             // groupBox53
             // 
             this.groupBox53.Controls.Add(this.lblExperienciaInstitucionesCuidadoAlumno_2);
-            this.groupBox53.Controls.Add(this.lblTrabajaAnteriormenteCuidandoAlumno_2);
+            this.groupBox53.Controls.Add(this.lblTrabajoAnteriormenteCuidandoAlumno_2);
             this.groupBox53.Controls.Add(this.lblCuentaApoyoAlumno_2);
             this.groupBox53.Controls.Add(this.lbl0a17Alumno_2);
             this.groupBox53.Controls.Add(this.lblCargaSemanalCuidadoAlumno_2);
@@ -3225,15 +3244,15 @@
             this.lblExperienciaInstitucionesCuidadoAlumno_2.TabIndex = 36;
             this.lblExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado:";
             // 
-            // lblTrabajaAnteriormenteCuidandoAlumno_2
+            // lblTrabajoAnteriormenteCuidandoAlumno_2
             // 
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2.AutoSize = true;
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Location = new System.Drawing.Point(56, 116);
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Name = "lblTrabajaAnteriormenteCuidandoAlumno_2";
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Size = new System.Drawing.Size(217, 15);
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2.TabIndex = 36;
-            this.lblTrabajaAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando:";
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2.AutoSize = true;
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2.Location = new System.Drawing.Point(56, 116);
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2.Name = "lblTrabajoAnteriormenteCuidandoAlumno_2";
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2.Size = new System.Drawing.Size(217, 15);
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2.TabIndex = 36;
+            this.lblTrabajoAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando:";
             // 
             // lblCuentaApoyoAlumno_2
             // 
@@ -5032,6 +5051,22 @@
             this.groupBox57.TabStop = false;
             this.groupBox57.Text = "Consultar lista";
             // 
+            // boxTurnoAsistencia_2
+            // 
+            this.boxTurnoAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoAsistencia_2.FormattingEnabled = true;
+            this.boxTurnoAsistencia_2.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoAsistencia_2.Location = new System.Drawing.Point(23, 28);
+            this.boxTurnoAsistencia_2.Name = "boxTurnoAsistencia_2";
+            this.boxTurnoAsistencia_2.Size = new System.Drawing.Size(209, 26);
+            this.boxTurnoAsistencia_2.TabIndex = 33;
+            this.boxTurnoAsistencia_2.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_2_SelectedIndexChanged);
+            // 
             // boxMateriaAsistencia_2
             // 
             this.boxMateriaAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5077,6 +5112,25 @@
             this.dataGridListaAsistencias_2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridListaAsistencias_2.Size = new System.Drawing.Size(232, 406);
             this.dataGridListaAsistencias_2.TabIndex = 29;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.Frozen = true;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewTextBoxColumn1.Width = 140;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.Frozen = true;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewTextBoxColumn2.Width = 80;
             // 
             // dateTimeFechaAsistencia_2
             // 
@@ -5459,41 +5513,6 @@
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
-            // 
-            // boxTurnoAsistencia_2
-            // 
-            this.boxTurnoAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTurnoAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTurnoAsistencia_2.FormattingEnabled = true;
-            this.boxTurnoAsistencia_2.Items.AddRange(new object[] {
-            "Turno...",
-            "Matutino",
-            "Vespertino",
-            "Nocturno"});
-            this.boxTurnoAsistencia_2.Location = new System.Drawing.Point(23, 28);
-            this.boxTurnoAsistencia_2.Name = "boxTurnoAsistencia_2";
-            this.boxTurnoAsistencia_2.Size = new System.Drawing.Size(209, 26);
-            this.boxTurnoAsistencia_2.TabIndex = 33;
-            this.boxTurnoAsistencia_2.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_2_SelectedIndexChanged);
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.Frozen = true;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn2.Width = 80;
             // 
             // Principal
             // 
@@ -5964,9 +5983,9 @@
         private System.Windows.Forms.Button btnActualizarDocente;
         private System.Windows.Forms.Button btnDarDeBaja;
         private System.Windows.Forms.TabPage tabPageModificarAlumnosInformacion;
-        private System.Windows.Forms.ComboBox comboBox17;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ComboBox boxBuscarAlumno;
+        private System.Windows.Forms.TextBox txtBuscarAlumno;
+        private System.Windows.Forms.Button btnModificarAlumno;
         private System.Windows.Forms.GroupBox groupBox46;
         private System.Windows.Forms.Label lblEstadoAlumno_2;
         private System.Windows.Forms.Label lblCursoAlumno_2;
@@ -6001,7 +6020,7 @@
         private System.Windows.Forms.Label lblCedulaAlumno_2;
         private System.Windows.Forms.GroupBox groupBox53;
         private System.Windows.Forms.Label lblExperienciaInstitucionesCuidadoAlumno_2;
-        private System.Windows.Forms.Label lblTrabajaAnteriormenteCuidandoAlumno_2;
+        private System.Windows.Forms.Label lblTrabajoAnteriormenteCuidandoAlumno_2;
         private System.Windows.Forms.Label lblCuentaApoyoAlumno_2;
         private System.Windows.Forms.Label lbl0a17Alumno_2;
         private System.Windows.Forms.Label lblCargaSemanalCuidadoAlumno_2;
@@ -6090,5 +6109,6 @@
         private System.Windows.Forms.ComboBox boxTurnoAsistencia_2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.ListBox listResultadosAlumnos;
     }
 }

@@ -367,6 +367,211 @@ namespace Ametrano.Encapsulado
             return diccionarioPersona;
         }
 
+        public dynamic[] rellenarDesdeDiccionario(IDictionary<string,string> diccionario)
+        {//Este metodo toma un diccionario que fue devuelto desde la bd y rellena el objeto devolviendo bool de exito y mensaje de estado
+            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            bool errores = false;
+
+            string[] datosPersonales_paraInsertar = new string[9];
+            string[] datosCurso_paraInsertar = new string[4];
+            string[] formacionAcademica_paraInsertar = new string[2];
+            string[] direccion_paraInsertar = new string[6];
+            string[] contacto_paraInsertar = new string[3];
+            string coberturaSalud_paraInsertar = "";
+            string[] hogar_paraInsertar = new string[2];
+            string[] trabajo_paraInsertar = new string[5];
+            string[] personas_a_cargo_paraInsertar = new string[8];
+            string[] acceso_a_internet_paraInsertar = new string[3];
+
+            //Comienza creacion de string de datosPersonales
+
+            diccionario.TryGetValue("cedula_alumno", out datosPersonales_paraInsertar[0]);
+            diccionario.TryGetValue("nombre1", out datosPersonales_paraInsertar[1]);
+            diccionario.TryGetValue("nombre2", out datosPersonales_paraInsertar[2]);
+            diccionario.TryGetValue("apellido1", out datosPersonales_paraInsertar[3]);
+            diccionario.TryGetValue("apellido2", out datosPersonales_paraInsertar[4]);
+            diccionario.TryGetValue("fecha_nac", out datosPersonales_paraInsertar[5]);
+            diccionario.TryGetValue("edad", out datosPersonales_paraInsertar[6]);
+            diccionario.TryGetValue("sexo", out datosPersonales_paraInsertar[7]);
+            diccionario.TryGetValue("estado_civil", out datosPersonales_paraInsertar[8]);
+
+            dynamic[] datosPersonalesFeedback = setDatosPersonales(datosPersonales_paraInsertar);
+
+            if (datosPersonalesFeedback[0])
+            {
+                mensajeParaRetornar += datosPersonalesFeedback[1];
+            }
+
+            //Ahora se realizara la insercion de datos de curso
+
+            //agregar nombre curso despues
+            datosCurso_paraInsertar[0] = "Proximamente a implementar";
+            diccionario.TryGetValue("estado", out datosCurso_paraInsertar[1]);
+            diccionario.TryGetValue("monto_viatico_por_dia", out datosCurso_paraInsertar[3]);
+            datosCurso_paraInsertar[2] = "Periodo proximamente a implementar";
+
+            dynamic[] datosCursoFeedback = setCurso(datosCurso_paraInsertar);
+
+            if (datosCursoFeedback[0])
+            {
+                mensajeParaRetornar += datosCursoFeedback[1];
+            }
+
+            //comienza nivel educativo
+
+            diccionario.TryGetValue("nivel_educativo", out formacionAcademica_paraInsertar[0]);
+            diccionario.TryGetValue("ultimo_anio_aprobado", out formacionAcademica_paraInsertar[1]);
+
+            dynamic[] datosFormacionAcademicaFeedback = setFormacionAcademica(formacionAcademica_paraInsertar);
+
+            if (datosFormacionAcademicaFeedback[0])
+            {
+                mensajeParaRetornar += datosFormacionAcademicaFeedback[1];
+            }
+
+            //Comienza direccion
+
+            diccionario.TryGetValue("departamento", out direccion_paraInsertar[0]);
+            diccionario.TryGetValue("localidad", out direccion_paraInsertar[1]);
+            diccionario.TryGetValue("calle", out direccion_paraInsertar[2]);
+            diccionario.TryGetValue("referencia", out direccion_paraInsertar[3]);
+            diccionario.TryGetValue("numero_puerta", out direccion_paraInsertar[4]);
+            diccionario.TryGetValue("apartamento", out direccion_paraInsertar[5]);
+
+            dynamic[] datosDiireccionFeedback = setDireccion(direccion_paraInsertar);
+
+            if (datosDiireccionFeedback[0])
+            {
+                mensajeParaRetornar += datosDiireccionFeedback[1];
+            }
+
+            //Comienza contacto
+
+
+            diccionario.TryGetValue("telefono_fijo", out contacto_paraInsertar[0]);
+            diccionario.TryGetValue("celular", out contacto_paraInsertar[1]);
+            diccionario.TryGetValue("email", out contacto_paraInsertar[2]);
+
+
+            dynamic[] datosContactoFeedback = setContacto(contacto_paraInsertar);
+
+            if (datosContactoFeedback[0])
+            {
+                mensajeParaRetornar += datosContactoFeedback[1];
+            }
+
+            //Comienza coberturna
+
+
+            diccionario.TryGetValue("cobertura_salud", out coberturaSalud_paraInsertar);
+
+            dynamic[] datosCoberturaFeedback = setCobertura(coberturaSalud_paraInsertar);
+
+            if (datosCoberturaFeedback[0])
+            {
+                mensajeParaRetornar += datosCoberturaFeedback[1];
+            }
+
+            //Comienza hogar
+
+            diccionario.TryGetValue("jefe_hogar", out hogar_paraInsertar[0]);
+            diccionario.TryGetValue("cant_hijos", out hogar_paraInsertar[1]);
+
+            dynamic[] datosHogarFeedback = setHogar(hogar_paraInsertar);
+
+            if (datosHogarFeedback[0])
+            {
+                mensajeParaRetornar += datosHogarFeedback[1];
+            }
+
+            //Comienza trabajo
+
+            diccionario.TryGetValue("trabajo_alguna_vez", out trabajo_paraInsertar[0]);
+            diccionario.TryGetValue("trabaja_actualmente", out trabajo_paraInsertar[1]);
+            diccionario.TryGetValue("tiempo_sin_trabajo", out trabajo_paraInsertar[2]);
+            diccionario.TryGetValue("horas_trabajo", out trabajo_paraInsertar[3]);
+            diccionario.TryGetValue("ingreso_mensual", out trabajo_paraInsertar[4]);
+
+            dynamic[] datosTrabajoFeedback = setTrabajo(trabajo_paraInsertar);
+
+            if (datosTrabajoFeedback[0])
+            {
+                mensajeParaRetornar += datosTrabajoFeedback[1];
+            }
+
+            //Comienza personas a cargo
+
+            diccionario.TryGetValue("cant_personas_cargo_17", out personas_a_cargo_paraInsertar[0]);
+            diccionario.TryGetValue("cant_personas_cargo_18_59", out personas_a_cargo_paraInsertar[1]);
+            diccionario.TryGetValue("cant_personas_cargo_60", out personas_a_cargo_paraInsertar[2]);
+            diccionario.TryGetValue("persona_tiene_discapacidad", out personas_a_cargo_paraInsertar[3]);
+            diccionario.TryGetValue("cuenta_con_apoyo", out personas_a_cargo_paraInsertar[4]);
+            diccionario.TryGetValue("carga_semanal_cuidado", out personas_a_cargo_paraInsertar[5]);
+            diccionario.TryGetValue("trabajo_anteriormente_cuidando", out personas_a_cargo_paraInsertar[6]);
+            diccionario.TryGetValue("experiencia_instituciones_cuidado", out personas_a_cargo_paraInsertar[7]);
+
+            dynamic[] datosPersonasACargoFeedback = setPersonasACargo(personas_a_cargo_paraInsertar);
+
+            if (datosPersonasACargoFeedback[0])
+            {
+                mensajeParaRetornar += datosPersonasACargoFeedback[1];
+            }
+
+
+            //Comienza acceso a internet
+
+            diccionario.TryGetValue("usa_internet", out acceso_a_internet_paraInsertar[0]);
+            if (acceso_a_internet_paraInsertar[0].Equals("True"))
+            {
+                acceso_a_internet_paraInsertar[0] = "SI";
+            }
+            else
+            {
+                acceso_a_internet_paraInsertar[0] = "NO";
+            }
+            diccionario.TryGetValue("facil_acceso_internet", out acceso_a_internet_paraInsertar[1]);
+            if (acceso_a_internet_paraInsertar[1].Equals("True"))
+            {
+                acceso_a_internet_paraInsertar[1] = "SI";
+            }
+            else
+            {
+                acceso_a_internet_paraInsertar[1] = "NO";
+            }
+            diccionario.TryGetValue("medio_acceso_internet", out acceso_a_internet_paraInsertar[2]);
+
+            dynamic[] datosAccesoInternetFeedback = setAccessoInternet(acceso_a_internet_paraInsertar);
+
+            if (datosAccesoInternetFeedback[0])
+            {
+                mensajeParaRetornar += datosAccesoInternetFeedback[1];
+            }
+
+
+
+
+
+
+            if (!datosPersonalesFeedback[0] && !datosCursoFeedback[0] && !datosFormacionAcademicaFeedback[0] && !datosDiireccionFeedback[0] && !datosContactoFeedback[0] && !datosCoberturaFeedback[0] && !datosHogarFeedback[0] && !datosTrabajoFeedback[0] && !datosPersonasACargoFeedback[0] && !datosAccesoInternetFeedback[0])
+            {
+                errores = false;
+            }
+            else
+            {
+                errores = true;
+            }
+
+
+            dynamic[] datosParaRetornar = new dynamic[2];
+            /*Explicacion del array datosParaRetornar
+             * datosParaRetornar[0] = -> variable bool que determina si hay errores o no en los datos
+             * datosParaRetornar[1] = -> string con mensaje de error completo
+             */
+            datosParaRetornar[0] = errores;
+            datosParaRetornar[1] = mensajeParaRetornar;
+            return datosParaRetornar;
+        }
+
 
         public bool isNumeric(string str)
         {
