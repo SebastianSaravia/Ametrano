@@ -1785,7 +1785,7 @@ namespace Ametrano.Presentacion
 
                     turno = eventoClickGenerarListaAsistencias[3];
 
-                    if (dataGridListaAsistencias.SelectedRows[0].Cells[1].FormattedValue.ToString().Equals("True"))
+                    if (dataGridListaAsistencias.Rows[i].Cells[1].FormattedValue.Equals(true))
                     {
                         asistencia = 1;
                     }
@@ -1810,6 +1810,7 @@ namespace Ametrano.Presentacion
                 if (insertFail)
                 {
                     MessageBox.Show("hubieron errores al insertar los datos");
+                    //hacer reseteo de campos y box
                 }else
                 {
                     MessageBox.Show("Lista registrada correctamente");

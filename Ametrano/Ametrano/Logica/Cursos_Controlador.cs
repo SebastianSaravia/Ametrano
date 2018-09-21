@@ -600,7 +600,7 @@ namespace Ametrano.Logica
 
             query2_buscar_asistencia_resultados.Fill(query2_buscar_asistencia_table);
 
-            testing.MostrarMessageBox(query2_buscar_asistencia_table.Rows.Count+"");
+
 
             bool retorno = false;
 
