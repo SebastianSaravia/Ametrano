@@ -92,7 +92,6 @@ namespace Ametrano.Presentacion
             boxCursoAsistencia_2.SelectedIndex = 0;
             boxMateriaAsisencia.SelectedIndex = 0;
             boxMateriaAsistencia_2.SelectedIndex = 0;
-            boxTurnoAsistencia.SelectedIndex = 0;
             boxCursoViaticos.SelectedIndex = 0;
             boxPeriodoAlumno.SelectedIndex = 0;
             boxPeriodoAlumno_2.SelectedIndex = 0;
@@ -113,7 +112,13 @@ namespace Ametrano.Presentacion
             boxCantidadHijosAlumno_2.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno_2.SelectedIndex = 0;
             boxTurnoViaticos.SelectedIndex = 0;
+            boxTurnoAsistencia.SelectedIndex = 0;
+            boxTurnoAsistencia_2.SelectedIndex = 0;
+
+            dateTimeFechaAsistencia.Value = DateTime.Now;
+            dateTimeFechaAsistencia_2.Value = DateTime.Now;
             dateTimeFechaAsistencia.MaxDate = DateTime.Now;
+            dateTimeFechaAsistencia_2.MaxDate = DateTime.Now;
 
 
             foreach (Control control in this.Controls)
@@ -135,8 +140,6 @@ namespace Ametrano.Presentacion
 
             for (int i = 0; i < cursos.Length; i++)
             {
-                                
-                boxCursoAsistencia_2.Items.Add(cursos[i]);
                 boxCursoGrupo.Items.Add(cursos[i]);
                 boxCursoAlumno_2.Items.Add(cursos[i]);
                 boxCursoAlumno.Items.Add(cursos[i]);               
@@ -1410,7 +1413,10 @@ namespace Ametrano.Presentacion
                     eventoClickListaAlumnos[0] = true;
                     eventoClickListaAlumnos[1] = dt;
 
-                    btnAñadirSemanaViaticos.Enabled = true;
+                    if (diaViatico)
+                    {
+                        btnAñadirSemanaViaticos.Enabled = true;
+                    }
 
 
                 }else
@@ -1460,8 +1466,11 @@ namespace Ametrano.Presentacion
         {
             string curso = boxCursoAsistencia.SelectedItem.ToString();
             string turno = boxTurnoAsistencia.SelectedItem.ToString();
-           
-            dataGridListaAsistencias.Rows.Clear();
+
+            if (dataGridListaAsistencias.Rows.Count > 0)
+            {
+                dataGridListaAsistencias.Rows.Clear();
+            }
 
             if (boxCursoAsistencia.SelectedIndex==0)
             {
@@ -1475,6 +1484,9 @@ namespace Ametrano.Presentacion
                 {
                     dataGridListaAsistencias.Rows.Add(alumnos[i]);
                 }
+
+                
+
                 btnGuardarLista.Enabled = true;
                 dateTimeFechaAsistencia.Enabled = true;
                 boxMateriaAsisencia.Enabled = true;
@@ -1519,6 +1531,8 @@ namespace Ametrano.Presentacion
                 
                 int val = listAlumnosViaticos.SelectedIndex;
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
+
+            
                 
                 bool resultado = CurContr.updatePago(ci, fecha,semana,estadoNuevo);
 
@@ -1679,16 +1693,12 @@ namespace Ametrano.Presentacion
 
                 boxCursoAsistencia.Enabled = true;
                
-                boxMateriaAsisencia.Enabled = true;
-                btnGuardarLista.Enabled = true;
-                dateTimeFechaAsistencia.Enabled = true;
+                
             }
             else
             {
                 boxCursoAsistencia.Enabled = false;
-                boxMateriaAsisencia.Enabled = false;
-                btnGuardarLista.Enabled = false;
-                dateTimeFechaAsistencia.Enabled = false;
+               
 
             }
         }
@@ -1762,64 +1772,198 @@ namespace Ametrano.Presentacion
             bool insertFail = false;
             if (eventoClickGenerarListaAsistencias[0])
             {
-               for(int i = 0; i < dataGridListaAsistencias.Rows.Count; i++)
+                if (boxMateriaAsisencia.SelectedIndex == 0)
                 {
-                    string materia = "";
-                    string fecha_asistencia = "";
-                    string cedula = "";
-                    int asistencia = 0;
-                    string nombre_curso = "";
-                    string turno = "";
-
-
-                    if (boxMateriaAsisencia.SelectedIndex != 0)
+                    MessageBox.Show("Debes seleccionar una materia");
+                }else
+                {
+                    for (int i = 0; i < dataGridListaAsistencias.Rows.Count; i++)
                     {
-                        materia = boxMateriaAsisencia.SelectedItem.ToString();
+                        string materia = "";
+                        string fecha_asistencia = "";
+                        string cedula = "";
+                        int asistencia = 0;
+                        string nombre_curso = "";
+                        string turno = "";
+
+
+                        if (boxMateriaAsisencia.SelectedIndex != 0)
+                        {
+                            materia = boxMateriaAsisencia.SelectedItem.ToString();
+                        }
+                        fecha_asistencia = dateTimeFechaAsistencia.Value.ToString("yyyy-MM-dd");
+
+                        DataTable listaAlumnos = eventoClickGenerarListaAsistencias[1];
+
+                        nombre_curso = eventoClickGenerarListaAsistencias[2];
+
+
+                        turno = eventoClickGenerarListaAsistencias[3];
+
+                        if (dataGridListaAsistencias.Rows[i].Cells[1].FormattedValue.Equals(true))
+                        {
+                            asistencia = 1;
+                        }
+                        else
+                        {
+                            asistencia = 0;
+                        }
+
+                        cedula = listaAlumnos.Rows[i][listaAlumnos.Columns[1]].ToString();
+
+
+
+                        if (!CurContr.agregarAsistencia(cedula, nombre_curso, turno, materia, fecha_asistencia, asistencia))
+                        {
+                            insertFail = true;
+                        }
+
+                        //cedula = listaAlumnos.Rows[indiceRowSelected][listaAlumnos.Columns[1]].ToString();
+
                     }
-                    fecha_asistencia = dateTimeFechaAsistencia.Value.ToString("yyyy-MM-dd");
 
-                    DataTable listaAlumnos = eventoClickGenerarListaAsistencias[1];
-
-                    nombre_curso = eventoClickGenerarListaAsistencias[2];
-
-
-                    turno = eventoClickGenerarListaAsistencias[3];
-
-                    if (dataGridListaAsistencias.Rows[i].Cells[1].FormattedValue.Equals(true))
+                    if (insertFail)
                     {
-                        asistencia = 1;
+                        MessageBox.Show("hubieron errores al insertar los datos");
+
+
                     }
                     else
                     {
-                        asistencia = 0;
+
+                        //hacer reseteo de campos y box
+                        boxTurnoAsistencia.SelectedIndex = 0;
+
+                        dataGridListaAsistencias.Rows.Clear();
+
+                        dateTimeFechaAsistencia.Value = dateTimeFechaAsistencia.MaxDate;
+
+                        boxCursoAsistencia.SelectedIndex = 0;
+                        boxMateriaAsisencia.SelectedIndex = 0;
+
+                        eventoClickGenerarListaAsistencias[0] = false;
+                        eventoClickGenerarListaAsistencias[1] = null;
+                        eventoClickGenerarListaAsistencias[2] = "";
+                        eventoClickGenerarListaAsistencias[3] = "";
+
+                        btnGuardarLista.Enabled = false;
+                        dateTimeFechaAsistencia.Enabled = false;
+                        boxMateriaAsisencia.Enabled = false;
+
+                        MessageBox.Show("Lista registrada correctamente");
                     }
-
-                    cedula = listaAlumnos.Rows[i][listaAlumnos.Columns[1]].ToString();
-
-
-
-                    if(!CurContr.agregarAsistencia(cedula, nombre_curso, turno, materia, fecha_asistencia, asistencia))
-                    {
-                        insertFail = true;
-                    }
-
-                //cedula = listaAlumnos.Rows[indiceRowSelected][listaAlumnos.Columns[1]].ToString();
-
                 }
-
-                if (insertFail)
-                {
-                    MessageBox.Show("hubieron errores al insertar los datos");
-                    //hacer reseteo de campos y box
-                }else
-                {
-                    MessageBox.Show("Lista registrada correctamente");
-                }
-
             }
             
 
 
+        }
+
+        private void boxTurnoAsistencia_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxTurnoAsistencia_2.SelectedIndex != 0)
+            {
+                boxCursoAsistencia_2.Enabled = true;
+
+                boxCursoAsistencia_2.Items.Clear();
+                boxCursoAsistencia_2.Items.Add("Curso...");
+
+                string turno = "";
+
+                if (boxTurnoAsistencia_2.SelectedItem != null)
+                {
+                    turno = boxTurnoAsistencia_2.SelectedItem.ToString();
+                }
+
+                string[] cursos = CurContr.listarCursoPorTurno(turno);
+
+                for (int i = 0; i < cursos.Length; i++)
+                {
+                    boxCursoAsistencia_2.Items.Add(cursos[i]);
+                }
+
+                boxCursoAsistencia_2.SelectedIndex = 0;
+
+
+            }
+            else
+            {
+                boxCursoAsistencia_2.Enabled = false;
+            }
+           
+            
+
+
+
+        }
+
+        private void btnConsultarLista_Click(object sender, EventArgs e)
+        {
+            if (boxMateriaAsistencia_2.SelectedIndex != 0)
+            {
+                if (dataGridListaAsistencias_2.Rows.Count > 0)
+                {
+                    dataGridListaAsistencias_2.Rows.Clear();
+                }
+                string turno = boxTurnoAsistencia_2.SelectedItem.ToString();
+                string curso = boxCursoAsistencia_2.SelectedItem.ToString();
+                string fecha = dateTimeFechaAsistencia_2.Value.ToString("yyyy-MM-dd");
+                string materia = boxMateriaAsistencia_2.SelectedItem.ToString();
+
+
+                DataTable listaAlumnos = CurContr.listarAsistencias(turno, curso, fecha, materia);
+
+
+                if (listaAlumnos.Rows.Count > 0)
+                {
+                    foreach (DataRow row in listaAlumnos.Rows)
+                    {
+                        string nombre = row[0].ToString();
+
+                        dataGridListaAsistencias_2.Rows.Add(nombre);
+
+                    }
+
+                    for (int i = 0; i < listaAlumnos.Rows.Count; i++)
+                    {
+                        int asistencia_recibida = 0;
+                        int.TryParse(listaAlumnos.Rows[i][1].ToString(), out asistencia_recibida);
+                        bool asistencia = false;
+                        if (asistencia_recibida == 1)
+                        {
+                            asistencia = true;
+                        }
+                        dataGridListaAsistencias_2.Rows[i].Cells[1].Value = asistencia;
+
+
+                    }
+
+                    dataGridListaAsistencias_2.Columns[0].ReadOnly = true;
+                    dataGridListaAsistencias_2.Columns[1].ReadOnly = true;
+                }else
+                {
+                    MessageBox.Show("No se encontraron asistencias registradas");
+                    //Si no hay ninguna asistencia ese dia para esa materia 
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show("Debes seleccionar una materia");
+            }
+            
+        }
+
+        private void boxCursoAsistencia_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxCursoAsistencia_2.SelectedIndex != 0)
+            {
+                btnConsultarLista.Enabled = true;
+            }else
+            {
+                btnConsultarLista.Enabled = false;
+            }
         }
     }
 }
