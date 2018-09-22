@@ -282,7 +282,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.Alumno_2 = new System.Windows.Forms.TextBox();
+            this.txtEmailAlumno_2 = new System.Windows.Forms.TextBox();
             this.txtCelularAlumno_2 = new System.Windows.Forms.TextBox();
             this.txtTelefonoAlumno_2 = new System.Windows.Forms.TextBox();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
@@ -296,7 +296,7 @@
             this.boxNivelAcademicoAlumno_2 = new System.Windows.Forms.ComboBox();
             this.txtUltimoAñoAprobadoAlumno_2 = new System.Windows.Forms.TextBox();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.txtFechaNacimientoAlumno_2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTxtFechaNacimientoAlumno_2 = new System.Windows.Forms.MaskedTextBox();
             this.txtEdadAlumno_2 = new System.Windows.Forms.TextBox();
             this.boxEstadoCivilAlumno_2 = new System.Windows.Forms.ComboBox();
             this.dateTimeFechaNacimientoAlumno_2 = new System.Windows.Forms.DateTimePicker();
@@ -2830,6 +2830,7 @@
             this.btnBuscar_3.TabIndex = 44;
             this.btnBuscar_3.Text = "Buscar";
             this.btnBuscar_3.UseVisualStyleBackColor = true;
+            this.btnBuscar_3.Click += new System.EventHandler(this.btnBuscar_3_Click);
             // 
             // boxBuscarAlumno
             // 
@@ -3540,7 +3541,7 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.Alumno_2);
+            this.groupBox12.Controls.Add(this.txtEmailAlumno_2);
             this.groupBox12.Controls.Add(this.txtCelularAlumno_2);
             this.groupBox12.Controls.Add(this.txtTelefonoAlumno_2);
             this.groupBox12.Location = new System.Drawing.Point(823, 93);
@@ -3550,17 +3551,17 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Contacto";
             // 
-            // Alumno_2
+            // txtEmailAlumno_2
             // 
-            this.Alumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Alumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.Alumno_2.Location = new System.Drawing.Point(34, 125);
-            this.Alumno_2.Name = "Alumno_2";
-            this.Alumno_2.Size = new System.Drawing.Size(159, 24);
-            this.Alumno_2.TabIndex = 14;
-            this.Alumno_2.Text = "Email";
-            this.Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.txtEmailAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmailAlumno_2.Location = new System.Drawing.Point(34, 125);
+            this.txtEmailAlumno_2.Name = "txtEmailAlumno_2";
+            this.txtEmailAlumno_2.Size = new System.Drawing.Size(159, 24);
+            this.txtEmailAlumno_2.TabIndex = 14;
+            this.txtEmailAlumno_2.Text = "Email";
+            this.txtEmailAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtEmailAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtCelularAlumno_2
             // 
@@ -3733,7 +3734,7 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.txtFechaNacimientoAlumno_2);
+            this.groupBox15.Controls.Add(this.maskedTxtFechaNacimientoAlumno_2);
             this.groupBox15.Controls.Add(this.txtEdadAlumno_2);
             this.groupBox15.Controls.Add(this.boxEstadoCivilAlumno_2);
             this.groupBox15.Controls.Add(this.dateTimeFechaNacimientoAlumno_2);
@@ -3751,16 +3752,16 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Datos personales";
             // 
-            // txtFechaNacimientoAlumno_2
+            // maskedTxtFechaNacimientoAlumno_2
             // 
-            this.txtFechaNacimientoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtFechaNacimientoAlumno_2.Location = new System.Drawing.Point(24, 150);
-            this.txtFechaNacimientoAlumno_2.Name = "txtFechaNacimientoAlumno_2";
-            this.txtFechaNacimientoAlumno_2.Size = new System.Drawing.Size(151, 24);
-            this.txtFechaNacimientoAlumno_2.TabIndex = 24;
-            this.txtFechaNacimientoAlumno_2.Text = "Fecha de nacimiento";
-            this.txtFechaNacimientoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtFechaNacimientoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            this.maskedTxtFechaNacimientoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.maskedTxtFechaNacimientoAlumno_2.Location = new System.Drawing.Point(24, 150);
+            this.maskedTxtFechaNacimientoAlumno_2.Name = "maskedTxtFechaNacimientoAlumno_2";
+            this.maskedTxtFechaNacimientoAlumno_2.Size = new System.Drawing.Size(151, 24);
+            this.maskedTxtFechaNacimientoAlumno_2.TabIndex = 24;
+            this.maskedTxtFechaNacimientoAlumno_2.Text = "Fecha de nacimiento";
+            this.maskedTxtFechaNacimientoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.maskedTxtFechaNacimientoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtEdadAlumno_2
             // 
@@ -3802,6 +3803,7 @@
             this.dateTimeFechaNacimientoAlumno_2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dateTimeFechaNacimientoAlumno_2.Size = new System.Drawing.Size(20, 24);
             this.dateTimeFechaNacimientoAlumno_2.TabIndex = 16;
+            this.dateTimeFechaNacimientoAlumno_2.ValueChanged += new System.EventHandler(this.dateTimeFechaNacimientoAlumno_2_ValueChanged);
             // 
             // boxSexoAlumno_2
             // 
@@ -5874,7 +5876,7 @@
         private System.Windows.Forms.TabPage tabPageModificarAlumnosDatosPersonales;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TextBox Alumno_2;
+        private System.Windows.Forms.TextBox txtEmailAlumno_2;
         private System.Windows.Forms.TextBox txtCelularAlumno_2;
         private System.Windows.Forms.TextBox txtTelefonoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox13;
@@ -5979,7 +5981,6 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.MaskedTextBox maskedTxtFechaNacimientoAlumnoNuevo;
-        private System.Windows.Forms.MaskedTextBox txtFechaNacimientoAlumno_2;
         private System.Windows.Forms.Button btnActualizarDocente;
         private System.Windows.Forms.Button btnDarDeBaja;
         private System.Windows.Forms.TabPage tabPageModificarAlumnosInformacion;
@@ -6110,5 +6111,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.ListBox listResultadosAlumnos;
+        private System.Windows.Forms.MaskedTextBox maskedTxtFechaNacimientoAlumno_2;
     }
 }

@@ -391,6 +391,8 @@ namespace Ametrano.Encapsulado
             diccionario.TryGetValue("apellido1", out datosPersonales_paraInsertar[3]);
             diccionario.TryGetValue("apellido2", out datosPersonales_paraInsertar[4]);
             diccionario.TryGetValue("fecha_nac", out datosPersonales_paraInsertar[5]);
+            DateTime fechaNacimiento = DateTime.Parse(datosPersonales_paraInsertar[5]);
+            datosPersonales_paraInsertar[5] = fechaNacimiento.ToString("yyyy-MM-dd");
             diccionario.TryGetValue("edad", out datosPersonales_paraInsertar[6]);
             diccionario.TryGetValue("sexo", out datosPersonales_paraInsertar[7]);
             diccionario.TryGetValue("estado_civil", out datosPersonales_paraInsertar[8]);
@@ -487,7 +489,26 @@ namespace Ametrano.Encapsulado
             //Comienza trabajo
 
             diccionario.TryGetValue("trabajo_alguna_vez", out trabajo_paraInsertar[0]);
+
+            if (trabajo_paraInsertar[0].Equals("True"))
+            {
+                trabajo_paraInsertar[0] = "SI";
+            }
+            else
+            {
+                trabajo_paraInsertar[0] = "NO";
+            }
+
             diccionario.TryGetValue("trabaja_actualmente", out trabajo_paraInsertar[1]);
+            if (trabajo_paraInsertar[1].Equals("True"))
+            {
+                trabajo_paraInsertar[1] = "SI";
+            }
+            else
+            {
+                trabajo_paraInsertar[1] = "NO";
+            }
+
             diccionario.TryGetValue("tiempo_sin_trabajo", out trabajo_paraInsertar[2]);
             diccionario.TryGetValue("horas_trabajo", out trabajo_paraInsertar[3]);
             diccionario.TryGetValue("ingreso_mensual", out trabajo_paraInsertar[4]);
@@ -505,9 +526,34 @@ namespace Ametrano.Encapsulado
             diccionario.TryGetValue("cant_personas_cargo_18_59", out personas_a_cargo_paraInsertar[1]);
             diccionario.TryGetValue("cant_personas_cargo_60", out personas_a_cargo_paraInsertar[2]);
             diccionario.TryGetValue("persona_tiene_discapacidad", out personas_a_cargo_paraInsertar[3]);
+            if (personas_a_cargo_paraInsertar[3].Equals("True"))
+            {
+                personas_a_cargo_paraInsertar[3] = "SI";
+            }else
+            {
+                personas_a_cargo_paraInsertar[3] = "NO";
+            }
+
             diccionario.TryGetValue("cuenta_con_apoyo", out personas_a_cargo_paraInsertar[4]);
+            if (personas_a_cargo_paraInsertar[4].Equals("True"))
+            {
+                personas_a_cargo_paraInsertar[4] = "SI";
+            }
+            else
+            {
+                personas_a_cargo_paraInsertar[4] = "NO";
+            }
             diccionario.TryGetValue("carga_semanal_cuidado", out personas_a_cargo_paraInsertar[5]);
             diccionario.TryGetValue("trabajo_anteriormente_cuidando", out personas_a_cargo_paraInsertar[6]);
+            if (personas_a_cargo_paraInsertar[6].Equals("True"))
+            {
+                personas_a_cargo_paraInsertar[6] = "SI";
+            }
+            else
+            {
+                personas_a_cargo_paraInsertar[6] = "NO";
+            }
+
             diccionario.TryGetValue("experiencia_instituciones_cuidado", out personas_a_cargo_paraInsertar[7]);
 
             dynamic[] datosPersonasACargoFeedback = setPersonasACargo(personas_a_cargo_paraInsertar);

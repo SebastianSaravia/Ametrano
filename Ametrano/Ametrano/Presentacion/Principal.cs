@@ -26,7 +26,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
         private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[4];
         private dynamic[] eventoClickBuscarConsultaAlumno = new dynamic[2];
-       
+
         private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
         private DatosAlumno datosAlumnoConsulta = new DatosAlumno();
@@ -64,7 +64,7 @@ namespace Ametrano.Presentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            
+
             dataGridGruposActivos.DataSource = CurContr.GruposActivos();
             dataGridGruposActivos.ReadOnly = true;
             boxSexoAlumno.SelectedIndex = 0;
@@ -84,11 +84,11 @@ namespace Ametrano.Presentacion
             boxSexoAlumno.SelectedIndex = 0;
             boxTrabajaActualmenteAlumno.SelectedIndex = 0;
             boxTrabajoAlgunaVezAlumno.SelectedIndex = 0;
-            boxTrabajoCuidandoAlumno.SelectedIndex = 0;            
+            boxTrabajoCuidandoAlumno.SelectedIndex = 0;
             boxBuscar.SelectedIndex = 0;
             boxBuscar_2.SelectedIndex = 0;
             boxCursoViaticos.SelectedIndex = 0;
-            boxCursoGrupo.SelectedIndex = 0;           
+            boxCursoGrupo.SelectedIndex = 0;
             boxTipoCurso.SelectedIndex = 0;
             boxCursoAsistencia.SelectedIndex = 0;
             boxCursoAsistencia_2.SelectedIndex = 0;
@@ -117,6 +117,8 @@ namespace Ametrano.Presentacion
             boxTurnoAsistencia.SelectedIndex = 0;
             boxTurnoAsistencia_2.SelectedIndex = 0;
             boxBuscarAlumno.SelectedIndex = 0;
+            boxTurnoAlumno.SelectedIndex = 0;
+            boxTurnoAlumno_2.SelectedIndex = 0;
 
             dateTimeFechaAsistencia.Value = DateTime.Now;
             dateTimeFechaAsistencia_2.Value = DateTime.Now;
@@ -134,18 +136,18 @@ namespace Ametrano.Presentacion
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
-            
-           
+
+
             string[] cursos = controlador.ListarCursos();
             string[] materias = controlador.ListarMaterias();
             string[] docentes = controlador.ListarDocentes();
-            
+
 
             for (int i = 0; i < cursos.Length; i++)
             {
                 boxCursoGrupo.Items.Add(cursos[i]);
                 boxCursoAlumno_2.Items.Add(cursos[i]);
-                boxCursoAlumno.Items.Add(cursos[i]);               
+                boxCursoAlumno.Items.Add(cursos[i]);
             }
 
             for (int i = 0; i < materias.Length; i++)
@@ -155,20 +157,21 @@ namespace Ametrano.Presentacion
                 boxMateriasCurso.Items.Add(materias[i]);
                 boxEspecialidades.Items.Add(materias[i]);
                 boxEspecialidades_2.Items.Add(materias[i]);
-                
+
             }
 
-            
+
 
             DateTime fecha = DateTime.Now;
 
             string nombreDia = fecha.DayOfWeek.ToString();
 
-            if(nombreDia.Equals("Thursday") || nombreDia.Equals("Friday"))
+            if (nombreDia.Equals("Thursday") || nombreDia.Equals("Friday"))
             {//Si es un jueves o viernes
                 btnAñadirSemanaViaticos.Enabled = true;
                 diaViatico = true;
-            }else
+            }
+            else
             {
                 btnAñadirSemanaViaticos.Enabled = false;
                 lblBlockViaticos.Visible = true;
@@ -186,9 +189,10 @@ namespace Ametrano.Presentacion
         /// Comienza verificaciones de la primera parte de agregar alumno
         /// </summary>
         /// <returns></returns>
-        private dynamic[] setDatosPersonalesAlumno()
+        private dynamic[] setDatosPersonalesAlumno(int type)
         {//metodo que verifica y almacena los datos personales del alumno
-
+         //type=0 ->nuevo
+         //type=1 ->modificacion
             string[] datosPersonales = new string[9];//Array que almacena los datos personales de alumno
 
             //Lleno array de datos personales para luego realizar la verificacion
@@ -202,25 +206,48 @@ namespace Ametrano.Presentacion
             datosPersonales[7] = boxSexoAlumno.SelectedItem.ToString();
             datosPersonales[8] = boxEstadoCivilAlumno.SelectedItem.ToString();
 
-           dynamic[] retorno =  datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
+            dynamic[] retorno;
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
+
+            }
+            else
+            {
+                retorno = datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
+
+            }
             return retorno;
         }
-        
-        private dynamic[] setDatosCursoAlumno()
+
+        private dynamic[] setDatosCursoAlumno(int type)
         {//metodo que verifica y almacena los datos del curso en datosalumno
+         //type=0 ->nuevo
+         //type=1 ->modificacion
             string[] curso = new string[4];//Array que almacena los datos de contacto del alumno
-            
+
             //Lleno el array del curso
             curso[0] = boxCursoAlumno.SelectedItem.ToString();
             curso[1] = boxEstadoAlumno.SelectedItem.ToString();
             curso[2] = boxPeriodoAlumno.SelectedItem.ToString();
             curso[3] = txtMontoViatico.Text;
 
-            dynamic[] retorno = datosAlumno.setCurso(curso); //Verifico los datos
+            dynamic[] retorno;
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setCurso(curso); //Verifico los datos
+            }
+            else
+            {//modificacion
+                retorno = datosAlumno.setCurso(curso); //Verifico los datos
+
+            }
             return retorno;
         }
-        private dynamic[] setDatosContactoAlumno()
+        private dynamic[] setDatosContactoAlumno(int type)
         {
+            //type=0 ->nuevo
+            //type=1 ->modificacion
             string[] contacto = new string[3]; //Array que almacena la informacion del curso
 
             //Lleno el array con los datos de contacto
@@ -228,12 +255,24 @@ namespace Ametrano.Presentacion
             contacto[1] = txtCelularAlumno.Text;
             contacto[2] = txtEmailAlumno.Text;
 
-            dynamic[] retorno = datosAlumno.setContacto(contacto);//verifico los datos
+            dynamic[] retorno;
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setContacto(contacto);//verifico los datos
+
+            }
+            else
+            {//modificacion
+                retorno = datosAlumno.setContacto(contacto);//verifico los datos
+
+            }
             return retorno;
 
         }
-        private dynamic[] setDatosDireccionAlumno()
+        private dynamic[] setDatosDireccionAlumno(int type)
         {
+            //type=0 ->nuevo
+            //type=1 ->modificacion
             string[] direccion = new string[6];//array que almacena los datos de direccion del alumno
 
             //Lleno array de direccion
@@ -244,19 +283,40 @@ namespace Ametrano.Presentacion
             direccion[4] = txtNumeroPuertaAlumno.Text;
             direccion[5] = txtNumeroApartamentoAlumno.Text;
 
-            dynamic[] retorno = datosAlumno.setDireccion(direccion);//verifico los datos
+            dynamic[] retorno;
+
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setDireccion(direccion);//verifico los datos
+            }
+            else
+            {//modificacion
+                retorno = datosAlumno.setDireccion(direccion);//verifico los datos
+
+            }
 
             return retorno;
         }
-        private dynamic[] setDatosFormacionAcademicaAlumno()
+        private dynamic[] setDatosFormacionAcademicaAlumno(int type)
         {
+            //type=0 ->nuevo
+            //type=1 ->modificacion
             string[] formacionAcademica = new string[2];//Array que almacena los datos de la formacion academica del alumno
 
             //Lleno los datos del array
             formacionAcademica[0] = boxNivelEducativo.SelectedItem.ToString();
             formacionAcademica[1] = txtUltAñoAprobado.Text;
 
-            dynamic[] retorno = datosAlumno.setFormacionAcademica(formacionAcademica);//verifico los datos
+            dynamic[] retorno;
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setFormacionAcademica(formacionAcademica);//verifico los datos
+            }
+            else
+            {//modificacion
+                retorno = datosAlumnoConsulta.setFormacionAcademica(formacionAcademica);//verifico los datos
+
+            }
             return retorno;
         }
 
@@ -264,8 +324,10 @@ namespace Ametrano.Presentacion
         /// Termina primera parte de ingreso de alumno y comienza segunda parte
         /// </summary>
         /// <returns></returns>
-        private dynamic[] setDatosTrabajoAlumno()
+        private dynamic[] setDatosTrabajoAlumno(int type)
         {//Metodo que verifica la parte del trabajo
+         //type=0 ->nuevo
+         //type=1 ->modificacion
             string[] trabajo = new string[5]; //Array que almacena los datos del trabajo del alumno
             trabajo[0] = boxTrabajoAlgunaVezAlumno.SelectedItem.ToString();
             trabajo[1] = boxTrabajaActualmenteAlumno.SelectedItem.ToString();
@@ -273,36 +335,79 @@ namespace Ametrano.Presentacion
             trabajo[3] = txtHorasJornadaAlumno.Text;
             trabajo[4] = txtIngresoMensualAlumno.Text;
 
-            dynamic[] retorno = datosAlumno.setTrabajo(trabajo);
+            dynamic[] retorno;
+            if (type == 0)
+            {
+                retorno = datosAlumno.setTrabajo(trabajo);
+            }
+            else
+            {
+                retorno = datosAlumnoConsulta.setTrabajo(trabajo);
+
+            }
             return retorno;
         }
-        private dynamic[] setDatosAccessoInternet()
+        private dynamic[] setDatosAccessoInternet(int type)
         {//Metodo que verifica la parte del acceso a internet
+         //type=0 ->nuevo
+         //type=1 ->modificacion
             string[] accesso_a_internet = new string[3];
             accesso_a_internet[0] = boxUsaInternetAlumno.SelectedItem.ToString();
             accesso_a_internet[1] = boxFacilAccesoInternetAlumno.SelectedItem.ToString();
             accesso_a_internet[2] = txtMedioAccesoInternetAlumno.Text;
-            dynamic[] retorno = datosAlumno.setAccessoInternet(accesso_a_internet);
+            dynamic[] retorno;
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setAccessoInternet(accesso_a_internet);
+            }
+            else
+            {
+                retorno = datosAlumnoConsulta.setAccessoInternet(accesso_a_internet);
+
+            }
             return retorno;
         }
-        private dynamic[] setDatosJefeHogar()
+        private dynamic[] setDatosJefeHogar(int type)
         {//Metodo que verifica los datos de jefe de hogar
+         //type=0 ->nuevo
+         //type=1 ->modificacion
             string[] jefe_hogar = new string[2];
             jefe_hogar[0] = boxJefeHogarAlumno.SelectedItem.ToString();
             jefe_hogar[1] = boxCantidadHijosAlumno.SelectedItem.ToString();
 
-            dynamic[] retorno = datosAlumno.setHogar(jefe_hogar);
+            dynamic[] retorno;
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setHogar(jefe_hogar);
+            }
+            else
+            {//modificacion
+                retorno = datosAlumnoConsulta.setHogar(jefe_hogar);
+
+            }
+            return retorno;
+        }
+        private dynamic[] setDatosCoberturaSalud(int type)
+        {//Metodo que verifica la cobertura de salud 
+            //type=0 ->nuevo
+            //type=1 ->modificacion
+            string cobertura = txtCoberuraSaludAlumno.Text;
+            dynamic[] retorno;
+            if (type == 0)
+            {//nuevo
+                retorno = datosAlumno.setCobertura(cobertura);
+            }
+            else
+            {
+                retorno = datosAlumnoConsulta.setCobertura(cobertura);
+            }
 
             return retorno;
         }
-        private dynamic[] setDatosCoberturaSalud()
-        {//Metodo que verifica la cobertura de salud
-            string cobertura = txtCoberuraSaludAlumno.Text;
-            dynamic[] retorno = datosAlumno.setCobertura(cobertura);
-            return retorno;
-        }
-        private dynamic[] setDatosPersonasACargo()
+        private dynamic[] setDatosPersonasACargo(int type)
         {
+            //type=0 ->nuevo
+            //type=1 ->modificacion
             string[] personasCargo = new string[8];
 
             personasCargo[0] = txt0a17Alumno.Text;
@@ -313,23 +418,31 @@ namespace Ametrano.Presentacion
             personasCargo[5] = txtCargaSemanalCuidadoAlumno.Text;
             personasCargo[6] = boxTrabajoCuidandoAlumno.SelectedItem.ToString();
             personasCargo[7] = txtExperienciaInstitucionesCuidadoAlumno.Text;
+            dynamic[] retorno;
+            if (type == 0)
+            {//agrego a objeto de insert
+                retorno = datosAlumno.setPersonasACargo(personasCargo);
+            }
+            else
+            {
+                retorno = datosAlumnoConsulta.setPersonasACargo(personasCargo);
+            }
 
-            dynamic[] retorno = datosAlumno.setPersonasACargo(personasCargo);
             return retorno;
 
         }
         private void btnSiguiente_Click(object sender, EventArgs e)
         {//Boton que verificara que todos los datos esten correctos
-            dynamic[] setDatosPersonalesAlumnoResultado = this.setDatosPersonalesAlumno();//objeto que guarda el estado y el mensaje 
-            dynamic[] setDatosCursoAlumnoResultado = this.setDatosCursoAlumno();
-            dynamic[] setDatosContactoAlumnoResultado = this.setDatosContactoAlumno();
-            dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno();
-            dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno();
+            dynamic[] setDatosPersonalesAlumnoResultado = this.setDatosPersonalesAlumno(0);//objeto que guarda el estado y el mensaje 
+            dynamic[] setDatosCursoAlumnoResultado = this.setDatosCursoAlumno(0);
+            dynamic[] setDatosContactoAlumnoResultado = this.setDatosContactoAlumno(0);
+            dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno(0);
+            dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno(0);
 
-            if(!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
+            if (!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
                 !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
             {//Se verifican que todos los datos sean correctos
-                
+
                 //Si todos los datos son correctos permito al pasaje a la segunda parte del formulario 
 
                 tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosPersonales);
@@ -338,26 +451,26 @@ namespace Ametrano.Presentacion
             }
             else
             {
-               
+
                 //Si hay errores
             }
 
 
-           
+
         }
         private void btnSiguinete2_Click(object sender, EventArgs e)
         {
-            dynamic[] setDatosTrabajoAlumno = this.setDatosTrabajoAlumno();
-            dynamic[] setDatosAccesoInternetAlumno = this.setDatosAccessoInternet();
-            dynamic[] setDatosJefeHogarAlumno = this.setDatosJefeHogar();
-            dynamic[] setDatosPersonasACargoAlumno = this.setDatosPersonasACargo();//Depende del tipo del curso
-            dynamic[] setDatosCoberturaSaludAlumno = this.setDatosCoberturaSalud();
+            dynamic[] setDatosTrabajoAlumno = this.setDatosTrabajoAlumno(0);
+            dynamic[] setDatosAccesoInternetAlumno = this.setDatosAccessoInternet(0);
+            dynamic[] setDatosJefeHogarAlumno = this.setDatosJefeHogar(0);
+            dynamic[] setDatosPersonasACargoAlumno = this.setDatosPersonasACargo(0);//Depende del tipo del curso
+            dynamic[] setDatosCoberturaSaludAlumno = this.setDatosCoberturaSalud(0);
 
-            if(!setDatosTrabajoAlumno[0] && !setDatosAccesoInternetAlumno[0] && 
+            if (!setDatosTrabajoAlumno[0] && !setDatosAccesoInternetAlumno[0] &&
                 !setDatosJefeHogarAlumno[0] && !setDatosPersonasACargoAlumno[0] //Depende del tipo de curso
                 && !setDatosCoberturaSaludAlumno[0])
             {//Si todo es correcto
-               
+
                 //Se pasa a la finalizacion
                 IDictionary<string, string> diccionarioDeAlumno = datosAlumno.getDatosPersona();
                 //Datos personales
@@ -440,7 +553,7 @@ namespace Ametrano.Presentacion
 
 
 
-           
+
         }
         private void button5_Click(object sender, EventArgs e)
         {
@@ -473,7 +586,7 @@ namespace Ametrano.Presentacion
             }
             //Muestro la fecha en el masked box
 
-            maskedTxtFechaNacimientoAlumnoNuevo.Text =  TimePickerFechaNacAlumnoNuevo.Value.Year + "/" + mes + "/" + dia ;
+            maskedTxtFechaNacimientoAlumnoNuevo.Text = TimePickerFechaNacAlumnoNuevo.Value.Year + "/" + mes + "/" + dia;
 
             maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
         }
@@ -697,9 +810,70 @@ namespace Ametrano.Presentacion
 
         private void button3_Click(object sender, EventArgs e)
         {
-            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosInformacion);
-            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
-            tabControlIngresarAlumno.SelectedIndex = 1;
+            if (eventoClickBuscarConsultaAlumno[0])
+            {
+                rellenarConsultaAlumnoSegundaParte();
+
+
+                //Muestro la proxima pagina
+                tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosInformacion);
+                tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
+                tabControlIngresarAlumno.SelectedIndex = 1;
+            }
+
+
+
+
+        }
+
+        public void rellenarConsultaAlumnoSegundaParte()
+        {
+            if (eventoClickBuscarConsultaAlumno[0])
+            {
+                IDictionary<string, string> datosAlumnoDiccionario = datosAlumnoConsulta.getDatosPersona();
+
+                //boxTurnoAlumno_2.SelectedItem = 
+                boxEstadoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_estado"];
+                txtMontoViatico_2.Text = datosAlumnoDiccionario["curso_monto_viatico"];
+
+
+                //DatosPersonales
+
+                txtCedulaAlumno_2.Text = datosAlumnoDiccionario["cedula_alumno"];
+                txtNombre1Alumno_2.Text = datosAlumnoDiccionario["nombre1"];
+                txtNombre2Alumno_2.Text = datosAlumnoDiccionario["nombre2"];
+                txtApellido1Alumno_2.Text = datosAlumnoDiccionario["apellido1"];
+                txtApellido2Alumno_2.Text = datosAlumnoDiccionario["apellido2"];
+                maskedTxtFechaNacimientoAlumno_2.Text = datosAlumnoDiccionario["fecha_nac"];
+                txtEdadAlumno_2.Text = datosAlumnoDiccionario["edad"];
+                boxSexoAlumno_2.SelectedItem = datosAlumnoDiccionario["sexo"];
+                boxEstadoCivilAlumno_2.SelectedItem = datosAlumnoDiccionario["estado_civil"];
+
+                //Direccion
+
+                boxDepartamentoAlumno_2.SelectedItem = datosAlumnoDiccionario["direccion_departamento"];
+                boxLocalidadAlumno_2.SelectedItem = datosAlumnoDiccionario["direccion_localidad"];
+                txtCalleAlumno_2.Text = datosAlumnoDiccionario["direccion_calle"];
+                txtReferenciaAlumno_2.Text = datosAlumnoDiccionario["direccion_referencia"];
+                txtNPuertaAlumno_2.Text = datosAlumnoDiccionario["direccion_numero_puerta"];
+                txtNApartamentoAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
+
+                //Contacto
+                txtTelefonoAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
+                txtCelularAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
+                txtEmailAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
+
+                //Formacion academica
+
+                boxNivelAcademicoAlumno_2.SelectedItem = datosAlumnoDiccionario["formacion_nivel"];
+                txtUltimoAñoAprobadoAlumno_2.Text = datosAlumnoDiccionario["formacion_ultimo_año_aprovado"];
+
+
+
+
+
+            }
+
         }
 
         public void limpiarFormulario(Control contenedor)
@@ -784,7 +958,7 @@ namespace Ametrano.Presentacion
                     if (datosRecividos[0])
                     {
                         IDictionary<string, string> datosRecividosDocente = datosRecividos[1];
-                        string cedula, nombre, apellido, email,estado;
+                        string cedula, nombre, apellido, email, estado;
                         //obtengo los datos guardados en el diccionario
                         datosRecividosDocente.TryGetValue("cedula_docente", out cedula);
                         datosRecividosDocente.TryGetValue("nombre", out nombre);
@@ -862,7 +1036,7 @@ namespace Ametrano.Presentacion
                 }
 
                 datoCorrecto = verificarDatoCorrecto(tipoBusqueda, datoDeBusqueda);
-                buscarDocente(tipoBusqueda, datoDeBusqueda, datoCorrecto,false);
+                buscarDocente(tipoBusqueda, datoDeBusqueda, datoCorrecto, false);
 
 
             }
@@ -942,7 +1116,8 @@ namespace Ametrano.Presentacion
                 }
 
 
-            }else
+            }
+            else
             {//Si se busca una persona para consulta o modificacion
                 if (datoCorrecto)
                 {//Si el texto de busqueda supero todas las validaciones
@@ -999,9 +1174,9 @@ namespace Ametrano.Presentacion
                     }
                 }
             }
-            
+
         }
-        public void buscarAlumno(int tipoBusqueda,string datoDeBusqueda,bool datoCorrecto)
+        public void buscarAlumno(int tipoBusqueda, string datoDeBusqueda, bool datoCorrecto)
         {
             if (datoCorrecto)
             {//Si el texto de busqueda supero todas las validaciones
@@ -1013,14 +1188,14 @@ namespace Ametrano.Presentacion
                     limpiarFormulario(tabPageIngresarAlumnoDatosInteres);
                     limpiarFormulario(tabPageAlumnosModificar);
 
-                    IDictionary<string,string> datosAlumnoDiccionario = dato[1];
+                    IDictionary<string, string> datosAlumnoDiccionario = dato[1];
 
                     string cedula = "";
 
                     datosAlumnoDiccionario.TryGetValue("cedula_alumno", out cedula);
 
                     //Relleno datosAlumno de consulta
-                    dynamic[] datosAlumnoFeedback =  datosAlumnoConsulta.rellenarDesdeDiccionario(datosAlumnoDiccionario);
+                    dynamic[] datosAlumnoFeedback = datosAlumnoConsulta.rellenarDesdeDiccionario(datosAlumnoDiccionario);
 
                     if (datosAlumnoFeedback[0])
                     {//Si hay error
@@ -1046,7 +1221,7 @@ namespace Ametrano.Presentacion
             if (eventoClickBuscarConsultaAlumno[0])
             {
                 IDictionary<string, string> datosAlumnoDiccionario = datosAlumnoConsulta.getDatosPersona();
-                
+
                 //Primera parte
                 //Curso
                 lblCursoAlumno_2.Text = "Curso: " + datosAlumnoDiccionario["curso_alumno"];
@@ -1059,7 +1234,9 @@ namespace Ametrano.Presentacion
                 lblNombre2Alumno_2.Text = "Segundo nombre: " + datosAlumnoDiccionario["nombre2"];
                 lblApellido1Alumno_2.Text = "Primer apellido: " + datosAlumnoDiccionario["apellido1"];
                 lblApellido2Alumno_2.Text = "Segundo apellido: " + datosAlumnoDiccionario["apellido2"];
-                lblFechaNacimientoAlumno_2.Text = "Fecha de nacimiento: " + datosAlumnoDiccionario["fecha_nac"];
+                DateTime fechaNacimiento = DateTime.Parse(datosAlumnoDiccionario["fecha_nac"]);
+
+                lblFechaNacimientoAlumno_2.Text = "Fecha de nacimiento: " + fechaNacimiento.ToString("dd/MM/yyyy");
                 lblEdadAlumno_2.Text = "Edad: " + datosAlumnoDiccionario["edad"];
                 lblSexoAlumno_2.Text = "Sexo: " + datosAlumnoDiccionario["sexo"];
                 lblEstadoCivilAlumno_2.Text = "Estado civil: " + datosAlumnoDiccionario["estado_civil"];
@@ -1067,7 +1244,7 @@ namespace Ametrano.Presentacion
                 //Formacion Academimca
 
                 lblNivelEducativoAlumno_2.Text = "Nivel educativo: " + datosAlumnoDiccionario["formacion_nivel"];
-                lblUltimoAñoAprobadoAlumno_2.Text = "Ultimo año aprovado: "+ datosAlumnoDiccionario["formacion_ultimo_año_aprovado"];
+                lblUltimoAñoAprobadoAlumno_2.Text = "Ultimo año aprovado: " + datosAlumnoDiccionario["formacion_ultimo_año_aprovado"];
 
                 //Direccion
 
@@ -1122,7 +1299,7 @@ namespace Ametrano.Presentacion
 
             }
         }
-        
+
 
         private void btnCambiarEstadoDocente_Click(object sender, EventArgs e)
         {
@@ -1137,14 +1314,14 @@ namespace Ametrano.Presentacion
                         btnCambiarEstadoDocente.Visible = false;
                         lblEstadoDocente.Text = "Estado: Activo";
                         MessageBox.Show("Se ha cambiado el estado de la persona a Activo");
-                       
+
                     }
                 }
 
             }
 
         }
-        
+
         public bool esInt(string numero)
         {//Metodo que retorna true si es unicamente numero
             int numero_convertido;
@@ -1170,7 +1347,7 @@ namespace Ametrano.Presentacion
             }
             return retorno;
         }
-        
+
         public bool verificarDatoCorrecto(int tipoBusqueda, string datoDeBusqueda)
         {
             bool datoCorrecto = false;
@@ -1228,7 +1405,7 @@ namespace Ametrano.Presentacion
         }
 
         private void boxBuscar_SelectedIndexChanged(object sender, EventArgs e)
-        { 
+        {
             if (boxBuscar.SelectedIndex == 1)
             {//Si se selecciona cedula se ajusta el largo maximo a 8
                 txtBuscar.MaxLength = 8;
@@ -1260,12 +1437,12 @@ namespace Ametrano.Presentacion
 
                     if (!CurContr.AñadirSemanaViatico(ci))
                     {
-                        
+
                         MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
                         viaticoExitoso = false;
                         break;
                     }
-                    
+
                 }
 
             }
@@ -1273,12 +1450,12 @@ namespace Ametrano.Presentacion
             if (viaticoExitoso)
             {
                 MessageBox.Show("Se ha generado el viatico correctamente", "Viatico generado con exito");
-                listAlumnosViaticos.SelectedIndex = listaAlumnos.Rows.Count-1;
+                listAlumnosViaticos.SelectedIndex = listaAlumnos.Rows.Count - 1;
                 listAlumnosViaticos.SelectedIndex = 0;
             }
 
 
-          
+
 
 
         }
@@ -1289,7 +1466,7 @@ namespace Ametrano.Presentacion
             DataTable datos = eventoClickListaAlumnos[1];
             string ci = datos.Rows[listAlumnosViaticos.SelectedIndex][datos.Columns[0]].ToString();
             montoTotal = CurContr.calcularMontoTotal(ci);
-            lblMontoTotalViaticos.Text = "Monto total a pagar: $" + montoTotal ;
+            lblMontoTotalViaticos.Text = "Monto total a pagar: $" + montoTotal;
         }
 
         private void btnActualizarDocente_Click(object sender, EventArgs e)
@@ -1324,7 +1501,7 @@ namespace Ametrano.Presentacion
                         }
 
 
-                        dynamic[] update = controlador.updateDocente(infoDocente, especialidades,eventoClickBuscarConsultaDocente[1]);
+                        dynamic[] update = controlador.updateDocente(infoDocente, especialidades, eventoClickBuscarConsultaDocente[1]);
                         if (update[0])
                         {
                             MessageBox.Show(update[1]);
@@ -1342,7 +1519,8 @@ namespace Ametrano.Presentacion
                 {
                     MessageBox.Show(verificacion[1]);
                 }
-            }else
+            }
+            else
             {
                 MessageBox.Show("Primero debes buscar un docente");
             }
@@ -1360,7 +1538,8 @@ namespace Ametrano.Presentacion
                     }
                 }
             }
-            else{
+            else
+            {
                 MessageBox.Show("Primero debes buscar un docente");
             }
         }
@@ -1373,7 +1552,8 @@ namespace Ametrano.Presentacion
                 {
                     listEspecialidades_2.Items.RemoveAt(listEspecialidades_2.SelectedIndex);
                 }
-            }else
+            }
+            else
             {
                 MessageBox.Show("Primero debes buscar un docente");
             }
@@ -1381,7 +1561,7 @@ namespace Ametrano.Presentacion
 
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
-            mostrarResultados(txtBuscar, boxBuscar, listResultadosDocentes,0);
+            mostrarResultados(txtBuscar, boxBuscar, listResultadosDocentes, 0);
         }
 
         private void Principal_KeyDown(object sender, KeyEventArgs e)
@@ -1395,22 +1575,22 @@ namespace Ametrano.Presentacion
             {
                 case Keys.A:
                     tabControlPrincipal.SelectedIndex = 1;
-                    
+
                     break;
                 case Keys.D:
                     tabControlPrincipal.SelectedIndex = 0;
-                    
+
 
                     break;
                 case Keys.C:
                     tabControlPrincipal.SelectedIndex = 2;
-                    
+
 
                     break;
                     /* (etc.) */
             }
-        
-    }
+
+        }
 
         private void listBoxResultados_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -1419,15 +1599,15 @@ namespace Ametrano.Presentacion
                 string ci = listResultadosDocentes.SelectedItem.ToString().Substring(0, 8);
                 buscarDocente(0, ci, true, false);
             }
-            
+
         }
 
         private void txtBuscar_2_TextChanged(object sender, EventArgs e)
         {
-            mostrarResultados(txtBuscar_2, boxBuscar_2, listResultadosDocentes_2,0);
+            mostrarResultados(txtBuscar_2, boxBuscar_2, listResultadosDocentes_2, 0);
         }
 
-        public void mostrarResultados(TextBox textbox,ComboBox box, ListBox lista, int type)
+        public void mostrarResultados(TextBox textbox, ComboBox box, ListBox lista, int type)
         {
             //type=0 -> docente
             //type=1 -> alumno
@@ -1560,10 +1740,10 @@ namespace Ametrano.Presentacion
                 string turno = "";
                 if (boxTurnoViaticos.SelectedItem != null)
                 {
-                   turno = boxTurnoViaticos.SelectedItem.ToString();
+                    turno = boxTurnoViaticos.SelectedItem.ToString();
                 }
 
-                dynamic[] alumn = CurContr.AlumnosCurso(curso,turno, out dt);
+                dynamic[] alumn = CurContr.AlumnosCurso(curso, turno, out dt);
                 listAlumnosViaticos.Items.Clear();
                 for (int i = 0; i < alumn.Length; i++)
                 {
@@ -1580,13 +1760,14 @@ namespace Ametrano.Presentacion
                     }
 
 
-                }else
+                }
+                else
                 {
                     btnAñadirSemanaViaticos.Enabled = false;
                 }
             }
 
-            
+
 
         }
 
@@ -1594,7 +1775,7 @@ namespace Ametrano.Presentacion
         {
             if (eventoClickListaAlumnos[0])
             {
-               
+
                 DataTable listaAlumnos = eventoClickListaAlumnos[1];
                 int val = listAlumnosViaticos.SelectedIndex;
                 if (listAlumnosViaticos.SelectedIndex != -1)
@@ -1633,20 +1814,21 @@ namespace Ametrano.Presentacion
                 dataGridListaAsistencias.Rows.Clear();
             }
 
-            if (boxCursoAsistencia.SelectedIndex==0)
+            if (boxCursoAsistencia.SelectedIndex == 0)
             {
                 MessageBox.Show("Debe seleccionar un curso primero.");
-            }else
+            }
+            else
             {
                 DataTable datosAlumnos = new DataTable();
-                string[] alumnos = CurContr.ListarAlumnosGrupo(curso,turno,out datosAlumnos);
+                string[] alumnos = CurContr.ListarAlumnosGrupo(curso, turno, out datosAlumnos);
 
                 for (int i = 0; i < alumnos.Length; i++)
                 {
                     dataGridListaAsistencias.Rows.Add(alumnos[i]);
                 }
 
-                
+
 
                 btnGuardarLista.Enabled = true;
                 dateTimeFechaAsistencia.Enabled = true;
@@ -1657,14 +1839,14 @@ namespace Ametrano.Presentacion
                 eventoClickGenerarListaAsistencias[3] = turno;
             }
 
-           
+
         }
 
         private void dataGridViaticos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (dataGridViaticos.SelectedRows.Count > 0)
             {
-               
+
                 int rowIndex = dataGridViaticos.SelectedRows[0].Index;
                 DataTable listaAlumnos = eventoClickListaAlumnos[1];
 
@@ -1675,7 +1857,8 @@ namespace Ametrano.Presentacion
                 if (alumnoSeleccionado.Cells[4].FormattedValue.Equals(true))
                 {
                     estadoNuevo = true;
-                }else
+                }
+                else
                 {
                     estadoNuevo = false;
                 }
@@ -1685,17 +1868,17 @@ namespace Ametrano.Presentacion
 
                 DateTime formatFecha;
 
-                DateTime.TryParse(fecha,out formatFecha);
+                DateTime.TryParse(fecha, out formatFecha);
 
                 fecha = formatFecha.ToString("yyyy-MM-dd");
-                
-                
+
+
                 int val = listAlumnosViaticos.SelectedIndex;
                 string ci = listaAlumnos.Rows[val][listaAlumnos.Columns[0]].ToString();
 
-            
-                
-                bool resultado = CurContr.updatePago(ci, fecha,semana,estadoNuevo);
+
+
+                bool resultado = CurContr.updatePago(ci, fecha, semana, estadoNuevo);
 
                 if (resultado)
                 {
@@ -1720,7 +1903,8 @@ namespace Ametrano.Presentacion
             if (periodoSeleccionado == 1)
             {
                 id_grupo = 0;
-            }else if(periodoSeleccionado>1)
+            }
+            else if (periodoSeleccionado > 1)
             {
                 if (eventoClickAgregarAlumnoCurso[0])
                 {
@@ -1735,19 +1919,20 @@ namespace Ametrano.Presentacion
                 if (al.insertarAlumno(datosAlumno, id_grupo))
                 {
                     MessageBox.Show("El alumno ha sigo guardado con exito");
-                }else
+                }
+                else
                 {
                     MessageBox.Show("Error al ingresar alumno, verifique que los campos contienen la informacion correcta", "Error al ingresar alumno");
                 }
-                
-               
+
+
             }
             else if (dialogResult == DialogResult.No)
             {
-               
+
             }
 
-           
+
 
 
 
@@ -1788,7 +1973,7 @@ namespace Ametrano.Presentacion
 
         private void boxTurnoViaticos_SelectedIndexChanged(object sender, EventArgs e)
         {//Seleccion de turno
-            if(boxTurnoViaticos.SelectedIndex != 0)
+            if (boxTurnoViaticos.SelectedIndex != 0)
             {
                 boxCursoViaticos.Items.Clear();
                 boxCursoViaticos.Items.Add("Curso...");
@@ -1803,7 +1988,8 @@ namespace Ametrano.Presentacion
 
                 boxCursoViaticos.Enabled = true;
             }
-            else{
+            else
+            {
                 boxCursoViaticos.Enabled = false;
             }
         }
@@ -1811,7 +1997,7 @@ namespace Ametrano.Presentacion
         private void btnCrearGrupo_Click(object sender, EventArgs e)
         {
 
-            if (boxTurnoGrupo.SelectedIndex !=0 && boxCursoGrupo.SelectedIndex != 0)
+            if (boxTurnoGrupo.SelectedIndex != 0 && boxCursoGrupo.SelectedIndex != 0)
             {
                 string turno = boxTurnoGrupo.SelectedItem.ToString();
                 string curso = boxCursoGrupo.SelectedItem.ToString();
@@ -1828,12 +2014,13 @@ namespace Ametrano.Presentacion
                     dataGridGruposActivos.DataSource = CurContr.GruposActivos();
                     MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
                 }
-            }else 
+            }
+            else
             {
                 MessageBox.Show("Error, comprueve que todos los campos son correctos.");
             }
 
-           
+
         }
 
         private void boxTurnoAsistencia_SelectedIndexChanged(object sender, EventArgs e)
@@ -1853,13 +2040,13 @@ namespace Ametrano.Presentacion
 
 
                 boxCursoAsistencia.Enabled = true;
-               
-                
+
+
             }
             else
             {
                 boxCursoAsistencia.Enabled = false;
-               
+
 
             }
         }
@@ -1869,7 +2056,8 @@ namespace Ametrano.Presentacion
             if (boxCursoAlumno.SelectedIndex != 0)
             {
                 boxPeriodoAlumno.Enabled = true;
-            }else
+            }
+            else
             {
                 boxPeriodoAlumno.Enabled = false;
             }
@@ -1877,11 +2065,11 @@ namespace Ametrano.Presentacion
             string turno = "";
             if (boxTurnoAlumno.SelectedItem != null)
             {
-             turno = boxTurnoAlumno.SelectedItem.ToString();
+                turno = boxTurnoAlumno.SelectedItem.ToString();
             }
 
             DataTable datos = new DataTable();
-            string[] periodos = CurContr.ListarPeriodos(curso,turno, out datos);
+            string[] periodos = CurContr.ListarPeriodos(curso, turno, out datos);
             boxPeriodoAlumno.Items.Clear();
             boxPeriodoAlumno.Items.Add("Periodo...");
             boxPeriodoAlumno.Items.Add("Pendiente");
@@ -1936,7 +2124,8 @@ namespace Ametrano.Presentacion
                 if (boxMateriaAsisencia.SelectedIndex == 0)
                 {
                     MessageBox.Show("Debes seleccionar una materia");
-                }else
+                }
+                else
                 {
                     for (int i = 0; i < dataGridListaAsistencias.Rows.Count; i++)
                     {
@@ -2015,7 +2204,7 @@ namespace Ametrano.Presentacion
                     }
                 }
             }
-            
+
 
 
         }
@@ -2051,8 +2240,8 @@ namespace Ametrano.Presentacion
             {
                 boxCursoAsistencia_2.Enabled = false;
             }
-           
-            
+
+
 
 
 
@@ -2101,7 +2290,8 @@ namespace Ametrano.Presentacion
 
                     dataGridListaAsistencias_2.Columns[0].ReadOnly = true;
                     dataGridListaAsistencias_2.Columns[1].ReadOnly = true;
-                }else
+                }
+                else
                 {
                     MessageBox.Show("No se encontraron asistencias registradas");
                     //Si no hay ninguna asistencia ese dia para esa materia 
@@ -2113,7 +2303,7 @@ namespace Ametrano.Presentacion
             {
                 MessageBox.Show("Debes seleccionar una materia");
             }
-            
+
         }
 
         private void boxCursoAsistencia_2_SelectedIndexChanged(object sender, EventArgs e)
@@ -2121,7 +2311,8 @@ namespace Ametrano.Presentacion
             if (boxCursoAsistencia_2.SelectedIndex != 0)
             {
                 btnConsultarLista.Enabled = true;
-            }else
+            }
+            else
             {
                 btnConsultarLista.Enabled = false;
             }
@@ -2151,6 +2342,64 @@ namespace Ametrano.Presentacion
                 string ci = listResultadosAlumnos.SelectedItem.ToString().Substring(0, 8);
                 buscarAlumno(0, ci, true);
             }
+        }
+
+        private void btnBuscar_3_Click(object sender, EventArgs e)
+        {
+            if (boxBuscarAlumno.SelectedIndex == 0)
+            {//Si el tipo de busqueda es el placeholder
+                MessageBox.Show("Debe seleccionar un metodo de busqueda");
+            }
+            else if (boxBuscarAlumno.SelectedIndex != 0 && txtBuscarAlumno.Text.Equals("Texto de busqueda"))
+            {//Si el campo de busqueda es cedula o nombre pero el campo de busqueda esta vacio
+                MessageBox.Show("Se debe ingresar un texto de busqueda");
+            }
+            else
+            {//Si se selecciona nombre y apellido/cedula y se escribio un dato de busqueda
+                //Variables
+                int tipoBusqueda = -1;//Variable que almacena el tipo de busqueda seleccionado
+                bool datoCorrecto = false;//Variable que se usa para verificar si el dato esta ingresado correctamente
+                string datoDeBusqueda = txtBuscarAlumno.Text; //Dato de busqueda que se ingreso en el textbox
+
+
+                if (boxBuscarAlumno.SelectedIndex == 1)
+                {//Si se selecciona cedula
+                    tipoBusqueda = 0;
+
+                }
+                else if (boxBuscarAlumno.SelectedIndex == 2)
+                {//Si se selecciona nombre
+                    tipoBusqueda = 1;
+                }
+
+                datoCorrecto = verificarDatoCorrecto(tipoBusqueda, datoDeBusqueda);
+                buscarAlumno(tipoBusqueda, datoDeBusqueda, datoCorrecto);
+
+
+            }
+        }
+
+        private void dateTimeFechaNacimientoAlumno_2_ValueChanged(object sender, EventArgs e)
+        {
+            maskedTxtFechaNacimientoAlumno_2.Mask = "0000-00-00";//Asigno maskara a la fecha
+
+            string mes, dia;
+
+            mes = dateTimeFechaNacimientoAlumno_2.Value.Month.ToString();
+            dia = dateTimeFechaNacimientoAlumno_2.Value.Day.ToString();
+            if (int.Parse(dia) < 10)
+            {//si el dia es menor a 10, le agrego un cero delante
+                dia = "0" + dia;
+            }
+            if (int.Parse(mes) < 10)
+            {//Lo mismo que con dia
+                mes = "0" + mes;
+            }
+            //Muestro la fecha en el masked box
+
+            maskedTxtFechaNacimientoAlumno_2.Text = dateTimeFechaNacimientoAlumno_2.Value.Year + "/" + mes + "/" + dia;
+
+            maskedTxtFechaNacimientoAlumno_2.ForeColor = Color.Black;
         }
     }
 }
