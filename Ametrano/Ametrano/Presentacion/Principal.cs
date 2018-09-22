@@ -99,7 +99,7 @@ namespace Ametrano.Presentacion
             boxPeriodoAlumno_2.SelectedIndex = 0;
             boxSexoAlumno_2.SelectedIndex = 0;
             boxTrabajaActualmenteAlumno_2.SelectedIndex = 0;
-            boxTrabajoAnteriormenteCuidandoAlumno_2.SelectedIndex = 0;
+            boxTrabajoCuidandoAlumno_2.SelectedIndex = 0;
             boxUsaInternetAlumno_2.SelectedIndex = 0;
             boxPersonaConDiscapacidadAlumno_2.SelectedIndex = 0;
             boxNivelAcademicoAlumno_2.SelectedIndex = 0;
@@ -196,24 +196,36 @@ namespace Ametrano.Presentacion
             string[] datosPersonales = new string[9];//Array que almacena los datos personales de alumno
 
             //Lleno array de datos personales para luego realizar la verificacion
-            datosPersonales[0] = txtCedulaAlumno.Text;
-            datosPersonales[1] = txtNombre1Alumno.Text;
-            datosPersonales[2] = txtNombre2Alumno.Text;
-            datosPersonales[3] = txtApellido1Alumno.Text;
-            datosPersonales[4] = txtApellido2Alumno.Text;
-            datosPersonales[5] = maskedTxtFechaNacimientoAlumnoNuevo.Text;
-            datosPersonales[6] = txtEdadAlumno.Text;
-            datosPersonales[7] = boxSexoAlumno.SelectedItem.ToString();
-            datosPersonales[8] = boxEstadoCivilAlumno.SelectedItem.ToString();
+            
 
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                datosPersonales[0] = txtCedulaAlumno.Text;
+                datosPersonales[1] = txtNombre1Alumno.Text;
+                datosPersonales[2] = txtNombre2Alumno.Text;
+                datosPersonales[3] = txtApellido1Alumno.Text;
+                datosPersonales[4] = txtApellido2Alumno.Text;
+                datosPersonales[5] = maskedTxtFechaNacimientoAlumno.Text;
+                datosPersonales[6] = txtEdadAlumno.Text;
+                datosPersonales[7] = boxSexoAlumno.SelectedItem.ToString();
+                datosPersonales[8] = boxEstadoCivilAlumno.SelectedItem.ToString();
+
                 retorno = datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
 
             }
             else
             {
+                datosPersonales[0] = txtCedulaAlumno_2.Text;
+                datosPersonales[1] = txtNombre1Alumno_2.Text;
+                datosPersonales[2] = txtNombre2Alumno_2.Text;
+                datosPersonales[3] = txtApellido1Alumno_2.Text;
+                datosPersonales[4] = txtApellido2Alumno_2.Text;
+                datosPersonales[5] = maskedTxtFechaNacimientoAlumno_2.Text;
+                datosPersonales[6] = txtEdadAlumno_2.Text;
+                datosPersonales[7] = boxSexoAlumno_2.SelectedItem.ToString();
+                datosPersonales[8] = boxEstadoCivilAlumno_2.SelectedItem.ToString();
+
                 retorno = datosAlumno.setDatosPersonales(datosPersonales);//Verifico datos personales
 
             }
@@ -227,18 +239,25 @@ namespace Ametrano.Presentacion
             string[] curso = new string[4];//Array que almacena los datos de contacto del alumno
 
             //Lleno el array del curso
-            curso[0] = boxCursoAlumno.SelectedItem.ToString();
-            curso[1] = boxEstadoAlumno.SelectedItem.ToString();
-            curso[2] = boxPeriodoAlumno.SelectedItem.ToString();
-            curso[3] = txtMontoViatico.Text;
+            
 
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                curso[0] = boxCursoAlumno.SelectedItem.ToString();
+                curso[1] = boxEstadoAlumno.SelectedItem.ToString();
+                curso[2] = boxPeriodoAlumno.SelectedItem.ToString();
+                curso[3] = txtMontoViatico.Text;
+
                 retorno = datosAlumno.setCurso(curso); //Verifico los datos
             }
             else
             {//modificacion
+                curso[0] = boxCursoAlumno_2.SelectedItem.ToString();
+                curso[1] = boxEstadoAlumno_2.SelectedItem.ToString();
+                curso[2] = boxPeriodoAlumno_2.SelectedItem.ToString();
+                curso[3] = txtMontoViatico_2.Text;
+
                 retorno = datosAlumno.setCurso(curso); //Verifico los datos
 
             }
@@ -251,18 +270,24 @@ namespace Ametrano.Presentacion
             string[] contacto = new string[3]; //Array que almacena la informacion del curso
 
             //Lleno el array con los datos de contacto
-            contacto[0] = txtTelefono.Text;
-            contacto[1] = txtCelularAlumno.Text;
-            contacto[2] = txtEmailAlumno.Text;
+            
 
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                contacto[0] = txtTelefonoAlumno.Text;
+                contacto[1] = txtCelularAlumno.Text;
+                contacto[2] = txtEmailAlumno.Text;
+
                 retorno = datosAlumno.setContacto(contacto);//verifico los datos
 
             }
             else
             {//modificacion
+                contacto[0] = txtTelefonoAlumno_2.Text;
+                contacto[1] = txtCelularAlumno_2.Text;
+                contacto[2] = txtEmailAlumno_2.Text;
+
                 retorno = datosAlumno.setContacto(contacto);//verifico los datos
 
             }
@@ -276,21 +301,30 @@ namespace Ametrano.Presentacion
             string[] direccion = new string[6];//array que almacena los datos de direccion del alumno
 
             //Lleno array de direccion
-            direccion[0] = boxDepartamentoAlumno.SelectedItem.ToString();
-            direccion[1] = txtLocalidadAlumno.Text;
-            direccion[2] = txtCalleAlumno.Text;
-            direccion[3] = txtReferenciaAlumno.Text;
-            direccion[4] = txtNumeroPuertaAlumno.Text;
-            direccion[5] = txtNumeroApartamentoAlumno.Text;
+            
 
             dynamic[] retorno;
 
             if (type == 0)
             {//nuevo
+                direccion[0] = boxDepartamentoAlumno.SelectedItem.ToString();
+                direccion[1] = txtLocalidadAlumno.Text;
+                direccion[2] = txtCalleAlumno.Text;
+                direccion[3] = txtReferenciaAlumno.Text;
+                direccion[4] = txtNumeroPuertaAlumno.Text;
+                direccion[5] = txtNumeroApartamentoAlumno.Text;
+
                 retorno = datosAlumno.setDireccion(direccion);//verifico los datos
             }
             else
             {//modificacion
+                direccion[0] = boxDepartamentoAlumno_2.SelectedItem.ToString();
+                direccion[1] = boxLocalidadAlumno_2.Text;
+                direccion[2] = txtCalleAlumno_2.Text;
+                direccion[3] = txtReferenciaAlumno_2.Text;
+                direccion[4] = txtNPuertaAlumno_2.Text;
+                direccion[5] = txtNApartamentoAlumno_2.Text;
+
                 retorno = datosAlumno.setDireccion(direccion);//verifico los datos
 
             }
@@ -304,16 +338,22 @@ namespace Ametrano.Presentacion
             string[] formacionAcademica = new string[2];//Array que almacena los datos de la formacion academica del alumno
 
             //Lleno los datos del array
-            formacionAcademica[0] = boxNivelEducativo.SelectedItem.ToString();
-            formacionAcademica[1] = txtUltAñoAprobado.Text;
+            
 
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                formacionAcademica[0] = boxNivelEducativo.SelectedItem.ToString();
+                formacionAcademica[1] = txtUltAñoAprobado.Text;
+
                 retorno = datosAlumno.setFormacionAcademica(formacionAcademica);//verifico los datos
             }
             else
             {//modificacion
+
+                formacionAcademica[0] = boxNivelAcademicoAlumno_2.SelectedItem.ToString();
+                formacionAcademica[1] = txtUltimoAñoAprobadoAlumno_2.Text;
+
                 retorno = datosAlumnoConsulta.setFormacionAcademica(formacionAcademica);//verifico los datos
 
             }
@@ -329,19 +369,27 @@ namespace Ametrano.Presentacion
          //type=0 ->nuevo
          //type=1 ->modificacion
             string[] trabajo = new string[5]; //Array que almacena los datos del trabajo del alumno
-            trabajo[0] = boxTrabajoAlgunaVezAlumno.SelectedItem.ToString();
-            trabajo[1] = boxTrabajaActualmenteAlumno.SelectedItem.ToString();
-            trabajo[2] = txtTiempoDesempleadoAlumno.Text;
-            trabajo[3] = txtHorasJornadaAlumno.Text;
-            trabajo[4] = txtIngresoMensualAlumno.Text;
+            
 
             dynamic[] retorno;
             if (type == 0)
             {
+                trabajo[0] = boxTrabajoAlgunaVezAlumno.SelectedItem.ToString();
+                trabajo[1] = boxTrabajaActualmenteAlumno.SelectedItem.ToString();
+                trabajo[2] = txtTiempoDesempleadoAlumno.Text;
+                trabajo[3] = txtHorasJornadaAlumno.Text;
+                trabajo[4] = txtIngresoMensualAlumno.Text;
+
                 retorno = datosAlumno.setTrabajo(trabajo);
             }
             else
             {
+                trabajo[0] = boxTrabajoAlgunaVezAlumno_2.SelectedItem.ToString();
+                trabajo[1] = boxTrabajaActualmenteAlumno_2.SelectedItem.ToString();
+                trabajo[2] = txtTiempoDesempleadoAlumno_2.Text;
+                trabajo[3] = txtHorasJornadaAlumno_2.Text;
+                trabajo[4] = txtIngresoMensualAlumno_2.Text;
+
                 retorno = datosAlumnoConsulta.setTrabajo(trabajo);
 
             }
@@ -352,16 +400,23 @@ namespace Ametrano.Presentacion
          //type=0 ->nuevo
          //type=1 ->modificacion
             string[] accesso_a_internet = new string[3];
-            accesso_a_internet[0] = boxUsaInternetAlumno.SelectedItem.ToString();
-            accesso_a_internet[1] = boxFacilAccesoInternetAlumno.SelectedItem.ToString();
-            accesso_a_internet[2] = txtMedioAccesoInternetAlumno.Text;
+            
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                accesso_a_internet[0] = boxUsaInternetAlumno.SelectedItem.ToString();
+                accesso_a_internet[1] = boxFacilAccesoInternetAlumno.SelectedItem.ToString();
+                accesso_a_internet[2] = txtMedioAccesoInternetAlumno.Text;
+
                 retorno = datosAlumno.setAccessoInternet(accesso_a_internet);
             }
             else
             {
+
+                accesso_a_internet[0] = boxUsaInternetAlumno_2.SelectedItem.ToString();
+                accesso_a_internet[1] = boxFacilAccesoInternetAlumno_2.SelectedItem.ToString();
+                accesso_a_internet[2] = txtMedioAccesoInternetAlumno_2.Text;
+
                 retorno = datosAlumnoConsulta.setAccessoInternet(accesso_a_internet);
 
             }
@@ -372,16 +427,20 @@ namespace Ametrano.Presentacion
          //type=0 ->nuevo
          //type=1 ->modificacion
             string[] jefe_hogar = new string[2];
-            jefe_hogar[0] = boxJefeHogarAlumno.SelectedItem.ToString();
-            jefe_hogar[1] = boxCantidadHijosAlumno.SelectedItem.ToString();
+            
 
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                jefe_hogar[0] = boxJefeHogarAlumno.SelectedItem.ToString();
+                jefe_hogar[1] = boxCantidadHijosAlumno.SelectedItem.ToString();
                 retorno = datosAlumno.setHogar(jefe_hogar);
             }
             else
             {//modificacion
+
+                jefe_hogar[0] = boxJefeHogarAlumno_2.SelectedItem.ToString();
+                jefe_hogar[1] = boxCantidadHijosAlumno_2.SelectedItem.ToString();
                 retorno = datosAlumnoConsulta.setHogar(jefe_hogar);
 
             }
@@ -391,14 +450,16 @@ namespace Ametrano.Presentacion
         {//Metodo que verifica la cobertura de salud 
             //type=0 ->nuevo
             //type=1 ->modificacion
-            string cobertura = txtCoberuraSaludAlumno.Text;
+            
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                string cobertura = txtCoberuraSaludAlumno.Text;
                 retorno = datosAlumno.setCobertura(cobertura);
             }
             else
             {
+                string cobertura = txtCoberturaSaludAlumno_2.Text;
                 retorno = datosAlumnoConsulta.setCobertura(cobertura);
             }
 
@@ -410,21 +471,31 @@ namespace Ametrano.Presentacion
             //type=1 ->modificacion
             string[] personasCargo = new string[8];
 
-            personasCargo[0] = txt0a17Alumno.Text;
-            personasCargo[1] = txt18a59Alumno.Text;
-            personasCargo[2] = txt60oMasAlumno.Text;
-            personasCargo[3] = boxPersonaDiscapacidadAlumno.SelectedItem.ToString();
-            personasCargo[4] = boxCuentaConApoyoAlumno.SelectedItem.ToString();
-            personasCargo[5] = txtCargaSemanalCuidadoAlumno.Text;
-            personasCargo[6] = boxTrabajoCuidandoAlumno.SelectedItem.ToString();
-            personasCargo[7] = txtExperienciaInstitucionesCuidadoAlumno.Text;
+            
             dynamic[] retorno;
             if (type == 0)
-            {//agrego a objeto de insert
+            {//nuevo
+                personasCargo[0] = txt0a17Alumno.Text;
+                personasCargo[1] = txt18a59Alumno.Text;
+                personasCargo[2] = txt60oMasAlumno.Text;
+                personasCargo[3] = boxPersonaDiscapacidadAlumno.SelectedItem.ToString();
+                personasCargo[4] = boxCuentaConApoyoAlumno.SelectedItem.ToString();
+                personasCargo[5] = txtCargaSemanalCuidadoAlumno.Text;
+                personasCargo[6] = boxTrabajoCuidandoAlumno.SelectedItem.ToString();
+                personasCargo[7] = txtExperienciaInstitucionesCuidadoAlumno.Text;
                 retorno = datosAlumno.setPersonasACargo(personasCargo);
             }
             else
             {
+                personasCargo[0] = txt0a17Alumno_2.Text;
+                personasCargo[1] = txt18a59Alumno_2.Text;
+                personasCargo[2] = txt60oMasAlumno_2.Text;
+                personasCargo[3] = boxPersonaConDiscapacidadAlumno_2.SelectedItem.ToString();
+                personasCargo[4] = boxCuentaConApoyoAlumno_2.SelectedItem.ToString();
+                personasCargo[5] = txtCargaSemanalCuidandoAlumno_2.Text;
+                personasCargo[6] = boxTrabajoCuidandoAlumno_2.SelectedItem.ToString();
+                personasCargo[7] = txtExperienciaInstitucionesTrabajoAlumno_2.Text;
+
                 retorno = datosAlumnoConsulta.setPersonasACargo(personasCargo);
             }
 
@@ -570,7 +641,7 @@ namespace Ametrano.Presentacion
         private void TimePickerFechaNac_ValueChanged(object sender, EventArgs e)
         {//Evento de click en el timepickerfechanacalumnonuevo
 
-            maskedTxtFechaNacimientoAlumnoNuevo.Mask = "0000-00-00";//Asigno maskara a la fecha
+            maskedTxtFechaNacimientoAlumno.Mask = "0000-00-00";//Asigno maskara a la fecha
 
             string mes, dia;
 
@@ -586,9 +657,9 @@ namespace Ametrano.Presentacion
             }
             //Muestro la fecha en el masked box
 
-            maskedTxtFechaNacimientoAlumnoNuevo.Text = TimePickerFechaNacAlumnoNuevo.Value.Year + "/" + mes + "/" + dia;
+            maskedTxtFechaNacimientoAlumno.Text = TimePickerFechaNacAlumnoNuevo.Value.Year + "/" + mes + "/" + dia;
 
-            maskedTxtFechaNacimientoAlumnoNuevo.ForeColor = Color.Black;
+            maskedTxtFechaNacimientoAlumno.ForeColor = Color.Black;
         }
         private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -771,22 +842,48 @@ namespace Ametrano.Presentacion
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSiguienteConsultaAlumno_Click(object sender, EventArgs e)
         {
-            tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
-            tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosDeInteres);
-            tabControlIngresarAlumno.SelectedIndex = 2;
+            dynamic[] setDatosPersonalesAlumnoResultado = this.setDatosPersonalesAlumno(1);//objeto que guarda el estado y el mensaje 
+            dynamic[] setDatosCursoAlumnoResultado = this.setDatosCursoAlumno(1);
+            dynamic[] setDatosContactoAlumnoResultado = this.setDatosContactoAlumno(1);
+            dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno(1);
+            dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno(1);
+
+            if (!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
+                !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
+            {//Se verifican que todos los datos sean correctos
+
+                //Si todos los datos son correctos permito al pasaje a la segunda parte del formulario 
+                if (eventoClickBuscarConsultaAlumno[0])
+                {
+                    rellenarFormularioTerceraParte();
+                }
+
+
+                tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
+                tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosDeInteres);
+                tabControlIngresarAlumno.SelectedIndex = 2;
+            }
+            else
+            {
+
+                //Si hay errores
+            }
+
+
+            
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSiguienteConsultaAlumno_2_Click(object sender, EventArgs e)
         {
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
             tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosFinalizar);
             tabControlIngresarAlumno.SelectedIndex = 3;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnAtrasConsultaAlumno_2_Click(object sender, EventArgs e)
         {
 
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
@@ -794,14 +891,14 @@ namespace Ametrano.Presentacion
             tabControlIngresarAlumno.SelectedIndex = 1;
         }
 
-        private void button5_Click_1(object sender, EventArgs e)
+        private void btnAtrasConsultaAlumno_3_Click_1(object sender, EventArgs e)
         {
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
             tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosDeInteres);
             tabControlIngresarAlumno.SelectedIndex = 2;
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void btnAtrasConsultaAlumno_Click(object sender, EventArgs e)
         {
             tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
             tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosInformacion);
@@ -871,6 +968,49 @@ namespace Ametrano.Presentacion
 
 
 
+
+            }
+
+        }
+        public void rellenarFormularioTerceraParte()
+        {
+            IDictionary<string, string> datosAlumnoDiccionario = datosAlumnoConsulta.getDatosPersona();
+
+            //Cobertura de Salud
+
+            if (eventoClickBuscarConsultaAlumno[0])
+            {
+                txtCoberturaSaludAlumno_2.Text = datosAlumnoDiccionario["cobertura_salud"];
+
+                //Hogar
+
+                boxJefeHogarAlumno_2.SelectedItem = datosAlumnoDiccionario["hogar_jefe"];
+                boxCantidadHijosAlumno_2.SelectedItem = datosAlumnoDiccionario["hogar_cantidad_hijos"];
+
+                //Trabajo
+
+                boxTrabajoAlgunaVezAlumno_2.SelectedItem = datosAlumnoDiccionario["trabajo_trabajo_alguna_vez"];
+                boxTrabajaActualmenteAlumno_2.SelectedItem = datosAlumnoDiccionario["trabajo_trabaja_actualmente"];
+                txtTiempoDesempleadoAlumno_2.Text = datosAlumnoDiccionario["trabajo_tiempo_desempleado"];
+                txtHorasJornadaAlumno_2.Text = datosAlumnoDiccionario["trabajo_horas_jornada"];
+                txtIngresoMensualAlumno_2.Text = datosAlumnoDiccionario["trabajo_ingreso_mensual"];
+
+                //Personas a cargo
+
+                txt0a17Alumno_2.Text = datosAlumnoDiccionario["personas_cargo_0_17"];
+                txt18a59Alumno_2.Text = datosAlumnoDiccionario["personas_cargo_18_59"];
+                txt60oMasAlumno_2.Text = datosAlumnoDiccionario["personas_cargo_60_mas"];
+                boxPersonaConDiscapacidadAlumno_2.SelectedItem = datosAlumnoDiccionario["personas_cargo_con_discapacidad"];
+                boxCuentaConApoyoAlumno_2.SelectedItem = datosAlumnoDiccionario["personas_cargo_cuenta_con_apoyo"];
+                txtCargaSemanalCuidandoAlumno_2.Text = datosAlumnoDiccionario["personas_cargo_carga_semanal_cuidado"];
+                boxTrabajoCuidandoAlumno_2.Text = datosAlumnoDiccionario["personas_cargo_trabajo_cuidando"];
+                txtExperienciaInstitucionesTrabajoAlumno_2.Text = datosAlumnoDiccionario["personas_cargo_experiencia_instituciones_cuidado"];
+
+                //Acceso a internet
+
+                boxUsaInternetAlumno_2.SelectedItem = datosAlumnoDiccionario["internet_usa_internet"];
+                boxFacilAccesoInternetAlumno_2.SelectedItem = datosAlumnoDiccionario["internet_facil_acceso"];
+                txtMedioAccesoInternetAlumno_2.Text = datosAlumnoDiccionario["internet_medio_acceso"];
 
             }
 
@@ -1267,7 +1407,7 @@ namespace Ametrano.Presentacion
 
                 //Hogar
 
-                lblJefeHogarAlumno_2.Text = "Jefe de hogar: " + datosAlumnoDiccionario["contacto_email"];
+                lblJefeHogarAlumno_2.Text = "Jefe de hogar: " + datosAlumnoDiccionario["hogar_jefe"];
                 lblCantidadHjosAlumno_2.Text = "Cantidad de hijos: " + datosAlumnoDiccionario["hogar_cantidad_hijos"];
 
                 //Trabajo
@@ -2400,6 +2540,11 @@ namespace Ametrano.Presentacion
             maskedTxtFechaNacimientoAlumno_2.Text = dateTimeFechaNacimientoAlumno_2.Value.Year + "/" + mes + "/" + dia;
 
             maskedTxtFechaNacimientoAlumno_2.ForeColor = Color.Black;
+        }
+
+        private void btnFinalizarConsultaAlumno_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -477,6 +477,15 @@ namespace Ametrano.Encapsulado
             //Comienza hogar
 
             diccionario.TryGetValue("jefe_hogar", out hogar_paraInsertar[0]);
+
+            if (hogar_paraInsertar[0].Equals("True"))
+            {
+                hogar_paraInsertar[0] = "SI";
+            }else
+            {
+                hogar_paraInsertar[0] = "NO";
+            }
+
             diccionario.TryGetValue("cant_hijos", out hogar_paraInsertar[1]);
 
             dynamic[] datosHogarFeedback = setHogar(hogar_paraInsertar);
