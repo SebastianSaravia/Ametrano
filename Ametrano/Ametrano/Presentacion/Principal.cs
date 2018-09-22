@@ -147,6 +147,17 @@ namespace Ametrano.Presentacion
 
             DateTime fecha = DateTime.Now;
 
+            string nombreDia = fecha.DayOfWeek.ToString();
+
+            if(nombreDia.Equals("Thursday") || nombreDia.Equals("Friday"))
+            {
+                btnAñadirSemanaViaticos.Enabled = true;
+            }else
+            {
+                btnAñadirSemanaViaticos.Enabled = false;
+                lblBlockViaticos.Visible = true;
+            }
+
 
 
 
@@ -1127,6 +1138,7 @@ namespace Ametrano.Presentacion
                 else
                 {
                     MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
+                    break;
                 }
             }
 
