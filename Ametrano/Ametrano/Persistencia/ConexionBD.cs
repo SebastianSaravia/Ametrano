@@ -34,7 +34,7 @@ namespace Ametrano.Persistencia
                 ";Uid=" + serverConfiguracion[2] +
                 ";Pwd=" + serverConfiguracion[3] +
                 ";sslMode=" + serverConfiguracion[4] +
-                ";";
+                ";Connection Timeout=3";
             objetoDeConexion.ConnectionString = stringConexion;
             dynamic[] datosRetornados = intentarConexion();
             if (datosRetornados[0])
@@ -58,7 +58,7 @@ namespace Ametrano.Persistencia
                 ";Uid=" + serverConfiguracion[2] +
                 ";Pwd=" + serverConfiguracion[3] +
                 ";sslMode=" + serverConfiguracion[4] +
-                ";";
+                ";Connection Timeout=3;";
             objetoDeConexion.ConnectionString = stringConexion;
             dynamic[] datosRetornados = intentarConexion();
             if (datosRetornados[0])
