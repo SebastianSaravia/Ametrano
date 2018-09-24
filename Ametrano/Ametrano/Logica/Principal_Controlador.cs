@@ -151,7 +151,7 @@ namespace Ametrano.Logica
                         mapaDeDatos.Add(column.ColumnName.ToString(), row[column].ToString());
                         //testing.MostrarMessageBox(column.ColumnName.ToString() + " --- " + row[column].ToString());
                     }
-                    break;//__________________________SE debe arreglar para poder mostrar mas de una persona
+                    break;
                 }
                 if (tablaDeDatos.Rows.Count == 0)
                 {
@@ -172,13 +172,14 @@ namespace Ametrano.Logica
                 }
             }
 
-            string cedula;
-            mapaDeDatos.TryGetValue("cedula_docente", out cedula);
+           
             
             datosParaRetornar[0] = retorno;
             datosParaRetornar[1] = mapaDeDatos;
             if (tipoPersona == 0)
             {
+                string cedula;
+                mapaDeDatos.TryGetValue("cedula_docente", out cedula);
                 string consulta2 = "SELECT especialidad FROM especialidad WHERE cedula_docente='" + cedula + "'";
                 MySqlDataAdapter datoEspecialidades = objetoConexion.consultarDatos(consulta2);//Ejecuto la consulta
 
@@ -200,6 +201,35 @@ namespace Ametrano.Logica
                 }
 
                 datosParaRetornar[2] = especialidad;
+            }else if(tipoPersona == 1)
+            {
+                string cedula;
+                mapaDeDatos.TryGetValue("cedula_alumno", out cedula);
+                string consulta2 = "SELECT * FROM asiste a join grupo g on g.id_grupo = a.id_grupo WHERE a.cedula_alumno='"+cedula+"' and a.nombre_materia = 'nuevo' and a.fecha = '0001-01-01'";
+                MySqlDataAdapter datosAsistencia = objetoConexion.consultarDatos(consulta2);//Ejecuto la consulta
+                DataTable dt = new DataTable();
+
+                datosAsistencia.Fill(dt);
+                try
+                {
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        foreach (DataColumn column in dt.Columns)
+                        {
+                            if (!column.ColumnName.ToString().Equals("cedula_alumno"))
+                            {
+                                mapaDeDatos.Add(column.ColumnName.ToString(), row[column].ToString());
+                            }
+                        }
+                        break;
+                    }
+                }
+                catch(Exception e)
+                {
+                    
+                }
+
+              
             }
 
 
