@@ -1926,12 +1926,19 @@ namespace Ametrano.Presentacion
                 lblDepartamentoAlumno_2.Text = "Departamento: " + datosAlumnoDiccionario["direccion_departamento"];
                 lblLocalidadAlumno_2.Text = "Localidad: " + datosAlumnoDiccionario["direccion_localidad"];
                 lblCalleAlumno_2.Text = "Calle: " + datosAlumnoDiccionario["direccion_calle"];
-                lblReferenciaAlumno_2.Text = "Referencia: " + datosAlumnoDiccionario["direccion_referencia"];
+                if (datosAlumnoDiccionario["direccion_referencia"].Equals(""))
+                {
+                    lblReferenciaAlumno_2.Text = "Referencia: " + "Sin dato";
+                }
+                else
+                {
+                    lblReferenciaAlumno_2.Text = "Referencia: " + datosAlumnoDiccionario["direccion_referencia"];
+                }
                 lblNPuertaAlumno_2.Text = "Nº puerta: " + datosAlumnoDiccionario["direccion_numero_puerta"];
 
                 if (datosAlumnoDiccionario["direccion_apartamento"].Equals("0"))
                 {//Si el numero de apartamento esta vacio
-                    lblNApartamentoAlumno_2.Text = "Nº apartamento: ";
+                    lblNApartamentoAlumno_2.Text = "Nº apartamento: " + "Sin dato";
                 }else
                 {
                     lblNApartamentoAlumno_2.Text = "Nº apartamento: " + datosAlumnoDiccionario["direccion_apartamento"];
@@ -1973,7 +1980,7 @@ namespace Ametrano.Presentacion
                 //Personas a Cargo
                 if (datosAlumnoDiccionario["personas_cargo_0_17"].Equals("0"))
                 {
-                    lbl0a17Alumno_2.Text = "De 0 a 17 años: ";
+                    lbl0a17Alumno_2.Text = "De 0 a 17 años: " + "No aplica";
                     c1nulo = true;
                 }
                 else
@@ -1983,7 +1990,7 @@ namespace Ametrano.Presentacion
                 }
                 if (datosAlumnoDiccionario["personas_cargo_18_59"].Equals("0"))
                 {
-                    lbl18a59Alumno_2.Text = "De 18 a 59 años: ";
+                    lbl18a59Alumno_2.Text = "De 18 a 59 años: " + "No aplica";
                     c2nulo = true;
 
                 }
@@ -1997,7 +2004,7 @@ namespace Ametrano.Presentacion
 
                 if (datosAlumnoDiccionario["personas_cargo_60_mas"].Equals("0"))
                 {
-                    lbl60oMasAlumno_2.Text = "De 60 años o mas: ";
+                    lbl60oMasAlumno_2.Text = "De 60 años o mas: " + "No aplica";
                     c3nulo = true;
 
                 }
@@ -2010,9 +2017,9 @@ namespace Ametrano.Presentacion
 
                 if(c1nulo && c2nulo && c3nulo)
                 {
-                    lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: ";
-                    lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo: ";
-                    lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: ";
+                    lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: " + "No aplica";
+                    lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo: " + "No aplica";
+                    lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: " + "No aplica";
                 }else
                 {
                     lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: " + datosAlumnoDiccionario["personas_cargo_con_discapacidad"];
@@ -2020,9 +2027,21 @@ namespace Ametrano.Presentacion
                     lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: " + datosAlumnoDiccionario["personas_cargo_carga_semanal_cuidado"];
                 }
 
-                
-                lblTrabajoAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando: " + datosAlumnoDiccionario["personas_cargo_trabajo_cuidando"];
-                lblExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado: " + datosAlumnoDiccionario["personas_cargo_experiencia_instituciones_cuidado"];
+                if (datosAlumnoDiccionario["personas_cargo_experiencia_instituciones_cuidado"].Equals(""))
+                {
+                    lblExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado: " + "No aplica";
+                }else
+                {
+                    lblExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado: " + datosAlumnoDiccionario["personas_cargo_experiencia_instituciones_cuidado"];
+                }
+
+                if (datosAlumnoDiccionario["personas_cargo_trabajo_cuidando"].Equals("NO") && datosAlumnoDiccionario["personas_cargo_experiencia_instituciones_cuidado"].Equals(""))
+                {
+                    lblTrabajoAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando: " + "No aplica";
+                }else
+                {
+                    lblTrabajoAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando: " + datosAlumnoDiccionario["personas_cargo_trabajo_cuidando"];
+                }
 
                 //Acceso a Internet
 
