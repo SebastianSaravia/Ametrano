@@ -553,7 +553,7 @@
             this.panel1.Controls.Add(this.btnCursos);
             this.panel1.Controls.Add(this.btnAlumnos);
             this.panel1.Controls.Add(this.btnDocentes);
-            this.panel1.Location = new System.Drawing.Point(0, 12);
+            this.panel1.Location = new System.Drawing.Point(0, 11);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(86, 551);
             this.panel1.TabIndex = 1;
@@ -692,14 +692,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
