@@ -70,6 +70,7 @@ namespace Ametrano.Presentacion
         private void Principal_Load(object sender, EventArgs e)
         {
             boxTurnoGrupo.SelectedIndex = 0;
+            
             dataGridGruposActivos.DataSource = CurContr.GruposActivos();
             dataGridGruposActivos.ReadOnly = true;
             boxSexoAlumno.SelectedIndex = 0;
@@ -1263,10 +1264,12 @@ namespace Ametrano.Presentacion
                 lblHorasJornadaLaboralAlumno_3.Text = "Horas de jornada laboral: " + diccionarioDeAlumno["trabajo_horas_jornada"];
                 lblIngresoMensualAlumno_3.Text = "Ingreso mensual: " + diccionarioDeAlumno["trabajo_ingreso_mensual"];
 
+                bool c1nulo = false, c2nulo = false, c3nulo = false;
                 //Personas a cargo
                 if (diccionarioDeAlumno["personas_cargo_0_17"].Equals("0"))
                 {
                     lbl0a17Alumno_3.Text = "De 0 a 17 años: " + "No aplica";
+                    c1nulo = true;
                 }
                 else
                 {
@@ -1276,6 +1279,7 @@ namespace Ametrano.Presentacion
                 if (diccionarioDeAlumno["personas_cargo_18_59"].Equals("0"))
                 {
                     lbl18a59Alumno_3.Text = "De 18 a 59 años: " + "No aplica";
+                    c2nulo = true;
                 }
                 else
                 {
@@ -1285,7 +1289,7 @@ namespace Ametrano.Presentacion
                 if (diccionarioDeAlumno["personas_cargo_60_mas"].Equals("0"))
                 {
                     lbl60oMasAlumno_3.Text = "De 60 años o mas: " + "No aplica";
-
+                    c3nulo = true;
                 }
                 else
                 {
@@ -1964,36 +1968,59 @@ namespace Ametrano.Presentacion
                 lblHorasJornadaLaboralAlumno_2.Text = "Horas de jornada laboral: " + datosAlumnoDiccionario["trabajo_horas_jornada"];
                 lblIngresoMensualAlumno_2.Text = "Ingreso mensual: " + datosAlumnoDiccionario["trabajo_ingreso_mensual"];
 
+                bool c1nulo = false, c2nulo = false, c3nulo = false;
+
                 //Personas a Cargo
                 if (datosAlumnoDiccionario["personas_cargo_0_17"].Equals("0"))
                 {
                     lbl0a17Alumno_2.Text = "De 0 a 17 años: ";
+                    c1nulo = true;
                 }
                 else
                 {
                     lbl0a17Alumno_2.Text = "De 0 a 17 años: " + datosAlumnoDiccionario["personas_cargo_0_17"];
+                    c1nulo = false;
                 }
                 if (datosAlumnoDiccionario["personas_cargo_18_59"].Equals("0"))
                 {
                     lbl18a59Alumno_2.Text = "De 18 a 59 años: ";
-                }else
+                    c2nulo = true;
+
+                }
+                else
                 {
                     lbl18a59Alumno_2.Text = "De 18 a 59 años: " + datosAlumnoDiccionario["personas_cargo_18_59"];
+                    c2nulo = false;
+
                 }
 
 
                 if (datosAlumnoDiccionario["personas_cargo_60_mas"].Equals("0"))
                 {
                     lbl60oMasAlumno_2.Text = "De 60 años o mas: ";
-                }else
+                    c3nulo = true;
+
+                }
+                else
                 {
                     lbl60oMasAlumno_2.Text = "De 60 años o mas: " + datosAlumnoDiccionario["personas_cargo_60_mas"];
+                    c3nulo = false;
 
                 }
 
-                lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: " + datosAlumnoDiccionario["personas_cargo_con_discapacidad"];
-                lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo: " + datosAlumnoDiccionario["personas_cargo_cuenta_con_apoyo"];
-                lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: " + datosAlumnoDiccionario["personas_cargo_carga_semanal_cuidado"];
+                if(c1nulo && c2nulo && c3nulo)
+                {
+                    lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: ";
+                    lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo: ";
+                    lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: ";
+                }else
+                {
+                    lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: " + datosAlumnoDiccionario["personas_cargo_con_discapacidad"];
+                    lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo: " + datosAlumnoDiccionario["personas_cargo_cuenta_con_apoyo"];
+                    lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: " + datosAlumnoDiccionario["personas_cargo_carga_semanal_cuidado"];
+                }
+
+                
                 lblTrabajoAnteriormenteCuidandoAlumno_2.Text = "Trabajo anteriormente cuidando: " + datosAlumnoDiccionario["personas_cargo_trabajo_cuidando"];
                 lblExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado: " + datosAlumnoDiccionario["personas_cargo_experiencia_instituciones_cuidado"];
 
