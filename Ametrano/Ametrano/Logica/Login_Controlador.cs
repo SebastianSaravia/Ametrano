@@ -16,9 +16,10 @@ namespace Ametrano.Logica
     {
         ConexionBD objetoConexion = new ConexionBD(true);
         TestingClass testing = new TestingClass();
-        public bool loginbtn_function(String usuario, String contraseña)
+        public bool loginbtn_function(String usuario, String contraseña,out string mensaje)
         {//Funcion que verifica que el usuario y la contraseña existan y sean correctos
             bool variableParaRetornar = false;
+            mensaje = "";
             DataTable datosRetornados = new DataTable(); //Datatable que guardara la informacion de la base de datos
 
             string[] informacionDeUsuario = new string[2];//Array que almacena la informacion obtenida del usuario desde la base de datos
@@ -51,7 +52,7 @@ namespace Ametrano.Logica
             }
             catch(Exception e)
             {
-                testing.MostrarMessageBox("Error al conectar con el servidor");
+                mensaje = "Error al conectar con el servidor";
             }
        
             if(informacionDeUsuario[0] == usuario)
@@ -59,6 +60,7 @@ namespace Ametrano.Logica
                 Properties.Settings.Default.user_usuario = "user";
                 Properties.Settings.Default.user_contraseña = "arekushizu";
                 Properties.Settings.Default.user_rol = informacionDeUsuario[1];
+                mensaje = "Sin errores";
                 Principal ventanaPrincipal = new Principal();//Creo nueva ventana principal
                 ventanaPrincipal.Show();//muestro la ventana
                 variableParaRetornar = true;
@@ -66,7 +68,11 @@ namespace Ametrano.Logica
             else
             {
                 variableParaRetornar = false;
-                MessageBox.Show(null, "Usuario o contraseña incorrectos\nVuelva a intentarlo", "Error de credenciales", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                if (!mensaje.Equals("Error al conectar con el servidor"))
+                {
+                    mensaje = "Usuario o contraseña incorrectos\nVuelva a intentarlo";
+                }
+                
             }
                 return variableParaRetornar;
         }

@@ -100,11 +100,22 @@ namespace Ametrano.Presentacion
 
             //luego se debe verificar que no sean vacios
 
-            
-            bool valorRetornado = controlador.loginbtn_function(usuario, contrasenia);
+            string mensaje;
+            bool valorRetornado = controlador.loginbtn_function(usuario, contrasenia, out mensaje);
             if (valorRetornado)
             {
                 this.Hide();
+            }else
+            {
+                
+                if(mensaje.Equals("Error al conectar con el servidor"))
+                {
+                    MessageBox.Show(mensaje+"\nCerrando la aplicación");
+                    Application.Exit();
+                }else
+                {
+                    MessageBox.Show(mensaje);
+                }
             }
         }
 
