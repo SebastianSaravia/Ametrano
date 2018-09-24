@@ -24,6 +24,7 @@ namespace Ametrano.Presentacion
     {
         private Principal_Controlador controlador = new Principal_Controlador();
         Cursos_Controlador CurContr = new Cursos_Controlador();
+        Alumnos_Controlador controlador_alumno = new Alumnos_Controlador();
         private dynamic[] eventoClickBuscarBajaDocente = new dynamic[2];
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
@@ -2668,7 +2669,7 @@ namespace Ametrano.Presentacion
 
                 if (al.insertarAlumno(datosAlumno, id_grupo))
                 {
-                    MessageBox.Show("El alumno ha sigo guardado con exito");
+                    MessageBox.Show("El alumno ha sido guardado con exito");
                 }
                 else
                 {
@@ -3154,7 +3155,20 @@ namespace Ametrano.Presentacion
 
         private void btnFinalizarConsultaAlumno_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Esta seguro que todos los datos son correctos?", "Continuar?", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                if (controlador_alumno.ModificarAlumno(datosAlumnoModificacion, 2))
+                {
+                    MessageBox.Show("El alumno ha sido actualizado con exito");
+                }
+                else
+                {
+                    MessageBox.Show("Error al actualizar alumno, verifique que los campos contienen la informacion correcta", "Error al actualizar alumno");
+                }
 
+
+            }
         }
 
         private void manualDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
