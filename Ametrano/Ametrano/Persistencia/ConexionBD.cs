@@ -43,7 +43,7 @@ namespace Ametrano.Persistencia
                 
             } else
             {
-                testing.MostrarMessageBox(datosRetornados[1]);
+               // testing.MostrarMessageBox(datosRetornados[1]);
             }
 
            
@@ -68,7 +68,7 @@ namespace Ametrano.Persistencia
             }
             else
             {
-                testing.MostrarMessageBox(datosRetornados[1]);
+               // testing.MostrarMessageBox(datosRetornados[1]);
             }
 
 
@@ -147,7 +147,7 @@ namespace Ametrano.Persistencia
                     objetoDeConexion.Close();
                 }
                 
-                testing.MostrarMessageBox("Error al ingresar datos: "+e.Message);
+               // testing.MostrarMessageBox("Error al ingresar datos: "+e.Message);
             }
 
             return filasAfectadas;
@@ -168,7 +168,7 @@ namespace Ametrano.Persistencia
                 {//Cierro la conexion si esta abierta
                     objetoDeConexion.Close();
                 }
-                testing.MostrarMessageBox(e.Message);
+              //  testing.MostrarMessageBox(e.Message);
             }
 
 

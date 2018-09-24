@@ -1890,6 +1890,7 @@
             this.boxCantidadHijosAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCantidadHijosAlumno.Items.AddRange(new object[] {
             "Cantidad hijos",
+            "0",
             "1",
             "2",
             "3",
@@ -3950,6 +3951,7 @@
             this.boxCantidadHijosAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCantidadHijosAlumno_2.Items.AddRange(new object[] {
             "Cantidad hijos",
+            "0",
             "1",
             "2",
             "3",
