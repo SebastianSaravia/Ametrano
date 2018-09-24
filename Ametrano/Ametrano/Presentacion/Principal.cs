@@ -1150,14 +1150,28 @@ namespace Ametrano.Presentacion
                 boxDepartamentoAlumno_2.SelectedItem = datosAlumnoDiccionario["direccion_departamento"];
                 boxLocalidadAlumno_2.SelectedItem = datosAlumnoDiccionario["direccion_localidad"];
                 txtCalleAlumno_2.Text = datosAlumnoDiccionario["direccion_calle"];
-                txtReferenciaAlumno_2.Text = datosAlumnoDiccionario["direccion_referencia"];
+                if (datosAlumnoDiccionario["direccion_referencia"].Equals(""))
+                {
+                    txtReferenciaAlumno_2.Text = "Referencia";
+                }else
+                {
+                    txtReferenciaAlumno_2.Text = datosAlumnoDiccionario["direccion_referencia"];
+                }
+
                 txtNPuertaAlumno_2.Text = datosAlumnoDiccionario["direccion_numero_puerta"];
-                txtNApartamentoAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
+
+                if (datosAlumnoDiccionario["direccion_apartamento"].Equals("0"))
+                {
+                    txtNApartamentoAlumno_2.Text = "Número de apartamento";
+                }else
+                {
+                    txtNApartamentoAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
+                }
 
                 //Contacto
-                txtTelefonoAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
-                txtCelularAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
-                txtEmailAlumno_2.Text = datosAlumnoDiccionario["direccion_apartamento"];
+                txtTelefonoAlumno_2.Text = datosAlumnoDiccionario["contacto_telefono"];
+                txtCelularAlumno_2.Text = datosAlumnoDiccionario["contacto_celular"];
+                txtEmailAlumno_2.Text = datosAlumnoDiccionario["contacto_email"];
 
                 //Formacion academica
 
@@ -1592,7 +1606,14 @@ namespace Ametrano.Presentacion
                 lblCalleAlumno_2.Text = "Calle: " + datosAlumnoDiccionario["direccion_calle"];
                 lblReferenciaAlumno_2.Text = "Referencia: " + datosAlumnoDiccionario["direccion_referencia"];
                 lblNPuertaAlumno_2.Text = "Nº puerta: " + datosAlumnoDiccionario["direccion_numero_puerta"];
-                lblNApartamentoAlumno_2.Text = "Nº apartamento: " + datosAlumnoDiccionario["direccion_apartamento"];
+
+                if (datosAlumnoDiccionario["direccion_apartamento"].Equals("0"))
+                {//Si el numero de apartamento esta vacio
+                    lblNApartamentoAlumno_2.Text = "Nº apartamento: ";
+                }else
+                {
+                    lblNApartamentoAlumno_2.Text = "Nº apartamento: " + datosAlumnoDiccionario["direccion_apartamento"];
+                }
 
                 //Contacto
 
@@ -1607,7 +1628,15 @@ namespace Ametrano.Presentacion
                 //Hogar
 
                 lblJefeHogarAlumno_2.Text = "Jefe de hogar: " + datosAlumnoDiccionario["hogar_jefe"];
-                lblCantidadHjosAlumno_2.Text = "Cantidad de hijos: " + datosAlumnoDiccionario["hogar_cantidad_hijos"];
+                if (datosAlumnoDiccionario["hogar_cantidad_hijos"].Equals("0"))
+                {
+                    lblCantidadHjosAlumno_2.Text = "Cantidad de hijos: " + "Sin hijos";
+
+                }else
+                {
+                    lblCantidadHjosAlumno_2.Text = "Cantidad de hijos: " + datosAlumnoDiccionario["hogar_cantidad_hijos"];
+
+                }
 
                 //Trabajo
 
@@ -1618,10 +1647,32 @@ namespace Ametrano.Presentacion
                 lblIngresoMensualAlumno_2.Text = "Ingreso mensual: " + datosAlumnoDiccionario["trabajo_ingreso_mensual"];
 
                 //Personas a Cargo
+                if (datosAlumnoDiccionario["personas_cargo_0_17"].Equals("0"))
+                {
+                    lbl0a17Alumno_2.Text = "De 0 a 17 años: ";
+                }
+                else
+                {
+                    lbl0a17Alumno_2.Text = "De 0 a 17 años: " + datosAlumnoDiccionario["personas_cargo_0_17"];
+                }
+                if (datosAlumnoDiccionario["personas_cargo_18_59"].Equals("0"))
+                {
+                    lbl18a59Alumno_2.Text = "De 18 a 59 años: ";
+                }else
+                {
+                    lbl18a59Alumno_2.Text = "De 18 a 59 años: " + datosAlumnoDiccionario["personas_cargo_18_59"];
+                }
 
-                lbl0a17Alumno_2.Text = "De 0 a 17 años: " + datosAlumnoDiccionario["personas_cargo_0_17"];
-                lbl18a59Alumno_2.Text = "De 18 a 59 años: " + datosAlumnoDiccionario["personas_cargo_18_59"];
-                lbl60oMasAlumno_2.Text = "De 60 años o mas: " + datosAlumnoDiccionario["personas_cargo_60_mas"];
+
+                if (datosAlumnoDiccionario["personas_cargo_60_mas"].Equals("0"))
+                {
+                    lbl60oMasAlumno_2.Text = "De 60 años o mas: ";
+                }else
+                {
+                    lbl60oMasAlumno_2.Text = "De 60 años o mas: " + datosAlumnoDiccionario["personas_cargo_60_mas"];
+
+                }
+
                 lblPersonaConDiscapacidadAlumno_2.Text = "Persona con discapacidad: " + datosAlumnoDiccionario["personas_cargo_con_discapacidad"];
                 lblCuentaApoyoAlumno_2.Text = "Cuenta con apoyo: " + datosAlumnoDiccionario["personas_cargo_cuenta_con_apoyo"];
                 lblCargaSemanalCuidadoAlumno_2.Text = "Carga mensual de cuidado: " + datosAlumnoDiccionario["personas_cargo_carga_semanal_cuidado"];

@@ -34,6 +34,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnAlumnos = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnDocentes = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuPrincipal = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -441,11 +445,11 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnAlumnos = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnDocentes = new Bunifu.Framework.UI.BunifuImageButton();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.menuPrincipal.SuspendLayout();
             this.tabControlPrincipal.SuspendLayout();
             this.pageDocente.SuspendLayout();
@@ -536,10 +540,6 @@
             this.nuevoCurso.SuspendLayout();
             this.groupBox58.SuspendLayout();
             this.groupBox59.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -606,6 +606,67 @@
             this.label1.Size = new System.Drawing.Size(138, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "              Docentes          ";
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = global::Ametrano.Properties.Resources.img_options;
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(6, 449);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(73, 77);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 0;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Visible = false;
+            this.bunifuImageButton1.Zoom = 5;
+            this.bunifuImageButton1.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
+            // 
+            // btnCursos
+            // 
+            this.btnCursos.BackColor = System.Drawing.Color.Transparent;
+            this.btnCursos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCursos.Image = global::Ametrano.Properties.Resources.img_curso;
+            this.btnCursos.ImageActive = null;
+            this.btnCursos.Location = new System.Drawing.Point(6, 204);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(73, 77);
+            this.btnCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCursos.TabIndex = 0;
+            this.btnCursos.TabStop = false;
+            this.btnCursos.Zoom = 5;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
+            // btnAlumnos
+            // 
+            this.btnAlumnos.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
+            this.btnAlumnos.ImageActive = null;
+            this.btnAlumnos.Location = new System.Drawing.Point(6, 111);
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(73, 77);
+            this.btnAlumnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAlumnos.TabIndex = 0;
+            this.btnAlumnos.TabStop = false;
+            this.btnAlumnos.Zoom = 5;
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            // 
+            // btnDocentes
+            // 
+            this.btnDocentes.BackColor = System.Drawing.Color.Transparent;
+            this.btnDocentes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDocentes.Image = global::Ametrano.Properties.Resources.img_docente;
+            this.btnDocentes.ImageActive = null;
+            this.btnDocentes.Location = new System.Drawing.Point(6, 18);
+            this.btnDocentes.Name = "btnDocentes";
+            this.btnDocentes.Size = new System.Drawing.Size(73, 77);
+            this.btnDocentes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDocentes.TabIndex = 0;
+            this.btnDocentes.TabStop = false;
+            this.btnDocentes.Zoom = 5;
+            this.btnDocentes.Click += new System.EventHandler(this.btnDocentes_Click);
             // 
             // menuPrincipal
             // 
@@ -1389,7 +1450,8 @@
             "Aprobado",
             "Reprobado",
             "Cursando",
-            "Desertó"});
+            "Desertó",
+            "En espera"});
             this.boxEstadoAlumno.Location = new System.Drawing.Point(638, 26);
             this.boxEstadoAlumno.Name = "boxEstadoAlumno";
             this.boxEstadoAlumno.Size = new System.Drawing.Size(159, 23);
@@ -3442,7 +3504,8 @@
             "Aprobado",
             "Reprobado",
             "Cursando",
-            "Desertó"});
+            "Desertó",
+            "En espera"});
             this.boxEstadoAlumno_2.Location = new System.Drawing.Point(655, 29);
             this.boxEstadoAlumno_2.Name = "boxEstadoAlumno_2";
             this.boxEstadoAlumno_2.Size = new System.Drawing.Size(159, 23);
@@ -5462,67 +5525,6 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // bunifuImageButton1
-            // 
-            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton1.Image = global::Ametrano.Properties.Resources.img_options;
-            this.bunifuImageButton1.ImageActive = null;
-            this.bunifuImageButton1.Location = new System.Drawing.Point(6, 449);
-            this.bunifuImageButton1.Name = "bunifuImageButton1";
-            this.bunifuImageButton1.Size = new System.Drawing.Size(73, 77);
-            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton1.TabIndex = 0;
-            this.bunifuImageButton1.TabStop = false;
-            this.bunifuImageButton1.Visible = false;
-            this.bunifuImageButton1.Zoom = 5;
-            this.bunifuImageButton1.Click += new System.EventHandler(this.configuraciónToolStripMenuItem_Click);
-            // 
-            // btnCursos
-            // 
-            this.btnCursos.BackColor = System.Drawing.Color.Transparent;
-            this.btnCursos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCursos.Image = global::Ametrano.Properties.Resources.img_curso;
-            this.btnCursos.ImageActive = null;
-            this.btnCursos.Location = new System.Drawing.Point(6, 204);
-            this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(73, 77);
-            this.btnCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCursos.TabIndex = 0;
-            this.btnCursos.TabStop = false;
-            this.btnCursos.Zoom = 5;
-            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
-            // 
-            // btnAlumnos
-            // 
-            this.btnAlumnos.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlumnos.Image = ((System.Drawing.Image)(resources.GetObject("btnAlumnos.Image")));
-            this.btnAlumnos.ImageActive = null;
-            this.btnAlumnos.Location = new System.Drawing.Point(6, 111);
-            this.btnAlumnos.Name = "btnAlumnos";
-            this.btnAlumnos.Size = new System.Drawing.Size(73, 77);
-            this.btnAlumnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAlumnos.TabIndex = 0;
-            this.btnAlumnos.TabStop = false;
-            this.btnAlumnos.Zoom = 5;
-            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
-            // 
-            // btnDocentes
-            // 
-            this.btnDocentes.BackColor = System.Drawing.Color.Transparent;
-            this.btnDocentes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDocentes.Image = global::Ametrano.Properties.Resources.img_docente;
-            this.btnDocentes.ImageActive = null;
-            this.btnDocentes.Location = new System.Drawing.Point(6, 18);
-            this.btnDocentes.Name = "btnDocentes";
-            this.btnDocentes.Size = new System.Drawing.Size(73, 77);
-            this.btnDocentes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDocentes.TabIndex = 0;
-            this.btnDocentes.TabStop = false;
-            this.btnDocentes.Zoom = 5;
-            this.btnDocentes.Click += new System.EventHandler(this.btnDocentes_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5545,6 +5547,10 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Principal_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).EndInit();
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
             this.tabControlPrincipal.ResumeLayout(false);
@@ -5693,10 +5699,6 @@
             this.groupBox58.ResumeLayout(false);
             this.groupBox58.PerformLayout();
             this.groupBox59.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
