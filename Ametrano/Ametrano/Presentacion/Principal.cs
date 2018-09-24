@@ -67,7 +67,7 @@ namespace Ametrano.Presentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
-
+            boxTurnoGrupo.SelectedIndex = 0;
             dataGridGruposActivos.DataSource = CurContr.GruposActivos();
             dataGridGruposActivos.ReadOnly = true;
             boxSexoAlumno.SelectedIndex = 0;
@@ -2772,6 +2772,45 @@ namespace Ametrano.Presentacion
 
 
            
+        }
+
+        private void btnAñadirMateriaCurso_Click(object sender, EventArgs e)
+        {
+
+            string item = boxMateriasCurso.SelectedItem.ToString();
+
+            if (!listMateriasCurso.Items.Contains(item))
+            {
+                listMateriasCurso.Items.Add(item);
+            }
+               
+
+        }
+
+        private void btnQuitarMateriaCurso_Click(object sender, EventArgs e)
+        {
+             
+            if (listMateriasCurso.SelectedIndex > -1)
+            {
+                listMateriasCurso.Items.RemoveAt(listMateriasCurso.SelectedIndex);
+            }
+            
+        }
+
+        private void btnCrearCurso_Click(object sender, EventArgs e)
+        {
+            string curso = txtNombreCurso.Text;
+            string tipo = boxTipoCurso.SelectedItem.ToString();
+                      
+            string[] materias = new string[listMateriasCurso.Items.Count];
+
+            for (int i = 0; i < listMateriasCurso.Items.Count; i++)
+            {
+               // materias[i]=listMateriasCurso.
+
+            }
+
+
         }
     }
 }

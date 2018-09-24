@@ -454,15 +454,7 @@ namespace Ametrano.Logica
             return dataTable;
             
         }
-
-        public int AgregarCurso(string nombre, string tipo)
-        {
-            string sql = "insert into curso values('"+nombre+"','"+tipo+"');";
-            int datosCons = objetoConexion.sqlInsertUpdate(sql);
-            
-            return datosCons;
-        }
-
+                
         public bool updatePago(string ci, string fecha,string semana,bool estado)
         {
             //Primero debo consultar el id de el viatico
@@ -653,6 +645,39 @@ namespace Ametrano.Logica
 
             return query2_buscar_Asistencia_Alumnos_table;
 
+        }
+
+        public bool AgregarMateriaCurso(string curso, string tipo, string[] materias)
+        {
+            bool resultado = false;
+
+            string query = "insert into curso values('" + curso + "','" + tipo + "');";
+            int datosCons = objetoConexion.sqlInsertUpdate(query);
+
+            if (datosCons>0)
+            {
+                int[] val = new int[materias.Length];
+                for (int i = 0; i < materias.Length; i++)
+                {
+                    string query2 = "insert into materia(nombre_curso, nombre_materia) values('" + curso + "','" + materias[i] + "');";
+                    int datosCons2 = objetoConexion.sqlInsertUpdate(query2);
+                    val[i] = datosCons2;
+                }
+
+                for (int i = 0; i < val.Length; i++)
+                {
+                    if (val[i]==1)
+                    {
+                        resultado = true;
+                    }else
+                    {
+                        resultado = false;
+                        break;
+                    }
+                }
+                
+            }
+            return resultado;
         }
 
     }

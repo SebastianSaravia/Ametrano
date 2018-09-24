@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
@@ -445,6 +446,7 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -5431,6 +5433,7 @@
             this.btnCrearCurso.TabIndex = 37;
             this.btnCrearCurso.Text = "Crear";
             this.btnCrearCurso.UseVisualStyleBackColor = true;
+            this.btnCrearCurso.Click += new System.EventHandler(this.btnCrearCurso_Click);
             // 
             // groupBox58
             // 
@@ -5466,6 +5469,7 @@
             this.btnQuitarMateriaCurso.TabIndex = 10;
             this.btnQuitarMateriaCurso.Text = "Quitar";
             this.btnQuitarMateriaCurso.UseVisualStyleBackColor = true;
+            this.btnQuitarMateriaCurso.Click += new System.EventHandler(this.btnQuitarMateriaCurso_Click);
             // 
             // btnAñadirMateriaCurso
             // 
@@ -5476,6 +5480,7 @@
             this.btnAñadirMateriaCurso.TabIndex = 9;
             this.btnAñadirMateriaCurso.Text = "Añadir";
             this.btnAñadirMateriaCurso.UseVisualStyleBackColor = true;
+            this.btnAñadirMateriaCurso.Click += new System.EventHandler(this.btnAñadirMateriaCurso_Click);
             // 
             // listMateriasCurso
             // 
@@ -5529,9 +5534,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -6119,5 +6124,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.ListBox listResultadosAlumnos;
         private System.Windows.Forms.MaskedTextBox maskedTxtFechaNacimientoAlumno_2;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
