@@ -1397,15 +1397,11 @@ namespace Ametrano.Presentacion
             {
                 rellenarConsultaAlumnoSegundaParte();
 
-
                 //Muestro la proxima pagina
                 tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosInformacion);
                 tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
                 tabControlIngresarAlumno.SelectedIndex = 1;
             }
-
-
-
 
         }
 
