@@ -110,8 +110,11 @@ namespace Ametrano.Presentacion
 
         private void Login_Load(object sender, EventArgs e)
         {
+
+
             txtUsuario.Focus();
-           
+            
+            
             
 
         }
