@@ -1,5 +1,6 @@
 ﻿using Ametrano.Encapsulado;
 using Ametrano.Logica;
+using Ametrano.Persistencia;
 using Ametrano.Verificacion;
 using System;
 using System.Collections;
@@ -7,7 +8,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -2545,6 +2548,32 @@ namespace Ametrano.Presentacion
         private void btnFinalizarConsultaAlumno_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void manualDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            string pdfPath = Path.Combine(Application.StartupPath, "Resources\\Manual.pdf");
+            Process.Start(pdfPath);
+
+
+        }
+
+        private void pruebaDeConexionConBaseDeDatosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ConexionBD con = new ConexionBD();
+                      
+            dynamic res = con.intentarConexion();
+
+            if (res[0])
+            {
+                MessageBox.Show("La conexión con el servidor fue exitosa.");
+            }else
+            {
+                MessageBox.Show("Conexion con el servidor fallida.");
+            }
+
+
+           
         }
     }
 }
