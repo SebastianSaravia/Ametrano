@@ -1397,15 +1397,11 @@ namespace Ametrano.Presentacion
             {
                 rellenarConsultaAlumnoSegundaParte();
 
-
                 //Muestro la proxima pagina
                 tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosInformacion);
                 tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
                 tabControlIngresarAlumno.SelectedIndex = 1;
             }
-
-
-
 
         }
 
@@ -3219,10 +3215,27 @@ namespace Ametrano.Presentacion
 
             for (int i = 0; i < listMateriasCurso.Items.Count; i++)
             {
-               // materias[i]=listMateriasCurso.
-
+                materias[i] = listMateriasCurso.Items[i].ToString();               
             }
 
+            if (materias.Length>0 && boxTipoCurso.SelectedIndex>0 && txtNombreCurso.Text != "Nombre del curso")
+            {
+                if (CurContr.AgregarCurso(curso, tipo, materias))
+                {
+                    MessageBox.Show("Curso añadido satisfactoriamente");
+                }
+                else
+                {
+                    MessageBox.Show("Error al crear un nuevo curso");
+                }
+            }else
+            {
+                MessageBox.Show("Error al crear nuevo curso, verifique que los datos sean correctos ","Error");
+            }
+
+
+            
+           
 
         }
 
