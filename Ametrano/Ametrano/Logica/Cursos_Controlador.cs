@@ -647,7 +647,7 @@ namespace Ametrano.Logica
 
         }
 
-        public bool AgregarMateriaCurso(string curso, string tipo, string[] materias)
+        public bool AgregarCurso(string curso, string tipo, string[] materias)
         {
             bool resultado = false;
 
