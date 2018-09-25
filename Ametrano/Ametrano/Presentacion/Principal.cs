@@ -853,9 +853,35 @@ namespace Ametrano.Presentacion
 
                 //Contacto
 
-                lblTelefonoAlumno.Text = "Telefono: " + diccionarioDeAlumno["contacto_telefono"];
-                lblCelularAlumno.Text = "Celular: " + diccionarioDeAlumno["contacto_celular"];
-                lblEmailAlumno.Text = "Email: " + diccionarioDeAlumno["contacto_email"];
+                if (diccionarioDeAlumno["contacto_telefono"].Equals("0"))
+                {
+                    lblTelefonoAlumno.Text = "Telefono: " + "Sin dato";
+
+                }
+                else
+                {
+                    lblTelefonoAlumno.Text = "Telefono: " + diccionarioDeAlumno["contacto_telefono"];
+
+                }
+                if (diccionarioDeAlumno["contacto_celular"].Equals("0"))
+                {
+                    lblCelularAlumno.Text = "Celular: " + "Sin dato";
+
+                }else
+                {
+                    lblCelularAlumno.Text = "Celular: " + diccionarioDeAlumno["contacto_celular"];
+
+                }
+                if (diccionarioDeAlumno["contacto_email"].Equals(""))
+                {
+                    lblEmailAlumno.Text = "Email: " + "Sin dato";
+
+
+                }else
+                {
+                    lblEmailAlumno.Text = "Email: " + diccionarioDeAlumno["contacto_email"];
+
+                }
 
                 //Cobertura
 
