@@ -110,7 +110,6 @@ namespace Ametrano.Presentacion
             boxUsaInternetAlumno_2.SelectedIndex = 0;
             boxPersonaDiscapacidadAlumno_2.SelectedIndex = 0;
             boxNivelAcademicoAlumno_2.SelectedIndex = 0;
-            boxLocalidadAlumno_2.SelectedIndex = 0;
             boxJefeHogarAlumno_2.SelectedIndex = 0;
             boxFacilAccesoInternetAlumno_2.SelectedIndex = 0;
             boxEstadoCivilAlumno_2.SelectedIndex = 0;
@@ -136,7 +135,9 @@ namespace Ametrano.Presentacion
             foreach (Control control in this.Controls)
             {
                 PlaceholderRec(control);
+                lblRec(control);
             }
+
 
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
             tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
@@ -300,18 +301,65 @@ namespace Ametrano.Presentacion
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
-                contacto[0] = txtTelefonoAlumno.Text;
-                contacto[1] = txtCelularAlumno.Text;
-                contacto[2] = txtEmailAlumno.Text;
+                if (txtTelefonoAlumno.Text.Equals("Telefono"))
+                {
+                    contacto[0] = "0";
+                }
+                else
+                {
+                    contacto[0] = txtTelefonoAlumno.Text;
+                }
+                if (txtCelularAlumno.Text.Equals("Celular"))
+                {
+                    contacto[1] = "0";
+                }
+                else
+                {
+                    contacto[1] = txtCelularAlumno.Text;
+                }
+                if (txtEmailAlumno.Text.Equals("Email"))
+                {
+                    contacto[2] = "";
+                }else
+                {
+                    contacto[2] = txtEmailAlumno.Text;
+
+                }
 
                 retorno = datosAlumno.setContacto(contacto);//verifico los datos
 
             }
             else
             {//modificacion
-                contacto[0] = txtTelefonoAlumno_2.Text;
-                contacto[1] = txtCelularAlumno_2.Text;
-                contacto[2] = txtEmailAlumno_2.Text;
+                if (txtTelefonoAlumno_2.Text.Equals("Telefono"))
+                {
+                    contacto[0] = "0";
+
+                }
+                else
+                {
+                    contacto[0] = txtTelefonoAlumno_2.Text;
+
+                }
+                if (txtCelularAlumno_2.Text.Equals("Celular"))
+                {
+                    contacto[1] = "0";
+
+                }
+                else
+                {
+                    contacto[1] = txtCelularAlumno_2.Text;
+
+                }
+
+                if (txtEmailAlumno_2.Text.Equals("Email"))
+                {
+                    contacto[2] = "";
+                }
+                else
+                {
+                    contacto[2] = txtEmailAlumno_2.Text;
+                }
 
                 retorno = datosAlumnoModificacion.setContacto(contacto);//verifico los datos
 
@@ -362,7 +410,7 @@ namespace Ametrano.Presentacion
             {//modificacion
                 //verificaciones
                 direccion[0] = boxDepartamentoAlumno_2.SelectedItem.ToString();
-                direccion[1] = boxLocalidadAlumno_2.Text;
+                direccion[1] = txtLocalidadAlumno_2.Text;
                 direccion[2] = txtCalleAlumno_2.Text;
                 if (txtReferenciaAlumno_2.Text.Equals(controlador.mapTextBox[txtReferenciaAlumno_2.GetHashCode().ToString()])){
                     direccion[3] = "";
@@ -1077,6 +1125,30 @@ namespace Ametrano.Presentacion
                     }
                 }
 
+
+
+            }
+        }
+        public void lblRec(Control control)
+        {
+            foreach (Control contHijo in control.Controls)
+            {
+
+                if (contHijo.GetType().Name.Equals("Label"))
+                {
+                    controlador.mapTextBox.Add(contHijo.GetHashCode().ToString(), contHijo.Text);
+
+                }
+                else
+                {
+                    if (contHijo.HasChildren)
+                    {
+                        this.lblRec(contHijo);
+                    }
+                }
+
+
+
             }
         }
 
@@ -1252,10 +1324,33 @@ namespace Ametrano.Presentacion
                 }
 
                 //Contacto
+                if (diccionarioDeAlumno["contacto_telefono"].Equals("0"))
+                {
+                    lblTelefonoAlumno_3.Text = "Telefono: " + "Sin dato";
 
-                lblTelefonoAlumno_3.Text = "Telefono: " + diccionarioDeAlumno["contacto_telefono"];
-                lblCelularAlumno_3.Text = "Celular: " + diccionarioDeAlumno["contacto_celular"];
-                lblEmailAlumno_3.Text = "Email: " + diccionarioDeAlumno["contacto_email"];
+                }
+                else
+                {
+                    lblTelefonoAlumno_3.Text = "Telefono: " + diccionarioDeAlumno["contacto_telefono"];
+
+                }
+                if (diccionarioDeAlumno["contacto_celular"].Equals("0"))
+                {
+                    lblCelularAlumno_3.Text = "Celular: " + "Sin dato";
+
+                }else
+                {
+                    lblCelularAlumno_3.Text = "Celular: " + diccionarioDeAlumno["contacto_celular"];
+
+                }
+                if (diccionarioDeAlumno["contacto_email"].Equals(""))
+                {
+                    lblEmailAlumno_3.Text = "Email: " + "Sin dato";
+                }else
+                {
+                    lblEmailAlumno_3.Text = "Email: " + diccionarioDeAlumno["contacto_email"];
+
+                }
 
                 //Cobertura
 
@@ -1445,7 +1540,7 @@ namespace Ametrano.Presentacion
                 txtMontoViatico_2.Text = datosAlumnoDiccionario["curso_monto_viatico"];
                 boxTurnoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_turno"];
                 boxCursoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_alumno"];
-                DataTable dt = new DataTable();
+               
 
                 
 
@@ -1466,7 +1561,7 @@ namespace Ametrano.Presentacion
                 //Direccion
 
                 boxDepartamentoAlumno_2.SelectedItem = datosAlumnoDiccionario["direccion_departamento"];
-                boxLocalidadAlumno_2.SelectedItem = datosAlumnoDiccionario["direccion_localidad"];
+                txtLocalidadAlumno_2.Text = datosAlumnoDiccionario["direccion_localidad"];
                 txtCalleAlumno_2.Text = datosAlumnoDiccionario["direccion_calle"];
                 if (datosAlumnoDiccionario["direccion_referencia"].Equals(""))
                 {
@@ -1487,9 +1582,34 @@ namespace Ametrano.Presentacion
                 }
 
                 //Contacto
-                txtTelefonoAlumno_2.Text = datosAlumnoDiccionario["contacto_telefono"];
-                txtCelularAlumno_2.Text = datosAlumnoDiccionario["contacto_celular"];
-                txtEmailAlumno_2.Text = datosAlumnoDiccionario["contacto_email"];
+                if (datosAlumnoDiccionario["contacto_telefono"].Equals("0"))
+                {
+                    txtTelefonoAlumno_2.Text = controlador.mapTextBox[txtTelefonoAlumno_2.GetHashCode().ToString()];
+                }
+                else
+                {
+                    txtTelefonoAlumno_2.Text = datosAlumnoDiccionario["contacto_telefono"];
+                }
+                if (datosAlumnoDiccionario["contacto_celular"].Equals("0"))
+                {
+                    txtCelularAlumno_2.Text = controlador.mapTextBox[txtCelularAlumno_2.GetHashCode().ToString()];
+
+                }
+                else
+                {
+                    txtCelularAlumno_2.Text = datosAlumnoDiccionario["contacto_celular"];
+
+                }
+                if (datosAlumnoDiccionario["contacto_email"].Equals(""))
+                {
+                    txtEmailAlumno_2.Text = controlador.mapTextBox[txtEmailAlumno_2.GetHashCode().ToString()];
+
+                }
+                else
+                {
+                    txtEmailAlumno_2.Text = datosAlumnoDiccionario["contacto_email"];
+
+                }
 
                 //Formacion academica
 
@@ -1627,6 +1747,13 @@ namespace Ametrano.Presentacion
                     else if (contHijo.GetType().Name.Equals("ComboBox"))
                     {
                         clearComboBox((ComboBox)contHijo);
+                    }else if (contHijo.GetType().Name.Equals("Label"))
+                    {
+                        string textoCuandoEstaVacio = "";
+
+                        controlador.mapTextBox.TryGetValue(contHijo.GetHashCode().ToString(), out textoCuandoEstaVacio);
+
+                        contHijo.Text = textoCuandoEstaVacio;
                     }
                     else
                     {
@@ -2004,10 +2131,32 @@ namespace Ametrano.Presentacion
                 }
 
                 //Contacto
+                if (datosAlumnoDiccionario["contacto_telefono"].Equals("0"))
+                {
+                    lblTelefonoAlumno_2.Text = "Telefono: " + "Sin dato";
+                }else
+                {
+                    lblTelefonoAlumno_2.Text = "Telefono: " + datosAlumnoDiccionario["contacto_telefono"];
+                }
+                if (datosAlumnoDiccionario["contacto_celular"].Equals("0"))
+                {
+                    lblCelularAlumno_2.Text = "Celular: " + "Sin dato";
 
-                lblTelefonoAlumno_2.Text = "Telefono: " + datosAlumnoDiccionario["contacto_telefono"];
-                lblCelularAlumno_2.Text = "Celular: " + datosAlumnoDiccionario["contacto_celular"];
-                lblEmailAlumno_2.Text = "Email: " + datosAlumnoDiccionario["contacto_email"];
+                }
+                else
+                {
+                    lblCelularAlumno_2.Text = "Celular: " + datosAlumnoDiccionario["contacto_celular"];
+
+                }
+                if (datosAlumnoDiccionario["contacto_email"].Equals(""))
+                {
+                    lblEmailAlumno_2.Text = "Email: " + "Sin dato";
+
+                }else
+                {
+                    lblEmailAlumno_2.Text = "Email: " + datosAlumnoDiccionario["contacto_email"];
+
+                }
 
                 //Coberturna
 
@@ -3259,6 +3408,18 @@ namespace Ametrano.Presentacion
                 if (controlador_alumno.ModificarAlumno(datosAlumnoModificacion, 2))
                 {
                     MessageBox.Show("El alumno ha sido actualizado con exito");
+                    maskedTxtFechaNacimientoAlumno.Text = "";
+                    eventoClickModificarAlumnoCurso[0] = false;
+                    eventoClickBuscarConsultaAlumno[0] = false;
+                    limpiarFormulario(tabPageModificarAlumnosInformacion);
+                    limpiarFormulario(tabPageModificarAlumnosDatosPersonales);
+                    limpiarFormulario(tabPageModificarAlumnosDatosDeInteres);
+                    limpiarFormulario(tabPageModificarAlumnosFinalizar);
+                    tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosPersonales);
+                    tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosDatosDeInteres);
+                    tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosFinalizar);
+                    tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosInformacion);
+                    btnModificarAlumno.Enabled = false;
                 }
                 else
                 {
@@ -3268,6 +3429,8 @@ namespace Ametrano.Presentacion
 
             }
         }
+
+        
 
         private void manualDeUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -3380,6 +3543,10 @@ namespace Ametrano.Presentacion
             }
             eventoClickModificarAlumnoCurso[0] = true;
             eventoClickModificarAlumnoCurso[1] = datos;
+
+            string periodo = controlador_alumno.MostrarPeriodoAlumno(datosAlumnoConsulta.getDatosPersona()["cedula_alumno"], curso, turno);
+
+            boxPeriodoAlumno_2.SelectedItem = periodo;
         }
 
         private void boxTurnoAlumno_2_SelectedIndexChanged(object sender, EventArgs e)
@@ -3412,6 +3579,10 @@ namespace Ametrano.Presentacion
             eventoClickModificarAlumnoCurso[0] = true;
             eventoClickModificarAlumnoCurso[1] = datos;
 
+            string periodo = controlador_alumno.MostrarPeriodoAlumno(datosAlumnoConsulta.getDatosPersona()["cedula_alumno"], curso, turno);
+
+            boxPeriodoAlumno_2.SelectedItem = periodo;
+
         }
 
         private void Solo_numeros_KeyPress(object sender, KeyPressEventArgs e)
@@ -3424,11 +3595,38 @@ namespace Ametrano.Presentacion
         }
         private void Solo_letras_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar))
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
             {
                 e.Handled = true;
             }
 
+        }
+
+        private void boxPeriodoAlumno_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxPeriodoAlumno_2.SelectedIndex == 1)
+            {
+                boxEstadoAlumno_2.SelectedIndex = boxEstadoAlumno_2.Items.Count - 1;
+                boxEstadoAlumno_2.Enabled = false;
+            }else if (boxPeriodoAlumno_2.SelectedIndex > 1)
+            {
+                boxEstadoAlumno_2.SelectedIndex = 3;
+                boxEstadoAlumno_2.Enabled = true;
+            }
+        }
+
+        private void boxPeriodoAlumno_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(boxPeriodoAlumno.SelectedIndex == 1)
+            {
+                boxEstadoAlumno.Enabled = false;
+                boxEstadoAlumno.SelectedIndex = boxEstadoAlumno.Items.Count - 1;
+            }else if(boxPeriodoAlumno.SelectedIndex > 1)
+            {
+                boxEstadoAlumno.SelectedIndex = 3;
+                boxEstadoAlumno.Enabled = true;
+
+            }
         }
     }
 }
