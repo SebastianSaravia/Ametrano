@@ -171,25 +171,7 @@ namespace Ametrano.Logica
                         }
                     }
                 }
-                //-------------------------------------------Calculo de viatico                
-                
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                //-------------------------------------------Fin calculo de viatico
 
 
                 //Calculo de fecha de inicio y fecha de fin

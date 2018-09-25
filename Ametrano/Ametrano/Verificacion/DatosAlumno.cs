@@ -29,10 +29,17 @@ namespace Ametrano.Encapsulado
             bool errores = false;
             dynamic[] datosParaRetornar = new dynamic[2];
 
-           
+
 
             //Se deben realizar verificaciones
-            datosPersonales[0] = datosPersonalesRecividos[0];
+            if (datosPersonalesRecividos[0].Length < 8)
+            {
+                errores = true;
+                mensajeParaRetornar += "\nLa cedula debe contener 8 caracteres";
+            }else
+            {
+                datosPersonales[0] = datosPersonalesRecividos[0];
+            }
             datosPersonales[1] = datosPersonalesRecividos[1];
             datosPersonales[2] = datosPersonalesRecividos[2];
             datosPersonales[3] = datosPersonalesRecividos[3];

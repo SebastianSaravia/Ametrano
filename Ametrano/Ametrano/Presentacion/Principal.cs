@@ -102,7 +102,7 @@ namespace Ametrano.Presentacion
             boxTipoCurso.SelectedIndex = 0;
             boxCursoAsistencia.SelectedIndex = 0;
             boxCursoAsistencia_2.SelectedIndex = 0;
-            boxMateriaAsisencia.SelectedIndex = 0;
+            boxMateriaAsistencia.SelectedIndex = 0;
             boxMateriaAsistencia_2.SelectedIndex = 0;
             boxCursoViaticos.SelectedIndex = 0;
             boxPeriodoAlumno.SelectedIndex = 0;
@@ -163,8 +163,7 @@ namespace Ametrano.Presentacion
 
             for (int i = 0; i < materias.Length; i++)
             {
-                boxMateriaAsisencia.Items.Add(materias[i]);
-                boxMateriaAsistencia_2.Items.Add(materias[i]);
+
                 boxMateriasCurso.Items.Add(materias[i]);
                 boxEspecialidades.Items.Add(materias[i]);
                 boxEspecialidades_2.Items.Add(materias[i]);
@@ -774,6 +773,33 @@ namespace Ametrano.Presentacion
             dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno(0);
             dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno(0);
 
+            string mensaje = "";
+            if (setDatosPersonalesAlumnoResultado[0])
+            {
+                mensaje = setDatosPersonalesAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosCursoAlumnoResultado[0])
+            {
+                mensaje = setDatosCursoAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosContactoAlumnoResultado[0])
+            {
+                mensaje = setDatosContactoAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosDireccionAlumnoResultado[0])
+            {
+                mensaje = setDatosDireccionAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosFormacionAcademicaAlumnoResultado[0])
+            {
+                mensaje = setDatosFormacionAcademicaAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+
             if (!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
                 !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
             {//Se verifican que todos los datos sean correctos
@@ -786,7 +812,7 @@ namespace Ametrano.Presentacion
             }
             else
             {
-
+               
                 //Si hay errores
             }
 
@@ -1262,6 +1288,34 @@ namespace Ametrano.Presentacion
             dynamic[] setDatosContactoAlumnoResultado = this.setDatosContactoAlumno(1);
             dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno(1);
             dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno(1);
+
+            string mensaje = "";
+            if (setDatosPersonalesAlumnoResultado[0])
+            {
+                mensaje = setDatosPersonalesAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosCursoAlumnoResultado[0])
+            {
+                mensaje = setDatosCursoAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosContactoAlumnoResultado[0])
+            {
+                mensaje = setDatosContactoAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosDireccionAlumnoResultado[0])
+            {
+                mensaje = setDatosDireccionAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+            if (setDatosFormacionAcademicaAlumnoResultado[0])
+            {
+                mensaje = setDatosFormacionAcademicaAlumnoResultado[1];
+                MessageBox.Show(mensaje);
+            }
+
 
             if (!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
                 !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
@@ -2840,12 +2894,19 @@ namespace Ametrano.Presentacion
                 {
                     dataGridListaAsistencias.Rows.Add(alumnos[i]);
                 }
-
+                string[] materias = controlador.ListarMateriasPorCurso(curso);
+                boxMateriaAsistencia.Items.Clear();
+                boxMateriaAsistencia.Items.Add("Materia...");   
+                for(int i = 0; i < materias.Length; i++)
+                {
+                    boxMateriaAsistencia.Items.Add(materias[i]);
+                }
 
 
                 btnGuardarLista.Enabled = true;
                 dateTimeFechaAsistencia.Enabled = true;
-                boxMateriaAsisencia.Enabled = true;
+                boxMateriaAsistencia.Enabled = true;
+                boxMateriaAsistencia.SelectedIndex = 0;
                 eventoClickGenerarListaAsistencias[0] = true;
                 eventoClickGenerarListaAsistencias[1] = datosAlumnos;
                 eventoClickGenerarListaAsistencias[2] = curso;
@@ -2932,6 +2993,15 @@ namespace Ametrano.Presentacion
                 if (al.insertarAlumno(datosAlumno, id_grupo))
                 {
                     MessageBox.Show("El alumno ha sido guardado con exito");
+
+                    maskedTxtFechaNacimientoAlumno.Text = "";
+            
+                    limpiarFormulario(tabPageIngresarAlumnoDatosPersonales);
+                    limpiarFormulario(tabPageIngresarAlumnoDatosInteres);
+                    limpiarFormulario(tabPageIngresarAlumnoFinalizar);
+                    tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoFinalizar);
+                    tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
+                    tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosPersonales);
                 }
                 else
                 {
@@ -3134,7 +3204,7 @@ namespace Ametrano.Presentacion
             bool insertFail = false;
             if (eventoClickGenerarListaAsistencias[0])
             {
-                if (boxMateriaAsisencia.SelectedIndex == 0)
+                if (boxMateriaAsistencia.SelectedIndex == 0)
                 {
                     MessageBox.Show("Debes seleccionar una materia");
                 }
@@ -3150,9 +3220,9 @@ namespace Ametrano.Presentacion
                         string turno = "";
 
 
-                        if (boxMateriaAsisencia.SelectedIndex != 0)
+                        if (boxMateriaAsistencia.SelectedIndex != 0)
                         {
-                            materia = boxMateriaAsisencia.SelectedItem.ToString();
+                            materia = boxMateriaAsistencia.SelectedItem.ToString();
                         }
                         fecha_asistencia = dateTimeFechaAsistencia.Value.ToString("yyyy-MM-dd");
 
@@ -3193,25 +3263,6 @@ namespace Ametrano.Presentacion
                     }
                     else
                     {
-
-                        //hacer reseteo de campos y box
-                        boxTurnoAsistencia.SelectedIndex = 0;
-
-                        dataGridListaAsistencias.Rows.Clear();
-
-                        dateTimeFechaAsistencia.Value = dateTimeFechaAsistencia.MaxDate;
-
-                        boxCursoAsistencia.SelectedIndex = 0;
-                        boxMateriaAsisencia.SelectedIndex = 0;
-
-                        eventoClickGenerarListaAsistencias[0] = false;
-                        eventoClickGenerarListaAsistencias[1] = null;
-                        eventoClickGenerarListaAsistencias[2] = "";
-                        eventoClickGenerarListaAsistencias[3] = "";
-
-                        btnGuardarLista.Enabled = false;
-                        dateTimeFechaAsistencia.Enabled = false;
-                        boxMateriaAsisencia.Enabled = false;
 
                         MessageBox.Show("Lista registrada correctamente");
                     }
@@ -3323,7 +3374,17 @@ namespace Ametrano.Presentacion
         {
             if (boxCursoAsistencia_2.SelectedIndex != 0)
             {
+                string curso = boxCursoAsistencia_2.SelectedItem.ToString();
+                string[] materias = controlador.ListarMateriasPorCurso(curso);
+                boxMateriaAsistencia_2.Items.Clear();
+                boxMateriaAsistencia_2.Items.Add("Materia...");
+                for (int i = 0; i < materias.Length; i++)
+                {
+                    boxMateriaAsistencia_2.Items.Add(materias[i]);
+                }
+                boxMateriaAsistencia_2.SelectedIndex = 0;
                 btnConsultarLista.Enabled = true;
+                boxMateriaAsistencia_2.Enabled = true;
             }
             else
             {
@@ -3434,10 +3495,10 @@ namespace Ametrano.Presentacion
             DialogResult dialogResult = MessageBox.Show("Esta seguro que todos los datos son correctos?", "Continuar?", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                if (controlador_alumno.ModificarAlumno(datosAlumnoModificacion, 2))
+                if (controlador_alumno.ModificarAlumno(datosAlumnoModificacion, datosAlumnoConsulta.getDatosPersona()["cedula_alumno"], datosAlumnoConsulta.getDatosPersona()["curso_alumno"]))
                 {
                     MessageBox.Show("El alumno ha sido actualizado con exito");
-                    maskedTxtFechaNacimientoAlumno.Text = "";
+                    maskedTxtFechaNacimientoAlumno_2.Text = "";
                     eventoClickModificarAlumnoCurso[0] = false;
                     eventoClickBuscarConsultaAlumno[0] = false;
                     limpiarFormulario(tabPageModificarAlumnosInformacion);

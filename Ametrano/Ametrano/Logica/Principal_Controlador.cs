@@ -515,6 +515,30 @@ namespace Ametrano.Logica
             }
             return materias;
         }
+        public string[] ListarMateriasPorCurso(string curso)
+        {
+
+            string query = "SELECT nombre_materia FROM materia where nombre_materia != 'nuevo' and nombre_curso = '"+curso+"' GROUP BY nombre_materia";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int contador = dataTable.Rows.Count;
+            int i = 0;
+            string[] materias = new string[contador];
+            if (contador > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    foreach (DataColumn column in dataTable.Columns)
+                    {
+                        materias[i] = row[column].ToString();
+                    }
+                    i++;
+                }
+
+            }
+            return materias;
+        }
 
         public string[] ListarDocentes()
         {
