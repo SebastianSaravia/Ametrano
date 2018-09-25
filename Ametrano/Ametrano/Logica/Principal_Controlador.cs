@@ -493,7 +493,6 @@ namespace Ametrano.Logica
 
         public string[] ListarMaterias()
         {
-
             string query = "SELECT nombre_materia FROM materia where nombre_materia != 'nuevo' GROUP BY nombre_materia";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
