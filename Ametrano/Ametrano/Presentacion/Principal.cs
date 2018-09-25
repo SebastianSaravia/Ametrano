@@ -1199,6 +1199,7 @@ namespace Ametrano.Presentacion
 
                 lblCursoAlumno_3.Text = "Curso: " + diccionarioDeAlumno["curso_alumno"];
                 lblEstadoAlumno_3.Text = "Estado: " + diccionarioDeAlumno["curso_estado"];
+                lblMontoViaticoAlumno_3.Text = "Monto de viatico: " + diccionarioDeAlumno["curso_monto_viatico"];
                 //Se deben agregar los dos campos
 
                 //Formacion academica
@@ -1407,6 +1408,7 @@ namespace Ametrano.Presentacion
             {
                 rellenarConsultaAlumnoSegundaParte();
 
+
                 //Muestro la proxima pagina
                 tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosInformacion);
                 tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);
@@ -1424,6 +1426,7 @@ namespace Ametrano.Presentacion
                 //boxTurnoAlumno_2.SelectedItem = 
                 boxEstadoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_estado"];
                 txtMontoViatico_2.Text = datosAlumnoDiccionario["curso_monto_viatico"];
+                boxTurnoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_monto_viatico"];
 
 
                 //DatosPersonales
@@ -1933,6 +1936,7 @@ namespace Ametrano.Presentacion
                 //Curso
                 lblCursoAlumno_2.Text = "Curso: " + datosAlumnoDiccionario["curso_alumno"];
                 lblEstadoAlumno_2.Text = "Estado: " + datosAlumnoDiccionario["curso_estado"];
+                lblMontoViaticoAlumno_2.Text = "Monto de viatico: $" + datosAlumnoDiccionario["curso_monto_viatico"];
 
                 //Datos Personales
 

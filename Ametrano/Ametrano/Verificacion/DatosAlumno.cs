@@ -407,7 +407,7 @@ namespace Ametrano.Encapsulado
             //Ahora se realizara la insercion de datos de curso
 
             //agregar nombre curso despues
-            datosCurso_paraInsertar[0] = "Proximamente a implementar";
+            diccionario.TryGetValue("nombre_curso", out datosCurso_paraInsertar[0]);
             diccionario.TryGetValue("estado", out datosCurso_paraInsertar[1]);
             diccionario.TryGetValue("monto_viatico_por_dia", out datosCurso_paraInsertar[3]);
             datosCurso_paraInsertar[2] = "Periodo proximamente a implementar";
