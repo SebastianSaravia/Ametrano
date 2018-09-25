@@ -1426,8 +1426,16 @@ namespace Ametrano.Presentacion
                 //boxTurnoAlumno_2.SelectedItem = 
                 boxEstadoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_estado"];
                 txtMontoViatico_2.Text = datosAlumnoDiccionario["curso_monto_viatico"];
-                boxTurnoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_monto_viatico"];
+                boxTurnoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_turno"];
+                boxCursoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_alumno"];
+                DataTable dt = new DataTable();
 
+                string[] periodos = CurContr.ListarPeriodos(datosAlumnoDiccionario["curso_alumno"], datosAlumnoDiccionario["curso_turno"], out dt);
+
+                for (int i = 0; i < periodos.Length; i++)
+                {
+                    boxPeriodoAlumno_2.Items.Add(periodos[i]);
+                }
 
                 //DatosPersonales
 
@@ -1937,6 +1945,7 @@ namespace Ametrano.Presentacion
                 lblCursoAlumno_2.Text = "Curso: " + datosAlumnoDiccionario["curso_alumno"];
                 lblEstadoAlumno_2.Text = "Estado: " + datosAlumnoDiccionario["curso_estado"];
                 lblMontoViaticoAlumno_2.Text = "Monto de viatico: $" + datosAlumnoDiccionario["curso_monto_viatico"];
+
 
                 //Datos Personales
 
