@@ -913,6 +913,7 @@
             this.txtApellido1Docente.TabIndex = 3;
             this.txtApellido1Docente.Text = "Apellido";
             this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Docente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre1Docente
@@ -925,6 +926,7 @@
             this.txtNombre1Docente.TabIndex = 1;
             this.txtNombre1Docente.Text = "Nombre";
             this.txtNombre1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre1Docente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtCedulaDocente
@@ -1167,6 +1169,7 @@
             this.txtApellido1Docente_2.TabIndex = 3;
             this.txtApellido1Docente_2.Text = "Apellido";
             this.txtApellido1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Docente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre1Docente_2
@@ -1179,6 +1182,7 @@
             this.txtNombre1Docente_2.TabIndex = 1;
             this.txtNombre1Docente_2.Text = "Nombre";
             this.txtNombre1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre1Docente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtCedulaDocente_2
@@ -1785,6 +1789,7 @@
             this.txtApellido2Alumno.TabIndex = 14;
             this.txtApellido2Alumno.Text = "Segundo apellido";
             this.txtApellido2Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido2Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido2Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtApellido1Alumno
@@ -1798,6 +1803,7 @@
             this.txtApellido1Alumno.TabIndex = 13;
             this.txtApellido1Alumno.Text = "Primer apellido";
             this.txtApellido1Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido1Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre2Alumno
@@ -1810,6 +1816,7 @@
             this.txtNombre2Alumno.TabIndex = 12;
             this.txtNombre2Alumno.Text = "Segundo nombre";
             this.txtNombre2Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre2Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre2Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre1Alumno
@@ -1822,6 +1829,7 @@
             this.txtNombre1Alumno.TabIndex = 11;
             this.txtNombre1Alumno.Text = "Primer nombre";
             this.txtNombre1Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre1Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre1Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtCedulaAlumno
@@ -3871,6 +3879,7 @@
             this.txtApellido2Alumno_2.TabIndex = 14;
             this.txtApellido2Alumno_2.Text = "Segundo apellido";
             this.txtApellido2Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido2Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido2Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtApellido1Alumno_2
@@ -3884,6 +3893,7 @@
             this.txtApellido1Alumno_2.TabIndex = 13;
             this.txtApellido1Alumno_2.Text = "Primer apellido";
             this.txtApellido1Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido1Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre2Alumno_2
@@ -3896,6 +3906,7 @@
             this.txtNombre2Alumno_2.TabIndex = 12;
             this.txtNombre2Alumno_2.Text = "Segundo nombre";
             this.txtNombre2Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre2Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre2Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtNombre1Alumno_2
@@ -3908,6 +3919,7 @@
             this.txtNombre1Alumno_2.TabIndex = 11;
             this.txtNombre1Alumno_2.Text = "Primer nombre";
             this.txtNombre1Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre1Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre1Alumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
             // 
             // txtCedulaAlumno_2
