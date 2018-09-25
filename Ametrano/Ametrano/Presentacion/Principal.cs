@@ -30,6 +30,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
         private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[4];
         private dynamic[] eventoClickBuscarConsultaAlumno = new dynamic[2];
+        private dynamic[] eventoClickModificarAlumnoCurso = new dynamic[2];
 
         private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
@@ -246,14 +247,29 @@ namespace Ametrano.Presentacion
             string[] curso = new string[5];//Array que almacena los datos de contacto del alumno
 
             //Lleno el array del curso
-            
+
+            int periodoSeleccionado = boxPeriodoAlumno_2.SelectedIndex;
+            int id_grupo = 0;
+            if (periodoSeleccionado == 1)
+            {
+                id_grupo = 0;
+            }
+            else if (periodoSeleccionado > 1)
+            {
+                if (eventoClickModificarAlumnoCurso[0])
+                {
+                    DataTable datosPeriodos = eventoClickModificarAlumnoCurso[1];
+                    int.TryParse(datosPeriodos.Rows[periodoSeleccionado - 2][1].ToString(), out id_grupo);
+                }
+            }
+
 
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
                 curso[0] = boxCursoAlumno.SelectedItem.ToString();
                 curso[1] = boxEstadoAlumno.SelectedItem.ToString();
-                curso[2] = boxPeriodoAlumno.SelectedItem.ToString();
+                curso[2] = id_grupo + "";
                 curso[3] = txtMontoViatico.Text;
                 curso[4] = boxTurnoAlumno.SelectedItem.ToString();
 
@@ -264,7 +280,7 @@ namespace Ametrano.Presentacion
             {//modificacion
                 curso[0] = boxCursoAlumno_2.SelectedItem.ToString();
                 curso[1] = boxEstadoAlumno_2.SelectedItem.ToString();
-                curso[2] = boxPeriodoAlumno_2.SelectedItem.ToString();
+                curso[2] = id_grupo + "";
                 curso[3] = txtMontoViatico_2.Text;
                 curso[4] = boxTurnoAlumno_2.SelectedItem.ToString();
 
@@ -1425,7 +1441,7 @@ namespace Ametrano.Presentacion
             {
                 IDictionary<string, string> datosAlumnoDiccionario = datosAlumnoConsulta.getDatosPersona();
 
-                //boxTurnoAlumno_2.SelectedItem = 
+                
                 boxEstadoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_estado"];
                 txtMontoViatico_2.Text = datosAlumnoDiccionario["curso_monto_viatico"];
                 boxTurnoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_turno"];
@@ -3327,8 +3343,8 @@ namespace Ametrano.Presentacion
             {
                 boxPeriodoAlumno_2.Items.Add(periodos[i]);
             }
-            eventoClickAgregarAlumnoCurso[0] = true;
-            eventoClickAgregarAlumnoCurso[1] = datos;
+            eventoClickModificarAlumnoCurso[0] = true;
+            eventoClickModificarAlumnoCurso[1] = datos;
         }
 
         private void boxTurnoAlumno_2_SelectedIndexChanged(object sender, EventArgs e)
@@ -3358,8 +3374,8 @@ namespace Ametrano.Presentacion
             {
                 boxPeriodoAlumno_2.Items.Add(periodos[i]);
             }
-            eventoClickAgregarAlumnoCurso[0] = true;
-            eventoClickAgregarAlumnoCurso[1] = datos;
+            eventoClickModificarAlumnoCurso[0] = true;
+            eventoClickModificarAlumnoCurso[1] = datos;
 
         }
     }

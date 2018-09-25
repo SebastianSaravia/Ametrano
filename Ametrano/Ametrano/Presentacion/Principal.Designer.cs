@@ -3511,6 +3511,7 @@
             this.boxPeriodoAlumno_2.Name = "boxPeriodoAlumno_2";
             this.boxPeriodoAlumno_2.Size = new System.Drawing.Size(216, 23);
             this.boxPeriodoAlumno_2.TabIndex = 27;
+
             // 
             // boxEstadoAlumno_2
             // 

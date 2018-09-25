@@ -147,7 +147,7 @@ namespace Ametrano.Persistencia
                     objetoDeConexion.Close();
                 }
                 
-               // testing.MostrarMessageBox("Error al ingresar datos: "+e.Message);
+                testing.MostrarMessageBox("Error al ingresar datos: "+e.Message);
             }
 
             return filasAfectadas;
