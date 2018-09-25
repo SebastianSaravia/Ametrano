@@ -1,6 +1,7 @@
 ﻿using Ametrano.Encapsulado;
 using Ametrano.Logica;
 using Ametrano.Persistencia;
+using Ametrano.Presentacion;
 using Ametrano.Verificacion;
 using System;
 using System.Collections;
@@ -15,6 +16,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
+
 
 
 namespace Ametrano.Presentacion
@@ -3654,9 +3657,7 @@ namespace Ametrano.Presentacion
 
             }
         }
-    }
-}
-        }
+
 
         private void bunifuImageButton2_Click(object sender, EventArgs e)
         {
