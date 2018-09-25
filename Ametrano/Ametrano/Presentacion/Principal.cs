@@ -3664,5 +3664,11 @@ namespace Ametrano.Presentacion
             ReporteErrores rep = new ReporteErrores();
             rep.ShowDialog();
         }
+        
+        private void reporteDeErroresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReporteErrores rep = new ReporteErrores();
+            rep.ShowDialog();
+        }
     }
 }
