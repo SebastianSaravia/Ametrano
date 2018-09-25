@@ -3731,5 +3731,30 @@ namespace Ametrano.Presentacion
             ReporteErrores rep = new ReporteErrores();
             rep.ShowDialog();
         }
+
+        private void maskedTxtFechaNacimientoAlumno_TextChanged(object sender, EventArgs e)
+        {
+            string fechaNacStr = maskedTxtFechaNacimientoAlumno.Text;
+
+            DateTime nacimiento;
+            DateTime.TryParse(maskedTxtFechaNacimientoAlumno.Text, out nacimiento);
+
+            int edad = controlador.buscarEdad(nacimiento.ToString("yyyy-MM-dd"));
+
+            txtEdadAlumno.Text = edad + "";
+           
+        }
+
+        private void maskedTxtFechaNacimientoAlumno_2_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            string fechaNacStr = maskedTxtFechaNacimientoAlumno_2.Text;
+
+            DateTime nacimiento;
+            DateTime.TryParse(maskedTxtFechaNacimientoAlumno_2.Text, out nacimiento);
+
+            int edad = controlador.buscarEdad(nacimiento.ToString("yyyy-MM-dd"));
+
+            txtEdadAlumno_2.Text = edad + "";
+        }
     }
 }

@@ -34,7 +34,7 @@ namespace Ametrano.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("ametrano2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ametrano")]
         public string bd {
             get {
                 return ((string)(this["bd"]));

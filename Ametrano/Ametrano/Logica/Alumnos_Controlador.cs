@@ -125,14 +125,9 @@ namespace Ametrano.Logica
            
             string cedula = datos.getDatosPersona()["cedula_alumno"];
             string curso = "";
-            if (id_grupo == 0)
-            {
-                curso = "Pendientes";
-            }
-            else
-            {
+          
             curso = datos.getDatosPersona()["curso_alumno"];
-            }
+            
            
 
             string query3 = "INSERT INTO asiste(nombre_curso, id_grupo, cedula_alumno, nombre_materia, fecha, asistencia) VALUES('{0}',{1},'{2}','{3}','{4}',{5})";

@@ -563,6 +563,20 @@ namespace Ametrano.Logica
             }
             return docentes;
         }
+        public int buscarEdad(string fecha_nacimiento)
+        {
+            int edad = 0;
+            string query = " select timestampdiff(YEAR, '" + fecha_nacimiento + "', curdate())";
+            MySqlDataAdapter datos = objetoConexion.consultarDatos(query);
+            DataTable dt = new DataTable();
+            datos.Fill(dt);
+            if (dt.Rows.Count > 0)
+            {
+                int.TryParse(dt.Rows[0][0].ToString(), out edad);
+            }
+            return edad;
+        }
+
     
     }
 }

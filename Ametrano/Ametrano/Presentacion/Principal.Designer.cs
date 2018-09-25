@@ -46,6 +46,7 @@
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeErroresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
@@ -450,7 +451,6 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.reporteDeErroresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -702,7 +702,7 @@
             this.menuPrincipal.Name = "menuPrincipal";
             this.menuPrincipal.Size = new System.Drawing.Size(1184, 24);
             this.menuPrincipal.TabIndex = 2;
-            this.menuPrincipal.Text = "menuStrip1";           
+            this.menuPrincipal.Text = "menuStrip1";
             // 
             // inicioToolStripMenuItem
             // 
@@ -742,6 +742,13 @@
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Text = "Prueba de conexion con base de datos";
             this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.pruebaDeConexionConBaseDeDatosToolStripMenuItem_Click);
+            // 
+            // reporteDeErroresToolStripMenuItem
+            // 
+            this.reporteDeErroresToolStripMenuItem.Name = "reporteDeErroresToolStripMenuItem";
+            this.reporteDeErroresToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
+            this.reporteDeErroresToolStripMenuItem.Text = "Reporte de errores";
+            this.reporteDeErroresToolStripMenuItem.Click += new System.EventHandler(this.reporteDeErroresToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -1741,6 +1748,7 @@
             this.maskedTxtFechaNacimientoAlumno.Size = new System.Drawing.Size(151, 24);
             this.maskedTxtFechaNacimientoAlumno.TabIndex = 23;
             this.maskedTxtFechaNacimientoAlumno.Text = "Fecha de nacimiento";
+            this.maskedTxtFechaNacimientoAlumno.TextChanged += new System.EventHandler(this.maskedTxtFechaNacimientoAlumno_TextChanged);
             this.maskedTxtFechaNacimientoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.maskedTxtFechaNacimientoAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
             this.maskedTxtFechaNacimientoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -3833,6 +3841,7 @@
             this.maskedTxtFechaNacimientoAlumno_2.Size = new System.Drawing.Size(151, 24);
             this.maskedTxtFechaNacimientoAlumno_2.TabIndex = 24;
             this.maskedTxtFechaNacimientoAlumno_2.Text = "Fecha de nacimiento";
+            this.maskedTxtFechaNacimientoAlumno_2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTxtFechaNacimientoAlumno_2_MaskInputRejected);
             this.maskedTxtFechaNacimientoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.maskedTxtFechaNacimientoAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
             this.maskedTxtFechaNacimientoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -5619,22 +5628,15 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // reporteDeErroresToolStripMenuItem
-            // 
-            this.reporteDeErroresToolStripMenuItem.Name = "reporteDeErroresToolStripMenuItem";
-            this.reporteDeErroresToolStripMenuItem.Size = new System.Drawing.Size(276, 22);
-            this.reporteDeErroresToolStripMenuItem.Text = "Reporte de errores";
-            this.reporteDeErroresToolStripMenuItem.Click += new System.EventHandler(this.reporteDeErroresToolStripMenuItem_Click);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
