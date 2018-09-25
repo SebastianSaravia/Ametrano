@@ -220,14 +220,19 @@ namespace Ametrano.Logica
                 alumno["internet_facil_acceso"] = "0";
             }
             
-
             string query = "UPDATE alumno SET cedula_alumno='{0}', nombre1='{1}', nombre2='{2}', apellido1='{3}', apellido2='{4}', fecha_nac='{5}', edad={6}, sexo='{7}', estado_civil='{8}', nivel_educativo='{9}', ultimo_anio_aprobado='{10}', telefono_fijo='{11}', celular='{12}', email='{13}', departamento='{14}', calle='{15}', numero_puerta='{16}', apartamento='{17}', referencia='{18}', localidad='{19}', estado='{20}', trabajo_alguna_vez={21}, trabaja_actualmente={22}, tiempo_sin_trabajo='{23}', horas_trabajo='{24}', ingreso_mensual='{25}', cobertura_salud='{26}', jefe_hogar={27}, cant_hijos={28}, usa_internet={28}, facil_acceso_internet={29}, medio_acceso_internet='{30}', cant_personas_cargo_17={31}, cant_personas_cargo_18_59={32},cant_personas_cargo_60={33}, persona_tiene_discapacidad={34},cuenta_con_apoyo={35}, carga_semanal_cuidado='{36}',trabajo_anteriormente_cuidando={37}, experiencia_instituciones_cuidado={38}, monto_viatico_por_dia={39} WHERE cedula_alumno='{40}'";
             query = string.Format(query,alumno["cedula_alumno"], alumno["nombre1"], alumno["nombre2"], alumno["apellido1"], alumno["apellido2"], alumno["fecha_nac"], alumno["edad"], alumno["sexo"], alumno["estado_civil"], alumno["formacion_nivel"], alumno["formacion_ultimo_año_aprovado"], alumno["contacto_telefono"], alumno["contacto_celular"], alumno["contacto_email"], alumno["direccion_departamento"], alumno["direccion_calle"], alumno["direccion_numero_puerta"], alumno["direccion_apartamento"], alumno["direccion_referencia"], alumno["direccion_localidad"], alumno["curso_estado"], alumno["trabajo_trabajo_alguna_vez"], alumno["trabajo_trabaja_actualmente"], alumno["trabajo_tiempo_desempleado"], alumno["trabajo_horas_jornada"], alumno["trabajo_ingreso_mensual"], alumno["cobertura_salud"], alumno["hogar_jefe"], alumno["hogar_cantidad_hijos"], alumno["internet_usa_internet"], alumno["internet_facil_acceso"], alumno["internet_medio_acceso"], alumno["personas_cargo_0_17"], alumno["personas_cargo_18_59"], alumno["personas_cargo_60_mas"], alumno["personas_cargo_con_discapacidad"], alumno["personas_cargo_cuenta_con_apoyo"], alumno["personas_cargo_carga_semanal_cuidado"], alumno["personas_cargo_trabajo_cuidando"], alumno["personas_cargo_experiencia_instituciones_cuidado"], alumno["curso_monto_viatico"], alumno["cedula_alumno"]);
             int Consulta = objetoConexion.sqlInsertUpdate(query);
             
             if (Consulta>0)
             {
-                resultado = true;
+                string query2 = "UPDATE asiste SET nombre_curso='{0}', id_grupo='{1}', cedula_alumno='{2}' WHERE cedula_alumno='{3}'";
+                query2 = string.Format(query2, alumno["curso_alumno"], id_grupo, alumno["cedula_alumno"]);
+                int Consulta2 = objetoConexion.sqlInsertUpdate(query2);
+                if (Consulta2 >0)
+                {
+                    resultado = true;
+                }                                
             }
             
             return resultado;
