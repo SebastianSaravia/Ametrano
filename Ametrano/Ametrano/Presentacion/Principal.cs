@@ -70,8 +70,7 @@ namespace Ametrano.Presentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            boxTurnoGrupo.SelectedIndex = 0;
-            
+            boxTurnoGrupo.SelectedIndex = 0;            
             dataGridGruposActivos.DataSource = CurContr.GruposActivos();
             dataGridGruposActivos.ReadOnly = true;
             boxSexoAlumno.SelectedIndex = 0;
@@ -2192,6 +2191,17 @@ namespace Ametrano.Presentacion
 
         private void boxBuscar_2_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (boxBuscar_2.SelectedIndex == 0)
+            {
+                txtBuscar_2.Enabled = false;
+                btnBuscar_2.Enabled = false;
+            }
+            else
+            {
+                txtBuscar_2.Enabled = true;
+                btnBuscar_2.Enabled = true;
+            }
+
             if (boxBuscar_2.SelectedIndex == 1)
             {//Si se selecciona cedula se ajusta el largo maximo a 8
                 txtBuscar_2.MaxLength = 8;
@@ -2204,6 +2214,17 @@ namespace Ametrano.Presentacion
 
         private void boxBuscar_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+            if (boxBuscar.SelectedIndex == 0)
+            {
+                txtBuscar.Enabled = false;
+                btnBuscar.Enabled = false;
+            }
+            else
+            {
+                txtBuscar.Enabled = true;
+                btnBuscar.Enabled = true;
+            }
             if (boxBuscar.SelectedIndex == 1)
             {//Si se selecciona cedula se ajusta el largo maximo a 8
                 txtBuscar.MaxLength = 8;
@@ -3123,6 +3144,17 @@ namespace Ametrano.Presentacion
 
         private void boxBuscarAlumno_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (boxBuscarAlumno.SelectedIndex == 0)
+            {
+                txtBuscarAlumno.Enabled = false;
+                btnBuscar_3.Enabled = false;
+            }
+            else
+            {
+                txtBuscarAlumno.Enabled = true;
+                btnBuscar_3.Enabled = true;
+            }
+
             if (boxBuscarAlumno.SelectedIndex == 1)
             {//Si se selecciona cedula se ajusta el largo maximo a 8
                 txtBuscarAlumno.MaxLength = 8;
@@ -3135,15 +3167,18 @@ namespace Ametrano.Presentacion
 
         private void listResultadosAlumnos_SelectedIndexChanged(object sender, EventArgs e)
         {
+           
             if (listResultadosAlumnos.SelectedIndex != -1)
             {
                 string ci = listResultadosAlumnos.SelectedItem.ToString().Substring(0, 8);
                 buscarAlumno(0, ci, true);
+                toolTip.SetToolTip(lblExperienciaInstitucionesCuidadoAlumno_2, lblExperienciaInstitucionesCuidadoAlumno_2.Text);
             }
         }
 
         private void btnBuscar_3_Click(object sender, EventArgs e)
         {
+           
             if (boxBuscarAlumno.SelectedIndex == 0)
             {//Si el tipo de busqueda es el placeholder
                 MessageBox.Show("Debe seleccionar un metodo de busqueda");
@@ -3172,7 +3207,7 @@ namespace Ametrano.Presentacion
 
                 datoCorrecto = verificarDatoCorrecto(tipoBusqueda, datoDeBusqueda);
                 buscarAlumno(tipoBusqueda, datoDeBusqueda, datoCorrecto);
-
+                toolTip.SetToolTip(lblExperienciaInstitucionesCuidadoAlumno_2, lblExperienciaInstitucionesCuidadoAlumno_2.Text);
 
             }
         }
@@ -3361,6 +3396,15 @@ namespace Ametrano.Presentacion
             eventoClickAgregarAlumnoCurso[0] = true;
             eventoClickAgregarAlumnoCurso[1] = datos;
 
+        }
+
+        private void Solo_numeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+                       
         }
     }
 }
