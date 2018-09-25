@@ -93,6 +93,16 @@ namespace Ametrano.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon {
+            get {
+                object obj = ResourceManager.GetObject("icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap img_alumno {
             get {
                 object obj = ResourceManager.GetObject("img_alumno", resourceCulture);
@@ -136,6 +146,16 @@ namespace Ametrano.Properties {
         internal static System.Drawing.Bitmap login_icon {
             get {
                 object obj = ResourceManager.GetObject("login-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sad_face {
+            get {
+                object obj = ResourceManager.GetObject("sad_face", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
