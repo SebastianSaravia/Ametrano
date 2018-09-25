@@ -3292,6 +3292,67 @@ namespace Ametrano.Presentacion
 
         }
 
-       
+        private void boxCursoAlumno_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxCursoAlumno_2.SelectedIndex != 0)
+            {
+                boxPeriodoAlumno_2.Enabled = true;
+            }
+            else
+            {
+                boxPeriodoAlumno_2.Enabled = false;
+            }
+            string curso = boxCursoAlumno_2.SelectedItem.ToString();
+            string turno = "";
+            if (boxTurnoAlumno_2.SelectedItem != null)
+            {
+                turno = boxTurnoAlumno_2.SelectedItem.ToString();
+            }
+
+            DataTable datos = new DataTable();
+            string[] periodos = CurContr.ListarPeriodos(curso, turno, out datos);
+            boxPeriodoAlumno_2.Items.Clear();
+            boxPeriodoAlumno_2.Items.Add("Periodo...");
+            boxPeriodoAlumno_2.Items.Add("Pendiente");
+            boxPeriodoAlumno_2.SelectedIndex = 0;
+            for (int i = 0; i < periodos.Length; i++)
+            {
+                boxPeriodoAlumno_2.Items.Add(periodos[i]);
+            }
+            eventoClickAgregarAlumnoCurso[0] = true;
+            eventoClickAgregarAlumnoCurso[1] = datos;
+        }
+
+        private void boxTurnoAlumno_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxTurnoAlumno_2.SelectedIndex != 0)
+            {
+                boxCursoAlumno_2.Enabled = true;
+            }
+            else
+            {
+                boxCursoAlumno_2.Enabled = false;
+            }
+            string curso = boxCursoAlumno_2.SelectedItem.ToString();
+            string turno = "";
+            if (boxTurnoAlumno_2.SelectedItem != null)
+            {
+                turno = boxTurnoAlumno_2.SelectedItem.ToString();
+            }
+
+            DataTable datos = new DataTable();
+            string[] periodos = CurContr.ListarPeriodos(curso, turno, out datos);
+            boxPeriodoAlumno_2.Items.Clear();
+            boxPeriodoAlumno_2.Items.Add("Periodo...");
+            boxPeriodoAlumno_2.Items.Add("Pendiente");
+            boxPeriodoAlumno_2.SelectedIndex = 0;
+            for (int i = 0; i < periodos.Length; i++)
+            {
+                boxPeriodoAlumno_2.Items.Add(periodos[i]);
+            }
+            eventoClickAgregarAlumnoCurso[0] = true;
+            eventoClickAgregarAlumnoCurso[1] = datos;
+
+        }
     }
 }

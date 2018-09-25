@@ -223,6 +223,7 @@
             this.txtBuscarAlumno = new System.Windows.Forms.TextBox();
             this.btnModificarAlumno = new System.Windows.Forms.Button();
             this.groupBox46 = new System.Windows.Forms.GroupBox();
+            this.lblMontoViaticoAlumno_2 = new System.Windows.Forms.Label();
             this.lblEstadoAlumno_2 = new System.Windows.Forms.Label();
             this.lblCursoAlumno_2 = new System.Windows.Forms.Label();
             this.groupBox47 = new System.Windows.Forms.GroupBox();
@@ -336,6 +337,7 @@
             this.btnSiguienteConsultaAlumno_2 = new System.Windows.Forms.Button();
             this.tabPageModificarAlumnosFinalizar = new System.Windows.Forms.TabPage();
             this.groupBox36 = new System.Windows.Forms.GroupBox();
+            this.lblMontoViaticoAlumno_3 = new System.Windows.Forms.Label();
             this.lblEstadoAlumno_3 = new System.Windows.Forms.Label();
             this.lblCursoAlumno_3 = new System.Windows.Forms.Label();
             this.groupBox37 = new System.Windows.Forms.GroupBox();
@@ -447,8 +449,6 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lblMontoViaticoAlumno_2 = new System.Windows.Forms.Label();
-            this.lblMontoViaticoAlumno_3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -2893,6 +2893,16 @@
             this.groupBox46.TabStop = false;
             this.groupBox46.Text = "Con respecto al instituto";
             // 
+            // lblMontoViaticoAlumno_2
+            // 
+            this.lblMontoViaticoAlumno_2.AutoSize = true;
+            this.lblMontoViaticoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoViaticoAlumno_2.Location = new System.Drawing.Point(33, 59);
+            this.lblMontoViaticoAlumno_2.Name = "lblMontoViaticoAlumno_2";
+            this.lblMontoViaticoAlumno_2.Size = new System.Drawing.Size(116, 15);
+            this.lblMontoViaticoAlumno_2.TabIndex = 28;
+            this.lblMontoViaticoAlumno_2.Text = "Monto de viatico:";
+            // 
             // lblEstadoAlumno_2
             // 
             this.lblEstadoAlumno_2.AutoSize = true;
@@ -3475,6 +3485,7 @@
             this.boxTurnoAlumno_2.Name = "boxTurnoAlumno_2";
             this.boxTurnoAlumno_2.Size = new System.Drawing.Size(159, 23);
             this.boxTurnoAlumno_2.TabIndex = 30;
+            this.boxTurnoAlumno_2.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAlumno_2_SelectedIndexChanged);
             // 
             // txtMontoViatico_2
             // 
@@ -3494,7 +3505,8 @@
             this.boxPeriodoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxPeriodoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxPeriodoAlumno_2.Items.AddRange(new object[] {
-            "Periodo..."});
+            "Periodo...",
+            "Pendiente"});
             this.boxPeriodoAlumno_2.Location = new System.Drawing.Point(423, 29);
             this.boxPeriodoAlumno_2.Name = "boxPeriodoAlumno_2";
             this.boxPeriodoAlumno_2.Size = new System.Drawing.Size(216, 23);
@@ -3526,6 +3538,7 @@
             this.boxCursoAlumno_2.Name = "boxCursoAlumno_2";
             this.boxCursoAlumno_2.Size = new System.Drawing.Size(159, 23);
             this.boxCursoAlumno_2.TabIndex = 26;
+            this.boxCursoAlumno_2.SelectedIndexChanged += new System.EventHandler(this.boxCursoAlumno_2_SelectedIndexChanged);
             // 
             // btnAtrasConsultaAlumno
             // 
@@ -4273,6 +4286,16 @@
             this.groupBox36.TabIndex = 30;
             this.groupBox36.TabStop = false;
             this.groupBox36.Text = "Con respecto al instituto";
+            // 
+            // lblMontoViaticoAlumno_3
+            // 
+            this.lblMontoViaticoAlumno_3.AutoSize = true;
+            this.lblMontoViaticoAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoViaticoAlumno_3.Location = new System.Drawing.Point(8, 60);
+            this.lblMontoViaticoAlumno_3.Name = "lblMontoViaticoAlumno_3";
+            this.lblMontoViaticoAlumno_3.Size = new System.Drawing.Size(116, 15);
+            this.lblMontoViaticoAlumno_3.TabIndex = 29;
+            this.lblMontoViaticoAlumno_3.Text = "Monto de viatico:";
             // 
             // lblEstadoAlumno_3
             // 
@@ -5533,26 +5556,6 @@
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
-            // 
-            // lblMontoViaticoAlumno_2
-            // 
-            this.lblMontoViaticoAlumno_2.AutoSize = true;
-            this.lblMontoViaticoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoViaticoAlumno_2.Location = new System.Drawing.Point(33, 59);
-            this.lblMontoViaticoAlumno_2.Name = "lblMontoViaticoAlumno_2";
-            this.lblMontoViaticoAlumno_2.Size = new System.Drawing.Size(116, 15);
-            this.lblMontoViaticoAlumno_2.TabIndex = 28;
-            this.lblMontoViaticoAlumno_2.Text = "Monto de viatico:";
-            // 
-            // lblMontoViaticoAlumno_3
-            // 
-            this.lblMontoViaticoAlumno_3.AutoSize = true;
-            this.lblMontoViaticoAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoViaticoAlumno_3.Location = new System.Drawing.Point(8, 60);
-            this.lblMontoViaticoAlumno_3.Name = "lblMontoViaticoAlumno_3";
-            this.lblMontoViaticoAlumno_3.Size = new System.Drawing.Size(116, 15);
-            this.lblMontoViaticoAlumno_3.TabIndex = 29;
-            this.lblMontoViaticoAlumno_3.Text = "Monto de viatico:";
             // 
             // Principal
             // 
