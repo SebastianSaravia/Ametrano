@@ -240,8 +240,19 @@ namespace Ametrano.Logica
             return resultado;
         }
 
-        public string MostrarPeriodoAlumno(int id_grupo)
+        public string MostrarPeriodoAlumno(string cedula, string nombre_curso, string turno)
         {
+            string query1 = "select g.id_grupo from grupo g join asiste a on a.id_grupo = g.id_grupo where a.cedula_alumno = '"+cedula+"' and g.turno = '"+turno+"' and g.nombre_curso = '"+nombre_curso+"';";
+            MySqlDataAdapter datosIdGrupo = objetoConexion.consultarDatos(query1);
+            DataTable dt = new DataTable();
+            datosIdGrupo.Fill(dt);
+            int id_grupo = 0;
+            if (dt.Rows.Count > 0)
+            {
+                int.TryParse(dt.Rows[0][0].ToString(), out id_grupo);
+            }
+
+            
             string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin)) from grupo WHERE id_grupo='"+id_grupo+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
