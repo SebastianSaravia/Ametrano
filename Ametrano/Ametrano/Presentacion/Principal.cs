@@ -243,7 +243,7 @@ namespace Ametrano.Presentacion
         {//metodo que verifica y almacena los datos del curso en datosalumno
          //type=0 ->nuevo
          //type=1 ->modificacion
-            string[] curso = new string[4];//Array que almacena los datos de contacto del alumno
+            string[] curso = new string[5];//Array que almacena los datos de contacto del alumno
 
             //Lleno el array del curso
             
@@ -255,6 +255,8 @@ namespace Ametrano.Presentacion
                 curso[1] = boxEstadoAlumno.SelectedItem.ToString();
                 curso[2] = boxPeriodoAlumno.SelectedItem.ToString();
                 curso[3] = txtMontoViatico.Text;
+                curso[4] = boxTurnoAlumno.SelectedItem.ToString();
+
 
                 retorno = datosAlumno.setCurso(curso); //Verifico los datos
             }
@@ -264,6 +266,7 @@ namespace Ametrano.Presentacion
                 curso[1] = boxEstadoAlumno_2.SelectedItem.ToString();
                 curso[2] = boxPeriodoAlumno_2.SelectedItem.ToString();
                 curso[3] = txtMontoViatico_2.Text;
+                curso[4] = boxTurnoAlumno_2.SelectedItem.ToString();
 
                 retorno = datosAlumnoModificacion.setCurso(curso); //Verifico los datos
 
@@ -1430,12 +1433,9 @@ namespace Ametrano.Presentacion
                 boxCursoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_alumno"];
                 DataTable dt = new DataTable();
 
-                string[] periodos = CurContr.ListarPeriodos(datosAlumnoDiccionario["curso_alumno"], datosAlumnoDiccionario["curso_turno"], out dt);
+                
 
-                for (int i = 0; i < periodos.Length; i++)
-                {
-                    boxPeriodoAlumno_2.Items.Add(periodos[i]);
-                }
+                //Falta seleccionar el periodo al que asiste el alumno
 
                 //DatosPersonales
 
