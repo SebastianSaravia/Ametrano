@@ -1407,8 +1407,7 @@ namespace Ametrano.Presentacion
             if (eventoClickBuscarConsultaAlumno[0])
             {
                 rellenarConsultaAlumnoSegundaParte();
-
-
+                
                 //Muestro la proxima pagina
                 tabControlModificarAlumno.Controls.Remove(tabPageModificarAlumnosInformacion);
                 tabControlModificarAlumno.Controls.Add(tabPageModificarAlumnosDatosPersonales);

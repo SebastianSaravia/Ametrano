@@ -1,5 +1,6 @@
 ﻿using Ametrano.Encapsulado;
 using Ametrano.Persistencia;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -238,6 +239,26 @@ namespace Ametrano.Logica
             return resultado;
         }
 
+        public string MostrarPeriodoAlumno(int id_grupo)
+        {
+            string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin)) from grupo WHERE id_grupo='"+id_grupo+"'";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            DataTable dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int filas = dataTable.Rows.Count;
+            string periodo="";
+            if (filas > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+
+                    periodo = row[0].ToString();
+                  
+                }
+
+            }
+            return periodo;
+        }
 
 
 
