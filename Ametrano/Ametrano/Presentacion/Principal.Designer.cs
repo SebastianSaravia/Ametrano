@@ -422,7 +422,7 @@
             this.groupBox56 = new System.Windows.Forms.GroupBox();
             this.btnGuardarLista = new System.Windows.Forms.Button();
             this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
-            this.boxMateriaAsisencia = new System.Windows.Forms.ComboBox();
+            this.boxMateriaAsistencia = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
             this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -3557,6 +3557,7 @@
             this.boxPeriodoAlumno_2.Name = "boxPeriodoAlumno_2";
             this.boxPeriodoAlumno_2.Size = new System.Drawing.Size(216, 23);
             this.boxPeriodoAlumno_2.TabIndex = 27;
+            this.boxPeriodoAlumno_2.SelectedIndexChanged += new System.EventHandler(this.boxPeriodoAlumno_2_SelectedIndexChanged);
             // 
             // boxEstadoAlumno_2
             // 
@@ -5170,6 +5171,7 @@
             // boxMateriaAsistencia_2
             // 
             this.boxMateriaAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxMateriaAsistencia_2.Enabled = false;
             this.boxMateriaAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxMateriaAsistencia_2.FormattingEnabled = true;
             this.boxMateriaAsistencia_2.Items.AddRange(new object[] {
@@ -5256,7 +5258,7 @@
             // 
             this.groupBox56.Controls.Add(this.btnGuardarLista);
             this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
-            this.groupBox56.Controls.Add(this.boxMateriaAsisencia);
+            this.groupBox56.Controls.Add(this.boxMateriaAsistencia);
             this.groupBox56.Controls.Add(this.boxCursoAsistencia);
             this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
             this.groupBox56.Controls.Add(this.boxTurnoAsistencia);
@@ -5292,18 +5294,18 @@
             this.dateTimeFechaAsistencia.TabIndex = 38;
             this.dateTimeFechaAsistencia.Value = new System.DateTime(2018, 9, 21, 0, 0, 0, 0);
             // 
-            // boxMateriaAsisencia
+            // boxMateriaAsistencia
             // 
-            this.boxMateriaAsisencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxMateriaAsisencia.Enabled = false;
-            this.boxMateriaAsisencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxMateriaAsisencia.FormattingEnabled = true;
-            this.boxMateriaAsisencia.Items.AddRange(new object[] {
+            this.boxMateriaAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxMateriaAsistencia.Enabled = false;
+            this.boxMateriaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxMateriaAsistencia.FormattingEnabled = true;
+            this.boxMateriaAsistencia.Items.AddRange(new object[] {
             "Materia..."});
-            this.boxMateriaAsisencia.Location = new System.Drawing.Point(23, 162);
-            this.boxMateriaAsisencia.Name = "boxMateriaAsisencia";
-            this.boxMateriaAsisencia.Size = new System.Drawing.Size(209, 26);
-            this.boxMateriaAsisencia.TabIndex = 37;
+            this.boxMateriaAsistencia.Location = new System.Drawing.Point(23, 162);
+            this.boxMateriaAsistencia.Name = "boxMateriaAsistencia";
+            this.boxMateriaAsistencia.Size = new System.Drawing.Size(209, 26);
+            this.boxMateriaAsistencia.TabIndex = 37;
             // 
             // boxCursoAsistencia
             // 
@@ -6212,7 +6214,7 @@
         private System.Windows.Forms.TextBox txtLocalidadAlumno;
         private System.Windows.Forms.Button btnGuardarLista;
         private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia;
-        private System.Windows.Forms.ComboBox boxMateriaAsisencia;
+        private System.Windows.Forms.ComboBox boxMateriaAsistencia;
         private System.Windows.Forms.ComboBox boxTurnoAlumno;
         private System.Windows.Forms.ComboBox boxTurnoAlumno_2;
         private System.Windows.Forms.ComboBox boxTurnoAsistencia_2;

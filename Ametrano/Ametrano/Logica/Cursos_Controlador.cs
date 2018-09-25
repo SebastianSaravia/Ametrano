@@ -171,25 +171,7 @@ namespace Ametrano.Logica
                         }
                     }
                 }
-                //-------------------------------------------Calculo de viatico                
-                
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                //-------------------------------------------Fin calculo de viatico
 
 
                 //Calculo de fecha de inicio y fecha de fin
@@ -651,7 +633,7 @@ namespace Ametrano.Logica
         {
             bool resultado = false;
 
-            string query = "insert into curso values('" + curso + "','" + tipo + "');";
+            string query = "insert into curso values('" + curso + "','" + tipo + "');insert into grupo (nombre_curso,fecha_inicio,fecha_fin,turno) values('" + curso + "','0001-01-01','0001-01-01','null');update grupo set id_grupo = 0 where id_grupo =(select max(id_grupo));";
             int datosCons = objetoConexion.sqlInsertUpdate(query);
 
             if (datosCons>0)
