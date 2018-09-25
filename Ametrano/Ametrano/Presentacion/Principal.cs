@@ -250,27 +250,30 @@ namespace Ametrano.Presentacion
 
             //Lleno el array del curso
 
-            int periodoSeleccionado = boxPeriodoAlumno_2.SelectedIndex;
-            int id_grupo = 0;
-            if (periodoSeleccionado == 1)
-            {
-                id_grupo = 0;
-            }
-            else if (periodoSeleccionado > 1)
-            {
-                if (eventoClickModificarAlumnoCurso[0])
-                {
-                    DataTable datosPeriodos = eventoClickModificarAlumnoCurso[1];
-                    int.TryParse(datosPeriodos.Rows[periodoSeleccionado - 2][1].ToString(), out id_grupo);
-                }
-            }
+            
 
 
             dynamic[] retorno;
             if (type == 0)
             {//nuevo
+                int periodoSeleccionado = boxPeriodoAlumno.SelectedIndex;
+                string estadoAlumno = "En espera";
+                int id_grupo = 0;
+                if (periodoSeleccionado == 1)
+                {
+                    id_grupo = 0;
+                }
+                else if (periodoSeleccionado > 1)
+                {
+                    if (eventoClickAgregarAlumnoCurso[0])
+                    {
+                        DataTable datosPeriodos = eventoClickAgregarAlumnoCurso[1];
+                        int.TryParse(datosPeriodos.Rows[periodoSeleccionado - 2][1].ToString(), out id_grupo);
+                        estadoAlumno = boxEstadoAlumno.SelectedItem.ToString();
+                    }
+                }
                 curso[0] = boxCursoAlumno.SelectedItem.ToString();
-                curso[1] = boxEstadoAlumno.SelectedItem.ToString();
+                curso[1] = estadoAlumno;
                 curso[2] = id_grupo + "";
                 curso[3] = txtMontoViatico.Text;
                 curso[4] = boxTurnoAlumno.SelectedItem.ToString();
@@ -280,8 +283,24 @@ namespace Ametrano.Presentacion
             }
             else
             {//modificacion
+                int periodoSeleccionado = boxPeriodoAlumno_2.SelectedIndex;
+                int id_grupo = 0;
+                string estadoAlumno = "En espera";
+                if (periodoSeleccionado == 1)
+                {
+                    id_grupo = 0;
+                }
+                else if (periodoSeleccionado > 1)
+                {
+                    if (eventoClickModificarAlumnoCurso[0])
+                    {
+                        DataTable datosPeriodos = eventoClickModificarAlumnoCurso[1];
+                        int.TryParse(datosPeriodos.Rows[periodoSeleccionado - 2][1].ToString(), out id_grupo);
+                        estadoAlumno = boxEstadoAlumno_2.SelectedItem.ToString();
+                    }
+                }
                 curso[0] = boxCursoAlumno_2.SelectedItem.ToString();
-                curso[1] = boxEstadoAlumno_2.SelectedItem.ToString();
+                curso[1] = estadoAlumno;
                 curso[2] = id_grupo + "";
                 curso[3] = txtMontoViatico_2.Text;
                 curso[4] = boxTurnoAlumno_2.SelectedItem.ToString();
@@ -3177,12 +3196,20 @@ namespace Ametrano.Presentacion
             {
                 boxCursoAlumno.Enabled = false;
             }
-            string curso = boxCursoAlumno.SelectedItem.ToString();
+            string curso = "";
+            if (boxCursoAlumno.SelectedIndex > 0)
+            {
+              curso = boxCursoAlumno.SelectedItem.ToString();
+            }
             string turno = "";
             if (boxTurnoAlumno.SelectedItem != null)
             {
                 turno = boxTurnoAlumno.SelectedItem.ToString();
             }
+
+            
+
+
 
             DataTable datos = new DataTable();
             string[] periodos = CurContr.ListarPeriodos(curso, turno, out datos);
@@ -3576,18 +3603,27 @@ namespace Ametrano.Presentacion
             string curso = txtNombreCurso.Text;
             string tipo = boxTipoCurso.SelectedItem.ToString();
                       
-            string[] materias = new string[listMateriasCurso.Items.Count];
+            string[] materias = new string[listMateriasCurso.Items.Count+1];
 
             for (int i = 0; i < listMateriasCurso.Items.Count; i++)
             {
                 materias[i] = listMateriasCurso.Items[i].ToString();               
             }
+            
 
             if (materias.Length>0 && boxTipoCurso.SelectedIndex>0 && txtNombreCurso.Text != "Nombre del curso")
             {
+                materias[materias.Length-1] = "nuevo";
                 if (CurContr.AgregarCurso(curso, tipo, materias))
                 {
                     MessageBox.Show("Curso añadido satisfactoriamente");
+                    string[] listaCursos = controlador.ListarCursos();
+                    boxCursoGrupo.Items.Clear();
+                    boxCursoGrupo.Items.Add("Curso...");
+                    for(int i = 0; i < listaCursos.Length; i++)
+                    {
+                        boxCursoGrupo.Items.Add(listaCursos[i]);
+                    }
                 }
                 else
                 {

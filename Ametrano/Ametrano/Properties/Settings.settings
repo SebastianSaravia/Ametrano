@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="direccion" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">192.168.0.220</Value>
+      <Value Profile="(Default)">localhost</Value>
     </Setting>
     <Setting Name="bd" Type="System.String" Scope="Application">
       <Value Profile="(Default)">ametrano</Value>

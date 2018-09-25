@@ -633,17 +633,27 @@ namespace Ametrano.Logica
         {
             bool resultado = false;
 
-            string query = "insert into curso values('" + curso + "','" + tipo + "');insert into grupo (nombre_curso,fecha_inicio,fecha_fin,turno) values('" + curso + "','0001-01-01','0001-01-01','null');update grupo set id_grupo = 0 where id_grupo =(select max(id_grupo));";
-            int datosCons = objetoConexion.sqlInsertUpdate(query);
+            string query = "insert into curso values('" + curso + "','" + tipo + "');insert into grupo (nombre_curso,fecha_inicio,fecha_fin,turno) values('" + curso + "','0001-01-01','0001-01-01','null');";
+            int datosCons1 = objetoConexion.sqlInsertUpdate(query);
+            MySqlDataAdapter id_grupo_resultado = objetoConexion.consultarDatos("select max(id_grupo) from grupo");
+            DataTable dt = new DataTable();
+            id_grupo_resultado.Fill(dt);
+            int datosCons2 = 0;
+            if (dt.Rows.Count > 0)
+            {
+                string id_grupo = dt.Rows[0][0].ToString();
+                string update_id_grupo = "update grupo set id_grupo = 0 where id_grupo = " + id_grupo;
+                datosCons2 = objetoConexion.sqlInsertUpdate(update_id_grupo);
+            }
 
-            if (datosCons>0)
+            if (datosCons2>0)
             {
                 int[] val = new int[materias.Length];
                 for (int i = 0; i < materias.Length; i++)
                 {
                     string query2 = "insert into materia(nombre_curso, nombre_materia) values('" + curso + "','" + materias[i] + "');";
-                    int datosCons2 = objetoConexion.sqlInsertUpdate(query2);
-                    val[i] = datosCons2;
+                    int datosCons3 = objetoConexion.sqlInsertUpdate(query2);
+                    val[i] = datosCons3;
                 }
 
                 for (int i = 0; i < val.Length; i++)
