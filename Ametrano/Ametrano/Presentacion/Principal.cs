@@ -243,7 +243,7 @@ namespace Ametrano.Presentacion
         {//metodo que verifica y almacena los datos del curso en datosalumno
          //type=0 ->nuevo
          //type=1 ->modificacion
-            string[] curso = new string[4];//Array que almacena los datos de contacto del alumno
+            string[] curso = new string[5];//Array que almacena los datos de contacto del alumno
 
             //Lleno el array del curso
             
@@ -255,6 +255,8 @@ namespace Ametrano.Presentacion
                 curso[1] = boxEstadoAlumno.SelectedItem.ToString();
                 curso[2] = boxPeriodoAlumno.SelectedItem.ToString();
                 curso[3] = txtMontoViatico.Text;
+                curso[4] = boxTurnoAlumno.SelectedItem.ToString();
+
 
                 retorno = datosAlumno.setCurso(curso); //Verifico los datos
             }
@@ -264,6 +266,7 @@ namespace Ametrano.Presentacion
                 curso[1] = boxEstadoAlumno_2.SelectedItem.ToString();
                 curso[2] = boxPeriodoAlumno_2.SelectedItem.ToString();
                 curso[3] = txtMontoViatico_2.Text;
+                curso[4] = boxTurnoAlumno_2.SelectedItem.ToString();
 
                 retorno = datosAlumnoModificacion.setCurso(curso); //Verifico los datos
 
@@ -1425,8 +1428,13 @@ namespace Ametrano.Presentacion
                 //boxTurnoAlumno_2.SelectedItem = 
                 boxEstadoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_estado"];
                 txtMontoViatico_2.Text = datosAlumnoDiccionario["curso_monto_viatico"];
-                boxTurnoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_monto_viatico"];
+                boxTurnoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_turno"];
+                boxCursoAlumno_2.SelectedItem = datosAlumnoDiccionario["curso_alumno"];
+                DataTable dt = new DataTable();
 
+                
+
+                //Falta seleccionar el periodo al que asiste el alumno
 
                 //DatosPersonales
 
@@ -1936,6 +1944,7 @@ namespace Ametrano.Presentacion
                 lblCursoAlumno_2.Text = "Curso: " + datosAlumnoDiccionario["curso_alumno"];
                 lblEstadoAlumno_2.Text = "Estado: " + datosAlumnoDiccionario["curso_estado"];
                 lblMontoViaticoAlumno_2.Text = "Monto de viatico: $" + datosAlumnoDiccionario["curso_monto_viatico"];
+
 
                 //Datos Personales
 

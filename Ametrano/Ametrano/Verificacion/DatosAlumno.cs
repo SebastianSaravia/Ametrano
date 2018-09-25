@@ -9,7 +9,7 @@ namespace Ametrano.Encapsulado
     class DatosAlumno
     {
         private string[] datosPersonales = new string[9];//
-        private string[] datosCurso = new string[4];//
+        private string[] datosCurso = new string[5];//
         private string[] formacionAcademica = new string[2];//
         private string[] direccion = new string[6];//
         private string[] contacto = new string[3];
@@ -56,14 +56,16 @@ namespace Ametrano.Encapsulado
             /*Explicacion de datosCursos
              * datosCurso[0] = -> curso
              * datosCurso[1] = -> estado
-             * datosCurso[2] = -> periodo
+             * datosCurso[2] = -> id_grupo
              * datosCurso[3] = -> viatico por dia asistido
+             * datosCurso[4] = -> turno
              */
 
             datosCurso[0] = datosCursoRecibidos[0];
             datosCurso[1] = datosCursoRecibidos[1];
             datosCurso[2] = datosCursoRecibidos[2];
             datosCurso[3] = datosCursoRecibidos[3];
+            datosCurso[4] = datosCursoRecibidos[4];
 
 
             dynamic[] datosParaRetornar = new dynamic[2];
@@ -306,8 +308,10 @@ namespace Ametrano.Encapsulado
            
             diccionarioPersona.Add("curso_alumno", datosCurso[0]);
             diccionarioPersona.Add("curso_estado", datosCurso[1]);
-            diccionarioPersona.Add("curso_periodo", datosCurso[2]);
+            diccionarioPersona.Add("curso_id_grupo", datosCurso[2]);
             diccionarioPersona.Add("curso_monto_viatico", datosCurso[3]);
+            diccionarioPersona.Add("curso_turno", datosCurso[4]);
+
 
             //Formacion academica
 
@@ -373,7 +377,7 @@ namespace Ametrano.Encapsulado
             bool errores = false;
 
             string[] datosPersonales_paraInsertar = new string[9];
-            string[] datosCurso_paraInsertar = new string[4];
+            string[] datosCurso_paraInsertar = new string[5];
             string[] formacionAcademica_paraInsertar = new string[2];
             string[] direccion_paraInsertar = new string[6];
             string[] contacto_paraInsertar = new string[3];
@@ -410,7 +414,8 @@ namespace Ametrano.Encapsulado
             diccionario.TryGetValue("nombre_curso", out datosCurso_paraInsertar[0]);
             diccionario.TryGetValue("estado", out datosCurso_paraInsertar[1]);
             diccionario.TryGetValue("monto_viatico_por_dia", out datosCurso_paraInsertar[3]);
-            datosCurso_paraInsertar[2] = "Periodo proximamente a implementar";
+            diccionario.TryGetValue("id_grupo", out datosCurso_paraInsertar[2]);
+            diccionario.TryGetValue("turno", out datosCurso_paraInsertar[4]);
 
             dynamic[] datosCursoFeedback = setCurso(datosCurso_paraInsertar);
 
