@@ -364,14 +364,14 @@ namespace Ametrano.Logica
         {
             int diasAsistidosEnSemana = 0;
 
-            string consultarAsistencias = "select count(cedula_alumno) from asiste a where fecha between '" + fecha_inicio + "' and '" + fecha_fin + "' and cedula_alumno = '" + cedula + "' and a.asistencia = 1;";
+            string consultarAsistencias = "select cedula_alumno from asiste a where cedula_alumno = '"+cedula+"' and fecha between '"+fecha_inicio+"' and '"+fecha_fin+"' and a.asistencia = 1 group by (fecha)";
             MySqlDataAdapter consultarAsistencias_resultado = objetoConexion.consultarDatos(consultarAsistencias);
 
             DataTable consultarAsistencias_table = new DataTable();
 
             consultarAsistencias_resultado.Fill(consultarAsistencias_table);
 
-            int.TryParse(consultarAsistencias_table.Rows[0][consultarAsistencias_table.Columns[0]].ToString(),out diasAsistidosEnSemana);
+            diasAsistidosEnSemana = consultarAsistencias_table.Rows.Count;
 
             double montoTotal = montoDia * diasAsistidosEnSemana; //Calculo el monto
 
