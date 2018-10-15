@@ -1418,7 +1418,7 @@
             this.tabControlIngresarAlumno.Name = "tabControlIngresarAlumno";
             this.tabControlIngresarAlumno.SelectedIndex = 0;
             this.tabControlIngresarAlumno.Size = new System.Drawing.Size(1091, 515);
-            this.tabControlIngresarAlumno.TabIndex = 11;
+            this.tabControlIngresarAlumno.TabIndex = 48;
             // 
             // tabPageIngresarAlumnoDatosPersonales
             // 
@@ -1462,7 +1462,7 @@
             this.boxTurnoAlumno.Location = new System.Drawing.Point(46, 27);
             this.boxTurnoAlumno.Name = "boxTurnoAlumno";
             this.boxTurnoAlumno.Size = new System.Drawing.Size(159, 23);
-            this.boxTurnoAlumno.TabIndex = 29;
+            this.boxTurnoAlumno.TabIndex = 1;
             this.boxTurnoAlumno.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAlumno_SelectedIndexChanged);
             // 
             // txtMontoViatico
@@ -1473,7 +1473,7 @@
             this.txtMontoViatico.MaxLength = 4;
             this.txtMontoViatico.Name = "txtMontoViatico";
             this.txtMontoViatico.Size = new System.Drawing.Size(159, 24);
-            this.txtMontoViatico.TabIndex = 28;
+            this.txtMontoViatico.TabIndex = 5;
             this.txtMontoViatico.Text = "Viatico por dia asistido";
             this.txtMontoViatico.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtMontoViatico.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -1489,7 +1489,7 @@
             this.boxPeriodoAlumno.Location = new System.Drawing.Point(403, 26);
             this.boxPeriodoAlumno.Name = "boxPeriodoAlumno";
             this.boxPeriodoAlumno.Size = new System.Drawing.Size(216, 23);
-            this.boxPeriodoAlumno.TabIndex = 27;
+            this.boxPeriodoAlumno.TabIndex = 3;
             this.boxPeriodoAlumno.SelectedIndexChanged += new System.EventHandler(this.boxPeriodoAlumno_SelectedIndexChanged);
             // 
             // boxEstadoAlumno
@@ -1507,7 +1507,7 @@
             this.boxEstadoAlumno.Location = new System.Drawing.Point(638, 26);
             this.boxEstadoAlumno.Name = "boxEstadoAlumno";
             this.boxEstadoAlumno.Size = new System.Drawing.Size(159, 23);
-            this.boxEstadoAlumno.TabIndex = 27;
+            this.boxEstadoAlumno.TabIndex = 4;
             // 
             // boxCursoAlumno
             // 
@@ -1519,7 +1519,7 @@
             this.boxCursoAlumno.Location = new System.Drawing.Point(224, 26);
             this.boxCursoAlumno.Name = "boxCursoAlumno";
             this.boxCursoAlumno.Size = new System.Drawing.Size(159, 23);
-            this.boxCursoAlumno.TabIndex = 26;
+            this.boxCursoAlumno.TabIndex = 2;
             this.boxCursoAlumno.SelectedIndexChanged += new System.EventHandler(this.boxCursoAlumno_SelectedIndexChanged);
             // 
             // btnSiguiente
@@ -1528,7 +1528,7 @@
             this.btnSiguiente.Location = new System.Drawing.Point(931, 444);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(144, 36);
-            this.btnSiguiente.TabIndex = 4;
+            this.btnSiguiente.TabIndex = 26;
             this.btnSiguiente.Text = "Siguiente";
             this.btnSiguiente.UseVisualStyleBackColor = true;
             this.btnSiguiente.Click += new System.EventHandler(this.btnSiguiente_Click);
@@ -1552,7 +1552,7 @@
             this.txtEmailAlumno.Location = new System.Drawing.Point(34, 125);
             this.txtEmailAlumno.Name = "txtEmailAlumno";
             this.txtEmailAlumno.Size = new System.Drawing.Size(159, 24);
-            this.txtEmailAlumno.TabIndex = 14;
+            this.txtEmailAlumno.TabIndex = 23;
             this.txtEmailAlumno.Text = "Email";
             this.txtEmailAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtEmailAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1565,7 +1565,7 @@
             this.txtCelularAlumno.MaxLength = 9;
             this.txtCelularAlumno.Name = "txtCelularAlumno";
             this.txtCelularAlumno.Size = new System.Drawing.Size(159, 24);
-            this.txtCelularAlumno.TabIndex = 13;
+            this.txtCelularAlumno.TabIndex = 22;
             this.txtCelularAlumno.Text = "Celular";
             this.txtCelularAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCelularAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -1579,7 +1579,7 @@
             this.txtTelefonoAlumno.MaxLength = 8;
             this.txtTelefonoAlumno.Name = "txtTelefonoAlumno";
             this.txtTelefonoAlumno.Size = new System.Drawing.Size(159, 24);
-            this.txtTelefonoAlumno.TabIndex = 12;
+            this.txtTelefonoAlumno.TabIndex = 21;
             this.txtTelefonoAlumno.Text = "Telefono";
             this.txtTelefonoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtTelefonoAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -1607,7 +1607,7 @@
             this.txtLocalidadAlumno.Location = new System.Drawing.Point(199, 37);
             this.txtLocalidadAlumno.Name = "txtLocalidadAlumno";
             this.txtLocalidadAlumno.Size = new System.Drawing.Size(167, 24);
-            this.txtLocalidadAlumno.TabIndex = 25;
+            this.txtLocalidadAlumno.TabIndex = 16;
             this.txtLocalidadAlumno.Text = "Localidad";
             this.txtLocalidadAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtLocalidadAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1619,7 +1619,7 @@
             this.txtCalleAlumno.Location = new System.Drawing.Point(24, 74);
             this.txtCalleAlumno.Name = "txtCalleAlumno";
             this.txtCalleAlumno.Size = new System.Drawing.Size(167, 24);
-            this.txtCalleAlumno.TabIndex = 12;
+            this.txtCalleAlumno.TabIndex = 17;
             this.txtCalleAlumno.Text = "Calle";
             this.txtCalleAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCalleAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1652,7 +1652,7 @@
             this.boxDepartamentoAlumno.Location = new System.Drawing.Point(24, 37);
             this.boxDepartamentoAlumno.Name = "boxDepartamentoAlumno";
             this.boxDepartamentoAlumno.Size = new System.Drawing.Size(167, 26);
-            this.boxDepartamentoAlumno.TabIndex = 21;
+            this.boxDepartamentoAlumno.TabIndex = 15;
             // 
             // txtReferenciaAlumno
             // 
@@ -1661,7 +1661,7 @@
             this.txtReferenciaAlumno.Location = new System.Drawing.Point(199, 74);
             this.txtReferenciaAlumno.Name = "txtReferenciaAlumno";
             this.txtReferenciaAlumno.Size = new System.Drawing.Size(167, 24);
-            this.txtReferenciaAlumno.TabIndex = 24;
+            this.txtReferenciaAlumno.TabIndex = 18;
             this.txtReferenciaAlumno.Text = "Referencia";
             this.txtReferenciaAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtReferenciaAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1674,7 +1674,7 @@
             this.txtNumeroPuertaAlumno.MaxLength = 6;
             this.txtNumeroPuertaAlumno.Name = "txtNumeroPuertaAlumno";
             this.txtNumeroPuertaAlumno.Size = new System.Drawing.Size(167, 24);
-            this.txtNumeroPuertaAlumno.TabIndex = 22;
+            this.txtNumeroPuertaAlumno.TabIndex = 19;
             this.txtNumeroPuertaAlumno.Text = "Número de puerta";
             this.txtNumeroPuertaAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNumeroPuertaAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1687,7 +1687,7 @@
             this.txtNumeroApartamentoAlumno.MaxLength = 4;
             this.txtNumeroApartamentoAlumno.Name = "txtNumeroApartamentoAlumno";
             this.txtNumeroApartamentoAlumno.Size = new System.Drawing.Size(167, 24);
-            this.txtNumeroApartamentoAlumno.TabIndex = 23;
+            this.txtNumeroApartamentoAlumno.TabIndex = 20;
             this.txtNumeroApartamentoAlumno.Text = "Número de apartamento";
             this.txtNumeroApartamentoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNumeroApartamentoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1715,7 +1715,7 @@
             this.boxNivelEducativo.Location = new System.Drawing.Point(32, 43);
             this.boxNivelEducativo.Name = "boxNivelEducativo";
             this.boxNivelEducativo.Size = new System.Drawing.Size(159, 26);
-            this.boxNivelEducativo.TabIndex = 22;
+            this.boxNivelEducativo.TabIndex = 24;
             // 
             // txtUltAñoAprobado
             // 
@@ -1724,7 +1724,7 @@
             this.txtUltAñoAprobado.Location = new System.Drawing.Point(207, 43);
             this.txtUltAñoAprobado.Name = "txtUltAñoAprobado";
             this.txtUltAñoAprobado.Size = new System.Drawing.Size(159, 24);
-            this.txtUltAñoAprobado.TabIndex = 14;
+            this.txtUltAñoAprobado.TabIndex = 25;
             this.txtUltAñoAprobado.Text = "Ultimo año aprobado";
             this.txtUltAñoAprobado.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtUltAñoAprobado.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1755,7 +1755,7 @@
             this.maskedTxtFechaNacimientoAlumno.Location = new System.Drawing.Point(24, 150);
             this.maskedTxtFechaNacimientoAlumno.Name = "maskedTxtFechaNacimientoAlumno";
             this.maskedTxtFechaNacimientoAlumno.Size = new System.Drawing.Size(151, 24);
-            this.maskedTxtFechaNacimientoAlumno.TabIndex = 23;
+            this.maskedTxtFechaNacimientoAlumno.TabIndex = 11;
             this.maskedTxtFechaNacimientoAlumno.Text = "Fecha de nacimiento";
             this.maskedTxtFechaNacimientoAlumno.TextChanged += new System.EventHandler(this.maskedTxtFechaNacimientoAlumno_TextChanged);
             this.maskedTxtFechaNacimientoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
@@ -1770,7 +1770,7 @@
             this.txtEdadAlumno.MaxLength = 3;
             this.txtEdadAlumno.Name = "txtEdadAlumno";
             this.txtEdadAlumno.Size = new System.Drawing.Size(167, 24);
-            this.txtEdadAlumno.TabIndex = 22;
+            this.txtEdadAlumno.TabIndex = 12;
             this.txtEdadAlumno.Text = "Edad";
             this.txtEdadAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtEdadAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -1791,7 +1791,7 @@
             this.boxEstadoCivilAlumno.Location = new System.Drawing.Point(198, 187);
             this.boxEstadoCivilAlumno.Name = "boxEstadoCivilAlumno";
             this.boxEstadoCivilAlumno.Size = new System.Drawing.Size(167, 26);
-            this.boxEstadoCivilAlumno.TabIndex = 21;
+            this.boxEstadoCivilAlumno.TabIndex = 14;
             // 
             // TimePickerFechaNacAlumnoNuevo
             // 
@@ -1819,7 +1819,7 @@
             this.boxSexoAlumno.Location = new System.Drawing.Point(24, 187);
             this.boxSexoAlumno.Name = "boxSexoAlumno";
             this.boxSexoAlumno.Size = new System.Drawing.Size(167, 26);
-            this.boxSexoAlumno.TabIndex = 20;
+            this.boxSexoAlumno.TabIndex = 13;
             // 
             // txtApellido2Alumno
             // 
@@ -1828,7 +1828,7 @@
             this.txtApellido2Alumno.Location = new System.Drawing.Point(198, 112);
             this.txtApellido2Alumno.Name = "txtApellido2Alumno";
             this.txtApellido2Alumno.Size = new System.Drawing.Size(167, 24);
-            this.txtApellido2Alumno.TabIndex = 14;
+            this.txtApellido2Alumno.TabIndex = 10;
             this.txtApellido2Alumno.Text = "Segundo apellido";
             this.txtApellido2Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido2Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -1842,7 +1842,7 @@
             this.txtApellido1Alumno.MaxLength = 255;
             this.txtApellido1Alumno.Name = "txtApellido1Alumno";
             this.txtApellido1Alumno.Size = new System.Drawing.Size(167, 24);
-            this.txtApellido1Alumno.TabIndex = 13;
+            this.txtApellido1Alumno.TabIndex = 9;
             this.txtApellido1Alumno.Text = "Primer apellido";
             this.txtApellido1Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido1Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -1855,7 +1855,7 @@
             this.txtNombre2Alumno.Location = new System.Drawing.Point(198, 74);
             this.txtNombre2Alumno.Name = "txtNombre2Alumno";
             this.txtNombre2Alumno.Size = new System.Drawing.Size(167, 24);
-            this.txtNombre2Alumno.TabIndex = 12;
+            this.txtNombre2Alumno.TabIndex = 8;
             this.txtNombre2Alumno.Text = "Segundo nombre";
             this.txtNombre2Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre2Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -1868,7 +1868,7 @@
             this.txtNombre1Alumno.Location = new System.Drawing.Point(24, 74);
             this.txtNombre1Alumno.Name = "txtNombre1Alumno";
             this.txtNombre1Alumno.Size = new System.Drawing.Size(167, 24);
-            this.txtNombre1Alumno.TabIndex = 11;
+            this.txtNombre1Alumno.TabIndex = 7;
             this.txtNombre1Alumno.Text = "Primer nombre";
             this.txtNombre1Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre1Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -1882,7 +1882,7 @@
             this.txtCedulaAlumno.MaxLength = 8;
             this.txtCedulaAlumno.Name = "txtCedulaAlumno";
             this.txtCedulaAlumno.Size = new System.Drawing.Size(123, 24);
-            this.txtCedulaAlumno.TabIndex = 10;
+            this.txtCedulaAlumno.TabIndex = 6;
             this.txtCedulaAlumno.Text = "Cedula";
             this.txtCedulaAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCedulaAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -1922,7 +1922,7 @@
             this.txtCoberuraSaludAlumno.Location = new System.Drawing.Point(18, 33);
             this.txtCoberuraSaludAlumno.Name = "txtCoberuraSaludAlumno";
             this.txtCoberuraSaludAlumno.Size = new System.Drawing.Size(404, 24);
-            this.txtCoberuraSaludAlumno.TabIndex = 29;
+            this.txtCoberuraSaludAlumno.TabIndex = 45;
             this.txtCoberuraSaludAlumno.Text = "Cobertura de salud";
             this.txtCoberuraSaludAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCoberuraSaludAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1949,7 +1949,7 @@
             this.boxJefeHogarAlumno.Location = new System.Drawing.Point(8, 30);
             this.boxJefeHogarAlumno.Name = "boxJefeHogarAlumno";
             this.boxJefeHogarAlumno.Size = new System.Drawing.Size(158, 23);
-            this.boxJefeHogarAlumno.TabIndex = 28;
+            this.boxJefeHogarAlumno.TabIndex = 35;
             // 
             // boxCantidadHijosAlumno
             // 
@@ -1971,7 +1971,7 @@
             this.boxCantidadHijosAlumno.Location = new System.Drawing.Point(172, 31);
             this.boxCantidadHijosAlumno.Name = "boxCantidadHijosAlumno";
             this.boxCantidadHijosAlumno.Size = new System.Drawing.Size(193, 23);
-            this.boxCantidadHijosAlumno.TabIndex = 27;
+            this.boxCantidadHijosAlumno.TabIndex = 36;
             // 
             // groupBox18
             // 
@@ -1997,7 +1997,7 @@
             this.txtExperienciaInstitucionesCuidadoAlumno.Location = new System.Drawing.Point(263, 83);
             this.txtExperienciaInstitucionesCuidadoAlumno.Name = "txtExperienciaInstitucionesCuidadoAlumno";
             this.txtExperienciaInstitucionesCuidadoAlumno.Size = new System.Drawing.Size(274, 24);
-            this.txtExperienciaInstitucionesCuidadoAlumno.TabIndex = 31;
+            this.txtExperienciaInstitucionesCuidadoAlumno.TabIndex = 44;
             this.txtExperienciaInstitucionesCuidadoAlumno.Text = "Experiencia en instituciones de cuidado";
             this.txtExperienciaInstitucionesCuidadoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtExperienciaInstitucionesCuidadoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -2013,7 +2013,7 @@
             this.boxTrabajoCuidandoAlumno.Location = new System.Drawing.Point(19, 85);
             this.boxTrabajoCuidandoAlumno.Name = "boxTrabajoCuidandoAlumno";
             this.boxTrabajoCuidandoAlumno.Size = new System.Drawing.Size(238, 23);
-            this.boxTrabajoCuidandoAlumno.TabIndex = 30;
+            this.boxTrabajoCuidandoAlumno.TabIndex = 43;
             // 
             // boxCuentaConApoyoAlumno
             // 
@@ -2026,7 +2026,7 @@
             this.boxCuentaConApoyoAlumno.Location = new System.Drawing.Point(184, 56);
             this.boxCuentaConApoyoAlumno.Name = "boxCuentaConApoyoAlumno";
             this.boxCuentaConApoyoAlumno.Size = new System.Drawing.Size(159, 23);
-            this.boxCuentaConApoyoAlumno.TabIndex = 29;
+            this.boxCuentaConApoyoAlumno.TabIndex = 1;
             // 
             // boxPersonaDiscapacidadAlumno
             // 
@@ -2039,7 +2039,7 @@
             this.boxPersonaDiscapacidadAlumno.Location = new System.Drawing.Point(19, 56);
             this.boxPersonaDiscapacidadAlumno.Name = "boxPersonaDiscapacidadAlumno";
             this.boxPersonaDiscapacidadAlumno.Size = new System.Drawing.Size(159, 23);
-            this.boxPersonaDiscapacidadAlumno.TabIndex = 29;
+            this.boxPersonaDiscapacidadAlumno.TabIndex = 40;
             // 
             // txtCargaSemanalCuidadoAlumno
             // 
@@ -2048,7 +2048,7 @@
             this.txtCargaSemanalCuidadoAlumno.Location = new System.Drawing.Point(349, 55);
             this.txtCargaSemanalCuidadoAlumno.Name = "txtCargaSemanalCuidadoAlumno";
             this.txtCargaSemanalCuidadoAlumno.Size = new System.Drawing.Size(188, 24);
-            this.txtCargaSemanalCuidadoAlumno.TabIndex = 27;
+            this.txtCargaSemanalCuidadoAlumno.TabIndex = 42;
             this.txtCargaSemanalCuidadoAlumno.Text = "Carga semanal de cuidado";
             this.txtCargaSemanalCuidadoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCargaSemanalCuidadoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -2060,7 +2060,7 @@
             this.txt60oMasAlumno.Location = new System.Drawing.Point(263, 26);
             this.txt60oMasAlumno.Name = "txt60oMasAlumno";
             this.txt60oMasAlumno.Size = new System.Drawing.Size(116, 24);
-            this.txt60oMasAlumno.TabIndex = 28;
+            this.txt60oMasAlumno.TabIndex = 39;
             this.txt60oMasAlumno.Text = "De 60 o mas";
             this.txt60oMasAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txt60oMasAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -2073,7 +2073,7 @@
             this.txt18a59Alumno.Location = new System.Drawing.Point(141, 26);
             this.txt18a59Alumno.Name = "txt18a59Alumno";
             this.txt18a59Alumno.Size = new System.Drawing.Size(116, 24);
-            this.txt18a59Alumno.TabIndex = 28;
+            this.txt18a59Alumno.TabIndex = 38;
             this.txt18a59Alumno.Text = "De 18 a 59 años";
             this.txt18a59Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txt18a59Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -2086,7 +2086,7 @@
             this.txt0a17Alumno.Location = new System.Drawing.Point(19, 26);
             this.txt0a17Alumno.Name = "txt0a17Alumno";
             this.txt0a17Alumno.Size = new System.Drawing.Size(116, 24);
-            this.txt0a17Alumno.TabIndex = 28;
+            this.txt0a17Alumno.TabIndex = 37;
             this.txt0a17Alumno.Text = "De 0 a 17 años";
             this.txt0a17Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txt0a17Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -2111,7 +2111,7 @@
             this.txtMedioAccesoInternetAlumno.Location = new System.Drawing.Point(414, 30);
             this.txtMedioAccesoInternetAlumno.Name = "txtMedioAccesoInternetAlumno";
             this.txtMedioAccesoInternetAlumno.Size = new System.Drawing.Size(193, 24);
-            this.txtMedioAccesoInternetAlumno.TabIndex = 29;
+            this.txtMedioAccesoInternetAlumno.TabIndex = 34;
             this.txtMedioAccesoInternetAlumno.Text = "Medio de acceso a internet";
             this.txtMedioAccesoInternetAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtMedioAccesoInternetAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -2127,7 +2127,7 @@
             this.boxFacilAccesoInternetAlumno.Location = new System.Drawing.Point(215, 30);
             this.boxFacilAccesoInternetAlumno.Name = "boxFacilAccesoInternetAlumno";
             this.boxFacilAccesoInternetAlumno.Size = new System.Drawing.Size(193, 23);
-            this.boxFacilAccesoInternetAlumno.TabIndex = 28;
+            this.boxFacilAccesoInternetAlumno.TabIndex = 33;
             // 
             // boxUsaInternetAlumno
             // 
@@ -2140,7 +2140,7 @@
             this.boxUsaInternetAlumno.Location = new System.Drawing.Point(16, 30);
             this.boxUsaInternetAlumno.Name = "boxUsaInternetAlumno";
             this.boxUsaInternetAlumno.Size = new System.Drawing.Size(193, 23);
-            this.boxUsaInternetAlumno.TabIndex = 27;
+            this.boxUsaInternetAlumno.TabIndex = 32;
             // 
             // groupBox16
             // 
@@ -2163,7 +2163,7 @@
             this.txtIngresoMensualAlumno.Location = new System.Drawing.Point(816, 29);
             this.txtIngresoMensualAlumno.Name = "txtIngresoMensualAlumno";
             this.txtIngresoMensualAlumno.Size = new System.Drawing.Size(176, 24);
-            this.txtIngresoMensualAlumno.TabIndex = 28;
+            this.txtIngresoMensualAlumno.TabIndex = 31;
             this.txtIngresoMensualAlumno.Text = "Ingreso mensual";
             this.txtIngresoMensualAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtIngresoMensualAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -2175,7 +2175,7 @@
             this.txtHorasJornadaAlumno.Location = new System.Drawing.Point(617, 29);
             this.txtHorasJornadaAlumno.Name = "txtHorasJornadaAlumno";
             this.txtHorasJornadaAlumno.Size = new System.Drawing.Size(176, 24);
-            this.txtHorasJornadaAlumno.TabIndex = 28;
+            this.txtHorasJornadaAlumno.TabIndex = 30;
             this.txtHorasJornadaAlumno.Text = "Horas de jornada";
             this.txtHorasJornadaAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtHorasJornadaAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -2188,7 +2188,7 @@
             this.txtTiempoDesempleadoAlumno.Location = new System.Drawing.Point(419, 29);
             this.txtTiempoDesempleadoAlumno.Name = "txtTiempoDesempleadoAlumno";
             this.txtTiempoDesempleadoAlumno.Size = new System.Drawing.Size(176, 24);
-            this.txtTiempoDesempleadoAlumno.TabIndex = 27;
+            this.txtTiempoDesempleadoAlumno.TabIndex = 29;
             this.txtTiempoDesempleadoAlumno.Text = "Tiempo desempleado";
             this.txtTiempoDesempleadoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtTiempoDesempleadoAlumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -2204,7 +2204,7 @@
             this.boxTrabajoAlgunaVezAlumno.Location = new System.Drawing.Point(19, 29);
             this.boxTrabajoAlgunaVezAlumno.Name = "boxTrabajoAlgunaVezAlumno";
             this.boxTrabajoAlgunaVezAlumno.Size = new System.Drawing.Size(176, 23);
-            this.boxTrabajoAlgunaVezAlumno.TabIndex = 25;
+            this.boxTrabajoAlgunaVezAlumno.TabIndex = 27;
             // 
             // boxTrabajaActualmenteAlumno
             // 
@@ -2217,7 +2217,7 @@
             this.boxTrabajaActualmenteAlumno.Location = new System.Drawing.Point(221, 29);
             this.boxTrabajaActualmenteAlumno.Name = "boxTrabajaActualmenteAlumno";
             this.boxTrabajaActualmenteAlumno.Size = new System.Drawing.Size(176, 23);
-            this.boxTrabajaActualmenteAlumno.TabIndex = 26;
+            this.boxTrabajaActualmenteAlumno.TabIndex = 28;
             // 
             // btnAtras
             // 
@@ -2225,7 +2225,7 @@
             this.btnAtras.Location = new System.Drawing.Point(781, 444);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(144, 36);
-            this.btnAtras.TabIndex = 15;
+            this.btnAtras.TabIndex = 47;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.button5_Click);
@@ -2236,7 +2236,7 @@
             this.btnSiguinete_2.Location = new System.Drawing.Point(931, 444);
             this.btnSiguinete_2.Name = "btnSiguinete_2";
             this.btnSiguinete_2.Size = new System.Drawing.Size(144, 36);
-            this.btnSiguinete_2.TabIndex = 14;
+            this.btnSiguinete_2.TabIndex = 46;
             this.btnSiguinete_2.Text = "Siguiente";
             this.btnSiguinete_2.UseVisualStyleBackColor = true;
             this.btnSiguinete_2.Click += new System.EventHandler(this.btnSiguinete2_Click);
@@ -2818,7 +2818,7 @@
             this.btnAtras_2.Location = new System.Drawing.Point(781, 448);
             this.btnAtras_2.Name = "btnAtras_2";
             this.btnAtras_2.Size = new System.Drawing.Size(144, 36);
-            this.btnAtras_2.TabIndex = 16;
+            this.btnAtras_2.TabIndex = 49;
             this.btnAtras_2.Text = "Atras";
             this.btnAtras_2.UseVisualStyleBackColor = true;
             this.btnAtras_2.Click += new System.EventHandler(this.button6_Click);
