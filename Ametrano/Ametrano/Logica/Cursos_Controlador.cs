@@ -59,7 +59,7 @@ namespace Ametrano.Logica
         {
             
 
-            string query = "SELECT CONCAT(a.nombre1,' ',a.apellido1), a.cedula_alumno FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+ "' and asi.fecha = '0001-01-01' GROUP BY a.cedula_alumno;";
+            string query = "SELECT CONCAT(a.apellido1,' ',a.nombre1), a.cedula_alumno FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+ "' and asi.fecha = '0001-01-01' GROUP BY a.cedula_alumno order by (CONCAT(a.apellido1,' ',a.nombre1)) asc;";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
@@ -433,6 +433,7 @@ namespace Ametrano.Logica
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
 
+
             return dataTable;
             
         }
@@ -617,7 +618,7 @@ namespace Ametrano.Logica
 
             int.TryParse(query1_buscar_curso_table.Rows[0][0].ToString(), out id_grupo);
 
-            string query2_buscar_Asistencia_Alumnos = "SELECT CONCAT(a.nombre1,' ',a.apellido1) as Nombre, asi.asistencia as Asistencias FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno where asi.id_grupo = '"+id_grupo+"' and asi.nombre_curso = '"+curso+"' and asi.nombre_materia = '"+materia+"' and asi.fecha = '"+fecha+"'";
+            string query2_buscar_Asistencia_Alumnos = "SELECT CONCAT(a.apellido1,' ',a.nombre1) as Nombre, asi.asistencia as Asistencias FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno where asi.id_grupo = '"+id_grupo+"' and asi.nombre_curso = '"+curso+"' and asi.nombre_materia = '"+materia+"' and asi.fecha = '"+fecha+ "' order by(CONCAT(a.apellido1,' ',a.nombre1))";
 
             MySqlDataAdapter query2_buscar_Asistencia_Alumnos_resultados = objetoConexion.consultarDatos(query2_buscar_Asistencia_Alumnos);
 

@@ -1786,7 +1786,8 @@
             "Divorciado/a",
             "Comprometido/a",
             "Soltero/a",
-            "Viudo/a"});
+            "Viudo/a",
+            "Concubinato"});
             this.boxEstadoCivilAlumno.Location = new System.Drawing.Point(198, 187);
             this.boxEstadoCivilAlumno.Name = "boxEstadoCivilAlumno";
             this.boxEstadoCivilAlumno.Size = new System.Drawing.Size(167, 26);
@@ -5645,9 +5646,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
