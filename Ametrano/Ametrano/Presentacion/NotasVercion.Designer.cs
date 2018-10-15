@@ -107,7 +107,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Versión: 1.0.0.4";
+            this.label4.Text = "Versión: 1.0.0.5";
             // 
             // NotasVersion
             // 
