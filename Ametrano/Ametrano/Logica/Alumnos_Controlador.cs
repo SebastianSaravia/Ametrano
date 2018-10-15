@@ -32,7 +32,7 @@ namespace Ametrano.Logica
                                      "'" + datos.getDatosPersona()["estado_civil"] + "',";
             // query datos con respeco al curso
             string datosCurso = "'" + datos.getDatosPersona()["curso_estado"] + "'," + 
-                                "" + datos.getDatosPersona()["curso_monto_viatico"] + ",";
+                                "'" + datos.getDatosPersona()["curso_monto_viatico"] + "',";
             //query formacion academica
             string datosFormacionAcademica = "'" + datos.getDatosPersona()["formacion_nivel"] + "'," +
                                              "'" + datos.getDatosPersona()["formacion_ultimo_año_aprovado"] + "',";
@@ -264,11 +264,6 @@ namespace Ametrano.Logica
                 }
             }
             
-            
-           
-            
-           
-            
             return resultado;
         }
 
@@ -282,9 +277,7 @@ namespace Ametrano.Logica
             if (dt.Rows.Count > 0)
             {
                 int.TryParse(dt.Rows[0][0].ToString(), out id_grupo);
-            }
-
-            
+            }            
             string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin)) from grupo WHERE id_grupo='"+id_grupo+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
@@ -295,19 +288,11 @@ namespace Ametrano.Logica
             {
                 foreach (DataRow row in dataTable.Rows)
                 {
-
-                    periodo = row[0].ToString();
-                  
+                    periodo = row[0].ToString();                  
                 }
-
             }
             return periodo;
         }
-
-
-
-
-
-
+        
     }//Fin class
 }//Fin namespace

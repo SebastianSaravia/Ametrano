@@ -275,8 +275,16 @@ namespace Ametrano.Presentacion
                 curso[0] = boxCursoAlumno.SelectedItem.ToString();
                 curso[1] = estadoAlumno;
                 curso[2] = id_grupo + "";
-                curso[3] = txtMontoViatico.Text;
+                if (txtMontoViatico.Text == controlador.mapTextBox[txtMontoViatico.GetHashCode().ToString()])
+                {
+                    curso[3] = "0";
+                }else
+                {
+                    curso[3] = txtMontoViatico.Text;
+                }
                 curso[4] = boxTurnoAlumno.SelectedItem.ToString();
+
+                
 
 
                 retorno = datosAlumno.setCurso(curso); //Verifico los datos
@@ -301,8 +309,17 @@ namespace Ametrano.Presentacion
                 }
                 curso[0] = boxCursoAlumno_2.SelectedItem.ToString();
                 curso[1] = estadoAlumno;
-                curso[2] = id_grupo + "";
-                curso[3] = txtMontoViatico_2.Text;
+                curso[2] = id_grupo + "0";
+
+                if (txtMontoViatico_2.Text == controlador.mapTextBox[txtMontoViatico_2.GetHashCode().ToString()])
+                {
+                    curso[3] = "";
+                }
+                else
+                {
+                    curso[3] = txtMontoViatico_2.Text;
+                }
+                
                 curso[4] = boxTurnoAlumno_2.SelectedItem.ToString();
 
                 retorno = datosAlumnoModificacion.setCurso(curso); //Verifico los datos
@@ -3791,6 +3808,12 @@ namespace Ametrano.Presentacion
             int edad = controlador.buscarEdad(nacimiento.ToString("yyyy-MM-dd"));
 
             txtEdadAlumno_2.Text = edad + "";
+        }
+
+        private void notasDeVersiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NotasVersion nv = new NotasVersion();
+            nv.ShowDialog();
         }
     }
 }
