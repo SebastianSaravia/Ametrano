@@ -3815,5 +3815,10 @@ namespace Ametrano.Presentacion
             NotasVersion nv = new NotasVersion();
             nv.ShowDialog();
         }
+
+        private void menuPrincipal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

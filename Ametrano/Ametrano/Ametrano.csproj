@@ -101,6 +101,12 @@
   <ItemGroup>
     <Compile Include="Logica\Alumnos_Controlador.cs" />
     <Compile Include="Logica\Cursos_Controlador.cs" />
+    <Compile Include="Presentacion\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\NotasVercion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +147,9 @@
     <Compile Include="Verificacion\DatosDocente.cs" />
     <EmbeddedResource Include="Presentacion\Configuracion.resx">
       <DependentUpon>Configuracion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
