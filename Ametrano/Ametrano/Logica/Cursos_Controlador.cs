@@ -613,7 +613,7 @@ namespace Ametrano.Logica
         public string[] ListarPeriodos(string curso,string turno,out DataTable dataTable)
         {
             
-            string query = "SET lc_time_names=es_ES;SELECT CONCAT(monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin)), id_grupo  from grupo WHERE nombre_curso = '" + curso+ "' AND fecha_inicio>=curdate() AND turno='"+turno+"'";
+            string query = "SET lc_time_names=es_ES;SELECT CONCAT('Numero: ',serial,' - ',monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin)), id_grupo  from grupo WHERE nombre_curso = '" + curso+ "' AND fecha_inicio>=curdate() AND turno='"+turno+"'";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
