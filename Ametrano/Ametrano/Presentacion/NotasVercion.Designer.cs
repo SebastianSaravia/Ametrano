@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 76);
+            this.groupBox1.Size = new System.Drawing.Size(447, 95);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregado";
@@ -66,16 +66,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 36);
+            this.label2.Location = new System.Drawing.Point(22, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(151, 13);
+            this.label2.Size = new System.Drawing.Size(242, 39);
             this.label2.TabIndex = 2;
-            this.label2.Text = "- Anuncio de notas de versión.\r\n";
+            this.label2.Text = "- Anuncio de notas de versión.\r\n- Se agregaron aspectos visuales:\r\n        -Carte" +
+    "l de carga cuando demora un proceso.";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 179);
+            this.groupBox2.Location = new System.Drawing.Point(12, 198);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(447, 98);
             this.groupBox2.TabIndex = 1;
@@ -110,15 +111,15 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Versión: 1.0.0.6";
+            this.label4.Text = "Versión: 1.0.0.7";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(12, 283);
+            this.groupBox3.Location = new System.Drawing.Point(12, 302);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(447, 155);
+            this.groupBox3.Size = new System.Drawing.Size(447, 112);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Solucion de errores";
