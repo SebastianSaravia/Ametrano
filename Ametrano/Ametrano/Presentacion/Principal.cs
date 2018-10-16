@@ -3262,6 +3262,9 @@ namespace Ametrano.Presentacion
 
         private void btnGuardarLista_Click(object sender, EventArgs e)
         {//evento que sube la lista a asistencias
+            ThreadStart proceso = new ThreadStart(MostrarCuadroInicio);
+            Thread hilo = new Thread(proceso);
+
             bool insertFail = false;
             if (eventoClickGenerarListaAsistencias[0])
             {
@@ -3271,6 +3274,7 @@ namespace Ametrano.Presentacion
                 }
                 else
                 {
+                    hilo.Start();
                     for (int i = 0; i < dataGridListaAsistencias.Rows.Count; i++)
                     {
                         string materia = "";
@@ -3318,13 +3322,14 @@ namespace Ametrano.Presentacion
 
                     if (insertFail)
                     {
+                        hilo.Abort();
                         MessageBox.Show("hubieron errores al insertar los datos");
 
 
                     }
                     else
                     {
-
+                        hilo.Abort();
                         MessageBox.Show("Lista registrada correctamente");
                     }
                 }
