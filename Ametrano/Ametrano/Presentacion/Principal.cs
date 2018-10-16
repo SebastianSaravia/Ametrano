@@ -2518,13 +2518,15 @@ namespace Ametrano.Presentacion
                 txtBuscar.MaxLength = 255;
             }
         }
-
+        Loading ld = new Loading();
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
             bool viaticoExitoso = true;
             DataTable listaAlumnos = eventoClickListaAlumnos[1];
             if (boxCursoViaticos.SelectedIndex != 0)
             {
+                
+                ld.ShowDialog();
                 foreach (DataRow row in listaAlumnos.Rows)
                 {
                     string ci = "";
@@ -2552,6 +2554,7 @@ namespace Ametrano.Presentacion
 
             if (viaticoExitoso)
             {
+                ld.Dispose();
                 MessageBox.Show("Se ha generado el viatico correctamente", "Viatico generado con exito");
                 listAlumnosViaticos.SelectedIndex = listaAlumnos.Rows.Count - 1;
                 listAlumnosViaticos.SelectedIndex = 0;
@@ -3122,13 +3125,14 @@ namespace Ametrano.Presentacion
                 string curso = boxCursoGrupo.SelectedItem.ToString();
                 string inicio = dateTimeInicioGrupo.Value.ToString();
                 string fin = dateTimeFinalizacionGrupo.Value.ToString();
+                string numero = txtNumeroGrupo.Text;
 
                 DateTime fechaInicio = DateTime.Parse(inicio);
                 DateTime fechaFin = DateTime.Parse(fin);
                 string formattedFechaInicio = fechaInicio.ToString("yyyy-MM-dd");
                 string formattedFechaFin = fechaFin.ToString("yyyy-MM-dd");
 
-                if (CurContr.AgregarGrupo(curso, formattedFechaInicio, formattedFechaFin, turno))
+                if (CurContr.AgregarGrupo(curso, formattedFechaInicio, formattedFechaFin, turno,numero))
                 {
                     dataGridGruposActivos.DataSource = CurContr.GruposActivos();
                     MessageBox.Show("El grupo ha sido creado con exito!", "Operacion exitosa.");
