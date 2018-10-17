@@ -111,7 +111,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Versión: 1.0.0.7";
+            this.label4.Text = "Versión: 1.0.0.8";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox3
@@ -129,10 +129,11 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(393, 26);
+            this.label5.Size = new System.Drawing.Size(393, 39);
             this.label5.TabIndex = 2;
             this.label5.Text = "- Se soluciono un error que ocurria al generar viaticos de un curso cuando este y" +
-    "a\r\n   estaba muy avanxado\r\n";
+    "a\r\n   estaba muy avanzado.\r\n- Se soluciono un error que evitaba modificar un alu" +
+    "mno al cambiar el curso.";
             // 
             // NotasVersion
             // 

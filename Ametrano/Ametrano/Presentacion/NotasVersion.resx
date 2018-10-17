@@ -121,7 +121,6 @@
     <value>- Los alumnos ahora pueden ser ingresados sin completar todos los campos de 
    informacion   los campos obligatorios son: cedula, primer nombre, 
    segundo nombre, fecha de nacimiento, turno, curso, periodo.
-
-</value>
+- Ahora se puede seleccionar diferentes cursos utilizando su numero asociado.</value>
   </data>
 </root>

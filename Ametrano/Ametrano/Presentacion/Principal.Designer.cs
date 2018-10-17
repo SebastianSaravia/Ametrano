@@ -454,6 +454,8 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
+            this.boxNumeroGrupoViaticos = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -1564,7 +1566,7 @@
             // 
             this.txtCelularAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelularAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCelularAlumno.Location = new System.Drawing.Point(34, 83);
+            this.txtCelularAlumno.Location = new System.Drawing.Point(34, 37);
             this.txtCelularAlumno.MaxLength = 9;
             this.txtCelularAlumno.Name = "txtCelularAlumno";
             this.txtCelularAlumno.Size = new System.Drawing.Size(159, 24);
@@ -1578,7 +1580,7 @@
             // 
             this.txtTelefonoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefonoAlumno.Location = new System.Drawing.Point(34, 37);
+            this.txtTelefonoAlumno.Location = new System.Drawing.Point(34, 82);
             this.txtTelefonoAlumno.MaxLength = 8;
             this.txtTelefonoAlumno.Name = "txtTelefonoAlumno";
             this.txtTelefonoAlumno.Size = new System.Drawing.Size(159, 24);
@@ -2281,7 +2283,7 @@
             // 
             this.lblEstadoAlumno.AutoSize = true;
             this.lblEstadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoAlumno.Location = new System.Drawing.Point(96, 46);
+            this.lblEstadoAlumno.Location = new System.Drawing.Point(14, 46);
             this.lblEstadoAlumno.Name = "lblEstadoAlumno";
             this.lblEstadoAlumno.Size = new System.Drawing.Size(55, 15);
             this.lblEstadoAlumno.TabIndex = 27;
@@ -2291,7 +2293,7 @@
             // 
             this.lblCursoAlumno.AutoSize = true;
             this.lblCursoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoAlumno.Location = new System.Drawing.Point(103, 31);
+            this.lblCursoAlumno.Location = new System.Drawing.Point(21, 31);
             this.lblCursoAlumno.Name = "lblCursoAlumno";
             this.lblCursoAlumno.Size = new System.Drawing.Size(48, 15);
             this.lblCursoAlumno.TabIndex = 26;
@@ -2346,7 +2348,7 @@
             // 
             this.lblEmailAlumno.AutoSize = true;
             this.lblEmailAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailAlumno.Location = new System.Drawing.Point(91, 54);
+            this.lblEmailAlumno.Location = new System.Drawing.Point(26, 54);
             this.lblEmailAlumno.Name = "lblEmailAlumno";
             this.lblEmailAlumno.Size = new System.Drawing.Size(48, 15);
             this.lblEmailAlumno.TabIndex = 37;
@@ -2356,7 +2358,7 @@
             // 
             this.lblCelularAlumno.AutoSize = true;
             this.lblCelularAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelularAlumno.Location = new System.Drawing.Point(82, 39);
+            this.lblCelularAlumno.Location = new System.Drawing.Point(17, 39);
             this.lblCelularAlumno.Name = "lblCelularAlumno";
             this.lblCelularAlumno.Size = new System.Drawing.Size(57, 15);
             this.lblCelularAlumno.TabIndex = 37;
@@ -2366,7 +2368,7 @@
             // 
             this.lblTelefonoAlumno.AutoSize = true;
             this.lblTelefonoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefonoAlumno.Location = new System.Drawing.Point(72, 24);
+            this.lblTelefonoAlumno.Location = new System.Drawing.Point(7, 24);
             this.lblTelefonoAlumno.Name = "lblTelefonoAlumno";
             this.lblTelefonoAlumno.Size = new System.Drawing.Size(67, 15);
             this.lblTelefonoAlumno.TabIndex = 37;
@@ -2392,7 +2394,7 @@
             // 
             this.lblNApartamentoAlumno.AutoSize = true;
             this.lblNApartamentoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNApartamentoAlumno.Location = new System.Drawing.Point(28, 102);
+            this.lblNApartamentoAlumno.Location = new System.Drawing.Point(5, 102);
             this.lblNApartamentoAlumno.Name = "lblNApartamentoAlumno";
             this.lblNApartamentoAlumno.Size = new System.Drawing.Size(111, 15);
             this.lblNApartamentoAlumno.TabIndex = 36;
@@ -2402,7 +2404,7 @@
             // 
             this.lblNPuertaAlumno.AutoSize = true;
             this.lblNPuertaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNPuertaAlumno.Location = new System.Drawing.Point(68, 87);
+            this.lblNPuertaAlumno.Location = new System.Drawing.Point(45, 87);
             this.lblNPuertaAlumno.Name = "lblNPuertaAlumno";
             this.lblNPuertaAlumno.Size = new System.Drawing.Size(71, 15);
             this.lblNPuertaAlumno.TabIndex = 36;
@@ -2412,7 +2414,7 @@
             // 
             this.lblReferenciaAlumno.AutoSize = true;
             this.lblReferenciaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferenciaAlumno.Location = new System.Drawing.Point(58, 72);
+            this.lblReferenciaAlumno.Location = new System.Drawing.Point(35, 72);
             this.lblReferenciaAlumno.Name = "lblReferenciaAlumno";
             this.lblReferenciaAlumno.Size = new System.Drawing.Size(81, 15);
             this.lblReferenciaAlumno.TabIndex = 36;
@@ -2422,7 +2424,7 @@
             // 
             this.lblCalleAlumno.AutoSize = true;
             this.lblCalleAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalleAlumno.Location = new System.Drawing.Point(95, 57);
+            this.lblCalleAlumno.Location = new System.Drawing.Point(72, 57);
             this.lblCalleAlumno.Name = "lblCalleAlumno";
             this.lblCalleAlumno.Size = new System.Drawing.Size(44, 15);
             this.lblCalleAlumno.TabIndex = 36;
@@ -2432,7 +2434,7 @@
             // 
             this.lblLocalidadAlumno.AutoSize = true;
             this.lblLocalidadAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidadAlumno.Location = new System.Drawing.Point(65, 42);
+            this.lblLocalidadAlumno.Location = new System.Drawing.Point(42, 42);
             this.lblLocalidadAlumno.Name = "lblLocalidadAlumno";
             this.lblLocalidadAlumno.Size = new System.Drawing.Size(74, 15);
             this.lblLocalidadAlumno.TabIndex = 36;
@@ -2442,7 +2444,7 @@
             // 
             this.lblDepartamentoAlumno.AutoSize = true;
             this.lblDepartamentoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamentoAlumno.Location = new System.Drawing.Point(37, 27);
+            this.lblDepartamentoAlumno.Location = new System.Drawing.Point(14, 27);
             this.lblDepartamentoAlumno.Name = "lblDepartamentoAlumno";
             this.lblDepartamentoAlumno.Size = new System.Drawing.Size(102, 15);
             this.lblDepartamentoAlumno.TabIndex = 36;
@@ -2463,7 +2465,7 @@
             // 
             this.lblCoberturaSaludAlumno.AutoSize = true;
             this.lblCoberturaSaludAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCoberturaSaludAlumno.Location = new System.Drawing.Point(6, 22);
+            this.lblCoberturaSaludAlumno.Location = new System.Drawing.Point(5, 22);
             this.lblCoberturaSaludAlumno.Name = "lblCoberturaSaludAlumno";
             this.lblCoberturaSaludAlumno.Size = new System.Drawing.Size(133, 15);
             this.lblCoberturaSaludAlumno.TabIndex = 38;
@@ -2769,7 +2771,7 @@
             // 
             this.lblIngresoMensualAlumno.AutoSize = true;
             this.lblIngresoMensualAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIngresoMensualAlumno.Location = new System.Drawing.Point(155, 87);
+            this.lblIngresoMensualAlumno.Location = new System.Drawing.Point(121, 87);
             this.lblIngresoMensualAlumno.Name = "lblIngresoMensualAlumno";
             this.lblIngresoMensualAlumno.Size = new System.Drawing.Size(118, 15);
             this.lblIngresoMensualAlumno.TabIndex = 36;
@@ -2779,7 +2781,7 @@
             // 
             this.lblTrabajoAlgunaVezAlumno.AutoSize = true;
             this.lblTrabajoAlgunaVezAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrabajoAlgunaVezAlumno.Location = new System.Drawing.Point(140, 27);
+            this.lblTrabajoAlgunaVezAlumno.Location = new System.Drawing.Point(106, 27);
             this.lblTrabajoAlgunaVezAlumno.Name = "lblTrabajoAlgunaVezAlumno";
             this.lblTrabajoAlgunaVezAlumno.Size = new System.Drawing.Size(133, 15);
             this.lblTrabajoAlgunaVezAlumno.TabIndex = 36;
@@ -2789,7 +2791,7 @@
             // 
             this.lblHorasJornadaLaboralAlumno.AutoSize = true;
             this.lblHorasJornadaLaboralAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHorasJornadaLaboralAlumno.Location = new System.Drawing.Point(102, 72);
+            this.lblHorasJornadaLaboralAlumno.Location = new System.Drawing.Point(68, 72);
             this.lblHorasJornadaLaboralAlumno.Name = "lblHorasJornadaLaboralAlumno";
             this.lblHorasJornadaLaboralAlumno.Size = new System.Drawing.Size(171, 15);
             this.lblHorasJornadaLaboralAlumno.TabIndex = 36;
@@ -2799,7 +2801,7 @@
             // 
             this.lblTrabajaActualmenteAlumno.AutoSize = true;
             this.lblTrabajaActualmenteAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTrabajaActualmenteAlumno.Location = new System.Drawing.Point(130, 42);
+            this.lblTrabajaActualmenteAlumno.Location = new System.Drawing.Point(96, 42);
             this.lblTrabajaActualmenteAlumno.Name = "lblTrabajaActualmenteAlumno";
             this.lblTrabajaActualmenteAlumno.Size = new System.Drawing.Size(143, 15);
             this.lblTrabajaActualmenteAlumno.TabIndex = 36;
@@ -2809,7 +2811,7 @@
             // 
             this.lblTiempoDesempleadoAlumno.AutoSize = true;
             this.lblTiempoDesempleadoAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTiempoDesempleadoAlumno.Location = new System.Drawing.Point(123, 57);
+            this.lblTiempoDesempleadoAlumno.Location = new System.Drawing.Point(89, 57);
             this.lblTiempoDesempleadoAlumno.Name = "lblTiempoDesempleadoAlumno";
             this.lblTiempoDesempleadoAlumno.Size = new System.Drawing.Size(150, 15);
             this.lblTiempoDesempleadoAlumno.TabIndex = 36;
@@ -2964,7 +2966,7 @@
             // 
             this.lblMontoViaticoAlumno_2.AutoSize = true;
             this.lblMontoViaticoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoViaticoAlumno_2.Location = new System.Drawing.Point(33, 59);
+            this.lblMontoViaticoAlumno_2.Location = new System.Drawing.Point(6, 59);
             this.lblMontoViaticoAlumno_2.Name = "lblMontoViaticoAlumno_2";
             this.lblMontoViaticoAlumno_2.Size = new System.Drawing.Size(116, 15);
             this.lblMontoViaticoAlumno_2.TabIndex = 28;
@@ -2974,7 +2976,7 @@
             // 
             this.lblEstadoAlumno_2.AutoSize = true;
             this.lblEstadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoAlumno_2.Location = new System.Drawing.Point(94, 39);
+            this.lblEstadoAlumno_2.Location = new System.Drawing.Point(67, 39);
             this.lblEstadoAlumno_2.Name = "lblEstadoAlumno_2";
             this.lblEstadoAlumno_2.Size = new System.Drawing.Size(55, 15);
             this.lblEstadoAlumno_2.TabIndex = 27;
@@ -2984,7 +2986,7 @@
             // 
             this.lblCursoAlumno_2.AutoSize = true;
             this.lblCursoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCursoAlumno_2.Location = new System.Drawing.Point(101, 20);
+            this.lblCursoAlumno_2.Location = new System.Drawing.Point(74, 20);
             this.lblCursoAlumno_2.Name = "lblCursoAlumno_2";
             this.lblCursoAlumno_2.Size = new System.Drawing.Size(48, 15);
             this.lblCursoAlumno_2.TabIndex = 26;
@@ -3039,7 +3041,7 @@
             // 
             this.lblEmailAlumno_2.AutoSize = true;
             this.lblEmailAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailAlumno_2.Location = new System.Drawing.Point(91, 54);
+            this.lblEmailAlumno_2.Location = new System.Drawing.Point(25, 54);
             this.lblEmailAlumno_2.Name = "lblEmailAlumno_2";
             this.lblEmailAlumno_2.Size = new System.Drawing.Size(48, 15);
             this.lblEmailAlumno_2.TabIndex = 37;
@@ -3049,7 +3051,7 @@
             // 
             this.lblCelularAlumno_2.AutoSize = true;
             this.lblCelularAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelularAlumno_2.Location = new System.Drawing.Point(82, 39);
+            this.lblCelularAlumno_2.Location = new System.Drawing.Point(16, 39);
             this.lblCelularAlumno_2.Name = "lblCelularAlumno_2";
             this.lblCelularAlumno_2.Size = new System.Drawing.Size(57, 15);
             this.lblCelularAlumno_2.TabIndex = 37;
@@ -3059,7 +3061,7 @@
             // 
             this.lblTelefonoAlumno_2.AutoSize = true;
             this.lblTelefonoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefonoAlumno_2.Location = new System.Drawing.Point(72, 24);
+            this.lblTelefonoAlumno_2.Location = new System.Drawing.Point(6, 24);
             this.lblTelefonoAlumno_2.Name = "lblTelefonoAlumno_2";
             this.lblTelefonoAlumno_2.Size = new System.Drawing.Size(67, 15);
             this.lblTelefonoAlumno_2.TabIndex = 37;
@@ -3085,7 +3087,7 @@
             // 
             this.lblNApartamentoAlumno_2.AutoSize = true;
             this.lblNApartamentoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNApartamentoAlumno_2.Location = new System.Drawing.Point(28, 102);
+            this.lblNApartamentoAlumno_2.Location = new System.Drawing.Point(4, 102);
             this.lblNApartamentoAlumno_2.Name = "lblNApartamentoAlumno_2";
             this.lblNApartamentoAlumno_2.Size = new System.Drawing.Size(111, 15);
             this.lblNApartamentoAlumno_2.TabIndex = 36;
@@ -3095,7 +3097,7 @@
             // 
             this.lblNPuertaAlumno_2.AutoSize = true;
             this.lblNPuertaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNPuertaAlumno_2.Location = new System.Drawing.Point(68, 87);
+            this.lblNPuertaAlumno_2.Location = new System.Drawing.Point(44, 87);
             this.lblNPuertaAlumno_2.Name = "lblNPuertaAlumno_2";
             this.lblNPuertaAlumno_2.Size = new System.Drawing.Size(71, 15);
             this.lblNPuertaAlumno_2.TabIndex = 36;
@@ -3105,7 +3107,7 @@
             // 
             this.lblReferenciaAlumno_2.AutoSize = true;
             this.lblReferenciaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferenciaAlumno_2.Location = new System.Drawing.Point(58, 72);
+            this.lblReferenciaAlumno_2.Location = new System.Drawing.Point(34, 72);
             this.lblReferenciaAlumno_2.Name = "lblReferenciaAlumno_2";
             this.lblReferenciaAlumno_2.Size = new System.Drawing.Size(81, 15);
             this.lblReferenciaAlumno_2.TabIndex = 36;
@@ -3115,7 +3117,7 @@
             // 
             this.lblCalleAlumno_2.AutoSize = true;
             this.lblCalleAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalleAlumno_2.Location = new System.Drawing.Point(95, 57);
+            this.lblCalleAlumno_2.Location = new System.Drawing.Point(71, 57);
             this.lblCalleAlumno_2.Name = "lblCalleAlumno_2";
             this.lblCalleAlumno_2.Size = new System.Drawing.Size(44, 15);
             this.lblCalleAlumno_2.TabIndex = 36;
@@ -3125,7 +3127,7 @@
             // 
             this.lblLocalidadAlumno_2.AutoSize = true;
             this.lblLocalidadAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidadAlumno_2.Location = new System.Drawing.Point(65, 42);
+            this.lblLocalidadAlumno_2.Location = new System.Drawing.Point(41, 42);
             this.lblLocalidadAlumno_2.Name = "lblLocalidadAlumno_2";
             this.lblLocalidadAlumno_2.Size = new System.Drawing.Size(74, 15);
             this.lblLocalidadAlumno_2.TabIndex = 36;
@@ -3135,7 +3137,7 @@
             // 
             this.lblDepartamentoAlumno_2.AutoSize = true;
             this.lblDepartamentoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamentoAlumno_2.Location = new System.Drawing.Point(37, 27);
+            this.lblDepartamentoAlumno_2.Location = new System.Drawing.Point(13, 27);
             this.lblDepartamentoAlumno_2.Name = "lblDepartamentoAlumno_2";
             this.lblDepartamentoAlumno_2.Size = new System.Drawing.Size(102, 15);
             this.lblDepartamentoAlumno_2.TabIndex = 36;
@@ -3647,7 +3649,7 @@
             // 
             this.txtEmailAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmailAlumno_2.Location = new System.Drawing.Point(34, 125);
+            this.txtEmailAlumno_2.Location = new System.Drawing.Point(34, 123);
             this.txtEmailAlumno_2.Name = "txtEmailAlumno_2";
             this.txtEmailAlumno_2.Size = new System.Drawing.Size(159, 24);
             this.txtEmailAlumno_2.TabIndex = 14;
@@ -3659,7 +3661,7 @@
             // 
             this.txtCelularAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelularAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCelularAlumno_2.Location = new System.Drawing.Point(34, 83);
+            this.txtCelularAlumno_2.Location = new System.Drawing.Point(34, 37);
             this.txtCelularAlumno_2.MaxLength = 9;
             this.txtCelularAlumno_2.Name = "txtCelularAlumno_2";
             this.txtCelularAlumno_2.Size = new System.Drawing.Size(159, 24);
@@ -3673,7 +3675,7 @@
             // 
             this.txtTelefonoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefonoAlumno_2.Location = new System.Drawing.Point(34, 37);
+            this.txtTelefonoAlumno_2.Location = new System.Drawing.Point(34, 81);
             this.txtTelefonoAlumno_2.MaxLength = 8;
             this.txtTelefonoAlumno_2.Name = "txtTelefonoAlumno_2";
             this.txtTelefonoAlumno_2.Size = new System.Drawing.Size(159, 24);
@@ -4451,7 +4453,7 @@
             // 
             this.lblEmailAlumno_3.AutoSize = true;
             this.lblEmailAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmailAlumno_3.Location = new System.Drawing.Point(91, 54);
+            this.lblEmailAlumno_3.Location = new System.Drawing.Point(24, 54);
             this.lblEmailAlumno_3.Name = "lblEmailAlumno_3";
             this.lblEmailAlumno_3.Size = new System.Drawing.Size(48, 15);
             this.lblEmailAlumno_3.TabIndex = 37;
@@ -4461,7 +4463,7 @@
             // 
             this.lblCelularAlumno_3.AutoSize = true;
             this.lblCelularAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCelularAlumno_3.Location = new System.Drawing.Point(82, 39);
+            this.lblCelularAlumno_3.Location = new System.Drawing.Point(15, 39);
             this.lblCelularAlumno_3.Name = "lblCelularAlumno_3";
             this.lblCelularAlumno_3.Size = new System.Drawing.Size(57, 15);
             this.lblCelularAlumno_3.TabIndex = 37;
@@ -4471,7 +4473,7 @@
             // 
             this.lblTelefonoAlumno_3.AutoSize = true;
             this.lblTelefonoAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefonoAlumno_3.Location = new System.Drawing.Point(72, 24);
+            this.lblTelefonoAlumno_3.Location = new System.Drawing.Point(5, 24);
             this.lblTelefonoAlumno_3.Name = "lblTelefonoAlumno_3";
             this.lblTelefonoAlumno_3.Size = new System.Drawing.Size(67, 15);
             this.lblTelefonoAlumno_3.TabIndex = 37;
@@ -4497,7 +4499,7 @@
             // 
             this.lblNApartamentoAlumno_3.AutoSize = true;
             this.lblNApartamentoAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNApartamentoAlumno_3.Location = new System.Drawing.Point(28, 102);
+            this.lblNApartamentoAlumno_3.Location = new System.Drawing.Point(4, 102);
             this.lblNApartamentoAlumno_3.Name = "lblNApartamentoAlumno_3";
             this.lblNApartamentoAlumno_3.Size = new System.Drawing.Size(111, 15);
             this.lblNApartamentoAlumno_3.TabIndex = 36;
@@ -4507,7 +4509,7 @@
             // 
             this.lblNPuertaAlumno_3.AutoSize = true;
             this.lblNPuertaAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNPuertaAlumno_3.Location = new System.Drawing.Point(68, 87);
+            this.lblNPuertaAlumno_3.Location = new System.Drawing.Point(44, 87);
             this.lblNPuertaAlumno_3.Name = "lblNPuertaAlumno_3";
             this.lblNPuertaAlumno_3.Size = new System.Drawing.Size(71, 15);
             this.lblNPuertaAlumno_3.TabIndex = 36;
@@ -4517,7 +4519,7 @@
             // 
             this.lblReferenciaAlumno_3.AutoSize = true;
             this.lblReferenciaAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReferenciaAlumno_3.Location = new System.Drawing.Point(58, 72);
+            this.lblReferenciaAlumno_3.Location = new System.Drawing.Point(34, 72);
             this.lblReferenciaAlumno_3.Name = "lblReferenciaAlumno_3";
             this.lblReferenciaAlumno_3.Size = new System.Drawing.Size(81, 15);
             this.lblReferenciaAlumno_3.TabIndex = 36;
@@ -4527,7 +4529,7 @@
             // 
             this.lblCalleAlumno_3.AutoSize = true;
             this.lblCalleAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCalleAlumno_3.Location = new System.Drawing.Point(95, 57);
+            this.lblCalleAlumno_3.Location = new System.Drawing.Point(71, 57);
             this.lblCalleAlumno_3.Name = "lblCalleAlumno_3";
             this.lblCalleAlumno_3.Size = new System.Drawing.Size(44, 15);
             this.lblCalleAlumno_3.TabIndex = 36;
@@ -4537,7 +4539,7 @@
             // 
             this.lblLocalidadAlumno_3.AutoSize = true;
             this.lblLocalidadAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLocalidadAlumno_3.Location = new System.Drawing.Point(65, 42);
+            this.lblLocalidadAlumno_3.Location = new System.Drawing.Point(41, 42);
             this.lblLocalidadAlumno_3.Name = "lblLocalidadAlumno_3";
             this.lblLocalidadAlumno_3.Size = new System.Drawing.Size(74, 15);
             this.lblLocalidadAlumno_3.TabIndex = 36;
@@ -4547,7 +4549,7 @@
             // 
             this.lblDepartamentoAlumno_3.AutoSize = true;
             this.lblDepartamentoAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDepartamentoAlumno_3.Location = new System.Drawing.Point(37, 27);
+            this.lblDepartamentoAlumno_3.Location = new System.Drawing.Point(13, 27);
             this.lblDepartamentoAlumno_3.Name = "lblDepartamentoAlumno_3";
             this.lblDepartamentoAlumno_3.Size = new System.Drawing.Size(102, 15);
             this.lblDepartamentoAlumno_3.TabIndex = 36;
@@ -4967,6 +4969,7 @@
             // viaticos
             // 
             this.viaticos.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.viaticos.Controls.Add(this.boxNumeroGrupoViaticos);
             this.viaticos.Controls.Add(this.boxTurnoViaticos);
             this.viaticos.Controls.Add(this.lblBlockViaticos);
             this.viaticos.Controls.Add(this.lblMontoTotalViaticos);
@@ -4983,6 +4986,7 @@
             this.viaticos.Size = new System.Drawing.Size(1089, 521);
             this.viaticos.TabIndex = 0;
             this.viaticos.Text = "Viaticos";
+            this.viaticos.Click += new System.EventHandler(this.viaticos_Click);
             // 
             // boxTurnoViaticos
             // 
@@ -5143,9 +5147,9 @@
             this.listAlumnosViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAlumnosViaticos.FormattingEnabled = true;
             this.listAlumnosViaticos.ItemHeight = 20;
-            this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 117);
+            this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 157);
             this.listAlumnosViaticos.Name = "listAlumnosViaticos";
-            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 364);
+            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 324);
             this.listAlumnosViaticos.TabIndex = 0;
             this.listAlumnosViaticos.SelectedIndexChanged += new System.EventHandler(this.listAlumnosViaticos_SelectedIndexChanged);
             // 
@@ -5163,6 +5167,7 @@
             // 
             // groupBox57
             // 
+            this.groupBox57.Controls.Add(this.boxNumeroGrupo_2);
             this.groupBox57.Controls.Add(this.boxTurnoAsistencia_2);
             this.groupBox57.Controls.Add(this.boxMateriaAsistencia_2);
             this.groupBox57.Controls.Add(this.boxCursoAsistencia_2);
@@ -5261,7 +5266,7 @@
             // dateTimeFechaAsistencia_2
             // 
             this.dateTimeFechaAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFechaAsistencia_2.Location = new System.Drawing.Point(23, 94);
+            this.dateTimeFechaAsistencia_2.Location = new System.Drawing.Point(23, 127);
             this.dateTimeFechaAsistencia_2.Name = "dateTimeFechaAsistencia_2";
             this.dateTimeFechaAsistencia_2.Size = new System.Drawing.Size(209, 24);
             this.dateTimeFechaAsistencia_2.TabIndex = 32;
@@ -5671,6 +5676,33 @@
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
+            // 
+            // boxNumeroGrupo_2
+            // 
+            this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupo_2.Enabled = false;
+            this.boxNumeroGrupo_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupo_2.FormattingEnabled = true;
+            this.boxNumeroGrupo_2.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupo_2.Location = new System.Drawing.Point(23, 95);
+            this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
+            this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
+            this.boxNumeroGrupo_2.TabIndex = 34;
+            // 
+            // boxNumeroGrupoViaticos
+            // 
+            this.boxNumeroGrupoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupoViaticos.Enabled = false;
+            this.boxNumeroGrupoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupoViaticos.FormattingEnabled = true;
+            this.boxNumeroGrupoViaticos.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupoViaticos.Location = new System.Drawing.Point(39, 118);
+            this.boxNumeroGrupoViaticos.Name = "boxNumeroGrupoViaticos";
+            this.boxNumeroGrupoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxNumeroGrupoViaticos.TabIndex = 35;
+            this.boxNumeroGrupoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupoViaticos_SelectedIndexChanged);
             // 
             // Principal
             // 
@@ -6278,5 +6310,7 @@
         private System.Windows.Forms.ToolStripMenuItem notasDeVersiónToolStripMenuItem;
         private System.Windows.Forms.TextBox txtNumeroGrupo;
         private System.Windows.Forms.ComboBox boxNumeroGrupo;
+        private System.Windows.Forms.ComboBox boxNumeroGrupo_2;
+        private System.Windows.Forms.ComboBox boxNumeroGrupoViaticos;
     }
 }

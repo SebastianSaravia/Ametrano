@@ -35,9 +35,10 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[5];
         private dynamic[] eventoClickBuscarConsultaAlumno = new dynamic[2];
         private dynamic[] eventoClickModificarAlumnoCurso = new dynamic[2];
-
+        private dynamic[] eventoClickConsultarListaAsistencias = new dynamic[2];
         private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
         private dynamic[] eventoClickListarPeriodosAsistencia = new dynamic[2];
+        private dynamic[] eventoClickCursoViaticos = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
         private DatosAlumno datosAlumnoConsulta = new DatosAlumno();
         private DatosAlumno datosAlumnoModificacion = new DatosAlumno();
@@ -312,7 +313,7 @@ namespace Ametrano.Presentacion
                 }
                 curso[0] = boxCursoAlumno_2.SelectedItem.ToString();
                 curso[1] = estadoAlumno;
-                curso[2] = id_grupo + "0";
+                curso[2] = id_grupo+"";
 
                 if (txtMontoViatico_2.Text == controlador.mapTextBox[txtMontoViatico_2.GetHashCode().ToString()])
                 {
@@ -2523,23 +2524,37 @@ namespace Ametrano.Presentacion
         }
         private void MostrarCuadroInicio()
         {
-            Loading ld = new Loading();
-            ld.Show();
+            try
+            {
+                ///Ver como hacer con procesos
+                ///Loading ld = new Loading
+                ///ld.ShowDialog();
+            }
+            catch (System.Threading.ThreadAbortException e)
+            {
+
+            }catch(Exception e)
+            {
+
+            }
         }
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
             bool viaticoExitoso = true;
             DataTable listaAlumnos = eventoClickListaAlumnos[1];
-
+            
             ThreadStart proceso = new ThreadStart(MostrarCuadroInicio);
             Thread hilo = new Thread(proceso);
-
+            
             if (boxCursoViaticos.SelectedIndex != 0)
             {
-                
-                hilo.Start();
-                
-                
+
+                if (hilo.ThreadState == System.Threading.ThreadState.Unstarted)
+                {
+                    hilo.Start();
+                }
+
+
                 foreach (DataRow row in listaAlumnos.Rows)
                 {
                     string ci = "";
@@ -2556,7 +2571,10 @@ namespace Ametrano.Presentacion
                     if (!CurContr.AñadirSemanaViatico(ci))
                     {
 
-                        hilo.Abort();
+                        if (hilo.ThreadState == System.Threading.ThreadState.Running)
+                        {
+                            hilo.Suspend();
+                        }
                         MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
                         viaticoExitoso = false;
                         break;
@@ -2569,7 +2587,10 @@ namespace Ametrano.Presentacion
             if (viaticoExitoso)
             {
 
-                hilo.Abort();
+                if (hilo.ThreadState == System.Threading.ThreadState.Running)
+                {
+                    hilo.Suspend();
+                }
                 MessageBox.Show("Se ha generado el viatico correctamente", "Viatico generado con exito");
                 listAlumnosViaticos.SelectedIndex = listaAlumnos.Rows.Count - 1;
                 listAlumnosViaticos.SelectedIndex = 0;
@@ -2826,68 +2847,41 @@ namespace Ametrano.Presentacion
 
         private void boxCursoViaticos_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (boxTurnoViaticos.SelectedIndex != 0)
-            {//Si hay un turno seleccionado
-                if (boxCursoViaticos.SelectedIndex != 0 && diaViatico)
-                {
-                    btnAñadirSemanaViaticos.Enabled = true;
-                }
-                else
-                {
-                    btnAñadirSemanaViaticos.Enabled = false;
-                }
+            boxNumeroGrupoViaticos.Items.Clear();
+            boxNumeroGrupoViaticos.Items.Add("Grupo...");
+            boxNumeroGrupoViaticos.SelectedIndex = 0;
 
-                dataGridViaticos.DataSource = null;
-                dataGridViaticos.Columns.Clear();
-                DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();
-                DataGridViewCheckBoxColumn col2 = new DataGridViewCheckBoxColumn();
-                DataGridViewCheckBoxColumn col3 = new DataGridViewCheckBoxColumn();
-                DataGridViewCheckBoxColumn col4 = new DataGridViewCheckBoxColumn();
-                DataGridViewCheckBoxColumn col5 = new DataGridViewCheckBoxColumn();
-                col.HeaderText = "Fecha";
-                col2.HeaderText = "Monto";
-                col3.HeaderText = "Rubro";
-                col4.HeaderText = "Concepto";
-                col5.HeaderText = "Abonado";
-                dataGridViaticos.Columns.Add(col);
-                dataGridViaticos.Columns.Add(col2);
-                dataGridViaticos.Columns.Add(col3);
-                dataGridViaticos.Columns.Add(col4);
-                dataGridViaticos.Columns.Add(col5);
-
-
-                DataTable dt;
-                string curso = boxCursoViaticos.SelectedItem.ToString();
-                string turno = "";
-                if (boxTurnoViaticos.SelectedItem != null)
+            try
+            {
+                if (boxTurnoViaticos.SelectedIndex != 0)
                 {
-                    turno = boxTurnoViaticos.SelectedItem.ToString();
-                }
+                    boxNumeroGrupo.Enabled = true;
+                    DataTable data = new DataTable();
 
-                dynamic[] alumn = CurContr.AlumnosCurso(curso, turno, out dt);
-                listAlumnosViaticos.Items.Clear();
-                for (int i = 0; i < alumn.Length; i++)
-                {
-                    listAlumnosViaticos.Items.Add(alumn[i]);
-                }
-                if (alumn.Length > 0)
-                {
-                    eventoClickListaAlumnos[0] = true;
-                    eventoClickListaAlumnos[1] = dt;
+                    string turno = boxTurnoViaticos.SelectedItem.ToString();
+                    string curso = boxCursoViaticos.SelectedItem.ToString();
+                    string[] grupos = CurContr.ListarNumeroGrupo(curso, turno, out data);
 
-                    if (diaViatico)
+                    for (int i = 0; i < grupos.Length; i++)
                     {
-                        btnAñadirSemanaViaticos.Enabled = true;
-                    }
 
+                        boxNumeroGrupoViaticos.Items.Add(grupos[i]);
+                    }
+                    boxNumeroGrupoViaticos.Enabled = true;
+                    eventoClickCursoViaticos[0] = true;
+                    eventoClickCursoViaticos[1] = data;
 
                 }
                 else
                 {
-                    btnAñadirSemanaViaticos.Enabled = false;
+                    boxNumeroGrupoViaticos.Enabled = false;
                 }
             }
+            catch (Exception)
+            {
 
+
+            }
 
 
         }
@@ -3318,7 +3312,10 @@ namespace Ametrano.Presentacion
                 }
                 else
                 {
-                    hilo.Start();
+                    if(hilo.ThreadState == System.Threading.ThreadState.Unstarted)
+                    {
+                        hilo.Start();
+                    }
                     for (int i = 0; i < dataGridListaAsistencias.Rows.Count; i++)
                     {
                         string materia = "";
@@ -3368,14 +3365,20 @@ namespace Ametrano.Presentacion
 
                     if (insertFail)
                     {
-                        
+                        if (hilo.ThreadState == System.Threading.ThreadState.Running)
+                        {
+                            hilo.Abort();
+                        }
                         MessageBox.Show("hubieron errores al insertar los datos");
 
 
                     }
                     else
                     {
-                        hilo.Abort();
+                        if(hilo.ThreadState == System.Threading.ThreadState.Running)
+                        {
+                            hilo.Abort();
+                        }
                         MessageBox.Show("Lista registrada correctamente");
                     }
                 }
@@ -3435,9 +3438,16 @@ namespace Ametrano.Presentacion
                 string curso = boxCursoAsistencia_2.SelectedItem.ToString();
                 string fecha = dateTimeFechaAsistencia_2.Value.ToString("yyyy-MM-dd");
                 string materia = boxMateriaAsistencia_2.SelectedItem.ToString();
+                DataTable datos = eventoClickConsultarListaAsistencias[1];
+                string id_grupo = "";
+                if (eventoClickConsultarListaAsistencias[0])
+                {
+                    id_grupo = datos.Rows[boxNumeroGrupo_2.SelectedIndex - 1][1].ToString();
+                }
+                
 
 
-                DataTable listaAlumnos = CurContr.listarAsistencias(turno, curso, fecha, materia);
+                DataTable listaAlumnos = CurContr.listarAsistencias(turno, curso, fecha,id_grupo, materia);
 
 
                 if (listaAlumnos.Rows.Count > 0)
@@ -3487,6 +3497,41 @@ namespace Ametrano.Presentacion
             if (boxCursoAsistencia_2.SelectedIndex != 0)
             {
                 string curso = boxCursoAsistencia_2.SelectedItem.ToString();
+                boxNumeroGrupo_2.Items.Clear();
+                boxNumeroGrupo_2.Items.Add("Grupo...");
+                boxNumeroGrupo_2.SelectedIndex = 0;
+                
+                try
+                {
+                    if (boxCursoAsistencia_2.SelectedIndex != 0)
+                    {
+                        boxNumeroGrupo.Enabled = true;
+                        DataTable data = new DataTable();
+
+                        string turno = boxTurnoAsistencia_2.SelectedItem.ToString();
+
+                        string[] grupos = CurContr.ListarNumeroGrupo(curso, turno, out data);
+
+                        for (int i = 0; i < grupos.Length; i++)
+                        {
+                            boxNumeroGrupo_2.Items.Add(grupos[i]);
+                        }
+                        boxNumeroGrupo_2.Enabled = true;
+                        eventoClickConsultarListaAsistencias[0] = true;
+                        eventoClickConsultarListaAsistencias[1] = data;
+                    }
+                    else
+                    {
+                        boxNumeroGrupo_2.Enabled = false;
+                    }
+                }
+                catch (Exception)
+                {
+
+
+                }
+
+
                 string[] materias = controlador.ListarMateriasPorCurso(curso);
                 boxMateriaAsistencia_2.Items.Clear();
                 boxMateriaAsistencia_2.Items.Add("Materia...");
@@ -3895,6 +3940,83 @@ namespace Ametrano.Presentacion
         }
 
         private void boxMateriaAsistencia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boxNumeroGrupoViaticos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxNumeroGrupoViaticos.SelectedIndex != 0)
+            {//Si hay un turno seleccionado
+                if (boxCursoViaticos.SelectedIndex != 0 && diaViatico)
+                {
+                    btnAñadirSemanaViaticos.Enabled = true;
+                }
+                else
+                {
+                    btnAñadirSemanaViaticos.Enabled = false;
+                }
+
+                dataGridViaticos.DataSource = null;
+                dataGridViaticos.Columns.Clear();
+                DataGridViewCheckBoxColumn col = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col2 = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col3 = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col4 = new DataGridViewCheckBoxColumn();
+                DataGridViewCheckBoxColumn col5 = new DataGridViewCheckBoxColumn();
+                col.HeaderText = "Fecha";
+                col2.HeaderText = "Monto";
+                col3.HeaderText = "Rubro";
+                col4.HeaderText = "Concepto";
+                col5.HeaderText = "Abonado";
+                dataGridViaticos.Columns.Add(col);
+                dataGridViaticos.Columns.Add(col2);
+                dataGridViaticos.Columns.Add(col3);
+                dataGridViaticos.Columns.Add(col4);
+                dataGridViaticos.Columns.Add(col5);
+
+
+                DataTable dt;
+                string curso = boxCursoViaticos.SelectedItem.ToString();
+                string turno = "";
+                string id_grupo = "";
+                if (boxTurnoViaticos.SelectedItem != null)
+                {
+                    turno = boxTurnoViaticos.SelectedItem.ToString();
+                }
+                if (eventoClickCursoViaticos[0])
+                {
+                    DataTable datos = eventoClickCursoViaticos[1];
+                    id_grupo = datos.Rows[boxNumeroGrupoViaticos.SelectedIndex - 1][1].ToString();
+                }
+
+                dynamic[] alumn = CurContr.AlumnosCurso(curso, turno,id_grupo, out dt);
+                listAlumnosViaticos.Items.Clear();
+                for (int i = 0; i < alumn.Length; i++)
+                {
+                    listAlumnosViaticos.Items.Add(alumn[i]);
+                }
+                if (alumn.Length > 0)
+                {
+                    eventoClickListaAlumnos[0] = true;
+                    eventoClickListaAlumnos[1] = dt;
+
+                    if (diaViatico)
+                    {
+                        btnAñadirSemanaViaticos.Enabled = true;
+                    }
+
+
+                }
+                else
+                {
+                    btnAñadirSemanaViaticos.Enabled = false;
+                }
+            }
+
+        }
+
+        private void viaticos_Click(object sender, EventArgs e)
         {
 
         }

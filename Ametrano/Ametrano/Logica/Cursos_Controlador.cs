@@ -16,11 +16,11 @@ namespace Ametrano.Logica
         ConexionBD objetoConexion = new ConexionBD();
         TestingClass testing = new TestingClass();
 
-        public dynamic[] AlumnosCurso(string curso, string turno, out DataTable dataTable)
+        public dynamic[] AlumnosCurso(string curso, string turno, string id_grupo, out DataTable dataTable)
         {
             try
             {
-                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' group by a.cedula_alumno";
+                string query = "SELECT a.cedula_alumno, a.nombre1 , a.apellido1 FROM alumno a JOIN asiste asis ON a.cedula_alumno=asis.cedula_alumno JOIN grupo g on g.id_grupo=asis.id_grupo WHERE g.id_grupo = "+id_grupo+" AND asis.nombre_curso='"+curso+"' AND curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' group by a.cedula_alumno";
                 MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
                 dataTable = new DataTable();
                 datosConsulta.Fill(dataTable);
@@ -704,17 +704,9 @@ namespace Ametrano.Logica
             return retorno;
         }
 
-        public DataTable listarAsistencias(string turno,string curso,string fecha,string materia)
+        public DataTable listarAsistencias(string turno,string curso,string fecha, string id_grupo ,string materia)
         {
             //Busco el id de grupo
-            string query1_buscar_curso = "select id_grupo from grupo g where g.nombre_curso = '" + curso + "' and g.turno = '" + turno + "' and curdate() between g.fecha_inicio and g.fecha_fin;";
-            MySqlDataAdapter query1_buscar_curso_resultados = objetoConexion.consultarDatos(query1_buscar_curso);
-            DataTable query1_buscar_curso_table = new DataTable();
-            query1_buscar_curso_resultados.Fill(query1_buscar_curso_table);
-
-            int id_grupo = 0;
-
-            int.TryParse(query1_buscar_curso_table.Rows[0][0].ToString(), out id_grupo);
 
             string query2_buscar_Asistencia_Alumnos = "SELECT CONCAT(a.apellido1,' ',a.nombre1) as Nombre, asi.asistencia as Asistencias FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno where asi.id_grupo = '"+id_grupo+"' and asi.nombre_curso = '"+curso+"' and asi.nombre_materia = '"+materia+"' and asi.fecha = '"+fecha+ "' order by(CONCAT(a.apellido1,' ',a.nombre1))";
 

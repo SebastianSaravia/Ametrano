@@ -107,11 +107,11 @@
     <Compile Include="Presentacion\Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\NotasVercion.cs">
+    <Compile Include="Presentacion\NotasVersion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\NotasVercion.Designer.cs">
-      <DependentUpon>NotasVercion.cs</DependentUpon>
+    <Compile Include="Presentacion\NotasVersion.Designer.cs">
+      <DependentUpon>NotasVersion.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentacion\ReporteErrores.cs">
       <SubType>Form</SubType>
@@ -154,8 +154,8 @@
     <EmbeddedResource Include="Presentacion\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\NotasVercion.resx">
-      <DependentUpon>NotasVercion.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\NotasVersion.resx">
+      <DependentUpon>NotasVersion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
