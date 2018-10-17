@@ -37,6 +37,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickModificarAlumnoCurso = new dynamic[2];
 
         private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
+        private dynamic[] eventoClickListarPeriodosAsistencia = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
         private DatosAlumno datosAlumnoConsulta = new DatosAlumno();
         private DatosAlumno datosAlumnoModificacion = new DatosAlumno();
@@ -75,6 +76,7 @@ namespace Ametrano.Presentacion
 
         private void Principal_Load(object sender, EventArgs e)
         {
+            boxNumeroGrupo.SelectedIndex = 0;
             boxTurnoGrupo.SelectedIndex = 0;            
             dataGridGruposActivos.DataSource = CurContr.GruposActivos();
             dataGridGruposActivos.ReadOnly = true;
@@ -2927,7 +2929,8 @@ namespace Ametrano.Presentacion
         {
             string curso = boxCursoAsistencia.SelectedItem.ToString();
             string turno = boxTurnoAsistencia.SelectedItem.ToString();
-
+            string id_grupo = "";
+            DataTable periodos = eventoClickListarPeriodosAsistencia[1];
             if (dataGridListaAsistencias.Rows.Count > 0)
             {
                 dataGridListaAsistencias.Rows.Clear();
@@ -2936,11 +2939,19 @@ namespace Ametrano.Presentacion
             if (boxCursoAsistencia.SelectedIndex == 0)
             {
                 MessageBox.Show("Debe seleccionar un curso primero.");
+            }else if (boxNumeroGrupo.SelectedIndex == 0)
+            {
+                MessageBox.Show("Debe seleccionar un grupo primero.");
             }
             else
             {
                 DataTable datosAlumnos = new DataTable();
-                string[] alumnos = CurContr.ListarAlumnosGrupo(curso, turno, out datosAlumnos);
+                if (eventoClickListarPeriodosAsistencia[0])
+                {
+                    id_grupo = periodos.Rows[boxNumeroGrupo.SelectedIndex-1][1].ToString();
+                }
+
+                string[] alumnos = CurContr.ListarAlumnosGrupo(curso, turno, id_grupo, out datosAlumnos);
 
                 for (int i = 0; i < alumnos.Length; i++)
                 {
@@ -3075,7 +3086,37 @@ namespace Ametrano.Presentacion
 
         private void boxCursoAsistencia_SelectedIndexChanged(object sender, EventArgs e)
         {
+            boxNumeroGrupo.Items.Clear();
+            boxNumeroGrupo.Items.Add("Grupo...");
+            try
+            {
+            if (boxCursoAsistencia.SelectedIndex !=0)
+            {
+                boxNumeroGrupo.Enabled = true;
+                DataTable data = new DataTable();
+               
+                string turno=boxTurnoAsistencia.SelectedItem.ToString();
+                string curso=boxCursoAsistencia.SelectedItem.ToString();
+                string[] grupos = CurContr.ListarNumeroGrupo(curso,turno, out data);
 
+                for (int i = 0; i < grupos.Length; i++)
+                {
+                       
+                        boxNumeroGrupo.Items.Add(grupos[i]);
+                }
+                    eventoClickListarPeriodosAsistencia[0] = true;
+                    eventoClickListarPeriodosAsistencia[1] = data;
+            }
+            else
+            {
+                boxNumeroGrupo.Enabled = false;
+            }
+            }
+            catch (Exception)
+            {
+
+                
+            }
         }
 
         private void dataGridViaticos_CurrentCellDirtyStateChanged(object sender, EventArgs e)
@@ -3839,6 +3880,11 @@ namespace Ametrano.Presentacion
         }
 
         private void menuPrincipal_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void boxNumeroGrupo_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

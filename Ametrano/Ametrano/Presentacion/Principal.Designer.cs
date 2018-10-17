@@ -453,6 +453,7 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.boxNumeroGrupo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -5282,6 +5283,7 @@
             this.groupBox56.Controls.Add(this.btnGuardarLista);
             this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
             this.groupBox56.Controls.Add(this.boxMateriaAsistencia);
+            this.groupBox56.Controls.Add(this.boxNumeroGrupo);
             this.groupBox56.Controls.Add(this.boxCursoAsistencia);
             this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
             this.groupBox56.Controls.Add(this.boxTurnoAsistencia);
@@ -5297,7 +5299,7 @@
             // 
             this.btnGuardarLista.Enabled = false;
             this.btnGuardarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarLista.Location = new System.Drawing.Point(23, 224);
+            this.btnGuardarLista.Location = new System.Drawing.Point(23, 262);
             this.btnGuardarLista.Name = "btnGuardarLista";
             this.btnGuardarLista.Size = new System.Drawing.Size(209, 43);
             this.btnGuardarLista.TabIndex = 39;
@@ -5309,7 +5311,7 @@
             // 
             this.dateTimeFechaAsistencia.Enabled = false;
             this.dateTimeFechaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 194);
+            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 232);
             this.dateTimeFechaAsistencia.MaxDate = new System.DateTime(2999, 9, 21, 0, 0, 0, 0);
             this.dateTimeFechaAsistencia.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimeFechaAsistencia.Name = "dateTimeFechaAsistencia";
@@ -5325,7 +5327,7 @@
             this.boxMateriaAsistencia.FormattingEnabled = true;
             this.boxMateriaAsistencia.Items.AddRange(new object[] {
             "Materia..."});
-            this.boxMateriaAsistencia.Location = new System.Drawing.Point(23, 162);
+            this.boxMateriaAsistencia.Location = new System.Drawing.Point(23, 200);
             this.boxMateriaAsistencia.Name = "boxMateriaAsistencia";
             this.boxMateriaAsistencia.Size = new System.Drawing.Size(209, 26);
             this.boxMateriaAsistencia.TabIndex = 37;
@@ -5401,7 +5403,7 @@
             // btnGenerarLista
             // 
             this.btnGenerarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarLista.Location = new System.Drawing.Point(23, 92);
+            this.btnGenerarLista.Location = new System.Drawing.Point(23, 125);
             this.btnGenerarLista.Name = "btnGenerarLista";
             this.btnGenerarLista.Size = new System.Drawing.Size(209, 32);
             this.btnGenerarLista.TabIndex = 31;
@@ -5655,15 +5657,29 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
+            // boxNumeroGrupo
+            // 
+            this.boxNumeroGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupo.Enabled = false;
+            this.boxNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupo.FormattingEnabled = true;
+            this.boxNumeroGrupo.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupo.Location = new System.Drawing.Point(23, 93);
+            this.boxNumeroGrupo.Name = "boxNumeroGrupo";
+            this.boxNumeroGrupo.Size = new System.Drawing.Size(209, 26);
+            this.boxNumeroGrupo.TabIndex = 30;
+            this.boxNumeroGrupo.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_SelectedIndexChanged);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -6260,5 +6276,6 @@
         private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton2;
         private System.Windows.Forms.ToolStripMenuItem notasDeVersiónToolStripMenuItem;
         private System.Windows.Forms.TextBox txtNumeroGrupo;
+        private System.Windows.Forms.ComboBox boxNumeroGrupo;
     }
 }

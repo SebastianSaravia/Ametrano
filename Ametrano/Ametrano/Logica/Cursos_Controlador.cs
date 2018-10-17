@@ -55,11 +55,11 @@ namespace Ametrano.Logica
             }
         }
 
-        public string[] ListarAlumnosGrupo(string curso,string turno,out DataTable dataTable)
+        public string[] ListarAlumnosGrupo(string curso,string turno, string id, out DataTable dataTable)
         {
             
 
-            string query = "SELECT CONCAT(a.apellido1,' ',a.nombre1), a.cedula_alumno FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+ "' and asi.fecha = '0001-01-01' GROUP BY a.cedula_alumno order by (CONCAT(a.apellido1,' ',a.nombre1)) asc;";
+            string query = "SELECT CONCAT(a.apellido1,' ',a.nombre1), a.cedula_alumno FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+ "' and asi.fecha = '0001-01-01' AND g.id_grupo='"+id+"' GROUP BY a.cedula_alumno order by (CONCAT(a.apellido1,' ',a.nombre1)) asc;";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
@@ -430,11 +430,7 @@ namespace Ametrano.Logica
                    
                     
                 }
-
                 
-
-
-
 
                 return true;
             } else
@@ -564,7 +560,7 @@ namespace Ametrano.Logica
 
         public string[] listarCursoPorTurno(string turno)
         {
-            string query = "SELECT nombre_curso FROM grupo where turno = '"+turno+"' and curdate() between fecha_inicio and fecha_fin;";
+            string query = "SELECT nombre_curso FROM grupo where turno = '"+turno+"' and curdate() between fecha_inicio and fecha_fin group by nombre_curso;";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
@@ -636,7 +632,33 @@ namespace Ametrano.Logica
             return periodo;
                         
         }
-        
+        public string[] ListarNumeroGrupo(string curso, string turno, out DataTable dataTable)
+        {
+
+            string query = "SET lc_time_names=es_ES;SELECT CONCAT('Numero: ',serial,' - ',monthname(fecha_inicio),' ',year(fecha_inicio),' - ',monthname(fecha_fin),' ',year(fecha_fin)), id_grupo  from grupo WHERE nombre_curso = '" + curso + "' AND fecha_inicio<=curdate() AND curdate()<fecha_fin AND turno='" + turno + "'";
+            MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
+            dataTable = new DataTable();
+            datosConsulta.Fill(dataTable);
+            int filas = dataTable.Rows.Count;
+            string[] periodo = new string[filas];
+            int i = 0;
+
+            if (filas > 0)
+            {
+                foreach (DataRow row in dataTable.Rows)
+                {
+
+                    periodo[i] = row[0].ToString();
+                    i++;
+
+                }
+
+            }
+
+            return periodo;
+
+        }
+
         public bool agregarAsistencia(string cedula, string curso, string turno, string materia, string fecha, int asistencia)
         {//metodo que agrega asistencia de alumno
             string query1_buscar_curso = "select id_grupo from grupo g where g.nombre_curso = '" + curso + "' and g.turno = '" + turno + "' and curdate() between g.fecha_inicio and g.fecha_fin;";
