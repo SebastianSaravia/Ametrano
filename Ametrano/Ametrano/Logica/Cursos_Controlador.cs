@@ -659,17 +659,10 @@ namespace Ametrano.Logica
 
         }
 
-        public bool agregarAsistencia(string cedula, string curso, string turno, string materia, string fecha, int asistencia)
+        public bool agregarAsistencia(string cedula, string curso, string turno, string materia, string fecha,string id_grupo, int asistencia)
         {//metodo que agrega asistencia de alumno
-            string query1_buscar_curso = "select id_grupo from grupo g where g.nombre_curso = '" + curso + "' and g.turno = '" + turno + "' and curdate() between g.fecha_inicio and g.fecha_fin;";
-            MySqlDataAdapter query1_buscar_curso_resultados = objetoConexion.consultarDatos(query1_buscar_curso);
-            DataTable query1_buscar_curso_table = new DataTable();
-            query1_buscar_curso_resultados.Fill(query1_buscar_curso_table);
             
-            int id_grupo = 0;
-
-            int.TryParse(query1_buscar_curso_table.Rows[0][0].ToString(),out id_grupo);
-
+       
             //busco si ya esta el registro
 
             string query2_buscar_asistencia = "select cedula_alumno from asiste a where a.nombre_curso = '"+curso+"' and id_grupo = "+id_grupo+" and cedula_alumno = '" + cedula + "' and nombre_materia = '"+materia+"' and fecha = '" + fecha + "'";

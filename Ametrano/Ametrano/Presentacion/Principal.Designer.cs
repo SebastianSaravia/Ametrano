@@ -425,6 +425,7 @@
             this.btnGuardarLista = new System.Windows.Forms.Button();
             this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
             this.boxMateriaAsistencia = new System.Windows.Forms.ComboBox();
+            this.boxNumeroGrupo = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
             this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -453,7 +454,6 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.boxNumeroGrupo = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -5331,6 +5331,21 @@
             this.boxMateriaAsistencia.Name = "boxMateriaAsistencia";
             this.boxMateriaAsistencia.Size = new System.Drawing.Size(209, 26);
             this.boxMateriaAsistencia.TabIndex = 37;
+            this.boxMateriaAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxMateriaAsistencia_SelectedIndexChanged);
+            // 
+            // boxNumeroGrupo
+            // 
+            this.boxNumeroGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupo.Enabled = false;
+            this.boxNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupo.FormattingEnabled = true;
+            this.boxNumeroGrupo.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupo.Location = new System.Drawing.Point(23, 93);
+            this.boxNumeroGrupo.Name = "boxNumeroGrupo";
+            this.boxNumeroGrupo.Size = new System.Drawing.Size(209, 26);
+            this.boxNumeroGrupo.TabIndex = 30;
+            this.boxNumeroGrupo.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_SelectedIndexChanged);
             // 
             // boxCursoAsistencia
             // 
@@ -5656,20 +5671,6 @@
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
-            // 
-            // boxNumeroGrupo
-            // 
-            this.boxNumeroGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupo.Enabled = false;
-            this.boxNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupo.FormattingEnabled = true;
-            this.boxNumeroGrupo.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupo.Location = new System.Drawing.Point(23, 93);
-            this.boxNumeroGrupo.Name = "boxNumeroGrupo";
-            this.boxNumeroGrupo.Size = new System.Drawing.Size(209, 26);
-            this.boxNumeroGrupo.TabIndex = 30;
-            this.boxNumeroGrupo.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_SelectedIndexChanged);
             // 
             // Principal
             // 

@@ -32,7 +32,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickBuscarBajaDocente = new dynamic[2];
         private dynamic[] eventoClickBuscarConsultaDocente = new dynamic[2];
         private dynamic[] eventoClickListaAlumnos = new dynamic[2];
-        private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[4];
+        private dynamic[] eventoClickGenerarListaAsistencias = new dynamic[5];
         private dynamic[] eventoClickBuscarConsultaAlumno = new dynamic[2];
         private dynamic[] eventoClickModificarAlumnoCurso = new dynamic[2];
 
@@ -2524,7 +2524,7 @@ namespace Ametrano.Presentacion
         private void MostrarCuadroInicio()
         {
             Loading ld = new Loading();
-            ld.ShowDialog();
+            ld.Show();
         }
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
@@ -2974,6 +2974,7 @@ namespace Ametrano.Presentacion
                 eventoClickGenerarListaAsistencias[1] = datosAlumnos;
                 eventoClickGenerarListaAsistencias[2] = curso;
                 eventoClickGenerarListaAsistencias[3] = turno;
+                eventoClickGenerarListaAsistencias[4] = id_grupo;
             }
 
 
@@ -3088,6 +3089,8 @@ namespace Ametrano.Presentacion
         {
             boxNumeroGrupo.Items.Clear();
             boxNumeroGrupo.Items.Add("Grupo...");
+            boxNumeroGrupo.SelectedIndex = 0;
+
             try
             {
             if (boxCursoAsistencia.SelectedIndex !=0)
@@ -3324,6 +3327,7 @@ namespace Ametrano.Presentacion
                         int asistencia = 0;
                         string nombre_curso = "";
                         string turno = "";
+                        string id_grupo = "";
 
 
                         if (boxMateriaAsistencia.SelectedIndex != 0)
@@ -3338,6 +3342,7 @@ namespace Ametrano.Presentacion
 
 
                         turno = eventoClickGenerarListaAsistencias[3];
+                        id_grupo = eventoClickGenerarListaAsistencias[4];
 
                         if (dataGridListaAsistencias.Rows[i].Cells[1].FormattedValue.Equals(true))
                         {
@@ -3352,7 +3357,7 @@ namespace Ametrano.Presentacion
 
 
 
-                        if (!CurContr.agregarAsistencia(cedula, nombre_curso, turno, materia, fecha_asistencia, asistencia))
+                        if (!CurContr.agregarAsistencia(cedula, nombre_curso, turno, materia, fecha_asistencia,id_grupo, asistencia))
                         {
                             insertFail = true;
                         }
@@ -3363,7 +3368,7 @@ namespace Ametrano.Presentacion
 
                     if (insertFail)
                     {
-                        hilo.Abort();
+                        
                         MessageBox.Show("hubieron errores al insertar los datos");
 
 
@@ -3885,6 +3890,11 @@ namespace Ametrano.Presentacion
         }
 
         private void boxNumeroGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void boxMateriaAsistencia_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
