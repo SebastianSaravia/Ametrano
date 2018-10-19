@@ -14,6 +14,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -2518,16 +2519,25 @@ namespace Ametrano.Presentacion
                 txtBuscar.MaxLength = 255;
             }
         }
-       
+        private void MostrarCuadroInicio()
+        {
+            Loading ld = new Loading();
+            ld.ShowDialog();
+        }
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
             bool viaticoExitoso = true;
             DataTable listaAlumnos = eventoClickListaAlumnos[1];
-            Loading ld = new Loading();
+
+            ThreadStart proceso = new ThreadStart(MostrarCuadroInicio);
+            Thread hilo = new Thread(proceso);
+
             if (boxCursoViaticos.SelectedIndex != 0)
             {
                 
-                ld.ShowDialog();
+                hilo.Start();
+                
+                
                 foreach (DataRow row in listaAlumnos.Rows)
                 {
                     string ci = "";
@@ -2543,8 +2553,8 @@ namespace Ametrano.Presentacion
 
                     if (!CurContr.AñadirSemanaViatico(ci))
                     {
-                       
-                        ld.Dispose();
+
+                        hilo.Abort();
                         MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
                         viaticoExitoso = false;
                         break;
@@ -2556,8 +2566,8 @@ namespace Ametrano.Presentacion
 
             if (viaticoExitoso)
             {
-                
-                ld.Dispose();
+
+                hilo.Abort();
                 MessageBox.Show("Se ha generado el viatico correctamente", "Viatico generado con exito");
                 listAlumnosViaticos.SelectedIndex = listaAlumnos.Rows.Count - 1;
                 listAlumnosViaticos.SelectedIndex = 0;
