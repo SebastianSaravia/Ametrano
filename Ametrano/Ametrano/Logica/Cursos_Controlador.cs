@@ -152,7 +152,8 @@ namespace Ametrano.Logica
                         
             if (num >=7)//Valida que hayan pasado los 7 dias
             {
-                
+                bool agregarMasViaticos = false;
+
                 //Busca el monto de viatico por dia del alumno seleccionado
                 double monto = 0;
                 string query3 = "SELECT monto_viatico_por_dia FROM alumno WHERE cedula_alumno='"+cedula+"';";
@@ -173,6 +174,7 @@ namespace Ametrano.Logica
                 }
 
 
+                ConsultarFechaUltimoViatico:
 
                 //Calculo de fecha de inicio y fecha de fin
 
@@ -198,53 +200,133 @@ namespace Ametrano.Logica
                
                 if (fecha_ulimo_viatico.Equals(""))
                 {//Primer viatico generado
+                    string queryBuscarFechaInicioGrupo = "select g.fecha_inicio,g.id_grupo from grupo g join asiste a on a.id_grupo = g.id_grupo where a.cedula_alumno = '" + cedula + "' and a.nombre_materia = 'nuevo'";
+                    MySqlDataAdapter buscarFechaInicioGrupoDatos = objetoConexion.consultarDatos(queryBuscarFechaInicioGrupo);//Esto busca la fecha de inicio del curso de el alumno en cuestion
+                    DataTable buscarFechaInicioGrupoTable = new DataTable();
+                    buscarFechaInicioGrupoDatos.Fill(buscarFechaInicioGrupoTable);
+
+                    string fechaInicio_grupo = buscarFechaInicioGrupoTable.Rows[0][0].ToString();
+                    string id_grupo = buscarFechaInicioGrupoTable.Rows[0][1].ToString();
+
                     if (fechaDT.DayOfWeek == DayOfWeek.Friday)
                     {
                         fechaDT = fechaDT.AddDays(-11);
-                    }else
+                    }
+                    else
                     {
                         fechaDT = fechaDT.AddDays(-10);
                     }
-                    
-                    fechaInicioNueva = fechaDT.ToString("yyyy-MM-dd");
 
-                    fechaDT = DateTime.Parse(fechaInicioNueva);
+                    string comprobarFecha = fechaDT.ToString("yyyy-MM-dd");
 
-                    fechaDT = fechaDT.AddDays(4);
-
-                    fechaFinNueva = fechaDT.ToString("yyyy-MM-dd");
-
-                    double montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
-
-                    int semana = 1;
-
-                    //Incerta los datos del viatico en la bd
-                    string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana "+semana+"',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','"+semana+"')";
-                    int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
-
-                    //selecciona la id de viatico de la operacion actual
-                    string query5 = "select max(id_viatico) from viatico where fecha = curdate()";
-                    MySqlDataAdapter datosConsulta5 = objetoConexion.consultarDatos(query5);
-                    DataTable dataTable5 = new DataTable();
-                    datosConsulta5.Fill(dataTable5);
-                    int contar = dataTable5.Columns.Count;
-                    int id = 0;
-                    if (contar > 0)
+                    if (comprobarFecha.Equals(fechaInicio_grupo))
                     {
-                        foreach (DataRow row in dataTable5.Rows)
-                        {
-                            foreach (DataColumn column in dataTable5.Columns)
-                            {
-                                int.TryParse(row[column].ToString(), out id);
-                            }
+                        fechaInicioNueva = fechaDT.ToString("yyyy-MM-dd");
 
+                        fechaDT = DateTime.Parse(fechaInicioNueva);
+
+                        fechaDT = fechaDT.AddDays(4);
+
+                        fechaFinNueva = fechaDT.ToString("yyyy-MM-dd");
+
+                        double montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
+
+                        int semana = 1;
+
+                        //Incerta los datos del viatico en la bd
+                        string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana " + semana + "',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','" + semana + "')";
+                        int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
+
+                        //selecciona la id de viatico de la operacion actual
+                        string query5 = "select max(id_viatico) from viatico where fecha = curdate()";
+                        MySqlDataAdapter datosConsulta5 = objetoConexion.consultarDatos(query5);
+                        DataTable dataTable5 = new DataTable();
+                        datosConsulta5.Fill(dataTable5);
+                        int contar = dataTable5.Columns.Count;
+                        int id = 0;
+                        if (contar > 0)
+                        {
+                            foreach (DataRow row in dataTable5.Rows)
+                            {
+                                foreach (DataColumn column in dataTable5.Columns)
+                                {
+                                    int.TryParse(row[column].ToString(), out id);
+                                }
+
+                            }
                         }
+                        //Se incertan los datos del viatico pagado en la tabla recive
+                        string query6 = "INSERT INTO recive VALUES('" + id + "','" + cedula + "')";
+                        int datosConsulta6 = objetoConexion.sqlInsertUpdate(query6);
                     }
-                    //Se incertan los datos del viatico pagado en la tabla recive
-                    string query6 = "INSERT INTO recive VALUES('" + id + "','" + cedula + "')";
-                    int datosConsulta6 = objetoConexion.sqlInsertUpdate(query6);
+                    else
+                    {//Si es el primer viatico pero paso mas de una semana vencida debo hacer lo siguiente
+                        DateTime aux = DateTime.Parse(fechaInicio_grupo);
+                        fechaInicioNueva = aux.ToString("yyyy-MM-dd");
+
+                        fechaDT = DateTime.Parse(fechaInicioNueva);
+                        
+                       switch (fechaDT.DayOfWeek)
+                        {
+                            case DayOfWeek.Monday:
+                                fechaDT = fechaDT.AddDays(4);
+                                break;
+                            case DayOfWeek.Tuesday:
+                                fechaDT = fechaDT.AddDays(3);
+                                break;
+                            case DayOfWeek.Wednesday:
+                                fechaDT = fechaDT.AddDays(2);
+                                break;
+                            case DayOfWeek.Thursday:
+                                fechaDT = fechaDT.AddDays(1);
+                                break;
+                            case DayOfWeek.Friday:
+                                fechaDT = fechaDT.AddDays(0);
+                                break;
+                        }
+
+                        fechaFinNueva = fechaDT.ToString("yyyy-MM-dd");
+
+                        double montoTotal = calcularMonto(fechaInicioNueva, fechaFinNueva, cedula, monto);
+
+                        int semana = 1;
+
+                        //Incerta los datos del viatico en la bd
+                        string query4 = "INSERT INTO viatico (fecha,monto,rubro,concepto,abonado,fecha_inicio,fecha_fin,semana) VALUES(curdate()," + montoTotal + ",'','Semana " + semana + "',0,'" + fechaInicioNueva + "','" + fechaFinNueva + "','" + semana + "')";
+                        int datosConsulta4 = objetoConexion.sqlInsertUpdate(query4);
+
+                        //selecciona la id de viatico de la operacion actual
+                        string query5 = "select max(id_viatico) from viatico where fecha = curdate()";
+                        MySqlDataAdapter datosConsulta5 = objetoConexion.consultarDatos(query5);
+                        DataTable dataTable5 = new DataTable();
+                        datosConsulta5.Fill(dataTable5);
+                        int contar = dataTable5.Columns.Count;
+                        int id = 0;
+                        if (contar > 0)
+                        {
+                            foreach (DataRow row in dataTable5.Rows)
+                            {
+                                foreach (DataColumn column in dataTable5.Columns)
+                                {
+                                    int.TryParse(row[column].ToString(), out id);
+                                }
+
+                            }
+                        }
+                        //Se incertan los datos del viatico pagado en la tabla recive
+                        string query6 = "INSERT INTO recive VALUES('" + id + "','" + cedula + "')";
+                        int datosConsulta6 = objetoConexion.sqlInsertUpdate(query6);
+                        agregarMasViaticos = true;
+                        if (agregarMasViaticos)
+                        {
+                            goto ConsultarFechaUltimoViatico;
+                        }
+                        
+
+                    }
 
                 }
+
                 else
                 {
                 AgregarSemanaViatico:
@@ -344,15 +426,16 @@ namespace Ametrano.Logica
                     {
                         goto AgregarSemanaViatico;
                     }
-                    
 
+                   
                     
                 }
 
+                
 
 
 
-               
+
                 return true;
             } else
             {
