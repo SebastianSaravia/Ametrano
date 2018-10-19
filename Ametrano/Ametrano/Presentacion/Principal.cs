@@ -2518,11 +2518,12 @@ namespace Ametrano.Presentacion
                 txtBuscar.MaxLength = 255;
             }
         }
-        Loading ld = new Loading();
+       
         private void btnAñadirSemanaViaticos_Click(object sender, EventArgs e)
         {
             bool viaticoExitoso = true;
             DataTable listaAlumnos = eventoClickListaAlumnos[1];
+            Loading ld = new Loading();
             if (boxCursoViaticos.SelectedIndex != 0)
             {
                 
@@ -2542,7 +2543,8 @@ namespace Ametrano.Presentacion
 
                     if (!CurContr.AñadirSemanaViatico(ci))
                     {
-
+                       
+                        ld.Dispose();
                         MessageBox.Show("Error al generar nueva semana de pago de viaticos, aún no ha pasado una semana desde el ultimo pago", "No es posible agregar otra semana de pago");
                         viaticoExitoso = false;
                         break;
@@ -2554,6 +2556,7 @@ namespace Ametrano.Presentacion
 
             if (viaticoExitoso)
             {
+                
                 ld.Dispose();
                 MessageBox.Show("Se ha generado el viatico correctamente", "Viatico generado con exito");
                 listAlumnosViaticos.SelectedIndex = listaAlumnos.Rows.Count - 1;
