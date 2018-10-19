@@ -586,10 +586,10 @@ namespace Ametrano.Logica
             return cursos;
         }
         
-        public bool AgregarGrupo(string curso, string inicio, string fin, string turno)
+        public bool AgregarGrupo(string curso, string inicio, string fin, string turno,string numero)
         {
-            string query = "INSERT INTO grupo(nombre_curso, fecha_inicio, fecha_fin,turno) VALUES('{0}','{1}','{2}','{3}')";
-            query = string.Format(query, curso, inicio, fin, turno);
+            string query = "INSERT INTO grupo(nombre_curso, fecha_inicio, fecha_fin,turno,serial) VALUES('{0}','{1}','{2}','{3}','{4}')";
+            query = string.Format(query, curso, inicio, fin, turno,numero);
             int datosCons = objetoConexion.sqlInsertUpdate(query);
             bool resultado = false;
             if (datosCons == 1)
@@ -601,7 +601,7 @@ namespace Ametrano.Logica
 
         public DataTable GruposActivos()
         {
-            string query = "SELECT nombre_curso as 'Nombre', fecha_inicio as 'Fecha de inicio', fecha_fin as 'Fecha de finalizacion', turno as 'Turno' FROM grupo WHERE curdate() BETWEEN fecha_inicio AND fecha_fin OR fecha_inicio>=curdate()";
+            string query = "SELECT nombre_curso as 'Nombre', fecha_inicio as 'Fecha de inicio', fecha_fin as 'Fecha de finalizacion', turno as 'Turno', serial as 'Numero' FROM grupo WHERE curdate() BETWEEN fecha_inicio AND fecha_fin OR fecha_inicio>=curdate()";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             DataTable dataTable = new DataTable();
             datosConsulta.Fill(dataTable);

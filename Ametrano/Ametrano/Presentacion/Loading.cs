@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Ametrano.Presentacion
 {
-    public partial class NotasVersion : Form
+    public partial class Loading : Form
     {
-        public NotasVersion()
+        public Loading()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Dispose();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

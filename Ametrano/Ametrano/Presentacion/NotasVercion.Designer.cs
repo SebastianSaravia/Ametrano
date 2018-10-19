@@ -36,8 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -107,7 +110,28 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Versión: 1.0.0.5";
+            this.label4.Text = "Versión: 1.0.0.6";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Location = new System.Drawing.Point(12, 283);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(447, 155);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Solucion de errores";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(22, 36);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(393, 26);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "- Se soluciono un error que ocurria al generar viaticos de un curso cuando este y" +
+    "a\r\n   estaba muy avanxado\r\n";
             // 
             // NotasVersion
             // 
@@ -117,6 +141,7 @@
             this.ClientSize = new System.Drawing.Size(471, 507);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
@@ -128,6 +153,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -142,5 +169,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label5;
     }
 }
