@@ -416,7 +416,6 @@
             this.groupBox57 = new System.Windows.Forms.GroupBox();
             this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
             this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
-            this.boxMateriaAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias_2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -456,6 +455,7 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
+            this.lstMateriasDelDia = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -5185,9 +5185,9 @@
             // 
             // groupBox57
             // 
+            this.groupBox57.Controls.Add(this.lstMateriasDelDia);
             this.groupBox57.Controls.Add(this.boxNumeroGrupo_2);
             this.groupBox57.Controls.Add(this.boxTurnoAsistencia_2);
-            this.groupBox57.Controls.Add(this.boxMateriaAsistencia_2);
             this.groupBox57.Controls.Add(this.boxCursoAsistencia_2);
             this.groupBox57.Controls.Add(this.dataGridListaAsistencias_2);
             this.groupBox57.Controls.Add(this.dateTimeFechaAsistencia_2);
@@ -5211,6 +5211,7 @@
             this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
             this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
             this.boxNumeroGrupo_2.TabIndex = 34;
+            this.boxNumeroGrupo_2.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_2_SelectedIndexChanged);
             // 
             // boxTurnoAsistencia_2
             // 
@@ -5227,19 +5228,6 @@
             this.boxTurnoAsistencia_2.Size = new System.Drawing.Size(209, 26);
             this.boxTurnoAsistencia_2.TabIndex = 33;
             this.boxTurnoAsistencia_2.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_2_SelectedIndexChanged);
-            // 
-            // boxMateriaAsistencia_2
-            // 
-            this.boxMateriaAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxMateriaAsistencia_2.Enabled = false;
-            this.boxMateriaAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxMateriaAsistencia_2.FormattingEnabled = true;
-            this.boxMateriaAsistencia_2.Items.AddRange(new object[] {
-            "Materia..."});
-            this.boxMateriaAsistencia_2.Location = new System.Drawing.Point(23, 192);
-            this.boxMateriaAsistencia_2.Name = "boxMateriaAsistencia_2";
-            this.boxMateriaAsistencia_2.Size = new System.Drawing.Size(209, 26);
-            this.boxMateriaAsistencia_2.TabIndex = 30;
             // 
             // boxCursoAsistencia_2
             // 
@@ -5301,12 +5289,13 @@
             this.dateTimeFechaAsistencia_2.Name = "dateTimeFechaAsistencia_2";
             this.dateTimeFechaAsistencia_2.Size = new System.Drawing.Size(209, 24);
             this.dateTimeFechaAsistencia_2.TabIndex = 32;
+            this.dateTimeFechaAsistencia_2.ValueChanged += new System.EventHandler(this.dateTimeFechaAsistencia_2_ValueChanged);
             // 
             // btnConsultarLista
             // 
             this.btnConsultarLista.Enabled = false;
             this.btnConsultarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarLista.Location = new System.Drawing.Point(23, 224);
+            this.btnConsultarLista.Location = new System.Drawing.Point(23, 262);
             this.btnConsultarLista.Name = "btnConsultarLista";
             this.btnConsultarLista.Size = new System.Drawing.Size(209, 43);
             this.btnConsultarLista.TabIndex = 31;
@@ -5707,6 +5696,17 @@
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
+            // 
+            // lstMateriasDelDia
+            // 
+            this.lstMateriasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstMateriasDelDia.FormattingEnabled = true;
+            this.lstMateriasDelDia.ItemHeight = 18;
+            this.lstMateriasDelDia.Location = new System.Drawing.Point(23, 161);
+            this.lstMateriasDelDia.Name = "lstMateriasDelDia";
+            this.lstMateriasDelDia.Size = new System.Drawing.Size(209, 94);
+            this.lstMateriasDelDia.TabIndex = 35;
+            this.lstMateriasDelDia.SelectedIndexChanged += new System.EventHandler(this.lstMateriasDelDia_SelectedIndexChanged);
             // 
             // Principal
             // 
@@ -6249,7 +6249,6 @@
         private System.Windows.Forms.ComboBox boxEstadoAlumno_2;
         private System.Windows.Forms.ComboBox boxCursoAlumno_2;
         private System.Windows.Forms.GroupBox groupBox57;
-        private System.Windows.Forms.ComboBox boxMateriaAsistencia_2;
         private System.Windows.Forms.ComboBox boxCursoAsistencia_2;
         private System.Windows.Forms.DataGridView dataGridListaAsistencias_2;
         private System.Windows.Forms.DateTimePicker dateTimeFechaAsistencia_2;
@@ -6316,5 +6315,6 @@
         private System.Windows.Forms.ComboBox boxNumeroGrupo;
         private System.Windows.Forms.ComboBox boxNumeroGrupo_2;
         private System.Windows.Forms.ComboBox boxNumeroGrupoViaticos;
+        private System.Windows.Forms.ListBox lstMateriasDelDia;
     }
 }

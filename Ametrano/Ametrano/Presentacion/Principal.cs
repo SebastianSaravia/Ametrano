@@ -107,7 +107,6 @@ namespace Ametrano.Presentacion
             boxCursoAsistencia.SelectedIndex = 0;
             boxCursoAsistencia_2.SelectedIndex = 0;
             boxMateriaAsistencia.SelectedIndex = 0;
-            boxMateriaAsistencia_2.SelectedIndex = 0;
             boxCursoViaticos.SelectedIndex = 0;
             boxPeriodoAlumno.SelectedIndex = 0;
             boxPeriodoAlumno_2.SelectedIndex = 0;
@@ -3392,8 +3391,8 @@ namespace Ametrano.Presentacion
         {
             if (boxTurnoAsistencia_2.SelectedIndex != 0)
             {
+                
                 boxCursoAsistencia_2.Enabled = true;
-
                 boxCursoAsistencia_2.Items.Clear();
                 boxCursoAsistencia_2.Items.Add("Curso...");
 
@@ -3418,6 +3417,7 @@ namespace Ametrano.Presentacion
             else
             {
                 boxCursoAsistencia_2.Enabled = false;
+                btnConsultarLista.Enabled = false;
             }
 
 
@@ -3428,7 +3428,7 @@ namespace Ametrano.Presentacion
 
         private void btnConsultarLista_Click(object sender, EventArgs e)
         {
-            if (boxMateriaAsistencia_2.SelectedIndex != 0)
+            if (lstMateriasDelDia.SelectedIndex != -1)
             {
                 if (dataGridListaAsistencias_2.Rows.Count > 0)
                 {
@@ -3437,9 +3437,10 @@ namespace Ametrano.Presentacion
                 string turno = boxTurnoAsistencia_2.SelectedItem.ToString();
                 string curso = boxCursoAsistencia_2.SelectedItem.ToString();
                 string fecha = dateTimeFechaAsistencia_2.Value.ToString("yyyy-MM-dd");
-                string materia = boxMateriaAsistencia_2.SelectedItem.ToString();
+                string materia = lstMateriasDelDia.SelectedItem.ToString();
                 DataTable datos = eventoClickConsultarListaAsistencias[1];
                 string id_grupo = "";
+                
                 if (eventoClickConsultarListaAsistencias[0])
                 {
                     id_grupo = datos.Rows[boxNumeroGrupo_2.SelectedIndex - 1][1].ToString();
@@ -3496,6 +3497,8 @@ namespace Ametrano.Presentacion
         {
             if (boxCursoAsistencia_2.SelectedIndex != 0)
             {
+                btnConsultarLista.Enabled = false;
+
                 string curso = boxCursoAsistencia_2.SelectedItem.ToString();
                 boxNumeroGrupo_2.Items.Clear();
                 boxNumeroGrupo_2.Items.Add("Grupo...");
@@ -3531,17 +3534,6 @@ namespace Ametrano.Presentacion
 
                 }
 
-
-                string[] materias = controlador.ListarMateriasPorCurso(curso);
-                boxMateriaAsistencia_2.Items.Clear();
-                boxMateriaAsistencia_2.Items.Add("Materia...");
-                for (int i = 0; i < materias.Length; i++)
-                {
-                    boxMateriaAsistencia_2.Items.Add(materias[i]);
-                }
-                boxMateriaAsistencia_2.SelectedIndex = 0;
-                btnConsultarLista.Enabled = true;
-                boxMateriaAsistencia_2.Enabled = true;
             }
             else
             {
@@ -4039,6 +4031,50 @@ namespace Ametrano.Presentacion
         private void txtApellido2Alumno_TextChanged(object sender, EventArgs e)
         {
             txtApellido2Alumno.Text.ToUpper();
+        }
+
+        private void dateTimeFechaAsistencia_2_ValueChanged(object sender, EventArgs e)
+        {
+            if(boxTurnoAsistencia_2.SelectedIndex!=0 && boxCursoAsistencia_2.SelectedIndex!=0 && boxNumeroGrupo_2.SelectedIndex != 0)
+            {
+                btnConsultarLista.Enabled = false;
+                string fecha = dateTimeFechaAsistencia_2.Value.ToString("yyyy-MM-dd");
+                string turno = boxTurnoAsistencia_2.SelectedItem.ToString();
+                string curso = boxCursoAsistencia_2.SelectedItem.ToString();
+                DataTable numeroLista = eventoClickConsultarListaAsistencias[1];
+                string numeroCurso = numeroLista.Rows[boxNumeroGrupo_2.SelectedIndex - 1][1].ToString();
+
+                DataTable materias = CurContr.listarMateriasDeUnDia(turno, curso, numeroCurso, fecha);
+                lstMateriasDelDia.Items.Clear();
+                foreach (DataRow item in materias.Rows)
+                {
+                    lstMateriasDelDia.Items.Add(item[0].ToString());
+                }
+
+            }
+        }
+
+        private void lstMateriasDelDia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lstMateriasDelDia.SelectedIndex != -1 && boxTurnoAsistencia_2.SelectedIndex!=0 && boxCursoAsistencia_2.SelectedIndex!=0 && boxNumeroGrupo_2.SelectedIndex!=0)
+            {
+                btnConsultarLista.Enabled = true;
+            }else
+            {
+                btnConsultarLista.Enabled = false;
+            }
+        }
+
+        private void boxNumeroGrupo_2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxNumeroGrupo_2.SelectedIndex == 0)
+            {
+                btnConsultarLista.Enabled = false;
+            }else
+            {
+                dateTimeFechaAsistencia_2_ValueChanged(sender, e);
+            }
+
         }
     }
 }
