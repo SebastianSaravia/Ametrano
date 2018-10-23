@@ -4020,5 +4020,25 @@ namespace Ametrano.Presentacion
         {
 
         }
+
+        private void txtNombre1Alumno_TextChanged(object sender, EventArgs e)
+        {
+            txtNombre1Alumno.Text.ToUpper();
+        }
+
+        private void txtNombre2Alumno_TextChanged(object sender, EventArgs e)
+        {
+           txtNombre2Alumno.Text.ToUpper();
+        }
+
+        private void txtApellido1Alumno_TextChanged(object sender, EventArgs e)
+        {
+           txtApellido1Alumno.Text.ToUpper();
+        }
+
+        private void txtApellido2Alumno_TextChanged(object sender, EventArgs e)
+        {
+            txtApellido2Alumno.Text.ToUpper();
+        }
     }
 }

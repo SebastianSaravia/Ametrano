@@ -396,6 +396,7 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.viaticos = new System.Windows.Forms.TabPage();
+            this.boxNumeroGrupoViaticos = new System.Windows.Forms.ComboBox();
             this.boxTurnoViaticos = new System.Windows.Forms.ComboBox();
             this.lblBlockViaticos = new System.Windows.Forms.Label();
             this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
@@ -413,6 +414,7 @@
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
             this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
             this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxMateriaAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
@@ -454,8 +456,6 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
-            this.boxNumeroGrupoViaticos = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -1834,7 +1834,8 @@
             this.txtApellido2Alumno.Name = "txtApellido2Alumno";
             this.txtApellido2Alumno.Size = new System.Drawing.Size(167, 24);
             this.txtApellido2Alumno.TabIndex = 10;
-            this.txtApellido2Alumno.Text = "Segundo apellido";
+            this.txtApellido2Alumno.Text = "SEGUNDO APELLIDO";
+            this.txtApellido2Alumno.TextChanged += new System.EventHandler(this.txtApellido2Alumno_TextChanged);
             this.txtApellido2Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido2Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido2Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1848,7 +1849,8 @@
             this.txtApellido1Alumno.Name = "txtApellido1Alumno";
             this.txtApellido1Alumno.Size = new System.Drawing.Size(167, 24);
             this.txtApellido1Alumno.TabIndex = 9;
-            this.txtApellido1Alumno.Text = "Primer apellido";
+            this.txtApellido1Alumno.Text = "PRIMER APELLIDO";
+            this.txtApellido1Alumno.TextChanged += new System.EventHandler(this.txtApellido1Alumno_TextChanged);
             this.txtApellido1Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido1Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtApellido1Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1861,7 +1863,8 @@
             this.txtNombre2Alumno.Name = "txtNombre2Alumno";
             this.txtNombre2Alumno.Size = new System.Drawing.Size(167, 24);
             this.txtNombre2Alumno.TabIndex = 8;
-            this.txtNombre2Alumno.Text = "Segundo nombre";
+            this.txtNombre2Alumno.Text = "SEGUNDO NOMBRE";
+            this.txtNombre2Alumno.TextChanged += new System.EventHandler(this.txtNombre2Alumno_TextChanged);
             this.txtNombre2Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre2Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre2Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -1874,7 +1877,8 @@
             this.txtNombre1Alumno.Name = "txtNombre1Alumno";
             this.txtNombre1Alumno.Size = new System.Drawing.Size(167, 24);
             this.txtNombre1Alumno.TabIndex = 7;
-            this.txtNombre1Alumno.Text = "Primer nombre";
+            this.txtNombre1Alumno.Text = "PRIMER NOMBRE";
+            this.txtNombre1Alumno.TextChanged += new System.EventHandler(this.txtNombre1Alumno_TextChanged);
             this.txtNombre1Alumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre1Alumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
             this.txtNombre1Alumno.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4988,6 +4992,20 @@
             this.viaticos.Text = "Viaticos";
             this.viaticos.Click += new System.EventHandler(this.viaticos_Click);
             // 
+            // boxNumeroGrupoViaticos
+            // 
+            this.boxNumeroGrupoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupoViaticos.Enabled = false;
+            this.boxNumeroGrupoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupoViaticos.FormattingEnabled = true;
+            this.boxNumeroGrupoViaticos.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupoViaticos.Location = new System.Drawing.Point(39, 118);
+            this.boxNumeroGrupoViaticos.Name = "boxNumeroGrupoViaticos";
+            this.boxNumeroGrupoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxNumeroGrupoViaticos.TabIndex = 35;
+            this.boxNumeroGrupoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupoViaticos_SelectedIndexChanged);
+            // 
             // boxTurnoViaticos
             // 
             this.boxTurnoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5180,6 +5198,19 @@
             this.groupBox57.TabIndex = 35;
             this.groupBox57.TabStop = false;
             this.groupBox57.Text = "Consultar lista";
+            // 
+            // boxNumeroGrupo_2
+            // 
+            this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupo_2.Enabled = false;
+            this.boxNumeroGrupo_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupo_2.FormattingEnabled = true;
+            this.boxNumeroGrupo_2.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupo_2.Location = new System.Drawing.Point(23, 95);
+            this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
+            this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
+            this.boxNumeroGrupo_2.TabIndex = 34;
             // 
             // boxTurnoAsistencia_2
             // 
@@ -5542,7 +5573,7 @@
             this.boxTurnoGrupo.Items.AddRange(new object[] {
             "Turno...",
             "Matutino",
-            "Verpertino",
+            "Vespertino",
             "Nocturno"});
             this.boxTurnoGrupo.Location = new System.Drawing.Point(290, 49);
             this.boxTurnoGrupo.Name = "boxTurnoGrupo";
@@ -5676,33 +5707,6 @@
             this.boxTipoCurso.Name = "boxTipoCurso";
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
-            // 
-            // boxNumeroGrupo_2
-            // 
-            this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupo_2.Enabled = false;
-            this.boxNumeroGrupo_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupo_2.FormattingEnabled = true;
-            this.boxNumeroGrupo_2.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupo_2.Location = new System.Drawing.Point(23, 95);
-            this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
-            this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
-            this.boxNumeroGrupo_2.TabIndex = 34;
-            // 
-            // boxNumeroGrupoViaticos
-            // 
-            this.boxNumeroGrupoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupoViaticos.Enabled = false;
-            this.boxNumeroGrupoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupoViaticos.FormattingEnabled = true;
-            this.boxNumeroGrupoViaticos.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupoViaticos.Location = new System.Drawing.Point(39, 118);
-            this.boxNumeroGrupoViaticos.Name = "boxNumeroGrupoViaticos";
-            this.boxNumeroGrupoViaticos.Size = new System.Drawing.Size(203, 26);
-            this.boxNumeroGrupoViaticos.TabIndex = 35;
-            this.boxNumeroGrupoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupoViaticos_SelectedIndexChanged);
             // 
             // Principal
             // 

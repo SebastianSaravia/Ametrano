@@ -67,12 +67,29 @@ namespace Ametrano.Encapsulado
              * datosCurso[3] = -> viatico por dia asistido
              * datosCurso[4] = -> turno
              */
+            if (datosCursoRecibidos[4].Equals("Turno..."))
+            {
+                errores = true;
+                mensajeParaRetornar += "\nDebe seleccionar un turno";
+            }else
+            {
+                datosCurso[4] = datosCursoRecibidos[4];
+            }
 
-            datosCurso[0] = datosCursoRecibidos[0];
+            if (datosCursoRecibidos[0] == "Curso...")
+            {
+                errores = true;
+                mensajeParaRetornar += "\nDebe seleccionar un curso";
+            }else
+            {
+                datosCurso[0] = datosCursoRecibidos[0];
+            }
+            
             datosCurso[1] = datosCursoRecibidos[1];
             datosCurso[2] = datosCursoRecibidos[2];
             datosCurso[3] = datosCursoRecibidos[3];
-            datosCurso[4] = datosCursoRecibidos[4];
+            
+            
 
 
             dynamic[] datosParaRetornar = new dynamic[2];
