@@ -3339,6 +3339,7 @@ namespace Ametrano.Presentacion
 
                         turno = eventoClickGenerarListaAsistencias[3];
                         id_grupo = eventoClickGenerarListaAsistencias[4];
+                        
 
                         if (dataGridListaAsistencias.Rows[i].Cells[1].FormattedValue.Equals(true))
                         {

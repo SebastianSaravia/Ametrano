@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -722,14 +723,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -5428,6 +5429,10 @@
             // 
             // colAsistenciaAsistencias
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.NullValue = false;
+            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle1;
             this.colAsistenciaAsistencias.Frozen = true;
             this.colAsistenciaAsistencias.HeaderText = "Asistencias";
             this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
@@ -6284,8 +6289,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
         private System.Windows.Forms.Label lblBlockViaticos;
         private System.Windows.Forms.Button btnCrearGrupo;
         private System.Windows.Forms.Button btnCrearCurso;
@@ -6316,5 +6319,7 @@
         private System.Windows.Forms.ComboBox boxNumeroGrupo_2;
         private System.Windows.Forms.ComboBox boxNumeroGrupoViaticos;
         private System.Windows.Forms.ListBox lstMateriasDelDia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
     }
 }

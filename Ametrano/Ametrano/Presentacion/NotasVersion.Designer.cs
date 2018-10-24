@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotasVersion));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -88,9 +87,10 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(22, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(392, 39);
+            this.label3.Size = new System.Drawing.Size(392, 26);
             this.label3.TabIndex = 2;
-            this.label3.Text = resources.GetString("label3.Text");
+            this.label3.Text = "- Se agrego reestriccion la cual no permite continuar con el registro o modificac" +
+    "ion\r\n  de un alumno si no se agrego un turno y curso.";
             // 
             // button1
             // 
