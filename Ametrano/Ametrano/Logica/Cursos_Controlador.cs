@@ -763,6 +763,22 @@ namespace Ametrano.Logica
             return resultado;
         }
 
+        public DataTable listarMateriasDeUnDia(string turno, string curso, string numeroCurso, string fecha)
+        {
+            string query = "SELECT nombre_materia from asiste a join grupo g on g.id_grupo = a.id_grupo where a.nombre_curso = '"+curso+"' and a.fecha = '"+fecha+"' and g.id_grupo = "+numeroCurso+" and g.turno = '"+turno+"' group by (nombre_materia)";
+            MySqlDataAdapter listaMaterias = objetoConexion.consultarDatos(query);
+            DataTable datosParaRetornar = new DataTable();
+            try
+            {
+                listaMaterias.Fill(datosParaRetornar);
+            }catch(Exception e)
+            {
+
+            }
+            return datosParaRetornar;
+
+        }
+        
     }
 
 }
