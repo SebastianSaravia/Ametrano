@@ -396,6 +396,7 @@
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.viaticos = new System.Windows.Forms.TabPage();
+            this.boxNumeroGrupoViaticos = new System.Windows.Forms.ComboBox();
             this.boxTurnoViaticos = new System.Windows.Forms.ComboBox();
             this.lblBlockViaticos = new System.Windows.Forms.Label();
             this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
@@ -413,6 +414,7 @@
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
             this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
             this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxMateriaAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
@@ -454,8 +456,6 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
-            this.boxNumeroGrupoViaticos = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -722,14 +722,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -4988,6 +4988,20 @@
             this.viaticos.Text = "Viaticos";
             this.viaticos.Click += new System.EventHandler(this.viaticos_Click);
             // 
+            // boxNumeroGrupoViaticos
+            // 
+            this.boxNumeroGrupoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupoViaticos.Enabled = false;
+            this.boxNumeroGrupoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupoViaticos.FormattingEnabled = true;
+            this.boxNumeroGrupoViaticos.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupoViaticos.Location = new System.Drawing.Point(39, 118);
+            this.boxNumeroGrupoViaticos.Name = "boxNumeroGrupoViaticos";
+            this.boxNumeroGrupoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxNumeroGrupoViaticos.TabIndex = 35;
+            this.boxNumeroGrupoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupoViaticos_SelectedIndexChanged);
+            // 
             // boxTurnoViaticos
             // 
             this.boxTurnoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5180,6 +5194,19 @@
             this.groupBox57.TabIndex = 35;
             this.groupBox57.TabStop = false;
             this.groupBox57.Text = "Consultar lista";
+            // 
+            // boxNumeroGrupo_2
+            // 
+            this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupo_2.Enabled = false;
+            this.boxNumeroGrupo_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupo_2.FormattingEnabled = true;
+            this.boxNumeroGrupo_2.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupo_2.Location = new System.Drawing.Point(23, 95);
+            this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
+            this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
+            this.boxNumeroGrupo_2.TabIndex = 34;
             // 
             // boxTurnoAsistencia_2
             // 
@@ -5677,42 +5704,15 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // boxNumeroGrupo_2
-            // 
-            this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupo_2.Enabled = false;
-            this.boxNumeroGrupo_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupo_2.FormattingEnabled = true;
-            this.boxNumeroGrupo_2.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupo_2.Location = new System.Drawing.Point(23, 95);
-            this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
-            this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
-            this.boxNumeroGrupo_2.TabIndex = 34;
-            // 
-            // boxNumeroGrupoViaticos
-            // 
-            this.boxNumeroGrupoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupoViaticos.Enabled = false;
-            this.boxNumeroGrupoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupoViaticos.FormattingEnabled = true;
-            this.boxNumeroGrupoViaticos.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupoViaticos.Location = new System.Drawing.Point(39, 118);
-            this.boxNumeroGrupoViaticos.Name = "boxNumeroGrupoViaticos";
-            this.boxNumeroGrupoViaticos.Size = new System.Drawing.Size(203, 26);
-            this.boxNumeroGrupoViaticos.TabIndex = 35;
-            this.boxNumeroGrupoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupoViaticos_SelectedIndexChanged);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
