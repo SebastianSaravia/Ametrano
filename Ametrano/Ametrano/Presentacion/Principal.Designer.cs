@@ -414,6 +414,7 @@
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
             this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.lstMateriasDelDia = new System.Windows.Forms.ListBox();
             this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
             this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
@@ -455,7 +456,6 @@
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.lstMateriasDelDia = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
@@ -722,14 +722,14 @@
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -5199,6 +5199,17 @@
             this.groupBox57.TabStop = false;
             this.groupBox57.Text = "Consultar lista";
             // 
+            // lstMateriasDelDia
+            // 
+            this.lstMateriasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstMateriasDelDia.FormattingEnabled = true;
+            this.lstMateriasDelDia.ItemHeight = 18;
+            this.lstMateriasDelDia.Location = new System.Drawing.Point(23, 161);
+            this.lstMateriasDelDia.Name = "lstMateriasDelDia";
+            this.lstMateriasDelDia.Size = new System.Drawing.Size(209, 94);
+            this.lstMateriasDelDia.TabIndex = 35;
+            this.lstMateriasDelDia.SelectedIndexChanged += new System.EventHandler(this.lstMateriasDelDia_SelectedIndexChanged);
+            // 
             // boxNumeroGrupo_2
             // 
             this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -5697,26 +5708,15 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // lstMateriasDelDia
-            // 
-            this.lstMateriasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstMateriasDelDia.FormattingEnabled = true;
-            this.lstMateriasDelDia.ItemHeight = 18;
-            this.lstMateriasDelDia.Location = new System.Drawing.Point(23, 161);
-            this.lstMateriasDelDia.Name = "lstMateriasDelDia";
-            this.lstMateriasDelDia.Size = new System.Drawing.Size(209, 94);
-            this.lstMateriasDelDia.TabIndex = 35;
-            this.lstMateriasDelDia.SelectedIndexChanged += new System.EventHandler(this.lstMateriasDelDia_SelectedIndexChanged);
-            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;

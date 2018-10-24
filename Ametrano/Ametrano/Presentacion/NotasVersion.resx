@@ -118,9 +118,8 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="label3.Text" xml:space="preserve">
-    <value>- Los alumnos ahora pueden ser ingresados sin completar todos los campos de 
-   informacion   los campos obligatorios son: cedula, primer nombre, 
-   segundo nombre, fecha de nacimiento, turno, curso, periodo.
-- Ahora se puede seleccionar diferentes cursos utilizando su numero asociado.</value>
+    <value>- Se agrego reestriccion la cual no permite continuar con el registro o modificacion
+  de un alumno si no se agrego un turno y curso.
+- Se cambio el tamaño de los check-box de las listas de asistencia.</value>
   </data>
 </root>

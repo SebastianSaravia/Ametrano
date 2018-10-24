@@ -58,7 +58,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 95);
+            this.groupBox1.Size = new System.Drawing.Size(447, 66);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregado";
@@ -68,15 +68,15 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(22, 28);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(242, 39);
+            this.label2.Size = new System.Drawing.Size(386, 13);
             this.label2.TabIndex = 2;
-            this.label2.Text = "- Anuncio de notas de versión.\r\n- Se agregaron aspectos visuales:\r\n        -Carte" +
-    "l de carga cuando demora un proceso.";
+            this.label2.Text = "- Se agrego lista con materias en la consulta de \"lista de asistencia de alumnos\"" +
+    ".";
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 198);
+            this.groupBox2.Location = new System.Drawing.Point(12, 169);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(447, 98);
             this.groupBox2.TabIndex = 1;
@@ -88,7 +88,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(22, 36);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(380, 52);
+            this.label3.Size = new System.Drawing.Size(392, 39);
             this.label3.TabIndex = 2;
             this.label3.Text = resources.GetString("label3.Text");
             // 
@@ -109,17 +109,17 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(14, 44);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 18);
+            this.label4.Size = new System.Drawing.Size(98, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Versión: 1.0.0.8";
+            this.label4.Text = "Versión: 1.9";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(12, 302);
+            this.groupBox3.Location = new System.Drawing.Point(12, 273);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(447, 112);
+            this.groupBox3.Size = new System.Drawing.Size(447, 48);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Solucion de errores";
@@ -129,11 +129,8 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(22, 36);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(393, 39);
+            this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 2;
-            this.label5.Text = "- Se soluciono un error que ocurria al generar viaticos de un curso cuando este y" +
-    "a\r\n   estaba muy avanzado.\r\n- Se soluciono un error que evitaba modificar un alu" +
-    "mno al cambiar el curso.";
             // 
             // NotasVersion
             // 
