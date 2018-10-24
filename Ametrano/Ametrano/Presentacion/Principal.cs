@@ -4073,6 +4073,7 @@ namespace Ametrano.Presentacion
             }else
             {
                 dateTimeFechaAsistencia_2_ValueChanged(sender, e);
+
             }
 
         }
