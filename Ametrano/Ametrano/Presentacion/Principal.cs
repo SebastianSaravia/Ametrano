@@ -3684,10 +3684,10 @@ namespace Ametrano.Presentacion
 
             if (res[0])
             {
-                MessageBox.Show("La conexión con el servidor fue exitosa.");
+                MessageBox.Show("La conexión con el servidor fue exitosa.","Conexion exitosa",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
             }else
             {
-                MessageBox.Show("Conexion con el servidor fallida.");
+                MessageBox.Show("Conexion con el servidor fallida.","Conexion fallida",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
 
 

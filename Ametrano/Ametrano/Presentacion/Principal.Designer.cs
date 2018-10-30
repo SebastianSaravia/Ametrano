@@ -95,6 +95,7 @@
             this.btnBuscar_2 = new System.Windows.Forms.Button();
             this.txtBuscar_2 = new System.Windows.Forms.TextBox();
             this.boxBuscar_2 = new System.Windows.Forms.ComboBox();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.pageCursos = new System.Windows.Forms.TabPage();
             this.tabControlCursos = new System.Windows.Forms.TabControl();
             this.viaticos = new System.Windows.Forms.TabPage();
@@ -107,6 +108,11 @@
             this.lblCedulaViaticos = new System.Windows.Forms.Label();
             this.lblNombreViaticos = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
+            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
@@ -116,6 +122,8 @@
             this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias_2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
             this.btnConsultarLista = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
@@ -125,6 +133,8 @@
             this.boxNumeroGrupo = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
+            this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.boxTurnoAsistencia = new System.Windows.Forms.ComboBox();
             this.btnGenerarLista = new System.Windows.Forms.Button();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
@@ -148,7 +158,6 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.pageAlumno = new System.Windows.Forms.TabPage();
             this.tabControlAlumnos = new System.Windows.Forms.TabControl();
             this.tabPageAlumnosNuevo = new System.Windows.Forms.TabPage();
@@ -270,6 +279,7 @@
             this.tabPageAlumnosModificar = new System.Windows.Forms.TabPage();
             this.tabControlModificarAlumno = new System.Windows.Forms.TabControl();
             this.tabPageModificarAlumnosInformacion = new System.Windows.Forms.TabPage();
+            this.btnImprimirAlumno = new System.Windows.Forms.Button();
             this.listResultadosAlumnos = new System.Windows.Forms.ListBox();
             this.btnBuscar_3 = new System.Windows.Forms.Button();
             this.boxBuscarAlumno = new System.Windows.Forms.ComboBox();
@@ -444,15 +454,6 @@
             this.btnAtrasConsultaAlumno_3 = new System.Windows.Forms.Button();
             this.btnFinalizarConsultaAlumno = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
@@ -1356,6 +1357,17 @@
             this.boxBuscar_2.Tag = "";
             this.boxBuscar_2.SelectedIndexChanged += new System.EventHandler(this.boxBuscar_2_SelectedIndexChanged);
             // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "money.png");
+            this.imageList.Images.SetKeyName(1, "lista.png");
+            this.imageList.Images.SetKeyName(2, "newgroup.png");
+            this.imageList.Images.SetKeyName(3, "newcurso.png");
+            this.imageList.Images.SetKeyName(4, "lupa.png");
+            this.imageList.Images.SetKeyName(5, "delete.png");
+            // 
             // pageCursos
             // 
             this.pageCursos.BackColor = System.Drawing.Color.LightGray;
@@ -1532,6 +1544,39 @@
             this.dataGridViaticos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
             this.dataGridViaticos.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridViaticos_CurrentCellDirtyStateChanged);
             // 
+            // colFechaViaticos
+            // 
+            this.colFechaViaticos.HeaderText = "Fecha";
+            this.colFechaViaticos.Name = "colFechaViaticos";
+            this.colFechaViaticos.ReadOnly = true;
+            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colMontoViaticos
+            // 
+            this.colMontoViaticos.HeaderText = "Monto";
+            this.colMontoViaticos.Name = "colMontoViaticos";
+            this.colMontoViaticos.ReadOnly = true;
+            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colRubroViaticos
+            // 
+            this.colRubroViaticos.HeaderText = "Rubro";
+            this.colRubroViaticos.Name = "colRubroViaticos";
+            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colConceptoViaticos
+            // 
+            this.colConceptoViaticos.HeaderText = "Concepto";
+            this.colConceptoViaticos.Name = "colConceptoViaticos";
+            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAbonoViaticos
+            // 
+            this.colAbonoViaticos.HeaderText = "Abonado";
+            this.colAbonoViaticos.Name = "colAbonoViaticos";
+            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // boxCursoViaticos
             // 
             this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1668,6 +1713,21 @@
             this.dataGridListaAsistencias_2.Size = new System.Drawing.Size(232, 406);
             this.dataGridListaAsistencias_2.TabIndex = 29;
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
             // dateTimeFechaAsistencia_2
             // 
             this.dateTimeFechaAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1796,6 +1856,24 @@
             this.dataGridListaAsistencias.TabIndex = 29;
             this.dataGridListaAsistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridListaAsistencias_CellContentClick);
             this.dataGridListaAsistencias.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridListaAsistencias_CurrentCellDirtyStateChanged);
+            // 
+            // colNombreAsistencias
+            // 
+            this.colNombreAsistencias.HeaderText = "Nombre";
+            this.colNombreAsistencias.Name = "colNombreAsistencias";
+            this.colNombreAsistencias.ReadOnly = true;
+            this.colNombreAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAsistenciaAsistencias
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.NullValue = false;
+            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colAsistenciaAsistencias.HeaderText = "Asistencias";
+            this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
+            this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAsistenciaAsistencias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // boxTurnoAsistencia
             // 
@@ -2079,17 +2157,6 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
-            // imageList
-            // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "money.png");
-            this.imageList.Images.SetKeyName(1, "lista.png");
-            this.imageList.Images.SetKeyName(2, "newgroup.png");
-            this.imageList.Images.SetKeyName(3, "newcurso.png");
-            this.imageList.Images.SetKeyName(4, "lupa.png");
-            this.imageList.Images.SetKeyName(5, "delete.png");
-            // 
             // pageAlumno
             // 
             this.pageAlumno.BackColor = System.Drawing.Color.LightGray;
@@ -2301,7 +2368,7 @@
             this.txtCelularAlumno.MaxLength = 9;
             this.txtCelularAlumno.Name = "txtCelularAlumno";
             this.txtCelularAlumno.Size = new System.Drawing.Size(159, 24);
-            this.txtCelularAlumno.TabIndex = 22;
+            this.txtCelularAlumno.TabIndex = 21;
             this.txtCelularAlumno.Text = "Celular";
             this.txtCelularAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCelularAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -2316,7 +2383,7 @@
             this.txtTelefonoAlumno.MaxLength = 8;
             this.txtTelefonoAlumno.Name = "txtTelefonoAlumno";
             this.txtTelefonoAlumno.Size = new System.Drawing.Size(159, 24);
-            this.txtTelefonoAlumno.TabIndex = 21;
+            this.txtTelefonoAlumno.TabIndex = 22;
             this.txtTelefonoAlumno.Text = "Telefono";
             this.txtTelefonoAlumno.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtTelefonoAlumno.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -2550,7 +2617,7 @@
             this.TimePickerFechaNacAlumnoNuevo.Name = "TimePickerFechaNacAlumnoNuevo";
             this.TimePickerFechaNacAlumnoNuevo.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.TimePickerFechaNacAlumnoNuevo.Size = new System.Drawing.Size(20, 24);
-            this.TimePickerFechaNacAlumnoNuevo.TabIndex = 16;
+            this.TimePickerFechaNacAlumnoNuevo.TabIndex = 999;
             this.TimePickerFechaNacAlumnoNuevo.ValueChanged += new System.EventHandler(this.TimePickerFechaNac_ValueChanged);
             // 
             // boxSexoAlumno
@@ -3648,6 +3715,7 @@
             // tabPageModificarAlumnosInformacion
             // 
             this.tabPageModificarAlumnosInformacion.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageModificarAlumnosInformacion.Controls.Add(this.btnImprimirAlumno);
             this.tabPageModificarAlumnosInformacion.Controls.Add(this.listResultadosAlumnos);
             this.tabPageModificarAlumnosInformacion.Controls.Add(this.btnBuscar_3);
             this.tabPageModificarAlumnosInformacion.Controls.Add(this.boxBuscarAlumno);
@@ -3668,6 +3736,18 @@
             this.tabPageModificarAlumnosInformacion.Size = new System.Drawing.Size(1083, 484);
             this.tabPageModificarAlumnosInformacion.TabIndex = 3;
             this.tabPageModificarAlumnosInformacion.Text = "Informacion";
+            // 
+            // btnImprimirAlumno
+            // 
+            this.btnImprimirAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnImprimirAlumno.Enabled = false;
+            this.btnImprimirAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnImprimirAlumno.Location = new System.Drawing.Point(783, 442);
+            this.btnImprimirAlumno.Name = "btnImprimirAlumno";
+            this.btnImprimirAlumno.Size = new System.Drawing.Size(144, 36);
+            this.btnImprimirAlumno.TabIndex = 46;
+            this.btnImprimirAlumno.Text = "Imprimir";
+            this.btnImprimirAlumno.UseVisualStyleBackColor = true;
             // 
             // listResultadosAlumnos
             // 
@@ -4357,7 +4437,7 @@
             this.boxTurnoAlumno_2.Location = new System.Drawing.Point(62, 29);
             this.boxTurnoAlumno_2.Name = "boxTurnoAlumno_2";
             this.boxTurnoAlumno_2.Size = new System.Drawing.Size(159, 23);
-            this.boxTurnoAlumno_2.TabIndex = 30;
+            this.boxTurnoAlumno_2.TabIndex = 60;
             this.boxTurnoAlumno_2.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAlumno_2_SelectedIndexChanged);
             // 
             // txtMontoViatico_2
@@ -4369,7 +4449,7 @@
             this.txtMontoViatico_2.MaxLength = 4;
             this.txtMontoViatico_2.Name = "txtMontoViatico_2";
             this.txtMontoViatico_2.Size = new System.Drawing.Size(159, 24);
-            this.txtMontoViatico_2.TabIndex = 29;
+            this.txtMontoViatico_2.TabIndex = 64;
             this.txtMontoViatico_2.Text = "Viatico por dia asistido";
             this.txtMontoViatico_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtMontoViatico_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -4386,7 +4466,7 @@
             this.boxPeriodoAlumno_2.Location = new System.Drawing.Point(423, 29);
             this.boxPeriodoAlumno_2.Name = "boxPeriodoAlumno_2";
             this.boxPeriodoAlumno_2.Size = new System.Drawing.Size(216, 23);
-            this.boxPeriodoAlumno_2.TabIndex = 27;
+            this.boxPeriodoAlumno_2.TabIndex = 62;
             this.boxPeriodoAlumno_2.SelectedIndexChanged += new System.EventHandler(this.boxPeriodoAlumno_2_SelectedIndexChanged);
             // 
             // boxEstadoAlumno_2
@@ -4404,7 +4484,7 @@
             this.boxEstadoAlumno_2.Location = new System.Drawing.Point(655, 29);
             this.boxEstadoAlumno_2.Name = "boxEstadoAlumno_2";
             this.boxEstadoAlumno_2.Size = new System.Drawing.Size(159, 23);
-            this.boxEstadoAlumno_2.TabIndex = 27;
+            this.boxEstadoAlumno_2.TabIndex = 63;
             // 
             // boxCursoAlumno_2
             // 
@@ -4416,17 +4496,17 @@
             this.boxCursoAlumno_2.Location = new System.Drawing.Point(244, 29);
             this.boxCursoAlumno_2.Name = "boxCursoAlumno_2";
             this.boxCursoAlumno_2.Size = new System.Drawing.Size(159, 23);
-            this.boxCursoAlumno_2.TabIndex = 26;
+            this.boxCursoAlumno_2.TabIndex = 61;
             this.boxCursoAlumno_2.SelectedIndexChanged += new System.EventHandler(this.boxCursoAlumno_2_SelectedIndexChanged);
             // 
             // btnAtrasConsultaAlumno
             // 
             this.btnAtrasConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(783, 439);
+            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(783, 444);
             this.btnAtrasConsultaAlumno.Name = "btnAtrasConsultaAlumno";
             this.btnAtrasConsultaAlumno.Size = new System.Drawing.Size(144, 36);
-            this.btnAtrasConsultaAlumno.TabIndex = 22;
+            this.btnAtrasConsultaAlumno.TabIndex = 86;
             this.btnAtrasConsultaAlumno.Text = "Atras";
             this.btnAtrasConsultaAlumno.UseVisualStyleBackColor = true;
             this.btnAtrasConsultaAlumno.Click += new System.EventHandler(this.btnAtrasConsultaAlumno_Click);
@@ -4435,10 +4515,10 @@
             // 
             this.btnSiguienteConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(933, 439);
+            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(933, 444);
             this.btnSiguienteConsultaAlumno.Name = "btnSiguienteConsultaAlumno";
             this.btnSiguienteConsultaAlumno.Size = new System.Drawing.Size(144, 36);
-            this.btnSiguienteConsultaAlumno.TabIndex = 4;
+            this.btnSiguienteConsultaAlumno.TabIndex = 85;
             this.btnSiguienteConsultaAlumno.Text = "Siguiente";
             this.btnSiguienteConsultaAlumno.UseVisualStyleBackColor = true;
             this.btnSiguienteConsultaAlumno.Click += new System.EventHandler(this.btnSiguienteConsultaAlumno_Click);
@@ -4466,7 +4546,7 @@
             this.txtEmailAlumno_2.Location = new System.Drawing.Point(34, 123);
             this.txtEmailAlumno_2.Name = "txtEmailAlumno_2";
             this.txtEmailAlumno_2.Size = new System.Drawing.Size(159, 24);
-            this.txtEmailAlumno_2.TabIndex = 14;
+            this.txtEmailAlumno_2.TabIndex = 82;
             this.txtEmailAlumno_2.Text = "Email";
             this.txtEmailAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtEmailAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4481,7 +4561,7 @@
             this.txtCelularAlumno_2.MaxLength = 9;
             this.txtCelularAlumno_2.Name = "txtCelularAlumno_2";
             this.txtCelularAlumno_2.Size = new System.Drawing.Size(159, 24);
-            this.txtCelularAlumno_2.TabIndex = 13;
+            this.txtCelularAlumno_2.TabIndex = 80;
             this.txtCelularAlumno_2.Text = "Celular";
             this.txtCelularAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCelularAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -4497,7 +4577,7 @@
             this.txtTelefonoAlumno_2.MaxLength = 8;
             this.txtTelefonoAlumno_2.Name = "txtTelefonoAlumno_2";
             this.txtTelefonoAlumno_2.Size = new System.Drawing.Size(159, 24);
-            this.txtTelefonoAlumno_2.TabIndex = 12;
+            this.txtTelefonoAlumno_2.TabIndex = 81;
             this.txtTelefonoAlumno_2.Text = "Telefono";
             this.txtTelefonoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtTelefonoAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -4527,7 +4607,7 @@
             this.txtLocalidadAlumno_2.Location = new System.Drawing.Point(199, 39);
             this.txtLocalidadAlumno_2.Name = "txtLocalidadAlumno_2";
             this.txtLocalidadAlumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtLocalidadAlumno_2.TabIndex = 26;
+            this.txtLocalidadAlumno_2.TabIndex = 75;
             this.txtLocalidadAlumno_2.Text = "Localidad";
             this.txtLocalidadAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtLocalidadAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4539,7 +4619,7 @@
             this.txtCalleAlumno_2.Location = new System.Drawing.Point(24, 74);
             this.txtCalleAlumno_2.Name = "txtCalleAlumno_2";
             this.txtCalleAlumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtCalleAlumno_2.TabIndex = 12;
+            this.txtCalleAlumno_2.TabIndex = 76;
             this.txtCalleAlumno_2.Text = "Calle";
             this.txtCalleAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCalleAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4572,7 +4652,7 @@
             this.boxDepartamentoAlumno_2.Location = new System.Drawing.Point(24, 37);
             this.boxDepartamentoAlumno_2.Name = "boxDepartamentoAlumno_2";
             this.boxDepartamentoAlumno_2.Size = new System.Drawing.Size(167, 26);
-            this.boxDepartamentoAlumno_2.TabIndex = 21;
+            this.boxDepartamentoAlumno_2.TabIndex = 74;
             // 
             // txtReferenciaAlumno_2
             // 
@@ -4581,7 +4661,7 @@
             this.txtReferenciaAlumno_2.Location = new System.Drawing.Point(199, 74);
             this.txtReferenciaAlumno_2.Name = "txtReferenciaAlumno_2";
             this.txtReferenciaAlumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtReferenciaAlumno_2.TabIndex = 24;
+            this.txtReferenciaAlumno_2.TabIndex = 77;
             this.txtReferenciaAlumno_2.Text = "Referencia";
             this.txtReferenciaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtReferenciaAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4594,7 +4674,7 @@
             this.txtNPuertaAlumno_2.MaxLength = 6;
             this.txtNPuertaAlumno_2.Name = "txtNPuertaAlumno_2";
             this.txtNPuertaAlumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtNPuertaAlumno_2.TabIndex = 22;
+            this.txtNPuertaAlumno_2.TabIndex = 78;
             this.txtNPuertaAlumno_2.Text = "Número de puerta";
             this.txtNPuertaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNPuertaAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4607,7 +4687,7 @@
             this.txtNApartamentoAlumno_2.MaxLength = 4;
             this.txtNApartamentoAlumno_2.Name = "txtNApartamentoAlumno_2";
             this.txtNApartamentoAlumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtNApartamentoAlumno_2.TabIndex = 23;
+            this.txtNApartamentoAlumno_2.TabIndex = 79;
             this.txtNApartamentoAlumno_2.Text = "Número de apartamento";
             this.txtNApartamentoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNApartamentoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4637,7 +4717,7 @@
             this.boxNivelAcademicoAlumno_2.Location = new System.Drawing.Point(32, 43);
             this.boxNivelAcademicoAlumno_2.Name = "boxNivelAcademicoAlumno_2";
             this.boxNivelAcademicoAlumno_2.Size = new System.Drawing.Size(159, 26);
-            this.boxNivelAcademicoAlumno_2.TabIndex = 22;
+            this.boxNivelAcademicoAlumno_2.TabIndex = 83;
             // 
             // txtUltimoAñoAprobadoAlumno_2
             // 
@@ -4648,7 +4728,7 @@
             this.txtUltimoAñoAprobadoAlumno_2.Location = new System.Drawing.Point(207, 43);
             this.txtUltimoAñoAprobadoAlumno_2.Name = "txtUltimoAñoAprobadoAlumno_2";
             this.txtUltimoAñoAprobadoAlumno_2.Size = new System.Drawing.Size(159, 24);
-            this.txtUltimoAñoAprobadoAlumno_2.TabIndex = 14;
+            this.txtUltimoAñoAprobadoAlumno_2.TabIndex = 84;
             this.txtUltimoAñoAprobadoAlumno_2.Text = "Ultimo año aprobado";
             this.txtUltimoAñoAprobadoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtUltimoAñoAprobadoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4681,7 +4761,7 @@
             this.maskedTxtFechaNacimientoAlumno_2.Location = new System.Drawing.Point(24, 150);
             this.maskedTxtFechaNacimientoAlumno_2.Name = "maskedTxtFechaNacimientoAlumno_2";
             this.maskedTxtFechaNacimientoAlumno_2.Size = new System.Drawing.Size(151, 24);
-            this.maskedTxtFechaNacimientoAlumno_2.TabIndex = 24;
+            this.maskedTxtFechaNacimientoAlumno_2.TabIndex = 70;
             this.maskedTxtFechaNacimientoAlumno_2.Text = "Fecha de nacimiento";
             this.maskedTxtFechaNacimientoAlumno_2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTxtFechaNacimientoAlumno_2_MaskInputRejected);
             this.maskedTxtFechaNacimientoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
@@ -4696,7 +4776,7 @@
             this.txtEdadAlumno_2.MaxLength = 3;
             this.txtEdadAlumno_2.Name = "txtEdadAlumno_2";
             this.txtEdadAlumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtEdadAlumno_2.TabIndex = 22;
+            this.txtEdadAlumno_2.TabIndex = 71;
             this.txtEdadAlumno_2.Text = "Edad";
             this.txtEdadAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtEdadAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -4716,7 +4796,7 @@
             this.boxEstadoCivilAlumno_2.Location = new System.Drawing.Point(198, 187);
             this.boxEstadoCivilAlumno_2.Name = "boxEstadoCivilAlumno_2";
             this.boxEstadoCivilAlumno_2.Size = new System.Drawing.Size(167, 26);
-            this.boxEstadoCivilAlumno_2.TabIndex = 21;
+            this.boxEstadoCivilAlumno_2.TabIndex = 73;
             // 
             // dateTimeFechaNacimientoAlumno_2
             // 
@@ -4744,7 +4824,7 @@
             this.boxSexoAlumno_2.Location = new System.Drawing.Point(24, 187);
             this.boxSexoAlumno_2.Name = "boxSexoAlumno_2";
             this.boxSexoAlumno_2.Size = new System.Drawing.Size(167, 26);
-            this.boxSexoAlumno_2.TabIndex = 20;
+            this.boxSexoAlumno_2.TabIndex = 72;
             // 
             // txtApellido2Alumno_2
             // 
@@ -4753,7 +4833,7 @@
             this.txtApellido2Alumno_2.Location = new System.Drawing.Point(198, 112);
             this.txtApellido2Alumno_2.Name = "txtApellido2Alumno_2";
             this.txtApellido2Alumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtApellido2Alumno_2.TabIndex = 14;
+            this.txtApellido2Alumno_2.TabIndex = 69;
             this.txtApellido2Alumno_2.Text = "Segundo apellido";
             this.txtApellido2Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido2Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -4767,7 +4847,7 @@
             this.txtApellido1Alumno_2.MaxLength = 255;
             this.txtApellido1Alumno_2.Name = "txtApellido1Alumno_2";
             this.txtApellido1Alumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtApellido1Alumno_2.TabIndex = 13;
+            this.txtApellido1Alumno_2.TabIndex = 68;
             this.txtApellido1Alumno_2.Text = "Primer apellido";
             this.txtApellido1Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtApellido1Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -4780,7 +4860,7 @@
             this.txtNombre2Alumno_2.Location = new System.Drawing.Point(198, 74);
             this.txtNombre2Alumno_2.Name = "txtNombre2Alumno_2";
             this.txtNombre2Alumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtNombre2Alumno_2.TabIndex = 12;
+            this.txtNombre2Alumno_2.TabIndex = 67;
             this.txtNombre2Alumno_2.Text = "Segundo nombre";
             this.txtNombre2Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre2Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -4793,7 +4873,7 @@
             this.txtNombre1Alumno_2.Location = new System.Drawing.Point(24, 74);
             this.txtNombre1Alumno_2.Name = "txtNombre1Alumno_2";
             this.txtNombre1Alumno_2.Size = new System.Drawing.Size(167, 24);
-            this.txtNombre1Alumno_2.TabIndex = 11;
+            this.txtNombre1Alumno_2.TabIndex = 66;
             this.txtNombre1Alumno_2.Text = "Primer nombre";
             this.txtNombre1Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtNombre1Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
@@ -4807,7 +4887,7 @@
             this.txtCedulaAlumno_2.MaxLength = 8;
             this.txtCedulaAlumno_2.Name = "txtCedulaAlumno_2";
             this.txtCedulaAlumno_2.Size = new System.Drawing.Size(123, 24);
-            this.txtCedulaAlumno_2.TabIndex = 10;
+            this.txtCedulaAlumno_2.TabIndex = 65;
             this.txtCedulaAlumno_2.Text = "Cedula";
             this.txtCedulaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCedulaAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -4852,7 +4932,7 @@
             this.txtCoberturaSaludAlumno_2.Location = new System.Drawing.Point(18, 54);
             this.txtCoberturaSaludAlumno_2.Name = "txtCoberturaSaludAlumno_2";
             this.txtCoberturaSaludAlumno_2.Size = new System.Drawing.Size(404, 24);
-            this.txtCoberturaSaludAlumno_2.TabIndex = 29;
+            this.txtCoberturaSaludAlumno_2.TabIndex = 105;
             this.txtCoberturaSaludAlumno_2.Text = "Cobertura de salud";
             this.txtCoberturaSaludAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCoberturaSaludAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4883,7 +4963,7 @@
             this.boxJefeHogarAlumno_2.Location = new System.Drawing.Point(8, 30);
             this.boxJefeHogarAlumno_2.Name = "boxJefeHogarAlumno_2";
             this.boxJefeHogarAlumno_2.Size = new System.Drawing.Size(158, 23);
-            this.boxJefeHogarAlumno_2.TabIndex = 28;
+            this.boxJefeHogarAlumno_2.TabIndex = 95;
             // 
             // boxCantidadHijosAlumno_2
             // 
@@ -4906,7 +4986,7 @@
             this.boxCantidadHijosAlumno_2.Location = new System.Drawing.Point(172, 30);
             this.boxCantidadHijosAlumno_2.Name = "boxCantidadHijosAlumno_2";
             this.boxCantidadHijosAlumno_2.Size = new System.Drawing.Size(193, 23);
-            this.boxCantidadHijosAlumno_2.TabIndex = 27;
+            this.boxCantidadHijosAlumno_2.TabIndex = 96;
             // 
             // groupBox33
             // 
@@ -4934,7 +5014,7 @@
             this.txtExperienciaInstitucionesCuidadoAlumno_2.Location = new System.Drawing.Point(263, 83);
             this.txtExperienciaInstitucionesCuidadoAlumno_2.Name = "txtExperienciaInstitucionesCuidadoAlumno_2";
             this.txtExperienciaInstitucionesCuidadoAlumno_2.Size = new System.Drawing.Size(274, 24);
-            this.txtExperienciaInstitucionesCuidadoAlumno_2.TabIndex = 31;
+            this.txtExperienciaInstitucionesCuidadoAlumno_2.TabIndex = 104;
             this.txtExperienciaInstitucionesCuidadoAlumno_2.Text = "Experiencia en instituciones de cuidado";
             this.txtExperienciaInstitucionesCuidadoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtExperienciaInstitucionesCuidadoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4950,7 +5030,7 @@
             this.boxTrabajoCuidandoAlumno_2.Location = new System.Drawing.Point(19, 85);
             this.boxTrabajoCuidandoAlumno_2.Name = "boxTrabajoCuidandoAlumno_2";
             this.boxTrabajoCuidandoAlumno_2.Size = new System.Drawing.Size(238, 23);
-            this.boxTrabajoCuidandoAlumno_2.TabIndex = 30;
+            this.boxTrabajoCuidandoAlumno_2.TabIndex = 103;
             // 
             // boxCuentaConApoyoAlumno_2
             // 
@@ -4963,7 +5043,7 @@
             this.boxCuentaConApoyoAlumno_2.Location = new System.Drawing.Point(184, 56);
             this.boxCuentaConApoyoAlumno_2.Name = "boxCuentaConApoyoAlumno_2";
             this.boxCuentaConApoyoAlumno_2.Size = new System.Drawing.Size(159, 23);
-            this.boxCuentaConApoyoAlumno_2.TabIndex = 29;
+            this.boxCuentaConApoyoAlumno_2.TabIndex = 101;
             // 
             // boxPersonaDiscapacidadAlumno_2
             // 
@@ -4976,7 +5056,7 @@
             this.boxPersonaDiscapacidadAlumno_2.Location = new System.Drawing.Point(19, 56);
             this.boxPersonaDiscapacidadAlumno_2.Name = "boxPersonaDiscapacidadAlumno_2";
             this.boxPersonaDiscapacidadAlumno_2.Size = new System.Drawing.Size(159, 23);
-            this.boxPersonaDiscapacidadAlumno_2.TabIndex = 29;
+            this.boxPersonaDiscapacidadAlumno_2.TabIndex = 100;
             // 
             // txtCargaSemanalCuidadoAlumno_2
             // 
@@ -4985,7 +5065,7 @@
             this.txtCargaSemanalCuidadoAlumno_2.Location = new System.Drawing.Point(349, 55);
             this.txtCargaSemanalCuidadoAlumno_2.Name = "txtCargaSemanalCuidadoAlumno_2";
             this.txtCargaSemanalCuidadoAlumno_2.Size = new System.Drawing.Size(188, 24);
-            this.txtCargaSemanalCuidadoAlumno_2.TabIndex = 27;
+            this.txtCargaSemanalCuidadoAlumno_2.TabIndex = 102;
             this.txtCargaSemanalCuidadoAlumno_2.Text = "Carga semanal de cuidado";
             this.txtCargaSemanalCuidadoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtCargaSemanalCuidadoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -4997,7 +5077,7 @@
             this.txt60oMasAlumno_2.Location = new System.Drawing.Point(263, 26);
             this.txt60oMasAlumno_2.Name = "txt60oMasAlumno_2";
             this.txt60oMasAlumno_2.Size = new System.Drawing.Size(116, 24);
-            this.txt60oMasAlumno_2.TabIndex = 28;
+            this.txt60oMasAlumno_2.TabIndex = 99;
             this.txt60oMasAlumno_2.Text = "De 60 o mas";
             this.txt60oMasAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txt60oMasAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -5010,7 +5090,7 @@
             this.txt18a59Alumno_2.Location = new System.Drawing.Point(141, 26);
             this.txt18a59Alumno_2.Name = "txt18a59Alumno_2";
             this.txt18a59Alumno_2.Size = new System.Drawing.Size(116, 24);
-            this.txt18a59Alumno_2.TabIndex = 28;
+            this.txt18a59Alumno_2.TabIndex = 98;
             this.txt18a59Alumno_2.Text = "De 18 a 59 años";
             this.txt18a59Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txt18a59Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -5023,7 +5103,7 @@
             this.txt0a17Alumno_2.Location = new System.Drawing.Point(19, 26);
             this.txt0a17Alumno_2.Name = "txt0a17Alumno_2";
             this.txt0a17Alumno_2.Size = new System.Drawing.Size(116, 24);
-            this.txt0a17Alumno_2.TabIndex = 28;
+            this.txt0a17Alumno_2.TabIndex = 97;
             this.txt0a17Alumno_2.Text = "De 0 a 17 años";
             this.txt0a17Alumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txt0a17Alumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -5050,7 +5130,7 @@
             this.txtMedioAccesoInternetAlumno_2.Location = new System.Drawing.Point(414, 30);
             this.txtMedioAccesoInternetAlumno_2.Name = "txtMedioAccesoInternetAlumno_2";
             this.txtMedioAccesoInternetAlumno_2.Size = new System.Drawing.Size(193, 24);
-            this.txtMedioAccesoInternetAlumno_2.TabIndex = 29;
+            this.txtMedioAccesoInternetAlumno_2.TabIndex = 94;
             this.txtMedioAccesoInternetAlumno_2.Text = "Medio de acceso a internet";
             this.txtMedioAccesoInternetAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtMedioAccesoInternetAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -5066,7 +5146,7 @@
             this.boxFacilAccesoInternetAlumno_2.Location = new System.Drawing.Point(215, 30);
             this.boxFacilAccesoInternetAlumno_2.Name = "boxFacilAccesoInternetAlumno_2";
             this.boxFacilAccesoInternetAlumno_2.Size = new System.Drawing.Size(193, 23);
-            this.boxFacilAccesoInternetAlumno_2.TabIndex = 28;
+            this.boxFacilAccesoInternetAlumno_2.TabIndex = 93;
             // 
             // boxUsaInternetAlumno_2
             // 
@@ -5079,7 +5159,7 @@
             this.boxUsaInternetAlumno_2.Location = new System.Drawing.Point(16, 30);
             this.boxUsaInternetAlumno_2.Name = "boxUsaInternetAlumno_2";
             this.boxUsaInternetAlumno_2.Size = new System.Drawing.Size(193, 23);
-            this.boxUsaInternetAlumno_2.TabIndex = 27;
+            this.boxUsaInternetAlumno_2.TabIndex = 92;
             // 
             // groupBox35
             // 
@@ -5105,7 +5185,7 @@
             this.txtIngresoMensualAlumno_2.Location = new System.Drawing.Point(816, 29);
             this.txtIngresoMensualAlumno_2.Name = "txtIngresoMensualAlumno_2";
             this.txtIngresoMensualAlumno_2.Size = new System.Drawing.Size(176, 24);
-            this.txtIngresoMensualAlumno_2.TabIndex = 28;
+            this.txtIngresoMensualAlumno_2.TabIndex = 91;
             this.txtIngresoMensualAlumno_2.Text = "Ingreso mensual";
             this.txtIngresoMensualAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtIngresoMensualAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -5118,7 +5198,7 @@
             this.txtHorasJornadaAlumno_2.Location = new System.Drawing.Point(617, 29);
             this.txtHorasJornadaAlumno_2.Name = "txtHorasJornadaAlumno_2";
             this.txtHorasJornadaAlumno_2.Size = new System.Drawing.Size(176, 24);
-            this.txtHorasJornadaAlumno_2.TabIndex = 28;
+            this.txtHorasJornadaAlumno_2.TabIndex = 90;
             this.txtHorasJornadaAlumno_2.Text = "Horas de jornada";
             this.txtHorasJornadaAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtHorasJornadaAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
@@ -5132,7 +5212,7 @@
             this.txtTiempoDesempleadoAlumno_2.Location = new System.Drawing.Point(418, 29);
             this.txtTiempoDesempleadoAlumno_2.Name = "txtTiempoDesempleadoAlumno_2";
             this.txtTiempoDesempleadoAlumno_2.Size = new System.Drawing.Size(176, 24);
-            this.txtTiempoDesempleadoAlumno_2.TabIndex = 27;
+            this.txtTiempoDesempleadoAlumno_2.TabIndex = 89;
             this.txtTiempoDesempleadoAlumno_2.Text = "Tiempo desempleado";
             this.txtTiempoDesempleadoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.txtTiempoDesempleadoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -5149,7 +5229,7 @@
             this.boxTrabajoAlgunaVezAlumno_2.Location = new System.Drawing.Point(19, 29);
             this.boxTrabajoAlgunaVezAlumno_2.Name = "boxTrabajoAlgunaVezAlumno_2";
             this.boxTrabajoAlgunaVezAlumno_2.Size = new System.Drawing.Size(176, 23);
-            this.boxTrabajoAlgunaVezAlumno_2.TabIndex = 25;
+            this.boxTrabajoAlgunaVezAlumno_2.TabIndex = 87;
             // 
             // boxTrabajaActualmenteAlumno_2
             // 
@@ -5163,16 +5243,16 @@
             this.boxTrabajaActualmenteAlumno_2.Location = new System.Drawing.Point(218, 29);
             this.boxTrabajaActualmenteAlumno_2.Name = "boxTrabajaActualmenteAlumno_2";
             this.boxTrabajaActualmenteAlumno_2.Size = new System.Drawing.Size(176, 23);
-            this.boxTrabajaActualmenteAlumno_2.TabIndex = 26;
+            this.boxTrabajaActualmenteAlumno_2.TabIndex = 88;
             // 
             // btnAtrasConsultaAlumno_2
             // 
             this.btnAtrasConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(783, 439);
+            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(780, 439);
             this.btnAtrasConsultaAlumno_2.Name = "btnAtrasConsultaAlumno_2";
             this.btnAtrasConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
-            this.btnAtrasConsultaAlumno_2.TabIndex = 15;
+            this.btnAtrasConsultaAlumno_2.TabIndex = 107;
             this.btnAtrasConsultaAlumno_2.Text = "Atras";
             this.btnAtrasConsultaAlumno_2.UseVisualStyleBackColor = true;
             this.btnAtrasConsultaAlumno_2.Click += new System.EventHandler(this.btnAtrasConsultaAlumno_2_Click);
@@ -5181,10 +5261,10 @@
             // 
             this.btnSiguienteConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(933, 439);
+            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(930, 439);
             this.btnSiguienteConsultaAlumno_2.Name = "btnSiguienteConsultaAlumno_2";
             this.btnSiguienteConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
-            this.btnSiguienteConsultaAlumno_2.TabIndex = 14;
+            this.btnSiguienteConsultaAlumno_2.TabIndex = 106;
             this.btnSiguienteConsultaAlumno_2.Text = "Siguiente";
             this.btnSiguienteConsultaAlumno_2.UseVisualStyleBackColor = true;
             this.btnSiguienteConsultaAlumno_2.Click += new System.EventHandler(this.btnSiguienteConsultaAlumno_2_Click);
@@ -5788,7 +5868,7 @@
             // 
             this.btnAtrasConsultaAlumno_3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(781, 439);
+            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(781, 444);
             this.btnAtrasConsultaAlumno_3.Name = "btnAtrasConsultaAlumno_3";
             this.btnAtrasConsultaAlumno_3.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno_3.TabIndex = 16;
@@ -5800,79 +5880,13 @@
             // 
             this.btnFinalizarConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizarConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(931, 439);
+            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(931, 444);
             this.btnFinalizarConsultaAlumno.Name = "btnFinalizarConsultaAlumno";
             this.btnFinalizarConsultaAlumno.Size = new System.Drawing.Size(144, 36);
-            this.btnFinalizarConsultaAlumno.TabIndex = 5;
+            this.btnFinalizarConsultaAlumno.TabIndex = 108;
             this.btnFinalizarConsultaAlumno.Text = "Finalizar";
             this.btnFinalizarConsultaAlumno.UseVisualStyleBackColor = true;
             this.btnFinalizarConsultaAlumno.Click += new System.EventHandler(this.btnFinalizarConsultaAlumno_Click);
-            // 
-            // colFechaViaticos
-            // 
-            this.colFechaViaticos.HeaderText = "Fecha";
-            this.colFechaViaticos.Name = "colFechaViaticos";
-            this.colFechaViaticos.ReadOnly = true;
-            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colMontoViaticos
-            // 
-            this.colMontoViaticos.HeaderText = "Monto";
-            this.colMontoViaticos.Name = "colMontoViaticos";
-            this.colMontoViaticos.ReadOnly = true;
-            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colRubroViaticos
-            // 
-            this.colRubroViaticos.HeaderText = "Rubro";
-            this.colRubroViaticos.Name = "colRubroViaticos";
-            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colConceptoViaticos
-            // 
-            this.colConceptoViaticos.HeaderText = "Concepto";
-            this.colConceptoViaticos.Name = "colConceptoViaticos";
-            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAbonoViaticos
-            // 
-            this.colAbonoViaticos.HeaderText = "Abonado";
-            this.colAbonoViaticos.Name = "colAbonoViaticos";
-            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // colNombreAsistencias
-            // 
-            this.colNombreAsistencias.HeaderText = "Nombre";
-            this.colNombreAsistencias.Name = "colNombreAsistencias";
-            this.colNombreAsistencias.ReadOnly = true;
-            this.colNombreAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAsistenciaAsistencias
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.NullValue = false;
-            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle2;
-            this.colAsistenciaAsistencias.HeaderText = "Asistencias";
-            this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
-            this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAsistenciaAsistencias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Principal
             // 
@@ -5880,9 +5894,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuPrincipal;
@@ -6476,5 +6490,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
+        private System.Windows.Forms.Button btnImprimirAlumno;
     }
 }
