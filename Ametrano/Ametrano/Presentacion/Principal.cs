@@ -60,17 +60,17 @@ namespace Ametrano.Presentacion
 
         private void btnDocentes_Click(object sender, EventArgs e)
         {
-            tabControlPrincipal.SelectedIndex = 0;
+            tabControlPrincipal.SelectedIndex = 1;
         }
 
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
-            tabControlPrincipal.SelectedIndex = 2;
+            tabControlPrincipal.SelectedIndex = 0;
         }
 
         private void btnCursos_Click(object sender, EventArgs e)
         {
-            tabControlPrincipal.SelectedIndex = 1;
+            tabControlPrincipal.SelectedIndex = 2;
             btnAñadirSemanaViaticos.Enabled = false;
             boxCursoViaticos.SelectedIndex = 0;
         }
@@ -812,32 +812,7 @@ namespace Ametrano.Presentacion
             dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno(0);
             dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno(0);
 
-            string mensaje = "";
-            if (setDatosPersonalesAlumnoResultado[0])
-            {
-                mensaje = setDatosPersonalesAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosCursoAlumnoResultado[0])
-            {
-                mensaje = setDatosCursoAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosContactoAlumnoResultado[0])
-            {
-                mensaje = setDatosContactoAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosDireccionAlumnoResultado[0])
-            {
-                mensaje = setDatosDireccionAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosFormacionAcademicaAlumnoResultado[0])
-            {
-                mensaje = setDatosFormacionAcademicaAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
+            
 
             if (!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
                 !setDatosContactoAlumnoResultado[0] && !setDatosDireccionAlumnoResultado[0] && !setDatosFormacionAcademicaAlumnoResultado[0])
@@ -851,8 +826,8 @@ namespace Ametrano.Presentacion
             }
             else
             {
-               
-                //Si hay errores
+
+                MessageBox.Show(datosAlumno.mostrarError(), "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -1324,32 +1299,7 @@ namespace Ametrano.Presentacion
             dynamic[] setDatosDireccionAlumnoResultado = this.setDatosDireccionAlumno(1);
             dynamic[] setDatosFormacionAcademicaAlumnoResultado = this.setDatosFormacionAcademicaAlumno(1);
 
-            string mensaje = "";
-            if (setDatosPersonalesAlumnoResultado[0])
-            {
-                mensaje = setDatosPersonalesAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosCursoAlumnoResultado[0])
-            {
-                mensaje = setDatosCursoAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosContactoAlumnoResultado[0])
-            {
-                mensaje = setDatosContactoAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosDireccionAlumnoResultado[0])
-            {
-                mensaje = setDatosDireccionAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
-            if (setDatosFormacionAcademicaAlumnoResultado[0])
-            {
-                mensaje = setDatosFormacionAcademicaAlumnoResultado[1];
-                MessageBox.Show(mensaje);
-            }
+            
 
 
             if (!setDatosPersonalesAlumnoResultado[0] && !setDatosCursoAlumnoResultado[0] &&
@@ -1369,12 +1319,12 @@ namespace Ametrano.Presentacion
             }
             else
             {
-
-                //Si hay errores
+            
+                MessageBox.Show(datosAlumnoModificacion.mostrarError(), "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
-            
+
 
         }
 

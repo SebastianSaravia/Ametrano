@@ -28,17 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotasVersion));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,40 +56,20 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 97);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(447, 66);
+            this.groupBox1.Size = new System.Drawing.Size(447, 105);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Agregado";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(386, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "- Se agrego lista con materias en la consulta de \"lista de asistencia de alumnos\"" +
-    ".";
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Location = new System.Drawing.Point(12, 169);
+            this.groupBox2.Location = new System.Drawing.Point(12, 208);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(447, 98);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificaciones";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 36);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(392, 26);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "- Se agrego reestriccion la cual no permite continuar con el registro o modificac" +
-    "ion\r\n  de un alumno si no se agrego un turno y curso.";
+            this.groupBox2.Visible = false;
             // 
             // button1
             // 
@@ -111,18 +90,19 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(98, 18);
             this.label4.TabIndex = 0;
-            this.label4.Text = "Versión: 1.9";
+            this.label4.Text = "Versión: 2.0";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(12, 273);
+            this.groupBox3.Location = new System.Drawing.Point(12, 333);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(447, 48);
             this.groupBox3.TabIndex = 1;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Solucion de errores";
+            this.groupBox3.Visible = false;
             // 
             // label5
             // 
@@ -131,6 +111,15 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 28);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(272, 52);
+            this.label2.TabIndex = 2;
+            this.label2.Text = resources.GetString("label2.Text");
             // 
             // NotasVersion
             // 
@@ -150,8 +139,6 @@
             this.Text = "NotasVersion";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -163,12 +150,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
     }
 }

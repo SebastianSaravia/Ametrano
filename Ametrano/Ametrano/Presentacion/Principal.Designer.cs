@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
@@ -723,9 +723,9 @@
             this.tabControlPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlPrincipal.Controls.Add(this.pageAlumno);
             this.tabControlPrincipal.Controls.Add(this.pageDocente);
             this.tabControlPrincipal.Controls.Add(this.pageCursos);
-            this.tabControlPrincipal.Controls.Add(this.pageAlumno);
             this.tabControlPrincipal.Location = new System.Drawing.Point(87, 1);
             this.tabControlPrincipal.Name = "tabControlPrincipal";
             this.tabControlPrincipal.SelectedIndex = 0;
@@ -1866,10 +1866,10 @@
             // 
             // colAsistenciaAsistencias
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.NullValue = false;
-            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.NullValue = false;
+            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle4;
             this.colAsistenciaAsistencias.HeaderText = "Asistencias";
             this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
             this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -4503,7 +4503,7 @@
             // 
             this.btnAtrasConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(783, 444);
+            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(779, 435);
             this.btnAtrasConsultaAlumno.Name = "btnAtrasConsultaAlumno";
             this.btnAtrasConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno.TabIndex = 86;
@@ -4515,7 +4515,7 @@
             // 
             this.btnSiguienteConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(933, 444);
+            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(929, 435);
             this.btnSiguienteConsultaAlumno.Name = "btnSiguienteConsultaAlumno";
             this.btnSiguienteConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnSiguienteConsultaAlumno.TabIndex = 85;
@@ -5249,7 +5249,7 @@
             // 
             this.btnAtrasConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(780, 439);
+            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(777, 435);
             this.btnAtrasConsultaAlumno_2.Name = "btnAtrasConsultaAlumno_2";
             this.btnAtrasConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno_2.TabIndex = 107;
@@ -5261,7 +5261,7 @@
             // 
             this.btnSiguienteConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(930, 439);
+            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(927, 435);
             this.btnSiguienteConsultaAlumno_2.Name = "btnSiguienteConsultaAlumno_2";
             this.btnSiguienteConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
             this.btnSiguienteConsultaAlumno_2.TabIndex = 106;
@@ -5868,7 +5868,7 @@
             // 
             this.btnAtrasConsultaAlumno_3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(781, 444);
+            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(777, 435);
             this.btnAtrasConsultaAlumno_3.Name = "btnAtrasConsultaAlumno_3";
             this.btnAtrasConsultaAlumno_3.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno_3.TabIndex = 16;
@@ -5880,7 +5880,7 @@
             // 
             this.btnFinalizarConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizarConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(931, 444);
+            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(927, 435);
             this.btnFinalizarConsultaAlumno.Name = "btnFinalizarConsultaAlumno";
             this.btnFinalizarConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnFinalizarConsultaAlumno.TabIndex = 108;

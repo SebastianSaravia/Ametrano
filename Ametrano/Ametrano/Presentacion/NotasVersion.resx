@@ -117,4 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label2.Text" xml:space="preserve">
+    <value>- Iconos en el menu y las pestañas de navegacion.
+- Aspectos visuales en las notas de version.
+- Aspectos visuales en la ventana de reporte de errores.
+- Ahora el software puede ponerce en pantalla competa.</value>
+  </data>
 </root>

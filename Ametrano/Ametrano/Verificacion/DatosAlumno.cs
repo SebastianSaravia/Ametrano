@@ -18,14 +18,14 @@ namespace Ametrano.Encapsulado
         private string[] trabajo = new string[5];
         private string[] personas_a_cargo = new string[8];
         private string[] acceso_a_internet = new string[3];
-        
+        private string mensajeParaRetornar = "Error encontrado en los siguientes campos";
 
 
 
 
         public dynamic[] setDatosPersonales(string[] datosPersonalesRecividos)
         {
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             dynamic[] datosParaRetornar = new dynamic[2];
 
@@ -40,11 +40,19 @@ namespace Ametrano.Encapsulado
             {
                 datosPersonales[0] = datosPersonalesRecividos[0];
             }
+            if(datosPersonalesRecividos[5].Equals("    -  -")|| datosPersonalesRecividos[5].Equals("Fecha de nacimiento"))
+            {
+                errores = true;
+                mensajeParaRetornar += "\nLa fecha de nacimiento no puede estar vacia";
+            }
+            else
+            {
+                datosPersonales[5] = datosPersonalesRecividos[5];
+            }
             datosPersonales[1] = datosPersonalesRecividos[1];
             datosPersonales[2] = datosPersonalesRecividos[2];
             datosPersonales[3] = datosPersonalesRecividos[3];
             datosPersonales[4] = datosPersonalesRecividos[4];
-            datosPersonales[5] = datosPersonalesRecividos[5];
             datosPersonales[6] = datosPersonalesRecividos[6];
             datosPersonales[7] = datosPersonalesRecividos[7];
             datosPersonales[8] = datosPersonalesRecividos[8];
@@ -58,7 +66,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setCurso(string[] datosCursoRecibidos)
         {//metodo que guarda los datos del curso
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             /*Explicacion de datosCursos
              * datosCurso[0] = -> curso
@@ -106,7 +114,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setFormacionAcademica(string[] datosFormacionAcademicaRecibidos)
         {//metodo que guarda los datos de formacion academica
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
 
             formacionAcademica[0] = datosFormacionAcademicaRecibidos[0];
@@ -127,7 +135,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setDireccion(string[] datosDireccionRecibidos)
         {//Metodo que almacena la direccion 
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             /*Explicacion del array datosDireccionrecividos
              * direccion[0] = -> Departamento
@@ -157,7 +165,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setContacto(string[] datosContactoRecibidos)
         {
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             /*Explicacion del array datosPersonalesRecividos
              * contacto[0] = -> Telefono
@@ -181,7 +189,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setCobertura(string datosCoberturaRecibidos)
         {
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
 
      
@@ -199,7 +207,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setHogar(string[] datosHogarRecibidos)
         {
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             /*Explicacion del array datosPersonalesRecividos
              * hogar[0] = -> JefeHogar
@@ -223,7 +231,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setTrabajo(string[] datosTrabajoRecibidos)
         {
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             /*Explicacion del array datosPersonalesRecividos
              * trabajo[0] = -> Trabajo alguna vez
@@ -252,7 +260,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setPersonasACargo(string[] DatosPersonas_A_CargoRecibidos)
         {
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             /*Explicacion del array datosPersonalesRecividos
              * personas_a_cargo[0] = -> De 0 a 17
@@ -287,7 +295,7 @@ namespace Ametrano.Encapsulado
         }
         public dynamic[] setAccessoInternet(string[] datosAccessoInternetRecibidos)
         {
-            string mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            
             bool errores = false;
             /*Explicacion del array datosPersonalesRecividos
              * acceso_a_internet[0] = -> Usa internet
@@ -681,6 +689,11 @@ namespace Ametrano.Encapsulado
 
             return false;
         }
-
+        public string mostrarError()
+        {
+            string mensaje = mensajeParaRetornar;
+            mensajeParaRetornar = "Error encontrado en los siguientes campos";
+            return mensaje;
+        }
     }
 }
