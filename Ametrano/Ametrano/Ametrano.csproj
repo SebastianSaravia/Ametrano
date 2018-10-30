@@ -124,12 +124,6 @@
     <Compile Include="Logica\TestingClass.cs" />
     <Compile Include="Persistencia\ConexionBD.cs" />
     <Compile Include="Logica\Login_Controlador.cs" />
-    <Compile Include="Presentacion\Configuracion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\Configuracion.Designer.cs">
-      <DependentUpon>Configuracion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentacion\Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,9 +139,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Verificacion\DatosDocente.cs" />
-    <EmbeddedResource Include="Presentacion\Configuracion.resx">
-      <DependentUpon>Configuracion.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Loading.resx">
       <DependentUpon>Loading.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,8 +199,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Logo_ametrano.ico" />
+    <None Include="Resources\notes.png" />
+    <None Include="Resources\off.png" />
     <None Include="Resources\sad_face.gif" />
     <None Include="Resources\icon.png" />
+    <None Include="Resources\alumno.fw.png" />
+    <None Include="Resources\docente.fw.png" />
+    <None Include="Resources\docente.fw1.png" />
+    <None Include="Resources\cursos.fw.png" />
+    <None Include="Resources\close1.png" />
+    <None Include="Resources\connection.png" />
+    <None Include="Resources\error.png" />
+    <None Include="Resources\interrogacion.png" />
     <Content Include="Resources\Manual.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

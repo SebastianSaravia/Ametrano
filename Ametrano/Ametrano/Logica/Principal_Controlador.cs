@@ -17,11 +17,7 @@ namespace Ametrano.Logica
         public IDictionary<string, string> mapTextBox = new Dictionary<string, string>();
         ConexionBD objetoConexion = new ConexionBD();
         
-        public void abrirConfiguracion()
-        {
-            Configuracion ventanaConfiguracion = new Configuracion();
-            ventanaConfiguracion.Show();
-        }
+       
 
         public dynamic[] ingresarDocente(DatosDocente infoDocente, string[] especialidades)
         {//Metodo que ingresa datos en la base de datos

@@ -65,12 +65,12 @@ namespace Ametrano.Presentacion
 
         private void btnAlumnos_Click(object sender, EventArgs e)
         {
-            tabControlPrincipal.SelectedIndex = 1;
+            tabControlPrincipal.SelectedIndex = 2;
         }
 
         private void btnCursos_Click(object sender, EventArgs e)
         {
-            tabControlPrincipal.SelectedIndex = 2;
+            tabControlPrincipal.SelectedIndex = 1;
             btnAñadirSemanaViaticos.Enabled = false;
             boxCursoViaticos.SelectedIndex = 0;
         }
@@ -1112,11 +1112,7 @@ namespace Ametrano.Presentacion
             maskedTxtFechaNacimientoAlumno.Text = TimePickerFechaNacAlumnoNuevo.Value.Year + "/" + mes + "/" + dia;
 
             maskedTxtFechaNacimientoAlumno.ForeColor = Color.Black;
-        }
-        private void configuraciónToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            controlador.abrirConfiguracion();
-        }
+        }       
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -4078,5 +4074,7 @@ namespace Ametrano.Presentacion
             }
 
         }
+
+       
     }
 }
