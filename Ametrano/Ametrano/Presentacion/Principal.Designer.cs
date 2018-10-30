@@ -29,13 +29,23 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnAlumnos = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btnDocentes = new Bunifu.Framework.UI.BunifuImageButton();
             this.menuPrincipal = new System.Windows.Forms.MenuStrip();
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reporteDeErroresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.notasDeVersiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
             this.pageDocente = new System.Windows.Forms.TabPage();
             this.tabControlDocente = new System.Windows.Forms.TabControl();
@@ -97,11 +107,6 @@
             this.lblCedulaViaticos = new System.Windows.Forms.Label();
             this.lblNombreViaticos = new System.Windows.Forms.Label();
             this.dataGridViaticos = new System.Windows.Forms.DataGridView();
-            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
             this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
             this.asistencias = new System.Windows.Forms.TabPage();
@@ -111,8 +116,6 @@
             this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias_2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
             this.btnConsultarLista = new System.Windows.Forms.Button();
             this.groupBox56 = new System.Windows.Forms.GroupBox();
@@ -122,8 +125,6 @@
             this.boxNumeroGrupo = new System.Windows.Forms.ComboBox();
             this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
             this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
-            this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.boxTurnoAsistencia = new System.Windows.Forms.ComboBox();
             this.btnGenerarLista = new System.Windows.Forms.Button();
             this.nuevoGrupo = new System.Windows.Forms.TabPage();
@@ -147,6 +148,7 @@
             this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
             this.txtNombreCurso = new System.Windows.Forms.TextBox();
             this.boxTipoCurso = new System.Windows.Forms.ComboBox();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
             this.pageAlumno = new System.Windows.Forms.TabPage();
             this.tabControlAlumnos = new System.Windows.Forms.TabControl();
             this.tabPageAlumnosNuevo = new System.Windows.Forms.TabPage();
@@ -442,18 +444,20 @@
             this.btnAtrasConsultaAlumno_3 = new System.Windows.Forms.Button();
             this.btnFinalizarConsultaAlumno = new System.Windows.Forms.Button();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reporteDeErroresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.notasDeVersiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnAlumnos = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btnDocentes = new Bunifu.Framework.UI.BunifuImageButton();
+            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.menuPrincipal.SuspendLayout();
             this.tabControlPrincipal.SuspendLayout();
             this.pageDocente.SuspendLayout();
@@ -544,10 +548,6 @@
             this.groupBox43.SuspendLayout();
             this.groupBox44.SuspendLayout();
             this.groupBox45.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -563,6 +563,70 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(86, 551);
             this.panel1.TabIndex = 1;
+            // 
+            // bunifuImageButton2
+            // 
+            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton2.Image = global::Ametrano.Properties.Resources.icon;
+            this.bunifuImageButton2.ImageActive = null;
+            this.bunifuImageButton2.Location = new System.Drawing.Point(2, 707);
+            this.bunifuImageButton2.Name = "bunifuImageButton2";
+            this.bunifuImageButton2.Size = new System.Drawing.Size(44, 34);
+            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton2.TabIndex = 2;
+            this.bunifuImageButton2.TabStop = false;
+            this.toolTip.SetToolTip(this.bunifuImageButton2, "Reportar un error");
+            this.bunifuImageButton2.Zoom = 5;
+            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            // 
+            // btnCursos
+            // 
+            this.btnCursos.BackColor = System.Drawing.Color.Transparent;
+            this.btnCursos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCursos.Image = global::Ametrano.Properties.Resources.cursos_fw;
+            this.btnCursos.ImageActive = null;
+            this.btnCursos.Location = new System.Drawing.Point(6, 172);
+            this.btnCursos.Name = "btnCursos";
+            this.btnCursos.Size = new System.Drawing.Size(73, 77);
+            this.btnCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnCursos.TabIndex = 0;
+            this.btnCursos.TabStop = false;
+            this.toolTip.SetToolTip(this.btnCursos, "Cursos");
+            this.btnCursos.Zoom = 5;
+            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
+            // 
+            // btnAlumnos
+            // 
+            this.btnAlumnos.BackColor = System.Drawing.Color.Transparent;
+            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAlumnos.Image = global::Ametrano.Properties.Resources.alumno_fw;
+            this.btnAlumnos.ImageActive = null;
+            this.btnAlumnos.Location = new System.Drawing.Point(6, 16);
+            this.btnAlumnos.Name = "btnAlumnos";
+            this.btnAlumnos.Size = new System.Drawing.Size(73, 77);
+            this.btnAlumnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnAlumnos.TabIndex = 0;
+            this.btnAlumnos.TabStop = false;
+            this.toolTip.SetToolTip(this.btnAlumnos, "Alumnos");
+            this.btnAlumnos.Zoom = 5;
+            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
+            // 
+            // btnDocentes
+            // 
+            this.btnDocentes.BackColor = System.Drawing.Color.Transparent;
+            this.btnDocentes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDocentes.Image = global::Ametrano.Properties.Resources.docente1;
+            this.btnDocentes.ImageActive = null;
+            this.btnDocentes.Location = new System.Drawing.Point(6, 94);
+            this.btnDocentes.Name = "btnDocentes";
+            this.btnDocentes.Size = new System.Drawing.Size(73, 77);
+            this.btnDocentes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnDocentes.TabIndex = 0;
+            this.btnDocentes.TabStop = false;
+            this.toolTip.SetToolTip(this.btnDocentes, "Docentes");
+            this.btnDocentes.Zoom = 5;
+            this.btnDocentes.Click += new System.EventHandler(this.btnDocentes_Click);
             // 
             // menuPrincipal
             // 
@@ -587,6 +651,22 @@
             this.inicioToolStripMenuItem.Size = new System.Drawing.Size(50, 21);
             this.inicioToolStripMenuItem.Text = "Inicio";
             // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Image = global::Ametrano.Properties.Resources.close1;
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = global::Ametrano.Properties.Resources.off;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -596,6 +676,22 @@
             this.toolStripMenuItem1.Size = new System.Drawing.Size(98, 21);
             this.toolStripMenuItem1.Text = "Herramientas";
             // 
+            // pruebaDeConexionConBaseDeDatosToolStripMenuItem
+            // 
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Image = global::Ametrano.Properties.Resources.connection;
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Name = "pruebaDeConexionConBaseDeDatosToolStripMenuItem";
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Text = "Prueba de conexion con base de datos";
+            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.pruebaDeConexionConBaseDeDatosToolStripMenuItem_Click);
+            // 
+            // reporteDeErroresToolStripMenuItem
+            // 
+            this.reporteDeErroresToolStripMenuItem.Image = global::Ametrano.Properties.Resources.error;
+            this.reporteDeErroresToolStripMenuItem.Name = "reporteDeErroresToolStripMenuItem";
+            this.reporteDeErroresToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
+            this.reporteDeErroresToolStripMenuItem.Text = "Reporte de errores";
+            this.reporteDeErroresToolStripMenuItem.Click += new System.EventHandler(this.reporteDeErroresToolStripMenuItem_Click);
+            // 
             // ayudaToolStripMenuItem
             // 
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -604,6 +700,22 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // manualDeUsuarioToolStripMenuItem
+            // 
+            this.manualDeUsuarioToolStripMenuItem.Image = global::Ametrano.Properties.Resources.interrogacion;
+            this.manualDeUsuarioToolStripMenuItem.Name = "manualDeUsuarioToolStripMenuItem";
+            this.manualDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.manualDeUsuarioToolStripMenuItem.Text = "Manual de usuario";
+            this.manualDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.manualDeUsuarioToolStripMenuItem_Click);
+            // 
+            // notasDeVersiónToolStripMenuItem
+            // 
+            this.notasDeVersiónToolStripMenuItem.Image = global::Ametrano.Properties.Resources.notes;
+            this.notasDeVersiónToolStripMenuItem.Name = "notasDeVersiónToolStripMenuItem";
+            this.notasDeVersiónToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
+            this.notasDeVersiónToolStripMenuItem.Text = "Notas de versión";
+            this.notasDeVersiónToolStripMenuItem.Click += new System.EventHandler(this.notasDeVersiónToolStripMenuItem_Click);
             // 
             // tabControlPrincipal
             // 
@@ -639,6 +751,7 @@
             this.tabControlDocente.Controls.Add(this.tabPageDocentesConsultarModificar);
             this.tabControlDocente.Controls.Add(this.tabPageDocentesBaja);
             this.tabControlDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlDocente.ImageList = this.imageList;
             this.tabControlDocente.Location = new System.Drawing.Point(-4, 1);
             this.tabControlDocente.Name = "tabControlDocente";
             this.tabControlDocente.SelectedIndex = 0;
@@ -651,6 +764,7 @@
             this.tabPageDocentesNuevo.Controls.Add(this.btnIngresarDocente);
             this.tabPageDocentesNuevo.Controls.Add(this.groupBox2);
             this.tabPageDocentesNuevo.Controls.Add(this.groupBox1);
+            this.tabPageDocentesNuevo.ImageIndex = 3;
             this.tabPageDocentesNuevo.Location = new System.Drawing.Point(4, 27);
             this.tabPageDocentesNuevo.Name = "tabPageDocentesNuevo";
             this.tabPageDocentesNuevo.Padding = new System.Windows.Forms.Padding(3);
@@ -841,15 +955,17 @@
             this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox3);
             this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox4);
             this.tabPageDocentesConsultarModificar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tabPageDocentesConsultarModificar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDocentesConsultarModificar.ImageIndex = 4;
+            this.tabPageDocentesConsultarModificar.Location = new System.Drawing.Point(4, 27);
             this.tabPageDocentesConsultarModificar.Name = "tabPageDocentesConsultarModificar";
             this.tabPageDocentesConsultarModificar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDocentesConsultarModificar.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageDocentesConsultarModificar.Size = new System.Drawing.Size(1089, 516);
             this.tabPageDocentesConsultarModificar.TabIndex = 1;
             this.tabPageDocentesConsultarModificar.Text = "Consultar / Modificar";
             // 
             // listResultadosDocentes
             // 
+            this.listResultadosDocentes.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listResultadosDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listResultadosDocentes.FormattingEnabled = true;
             this.listResultadosDocentes.ItemHeight = 16;
@@ -862,6 +978,7 @@
             // 
             // btnActualizarDocente
             // 
+            this.btnActualizarDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnActualizarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnActualizarDocente.Location = new System.Drawing.Point(836, 455);
             this.btnActualizarDocente.Name = "btnActualizarDocente";
@@ -873,6 +990,7 @@
             // 
             // btnBuscar
             // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar.Location = new System.Drawing.Point(711, 49);
             this.btnBuscar.Name = "btnBuscar";
@@ -884,6 +1002,7 @@
             // 
             // txtBuscar
             // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtBuscar.Location = new System.Drawing.Point(489, 50);
@@ -898,6 +1017,7 @@
             // boxBuscar
             // 
             this.boxBuscar.AccessibleDescription = "";
+            this.boxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxBuscar.DisplayMember = "sadsa";
             this.boxBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -915,6 +1035,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox3.Controls.Add(this.btnQuitar_2);
             this.groupBox3.Controls.Add(this.btnAñadir_2);
             this.groupBox3.Controls.Add(this.listEspecialidades_2);
@@ -970,6 +1091,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox4.Controls.Add(this.btnCambiarEstadoDocente);
             this.groupBox4.Controls.Add(this.lblEstadoDocente);
             this.groupBox4.Controls.Add(this.txtEmailDocente_2);
@@ -1095,14 +1217,16 @@
             this.tabPageDocentesBaja.Controls.Add(this.btnBuscar_2);
             this.tabPageDocentesBaja.Controls.Add(this.txtBuscar_2);
             this.tabPageDocentesBaja.Controls.Add(this.boxBuscar_2);
-            this.tabPageDocentesBaja.Location = new System.Drawing.Point(4, 22);
+            this.tabPageDocentesBaja.ImageIndex = 5;
+            this.tabPageDocentesBaja.Location = new System.Drawing.Point(4, 27);
             this.tabPageDocentesBaja.Name = "tabPageDocentesBaja";
-            this.tabPageDocentesBaja.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageDocentesBaja.Size = new System.Drawing.Size(1089, 516);
             this.tabPageDocentesBaja.TabIndex = 2;
             this.tabPageDocentesBaja.Text = "Dar de baja";
             // 
             // listResultadosDocentes_2
             // 
+            this.listResultadosDocentes_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listResultadosDocentes_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listResultadosDocentes_2.FormattingEnabled = true;
             this.listResultadosDocentes_2.ItemHeight = 16;
@@ -1115,6 +1239,7 @@
             // 
             // btnDarDeBaja
             // 
+            this.btnDarDeBaja.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDarDeBaja.Location = new System.Drawing.Point(428, 300);
             this.btnDarDeBaja.Name = "btnDarDeBaja";
@@ -1126,6 +1251,7 @@
             // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.groupBox5.Controls.Add(this.lblEstadoDocenteBaja);
             this.groupBox5.Controls.Add(this.lblCedulaDocente);
             this.groupBox5.Controls.Add(this.lblEmailDocente);
@@ -1187,6 +1313,7 @@
             // 
             // btnBuscar_2
             // 
+            this.btnBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar_2.Location = new System.Drawing.Point(665, 53);
             this.btnBuscar_2.Name = "btnBuscar_2";
@@ -1198,6 +1325,7 @@
             // 
             // txtBuscar_2
             // 
+            this.txtBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtBuscar_2.Location = new System.Drawing.Point(442, 54);
@@ -1212,6 +1340,7 @@
             // boxBuscar_2
             // 
             this.boxBuscar_2.AccessibleDescription = "";
+            this.boxBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxBuscar_2.DisplayMember = "sadsa";
             this.boxBuscar_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1320,6 +1449,7 @@
             // 
             // lblMontoTotalViaticos
             // 
+            this.lblMontoTotalViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMontoTotalViaticos.AutoSize = true;
             this.lblMontoTotalViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontoTotalViaticos.Location = new System.Drawing.Point(788, 158);
@@ -1342,6 +1472,7 @@
             // 
             // lblMontoDiaViaticos
             // 
+            this.lblMontoDiaViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblMontoDiaViaticos.AutoSize = true;
             this.lblMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
@@ -1352,6 +1483,7 @@
             // 
             // lblCedulaViaticos
             // 
+            this.lblCedulaViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblCedulaViaticos.AutoSize = true;
             this.lblCedulaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedulaViaticos.Location = new System.Drawing.Point(788, 77);
@@ -1362,6 +1494,7 @@
             // 
             // lblNombreViaticos
             // 
+            this.lblNombreViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNombreViaticos.AutoSize = true;
             this.lblNombreViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombreViaticos.Location = new System.Drawing.Point(788, 104);
@@ -1376,6 +1509,10 @@
             this.dataGridViaticos.AllowUserToDeleteRows = false;
             this.dataGridViaticos.AllowUserToResizeColumns = false;
             this.dataGridViaticos.AllowUserToResizeRows = false;
+            this.dataGridViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViaticos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViaticos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridViaticos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridViaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1395,44 +1532,6 @@
             this.dataGridViaticos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
             this.dataGridViaticos.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridViaticos_CurrentCellDirtyStateChanged);
             // 
-            // colFechaViaticos
-            // 
-            this.colFechaViaticos.Frozen = true;
-            this.colFechaViaticos.HeaderText = "Fecha";
-            this.colFechaViaticos.Name = "colFechaViaticos";
-            this.colFechaViaticos.ReadOnly = true;
-            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colMontoViaticos
-            // 
-            this.colMontoViaticos.Frozen = true;
-            this.colMontoViaticos.HeaderText = "Monto";
-            this.colMontoViaticos.Name = "colMontoViaticos";
-            this.colMontoViaticos.ReadOnly = true;
-            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colRubroViaticos
-            // 
-            this.colRubroViaticos.Frozen = true;
-            this.colRubroViaticos.HeaderText = "Rubro";
-            this.colRubroViaticos.Name = "colRubroViaticos";
-            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colConceptoViaticos
-            // 
-            this.colConceptoViaticos.Frozen = true;
-            this.colConceptoViaticos.HeaderText = "Concepto";
-            this.colConceptoViaticos.Name = "colConceptoViaticos";
-            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAbonoViaticos
-            // 
-            this.colAbonoViaticos.Frozen = true;
-            this.colAbonoViaticos.HeaderText = "Abonado";
-            this.colAbonoViaticos.Name = "colAbonoViaticos";
-            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
             // boxCursoViaticos
             // 
             this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1447,6 +1546,8 @@
             // 
             // listAlumnosViaticos
             // 
+            this.listAlumnosViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listAlumnosViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listAlumnosViaticos.FormattingEnabled = true;
             this.listAlumnosViaticos.ItemHeight = 20;
@@ -1471,6 +1572,9 @@
             // 
             // groupBox57
             // 
+            this.groupBox57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox57.Controls.Add(this.lstMateriasDelDia);
             this.groupBox57.Controls.Add(this.boxNumeroGrupo_2);
             this.groupBox57.Controls.Add(this.boxTurnoAsistencia_2);
@@ -1546,6 +1650,10 @@
             this.dataGridListaAsistencias_2.AllowUserToDeleteRows = false;
             this.dataGridListaAsistencias_2.AllowUserToResizeColumns = false;
             this.dataGridListaAsistencias_2.AllowUserToResizeRows = false;
+            this.dataGridListaAsistencias_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridListaAsistencias_2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridListaAsistencias_2.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridListaAsistencias_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridListaAsistencias_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1559,25 +1667,6 @@
             this.dataGridListaAsistencias_2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridListaAsistencias_2.Size = new System.Drawing.Size(232, 406);
             this.dataGridListaAsistencias_2.TabIndex = 29;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.Frozen = true;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewTextBoxColumn1.Width = 140;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.Frozen = true;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewTextBoxColumn2.Width = 80;
             // 
             // dateTimeFechaAsistencia_2
             // 
@@ -1602,6 +1691,8 @@
             // 
             // groupBox56
             // 
+            this.groupBox56.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox56.Controls.Add(this.btnGuardarLista);
             this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
             this.groupBox56.Controls.Add(this.boxMateriaAsistencia);
@@ -1688,6 +1779,9 @@
             this.dataGridListaAsistencias.AllowUserToDeleteRows = false;
             this.dataGridListaAsistencias.AllowUserToResizeColumns = false;
             this.dataGridListaAsistencias.AllowUserToResizeRows = false;
+            this.dataGridListaAsistencias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridListaAsistencias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridListaAsistencias.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridListaAsistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridListaAsistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -1702,28 +1796,6 @@
             this.dataGridListaAsistencias.TabIndex = 29;
             this.dataGridListaAsistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridListaAsistencias_CellContentClick);
             this.dataGridListaAsistencias.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridListaAsistencias_CurrentCellDirtyStateChanged);
-            // 
-            // colNombreAsistencias
-            // 
-            this.colNombreAsistencias.Frozen = true;
-            this.colNombreAsistencias.HeaderText = "Nombre";
-            this.colNombreAsistencias.Name = "colNombreAsistencias";
-            this.colNombreAsistencias.ReadOnly = true;
-            this.colNombreAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colNombreAsistencias.Width = 140;
-            // 
-            // colAsistenciaAsistencias
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.NullValue = false;
-            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle1;
-            this.colAsistenciaAsistencias.Frozen = true;
-            this.colAsistenciaAsistencias.HeaderText = "Asistencias";
-            this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
-            this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAsistenciaAsistencias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.colAsistenciaAsistencias.Width = 80;
             // 
             // boxTurnoAsistencia
             // 
@@ -1786,6 +1858,9 @@
             this.dataGridGruposActivos.AllowUserToDeleteRows = false;
             this.dataGridGruposActivos.AllowUserToResizeColumns = false;
             this.dataGridGruposActivos.AllowUserToResizeRows = false;
+            this.dataGridGruposActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridGruposActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dataGridGruposActivos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
             this.dataGridGruposActivos.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -1793,7 +1868,7 @@
             this.dataGridGruposActivos.Location = new System.Drawing.Point(599, 49);
             this.dataGridGruposActivos.Name = "dataGridGruposActivos";
             this.dataGridGruposActivos.RowHeadersVisible = false;
-            this.dataGridGruposActivos.Size = new System.Drawing.Size(447, 408);
+            this.dataGridGruposActivos.Size = new System.Drawing.Size(467, 408);
             this.dataGridGruposActivos.TabIndex = 37;
             // 
             // btnCrearGrupo
@@ -1898,6 +1973,7 @@
             // 
             // btnCrearCurso
             // 
+            this.btnCrearCurso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnCrearCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCurso.Location = new System.Drawing.Point(799, 266);
             this.btnCrearCurso.Name = "btnCrearCurso";
@@ -1909,6 +1985,7 @@
             // 
             // groupBox58
             // 
+            this.groupBox58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox58.Controls.Add(this.groupBox59);
             this.groupBox58.Controls.Add(this.txtNombreCurso);
             this.groupBox58.Controls.Add(this.boxTipoCurso);
@@ -1921,6 +1998,7 @@
             // 
             // groupBox59
             // 
+            this.groupBox59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.groupBox59.Controls.Add(this.btnQuitarMateriaCurso);
             this.groupBox59.Controls.Add(this.btnAñadirMateriaCurso);
             this.groupBox59.Controls.Add(this.listMateriasCurso);
@@ -1956,6 +2034,7 @@
             // 
             // listMateriasCurso
             // 
+            this.listMateriasCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.listMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listMateriasCurso.FormattingEnabled = true;
             this.listMateriasCurso.ItemHeight = 18;
@@ -2000,6 +2079,17 @@
             this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
             this.boxTipoCurso.TabIndex = 8;
             // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "money.png");
+            this.imageList.Images.SetKeyName(1, "lista.png");
+            this.imageList.Images.SetKeyName(2, "newgroup.png");
+            this.imageList.Images.SetKeyName(3, "newcurso.png");
+            this.imageList.Images.SetKeyName(4, "lupa.png");
+            this.imageList.Images.SetKeyName(5, "delete.png");
+            // 
             // pageAlumno
             // 
             this.pageAlumno.BackColor = System.Drawing.Color.LightGray;
@@ -2019,6 +2109,7 @@
             this.tabControlAlumnos.Controls.Add(this.tabPageAlumnosNuevo);
             this.tabControlAlumnos.Controls.Add(this.tabPageAlumnosModificar);
             this.tabControlAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlAlumnos.ImageList = this.imageList;
             this.tabControlAlumnos.Location = new System.Drawing.Point(-4, 1);
             this.tabControlAlumnos.Name = "tabControlAlumnos";
             this.tabControlAlumnos.SelectedIndex = 0;
@@ -2029,6 +2120,7 @@
             // 
             this.tabPageAlumnosNuevo.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageAlumnosNuevo.Controls.Add(this.tabControlIngresarAlumno);
+            this.tabPageAlumnosNuevo.ImageIndex = 3;
             this.tabPageAlumnosNuevo.Location = new System.Drawing.Point(4, 27);
             this.tabPageAlumnosNuevo.Name = "tabPageAlumnosNuevo";
             this.tabPageAlumnosNuevo.Padding = new System.Windows.Forms.Padding(3);
@@ -2556,10 +2648,10 @@
             this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.groupBox16);
             this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.btnAtras);
             this.tabPageIngresarAlumnoDatosInteres.Controls.Add(this.btnSiguinete_2);
-            this.tabPageIngresarAlumnoDatosInteres.Location = new System.Drawing.Point(4, 22);
+            this.tabPageIngresarAlumnoDatosInteres.Location = new System.Drawing.Point(4, 27);
             this.tabPageIngresarAlumnoDatosInteres.Name = "tabPageIngresarAlumnoDatosInteres";
             this.tabPageIngresarAlumnoDatosInteres.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageIngresarAlumnoDatosInteres.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageIngresarAlumnoDatosInteres.Size = new System.Drawing.Size(1083, 479);
             this.tabPageIngresarAlumnoDatosInteres.TabIndex = 1;
             this.tabPageIngresarAlumnoDatosInteres.Text = "Datos de interes";
             // 
@@ -2898,7 +2990,7 @@
             // 
             this.btnAtras.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras.Location = new System.Drawing.Point(781, 444);
+            this.btnAtras.Location = new System.Drawing.Point(781, 434);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(144, 36);
             this.btnAtras.TabIndex = 47;
@@ -2910,7 +3002,7 @@
             // 
             this.btnSiguinete_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguinete_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguinete_2.Location = new System.Drawing.Point(931, 444);
+            this.btnSiguinete_2.Location = new System.Drawing.Point(931, 434);
             this.btnSiguinete_2.Name = "btnSiguinete_2";
             this.btnSiguinete_2.Size = new System.Drawing.Size(144, 36);
             this.btnSiguinete_2.TabIndex = 46;
@@ -2933,20 +3025,22 @@
             this.tabPageIngresarAlumnoFinalizar.Controls.Add(this.groupBox25);
             this.tabPageIngresarAlumnoFinalizar.Controls.Add(this.btnAtras_2);
             this.tabPageIngresarAlumnoFinalizar.Controls.Add(this.btnFinalizar);
-            this.tabPageIngresarAlumnoFinalizar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageIngresarAlumnoFinalizar.Location = new System.Drawing.Point(4, 27);
             this.tabPageIngresarAlumnoFinalizar.Name = "tabPageIngresarAlumnoFinalizar";
-            this.tabPageIngresarAlumnoFinalizar.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageIngresarAlumnoFinalizar.Size = new System.Drawing.Size(1083, 479);
             this.tabPageIngresarAlumnoFinalizar.TabIndex = 2;
             this.tabPageIngresarAlumnoFinalizar.Text = "Finalizar";
             // 
             // groupBox26
             // 
+            this.groupBox26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox26.Controls.Add(this.lblEstadoAlumno);
             this.groupBox26.Controls.Add(this.lblCursoAlumno);
             this.groupBox26.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox26.Location = new System.Drawing.Point(39, 36);
             this.groupBox26.Name = "groupBox26";
-            this.groupBox26.Size = new System.Drawing.Size(279, 87);
+            this.groupBox26.Size = new System.Drawing.Size(286, 87);
             this.groupBox26.TabIndex = 30;
             this.groupBox26.TabStop = false;
             this.groupBox26.Text = "Con respecto al instituto";
@@ -2973,12 +3067,13 @@
             // 
             // groupBox22
             // 
+            this.groupBox22.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox22.Controls.Add(this.lblCantidadHijosAlumno);
             this.groupBox22.Controls.Add(this.lblJefeHogarAlumno);
             this.groupBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox22.Location = new System.Drawing.Point(324, 323);
+            this.groupBox22.Location = new System.Drawing.Point(331, 323);
             this.groupBox22.Name = "groupBox22";
-            this.groupBox22.Size = new System.Drawing.Size(279, 81);
+            this.groupBox22.Size = new System.Drawing.Size(310, 81);
             this.groupBox22.TabIndex = 24;
             this.groupBox22.TabStop = false;
             this.groupBox22.Text = "Jefe de hogar";
@@ -3005,13 +3100,14 @@
             // 
             // groupBox27
             // 
+            this.groupBox27.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox27.Controls.Add(this.lblEmailAlumno);
             this.groupBox27.Controls.Add(this.lblCelularAlumno);
             this.groupBox27.Controls.Add(this.lblTelefonoAlumno);
             this.groupBox27.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox27.Location = new System.Drawing.Point(324, 175);
+            this.groupBox27.Location = new System.Drawing.Point(331, 175);
             this.groupBox27.Name = "groupBox27";
-            this.groupBox27.Size = new System.Drawing.Size(279, 87);
+            this.groupBox27.Size = new System.Drawing.Size(310, 87);
             this.groupBox27.TabIndex = 29;
             this.groupBox27.TabStop = false;
             this.groupBox27.Text = "Contacto";
@@ -3048,6 +3144,7 @@
             // 
             // groupBox28
             // 
+            this.groupBox28.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox28.Controls.Add(this.lblNApartamentoAlumno);
             this.groupBox28.Controls.Add(this.lblNPuertaAlumno);
             this.groupBox28.Controls.Add(this.lblReferenciaAlumno);
@@ -3055,9 +3152,9 @@
             this.groupBox28.Controls.Add(this.lblLocalidadAlumno);
             this.groupBox28.Controls.Add(this.lblDepartamentoAlumno);
             this.groupBox28.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox28.Location = new System.Drawing.Point(324, 36);
+            this.groupBox28.Location = new System.Drawing.Point(331, 36);
             this.groupBox28.Name = "groupBox28";
-            this.groupBox28.Size = new System.Drawing.Size(279, 133);
+            this.groupBox28.Size = new System.Drawing.Size(310, 133);
             this.groupBox28.TabIndex = 26;
             this.groupBox28.TabStop = false;
             this.groupBox28.Text = "Dirección";
@@ -3124,11 +3221,12 @@
             // 
             // groupBox21
             // 
+            this.groupBox21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox21.Controls.Add(this.lblCoberturaSaludAlumno);
             this.groupBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox21.Location = new System.Drawing.Point(324, 268);
+            this.groupBox21.Location = new System.Drawing.Point(331, 268);
             this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(279, 49);
+            this.groupBox21.Size = new System.Drawing.Size(310, 49);
             this.groupBox21.TabIndex = 25;
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Coberura de salud";
@@ -3145,12 +3243,14 @@
             // 
             // groupBox29
             // 
+            this.groupBox29.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox29.Controls.Add(this.lblUltimoAñoAprobadoAlumno);
             this.groupBox29.Controls.Add(this.lblNivelEducativoAlumno);
             this.groupBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox29.Location = new System.Drawing.Point(39, 315);
             this.groupBox29.Name = "groupBox29";
-            this.groupBox29.Size = new System.Drawing.Size(279, 89);
+            this.groupBox29.Size = new System.Drawing.Size(286, 89);
             this.groupBox29.TabIndex = 27;
             this.groupBox29.TabStop = false;
             this.groupBox29.Text = "Formacion academica";
@@ -3177,6 +3277,8 @@
             // 
             // groupBox30
             // 
+            this.groupBox30.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox30.Controls.Add(this.lblEstadoCivilAlumno);
             this.groupBox30.Controls.Add(this.lblSexoAlumno);
             this.groupBox30.Controls.Add(this.lblEdadAlumno);
@@ -3189,7 +3291,7 @@
             this.groupBox30.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox30.Location = new System.Drawing.Point(39, 129);
             this.groupBox30.Name = "groupBox30";
-            this.groupBox30.Size = new System.Drawing.Size(279, 180);
+            this.groupBox30.Size = new System.Drawing.Size(286, 180);
             this.groupBox30.TabIndex = 28;
             this.groupBox30.TabStop = false;
             this.groupBox30.Text = "Datos personales";
@@ -3286,6 +3388,7 @@
             // 
             // groupBox23
             // 
+            this.groupBox23.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox23.Controls.Add(this.lblExperienciaInstitucionesCuidadoAlumno);
             this.groupBox23.Controls.Add(this.lblTrabajoAnteriormenteCuidandoAlumno);
             this.groupBox23.Controls.Add(this.lblCuentaConApoyoAlumno);
@@ -3295,9 +3398,9 @@
             this.groupBox23.Controls.Add(this.lblPersonaConDiscapacidadAlumno);
             this.groupBox23.Controls.Add(this.lbl18a59Alumno);
             this.groupBox23.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox23.Location = new System.Drawing.Point(609, 159);
+            this.groupBox23.Location = new System.Drawing.Point(647, 159);
             this.groupBox23.Name = "groupBox23";
-            this.groupBox23.Size = new System.Drawing.Size(447, 158);
+            this.groupBox23.Size = new System.Drawing.Size(409, 158);
             this.groupBox23.TabIndex = 23;
             this.groupBox23.TabStop = false;
             this.groupBox23.Text = "Personas a cargo";
@@ -3384,13 +3487,14 @@
             // 
             // groupBox24
             // 
+            this.groupBox24.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox24.Controls.Add(this.lblFacilAccesoInternetAlumno);
             this.groupBox24.Controls.Add(this.lblMedioAccesoInternetAlumno);
             this.groupBox24.Controls.Add(this.lblUsaInternetAlumno);
             this.groupBox24.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox24.Location = new System.Drawing.Point(609, 323);
+            this.groupBox24.Location = new System.Drawing.Point(647, 323);
             this.groupBox24.Name = "groupBox24";
-            this.groupBox24.Size = new System.Drawing.Size(447, 81);
+            this.groupBox24.Size = new System.Drawing.Size(409, 81);
             this.groupBox24.TabIndex = 22;
             this.groupBox24.TabStop = false;
             this.groupBox24.Text = "Acceso a internet";
@@ -3427,14 +3531,15 @@
             // 
             // groupBox25
             // 
+            this.groupBox25.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox25.Controls.Add(this.lblIngresoMensualAlumno);
             this.groupBox25.Controls.Add(this.lblTrabajoAlgunaVezAlumno);
             this.groupBox25.Controls.Add(this.lblHorasJornadaLaboralAlumno);
             this.groupBox25.Controls.Add(this.lblTrabajaActualmenteAlumno);
             this.groupBox25.Controls.Add(this.lblTiempoDesempleadoAlumno);
-            this.groupBox25.Location = new System.Drawing.Point(609, 36);
+            this.groupBox25.Location = new System.Drawing.Point(647, 36);
             this.groupBox25.Name = "groupBox25";
-            this.groupBox25.Size = new System.Drawing.Size(447, 117);
+            this.groupBox25.Size = new System.Drawing.Size(409, 117);
             this.groupBox25.TabIndex = 21;
             this.groupBox25.TabStop = false;
             this.groupBox25.Text = "Trabajo";
@@ -3493,7 +3598,7 @@
             // 
             this.btnAtras_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtras_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtras_2.Location = new System.Drawing.Point(781, 448);
+            this.btnAtras_2.Location = new System.Drawing.Point(781, 438);
             this.btnAtras_2.Name = "btnAtras_2";
             this.btnAtras_2.Size = new System.Drawing.Size(144, 36);
             this.btnAtras_2.TabIndex = 49;
@@ -3505,7 +3610,7 @@
             // 
             this.btnFinalizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizar.Location = new System.Drawing.Point(931, 448);
+            this.btnFinalizar.Location = new System.Drawing.Point(931, 438);
             this.btnFinalizar.Name = "btnFinalizar";
             this.btnFinalizar.Size = new System.Drawing.Size(144, 36);
             this.btnFinalizar.TabIndex = 5;
@@ -3517,15 +3622,19 @@
             // 
             this.tabPageAlumnosModificar.BackColor = System.Drawing.Color.LightSteelBlue;
             this.tabPageAlumnosModificar.Controls.Add(this.tabControlModificarAlumno);
-            this.tabPageAlumnosModificar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageAlumnosModificar.ImageIndex = 4;
+            this.tabPageAlumnosModificar.Location = new System.Drawing.Point(4, 27);
             this.tabPageAlumnosModificar.Name = "tabPageAlumnosModificar";
             this.tabPageAlumnosModificar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageAlumnosModificar.Size = new System.Drawing.Size(1089, 521);
+            this.tabPageAlumnosModificar.Size = new System.Drawing.Size(1089, 516);
             this.tabPageAlumnosModificar.TabIndex = 1;
             this.tabPageAlumnosModificar.Text = "Consultar / Modificar";
             // 
             // tabControlModificarAlumno
             // 
+            this.tabControlModificarAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControlModificarAlumno.Controls.Add(this.tabPageModificarAlumnosInformacion);
             this.tabControlModificarAlumno.Controls.Add(this.tabPageModificarAlumnosDatosPersonales);
             this.tabControlModificarAlumno.Controls.Add(this.tabPageModificarAlumnosDatosDeInteres);
@@ -3562,6 +3671,7 @@
             // 
             // listResultadosAlumnos
             // 
+            this.listResultadosAlumnos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.listResultadosAlumnos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listResultadosAlumnos.FormattingEnabled = true;
             this.listResultadosAlumnos.ItemHeight = 16;
@@ -3574,6 +3684,7 @@
             // 
             // btnBuscar_3
             // 
+            this.btnBuscar_3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnBuscar_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscar_3.Location = new System.Drawing.Point(642, 23);
             this.btnBuscar_3.Name = "btnBuscar_3";
@@ -3585,6 +3696,7 @@
             // 
             // boxBuscarAlumno
             // 
+            this.boxBuscarAlumno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxBuscarAlumno.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxBuscarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxBuscarAlumno.Items.AddRange(new object[] {
@@ -3599,6 +3711,7 @@
             // 
             // txtBuscarAlumno
             // 
+            this.txtBuscarAlumno.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtBuscarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarAlumno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtBuscarAlumno.Location = new System.Drawing.Point(422, 27);
@@ -3613,9 +3726,10 @@
             // 
             // btnModificarAlumno
             // 
+            this.btnModificarAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnModificarAlumno.Enabled = false;
             this.btnModificarAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarAlumno.Location = new System.Drawing.Point(933, 445);
+            this.btnModificarAlumno.Location = new System.Drawing.Point(933, 442);
             this.btnModificarAlumno.Name = "btnModificarAlumno";
             this.btnModificarAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnModificarAlumno.TabIndex = 41;
@@ -3625,13 +3739,15 @@
             // 
             // groupBox46
             // 
+            this.groupBox46.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox46.Controls.Add(this.lblMontoViaticoAlumno_2);
             this.groupBox46.Controls.Add(this.lblEstadoAlumno_2);
             this.groupBox46.Controls.Add(this.lblCursoAlumno_2);
             this.groupBox46.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox46.Location = new System.Drawing.Point(39, 71);
             this.groupBox46.Name = "groupBox46";
-            this.groupBox46.Size = new System.Drawing.Size(279, 87);
+            this.groupBox46.Size = new System.Drawing.Size(258, 87);
             this.groupBox46.TabIndex = 40;
             this.groupBox46.TabStop = false;
             this.groupBox46.Text = "Con respecto al instituto";
@@ -3668,12 +3784,13 @@
             // 
             // groupBox47
             // 
+            this.groupBox47.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox47.Controls.Add(this.lblCantidadHjosAlumno_2);
             this.groupBox47.Controls.Add(this.lblJefeHogarAlumno_2);
             this.groupBox47.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox47.Location = new System.Drawing.Point(324, 358);
+            this.groupBox47.Location = new System.Drawing.Point(303, 358);
             this.groupBox47.Name = "groupBox47";
-            this.groupBox47.Size = new System.Drawing.Size(279, 81);
+            this.groupBox47.Size = new System.Drawing.Size(300, 81);
             this.groupBox47.TabIndex = 34;
             this.groupBox47.TabStop = false;
             this.groupBox47.Text = "Jefe de hogar";
@@ -3700,13 +3817,14 @@
             // 
             // groupBox48
             // 
+            this.groupBox48.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox48.Controls.Add(this.lblEmailAlumno_2);
             this.groupBox48.Controls.Add(this.lblCelularAlumno_2);
             this.groupBox48.Controls.Add(this.lblTelefonoAlumno_2);
             this.groupBox48.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox48.Location = new System.Drawing.Point(324, 210);
+            this.groupBox48.Location = new System.Drawing.Point(303, 210);
             this.groupBox48.Name = "groupBox48";
-            this.groupBox48.Size = new System.Drawing.Size(279, 87);
+            this.groupBox48.Size = new System.Drawing.Size(300, 87);
             this.groupBox48.TabIndex = 39;
             this.groupBox48.TabStop = false;
             this.groupBox48.Text = "Contacto";
@@ -3743,6 +3861,7 @@
             // 
             // groupBox49
             // 
+            this.groupBox49.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox49.Controls.Add(this.lblNApartamentoAlumno_2);
             this.groupBox49.Controls.Add(this.lblNPuertaAlumno_2);
             this.groupBox49.Controls.Add(this.lblReferenciaAlumno_2);
@@ -3750,9 +3869,9 @@
             this.groupBox49.Controls.Add(this.lblLocalidadAlumno_2);
             this.groupBox49.Controls.Add(this.lblDepartamentoAlumno_2);
             this.groupBox49.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox49.Location = new System.Drawing.Point(324, 71);
+            this.groupBox49.Location = new System.Drawing.Point(303, 71);
             this.groupBox49.Name = "groupBox49";
-            this.groupBox49.Size = new System.Drawing.Size(279, 133);
+            this.groupBox49.Size = new System.Drawing.Size(300, 133);
             this.groupBox49.TabIndex = 36;
             this.groupBox49.TabStop = false;
             this.groupBox49.Text = "Dirección";
@@ -3819,11 +3938,12 @@
             // 
             // groupBox50
             // 
+            this.groupBox50.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox50.Controls.Add(this.lblCoberturaSaludAlumno_2);
             this.groupBox50.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox50.Location = new System.Drawing.Point(324, 303);
+            this.groupBox50.Location = new System.Drawing.Point(303, 303);
             this.groupBox50.Name = "groupBox50";
-            this.groupBox50.Size = new System.Drawing.Size(279, 49);
+            this.groupBox50.Size = new System.Drawing.Size(300, 49);
             this.groupBox50.TabIndex = 35;
             this.groupBox50.TabStop = false;
             this.groupBox50.Text = "Coberura de salud";
@@ -3840,12 +3960,14 @@
             // 
             // groupBox51
             // 
+            this.groupBox51.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox51.Controls.Add(this.lblUltimoAñoAprobadoAlumno_2);
             this.groupBox51.Controls.Add(this.lblNivelEducativoAlumno_2);
             this.groupBox51.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox51.Location = new System.Drawing.Point(39, 350);
             this.groupBox51.Name = "groupBox51";
-            this.groupBox51.Size = new System.Drawing.Size(279, 89);
+            this.groupBox51.Size = new System.Drawing.Size(258, 89);
             this.groupBox51.TabIndex = 37;
             this.groupBox51.TabStop = false;
             this.groupBox51.Text = "Formacion academica";
@@ -3872,6 +3994,8 @@
             // 
             // groupBox52
             // 
+            this.groupBox52.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox52.Controls.Add(this.lblEstadoCivilAlumno_2);
             this.groupBox52.Controls.Add(this.lblSexoAlumno_2);
             this.groupBox52.Controls.Add(this.lblEdadAlumno_2);
@@ -3884,7 +4008,7 @@
             this.groupBox52.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox52.Location = new System.Drawing.Point(39, 164);
             this.groupBox52.Name = "groupBox52";
-            this.groupBox52.Size = new System.Drawing.Size(279, 180);
+            this.groupBox52.Size = new System.Drawing.Size(258, 180);
             this.groupBox52.TabIndex = 38;
             this.groupBox52.TabStop = false;
             this.groupBox52.Text = "Datos personales";
@@ -3981,6 +4105,7 @@
             // 
             // groupBox53
             // 
+            this.groupBox53.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox53.Controls.Add(this.lblExperienciaInstitucionesCuidadoAlumno_2);
             this.groupBox53.Controls.Add(this.lblTrabajoAnteriormenteCuidandoAlumno_2);
             this.groupBox53.Controls.Add(this.lblCuentaApoyoAlumno_2);
@@ -4079,6 +4204,7 @@
             // 
             // groupBox54
             // 
+            this.groupBox54.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox54.Controls.Add(this.lblFacilAccesoInternetAlumno_2);
             this.groupBox54.Controls.Add(this.lblMedioAccesoInternetAlumno_2);
             this.groupBox54.Controls.Add(this.lblUsaInternetAlumno_2);
@@ -4122,6 +4248,7 @@
             // 
             // groupBox55
             // 
+            this.groupBox55.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox55.Controls.Add(this.lblIngresoMensualAlumno_2);
             this.groupBox55.Controls.Add(this.lblTrabajoAlgunaVezAlumno_2);
             this.groupBox55.Controls.Add(this.lblHorasJornadaLaboralAlumno_2);
@@ -4194,15 +4321,17 @@
             this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.groupBox13);
             this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.groupBox14);
             this.tabPageModificarAlumnosDatosPersonales.Controls.Add(this.groupBox15);
-            this.tabPageModificarAlumnosDatosPersonales.Location = new System.Drawing.Point(4, 22);
+            this.tabPageModificarAlumnosDatosPersonales.Location = new System.Drawing.Point(4, 27);
             this.tabPageModificarAlumnosDatosPersonales.Name = "tabPageModificarAlumnosDatosPersonales";
             this.tabPageModificarAlumnosDatosPersonales.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageModificarAlumnosDatosPersonales.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageModificarAlumnosDatosPersonales.Size = new System.Drawing.Size(1083, 484);
             this.tabPageModificarAlumnosDatosPersonales.TabIndex = 0;
             this.tabPageModificarAlumnosDatosPersonales.Text = "Datos personales";
             // 
             // groupBox11
             // 
+            this.groupBox11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox11.Controls.Add(this.boxTurnoAlumno_2);
             this.groupBox11.Controls.Add(this.txtMontoViatico_2);
             this.groupBox11.Controls.Add(this.boxPeriodoAlumno_2);
@@ -4217,6 +4346,7 @@
             // 
             // boxTurnoAlumno_2
             // 
+            this.boxTurnoAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxTurnoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxTurnoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxTurnoAlumno_2.Items.AddRange(new object[] {
@@ -4232,6 +4362,7 @@
             // 
             // txtMontoViatico_2
             // 
+            this.txtMontoViatico_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMontoViatico_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMontoViatico_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtMontoViatico_2.Location = new System.Drawing.Point(833, 29);
@@ -4246,6 +4377,7 @@
             // 
             // boxPeriodoAlumno_2
             // 
+            this.boxPeriodoAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxPeriodoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxPeriodoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxPeriodoAlumno_2.Items.AddRange(new object[] {
@@ -4259,6 +4391,7 @@
             // 
             // boxEstadoAlumno_2
             // 
+            this.boxEstadoAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxEstadoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxEstadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxEstadoAlumno_2.Items.AddRange(new object[] {
@@ -4275,6 +4408,7 @@
             // 
             // boxCursoAlumno_2
             // 
+            this.boxCursoAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxCursoAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxCursoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCursoAlumno_2.Items.AddRange(new object[] {
@@ -4287,8 +4421,9 @@
             // 
             // btnAtrasConsultaAlumno
             // 
+            this.btnAtrasConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(781, 444);
+            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(783, 439);
             this.btnAtrasConsultaAlumno.Name = "btnAtrasConsultaAlumno";
             this.btnAtrasConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno.TabIndex = 22;
@@ -4298,8 +4433,9 @@
             // 
             // btnSiguienteConsultaAlumno
             // 
+            this.btnSiguienteConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(931, 444);
+            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(933, 439);
             this.btnSiguienteConsultaAlumno.Name = "btnSiguienteConsultaAlumno";
             this.btnSiguienteConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnSiguienteConsultaAlumno.TabIndex = 4;
@@ -4309,6 +4445,8 @@
             // 
             // groupBox12
             // 
+            this.groupBox12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox12.Controls.Add(this.txtEmailAlumno_2);
             this.groupBox12.Controls.Add(this.txtCelularAlumno_2);
             this.groupBox12.Controls.Add(this.txtTelefonoAlumno_2);
@@ -4321,6 +4459,8 @@
             // 
             // txtEmailAlumno_2
             // 
+            this.txtEmailAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmailAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtEmailAlumno_2.Location = new System.Drawing.Point(34, 123);
@@ -4333,6 +4473,8 @@
             // 
             // txtCelularAlumno_2
             // 
+            this.txtCelularAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCelularAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCelularAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtCelularAlumno_2.Location = new System.Drawing.Point(34, 37);
@@ -4347,6 +4489,8 @@
             // 
             // txtTelefonoAlumno_2
             // 
+            this.txtTelefonoAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefonoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefonoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTelefonoAlumno_2.Location = new System.Drawing.Point(34, 81);
@@ -4361,6 +4505,8 @@
             // 
             // groupBox13
             // 
+            this.groupBox13.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox13.Controls.Add(this.txtLocalidadAlumno_2);
             this.groupBox13.Controls.Add(this.txtCalleAlumno_2);
             this.groupBox13.Controls.Add(this.boxDepartamentoAlumno_2);
@@ -4468,6 +4614,8 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox14.Controls.Add(this.boxNivelAcademicoAlumno_2);
             this.groupBox14.Controls.Add(this.txtUltimoAñoAprobadoAlumno_2);
             this.groupBox14.Location = new System.Drawing.Point(430, 271);
@@ -4493,6 +4641,8 @@
             // 
             // txtUltimoAñoAprobadoAlumno_2
             // 
+            this.txtUltimoAñoAprobadoAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUltimoAñoAprobadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUltimoAñoAprobadoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtUltimoAñoAprobadoAlumno_2.Location = new System.Drawing.Point(207, 43);
@@ -4505,6 +4655,8 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox15.Controls.Add(this.maskedTxtFechaNacimientoAlumno_2);
             this.groupBox15.Controls.Add(this.txtEdadAlumno_2);
             this.groupBox15.Controls.Add(this.boxEstadoCivilAlumno_2);
@@ -4671,28 +4823,33 @@
             this.tabPageModificarAlumnosDatosDeInteres.Controls.Add(this.groupBox35);
             this.tabPageModificarAlumnosDatosDeInteres.Controls.Add(this.btnAtrasConsultaAlumno_2);
             this.tabPageModificarAlumnosDatosDeInteres.Controls.Add(this.btnSiguienteConsultaAlumno_2);
-            this.tabPageModificarAlumnosDatosDeInteres.Location = new System.Drawing.Point(4, 22);
+            this.tabPageModificarAlumnosDatosDeInteres.Location = new System.Drawing.Point(4, 27);
             this.tabPageModificarAlumnosDatosDeInteres.Name = "tabPageModificarAlumnosDatosDeInteres";
             this.tabPageModificarAlumnosDatosDeInteres.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageModificarAlumnosDatosDeInteres.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageModificarAlumnosDatosDeInteres.Size = new System.Drawing.Size(1083, 484);
             this.tabPageModificarAlumnosDatosDeInteres.TabIndex = 1;
             this.tabPageModificarAlumnosDatosDeInteres.Text = "Datos de interes";
+            this.tabPageModificarAlumnosDatosDeInteres.Click += new System.EventHandler(this.tabPageModificarAlumnosDatosDeInteres_Click);
             // 
             // groupBox31
             // 
+            this.groupBox31.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox31.Controls.Add(this.txtCoberturaSaludAlumno_2);
             this.groupBox31.Location = new System.Drawing.Point(611, 195);
             this.groupBox31.Name = "groupBox31";
-            this.groupBox31.Size = new System.Drawing.Size(436, 79);
+            this.groupBox31.Size = new System.Drawing.Size(436, 132);
             this.groupBox31.TabIndex = 20;
             this.groupBox31.TabStop = false;
             this.groupBox31.Text = "Coberura de salud";
             // 
             // txtCoberturaSaludAlumno_2
             // 
+            this.txtCoberturaSaludAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCoberturaSaludAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCoberturaSaludAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCoberturaSaludAlumno_2.Location = new System.Drawing.Point(18, 26);
+            this.txtCoberturaSaludAlumno_2.Location = new System.Drawing.Point(18, 54);
             this.txtCoberturaSaludAlumno_2.Name = "txtCoberturaSaludAlumno_2";
             this.txtCoberturaSaludAlumno_2.Size = new System.Drawing.Size(404, 24);
             this.txtCoberturaSaludAlumno_2.TabIndex = 29;
@@ -4702,6 +4859,8 @@
             // 
             // groupBox32
             // 
+            this.groupBox32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox32.Controls.Add(this.boxJefeHogarAlumno_2);
             this.groupBox32.Controls.Add(this.boxCantidadHijosAlumno_2);
             this.groupBox32.Location = new System.Drawing.Point(668, 114);
@@ -4713,6 +4872,8 @@
             // 
             // boxJefeHogarAlumno_2
             // 
+            this.boxJefeHogarAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.boxJefeHogarAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxJefeHogarAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxJefeHogarAlumno_2.Items.AddRange(new object[] {
@@ -4726,6 +4887,7 @@
             // 
             // boxCantidadHijosAlumno_2
             // 
+            this.boxCantidadHijosAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.boxCantidadHijosAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxCantidadHijosAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxCantidadHijosAlumno_2.Items.AddRange(new object[] {
@@ -4748,6 +4910,8 @@
             // 
             // groupBox33
             // 
+            this.groupBox33.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox33.Controls.Add(this.txtExperienciaInstitucionesCuidadoAlumno_2);
             this.groupBox33.Controls.Add(this.boxTrabajoCuidandoAlumno_2);
             this.groupBox33.Controls.Add(this.boxCuentaConApoyoAlumno_2);
@@ -4867,6 +5031,8 @@
             // 
             // groupBox34
             // 
+            this.groupBox34.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox34.Controls.Add(this.txtMedioAccesoInternetAlumno_2);
             this.groupBox34.Controls.Add(this.boxFacilAccesoInternetAlumno_2);
             this.groupBox34.Controls.Add(this.boxUsaInternetAlumno_2);
@@ -4917,6 +5083,8 @@
             // 
             // groupBox35
             // 
+            this.groupBox35.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox35.Controls.Add(this.txtIngresoMensualAlumno_2);
             this.groupBox35.Controls.Add(this.txtHorasJornadaAlumno_2);
             this.groupBox35.Controls.Add(this.txtTiempoDesempleadoAlumno_2);
@@ -4931,6 +5099,7 @@
             // 
             // txtIngresoMensualAlumno_2
             // 
+            this.txtIngresoMensualAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtIngresoMensualAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIngresoMensualAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtIngresoMensualAlumno_2.Location = new System.Drawing.Point(816, 29);
@@ -4943,6 +5112,7 @@
             // 
             // txtHorasJornadaAlumno_2
             // 
+            this.txtHorasJornadaAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtHorasJornadaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHorasJornadaAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtHorasJornadaAlumno_2.Location = new System.Drawing.Point(617, 29);
@@ -4956,6 +5126,7 @@
             // 
             // txtTiempoDesempleadoAlumno_2
             // 
+            this.txtTiempoDesempleadoAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTiempoDesempleadoAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTiempoDesempleadoAlumno_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.txtTiempoDesempleadoAlumno_2.Location = new System.Drawing.Point(418, 29);
@@ -4968,6 +5139,7 @@
             // 
             // boxTrabajoAlgunaVezAlumno_2
             // 
+            this.boxTrabajoAlgunaVezAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxTrabajoAlgunaVezAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxTrabajoAlgunaVezAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxTrabajoAlgunaVezAlumno_2.Items.AddRange(new object[] {
@@ -4981,6 +5153,7 @@
             // 
             // boxTrabajaActualmenteAlumno_2
             // 
+            this.boxTrabajaActualmenteAlumno_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.boxTrabajaActualmenteAlumno_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.boxTrabajaActualmenteAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.boxTrabajaActualmenteAlumno_2.Items.AddRange(new object[] {
@@ -4994,8 +5167,9 @@
             // 
             // btnAtrasConsultaAlumno_2
             // 
+            this.btnAtrasConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(781, 444);
+            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(783, 439);
             this.btnAtrasConsultaAlumno_2.Name = "btnAtrasConsultaAlumno_2";
             this.btnAtrasConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno_2.TabIndex = 15;
@@ -5005,8 +5179,9 @@
             // 
             // btnSiguienteConsultaAlumno_2
             // 
+            this.btnSiguienteConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(931, 444);
+            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(933, 439);
             this.btnSiguienteConsultaAlumno_2.Name = "btnSiguienteConsultaAlumno_2";
             this.btnSiguienteConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
             this.btnSiguienteConsultaAlumno_2.TabIndex = 14;
@@ -5029,14 +5204,16 @@
             this.tabPageModificarAlumnosFinalizar.Controls.Add(this.groupBox45);
             this.tabPageModificarAlumnosFinalizar.Controls.Add(this.btnAtrasConsultaAlumno_3);
             this.tabPageModificarAlumnosFinalizar.Controls.Add(this.btnFinalizarConsultaAlumno);
-            this.tabPageModificarAlumnosFinalizar.Location = new System.Drawing.Point(4, 22);
+            this.tabPageModificarAlumnosFinalizar.Location = new System.Drawing.Point(4, 27);
             this.tabPageModificarAlumnosFinalizar.Name = "tabPageModificarAlumnosFinalizar";
-            this.tabPageModificarAlumnosFinalizar.Size = new System.Drawing.Size(1083, 489);
+            this.tabPageModificarAlumnosFinalizar.Size = new System.Drawing.Size(1083, 484);
             this.tabPageModificarAlumnosFinalizar.TabIndex = 2;
             this.tabPageModificarAlumnosFinalizar.Text = "Finalizar";
             // 
             // groupBox36
             // 
+            this.groupBox36.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox36.Controls.Add(this.lblMontoViaticoAlumno_3);
             this.groupBox36.Controls.Add(this.lblEstadoAlumno_3);
             this.groupBox36.Controls.Add(this.lblCursoAlumno_3);
@@ -5080,6 +5257,7 @@
             // 
             // groupBox37
             // 
+            this.groupBox37.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox37.Controls.Add(this.lblCantidadHijosAlumno_3);
             this.groupBox37.Controls.Add(this.lblJefeHogarAlumno_3);
             this.groupBox37.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5112,6 +5290,7 @@
             // 
             // groupBox38
             // 
+            this.groupBox38.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox38.Controls.Add(this.lblEmailAlumno_3);
             this.groupBox38.Controls.Add(this.lblCelularAlumno_3);
             this.groupBox38.Controls.Add(this.lblTelefonoAlumno_3);
@@ -5155,6 +5334,7 @@
             // 
             // groupBox39
             // 
+            this.groupBox39.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox39.Controls.Add(this.lblNApartamentoAlumno_3);
             this.groupBox39.Controls.Add(this.lblNPuertaAlumno_3);
             this.groupBox39.Controls.Add(this.lblReferenciaAlumno_3);
@@ -5231,6 +5411,7 @@
             // 
             // groupBox40
             // 
+            this.groupBox40.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox40.Controls.Add(this.lblCoberturaSaludAlumno_3);
             this.groupBox40.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox40.Location = new System.Drawing.Point(324, 268);
@@ -5252,6 +5433,8 @@
             // 
             // groupBox41
             // 
+            this.groupBox41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox41.Controls.Add(this.lblUltimoAñoAprobadoAlumno_3);
             this.groupBox41.Controls.Add(this.lblNivelEducativoAlumno_3);
             this.groupBox41.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -5284,6 +5467,8 @@
             // 
             // groupBox42
             // 
+            this.groupBox42.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox42.Controls.Add(this.lblEstadoCivilAlumno_3);
             this.groupBox42.Controls.Add(this.lblSexoAlumno_3);
             this.groupBox42.Controls.Add(this.lblEdadAlumno_3);
@@ -5393,6 +5578,7 @@
             // 
             // groupBox43
             // 
+            this.groupBox43.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox43.Controls.Add(this.lblExperienciaInstitucionesCuidadoAlumno_3);
             this.groupBox43.Controls.Add(this.lblTrabajoAnteriormenteCuidandoAlumno_3);
             this.groupBox43.Controls.Add(this.lblCuentaConApoyoAlumno_3);
@@ -5491,6 +5677,7 @@
             // 
             // groupBox44
             // 
+            this.groupBox44.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox44.Controls.Add(this.lblFacilAccesoInternetAlumno_3);
             this.groupBox44.Controls.Add(this.lblMedioAccesoInternetAlumno_3);
             this.groupBox44.Controls.Add(this.lblUsaInternetAlumno_3);
@@ -5534,6 +5721,7 @@
             // 
             // groupBox45
             // 
+            this.groupBox45.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox45.Controls.Add(this.lblIngresoMensualAlumno_3);
             this.groupBox45.Controls.Add(this.lblTrabajoAlgunaVezAlumno_3);
             this.groupBox45.Controls.Add(this.lblHorasJornadaLaboralAlumno_3);
@@ -5598,8 +5786,9 @@
             // 
             // btnAtrasConsultaAlumno_3
             // 
+            this.btnAtrasConsultaAlumno_3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(781, 448);
+            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(781, 439);
             this.btnAtrasConsultaAlumno_3.Name = "btnAtrasConsultaAlumno_3";
             this.btnAtrasConsultaAlumno_3.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno_3.TabIndex = 16;
@@ -5609,8 +5798,9 @@
             // 
             // btnFinalizarConsultaAlumno
             // 
+            this.btnFinalizarConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizarConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(931, 448);
+            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(931, 439);
             this.btnFinalizarConsultaAlumno.Name = "btnFinalizarConsultaAlumno";
             this.btnFinalizarConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnFinalizarConsultaAlumno.TabIndex = 5;
@@ -5618,126 +5808,71 @@
             this.btnFinalizarConsultaAlumno.UseVisualStyleBackColor = true;
             this.btnFinalizarConsultaAlumno.Click += new System.EventHandler(this.btnFinalizarConsultaAlumno_Click);
             // 
-            // imageList
+            // colFechaViaticos
             // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "money.png");
-            this.imageList.Images.SetKeyName(1, "lista.png");
-            this.imageList.Images.SetKeyName(2, "newgroup.png");
-            this.imageList.Images.SetKeyName(3, "newcurso.png");
+            this.colFechaViaticos.HeaderText = "Fecha";
+            this.colFechaViaticos.Name = "colFechaViaticos";
+            this.colFechaViaticos.ReadOnly = true;
+            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // cerrarSesiónToolStripMenuItem
+            // colMontoViaticos
             // 
-            this.cerrarSesiónToolStripMenuItem.Image = global::Ametrano.Properties.Resources.close1;
-            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
-            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            this.colMontoViaticos.HeaderText = "Monto";
+            this.colMontoViaticos.Name = "colMontoViaticos";
+            this.colMontoViaticos.ReadOnly = true;
+            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // salirToolStripMenuItem
+            // colRubroViaticos
             // 
-            this.salirToolStripMenuItem.Image = global::Ametrano.Properties.Resources.off;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(154, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            this.colRubroViaticos.HeaderText = "Rubro";
+            this.colRubroViaticos.Name = "colRubroViaticos";
+            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // pruebaDeConexionConBaseDeDatosToolStripMenuItem
+            // colConceptoViaticos
             // 
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Image = global::Ametrano.Properties.Resources.connection;
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Name = "pruebaDeConexionConBaseDeDatosToolStripMenuItem";
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Text = "Prueba de conexion con base de datos";
-            this.pruebaDeConexionConBaseDeDatosToolStripMenuItem.Click += new System.EventHandler(this.pruebaDeConexionConBaseDeDatosToolStripMenuItem_Click);
+            this.colConceptoViaticos.HeaderText = "Concepto";
+            this.colConceptoViaticos.Name = "colConceptoViaticos";
+            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // reporteDeErroresToolStripMenuItem
+            // colAbonoViaticos
             // 
-            this.reporteDeErroresToolStripMenuItem.Image = global::Ametrano.Properties.Resources.error;
-            this.reporteDeErroresToolStripMenuItem.Name = "reporteDeErroresToolStripMenuItem";
-            this.reporteDeErroresToolStripMenuItem.Size = new System.Drawing.Size(305, 22);
-            this.reporteDeErroresToolStripMenuItem.Text = "Reporte de errores";
-            this.reporteDeErroresToolStripMenuItem.Click += new System.EventHandler(this.reporteDeErroresToolStripMenuItem_Click);
+            this.colAbonoViaticos.HeaderText = "Abonado";
+            this.colAbonoViaticos.Name = "colAbonoViaticos";
+            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // manualDeUsuarioToolStripMenuItem
+            // colNombreAsistencias
             // 
-            this.manualDeUsuarioToolStripMenuItem.Image = global::Ametrano.Properties.Resources.interrogacion;
-            this.manualDeUsuarioToolStripMenuItem.Name = "manualDeUsuarioToolStripMenuItem";
-            this.manualDeUsuarioToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.manualDeUsuarioToolStripMenuItem.Text = "Manual de usuario";
-            this.manualDeUsuarioToolStripMenuItem.Click += new System.EventHandler(this.manualDeUsuarioToolStripMenuItem_Click);
+            this.colNombreAsistencias.HeaderText = "Nombre";
+            this.colNombreAsistencias.Name = "colNombreAsistencias";
+            this.colNombreAsistencias.ReadOnly = true;
+            this.colNombreAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // notasDeVersiónToolStripMenuItem
+            // colAsistenciaAsistencias
             // 
-            this.notasDeVersiónToolStripMenuItem.Image = global::Ametrano.Properties.Resources.notes;
-            this.notasDeVersiónToolStripMenuItem.Name = "notasDeVersiónToolStripMenuItem";
-            this.notasDeVersiónToolStripMenuItem.Size = new System.Drawing.Size(185, 22);
-            this.notasDeVersiónToolStripMenuItem.Text = "Notas de versión";
-            this.notasDeVersiónToolStripMenuItem.Click += new System.EventHandler(this.notasDeVersiónToolStripMenuItem_Click);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.NullValue = false;
+            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colAsistenciaAsistencias.HeaderText = "Asistencias";
+            this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
+            this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAsistenciaAsistencias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // bunifuImageButton2
+            // dataGridViewTextBoxColumn1
             // 
-            this.bunifuImageButton2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuImageButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuImageButton2.Image = global::Ametrano.Properties.Resources.icon;
-            this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(2, 707);
-            this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(44, 34);
-            this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.bunifuImageButton2.TabIndex = 2;
-            this.bunifuImageButton2.TabStop = false;
-            this.toolTip.SetToolTip(this.bunifuImageButton2, "Reportar un error");
-            this.bunifuImageButton2.Zoom = 5;
-            this.bunifuImageButton2.Click += new System.EventHandler(this.bunifuImageButton2_Click);
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // btnCursos
+            // dataGridViewTextBoxColumn2
             // 
-            this.btnCursos.BackColor = System.Drawing.Color.Transparent;
-            this.btnCursos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCursos.Image = global::Ametrano.Properties.Resources.cursos_fw;
-            this.btnCursos.ImageActive = null;
-            this.btnCursos.Location = new System.Drawing.Point(6, 172);
-            this.btnCursos.Name = "btnCursos";
-            this.btnCursos.Size = new System.Drawing.Size(73, 77);
-            this.btnCursos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnCursos.TabIndex = 0;
-            this.btnCursos.TabStop = false;
-            this.toolTip.SetToolTip(this.btnCursos, "Cursos");
-            this.btnCursos.Zoom = 5;
-            this.btnCursos.Click += new System.EventHandler(this.btnCursos_Click);
-            // 
-            // btnAlumnos
-            // 
-            this.btnAlumnos.BackColor = System.Drawing.Color.Transparent;
-            this.btnAlumnos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAlumnos.Image = global::Ametrano.Properties.Resources.alumno_fw;
-            this.btnAlumnos.ImageActive = null;
-            this.btnAlumnos.Location = new System.Drawing.Point(6, 16);
-            this.btnAlumnos.Name = "btnAlumnos";
-            this.btnAlumnos.Size = new System.Drawing.Size(73, 77);
-            this.btnAlumnos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnAlumnos.TabIndex = 0;
-            this.btnAlumnos.TabStop = false;
-            this.toolTip.SetToolTip(this.btnAlumnos, "Alumnos");
-            this.btnAlumnos.Zoom = 5;
-            this.btnAlumnos.Click += new System.EventHandler(this.btnAlumnos_Click);
-            // 
-            // btnDocentes
-            // 
-            this.btnDocentes.BackColor = System.Drawing.Color.Transparent;
-            this.btnDocentes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDocentes.Image = global::Ametrano.Properties.Resources.docente1;
-            this.btnDocentes.ImageActive = null;
-            this.btnDocentes.Location = new System.Drawing.Point(6, 94);
-            this.btnDocentes.Name = "btnDocentes";
-            this.btnDocentes.Size = new System.Drawing.Size(73, 77);
-            this.btnDocentes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnDocentes.TabIndex = 0;
-            this.btnDocentes.TabStop = false;
-            this.toolTip.SetToolTip(this.btnDocentes, "Docentes");
-            this.btnDocentes.Zoom = 5;
-            this.btnDocentes.Click += new System.EventHandler(this.btnDocentes_Click);
+            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // Principal
             // 
@@ -5745,9 +5880,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuPrincipal;
@@ -5755,10 +5890,15 @@
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Principal_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Principal_KeyDown);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).EndInit();
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
             this.tabControlPrincipal.ResumeLayout(false);
@@ -5908,10 +6048,6 @@
             this.groupBox44.PerformLayout();
             this.groupBox45.ResumeLayout(false);
             this.groupBox45.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCursos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAlumnos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6302,11 +6438,6 @@
         private System.Windows.Forms.ListBox listResultadosDocentes_2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
         private System.Windows.Forms.Label lblBlockViaticos;
         private System.Windows.Forms.Button btnCrearGrupo;
         private System.Windows.Forms.Button btnCrearCurso;
@@ -6320,8 +6451,6 @@
         private System.Windows.Forms.ComboBox boxTurnoAlumno;
         private System.Windows.Forms.ComboBox boxTurnoAlumno_2;
         private System.Windows.Forms.ComboBox boxTurnoAsistencia_2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.ListBox listResultadosAlumnos;
         private System.Windows.Forms.MaskedTextBox maskedTxtFechaNacimientoAlumno_2;
         private System.Windows.Forms.ToolTip toolTip;
@@ -6337,8 +6466,15 @@
         private System.Windows.Forms.ComboBox boxNumeroGrupo_2;
         private System.Windows.Forms.ComboBox boxNumeroGrupoViaticos;
         private System.Windows.Forms.ListBox lstMateriasDelDia;
+        private System.Windows.Forms.ImageList imageList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFechaViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMontoViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRubroViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colConceptoViaticos;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
-        private System.Windows.Forms.ImageList imageList;
     }
 }

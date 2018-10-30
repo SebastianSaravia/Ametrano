@@ -4075,6 +4075,9 @@ namespace Ametrano.Presentacion
 
         }
 
-       
+        private void tabPageModificarAlumnosDatosDeInteres_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
