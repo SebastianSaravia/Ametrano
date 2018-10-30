@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
@@ -1866,10 +1866,10 @@
             // 
             // colAsistenciaAsistencias
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.NullValue = false;
-            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.NullValue = false;
+            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle3;
             this.colAsistenciaAsistencias.HeaderText = "Asistencias";
             this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
             this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -5894,9 +5894,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
+            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.menuPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuPrincipal;
