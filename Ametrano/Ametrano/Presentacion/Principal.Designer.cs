@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
@@ -47,117 +47,6 @@
             this.manualDeUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.notasDeVersiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControlPrincipal = new System.Windows.Forms.TabControl();
-            this.pageDocente = new System.Windows.Forms.TabPage();
-            this.tabControlDocente = new System.Windows.Forms.TabControl();
-            this.tabPageDocentesNuevo = new System.Windows.Forms.TabPage();
-            this.btnIngresarDocente = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnQuitarEspecialidad = new System.Windows.Forms.Button();
-            this.btnAñadirEspecialidad = new System.Windows.Forms.Button();
-            this.listEspecialidades = new System.Windows.Forms.ListBox();
-            this.boxEspecialidades = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtEmailDocente = new System.Windows.Forms.TextBox();
-            this.txtTelefonoDocente = new System.Windows.Forms.TextBox();
-            this.txtDireccionDocente = new System.Windows.Forms.TextBox();
-            this.txtApellido1Docente = new System.Windows.Forms.TextBox();
-            this.txtNombre1Docente = new System.Windows.Forms.TextBox();
-            this.txtCedulaDocente = new System.Windows.Forms.TextBox();
-            this.tabPageDocentesConsultarModificar = new System.Windows.Forms.TabPage();
-            this.listResultadosDocentes = new System.Windows.Forms.ListBox();
-            this.btnActualizarDocente = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.boxBuscar = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btnQuitar_2 = new System.Windows.Forms.Button();
-            this.btnAñadir_2 = new System.Windows.Forms.Button();
-            this.listEspecialidades_2 = new System.Windows.Forms.ListBox();
-            this.boxEspecialidades_2 = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.btnCambiarEstadoDocente = new System.Windows.Forms.Button();
-            this.lblEstadoDocente = new System.Windows.Forms.Label();
-            this.txtEmailDocente_2 = new System.Windows.Forms.TextBox();
-            this.txtTelefonoDocente_2 = new System.Windows.Forms.TextBox();
-            this.txtDireccionDocente_2 = new System.Windows.Forms.TextBox();
-            this.txtApellido1Docente_2 = new System.Windows.Forms.TextBox();
-            this.txtNombre1Docente_2 = new System.Windows.Forms.TextBox();
-            this.txtCedulaDocente_2 = new System.Windows.Forms.TextBox();
-            this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
-            this.listResultadosDocentes_2 = new System.Windows.Forms.ListBox();
-            this.btnDarDeBaja = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.lblEstadoDocenteBaja = new System.Windows.Forms.Label();
-            this.lblCedulaDocente = new System.Windows.Forms.Label();
-            this.lblEmailDocente = new System.Windows.Forms.Label();
-            this.lblApellidoDocente = new System.Windows.Forms.Label();
-            this.lblNombreDocente = new System.Windows.Forms.Label();
-            this.btnBuscar_2 = new System.Windows.Forms.Button();
-            this.txtBuscar_2 = new System.Windows.Forms.TextBox();
-            this.boxBuscar_2 = new System.Windows.Forms.ComboBox();
-            this.imageList = new System.Windows.Forms.ImageList(this.components);
-            this.pageCursos = new System.Windows.Forms.TabPage();
-            this.tabControlCursos = new System.Windows.Forms.TabControl();
-            this.viaticos = new System.Windows.Forms.TabPage();
-            this.boxNumeroGrupoViaticos = new System.Windows.Forms.ComboBox();
-            this.boxTurnoViaticos = new System.Windows.Forms.ComboBox();
-            this.lblBlockViaticos = new System.Windows.Forms.Label();
-            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
-            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
-            this.lblMontoDiaViaticos = new System.Windows.Forms.Label();
-            this.lblCedulaViaticos = new System.Windows.Forms.Label();
-            this.lblNombreViaticos = new System.Windows.Forms.Label();
-            this.dataGridViaticos = new System.Windows.Forms.DataGridView();
-            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
-            this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
-            this.asistencias = new System.Windows.Forms.TabPage();
-            this.groupBox57 = new System.Windows.Forms.GroupBox();
-            this.lstMateriasDelDia = new System.Windows.Forms.ListBox();
-            this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
-            this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
-            this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
-            this.dataGridListaAsistencias_2 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
-            this.btnConsultarLista = new System.Windows.Forms.Button();
-            this.groupBox56 = new System.Windows.Forms.GroupBox();
-            this.btnGuardarLista = new System.Windows.Forms.Button();
-            this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
-            this.boxMateriaAsistencia = new System.Windows.Forms.ComboBox();
-            this.boxNumeroGrupo = new System.Windows.Forms.ComboBox();
-            this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
-            this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
-            this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.boxTurnoAsistencia = new System.Windows.Forms.ComboBox();
-            this.btnGenerarLista = new System.Windows.Forms.Button();
-            this.nuevoGrupo = new System.Windows.Forms.TabPage();
-            this.txtNumeroGrupo = new System.Windows.Forms.TextBox();
-            this.dataGridGruposActivos = new System.Windows.Forms.DataGridView();
-            this.btnCrearGrupo = new System.Windows.Forms.Button();
-            this.groupBox61 = new System.Windows.Forms.GroupBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimeFinalizacionGrupo = new System.Windows.Forms.DateTimePicker();
-            this.dateTimeInicioGrupo = new System.Windows.Forms.DateTimePicker();
-            this.boxTurnoGrupo = new System.Windows.Forms.ComboBox();
-            this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
-            this.nuevoCurso = new System.Windows.Forms.TabPage();
-            this.btnCrearCurso = new System.Windows.Forms.Button();
-            this.groupBox58 = new System.Windows.Forms.GroupBox();
-            this.groupBox59 = new System.Windows.Forms.GroupBox();
-            this.btnQuitarMateriaCurso = new System.Windows.Forms.Button();
-            this.btnAñadirMateriaCurso = new System.Windows.Forms.Button();
-            this.listMateriasCurso = new System.Windows.Forms.ListBox();
-            this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
-            this.txtNombreCurso = new System.Windows.Forms.TextBox();
-            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.pageAlumno = new System.Windows.Forms.TabPage();
             this.tabControlAlumnos = new System.Windows.Forms.TabControl();
             this.tabPageAlumnosNuevo = new System.Windows.Forms.TabPage();
@@ -453,6 +342,117 @@
             this.lblTiempoDesempleadoAlumno_3 = new System.Windows.Forms.Label();
             this.btnAtrasConsultaAlumno_3 = new System.Windows.Forms.Button();
             this.btnFinalizarConsultaAlumno = new System.Windows.Forms.Button();
+            this.imageList = new System.Windows.Forms.ImageList(this.components);
+            this.pageDocente = new System.Windows.Forms.TabPage();
+            this.tabControlDocente = new System.Windows.Forms.TabControl();
+            this.tabPageDocentesNuevo = new System.Windows.Forms.TabPage();
+            this.btnIngresarDocente = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnQuitarEspecialidad = new System.Windows.Forms.Button();
+            this.btnAñadirEspecialidad = new System.Windows.Forms.Button();
+            this.listEspecialidades = new System.Windows.Forms.ListBox();
+            this.boxEspecialidades = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtEmailDocente = new System.Windows.Forms.TextBox();
+            this.txtTelefonoDocente = new System.Windows.Forms.TextBox();
+            this.txtDireccionDocente = new System.Windows.Forms.TextBox();
+            this.txtApellido1Docente = new System.Windows.Forms.TextBox();
+            this.txtNombre1Docente = new System.Windows.Forms.TextBox();
+            this.txtCedulaDocente = new System.Windows.Forms.TextBox();
+            this.tabPageDocentesConsultarModificar = new System.Windows.Forms.TabPage();
+            this.listResultadosDocentes = new System.Windows.Forms.ListBox();
+            this.btnActualizarDocente = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.boxBuscar = new System.Windows.Forms.ComboBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btnQuitar_2 = new System.Windows.Forms.Button();
+            this.btnAñadir_2 = new System.Windows.Forms.Button();
+            this.listEspecialidades_2 = new System.Windows.Forms.ListBox();
+            this.boxEspecialidades_2 = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.btnCambiarEstadoDocente = new System.Windows.Forms.Button();
+            this.lblEstadoDocente = new System.Windows.Forms.Label();
+            this.txtEmailDocente_2 = new System.Windows.Forms.TextBox();
+            this.txtTelefonoDocente_2 = new System.Windows.Forms.TextBox();
+            this.txtDireccionDocente_2 = new System.Windows.Forms.TextBox();
+            this.txtApellido1Docente_2 = new System.Windows.Forms.TextBox();
+            this.txtNombre1Docente_2 = new System.Windows.Forms.TextBox();
+            this.txtCedulaDocente_2 = new System.Windows.Forms.TextBox();
+            this.tabPageDocentesBaja = new System.Windows.Forms.TabPage();
+            this.listResultadosDocentes_2 = new System.Windows.Forms.ListBox();
+            this.btnDarDeBaja = new System.Windows.Forms.Button();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblEstadoDocenteBaja = new System.Windows.Forms.Label();
+            this.lblCedulaDocente = new System.Windows.Forms.Label();
+            this.lblEmailDocente = new System.Windows.Forms.Label();
+            this.lblApellidoDocente = new System.Windows.Forms.Label();
+            this.lblNombreDocente = new System.Windows.Forms.Label();
+            this.btnBuscar_2 = new System.Windows.Forms.Button();
+            this.txtBuscar_2 = new System.Windows.Forms.TextBox();
+            this.boxBuscar_2 = new System.Windows.Forms.ComboBox();
+            this.pageCursos = new System.Windows.Forms.TabPage();
+            this.tabControlCursos = new System.Windows.Forms.TabControl();
+            this.viaticos = new System.Windows.Forms.TabPage();
+            this.boxNumeroGrupoViaticos = new System.Windows.Forms.ComboBox();
+            this.boxTurnoViaticos = new System.Windows.Forms.ComboBox();
+            this.lblBlockViaticos = new System.Windows.Forms.Label();
+            this.lblMontoTotalViaticos = new System.Windows.Forms.Label();
+            this.btnAñadirSemanaViaticos = new System.Windows.Forms.Button();
+            this.lblMontoDiaViaticos = new System.Windows.Forms.Label();
+            this.lblCedulaViaticos = new System.Windows.Forms.Label();
+            this.lblNombreViaticos = new System.Windows.Forms.Label();
+            this.dataGridViaticos = new System.Windows.Forms.DataGridView();
+            this.colFechaViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMontoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRubroViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colConceptoViaticos = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAbonoViaticos = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.boxCursoViaticos = new System.Windows.Forms.ComboBox();
+            this.listAlumnosViaticos = new System.Windows.Forms.ListBox();
+            this.asistencias = new System.Windows.Forms.TabPage();
+            this.groupBox57 = new System.Windows.Forms.GroupBox();
+            this.lstMateriasDelDia = new System.Windows.Forms.ListBox();
+            this.boxNumeroGrupo_2 = new System.Windows.Forms.ComboBox();
+            this.boxTurnoAsistencia_2 = new System.Windows.Forms.ComboBox();
+            this.boxCursoAsistencia_2 = new System.Windows.Forms.ComboBox();
+            this.dataGridListaAsistencias_2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dateTimeFechaAsistencia_2 = new System.Windows.Forms.DateTimePicker();
+            this.btnConsultarLista = new System.Windows.Forms.Button();
+            this.groupBox56 = new System.Windows.Forms.GroupBox();
+            this.btnGuardarLista = new System.Windows.Forms.Button();
+            this.dateTimeFechaAsistencia = new System.Windows.Forms.DateTimePicker();
+            this.boxMateriaAsistencia = new System.Windows.Forms.ComboBox();
+            this.boxNumeroGrupo = new System.Windows.Forms.ComboBox();
+            this.boxCursoAsistencia = new System.Windows.Forms.ComboBox();
+            this.dataGridListaAsistencias = new System.Windows.Forms.DataGridView();
+            this.colNombreAsistencias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colAsistenciaAsistencias = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.boxTurnoAsistencia = new System.Windows.Forms.ComboBox();
+            this.btnGenerarLista = new System.Windows.Forms.Button();
+            this.nuevoGrupo = new System.Windows.Forms.TabPage();
+            this.txtNumeroGrupo = new System.Windows.Forms.TextBox();
+            this.dataGridGruposActivos = new System.Windows.Forms.DataGridView();
+            this.btnCrearGrupo = new System.Windows.Forms.Button();
+            this.groupBox61 = new System.Windows.Forms.GroupBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimeFinalizacionGrupo = new System.Windows.Forms.DateTimePicker();
+            this.dateTimeInicioGrupo = new System.Windows.Forms.DateTimePicker();
+            this.boxTurnoGrupo = new System.Windows.Forms.ComboBox();
+            this.boxCursoGrupo = new System.Windows.Forms.ComboBox();
+            this.nuevoCurso = new System.Windows.Forms.TabPage();
+            this.btnCrearCurso = new System.Windows.Forms.Button();
+            this.groupBox58 = new System.Windows.Forms.GroupBox();
+            this.groupBox59 = new System.Windows.Forms.GroupBox();
+            this.btnQuitarMateriaCurso = new System.Windows.Forms.Button();
+            this.btnAñadirMateriaCurso = new System.Windows.Forms.Button();
+            this.listMateriasCurso = new System.Windows.Forms.ListBox();
+            this.boxMateriasCurso = new System.Windows.Forms.ComboBox();
+            this.txtNombreCurso = new System.Windows.Forms.TextBox();
+            this.boxTipoCurso = new System.Windows.Forms.ComboBox();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton2)).BeginInit();
@@ -461,31 +461,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnDocentes)).BeginInit();
             this.menuPrincipal.SuspendLayout();
             this.tabControlPrincipal.SuspendLayout();
-            this.pageDocente.SuspendLayout();
-            this.tabControlDocente.SuspendLayout();
-            this.tabPageDocentesNuevo.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.tabPageDocentesConsultarModificar.SuspendLayout();
-            this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.tabPageDocentesBaja.SuspendLayout();
-            this.groupBox5.SuspendLayout();
-            this.pageCursos.SuspendLayout();
-            this.tabControlCursos.SuspendLayout();
-            this.viaticos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).BeginInit();
-            this.asistencias.SuspendLayout();
-            this.groupBox57.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias_2)).BeginInit();
-            this.groupBox56.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).BeginInit();
-            this.nuevoGrupo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).BeginInit();
-            this.groupBox61.SuspendLayout();
-            this.nuevoCurso.SuspendLayout();
-            this.groupBox58.SuspendLayout();
-            this.groupBox59.SuspendLayout();
             this.pageAlumno.SuspendLayout();
             this.tabControlAlumnos.SuspendLayout();
             this.tabPageAlumnosNuevo.SuspendLayout();
@@ -549,6 +524,31 @@
             this.groupBox43.SuspendLayout();
             this.groupBox44.SuspendLayout();
             this.groupBox45.SuspendLayout();
+            this.pageDocente.SuspendLayout();
+            this.tabControlDocente.SuspendLayout();
+            this.tabPageDocentesNuevo.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.tabPageDocentesConsultarModificar.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.tabPageDocentesBaja.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.pageCursos.SuspendLayout();
+            this.tabControlCursos.SuspendLayout();
+            this.viaticos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).BeginInit();
+            this.asistencias.SuspendLayout();
+            this.groupBox57.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias_2)).BeginInit();
+            this.groupBox56.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).BeginInit();
+            this.nuevoGrupo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).BeginInit();
+            this.groupBox61.SuspendLayout();
+            this.nuevoCurso.SuspendLayout();
+            this.groupBox58.SuspendLayout();
+            this.groupBox59.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -731,1431 +731,6 @@
             this.tabControlPrincipal.SelectedIndex = 0;
             this.tabControlPrincipal.Size = new System.Drawing.Size(1097, 562);
             this.tabControlPrincipal.TabIndex = 3;
-            // 
-            // pageDocente
-            // 
-            this.pageDocente.BackColor = System.Drawing.Color.LightGray;
-            this.pageDocente.Controls.Add(this.tabControlDocente);
-            this.pageDocente.Location = new System.Drawing.Point(4, 22);
-            this.pageDocente.Name = "pageDocente";
-            this.pageDocente.Padding = new System.Windows.Forms.Padding(3);
-            this.pageDocente.Size = new System.Drawing.Size(1089, 536);
-            this.pageDocente.TabIndex = 0;
-            this.pageDocente.Text = "Docentes";
-            // 
-            // tabControlDocente
-            // 
-            this.tabControlDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlDocente.Controls.Add(this.tabPageDocentesNuevo);
-            this.tabControlDocente.Controls.Add(this.tabPageDocentesConsultarModificar);
-            this.tabControlDocente.Controls.Add(this.tabPageDocentesBaja);
-            this.tabControlDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlDocente.ImageList = this.imageList;
-            this.tabControlDocente.Location = new System.Drawing.Point(-4, 1);
-            this.tabControlDocente.Name = "tabControlDocente";
-            this.tabControlDocente.SelectedIndex = 0;
-            this.tabControlDocente.Size = new System.Drawing.Size(1097, 547);
-            this.tabControlDocente.TabIndex = 0;
-            // 
-            // tabPageDocentesNuevo
-            // 
-            this.tabPageDocentesNuevo.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPageDocentesNuevo.Controls.Add(this.btnIngresarDocente);
-            this.tabPageDocentesNuevo.Controls.Add(this.groupBox2);
-            this.tabPageDocentesNuevo.Controls.Add(this.groupBox1);
-            this.tabPageDocentesNuevo.ImageIndex = 3;
-            this.tabPageDocentesNuevo.Location = new System.Drawing.Point(4, 27);
-            this.tabPageDocentesNuevo.Name = "tabPageDocentesNuevo";
-            this.tabPageDocentesNuevo.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDocentesNuevo.Size = new System.Drawing.Size(1089, 516);
-            this.tabPageDocentesNuevo.TabIndex = 0;
-            this.tabPageDocentesNuevo.Text = "Ingresar nuevo";
-            // 
-            // btnIngresarDocente
-            // 
-            this.btnIngresarDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnIngresarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngresarDocente.Location = new System.Drawing.Point(836, 450);
-            this.btnIngresarDocente.Name = "btnIngresarDocente";
-            this.btnIngresarDocente.Size = new System.Drawing.Size(245, 48);
-            this.btnIngresarDocente.TabIndex = 3;
-            this.btnIngresarDocente.Text = "Ingresar docente";
-            this.btnIngresarDocente.UseVisualStyleBackColor = true;
-            this.btnIngresarDocente.Click += new System.EventHandler(this.btnIngresarDocente_Click);
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.btnQuitarEspecialidad);
-            this.groupBox2.Controls.Add(this.btnAñadirEspecialidad);
-            this.groupBox2.Controls.Add(this.listEspecialidades);
-            this.groupBox2.Controls.Add(this.boxEspecialidades);
-            this.groupBox2.Location = new System.Drawing.Point(583, 59);
-            this.groupBox2.MinimumSize = new System.Drawing.Size(466, 239);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(466, 239);
-            this.groupBox2.TabIndex = 2;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Especialidades";
-            // 
-            // btnQuitarEspecialidad
-            // 
-            this.btnQuitarEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarEspecialidad.Location = new System.Drawing.Point(12, 51);
-            this.btnQuitarEspecialidad.Name = "btnQuitarEspecialidad";
-            this.btnQuitarEspecialidad.Size = new System.Drawing.Size(81, 29);
-            this.btnQuitarEspecialidad.TabIndex = 10;
-            this.btnQuitarEspecialidad.Text = "Quitar";
-            this.btnQuitarEspecialidad.UseVisualStyleBackColor = true;
-            this.btnQuitarEspecialidad.Click += new System.EventHandler(this.btnQuitarEspecialidad_Click);
-            // 
-            // btnAñadirEspecialidad
-            // 
-            this.btnAñadirEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirEspecialidad.Location = new System.Drawing.Point(99, 51);
-            this.btnAñadirEspecialidad.Name = "btnAñadirEspecialidad";
-            this.btnAñadirEspecialidad.Size = new System.Drawing.Size(122, 29);
-            this.btnAñadirEspecialidad.TabIndex = 9;
-            this.btnAñadirEspecialidad.Text = "Añadir";
-            this.btnAñadirEspecialidad.UseVisualStyleBackColor = true;
-            this.btnAñadirEspecialidad.Click += new System.EventHandler(this.btnAñadirEspecialidad_Click);
-            // 
-            // listEspecialidades
-            // 
-            this.listEspecialidades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.listEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listEspecialidades.FormattingEnabled = true;
-            this.listEspecialidades.ItemHeight = 18;
-            this.listEspecialidades.Location = new System.Drawing.Point(239, 19);
-            this.listEspecialidades.Name = "listEspecialidades";
-            this.listEspecialidades.Size = new System.Drawing.Size(216, 202);
-            this.listEspecialidades.TabIndex = 1;
-            // 
-            // boxEspecialidades
-            // 
-            this.boxEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxEspecialidades.FormattingEnabled = true;
-            this.boxEspecialidades.Location = new System.Drawing.Point(12, 19);
-            this.boxEspecialidades.Name = "boxEspecialidades";
-            this.boxEspecialidades.Size = new System.Drawing.Size(209, 26);
-            this.boxEspecialidades.TabIndex = 8;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.txtEmailDocente);
-            this.groupBox1.Controls.Add(this.txtTelefonoDocente);
-            this.groupBox1.Controls.Add(this.txtDireccionDocente);
-            this.groupBox1.Controls.Add(this.txtApellido1Docente);
-            this.groupBox1.Controls.Add(this.txtNombre1Docente);
-            this.groupBox1.Controls.Add(this.txtCedulaDocente);
-            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox1.Location = new System.Drawing.Point(35, 59);
-            this.groupBox1.MinimumSize = new System.Drawing.Size(522, 239);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(522, 239);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Datos personales";
-            // 
-            // txtEmailDocente
-            // 
-            this.txtEmailDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmailDocente.Location = new System.Drawing.Point(19, 170);
-            this.txtEmailDocente.Name = "txtEmailDocente";
-            this.txtEmailDocente.Size = new System.Drawing.Size(192, 24);
-            this.txtEmailDocente.TabIndex = 7;
-            this.txtEmailDocente.Text = "Email";
-            this.txtEmailDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtEmailDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtTelefonoDocente
-            // 
-            this.txtTelefonoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefonoDocente.Location = new System.Drawing.Point(230, 124);
-            this.txtTelefonoDocente.MaxLength = 12;
-            this.txtTelefonoDocente.Name = "txtTelefonoDocente";
-            this.txtTelefonoDocente.Size = new System.Drawing.Size(192, 24);
-            this.txtTelefonoDocente.TabIndex = 6;
-            this.txtTelefonoDocente.Text = "Telefono";
-            this.txtTelefonoDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtTelefonoDocente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
-            this.txtTelefonoDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtDireccionDocente
-            // 
-            this.txtDireccionDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDireccionDocente.Location = new System.Drawing.Point(19, 124);
-            this.txtDireccionDocente.Name = "txtDireccionDocente";
-            this.txtDireccionDocente.Size = new System.Drawing.Size(192, 24);
-            this.txtDireccionDocente.TabIndex = 5;
-            this.txtDireccionDocente.Text = "Direccion";
-            this.txtDireccionDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtDireccionDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtApellido1Docente
-            // 
-            this.txtApellido1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellido1Docente.Location = new System.Drawing.Point(230, 78);
-            this.txtApellido1Docente.Name = "txtApellido1Docente";
-            this.txtApellido1Docente.Size = new System.Drawing.Size(192, 24);
-            this.txtApellido1Docente.TabIndex = 3;
-            this.txtApellido1Docente.Text = "Apellido";
-            this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtApellido1Docente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
-            this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtNombre1Docente
-            // 
-            this.txtNombre1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre1Docente.Location = new System.Drawing.Point(19, 78);
-            this.txtNombre1Docente.Name = "txtNombre1Docente";
-            this.txtNombre1Docente.Size = new System.Drawing.Size(192, 24);
-            this.txtNombre1Docente.TabIndex = 1;
-            this.txtNombre1Docente.Text = "Nombre";
-            this.txtNombre1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtNombre1Docente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
-            this.txtNombre1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtCedulaDocente
-            // 
-            this.txtCedulaDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedulaDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCedulaDocente.Location = new System.Drawing.Point(19, 38);
-            this.txtCedulaDocente.MaxLength = 8;
-            this.txtCedulaDocente.Name = "txtCedulaDocente";
-            this.txtCedulaDocente.Size = new System.Drawing.Size(192, 24);
-            this.txtCedulaDocente.TabIndex = 0;
-            this.txtCedulaDocente.Text = "Cedula";
-            this.txtCedulaDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtCedulaDocente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
-            this.txtCedulaDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // tabPageDocentesConsultarModificar
-            // 
-            this.tabPageDocentesConsultarModificar.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.listResultadosDocentes);
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.btnActualizarDocente);
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.btnBuscar);
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.txtBuscar);
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.boxBuscar);
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox3);
-            this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox4);
-            this.tabPageDocentesConsultarModificar.Cursor = System.Windows.Forms.Cursors.Default;
-            this.tabPageDocentesConsultarModificar.ImageIndex = 4;
-            this.tabPageDocentesConsultarModificar.Location = new System.Drawing.Point(4, 27);
-            this.tabPageDocentesConsultarModificar.Name = "tabPageDocentesConsultarModificar";
-            this.tabPageDocentesConsultarModificar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageDocentesConsultarModificar.Size = new System.Drawing.Size(1089, 516);
-            this.tabPageDocentesConsultarModificar.TabIndex = 1;
-            this.tabPageDocentesConsultarModificar.Text = "Consultar / Modificar";
-            // 
-            // listResultadosDocentes
-            // 
-            this.listResultadosDocentes.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.listResultadosDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listResultadosDocentes.FormattingEnabled = true;
-            this.listResultadosDocentes.ItemHeight = 16;
-            this.listResultadosDocentes.Location = new System.Drawing.Point(489, 74);
-            this.listResultadosDocentes.Name = "listResultadosDocentes";
-            this.listResultadosDocentes.Size = new System.Drawing.Size(216, 68);
-            this.listResultadosDocentes.TabIndex = 10;
-            this.listResultadosDocentes.Visible = false;
-            this.listResultadosDocentes.SelectedIndexChanged += new System.EventHandler(this.listBoxResultados_SelectedIndexChanged);
-            // 
-            // btnActualizarDocente
-            // 
-            this.btnActualizarDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnActualizarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarDocente.Location = new System.Drawing.Point(836, 455);
-            this.btnActualizarDocente.Name = "btnActualizarDocente";
-            this.btnActualizarDocente.Size = new System.Drawing.Size(245, 48);
-            this.btnActualizarDocente.TabIndex = 9;
-            this.btnActualizarDocente.Text = "Actualizar docente";
-            this.btnActualizarDocente.UseVisualStyleBackColor = true;
-            this.btnActualizarDocente.Click += new System.EventHandler(this.btnActualizarDocente_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(711, 49);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(122, 29);
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar.Location = new System.Drawing.Point(489, 50);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(216, 24);
-            this.txtBuscar.TabIndex = 7;
-            this.txtBuscar.Text = "Texto de busqueda";
-            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
-            this.txtBuscar.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtBuscar.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // boxBuscar
-            // 
-            this.boxBuscar.AccessibleDescription = "";
-            this.boxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.boxBuscar.DisplayMember = "sadsa";
-            this.boxBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxBuscar.FormattingEnabled = true;
-            this.boxBuscar.Items.AddRange(new object[] {
-            "Buscar por...",
-            "Cedula",
-            "Nombre y apellido"});
-            this.boxBuscar.Location = new System.Drawing.Point(351, 50);
-            this.boxBuscar.Name = "boxBuscar";
-            this.boxBuscar.Size = new System.Drawing.Size(132, 26);
-            this.boxBuscar.TabIndex = 6;
-            this.boxBuscar.Tag = "";
-            this.boxBuscar.SelectedIndexChanged += new System.EventHandler(this.boxBuscar_SelectedIndexChanged);
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox3.Controls.Add(this.btnQuitar_2);
-            this.groupBox3.Controls.Add(this.btnAñadir_2);
-            this.groupBox3.Controls.Add(this.listEspecialidades_2);
-            this.groupBox3.Controls.Add(this.boxEspecialidades_2);
-            this.groupBox3.Location = new System.Drawing.Point(582, 151);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(466, 239);
-            this.groupBox3.TabIndex = 4;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Especialidades";
-            // 
-            // btnQuitar_2
-            // 
-            this.btnQuitar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitar_2.Location = new System.Drawing.Point(12, 51);
-            this.btnQuitar_2.Name = "btnQuitar_2";
-            this.btnQuitar_2.Size = new System.Drawing.Size(81, 29);
-            this.btnQuitar_2.TabIndex = 2;
-            this.btnQuitar_2.Text = "Quitar";
-            this.btnQuitar_2.UseVisualStyleBackColor = true;
-            this.btnQuitar_2.Click += new System.EventHandler(this.btnQuitar_2_Click);
-            // 
-            // btnAñadir_2
-            // 
-            this.btnAñadir_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadir_2.Location = new System.Drawing.Point(99, 51);
-            this.btnAñadir_2.Name = "btnAñadir_2";
-            this.btnAñadir_2.Size = new System.Drawing.Size(122, 29);
-            this.btnAñadir_2.TabIndex = 2;
-            this.btnAñadir_2.Text = "Añadir";
-            this.btnAñadir_2.UseVisualStyleBackColor = true;
-            this.btnAñadir_2.Click += new System.EventHandler(this.btnAñadir_2_Click);
-            // 
-            // listEspecialidades_2
-            // 
-            this.listEspecialidades_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listEspecialidades_2.FormattingEnabled = true;
-            this.listEspecialidades_2.ItemHeight = 18;
-            this.listEspecialidades_2.Location = new System.Drawing.Point(239, 19);
-            this.listEspecialidades_2.Name = "listEspecialidades_2";
-            this.listEspecialidades_2.Size = new System.Drawing.Size(216, 202);
-            this.listEspecialidades_2.TabIndex = 1;
-            // 
-            // boxEspecialidades_2
-            // 
-            this.boxEspecialidades_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxEspecialidades_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxEspecialidades_2.FormattingEnabled = true;
-            this.boxEspecialidades_2.Location = new System.Drawing.Point(12, 19);
-            this.boxEspecialidades_2.Name = "boxEspecialidades_2";
-            this.boxEspecialidades_2.Size = new System.Drawing.Size(209, 26);
-            this.boxEspecialidades_2.TabIndex = 0;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox4.Controls.Add(this.btnCambiarEstadoDocente);
-            this.groupBox4.Controls.Add(this.lblEstadoDocente);
-            this.groupBox4.Controls.Add(this.txtEmailDocente_2);
-            this.groupBox4.Controls.Add(this.txtTelefonoDocente_2);
-            this.groupBox4.Controls.Add(this.txtDireccionDocente_2);
-            this.groupBox4.Controls.Add(this.txtApellido1Docente_2);
-            this.groupBox4.Controls.Add(this.txtNombre1Docente_2);
-            this.groupBox4.Controls.Add(this.txtCedulaDocente_2);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.groupBox4.Location = new System.Drawing.Point(34, 151);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(522, 239);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Datos personales";
-            // 
-            // btnCambiarEstadoDocente
-            // 
-            this.btnCambiarEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCambiarEstadoDocente.Location = new System.Drawing.Point(337, 169);
-            this.btnCambiarEstadoDocente.Name = "btnCambiarEstadoDocente";
-            this.btnCambiarEstadoDocente.Size = new System.Drawing.Size(72, 29);
-            this.btnCambiarEstadoDocente.TabIndex = 9;
-            this.btnCambiarEstadoDocente.Text = "Activar";
-            this.btnCambiarEstadoDocente.UseVisualStyleBackColor = true;
-            this.btnCambiarEstadoDocente.Visible = false;
-            this.btnCambiarEstadoDocente.Click += new System.EventHandler(this.btnCambiarEstadoDocente_Click);
-            // 
-            // lblEstadoDocente
-            // 
-            this.lblEstadoDocente.AutoSize = true;
-            this.lblEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoDocente.Location = new System.Drawing.Point(226, 174);
-            this.lblEstadoDocente.Name = "lblEstadoDocente";
-            this.lblEstadoDocente.Size = new System.Drawing.Size(59, 18);
-            this.lblEstadoDocente.TabIndex = 8;
-            this.lblEstadoDocente.Text = "Estado:";
-            // 
-            // txtEmailDocente_2
-            // 
-            this.txtEmailDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmailDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtEmailDocente_2.Location = new System.Drawing.Point(19, 171);
-            this.txtEmailDocente_2.Name = "txtEmailDocente_2";
-            this.txtEmailDocente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtEmailDocente_2.TabIndex = 7;
-            this.txtEmailDocente_2.Text = "Email";
-            this.txtEmailDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtEmailDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtTelefonoDocente_2
-            // 
-            this.txtTelefonoDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTelefonoDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTelefonoDocente_2.Location = new System.Drawing.Point(217, 125);
-            this.txtTelefonoDocente_2.MaxLength = 12;
-            this.txtTelefonoDocente_2.Name = "txtTelefonoDocente_2";
-            this.txtTelefonoDocente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtTelefonoDocente_2.TabIndex = 6;
-            this.txtTelefonoDocente_2.Text = "Telefono";
-            this.txtTelefonoDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtTelefonoDocente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
-            this.txtTelefonoDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtDireccionDocente_2
-            // 
-            this.txtDireccionDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDireccionDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtDireccionDocente_2.Location = new System.Drawing.Point(19, 125);
-            this.txtDireccionDocente_2.Name = "txtDireccionDocente_2";
-            this.txtDireccionDocente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtDireccionDocente_2.TabIndex = 5;
-            this.txtDireccionDocente_2.Text = "Direccion";
-            this.txtDireccionDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtDireccionDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtApellido1Docente_2
-            // 
-            this.txtApellido1Docente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido1Docente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtApellido1Docente_2.Location = new System.Drawing.Point(217, 78);
-            this.txtApellido1Docente_2.Name = "txtApellido1Docente_2";
-            this.txtApellido1Docente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtApellido1Docente_2.TabIndex = 3;
-            this.txtApellido1Docente_2.Text = "Apellido";
-            this.txtApellido1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtApellido1Docente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
-            this.txtApellido1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtNombre1Docente_2
-            // 
-            this.txtNombre1Docente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre1Docente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombre1Docente_2.Location = new System.Drawing.Point(19, 78);
-            this.txtNombre1Docente_2.Name = "txtNombre1Docente_2";
-            this.txtNombre1Docente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtNombre1Docente_2.TabIndex = 1;
-            this.txtNombre1Docente_2.Text = "Nombre";
-            this.txtNombre1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtNombre1Docente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
-            this.txtNombre1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // txtCedulaDocente_2
-            // 
-            this.txtCedulaDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedulaDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtCedulaDocente_2.Location = new System.Drawing.Point(19, 34);
-            this.txtCedulaDocente_2.MaxLength = 8;
-            this.txtCedulaDocente_2.Name = "txtCedulaDocente_2";
-            this.txtCedulaDocente_2.Size = new System.Drawing.Size(192, 24);
-            this.txtCedulaDocente_2.TabIndex = 0;
-            this.txtCedulaDocente_2.Text = "Cedula";
-            this.txtCedulaDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtCedulaDocente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
-            this.txtCedulaDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // tabPageDocentesBaja
-            // 
-            this.tabPageDocentesBaja.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.tabPageDocentesBaja.Controls.Add(this.listResultadosDocentes_2);
-            this.tabPageDocentesBaja.Controls.Add(this.btnDarDeBaja);
-            this.tabPageDocentesBaja.Controls.Add(this.groupBox5);
-            this.tabPageDocentesBaja.Controls.Add(this.btnBuscar_2);
-            this.tabPageDocentesBaja.Controls.Add(this.txtBuscar_2);
-            this.tabPageDocentesBaja.Controls.Add(this.boxBuscar_2);
-            this.tabPageDocentesBaja.ImageIndex = 5;
-            this.tabPageDocentesBaja.Location = new System.Drawing.Point(4, 27);
-            this.tabPageDocentesBaja.Name = "tabPageDocentesBaja";
-            this.tabPageDocentesBaja.Size = new System.Drawing.Size(1089, 516);
-            this.tabPageDocentesBaja.TabIndex = 2;
-            this.tabPageDocentesBaja.Text = "Dar de baja";
-            // 
-            // listResultadosDocentes_2
-            // 
-            this.listResultadosDocentes_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.listResultadosDocentes_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listResultadosDocentes_2.FormattingEnabled = true;
-            this.listResultadosDocentes_2.ItemHeight = 16;
-            this.listResultadosDocentes_2.Location = new System.Drawing.Point(442, 78);
-            this.listResultadosDocentes_2.Name = "listResultadosDocentes_2";
-            this.listResultadosDocentes_2.Size = new System.Drawing.Size(216, 68);
-            this.listResultadosDocentes_2.TabIndex = 16;
-            this.listResultadosDocentes_2.Visible = false;
-            this.listResultadosDocentes_2.SelectedIndexChanged += new System.EventHandler(this.listResultadosDocentes_2_SelectedIndexChanged);
-            // 
-            // btnDarDeBaja
-            // 
-            this.btnDarDeBaja.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDarDeBaja.Location = new System.Drawing.Point(428, 300);
-            this.btnDarDeBaja.Name = "btnDarDeBaja";
-            this.btnDarDeBaja.Size = new System.Drawing.Size(245, 48);
-            this.btnDarDeBaja.TabIndex = 15;
-            this.btnDarDeBaja.Text = "Dar de baja";
-            this.btnDarDeBaja.UseVisualStyleBackColor = true;
-            this.btnDarDeBaja.Click += new System.EventHandler(this.btnDarDeBaja_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.groupBox5.Controls.Add(this.lblEstadoDocenteBaja);
-            this.groupBox5.Controls.Add(this.lblCedulaDocente);
-            this.groupBox5.Controls.Add(this.lblEmailDocente);
-            this.groupBox5.Controls.Add(this.lblApellidoDocente);
-            this.groupBox5.Controls.Add(this.lblNombreDocente);
-            this.groupBox5.Location = new System.Drawing.Point(376, 131);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(349, 145);
-            this.groupBox5.TabIndex = 13;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Datos del docente";
-            // 
-            // lblEstadoDocenteBaja
-            // 
-            this.lblEstadoDocenteBaja.AutoSize = true;
-            this.lblEstadoDocenteBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoDocenteBaja.ForeColor = System.Drawing.Color.Black;
-            this.lblEstadoDocenteBaja.Location = new System.Drawing.Point(21, 117);
-            this.lblEstadoDocenteBaja.Name = "lblEstadoDocenteBaja";
-            this.lblEstadoDocenteBaja.Size = new System.Drawing.Size(61, 16);
-            this.lblEstadoDocenteBaja.TabIndex = 1;
-            this.lblEstadoDocenteBaja.Text = "Estado:";
-            // 
-            // lblCedulaDocente
-            // 
-            this.lblCedulaDocente.AutoSize = true;
-            this.lblCedulaDocente.Location = new System.Drawing.Point(22, 30);
-            this.lblCedulaDocente.Name = "lblCedulaDocente";
-            this.lblCedulaDocente.Size = new System.Drawing.Size(58, 18);
-            this.lblCedulaDocente.TabIndex = 0;
-            this.lblCedulaDocente.Text = "Cedula:";
-            // 
-            // lblEmailDocente
-            // 
-            this.lblEmailDocente.AutoSize = true;
-            this.lblEmailDocente.Location = new System.Drawing.Point(21, 96);
-            this.lblEmailDocente.Name = "lblEmailDocente";
-            this.lblEmailDocente.Size = new System.Drawing.Size(49, 18);
-            this.lblEmailDocente.TabIndex = 0;
-            this.lblEmailDocente.Text = "Email:";
-            // 
-            // lblApellidoDocente
-            // 
-            this.lblApellidoDocente.AutoSize = true;
-            this.lblApellidoDocente.Location = new System.Drawing.Point(21, 73);
-            this.lblApellidoDocente.Name = "lblApellidoDocente";
-            this.lblApellidoDocente.Size = new System.Drawing.Size(63, 18);
-            this.lblApellidoDocente.TabIndex = 0;
-            this.lblApellidoDocente.Text = "Apellido:";
-            // 
-            // lblNombreDocente
-            // 
-            this.lblNombreDocente.AutoSize = true;
-            this.lblNombreDocente.Location = new System.Drawing.Point(21, 50);
-            this.lblNombreDocente.Name = "lblNombreDocente";
-            this.lblNombreDocente.Size = new System.Drawing.Size(66, 18);
-            this.lblNombreDocente.TabIndex = 0;
-            this.lblNombreDocente.Text = "Nombre:";
-            // 
-            // btnBuscar_2
-            // 
-            this.btnBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar_2.Location = new System.Drawing.Point(665, 53);
-            this.btnBuscar_2.Name = "btnBuscar_2";
-            this.btnBuscar_2.Size = new System.Drawing.Size(122, 29);
-            this.btnBuscar_2.TabIndex = 11;
-            this.btnBuscar_2.Text = "Buscar";
-            this.btnBuscar_2.UseVisualStyleBackColor = true;
-            this.btnBuscar_2.Click += new System.EventHandler(this.btnBuscar_2_Click);
-            // 
-            // txtBuscar_2
-            // 
-            this.txtBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBuscar_2.Location = new System.Drawing.Point(442, 54);
-            this.txtBuscar_2.Name = "txtBuscar_2";
-            this.txtBuscar_2.Size = new System.Drawing.Size(216, 24);
-            this.txtBuscar_2.TabIndex = 10;
-            this.txtBuscar_2.Text = "Texto de busqueda";
-            this.txtBuscar_2.TextChanged += new System.EventHandler(this.txtBuscar_2_TextChanged);
-            this.txtBuscar_2.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtBuscar_2.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // boxBuscar_2
-            // 
-            this.boxBuscar_2.AccessibleDescription = "";
-            this.boxBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.boxBuscar_2.DisplayMember = "sadsa";
-            this.boxBuscar_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxBuscar_2.FormattingEnabled = true;
-            this.boxBuscar_2.Items.AddRange(new object[] {
-            "Buscar por...",
-            "Cedula",
-            "Nombre y apellido"});
-            this.boxBuscar_2.Location = new System.Drawing.Point(302, 54);
-            this.boxBuscar_2.Name = "boxBuscar_2";
-            this.boxBuscar_2.Size = new System.Drawing.Size(132, 26);
-            this.boxBuscar_2.TabIndex = 9;
-            this.boxBuscar_2.Tag = "";
-            this.boxBuscar_2.SelectedIndexChanged += new System.EventHandler(this.boxBuscar_2_SelectedIndexChanged);
-            // 
-            // imageList
-            // 
-            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
-            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList.Images.SetKeyName(0, "money.png");
-            this.imageList.Images.SetKeyName(1, "lista.png");
-            this.imageList.Images.SetKeyName(2, "newgroup.png");
-            this.imageList.Images.SetKeyName(3, "newcurso.png");
-            this.imageList.Images.SetKeyName(4, "lupa.png");
-            this.imageList.Images.SetKeyName(5, "delete.png");
-            // 
-            // pageCursos
-            // 
-            this.pageCursos.BackColor = System.Drawing.Color.LightGray;
-            this.pageCursos.Controls.Add(this.tabControlCursos);
-            this.pageCursos.Location = new System.Drawing.Point(4, 22);
-            this.pageCursos.Name = "pageCursos";
-            this.pageCursos.Size = new System.Drawing.Size(1089, 536);
-            this.pageCursos.TabIndex = 2;
-            this.pageCursos.Text = "Cursos";
-            // 
-            // tabControlCursos
-            // 
-            this.tabControlCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControlCursos.Controls.Add(this.viaticos);
-            this.tabControlCursos.Controls.Add(this.asistencias);
-            this.tabControlCursos.Controls.Add(this.nuevoGrupo);
-            this.tabControlCursos.Controls.Add(this.nuevoCurso);
-            this.tabControlCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControlCursos.ImageList = this.imageList;
-            this.tabControlCursos.Location = new System.Drawing.Point(-4, 1);
-            this.tabControlCursos.Name = "tabControlCursos";
-            this.tabControlCursos.SelectedIndex = 0;
-            this.tabControlCursos.Size = new System.Drawing.Size(1097, 547);
-            this.tabControlCursos.TabIndex = 2;
-            // 
-            // viaticos
-            // 
-            this.viaticos.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.viaticos.Controls.Add(this.boxNumeroGrupoViaticos);
-            this.viaticos.Controls.Add(this.boxTurnoViaticos);
-            this.viaticos.Controls.Add(this.lblBlockViaticos);
-            this.viaticos.Controls.Add(this.lblMontoTotalViaticos);
-            this.viaticos.Controls.Add(this.btnAñadirSemanaViaticos);
-            this.viaticos.Controls.Add(this.lblMontoDiaViaticos);
-            this.viaticos.Controls.Add(this.lblCedulaViaticos);
-            this.viaticos.Controls.Add(this.lblNombreViaticos);
-            this.viaticos.Controls.Add(this.dataGridViaticos);
-            this.viaticos.Controls.Add(this.boxCursoViaticos);
-            this.viaticos.Controls.Add(this.listAlumnosViaticos);
-            this.viaticos.ImageIndex = 0;
-            this.viaticos.Location = new System.Drawing.Point(4, 27);
-            this.viaticos.Name = "viaticos";
-            this.viaticos.Padding = new System.Windows.Forms.Padding(3);
-            this.viaticos.Size = new System.Drawing.Size(1089, 516);
-            this.viaticos.TabIndex = 0;
-            this.viaticos.Text = "Viaticos";
-            this.viaticos.Click += new System.EventHandler(this.viaticos_Click);
-            // 
-            // boxNumeroGrupoViaticos
-            // 
-            this.boxNumeroGrupoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupoViaticos.Enabled = false;
-            this.boxNumeroGrupoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupoViaticos.FormattingEnabled = true;
-            this.boxNumeroGrupoViaticos.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupoViaticos.Location = new System.Drawing.Point(39, 118);
-            this.boxNumeroGrupoViaticos.Name = "boxNumeroGrupoViaticos";
-            this.boxNumeroGrupoViaticos.Size = new System.Drawing.Size(203, 26);
-            this.boxNumeroGrupoViaticos.TabIndex = 35;
-            this.boxNumeroGrupoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupoViaticos_SelectedIndexChanged);
-            // 
-            // boxTurnoViaticos
-            // 
-            this.boxTurnoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTurnoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTurnoViaticos.Items.AddRange(new object[] {
-            "Turno...",
-            "Matutino",
-            "Vespertino",
-            "Nocturno"});
-            this.boxTurnoViaticos.Location = new System.Drawing.Point(39, 35);
-            this.boxTurnoViaticos.Name = "boxTurnoViaticos";
-            this.boxTurnoViaticos.Size = new System.Drawing.Size(203, 26);
-            this.boxTurnoViaticos.TabIndex = 34;
-            this.boxTurnoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxTurnoViaticos_SelectedIndexChanged);
-            // 
-            // lblBlockViaticos
-            // 
-            this.lblBlockViaticos.AutoSize = true;
-            this.lblBlockViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBlockViaticos.ForeColor = System.Drawing.Color.Firebrick;
-            this.lblBlockViaticos.Location = new System.Drawing.Point(436, 39);
-            this.lblBlockViaticos.Name = "lblBlockViaticos";
-            this.lblBlockViaticos.Size = new System.Drawing.Size(410, 16);
-            this.lblBlockViaticos.TabIndex = 33;
-            this.lblBlockViaticos.Text = "Solo se permite agregar viaticos los dias jueves y viernes";
-            this.lblBlockViaticos.Visible = false;
-            // 
-            // lblMontoTotalViaticos
-            // 
-            this.lblMontoTotalViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMontoTotalViaticos.AutoSize = true;
-            this.lblMontoTotalViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoTotalViaticos.Location = new System.Drawing.Point(788, 158);
-            this.lblMontoTotalViaticos.Name = "lblMontoTotalViaticos";
-            this.lblMontoTotalViaticos.Size = new System.Drawing.Size(160, 18);
-            this.lblMontoTotalViaticos.TabIndex = 32;
-            this.lblMontoTotalViaticos.Text = "Monto total a pagar:";
-            // 
-            // btnAñadirSemanaViaticos
-            // 
-            this.btnAñadirSemanaViaticos.Enabled = false;
-            this.btnAñadirSemanaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 34);
-            this.btnAñadirSemanaViaticos.Name = "btnAñadirSemanaViaticos";
-            this.btnAñadirSemanaViaticos.Size = new System.Drawing.Size(173, 29);
-            this.btnAñadirSemanaViaticos.TabIndex = 31;
-            this.btnAñadirSemanaViaticos.Text = "Añadir pago de viaticos";
-            this.btnAñadirSemanaViaticos.UseVisualStyleBackColor = true;
-            this.btnAñadirSemanaViaticos.Click += new System.EventHandler(this.btnAñadirSemanaViaticos_Click);
-            // 
-            // lblMontoDiaViaticos
-            // 
-            this.lblMontoDiaViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblMontoDiaViaticos.AutoSize = true;
-            this.lblMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
-            this.lblMontoDiaViaticos.Name = "lblMontoDiaViaticos";
-            this.lblMontoDiaViaticos.Size = new System.Drawing.Size(182, 18);
-            this.lblMontoDiaViaticos.TabIndex = 30;
-            this.lblMontoDiaViaticos.Text = "Monto por día asistido:";
-            // 
-            // lblCedulaViaticos
-            // 
-            this.lblCedulaViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCedulaViaticos.AutoSize = true;
-            this.lblCedulaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCedulaViaticos.Location = new System.Drawing.Point(788, 77);
-            this.lblCedulaViaticos.Name = "lblCedulaViaticos";
-            this.lblCedulaViaticos.Size = new System.Drawing.Size(65, 18);
-            this.lblCedulaViaticos.TabIndex = 29;
-            this.lblCedulaViaticos.Text = "Cedula:";
-            // 
-            // lblNombreViaticos
-            // 
-            this.lblNombreViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNombreViaticos.AutoSize = true;
-            this.lblNombreViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreViaticos.Location = new System.Drawing.Point(788, 104);
-            this.lblNombreViaticos.Name = "lblNombreViaticos";
-            this.lblNombreViaticos.Size = new System.Drawing.Size(73, 18);
-            this.lblNombreViaticos.TabIndex = 29;
-            this.lblNombreViaticos.Text = "Nombre:";
-            // 
-            // dataGridViaticos
-            // 
-            this.dataGridViaticos.AllowUserToAddRows = false;
-            this.dataGridViaticos.AllowUserToDeleteRows = false;
-            this.dataGridViaticos.AllowUserToResizeColumns = false;
-            this.dataGridViaticos.AllowUserToResizeRows = false;
-            this.dataGridViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViaticos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridViaticos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridViaticos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViaticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colFechaViaticos,
-            this.colMontoViaticos,
-            this.colRubroViaticos,
-            this.colConceptoViaticos,
-            this.colAbonoViaticos});
-            this.dataGridViaticos.Location = new System.Drawing.Point(257, 77);
-            this.dataGridViaticos.MultiSelect = false;
-            this.dataGridViaticos.Name = "dataGridViaticos";
-            this.dataGridViaticos.RowHeadersVisible = false;
-            this.dataGridViaticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
-            this.dataGridViaticos.TabIndex = 28;
-            this.dataGridViaticos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
-            this.dataGridViaticos.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridViaticos_CurrentCellDirtyStateChanged);
-            // 
-            // colFechaViaticos
-            // 
-            this.colFechaViaticos.HeaderText = "Fecha";
-            this.colFechaViaticos.Name = "colFechaViaticos";
-            this.colFechaViaticos.ReadOnly = true;
-            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colMontoViaticos
-            // 
-            this.colMontoViaticos.HeaderText = "Monto";
-            this.colMontoViaticos.Name = "colMontoViaticos";
-            this.colMontoViaticos.ReadOnly = true;
-            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colRubroViaticos
-            // 
-            this.colRubroViaticos.HeaderText = "Rubro";
-            this.colRubroViaticos.Name = "colRubroViaticos";
-            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colConceptoViaticos
-            // 
-            this.colConceptoViaticos.HeaderText = "Concepto";
-            this.colConceptoViaticos.Name = "colConceptoViaticos";
-            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAbonoViaticos
-            // 
-            this.colAbonoViaticos.HeaderText = "Abonado";
-            this.colAbonoViaticos.Name = "colAbonoViaticos";
-            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // boxCursoViaticos
-            // 
-            this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCursoViaticos.Items.AddRange(new object[] {
-            "Curso..."});
-            this.boxCursoViaticos.Location = new System.Drawing.Point(39, 77);
-            this.boxCursoViaticos.Name = "boxCursoViaticos";
-            this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);
-            this.boxCursoViaticos.TabIndex = 27;
-            this.boxCursoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxCursoViaticos_SelectedIndexChanged);
-            // 
-            // listAlumnosViaticos
-            // 
-            this.listAlumnosViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.listAlumnosViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listAlumnosViaticos.FormattingEnabled = true;
-            this.listAlumnosViaticos.ItemHeight = 20;
-            this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 157);
-            this.listAlumnosViaticos.Name = "listAlumnosViaticos";
-            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 324);
-            this.listAlumnosViaticos.TabIndex = 0;
-            this.listAlumnosViaticos.SelectedIndexChanged += new System.EventHandler(this.listAlumnosViaticos_SelectedIndexChanged);
-            // 
-            // asistencias
-            // 
-            this.asistencias.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.asistencias.Controls.Add(this.groupBox57);
-            this.asistencias.Controls.Add(this.groupBox56);
-            this.asistencias.ImageIndex = 1;
-            this.asistencias.Location = new System.Drawing.Point(4, 27);
-            this.asistencias.Name = "asistencias";
-            this.asistencias.Padding = new System.Windows.Forms.Padding(3);
-            this.asistencias.Size = new System.Drawing.Size(1089, 516);
-            this.asistencias.TabIndex = 1;
-            this.asistencias.Text = "Asistencias";
-            // 
-            // groupBox57
-            // 
-            this.groupBox57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox57.Controls.Add(this.lstMateriasDelDia);
-            this.groupBox57.Controls.Add(this.boxNumeroGrupo_2);
-            this.groupBox57.Controls.Add(this.boxTurnoAsistencia_2);
-            this.groupBox57.Controls.Add(this.boxCursoAsistencia_2);
-            this.groupBox57.Controls.Add(this.dataGridListaAsistencias_2);
-            this.groupBox57.Controls.Add(this.dateTimeFechaAsistencia_2);
-            this.groupBox57.Controls.Add(this.btnConsultarLista);
-            this.groupBox57.Location = new System.Drawing.Point(554, 33);
-            this.groupBox57.Name = "groupBox57";
-            this.groupBox57.Size = new System.Drawing.Size(489, 459);
-            this.groupBox57.TabIndex = 35;
-            this.groupBox57.TabStop = false;
-            this.groupBox57.Text = "Consultar lista";
-            // 
-            // lstMateriasDelDia
-            // 
-            this.lstMateriasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lstMateriasDelDia.FormattingEnabled = true;
-            this.lstMateriasDelDia.ItemHeight = 18;
-            this.lstMateriasDelDia.Location = new System.Drawing.Point(23, 161);
-            this.lstMateriasDelDia.Name = "lstMateriasDelDia";
-            this.lstMateriasDelDia.Size = new System.Drawing.Size(209, 94);
-            this.lstMateriasDelDia.TabIndex = 35;
-            this.lstMateriasDelDia.SelectedIndexChanged += new System.EventHandler(this.lstMateriasDelDia_SelectedIndexChanged);
-            // 
-            // boxNumeroGrupo_2
-            // 
-            this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupo_2.Enabled = false;
-            this.boxNumeroGrupo_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupo_2.FormattingEnabled = true;
-            this.boxNumeroGrupo_2.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupo_2.Location = new System.Drawing.Point(23, 95);
-            this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
-            this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
-            this.boxNumeroGrupo_2.TabIndex = 34;
-            this.boxNumeroGrupo_2.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_2_SelectedIndexChanged);
-            // 
-            // boxTurnoAsistencia_2
-            // 
-            this.boxTurnoAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTurnoAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTurnoAsistencia_2.FormattingEnabled = true;
-            this.boxTurnoAsistencia_2.Items.AddRange(new object[] {
-            "Turno...",
-            "Matutino",
-            "Vespertino",
-            "Nocturno"});
-            this.boxTurnoAsistencia_2.Location = new System.Drawing.Point(23, 28);
-            this.boxTurnoAsistencia_2.Name = "boxTurnoAsistencia_2";
-            this.boxTurnoAsistencia_2.Size = new System.Drawing.Size(209, 26);
-            this.boxTurnoAsistencia_2.TabIndex = 33;
-            this.boxTurnoAsistencia_2.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_2_SelectedIndexChanged);
-            // 
-            // boxCursoAsistencia_2
-            // 
-            this.boxCursoAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCursoAsistencia_2.Enabled = false;
-            this.boxCursoAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCursoAsistencia_2.FormattingEnabled = true;
-            this.boxCursoAsistencia_2.Items.AddRange(new object[] {
-            "Curso..."});
-            this.boxCursoAsistencia_2.Location = new System.Drawing.Point(23, 61);
-            this.boxCursoAsistencia_2.Name = "boxCursoAsistencia_2";
-            this.boxCursoAsistencia_2.Size = new System.Drawing.Size(209, 26);
-            this.boxCursoAsistencia_2.TabIndex = 30;
-            this.boxCursoAsistencia_2.SelectedIndexChanged += new System.EventHandler(this.boxCursoAsistencia_2_SelectedIndexChanged);
-            // 
-            // dataGridListaAsistencias_2
-            // 
-            this.dataGridListaAsistencias_2.AllowUserToAddRows = false;
-            this.dataGridListaAsistencias_2.AllowUserToDeleteRows = false;
-            this.dataGridListaAsistencias_2.AllowUserToResizeColumns = false;
-            this.dataGridListaAsistencias_2.AllowUserToResizeRows = false;
-            this.dataGridListaAsistencias_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridListaAsistencias_2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridListaAsistencias_2.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridListaAsistencias_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridListaAsistencias_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridListaAsistencias_2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.dataGridListaAsistencias_2.Location = new System.Drawing.Point(251, 28);
-            this.dataGridListaAsistencias_2.Name = "dataGridListaAsistencias_2";
-            this.dataGridListaAsistencias_2.ReadOnly = true;
-            this.dataGridListaAsistencias_2.RowHeadersVisible = false;
-            this.dataGridListaAsistencias_2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridListaAsistencias_2.Size = new System.Drawing.Size(232, 406);
-            this.dataGridListaAsistencias_2.TabIndex = 29;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // dateTimeFechaAsistencia_2
-            // 
-            this.dateTimeFechaAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFechaAsistencia_2.Location = new System.Drawing.Point(23, 127);
-            this.dateTimeFechaAsistencia_2.Name = "dateTimeFechaAsistencia_2";
-            this.dateTimeFechaAsistencia_2.Size = new System.Drawing.Size(209, 24);
-            this.dateTimeFechaAsistencia_2.TabIndex = 32;
-            this.dateTimeFechaAsistencia_2.ValueChanged += new System.EventHandler(this.dateTimeFechaAsistencia_2_ValueChanged);
-            // 
-            // btnConsultarLista
-            // 
-            this.btnConsultarLista.Enabled = false;
-            this.btnConsultarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultarLista.Location = new System.Drawing.Point(23, 262);
-            this.btnConsultarLista.Name = "btnConsultarLista";
-            this.btnConsultarLista.Size = new System.Drawing.Size(209, 43);
-            this.btnConsultarLista.TabIndex = 31;
-            this.btnConsultarLista.Text = "Consultar lista";
-            this.btnConsultarLista.UseVisualStyleBackColor = true;
-            this.btnConsultarLista.Click += new System.EventHandler(this.btnConsultarLista_Click);
-            // 
-            // groupBox56
-            // 
-            this.groupBox56.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.groupBox56.Controls.Add(this.btnGuardarLista);
-            this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
-            this.groupBox56.Controls.Add(this.boxMateriaAsistencia);
-            this.groupBox56.Controls.Add(this.boxNumeroGrupo);
-            this.groupBox56.Controls.Add(this.boxCursoAsistencia);
-            this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
-            this.groupBox56.Controls.Add(this.boxTurnoAsistencia);
-            this.groupBox56.Controls.Add(this.btnGenerarLista);
-            this.groupBox56.Location = new System.Drawing.Point(46, 33);
-            this.groupBox56.Name = "groupBox56";
-            this.groupBox56.Size = new System.Drawing.Size(494, 459);
-            this.groupBox56.TabIndex = 34;
-            this.groupBox56.TabStop = false;
-            this.groupBox56.Text = "Generar nueva lista";
-            // 
-            // btnGuardarLista
-            // 
-            this.btnGuardarLista.Enabled = false;
-            this.btnGuardarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarLista.Location = new System.Drawing.Point(23, 262);
-            this.btnGuardarLista.Name = "btnGuardarLista";
-            this.btnGuardarLista.Size = new System.Drawing.Size(209, 43);
-            this.btnGuardarLista.TabIndex = 39;
-            this.btnGuardarLista.Text = "Guardar lista";
-            this.btnGuardarLista.UseVisualStyleBackColor = true;
-            this.btnGuardarLista.Click += new System.EventHandler(this.btnGuardarLista_Click);
-            // 
-            // dateTimeFechaAsistencia
-            // 
-            this.dateTimeFechaAsistencia.Enabled = false;
-            this.dateTimeFechaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 232);
-            this.dateTimeFechaAsistencia.MaxDate = new System.DateTime(2999, 9, 21, 0, 0, 0, 0);
-            this.dateTimeFechaAsistencia.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimeFechaAsistencia.Name = "dateTimeFechaAsistencia";
-            this.dateTimeFechaAsistencia.Size = new System.Drawing.Size(209, 24);
-            this.dateTimeFechaAsistencia.TabIndex = 38;
-            this.dateTimeFechaAsistencia.Value = new System.DateTime(2018, 9, 21, 0, 0, 0, 0);
-            // 
-            // boxMateriaAsistencia
-            // 
-            this.boxMateriaAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxMateriaAsistencia.Enabled = false;
-            this.boxMateriaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxMateriaAsistencia.FormattingEnabled = true;
-            this.boxMateriaAsistencia.Items.AddRange(new object[] {
-            "Materia..."});
-            this.boxMateriaAsistencia.Location = new System.Drawing.Point(23, 200);
-            this.boxMateriaAsistencia.Name = "boxMateriaAsistencia";
-            this.boxMateriaAsistencia.Size = new System.Drawing.Size(209, 26);
-            this.boxMateriaAsistencia.TabIndex = 37;
-            this.boxMateriaAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxMateriaAsistencia_SelectedIndexChanged);
-            // 
-            // boxNumeroGrupo
-            // 
-            this.boxNumeroGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxNumeroGrupo.Enabled = false;
-            this.boxNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxNumeroGrupo.FormattingEnabled = true;
-            this.boxNumeroGrupo.Items.AddRange(new object[] {
-            "Grupo..."});
-            this.boxNumeroGrupo.Location = new System.Drawing.Point(23, 93);
-            this.boxNumeroGrupo.Name = "boxNumeroGrupo";
-            this.boxNumeroGrupo.Size = new System.Drawing.Size(209, 26);
-            this.boxNumeroGrupo.TabIndex = 30;
-            this.boxNumeroGrupo.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_SelectedIndexChanged);
-            // 
-            // boxCursoAsistencia
-            // 
-            this.boxCursoAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCursoAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCursoAsistencia.FormattingEnabled = true;
-            this.boxCursoAsistencia.Items.AddRange(new object[] {
-            "Curso..."});
-            this.boxCursoAsistencia.Location = new System.Drawing.Point(23, 61);
-            this.boxCursoAsistencia.Name = "boxCursoAsistencia";
-            this.boxCursoAsistencia.Size = new System.Drawing.Size(209, 26);
-            this.boxCursoAsistencia.TabIndex = 30;
-            this.boxCursoAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxCursoAsistencia_SelectedIndexChanged);
-            // 
-            // dataGridListaAsistencias
-            // 
-            this.dataGridListaAsistencias.AllowUserToAddRows = false;
-            this.dataGridListaAsistencias.AllowUserToDeleteRows = false;
-            this.dataGridListaAsistencias.AllowUserToResizeColumns = false;
-            this.dataGridListaAsistencias.AllowUserToResizeRows = false;
-            this.dataGridListaAsistencias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridListaAsistencias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridListaAsistencias.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridListaAsistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridListaAsistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridListaAsistencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNombreAsistencias,
-            this.colAsistenciaAsistencias});
-            this.dataGridListaAsistencias.Location = new System.Drawing.Point(248, 28);
-            this.dataGridListaAsistencias.Name = "dataGridListaAsistencias";
-            this.dataGridListaAsistencias.RowHeadersVisible = false;
-            this.dataGridListaAsistencias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridListaAsistencias.Size = new System.Drawing.Size(240, 408);
-            this.dataGridListaAsistencias.TabIndex = 29;
-            this.dataGridListaAsistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridListaAsistencias_CellContentClick);
-            this.dataGridListaAsistencias.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridListaAsistencias_CurrentCellDirtyStateChanged);
-            // 
-            // colNombreAsistencias
-            // 
-            this.colNombreAsistencias.HeaderText = "Nombre";
-            this.colNombreAsistencias.Name = "colNombreAsistencias";
-            this.colNombreAsistencias.ReadOnly = true;
-            this.colNombreAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colAsistenciaAsistencias
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.NullValue = false;
-            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle4;
-            this.colAsistenciaAsistencias.HeaderText = "Asistencias";
-            this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
-            this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colAsistenciaAsistencias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // boxTurnoAsistencia
-            // 
-            this.boxTurnoAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTurnoAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTurnoAsistencia.FormattingEnabled = true;
-            this.boxTurnoAsistencia.Items.AddRange(new object[] {
-            "Turno...",
-            "Matutino",
-            "Vespertino",
-            "Nocturno"});
-            this.boxTurnoAsistencia.Location = new System.Drawing.Point(23, 28);
-            this.boxTurnoAsistencia.Name = "boxTurnoAsistencia";
-            this.boxTurnoAsistencia.Size = new System.Drawing.Size(209, 26);
-            this.boxTurnoAsistencia.TabIndex = 30;
-            this.boxTurnoAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_SelectedIndexChanged);
-            // 
-            // btnGenerarLista
-            // 
-            this.btnGenerarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarLista.Location = new System.Drawing.Point(23, 125);
-            this.btnGenerarLista.Name = "btnGenerarLista";
-            this.btnGenerarLista.Size = new System.Drawing.Size(209, 32);
-            this.btnGenerarLista.TabIndex = 31;
-            this.btnGenerarLista.Text = "Generar lista";
-            this.btnGenerarLista.UseVisualStyleBackColor = true;
-            this.btnGenerarLista.Click += new System.EventHandler(this.btnGenerarLista_Click);
-            // 
-            // nuevoGrupo
-            // 
-            this.nuevoGrupo.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.nuevoGrupo.Controls.Add(this.txtNumeroGrupo);
-            this.nuevoGrupo.Controls.Add(this.dataGridGruposActivos);
-            this.nuevoGrupo.Controls.Add(this.btnCrearGrupo);
-            this.nuevoGrupo.Controls.Add(this.groupBox61);
-            this.nuevoGrupo.Controls.Add(this.boxTurnoGrupo);
-            this.nuevoGrupo.Controls.Add(this.boxCursoGrupo);
-            this.nuevoGrupo.ImageIndex = 2;
-            this.nuevoGrupo.Location = new System.Drawing.Point(4, 27);
-            this.nuevoGrupo.Name = "nuevoGrupo";
-            this.nuevoGrupo.Size = new System.Drawing.Size(1089, 516);
-            this.nuevoGrupo.TabIndex = 3;
-            this.nuevoGrupo.Text = "Nuevo Grupo";
-            // 
-            // txtNumeroGrupo
-            // 
-            this.txtNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumeroGrupo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNumeroGrupo.Location = new System.Drawing.Point(447, 50);
-            this.txtNumeroGrupo.Name = "txtNumeroGrupo";
-            this.txtNumeroGrupo.Size = new System.Drawing.Size(103, 24);
-            this.txtNumeroGrupo.TabIndex = 39;
-            this.txtNumeroGrupo.Text = "Numero";
-            this.txtNumeroGrupo.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtNumeroGrupo.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // dataGridGruposActivos
-            // 
-            this.dataGridGruposActivos.AllowUserToAddRows = false;
-            this.dataGridGruposActivos.AllowUserToDeleteRows = false;
-            this.dataGridGruposActivos.AllowUserToResizeColumns = false;
-            this.dataGridGruposActivos.AllowUserToResizeRows = false;
-            this.dataGridGruposActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridGruposActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dataGridGruposActivos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
-            this.dataGridGruposActivos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridGruposActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dataGridGruposActivos.Location = new System.Drawing.Point(599, 49);
-            this.dataGridGruposActivos.Name = "dataGridGruposActivos";
-            this.dataGridGruposActivos.RowHeadersVisible = false;
-            this.dataGridGruposActivos.Size = new System.Drawing.Size(467, 408);
-            this.dataGridGruposActivos.TabIndex = 37;
-            // 
-            // btnCrearGrupo
-            // 
-            this.btnCrearGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearGrupo.Location = new System.Drawing.Point(409, 266);
-            this.btnCrearGrupo.Name = "btnCrearGrupo";
-            this.btnCrearGrupo.Size = new System.Drawing.Size(122, 29);
-            this.btnCrearGrupo.TabIndex = 36;
-            this.btnCrearGrupo.Text = "Crear";
-            this.btnCrearGrupo.UseVisualStyleBackColor = true;
-            this.btnCrearGrupo.Click += new System.EventHandler(this.btnCrearGrupo_Click);
-            // 
-            // groupBox61
-            // 
-            this.groupBox61.Controls.Add(this.label6);
-            this.groupBox61.Controls.Add(this.label5);
-            this.groupBox61.Controls.Add(this.dateTimeFinalizacionGrupo);
-            this.groupBox61.Controls.Add(this.dateTimeInicioGrupo);
-            this.groupBox61.Location = new System.Drawing.Point(65, 108);
-            this.groupBox61.Name = "groupBox61";
-            this.groupBox61.Size = new System.Drawing.Size(466, 152);
-            this.groupBox61.TabIndex = 35;
-            this.groupBox61.TabStop = false;
-            this.groupBox61.Text = "Periodo";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(318, 91);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(98, 18);
-            this.label6.TabIndex = 35;
-            this.label6.Text = "Finalización";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(318, 48);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 18);
-            this.label5.TabIndex = 35;
-            this.label5.Text = "Inicio";
-            // 
-            // dateTimeFinalizacionGrupo
-            // 
-            this.dateTimeFinalizacionGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeFinalizacionGrupo.Location = new System.Drawing.Point(30, 88);
-            this.dateTimeFinalizacionGrupo.Name = "dateTimeFinalizacionGrupo";
-            this.dateTimeFinalizacionGrupo.Size = new System.Drawing.Size(274, 24);
-            this.dateTimeFinalizacionGrupo.TabIndex = 34;
-            // 
-            // dateTimeInicioGrupo
-            // 
-            this.dateTimeInicioGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimeInicioGrupo.Location = new System.Drawing.Point(30, 45);
-            this.dateTimeInicioGrupo.Name = "dateTimeInicioGrupo";
-            this.dateTimeInicioGrupo.Size = new System.Drawing.Size(274, 24);
-            this.dateTimeInicioGrupo.TabIndex = 33;
-            // 
-            // boxTurnoGrupo
-            // 
-            this.boxTurnoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTurnoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTurnoGrupo.FormattingEnabled = true;
-            this.boxTurnoGrupo.Items.AddRange(new object[] {
-            "Turno...",
-            "Matutino",
-            "Vespertino",
-            "Nocturno"});
-            this.boxTurnoGrupo.Location = new System.Drawing.Point(290, 49);
-            this.boxTurnoGrupo.Name = "boxTurnoGrupo";
-            this.boxTurnoGrupo.Size = new System.Drawing.Size(151, 26);
-            this.boxTurnoGrupo.TabIndex = 9;
-            // 
-            // boxCursoGrupo
-            // 
-            this.boxCursoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxCursoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxCursoGrupo.FormattingEnabled = true;
-            this.boxCursoGrupo.Items.AddRange(new object[] {
-            "Curso..."});
-            this.boxCursoGrupo.Location = new System.Drawing.Point(65, 49);
-            this.boxCursoGrupo.Name = "boxCursoGrupo";
-            this.boxCursoGrupo.Size = new System.Drawing.Size(209, 26);
-            this.boxCursoGrupo.TabIndex = 9;
-            // 
-            // nuevoCurso
-            // 
-            this.nuevoCurso.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.nuevoCurso.Controls.Add(this.btnCrearCurso);
-            this.nuevoCurso.Controls.Add(this.groupBox58);
-            this.nuevoCurso.ImageIndex = 3;
-            this.nuevoCurso.Location = new System.Drawing.Point(4, 27);
-            this.nuevoCurso.Name = "nuevoCurso";
-            this.nuevoCurso.Padding = new System.Windows.Forms.Padding(3);
-            this.nuevoCurso.Size = new System.Drawing.Size(1089, 516);
-            this.nuevoCurso.TabIndex = 2;
-            this.nuevoCurso.Text = "Nuevo Curso";
-            // 
-            // btnCrearCurso
-            // 
-            this.btnCrearCurso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnCrearCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCrearCurso.Location = new System.Drawing.Point(799, 266);
-            this.btnCrearCurso.Name = "btnCrearCurso";
-            this.btnCrearCurso.Size = new System.Drawing.Size(122, 29);
-            this.btnCrearCurso.TabIndex = 37;
-            this.btnCrearCurso.Text = "Crear";
-            this.btnCrearCurso.UseVisualStyleBackColor = true;
-            this.btnCrearCurso.Click += new System.EventHandler(this.btnCrearCurso_Click);
-            // 
-            // groupBox58
-            // 
-            this.groupBox58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.groupBox58.Controls.Add(this.groupBox59);
-            this.groupBox58.Controls.Add(this.txtNombreCurso);
-            this.groupBox58.Controls.Add(this.boxTipoCurso);
-            this.groupBox58.Location = new System.Drawing.Point(161, 42);
-            this.groupBox58.Name = "groupBox58";
-            this.groupBox58.Size = new System.Drawing.Size(760, 218);
-            this.groupBox58.TabIndex = 0;
-            this.groupBox58.TabStop = false;
-            this.groupBox58.Text = "Agregar curso nuevo";
-            // 
-            // groupBox59
-            // 
-            this.groupBox59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.groupBox59.Controls.Add(this.btnQuitarMateriaCurso);
-            this.groupBox59.Controls.Add(this.btnAñadirMateriaCurso);
-            this.groupBox59.Controls.Add(this.listMateriasCurso);
-            this.groupBox59.Controls.Add(this.boxMateriasCurso);
-            this.groupBox59.Location = new System.Drawing.Point(274, 19);
-            this.groupBox59.Name = "groupBox59";
-            this.groupBox59.Size = new System.Drawing.Size(466, 180);
-            this.groupBox59.TabIndex = 3;
-            this.groupBox59.TabStop = false;
-            this.groupBox59.Text = "Materias";
-            // 
-            // btnQuitarMateriaCurso
-            // 
-            this.btnQuitarMateriaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuitarMateriaCurso.Location = new System.Drawing.Point(12, 51);
-            this.btnQuitarMateriaCurso.Name = "btnQuitarMateriaCurso";
-            this.btnQuitarMateriaCurso.Size = new System.Drawing.Size(81, 29);
-            this.btnQuitarMateriaCurso.TabIndex = 10;
-            this.btnQuitarMateriaCurso.Text = "Quitar";
-            this.btnQuitarMateriaCurso.UseVisualStyleBackColor = true;
-            this.btnQuitarMateriaCurso.Click += new System.EventHandler(this.btnQuitarMateriaCurso_Click);
-            // 
-            // btnAñadirMateriaCurso
-            // 
-            this.btnAñadirMateriaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAñadirMateriaCurso.Location = new System.Drawing.Point(99, 51);
-            this.btnAñadirMateriaCurso.Name = "btnAñadirMateriaCurso";
-            this.btnAñadirMateriaCurso.Size = new System.Drawing.Size(122, 29);
-            this.btnAñadirMateriaCurso.TabIndex = 9;
-            this.btnAñadirMateriaCurso.Text = "Añadir";
-            this.btnAñadirMateriaCurso.UseVisualStyleBackColor = true;
-            this.btnAñadirMateriaCurso.Click += new System.EventHandler(this.btnAñadirMateriaCurso_Click);
-            // 
-            // listMateriasCurso
-            // 
-            this.listMateriasCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.listMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listMateriasCurso.FormattingEnabled = true;
-            this.listMateriasCurso.ItemHeight = 18;
-            this.listMateriasCurso.Location = new System.Drawing.Point(239, 19);
-            this.listMateriasCurso.Name = "listMateriasCurso";
-            this.listMateriasCurso.Size = new System.Drawing.Size(216, 148);
-            this.listMateriasCurso.TabIndex = 1;
-            // 
-            // boxMateriasCurso
-            // 
-            this.boxMateriasCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxMateriasCurso.FormattingEnabled = true;
-            this.boxMateriasCurso.Location = new System.Drawing.Point(12, 19);
-            this.boxMateriasCurso.Name = "boxMateriasCurso";
-            this.boxMateriasCurso.Size = new System.Drawing.Size(209, 26);
-            this.boxMateriasCurso.TabIndex = 8;
-            // 
-            // txtNombreCurso
-            // 
-            this.txtNombreCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreCurso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtNombreCurso.Location = new System.Drawing.Point(37, 38);
-            this.txtNombreCurso.Name = "txtNombreCurso";
-            this.txtNombreCurso.Size = new System.Drawing.Size(192, 24);
-            this.txtNombreCurso.TabIndex = 1;
-            this.txtNombreCurso.Text = "Nombre del curso";
-            this.txtNombreCurso.Enter += new System.EventHandler(this.placeholderEventEnter);
-            this.txtNombreCurso.Leave += new System.EventHandler(this.placeholderEventLeave);
-            // 
-            // boxTipoCurso
-            // 
-            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxTipoCurso.FormattingEnabled = true;
-            this.boxTipoCurso.Items.AddRange(new object[] {
-            "Tipo...",
-            "INEFOP",
-            "Privado"});
-            this.boxTipoCurso.Location = new System.Drawing.Point(37, 72);
-            this.boxTipoCurso.Name = "boxTipoCurso";
-            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
-            this.boxTipoCurso.TabIndex = 8;
             // 
             // pageAlumno
             // 
@@ -4503,7 +3078,7 @@
             // 
             this.btnAtrasConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(779, 435);
+            this.btnAtrasConsultaAlumno.Location = new System.Drawing.Point(779, 445);
             this.btnAtrasConsultaAlumno.Name = "btnAtrasConsultaAlumno";
             this.btnAtrasConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno.TabIndex = 86;
@@ -4515,7 +3090,7 @@
             // 
             this.btnSiguienteConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(929, 435);
+            this.btnSiguienteConsultaAlumno.Location = new System.Drawing.Point(929, 445);
             this.btnSiguienteConsultaAlumno.Name = "btnSiguienteConsultaAlumno";
             this.btnSiguienteConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnSiguienteConsultaAlumno.TabIndex = 85;
@@ -4763,7 +3338,6 @@
             this.maskedTxtFechaNacimientoAlumno_2.Size = new System.Drawing.Size(151, 24);
             this.maskedTxtFechaNacimientoAlumno_2.TabIndex = 70;
             this.maskedTxtFechaNacimientoAlumno_2.Text = "Fecha de nacimiento";
-            this.maskedTxtFechaNacimientoAlumno_2.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTxtFechaNacimientoAlumno_2_MaskInputRejected);
             this.maskedTxtFechaNacimientoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.maskedTxtFechaNacimientoAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
             this.maskedTxtFechaNacimientoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -5249,7 +3823,7 @@
             // 
             this.btnAtrasConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(777, 435);
+            this.btnAtrasConsultaAlumno_2.Location = new System.Drawing.Point(777, 445);
             this.btnAtrasConsultaAlumno_2.Name = "btnAtrasConsultaAlumno_2";
             this.btnAtrasConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno_2.TabIndex = 107;
@@ -5261,7 +3835,7 @@
             // 
             this.btnSiguienteConsultaAlumno_2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguienteConsultaAlumno_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(927, 435);
+            this.btnSiguienteConsultaAlumno_2.Location = new System.Drawing.Point(927, 445);
             this.btnSiguienteConsultaAlumno_2.Name = "btnSiguienteConsultaAlumno_2";
             this.btnSiguienteConsultaAlumno_2.Size = new System.Drawing.Size(144, 36);
             this.btnSiguienteConsultaAlumno_2.TabIndex = 106;
@@ -5868,7 +4442,7 @@
             // 
             this.btnAtrasConsultaAlumno_3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAtrasConsultaAlumno_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(777, 435);
+            this.btnAtrasConsultaAlumno_3.Location = new System.Drawing.Point(777, 445);
             this.btnAtrasConsultaAlumno_3.Name = "btnAtrasConsultaAlumno_3";
             this.btnAtrasConsultaAlumno_3.Size = new System.Drawing.Size(144, 36);
             this.btnAtrasConsultaAlumno_3.TabIndex = 16;
@@ -5880,7 +4454,7 @@
             // 
             this.btnFinalizarConsultaAlumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFinalizarConsultaAlumno.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(927, 435);
+            this.btnFinalizarConsultaAlumno.Location = new System.Drawing.Point(927, 445);
             this.btnFinalizarConsultaAlumno.Name = "btnFinalizarConsultaAlumno";
             this.btnFinalizarConsultaAlumno.Size = new System.Drawing.Size(144, 36);
             this.btnFinalizarConsultaAlumno.TabIndex = 108;
@@ -5888,15 +4462,1444 @@
             this.btnFinalizarConsultaAlumno.UseVisualStyleBackColor = true;
             this.btnFinalizarConsultaAlumno.Click += new System.EventHandler(this.btnFinalizarConsultaAlumno_Click);
             // 
+            // imageList
+            // 
+            this.imageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList.ImageStream")));
+            this.imageList.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList.Images.SetKeyName(0, "money.png");
+            this.imageList.Images.SetKeyName(1, "lista.png");
+            this.imageList.Images.SetKeyName(2, "newgroup.png");
+            this.imageList.Images.SetKeyName(3, "newcurso.png");
+            this.imageList.Images.SetKeyName(4, "lupa.png");
+            this.imageList.Images.SetKeyName(5, "delete.png");
+            // 
+            // pageDocente
+            // 
+            this.pageDocente.BackColor = System.Drawing.Color.LightGray;
+            this.pageDocente.Controls.Add(this.tabControlDocente);
+            this.pageDocente.Location = new System.Drawing.Point(4, 22);
+            this.pageDocente.Name = "pageDocente";
+            this.pageDocente.Padding = new System.Windows.Forms.Padding(3);
+            this.pageDocente.Size = new System.Drawing.Size(1089, 536);
+            this.pageDocente.TabIndex = 0;
+            this.pageDocente.Text = "Docentes";
+            // 
+            // tabControlDocente
+            // 
+            this.tabControlDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlDocente.Controls.Add(this.tabPageDocentesNuevo);
+            this.tabControlDocente.Controls.Add(this.tabPageDocentesConsultarModificar);
+            this.tabControlDocente.Controls.Add(this.tabPageDocentesBaja);
+            this.tabControlDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlDocente.ImageList = this.imageList;
+            this.tabControlDocente.Location = new System.Drawing.Point(-4, 1);
+            this.tabControlDocente.Name = "tabControlDocente";
+            this.tabControlDocente.SelectedIndex = 0;
+            this.tabControlDocente.Size = new System.Drawing.Size(1097, 547);
+            this.tabControlDocente.TabIndex = 0;
+            // 
+            // tabPageDocentesNuevo
+            // 
+            this.tabPageDocentesNuevo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesNuevo.Controls.Add(this.btnIngresarDocente);
+            this.tabPageDocentesNuevo.Controls.Add(this.groupBox2);
+            this.tabPageDocentesNuevo.Controls.Add(this.groupBox1);
+            this.tabPageDocentesNuevo.ImageIndex = 3;
+            this.tabPageDocentesNuevo.Location = new System.Drawing.Point(4, 27);
+            this.tabPageDocentesNuevo.Name = "tabPageDocentesNuevo";
+            this.tabPageDocentesNuevo.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDocentesNuevo.Size = new System.Drawing.Size(1089, 516);
+            this.tabPageDocentesNuevo.TabIndex = 0;
+            this.tabPageDocentesNuevo.Text = "Ingresar nuevo";
+            // 
+            // btnIngresarDocente
+            // 
+            this.btnIngresarDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnIngresarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnIngresarDocente.Location = new System.Drawing.Point(836, 450);
+            this.btnIngresarDocente.Name = "btnIngresarDocente";
+            this.btnIngresarDocente.Size = new System.Drawing.Size(245, 48);
+            this.btnIngresarDocente.TabIndex = 3;
+            this.btnIngresarDocente.Text = "Ingresar docente";
+            this.btnIngresarDocente.UseVisualStyleBackColor = true;
+            this.btnIngresarDocente.Click += new System.EventHandler(this.btnIngresarDocente_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.btnQuitarEspecialidad);
+            this.groupBox2.Controls.Add(this.btnAñadirEspecialidad);
+            this.groupBox2.Controls.Add(this.listEspecialidades);
+            this.groupBox2.Controls.Add(this.boxEspecialidades);
+            this.groupBox2.Location = new System.Drawing.Point(583, 59);
+            this.groupBox2.MinimumSize = new System.Drawing.Size(466, 239);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(466, 239);
+            this.groupBox2.TabIndex = 2;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Especialidades";
+            // 
+            // btnQuitarEspecialidad
+            // 
+            this.btnQuitarEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarEspecialidad.Location = new System.Drawing.Point(12, 51);
+            this.btnQuitarEspecialidad.Name = "btnQuitarEspecialidad";
+            this.btnQuitarEspecialidad.Size = new System.Drawing.Size(81, 29);
+            this.btnQuitarEspecialidad.TabIndex = 10;
+            this.btnQuitarEspecialidad.Text = "Quitar";
+            this.btnQuitarEspecialidad.UseVisualStyleBackColor = true;
+            this.btnQuitarEspecialidad.Click += new System.EventHandler(this.btnQuitarEspecialidad_Click);
+            // 
+            // btnAñadirEspecialidad
+            // 
+            this.btnAñadirEspecialidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirEspecialidad.Location = new System.Drawing.Point(99, 51);
+            this.btnAñadirEspecialidad.Name = "btnAñadirEspecialidad";
+            this.btnAñadirEspecialidad.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadirEspecialidad.TabIndex = 9;
+            this.btnAñadirEspecialidad.Text = "Añadir";
+            this.btnAñadirEspecialidad.UseVisualStyleBackColor = true;
+            this.btnAñadirEspecialidad.Click += new System.EventHandler(this.btnAñadirEspecialidad_Click);
+            // 
+            // listEspecialidades
+            // 
+            this.listEspecialidades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listEspecialidades.FormattingEnabled = true;
+            this.listEspecialidades.ItemHeight = 18;
+            this.listEspecialidades.Location = new System.Drawing.Point(239, 19);
+            this.listEspecialidades.Name = "listEspecialidades";
+            this.listEspecialidades.Size = new System.Drawing.Size(216, 202);
+            this.listEspecialidades.TabIndex = 1;
+            // 
+            // boxEspecialidades
+            // 
+            this.boxEspecialidades.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxEspecialidades.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxEspecialidades.FormattingEnabled = true;
+            this.boxEspecialidades.Location = new System.Drawing.Point(12, 19);
+            this.boxEspecialidades.Name = "boxEspecialidades";
+            this.boxEspecialidades.Size = new System.Drawing.Size(209, 26);
+            this.boxEspecialidades.TabIndex = 8;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtEmailDocente);
+            this.groupBox1.Controls.Add(this.txtTelefonoDocente);
+            this.groupBox1.Controls.Add(this.txtDireccionDocente);
+            this.groupBox1.Controls.Add(this.txtApellido1Docente);
+            this.groupBox1.Controls.Add(this.txtNombre1Docente);
+            this.groupBox1.Controls.Add(this.txtCedulaDocente);
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox1.Location = new System.Drawing.Point(35, 59);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(522, 239);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(522, 239);
+            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Datos personales";
+            // 
+            // txtEmailDocente
+            // 
+            this.txtEmailDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmailDocente.Location = new System.Drawing.Point(19, 170);
+            this.txtEmailDocente.Name = "txtEmailDocente";
+            this.txtEmailDocente.Size = new System.Drawing.Size(192, 24);
+            this.txtEmailDocente.TabIndex = 7;
+            this.txtEmailDocente.Text = "Email";
+            this.txtEmailDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtEmailDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtTelefonoDocente
+            // 
+            this.txtTelefonoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTelefonoDocente.Location = new System.Drawing.Point(230, 124);
+            this.txtTelefonoDocente.MaxLength = 12;
+            this.txtTelefonoDocente.Name = "txtTelefonoDocente";
+            this.txtTelefonoDocente.Size = new System.Drawing.Size(192, 24);
+            this.txtTelefonoDocente.TabIndex = 6;
+            this.txtTelefonoDocente.Text = "Telefono";
+            this.txtTelefonoDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtTelefonoDocente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
+            this.txtTelefonoDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtDireccionDocente
+            // 
+            this.txtDireccionDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDireccionDocente.Location = new System.Drawing.Point(19, 124);
+            this.txtDireccionDocente.Name = "txtDireccionDocente";
+            this.txtDireccionDocente.Size = new System.Drawing.Size(192, 24);
+            this.txtDireccionDocente.TabIndex = 5;
+            this.txtDireccionDocente.Text = "Direccion";
+            this.txtDireccionDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtDireccionDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtApellido1Docente
+            // 
+            this.txtApellido1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApellido1Docente.Location = new System.Drawing.Point(230, 78);
+            this.txtApellido1Docente.Name = "txtApellido1Docente";
+            this.txtApellido1Docente.Size = new System.Drawing.Size(192, 24);
+            this.txtApellido1Docente.TabIndex = 3;
+            this.txtApellido1Docente.Text = "Apellido";
+            this.txtApellido1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Docente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
+            this.txtApellido1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtNombre1Docente
+            // 
+            this.txtNombre1Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre1Docente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre1Docente.Location = new System.Drawing.Point(19, 78);
+            this.txtNombre1Docente.Name = "txtNombre1Docente";
+            this.txtNombre1Docente.Size = new System.Drawing.Size(192, 24);
+            this.txtNombre1Docente.TabIndex = 1;
+            this.txtNombre1Docente.Text = "Nombre";
+            this.txtNombre1Docente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre1Docente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
+            this.txtNombre1Docente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtCedulaDocente
+            // 
+            this.txtCedulaDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedulaDocente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCedulaDocente.Location = new System.Drawing.Point(19, 38);
+            this.txtCedulaDocente.MaxLength = 8;
+            this.txtCedulaDocente.Name = "txtCedulaDocente";
+            this.txtCedulaDocente.Size = new System.Drawing.Size(192, 24);
+            this.txtCedulaDocente.TabIndex = 0;
+            this.txtCedulaDocente.Text = "Cedula";
+            this.txtCedulaDocente.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCedulaDocente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
+            this.txtCedulaDocente.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // tabPageDocentesConsultarModificar
+            // 
+            this.tabPageDocentesConsultarModificar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.listResultadosDocentes);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.btnActualizarDocente);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.btnBuscar);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.txtBuscar);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.boxBuscar);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox3);
+            this.tabPageDocentesConsultarModificar.Controls.Add(this.groupBox4);
+            this.tabPageDocentesConsultarModificar.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tabPageDocentesConsultarModificar.ImageIndex = 4;
+            this.tabPageDocentesConsultarModificar.Location = new System.Drawing.Point(4, 27);
+            this.tabPageDocentesConsultarModificar.Name = "tabPageDocentesConsultarModificar";
+            this.tabPageDocentesConsultarModificar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageDocentesConsultarModificar.Size = new System.Drawing.Size(1089, 516);
+            this.tabPageDocentesConsultarModificar.TabIndex = 1;
+            this.tabPageDocentesConsultarModificar.Text = "Consultar / Modificar";
+            // 
+            // listResultadosDocentes
+            // 
+            this.listResultadosDocentes.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.listResultadosDocentes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listResultadosDocentes.FormattingEnabled = true;
+            this.listResultadosDocentes.ItemHeight = 16;
+            this.listResultadosDocentes.Location = new System.Drawing.Point(489, 74);
+            this.listResultadosDocentes.Name = "listResultadosDocentes";
+            this.listResultadosDocentes.Size = new System.Drawing.Size(216, 68);
+            this.listResultadosDocentes.TabIndex = 10;
+            this.listResultadosDocentes.Visible = false;
+            this.listResultadosDocentes.SelectedIndexChanged += new System.EventHandler(this.listBoxResultados_SelectedIndexChanged);
+            // 
+            // btnActualizarDocente
+            // 
+            this.btnActualizarDocente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnActualizarDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarDocente.Location = new System.Drawing.Point(836, 455);
+            this.btnActualizarDocente.Name = "btnActualizarDocente";
+            this.btnActualizarDocente.Size = new System.Drawing.Size(245, 48);
+            this.btnActualizarDocente.TabIndex = 9;
+            this.btnActualizarDocente.Text = "Actualizar docente";
+            this.btnActualizarDocente.UseVisualStyleBackColor = true;
+            this.btnActualizarDocente.Click += new System.EventHandler(this.btnActualizarDocente_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Location = new System.Drawing.Point(711, 49);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(122, 29);
+            this.btnBuscar.TabIndex = 8;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtBuscar
+            // 
+            this.txtBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscar.Location = new System.Drawing.Point(489, 50);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(216, 24);
+            this.txtBuscar.TabIndex = 7;
+            this.txtBuscar.Text = "Texto de busqueda";
+            this.txtBuscar.TextChanged += new System.EventHandler(this.txtBuscar_TextChanged);
+            this.txtBuscar.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtBuscar.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // boxBuscar
+            // 
+            this.boxBuscar.AccessibleDescription = "";
+            this.boxBuscar.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.boxBuscar.DisplayMember = "sadsa";
+            this.boxBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxBuscar.FormattingEnabled = true;
+            this.boxBuscar.Items.AddRange(new object[] {
+            "Buscar por...",
+            "Cedula",
+            "Nombre y apellido"});
+            this.boxBuscar.Location = new System.Drawing.Point(351, 50);
+            this.boxBuscar.Name = "boxBuscar";
+            this.boxBuscar.Size = new System.Drawing.Size(132, 26);
+            this.boxBuscar.TabIndex = 6;
+            this.boxBuscar.Tag = "";
+            this.boxBuscar.SelectedIndexChanged += new System.EventHandler(this.boxBuscar_SelectedIndexChanged);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox3.Controls.Add(this.btnQuitar_2);
+            this.groupBox3.Controls.Add(this.btnAñadir_2);
+            this.groupBox3.Controls.Add(this.listEspecialidades_2);
+            this.groupBox3.Controls.Add(this.boxEspecialidades_2);
+            this.groupBox3.Location = new System.Drawing.Point(582, 151);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(466, 239);
+            this.groupBox3.TabIndex = 4;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Especialidades";
+            // 
+            // btnQuitar_2
+            // 
+            this.btnQuitar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitar_2.Location = new System.Drawing.Point(12, 51);
+            this.btnQuitar_2.Name = "btnQuitar_2";
+            this.btnQuitar_2.Size = new System.Drawing.Size(81, 29);
+            this.btnQuitar_2.TabIndex = 2;
+            this.btnQuitar_2.Text = "Quitar";
+            this.btnQuitar_2.UseVisualStyleBackColor = true;
+            this.btnQuitar_2.Click += new System.EventHandler(this.btnQuitar_2_Click);
+            // 
+            // btnAñadir_2
+            // 
+            this.btnAñadir_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadir_2.Location = new System.Drawing.Point(99, 51);
+            this.btnAñadir_2.Name = "btnAñadir_2";
+            this.btnAñadir_2.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadir_2.TabIndex = 2;
+            this.btnAñadir_2.Text = "Añadir";
+            this.btnAñadir_2.UseVisualStyleBackColor = true;
+            this.btnAñadir_2.Click += new System.EventHandler(this.btnAñadir_2_Click);
+            // 
+            // listEspecialidades_2
+            // 
+            this.listEspecialidades_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listEspecialidades_2.FormattingEnabled = true;
+            this.listEspecialidades_2.ItemHeight = 18;
+            this.listEspecialidades_2.Location = new System.Drawing.Point(239, 19);
+            this.listEspecialidades_2.Name = "listEspecialidades_2";
+            this.listEspecialidades_2.Size = new System.Drawing.Size(216, 202);
+            this.listEspecialidades_2.TabIndex = 1;
+            // 
+            // boxEspecialidades_2
+            // 
+            this.boxEspecialidades_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxEspecialidades_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxEspecialidades_2.FormattingEnabled = true;
+            this.boxEspecialidades_2.Location = new System.Drawing.Point(12, 19);
+            this.boxEspecialidades_2.Name = "boxEspecialidades_2";
+            this.boxEspecialidades_2.Size = new System.Drawing.Size(209, 26);
+            this.boxEspecialidades_2.TabIndex = 0;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox4.Controls.Add(this.btnCambiarEstadoDocente);
+            this.groupBox4.Controls.Add(this.lblEstadoDocente);
+            this.groupBox4.Controls.Add(this.txtEmailDocente_2);
+            this.groupBox4.Controls.Add(this.txtTelefonoDocente_2);
+            this.groupBox4.Controls.Add(this.txtDireccionDocente_2);
+            this.groupBox4.Controls.Add(this.txtApellido1Docente_2);
+            this.groupBox4.Controls.Add(this.txtNombre1Docente_2);
+            this.groupBox4.Controls.Add(this.txtCedulaDocente_2);
+            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.groupBox4.Location = new System.Drawing.Point(34, 151);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(522, 239);
+            this.groupBox4.TabIndex = 3;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Datos personales";
+            // 
+            // btnCambiarEstadoDocente
+            // 
+            this.btnCambiarEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCambiarEstadoDocente.Location = new System.Drawing.Point(337, 169);
+            this.btnCambiarEstadoDocente.Name = "btnCambiarEstadoDocente";
+            this.btnCambiarEstadoDocente.Size = new System.Drawing.Size(72, 29);
+            this.btnCambiarEstadoDocente.TabIndex = 9;
+            this.btnCambiarEstadoDocente.Text = "Activar";
+            this.btnCambiarEstadoDocente.UseVisualStyleBackColor = true;
+            this.btnCambiarEstadoDocente.Visible = false;
+            this.btnCambiarEstadoDocente.Click += new System.EventHandler(this.btnCambiarEstadoDocente_Click);
+            // 
+            // lblEstadoDocente
+            // 
+            this.lblEstadoDocente.AutoSize = true;
+            this.lblEstadoDocente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoDocente.Location = new System.Drawing.Point(226, 174);
+            this.lblEstadoDocente.Name = "lblEstadoDocente";
+            this.lblEstadoDocente.Size = new System.Drawing.Size(59, 18);
+            this.lblEstadoDocente.TabIndex = 8;
+            this.lblEstadoDocente.Text = "Estado:";
+            // 
+            // txtEmailDocente_2
+            // 
+            this.txtEmailDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtEmailDocente_2.Location = new System.Drawing.Point(19, 171);
+            this.txtEmailDocente_2.Name = "txtEmailDocente_2";
+            this.txtEmailDocente_2.Size = new System.Drawing.Size(192, 24);
+            this.txtEmailDocente_2.TabIndex = 7;
+            this.txtEmailDocente_2.Text = "Email";
+            this.txtEmailDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtEmailDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtTelefonoDocente_2
+            // 
+            this.txtTelefonoDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefonoDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTelefonoDocente_2.Location = new System.Drawing.Point(217, 125);
+            this.txtTelefonoDocente_2.MaxLength = 12;
+            this.txtTelefonoDocente_2.Name = "txtTelefonoDocente_2";
+            this.txtTelefonoDocente_2.Size = new System.Drawing.Size(192, 24);
+            this.txtTelefonoDocente_2.TabIndex = 6;
+            this.txtTelefonoDocente_2.Text = "Telefono";
+            this.txtTelefonoDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtTelefonoDocente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
+            this.txtTelefonoDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtDireccionDocente_2
+            // 
+            this.txtDireccionDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDireccionDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtDireccionDocente_2.Location = new System.Drawing.Point(19, 125);
+            this.txtDireccionDocente_2.Name = "txtDireccionDocente_2";
+            this.txtDireccionDocente_2.Size = new System.Drawing.Size(192, 24);
+            this.txtDireccionDocente_2.TabIndex = 5;
+            this.txtDireccionDocente_2.Text = "Direccion";
+            this.txtDireccionDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtDireccionDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtApellido1Docente_2
+            // 
+            this.txtApellido1Docente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido1Docente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtApellido1Docente_2.Location = new System.Drawing.Point(217, 78);
+            this.txtApellido1Docente_2.Name = "txtApellido1Docente_2";
+            this.txtApellido1Docente_2.Size = new System.Drawing.Size(192, 24);
+            this.txtApellido1Docente_2.TabIndex = 3;
+            this.txtApellido1Docente_2.Text = "Apellido";
+            this.txtApellido1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtApellido1Docente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
+            this.txtApellido1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtNombre1Docente_2
+            // 
+            this.txtNombre1Docente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre1Docente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombre1Docente_2.Location = new System.Drawing.Point(19, 78);
+            this.txtNombre1Docente_2.Name = "txtNombre1Docente_2";
+            this.txtNombre1Docente_2.Size = new System.Drawing.Size(192, 24);
+            this.txtNombre1Docente_2.TabIndex = 1;
+            this.txtNombre1Docente_2.Text = "Nombre";
+            this.txtNombre1Docente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombre1Docente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_letras_KeyPress);
+            this.txtNombre1Docente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // txtCedulaDocente_2
+            // 
+            this.txtCedulaDocente_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedulaDocente_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtCedulaDocente_2.Location = new System.Drawing.Point(19, 34);
+            this.txtCedulaDocente_2.MaxLength = 8;
+            this.txtCedulaDocente_2.Name = "txtCedulaDocente_2";
+            this.txtCedulaDocente_2.Size = new System.Drawing.Size(192, 24);
+            this.txtCedulaDocente_2.TabIndex = 0;
+            this.txtCedulaDocente_2.Text = "Cedula";
+            this.txtCedulaDocente_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtCedulaDocente_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
+            this.txtCedulaDocente_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // tabPageDocentesBaja
+            // 
+            this.tabPageDocentesBaja.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.tabPageDocentesBaja.Controls.Add(this.listResultadosDocentes_2);
+            this.tabPageDocentesBaja.Controls.Add(this.btnDarDeBaja);
+            this.tabPageDocentesBaja.Controls.Add(this.groupBox5);
+            this.tabPageDocentesBaja.Controls.Add(this.btnBuscar_2);
+            this.tabPageDocentesBaja.Controls.Add(this.txtBuscar_2);
+            this.tabPageDocentesBaja.Controls.Add(this.boxBuscar_2);
+            this.tabPageDocentesBaja.ImageIndex = 5;
+            this.tabPageDocentesBaja.Location = new System.Drawing.Point(4, 27);
+            this.tabPageDocentesBaja.Name = "tabPageDocentesBaja";
+            this.tabPageDocentesBaja.Size = new System.Drawing.Size(1089, 516);
+            this.tabPageDocentesBaja.TabIndex = 2;
+            this.tabPageDocentesBaja.Text = "Dar de baja";
+            // 
+            // listResultadosDocentes_2
+            // 
+            this.listResultadosDocentes_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.listResultadosDocentes_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listResultadosDocentes_2.FormattingEnabled = true;
+            this.listResultadosDocentes_2.ItemHeight = 16;
+            this.listResultadosDocentes_2.Location = new System.Drawing.Point(442, 78);
+            this.listResultadosDocentes_2.Name = "listResultadosDocentes_2";
+            this.listResultadosDocentes_2.Size = new System.Drawing.Size(216, 68);
+            this.listResultadosDocentes_2.TabIndex = 16;
+            this.listResultadosDocentes_2.Visible = false;
+            this.listResultadosDocentes_2.SelectedIndexChanged += new System.EventHandler(this.listResultadosDocentes_2_SelectedIndexChanged);
+            // 
+            // btnDarDeBaja
+            // 
+            this.btnDarDeBaja.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnDarDeBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDarDeBaja.Location = new System.Drawing.Point(428, 300);
+            this.btnDarDeBaja.Name = "btnDarDeBaja";
+            this.btnDarDeBaja.Size = new System.Drawing.Size(245, 48);
+            this.btnDarDeBaja.TabIndex = 15;
+            this.btnDarDeBaja.Text = "Dar de baja";
+            this.btnDarDeBaja.UseVisualStyleBackColor = true;
+            this.btnDarDeBaja.Click += new System.EventHandler(this.btnDarDeBaja_Click);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox5.Controls.Add(this.lblEstadoDocenteBaja);
+            this.groupBox5.Controls.Add(this.lblCedulaDocente);
+            this.groupBox5.Controls.Add(this.lblEmailDocente);
+            this.groupBox5.Controls.Add(this.lblApellidoDocente);
+            this.groupBox5.Controls.Add(this.lblNombreDocente);
+            this.groupBox5.Location = new System.Drawing.Point(376, 131);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(349, 145);
+            this.groupBox5.TabIndex = 13;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Datos del docente";
+            // 
+            // lblEstadoDocenteBaja
+            // 
+            this.lblEstadoDocenteBaja.AutoSize = true;
+            this.lblEstadoDocenteBaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstadoDocenteBaja.ForeColor = System.Drawing.Color.Black;
+            this.lblEstadoDocenteBaja.Location = new System.Drawing.Point(21, 117);
+            this.lblEstadoDocenteBaja.Name = "lblEstadoDocenteBaja";
+            this.lblEstadoDocenteBaja.Size = new System.Drawing.Size(61, 16);
+            this.lblEstadoDocenteBaja.TabIndex = 1;
+            this.lblEstadoDocenteBaja.Text = "Estado:";
+            // 
+            // lblCedulaDocente
+            // 
+            this.lblCedulaDocente.AutoSize = true;
+            this.lblCedulaDocente.Location = new System.Drawing.Point(22, 30);
+            this.lblCedulaDocente.Name = "lblCedulaDocente";
+            this.lblCedulaDocente.Size = new System.Drawing.Size(58, 18);
+            this.lblCedulaDocente.TabIndex = 0;
+            this.lblCedulaDocente.Text = "Cedula:";
+            // 
+            // lblEmailDocente
+            // 
+            this.lblEmailDocente.AutoSize = true;
+            this.lblEmailDocente.Location = new System.Drawing.Point(21, 96);
+            this.lblEmailDocente.Name = "lblEmailDocente";
+            this.lblEmailDocente.Size = new System.Drawing.Size(49, 18);
+            this.lblEmailDocente.TabIndex = 0;
+            this.lblEmailDocente.Text = "Email:";
+            // 
+            // lblApellidoDocente
+            // 
+            this.lblApellidoDocente.AutoSize = true;
+            this.lblApellidoDocente.Location = new System.Drawing.Point(21, 73);
+            this.lblApellidoDocente.Name = "lblApellidoDocente";
+            this.lblApellidoDocente.Size = new System.Drawing.Size(63, 18);
+            this.lblApellidoDocente.TabIndex = 0;
+            this.lblApellidoDocente.Text = "Apellido:";
+            // 
+            // lblNombreDocente
+            // 
+            this.lblNombreDocente.AutoSize = true;
+            this.lblNombreDocente.Location = new System.Drawing.Point(21, 50);
+            this.lblNombreDocente.Name = "lblNombreDocente";
+            this.lblNombreDocente.Size = new System.Drawing.Size(66, 18);
+            this.lblNombreDocente.TabIndex = 0;
+            this.lblNombreDocente.Text = "Nombre:";
+            // 
+            // btnBuscar_2
+            // 
+            this.btnBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar_2.Location = new System.Drawing.Point(665, 53);
+            this.btnBuscar_2.Name = "btnBuscar_2";
+            this.btnBuscar_2.Size = new System.Drawing.Size(122, 29);
+            this.btnBuscar_2.TabIndex = 11;
+            this.btnBuscar_2.Text = "Buscar";
+            this.btnBuscar_2.UseVisualStyleBackColor = true;
+            this.btnBuscar_2.Click += new System.EventHandler(this.btnBuscar_2_Click);
+            // 
+            // txtBuscar_2
+            // 
+            this.txtBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBuscar_2.Location = new System.Drawing.Point(442, 54);
+            this.txtBuscar_2.Name = "txtBuscar_2";
+            this.txtBuscar_2.Size = new System.Drawing.Size(216, 24);
+            this.txtBuscar_2.TabIndex = 10;
+            this.txtBuscar_2.Text = "Texto de busqueda";
+            this.txtBuscar_2.TextChanged += new System.EventHandler(this.txtBuscar_2_TextChanged);
+            this.txtBuscar_2.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtBuscar_2.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // boxBuscar_2
+            // 
+            this.boxBuscar_2.AccessibleDescription = "";
+            this.boxBuscar_2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.boxBuscar_2.DisplayMember = "sadsa";
+            this.boxBuscar_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxBuscar_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxBuscar_2.FormattingEnabled = true;
+            this.boxBuscar_2.Items.AddRange(new object[] {
+            "Buscar por...",
+            "Cedula",
+            "Nombre y apellido"});
+            this.boxBuscar_2.Location = new System.Drawing.Point(302, 54);
+            this.boxBuscar_2.Name = "boxBuscar_2";
+            this.boxBuscar_2.Size = new System.Drawing.Size(132, 26);
+            this.boxBuscar_2.TabIndex = 9;
+            this.boxBuscar_2.Tag = "";
+            this.boxBuscar_2.SelectedIndexChanged += new System.EventHandler(this.boxBuscar_2_SelectedIndexChanged);
+            // 
+            // pageCursos
+            // 
+            this.pageCursos.BackColor = System.Drawing.Color.LightGray;
+            this.pageCursos.Controls.Add(this.tabControlCursos);
+            this.pageCursos.Location = new System.Drawing.Point(4, 22);
+            this.pageCursos.Name = "pageCursos";
+            this.pageCursos.Size = new System.Drawing.Size(1089, 536);
+            this.pageCursos.TabIndex = 2;
+            this.pageCursos.Text = "Cursos";
+            // 
+            // tabControlCursos
+            // 
+            this.tabControlCursos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControlCursos.Controls.Add(this.viaticos);
+            this.tabControlCursos.Controls.Add(this.asistencias);
+            this.tabControlCursos.Controls.Add(this.nuevoGrupo);
+            this.tabControlCursos.Controls.Add(this.nuevoCurso);
+            this.tabControlCursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabControlCursos.ImageList = this.imageList;
+            this.tabControlCursos.Location = new System.Drawing.Point(-4, 1);
+            this.tabControlCursos.Name = "tabControlCursos";
+            this.tabControlCursos.SelectedIndex = 0;
+            this.tabControlCursos.Size = new System.Drawing.Size(1097, 547);
+            this.tabControlCursos.TabIndex = 2;
+            // 
+            // viaticos
+            // 
+            this.viaticos.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.viaticos.Controls.Add(this.boxNumeroGrupoViaticos);
+            this.viaticos.Controls.Add(this.boxTurnoViaticos);
+            this.viaticos.Controls.Add(this.lblBlockViaticos);
+            this.viaticos.Controls.Add(this.lblMontoTotalViaticos);
+            this.viaticos.Controls.Add(this.btnAñadirSemanaViaticos);
+            this.viaticos.Controls.Add(this.lblMontoDiaViaticos);
+            this.viaticos.Controls.Add(this.lblCedulaViaticos);
+            this.viaticos.Controls.Add(this.lblNombreViaticos);
+            this.viaticos.Controls.Add(this.dataGridViaticos);
+            this.viaticos.Controls.Add(this.boxCursoViaticos);
+            this.viaticos.Controls.Add(this.listAlumnosViaticos);
+            this.viaticos.ImageIndex = 0;
+            this.viaticos.Location = new System.Drawing.Point(4, 27);
+            this.viaticos.Name = "viaticos";
+            this.viaticos.Padding = new System.Windows.Forms.Padding(3);
+            this.viaticos.Size = new System.Drawing.Size(1089, 516);
+            this.viaticos.TabIndex = 0;
+            this.viaticos.Text = "Viaticos";
+            this.viaticos.Click += new System.EventHandler(this.viaticos_Click);
+            // 
+            // boxNumeroGrupoViaticos
+            // 
+            this.boxNumeroGrupoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupoViaticos.Enabled = false;
+            this.boxNumeroGrupoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupoViaticos.FormattingEnabled = true;
+            this.boxNumeroGrupoViaticos.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupoViaticos.Location = new System.Drawing.Point(39, 118);
+            this.boxNumeroGrupoViaticos.Name = "boxNumeroGrupoViaticos";
+            this.boxNumeroGrupoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxNumeroGrupoViaticos.TabIndex = 35;
+            this.boxNumeroGrupoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupoViaticos_SelectedIndexChanged);
+            // 
+            // boxTurnoViaticos
+            // 
+            this.boxTurnoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoViaticos.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoViaticos.Location = new System.Drawing.Point(39, 35);
+            this.boxTurnoViaticos.Name = "boxTurnoViaticos";
+            this.boxTurnoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxTurnoViaticos.TabIndex = 34;
+            this.boxTurnoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxTurnoViaticos_SelectedIndexChanged);
+            // 
+            // lblBlockViaticos
+            // 
+            this.lblBlockViaticos.AutoSize = true;
+            this.lblBlockViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBlockViaticos.ForeColor = System.Drawing.Color.Firebrick;
+            this.lblBlockViaticos.Location = new System.Drawing.Point(436, 39);
+            this.lblBlockViaticos.Name = "lblBlockViaticos";
+            this.lblBlockViaticos.Size = new System.Drawing.Size(410, 16);
+            this.lblBlockViaticos.TabIndex = 33;
+            this.lblBlockViaticos.Text = "Solo se permite agregar viaticos los dias jueves y viernes";
+            this.lblBlockViaticos.Visible = false;
+            // 
+            // lblMontoTotalViaticos
+            // 
+            this.lblMontoTotalViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMontoTotalViaticos.AutoSize = true;
+            this.lblMontoTotalViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoTotalViaticos.Location = new System.Drawing.Point(788, 158);
+            this.lblMontoTotalViaticos.Name = "lblMontoTotalViaticos";
+            this.lblMontoTotalViaticos.Size = new System.Drawing.Size(160, 18);
+            this.lblMontoTotalViaticos.TabIndex = 32;
+            this.lblMontoTotalViaticos.Text = "Monto total a pagar:";
+            // 
+            // btnAñadirSemanaViaticos
+            // 
+            this.btnAñadirSemanaViaticos.Enabled = false;
+            this.btnAñadirSemanaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirSemanaViaticos.Location = new System.Drawing.Point(257, 34);
+            this.btnAñadirSemanaViaticos.Name = "btnAñadirSemanaViaticos";
+            this.btnAñadirSemanaViaticos.Size = new System.Drawing.Size(173, 29);
+            this.btnAñadirSemanaViaticos.TabIndex = 31;
+            this.btnAñadirSemanaViaticos.Text = "Añadir pago de viaticos";
+            this.btnAñadirSemanaViaticos.UseVisualStyleBackColor = true;
+            this.btnAñadirSemanaViaticos.Click += new System.EventHandler(this.btnAñadirSemanaViaticos_Click);
+            // 
+            // lblMontoDiaViaticos
+            // 
+            this.lblMontoDiaViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMontoDiaViaticos.AutoSize = true;
+            this.lblMontoDiaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMontoDiaViaticos.Location = new System.Drawing.Point(788, 132);
+            this.lblMontoDiaViaticos.Name = "lblMontoDiaViaticos";
+            this.lblMontoDiaViaticos.Size = new System.Drawing.Size(182, 18);
+            this.lblMontoDiaViaticos.TabIndex = 30;
+            this.lblMontoDiaViaticos.Text = "Monto por día asistido:";
+            // 
+            // lblCedulaViaticos
+            // 
+            this.lblCedulaViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCedulaViaticos.AutoSize = true;
+            this.lblCedulaViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedulaViaticos.Location = new System.Drawing.Point(788, 77);
+            this.lblCedulaViaticos.Name = "lblCedulaViaticos";
+            this.lblCedulaViaticos.Size = new System.Drawing.Size(65, 18);
+            this.lblCedulaViaticos.TabIndex = 29;
+            this.lblCedulaViaticos.Text = "Cedula:";
+            // 
+            // lblNombreViaticos
+            // 
+            this.lblNombreViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblNombreViaticos.AutoSize = true;
+            this.lblNombreViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreViaticos.Location = new System.Drawing.Point(788, 104);
+            this.lblNombreViaticos.Name = "lblNombreViaticos";
+            this.lblNombreViaticos.Size = new System.Drawing.Size(73, 18);
+            this.lblNombreViaticos.TabIndex = 29;
+            this.lblNombreViaticos.Text = "Nombre:";
+            // 
+            // dataGridViaticos
+            // 
+            this.dataGridViaticos.AllowUserToAddRows = false;
+            this.dataGridViaticos.AllowUserToDeleteRows = false;
+            this.dataGridViaticos.AllowUserToResizeColumns = false;
+            this.dataGridViaticos.AllowUserToResizeRows = false;
+            this.dataGridViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViaticos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViaticos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridViaticos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViaticos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViaticos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colFechaViaticos,
+            this.colMontoViaticos,
+            this.colRubroViaticos,
+            this.colConceptoViaticos,
+            this.colAbonoViaticos});
+            this.dataGridViaticos.Location = new System.Drawing.Point(257, 77);
+            this.dataGridViaticos.MultiSelect = false;
+            this.dataGridViaticos.Name = "dataGridViaticos";
+            this.dataGridViaticos.RowHeadersVisible = false;
+            this.dataGridViaticos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViaticos.Size = new System.Drawing.Size(525, 371);
+            this.dataGridViaticos.TabIndex = 28;
+            this.dataGridViaticos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViaticos_CellValueChanged);
+            this.dataGridViaticos.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridViaticos_CurrentCellDirtyStateChanged);
+            // 
+            // colFechaViaticos
+            // 
+            this.colFechaViaticos.HeaderText = "Fecha";
+            this.colFechaViaticos.Name = "colFechaViaticos";
+            this.colFechaViaticos.ReadOnly = true;
+            this.colFechaViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colMontoViaticos
+            // 
+            this.colMontoViaticos.HeaderText = "Monto";
+            this.colMontoViaticos.Name = "colMontoViaticos";
+            this.colMontoViaticos.ReadOnly = true;
+            this.colMontoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colRubroViaticos
+            // 
+            this.colRubroViaticos.HeaderText = "Rubro";
+            this.colRubroViaticos.Name = "colRubroViaticos";
+            this.colRubroViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colConceptoViaticos
+            // 
+            this.colConceptoViaticos.HeaderText = "Concepto";
+            this.colConceptoViaticos.Name = "colConceptoViaticos";
+            this.colConceptoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAbonoViaticos
+            // 
+            this.colAbonoViaticos.HeaderText = "Abonado";
+            this.colAbonoViaticos.Name = "colAbonoViaticos";
+            this.colAbonoViaticos.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAbonoViaticos.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // boxCursoViaticos
+            // 
+            this.boxCursoViaticos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoViaticos.Items.AddRange(new object[] {
+            "Curso..."});
+            this.boxCursoViaticos.Location = new System.Drawing.Point(39, 77);
+            this.boxCursoViaticos.Name = "boxCursoViaticos";
+            this.boxCursoViaticos.Size = new System.Drawing.Size(203, 26);
+            this.boxCursoViaticos.TabIndex = 27;
+            this.boxCursoViaticos.SelectedIndexChanged += new System.EventHandler(this.boxCursoViaticos_SelectedIndexChanged);
+            // 
+            // listAlumnosViaticos
+            // 
+            this.listAlumnosViaticos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.listAlumnosViaticos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listAlumnosViaticos.FormattingEnabled = true;
+            this.listAlumnosViaticos.ItemHeight = 20;
+            this.listAlumnosViaticos.Location = new System.Drawing.Point(39, 157);
+            this.listAlumnosViaticos.Name = "listAlumnosViaticos";
+            this.listAlumnosViaticos.Size = new System.Drawing.Size(203, 324);
+            this.listAlumnosViaticos.TabIndex = 0;
+            this.listAlumnosViaticos.SelectedIndexChanged += new System.EventHandler(this.listAlumnosViaticos_SelectedIndexChanged);
+            // 
+            // asistencias
+            // 
+            this.asistencias.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.asistencias.Controls.Add(this.groupBox57);
+            this.asistencias.Controls.Add(this.groupBox56);
+            this.asistencias.ImageIndex = 1;
+            this.asistencias.Location = new System.Drawing.Point(4, 27);
+            this.asistencias.Name = "asistencias";
+            this.asistencias.Padding = new System.Windows.Forms.Padding(3);
+            this.asistencias.Size = new System.Drawing.Size(1089, 516);
+            this.asistencias.TabIndex = 1;
+            this.asistencias.Text = "Asistencias";
+            // 
+            // groupBox57
+            // 
+            this.groupBox57.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox57.Controls.Add(this.lstMateriasDelDia);
+            this.groupBox57.Controls.Add(this.boxNumeroGrupo_2);
+            this.groupBox57.Controls.Add(this.boxTurnoAsistencia_2);
+            this.groupBox57.Controls.Add(this.boxCursoAsistencia_2);
+            this.groupBox57.Controls.Add(this.dataGridListaAsistencias_2);
+            this.groupBox57.Controls.Add(this.dateTimeFechaAsistencia_2);
+            this.groupBox57.Controls.Add(this.btnConsultarLista);
+            this.groupBox57.Location = new System.Drawing.Point(590, 33);
+            this.groupBox57.Name = "groupBox57";
+            this.groupBox57.Size = new System.Drawing.Size(469, 459);
+            this.groupBox57.TabIndex = 35;
+            this.groupBox57.TabStop = false;
+            this.groupBox57.Text = "Consultar lista";
+            // 
+            // lstMateriasDelDia
+            // 
+            this.lstMateriasDelDia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstMateriasDelDia.FormattingEnabled = true;
+            this.lstMateriasDelDia.ItemHeight = 18;
+            this.lstMateriasDelDia.Location = new System.Drawing.Point(23, 161);
+            this.lstMateriasDelDia.Name = "lstMateriasDelDia";
+            this.lstMateriasDelDia.Size = new System.Drawing.Size(209, 94);
+            this.lstMateriasDelDia.TabIndex = 35;
+            this.lstMateriasDelDia.SelectedIndexChanged += new System.EventHandler(this.lstMateriasDelDia_SelectedIndexChanged);
+            // 
+            // boxNumeroGrupo_2
+            // 
+            this.boxNumeroGrupo_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupo_2.Enabled = false;
+            this.boxNumeroGrupo_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupo_2.FormattingEnabled = true;
+            this.boxNumeroGrupo_2.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupo_2.Location = new System.Drawing.Point(23, 95);
+            this.boxNumeroGrupo_2.Name = "boxNumeroGrupo_2";
+            this.boxNumeroGrupo_2.Size = new System.Drawing.Size(209, 26);
+            this.boxNumeroGrupo_2.TabIndex = 34;
+            this.boxNumeroGrupo_2.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_2_SelectedIndexChanged);
+            // 
+            // boxTurnoAsistencia_2
+            // 
+            this.boxTurnoAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoAsistencia_2.FormattingEnabled = true;
+            this.boxTurnoAsistencia_2.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoAsistencia_2.Location = new System.Drawing.Point(23, 28);
+            this.boxTurnoAsistencia_2.Name = "boxTurnoAsistencia_2";
+            this.boxTurnoAsistencia_2.Size = new System.Drawing.Size(209, 26);
+            this.boxTurnoAsistencia_2.TabIndex = 33;
+            this.boxTurnoAsistencia_2.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_2_SelectedIndexChanged);
+            // 
+            // boxCursoAsistencia_2
+            // 
+            this.boxCursoAsistencia_2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoAsistencia_2.Enabled = false;
+            this.boxCursoAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoAsistencia_2.FormattingEnabled = true;
+            this.boxCursoAsistencia_2.Items.AddRange(new object[] {
+            "Curso..."});
+            this.boxCursoAsistencia_2.Location = new System.Drawing.Point(23, 61);
+            this.boxCursoAsistencia_2.Name = "boxCursoAsistencia_2";
+            this.boxCursoAsistencia_2.Size = new System.Drawing.Size(209, 26);
+            this.boxCursoAsistencia_2.TabIndex = 30;
+            this.boxCursoAsistencia_2.SelectedIndexChanged += new System.EventHandler(this.boxCursoAsistencia_2_SelectedIndexChanged);
+            // 
+            // dataGridListaAsistencias_2
+            // 
+            this.dataGridListaAsistencias_2.AllowUserToAddRows = false;
+            this.dataGridListaAsistencias_2.AllowUserToDeleteRows = false;
+            this.dataGridListaAsistencias_2.AllowUserToResizeColumns = false;
+            this.dataGridListaAsistencias_2.AllowUserToResizeRows = false;
+            this.dataGridListaAsistencias_2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridListaAsistencias_2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridListaAsistencias_2.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridListaAsistencias_2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridListaAsistencias_2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridListaAsistencias_2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dataGridListaAsistencias_2.Location = new System.Drawing.Point(251, 28);
+            this.dataGridListaAsistencias_2.Name = "dataGridListaAsistencias_2";
+            this.dataGridListaAsistencias_2.ReadOnly = true;
+            this.dataGridListaAsistencias_2.RowHeadersVisible = false;
+            this.dataGridListaAsistencias_2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridListaAsistencias_2.Size = new System.Drawing.Size(212, 406);
+            this.dataGridListaAsistencias_2.TabIndex = 29;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "Asistencias";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dateTimeFechaAsistencia_2
+            // 
+            this.dateTimeFechaAsistencia_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFechaAsistencia_2.Location = new System.Drawing.Point(23, 127);
+            this.dateTimeFechaAsistencia_2.Name = "dateTimeFechaAsistencia_2";
+            this.dateTimeFechaAsistencia_2.Size = new System.Drawing.Size(209, 24);
+            this.dateTimeFechaAsistencia_2.TabIndex = 32;
+            this.dateTimeFechaAsistencia_2.ValueChanged += new System.EventHandler(this.dateTimeFechaAsistencia_2_ValueChanged);
+            // 
+            // btnConsultarLista
+            // 
+            this.btnConsultarLista.Enabled = false;
+            this.btnConsultarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultarLista.Location = new System.Drawing.Point(23, 262);
+            this.btnConsultarLista.Name = "btnConsultarLista";
+            this.btnConsultarLista.Size = new System.Drawing.Size(209, 43);
+            this.btnConsultarLista.TabIndex = 31;
+            this.btnConsultarLista.Text = "Consultar lista";
+            this.btnConsultarLista.UseVisualStyleBackColor = true;
+            this.btnConsultarLista.Click += new System.EventHandler(this.btnConsultarLista_Click);
+            // 
+            // groupBox56
+            // 
+            this.groupBox56.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupBox56.Controls.Add(this.btnGuardarLista);
+            this.groupBox56.Controls.Add(this.dateTimeFechaAsistencia);
+            this.groupBox56.Controls.Add(this.boxMateriaAsistencia);
+            this.groupBox56.Controls.Add(this.boxNumeroGrupo);
+            this.groupBox56.Controls.Add(this.boxCursoAsistencia);
+            this.groupBox56.Controls.Add(this.dataGridListaAsistencias);
+            this.groupBox56.Controls.Add(this.boxTurnoAsistencia);
+            this.groupBox56.Controls.Add(this.btnGenerarLista);
+            this.groupBox56.Location = new System.Drawing.Point(46, 33);
+            this.groupBox56.Name = "groupBox56";
+            this.groupBox56.Size = new System.Drawing.Size(538, 459);
+            this.groupBox56.TabIndex = 34;
+            this.groupBox56.TabStop = false;
+            this.groupBox56.Text = "Generar nueva lista";
+            // 
+            // btnGuardarLista
+            // 
+            this.btnGuardarLista.Enabled = false;
+            this.btnGuardarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarLista.Location = new System.Drawing.Point(23, 262);
+            this.btnGuardarLista.Name = "btnGuardarLista";
+            this.btnGuardarLista.Size = new System.Drawing.Size(209, 43);
+            this.btnGuardarLista.TabIndex = 39;
+            this.btnGuardarLista.Text = "Guardar lista";
+            this.btnGuardarLista.UseVisualStyleBackColor = true;
+            this.btnGuardarLista.Click += new System.EventHandler(this.btnGuardarLista_Click);
+            // 
+            // dateTimeFechaAsistencia
+            // 
+            this.dateTimeFechaAsistencia.Enabled = false;
+            this.dateTimeFechaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFechaAsistencia.Location = new System.Drawing.Point(23, 232);
+            this.dateTimeFechaAsistencia.MaxDate = new System.DateTime(2999, 9, 21, 0, 0, 0, 0);
+            this.dateTimeFechaAsistencia.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimeFechaAsistencia.Name = "dateTimeFechaAsistencia";
+            this.dateTimeFechaAsistencia.Size = new System.Drawing.Size(209, 24);
+            this.dateTimeFechaAsistencia.TabIndex = 38;
+            this.dateTimeFechaAsistencia.Value = new System.DateTime(2018, 9, 21, 0, 0, 0, 0);
+            // 
+            // boxMateriaAsistencia
+            // 
+            this.boxMateriaAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxMateriaAsistencia.Enabled = false;
+            this.boxMateriaAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxMateriaAsistencia.FormattingEnabled = true;
+            this.boxMateriaAsistencia.Items.AddRange(new object[] {
+            "Materia..."});
+            this.boxMateriaAsistencia.Location = new System.Drawing.Point(23, 200);
+            this.boxMateriaAsistencia.Name = "boxMateriaAsistencia";
+            this.boxMateriaAsistencia.Size = new System.Drawing.Size(209, 26);
+            this.boxMateriaAsistencia.TabIndex = 37;
+            this.boxMateriaAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxMateriaAsistencia_SelectedIndexChanged);
+            // 
+            // boxNumeroGrupo
+            // 
+            this.boxNumeroGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxNumeroGrupo.Enabled = false;
+            this.boxNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxNumeroGrupo.FormattingEnabled = true;
+            this.boxNumeroGrupo.Items.AddRange(new object[] {
+            "Grupo..."});
+            this.boxNumeroGrupo.Location = new System.Drawing.Point(23, 93);
+            this.boxNumeroGrupo.Name = "boxNumeroGrupo";
+            this.boxNumeroGrupo.Size = new System.Drawing.Size(209, 26);
+            this.boxNumeroGrupo.TabIndex = 30;
+            this.boxNumeroGrupo.SelectedIndexChanged += new System.EventHandler(this.boxNumeroGrupo_SelectedIndexChanged);
+            // 
+            // boxCursoAsistencia
+            // 
+            this.boxCursoAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoAsistencia.FormattingEnabled = true;
+            this.boxCursoAsistencia.Items.AddRange(new object[] {
+            "Curso..."});
+            this.boxCursoAsistencia.Location = new System.Drawing.Point(23, 61);
+            this.boxCursoAsistencia.Name = "boxCursoAsistencia";
+            this.boxCursoAsistencia.Size = new System.Drawing.Size(209, 26);
+            this.boxCursoAsistencia.TabIndex = 30;
+            this.boxCursoAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxCursoAsistencia_SelectedIndexChanged);
+            // 
+            // dataGridListaAsistencias
+            // 
+            this.dataGridListaAsistencias.AllowUserToAddRows = false;
+            this.dataGridListaAsistencias.AllowUserToDeleteRows = false;
+            this.dataGridListaAsistencias.AllowUserToResizeColumns = false;
+            this.dataGridListaAsistencias.AllowUserToResizeRows = false;
+            this.dataGridListaAsistencias.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridListaAsistencias.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridListaAsistencias.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridListaAsistencias.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridListaAsistencias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridListaAsistencias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNombreAsistencias,
+            this.colAsistenciaAsistencias});
+            this.dataGridListaAsistencias.Location = new System.Drawing.Point(248, 28);
+            this.dataGridListaAsistencias.Name = "dataGridListaAsistencias";
+            this.dataGridListaAsistencias.RowHeadersVisible = false;
+            this.dataGridListaAsistencias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridListaAsistencias.Size = new System.Drawing.Size(284, 408);
+            this.dataGridListaAsistencias.TabIndex = 29;
+            this.dataGridListaAsistencias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridListaAsistencias_CellContentClick);
+            this.dataGridListaAsistencias.CurrentCellDirtyStateChanged += new System.EventHandler(this.dataGridListaAsistencias_CurrentCellDirtyStateChanged);
+            // 
+            // colNombreAsistencias
+            // 
+            this.colNombreAsistencias.FillWeight = 128.934F;
+            this.colNombreAsistencias.HeaderText = "Nombre";
+            this.colNombreAsistencias.Name = "colNombreAsistencias";
+            this.colNombreAsistencias.ReadOnly = true;
+            this.colNombreAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colAsistenciaAsistencias
+            // 
+            this.colAsistenciaAsistencias.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.NullValue = false;
+            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle5;
+            this.colAsistenciaAsistencias.FillWeight = 71.06599F;
+            this.colAsistenciaAsistencias.HeaderText = "Asistencias";
+            this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";
+            this.colAsistenciaAsistencias.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.colAsistenciaAsistencias.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.colAsistenciaAsistencias.Width = 108;
+            // 
+            // boxTurnoAsistencia
+            // 
+            this.boxTurnoAsistencia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoAsistencia.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoAsistencia.FormattingEnabled = true;
+            this.boxTurnoAsistencia.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoAsistencia.Location = new System.Drawing.Point(23, 28);
+            this.boxTurnoAsistencia.Name = "boxTurnoAsistencia";
+            this.boxTurnoAsistencia.Size = new System.Drawing.Size(209, 26);
+            this.boxTurnoAsistencia.TabIndex = 30;
+            this.boxTurnoAsistencia.SelectedIndexChanged += new System.EventHandler(this.boxTurnoAsistencia_SelectedIndexChanged);
+            // 
+            // btnGenerarLista
+            // 
+            this.btnGenerarLista.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarLista.Location = new System.Drawing.Point(23, 125);
+            this.btnGenerarLista.Name = "btnGenerarLista";
+            this.btnGenerarLista.Size = new System.Drawing.Size(209, 32);
+            this.btnGenerarLista.TabIndex = 31;
+            this.btnGenerarLista.Text = "Generar lista";
+            this.btnGenerarLista.UseVisualStyleBackColor = true;
+            this.btnGenerarLista.Click += new System.EventHandler(this.btnGenerarLista_Click);
+            // 
+            // nuevoGrupo
+            // 
+            this.nuevoGrupo.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.nuevoGrupo.Controls.Add(this.txtNumeroGrupo);
+            this.nuevoGrupo.Controls.Add(this.dataGridGruposActivos);
+            this.nuevoGrupo.Controls.Add(this.btnCrearGrupo);
+            this.nuevoGrupo.Controls.Add(this.groupBox61);
+            this.nuevoGrupo.Controls.Add(this.boxTurnoGrupo);
+            this.nuevoGrupo.Controls.Add(this.boxCursoGrupo);
+            this.nuevoGrupo.ImageIndex = 2;
+            this.nuevoGrupo.Location = new System.Drawing.Point(4, 27);
+            this.nuevoGrupo.Name = "nuevoGrupo";
+            this.nuevoGrupo.Size = new System.Drawing.Size(1089, 516);
+            this.nuevoGrupo.TabIndex = 3;
+            this.nuevoGrupo.Text = "Nuevo Grupo";
+            // 
+            // txtNumeroGrupo
+            // 
+            this.txtNumeroGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumeroGrupo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNumeroGrupo.Location = new System.Drawing.Point(447, 50);
+            this.txtNumeroGrupo.Name = "txtNumeroGrupo";
+            this.txtNumeroGrupo.Size = new System.Drawing.Size(103, 24);
+            this.txtNumeroGrupo.TabIndex = 39;
+            this.txtNumeroGrupo.Text = "Numero";
+            this.txtNumeroGrupo.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNumeroGrupo.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // dataGridGruposActivos
+            // 
+            this.dataGridGruposActivos.AllowUserToAddRows = false;
+            this.dataGridGruposActivos.AllowUserToDeleteRows = false;
+            this.dataGridGruposActivos.AllowUserToResizeColumns = false;
+            this.dataGridGruposActivos.AllowUserToResizeRows = false;
+            this.dataGridGruposActivos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridGruposActivos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridGruposActivos.BackgroundColor = System.Drawing.Color.LightSteelBlue;
+            this.dataGridGruposActivos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridGruposActivos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dataGridGruposActivos.Location = new System.Drawing.Point(599, 49);
+            this.dataGridGruposActivos.Name = "dataGridGruposActivos";
+            this.dataGridGruposActivos.RowHeadersVisible = false;
+            this.dataGridGruposActivos.Size = new System.Drawing.Size(467, 408);
+            this.dataGridGruposActivos.TabIndex = 37;
+            // 
+            // btnCrearGrupo
+            // 
+            this.btnCrearGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearGrupo.Location = new System.Drawing.Point(409, 266);
+            this.btnCrearGrupo.Name = "btnCrearGrupo";
+            this.btnCrearGrupo.Size = new System.Drawing.Size(122, 29);
+            this.btnCrearGrupo.TabIndex = 36;
+            this.btnCrearGrupo.Text = "Crear";
+            this.btnCrearGrupo.UseVisualStyleBackColor = true;
+            this.btnCrearGrupo.Click += new System.EventHandler(this.btnCrearGrupo_Click);
+            // 
+            // groupBox61
+            // 
+            this.groupBox61.Controls.Add(this.label6);
+            this.groupBox61.Controls.Add(this.label5);
+            this.groupBox61.Controls.Add(this.dateTimeFinalizacionGrupo);
+            this.groupBox61.Controls.Add(this.dateTimeInicioGrupo);
+            this.groupBox61.Location = new System.Drawing.Point(65, 108);
+            this.groupBox61.Name = "groupBox61";
+            this.groupBox61.Size = new System.Drawing.Size(466, 152);
+            this.groupBox61.TabIndex = 35;
+            this.groupBox61.TabStop = false;
+            this.groupBox61.Text = "Periodo";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(318, 91);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(98, 18);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "Finalización";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(318, 48);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 18);
+            this.label5.TabIndex = 35;
+            this.label5.Text = "Inicio";
+            // 
+            // dateTimeFinalizacionGrupo
+            // 
+            this.dateTimeFinalizacionGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeFinalizacionGrupo.Location = new System.Drawing.Point(30, 88);
+            this.dateTimeFinalizacionGrupo.Name = "dateTimeFinalizacionGrupo";
+            this.dateTimeFinalizacionGrupo.Size = new System.Drawing.Size(274, 24);
+            this.dateTimeFinalizacionGrupo.TabIndex = 34;
+            // 
+            // dateTimeInicioGrupo
+            // 
+            this.dateTimeInicioGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimeInicioGrupo.Location = new System.Drawing.Point(30, 45);
+            this.dateTimeInicioGrupo.Name = "dateTimeInicioGrupo";
+            this.dateTimeInicioGrupo.Size = new System.Drawing.Size(274, 24);
+            this.dateTimeInicioGrupo.TabIndex = 33;
+            // 
+            // boxTurnoGrupo
+            // 
+            this.boxTurnoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTurnoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTurnoGrupo.FormattingEnabled = true;
+            this.boxTurnoGrupo.Items.AddRange(new object[] {
+            "Turno...",
+            "Matutino",
+            "Vespertino",
+            "Nocturno"});
+            this.boxTurnoGrupo.Location = new System.Drawing.Point(290, 49);
+            this.boxTurnoGrupo.Name = "boxTurnoGrupo";
+            this.boxTurnoGrupo.Size = new System.Drawing.Size(151, 26);
+            this.boxTurnoGrupo.TabIndex = 9;
+            // 
+            // boxCursoGrupo
+            // 
+            this.boxCursoGrupo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxCursoGrupo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxCursoGrupo.FormattingEnabled = true;
+            this.boxCursoGrupo.Items.AddRange(new object[] {
+            "Curso..."});
+            this.boxCursoGrupo.Location = new System.Drawing.Point(65, 49);
+            this.boxCursoGrupo.Name = "boxCursoGrupo";
+            this.boxCursoGrupo.Size = new System.Drawing.Size(209, 26);
+            this.boxCursoGrupo.TabIndex = 9;
+            // 
+            // nuevoCurso
+            // 
+            this.nuevoCurso.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.nuevoCurso.Controls.Add(this.btnCrearCurso);
+            this.nuevoCurso.Controls.Add(this.groupBox58);
+            this.nuevoCurso.ImageIndex = 3;
+            this.nuevoCurso.Location = new System.Drawing.Point(4, 27);
+            this.nuevoCurso.Name = "nuevoCurso";
+            this.nuevoCurso.Padding = new System.Windows.Forms.Padding(3);
+            this.nuevoCurso.Size = new System.Drawing.Size(1089, 516);
+            this.nuevoCurso.TabIndex = 2;
+            this.nuevoCurso.Text = "Nuevo Curso";
+            // 
+            // btnCrearCurso
+            // 
+            this.btnCrearCurso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnCrearCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCurso.Location = new System.Drawing.Point(799, 266);
+            this.btnCrearCurso.Name = "btnCrearCurso";
+            this.btnCrearCurso.Size = new System.Drawing.Size(122, 29);
+            this.btnCrearCurso.TabIndex = 37;
+            this.btnCrearCurso.Text = "Crear";
+            this.btnCrearCurso.UseVisualStyleBackColor = true;
+            this.btnCrearCurso.Click += new System.EventHandler(this.btnCrearCurso_Click);
+            // 
+            // groupBox58
+            // 
+            this.groupBox58.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.groupBox58.Controls.Add(this.groupBox59);
+            this.groupBox58.Controls.Add(this.txtNombreCurso);
+            this.groupBox58.Controls.Add(this.boxTipoCurso);
+            this.groupBox58.Location = new System.Drawing.Point(161, 42);
+            this.groupBox58.Name = "groupBox58";
+            this.groupBox58.Size = new System.Drawing.Size(760, 218);
+            this.groupBox58.TabIndex = 0;
+            this.groupBox58.TabStop = false;
+            this.groupBox58.Text = "Agregar curso nuevo";
+            // 
+            // groupBox59
+            // 
+            this.groupBox59.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.groupBox59.Controls.Add(this.btnQuitarMateriaCurso);
+            this.groupBox59.Controls.Add(this.btnAñadirMateriaCurso);
+            this.groupBox59.Controls.Add(this.listMateriasCurso);
+            this.groupBox59.Controls.Add(this.boxMateriasCurso);
+            this.groupBox59.Location = new System.Drawing.Point(274, 19);
+            this.groupBox59.Name = "groupBox59";
+            this.groupBox59.Size = new System.Drawing.Size(466, 180);
+            this.groupBox59.TabIndex = 3;
+            this.groupBox59.TabStop = false;
+            this.groupBox59.Text = "Materias";
+            // 
+            // btnQuitarMateriaCurso
+            // 
+            this.btnQuitarMateriaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuitarMateriaCurso.Location = new System.Drawing.Point(12, 51);
+            this.btnQuitarMateriaCurso.Name = "btnQuitarMateriaCurso";
+            this.btnQuitarMateriaCurso.Size = new System.Drawing.Size(81, 29);
+            this.btnQuitarMateriaCurso.TabIndex = 10;
+            this.btnQuitarMateriaCurso.Text = "Quitar";
+            this.btnQuitarMateriaCurso.UseVisualStyleBackColor = true;
+            this.btnQuitarMateriaCurso.Click += new System.EventHandler(this.btnQuitarMateriaCurso_Click);
+            // 
+            // btnAñadirMateriaCurso
+            // 
+            this.btnAñadirMateriaCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAñadirMateriaCurso.Location = new System.Drawing.Point(99, 51);
+            this.btnAñadirMateriaCurso.Name = "btnAñadirMateriaCurso";
+            this.btnAñadirMateriaCurso.Size = new System.Drawing.Size(122, 29);
+            this.btnAñadirMateriaCurso.TabIndex = 9;
+            this.btnAñadirMateriaCurso.Text = "Añadir";
+            this.btnAñadirMateriaCurso.UseVisualStyleBackColor = true;
+            this.btnAñadirMateriaCurso.Click += new System.EventHandler(this.btnAñadirMateriaCurso_Click);
+            // 
+            // listMateriasCurso
+            // 
+            this.listMateriasCurso.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.listMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listMateriasCurso.FormattingEnabled = true;
+            this.listMateriasCurso.ItemHeight = 18;
+            this.listMateriasCurso.Location = new System.Drawing.Point(239, 19);
+            this.listMateriasCurso.Name = "listMateriasCurso";
+            this.listMateriasCurso.Size = new System.Drawing.Size(216, 148);
+            this.listMateriasCurso.TabIndex = 1;
+            // 
+            // boxMateriasCurso
+            // 
+            this.boxMateriasCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxMateriasCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxMateriasCurso.FormattingEnabled = true;
+            this.boxMateriasCurso.Location = new System.Drawing.Point(12, 19);
+            this.boxMateriasCurso.Name = "boxMateriasCurso";
+            this.boxMateriasCurso.Size = new System.Drawing.Size(209, 26);
+            this.boxMateriasCurso.TabIndex = 8;
+            // 
+            // txtNombreCurso
+            // 
+            this.txtNombreCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreCurso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtNombreCurso.Location = new System.Drawing.Point(37, 38);
+            this.txtNombreCurso.Name = "txtNombreCurso";
+            this.txtNombreCurso.Size = new System.Drawing.Size(192, 24);
+            this.txtNombreCurso.TabIndex = 1;
+            this.txtNombreCurso.Text = "Nombre del curso";
+            this.txtNombreCurso.Enter += new System.EventHandler(this.placeholderEventEnter);
+            this.txtNombreCurso.Leave += new System.EventHandler(this.placeholderEventLeave);
+            // 
+            // boxTipoCurso
+            // 
+            this.boxTipoCurso.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.boxTipoCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxTipoCurso.FormattingEnabled = true;
+            this.boxTipoCurso.Items.AddRange(new object[] {
+            "Tipo...",
+            "INEFOP",
+            "Privado"});
+            this.boxTipoCurso.Location = new System.Drawing.Point(37, 72);
+            this.boxTipoCurso.Name = "boxTipoCurso";
+            this.boxTipoCurso.Size = new System.Drawing.Size(192, 26);
+            this.boxTipoCurso.TabIndex = 8;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.menuPrincipal);
             this.Controls.Add(this.tabControlPrincipal);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuPrincipal;
@@ -5916,40 +5919,6 @@
             this.menuPrincipal.ResumeLayout(false);
             this.menuPrincipal.PerformLayout();
             this.tabControlPrincipal.ResumeLayout(false);
-            this.pageDocente.ResumeLayout(false);
-            this.tabControlDocente.ResumeLayout(false);
-            this.tabPageDocentesNuevo.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.tabPageDocentesConsultarModificar.ResumeLayout(false);
-            this.tabPageDocentesConsultarModificar.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.tabPageDocentesBaja.ResumeLayout(false);
-            this.tabPageDocentesBaja.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
-            this.pageCursos.ResumeLayout(false);
-            this.tabControlCursos.ResumeLayout(false);
-            this.viaticos.ResumeLayout(false);
-            this.viaticos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).EndInit();
-            this.asistencias.ResumeLayout(false);
-            this.groupBox57.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias_2)).EndInit();
-            this.groupBox56.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).EndInit();
-            this.nuevoGrupo.ResumeLayout(false);
-            this.nuevoGrupo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).EndInit();
-            this.groupBox61.ResumeLayout(false);
-            this.groupBox61.PerformLayout();
-            this.nuevoCurso.ResumeLayout(false);
-            this.groupBox58.ResumeLayout(false);
-            this.groupBox58.PerformLayout();
-            this.groupBox59.ResumeLayout(false);
             this.pageAlumno.ResumeLayout(false);
             this.tabControlAlumnos.ResumeLayout(false);
             this.tabPageAlumnosNuevo.ResumeLayout(false);
@@ -6062,6 +6031,40 @@
             this.groupBox44.PerformLayout();
             this.groupBox45.ResumeLayout(false);
             this.groupBox45.PerformLayout();
+            this.pageDocente.ResumeLayout(false);
+            this.tabControlDocente.ResumeLayout(false);
+            this.tabPageDocentesNuevo.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.tabPageDocentesConsultarModificar.ResumeLayout(false);
+            this.tabPageDocentesConsultarModificar.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.tabPageDocentesBaja.ResumeLayout(false);
+            this.tabPageDocentesBaja.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.pageCursos.ResumeLayout(false);
+            this.tabControlCursos.ResumeLayout(false);
+            this.viaticos.ResumeLayout(false);
+            this.viaticos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViaticos)).EndInit();
+            this.asistencias.ResumeLayout(false);
+            this.groupBox57.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias_2)).EndInit();
+            this.groupBox56.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridListaAsistencias)).EndInit();
+            this.nuevoGrupo.ResumeLayout(false);
+            this.nuevoGrupo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridGruposActivos)).EndInit();
+            this.groupBox61.ResumeLayout(false);
+            this.groupBox61.PerformLayout();
+            this.nuevoCurso.ResumeLayout(false);
+            this.groupBox58.ResumeLayout(false);
+            this.groupBox58.PerformLayout();
+            this.groupBox59.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6488,8 +6491,8 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAbonoViaticos;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button btnImprimirAlumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn colNombreAsistencias;
         private System.Windows.Forms.DataGridViewCheckBoxColumn colAsistenciaAsistencias;
-        private System.Windows.Forms.Button btnImprimirAlumno;
     }
 }

@@ -59,7 +59,7 @@ namespace Ametrano.Logica
         {
             
 
-            string query = "SELECT CONCAT(a.apellido1,' ',a.nombre1), a.cedula_alumno FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+ "' and asi.fecha = '0001-01-01' AND g.id_grupo='"+id+"' GROUP BY a.cedula_alumno order by (CONCAT(a.apellido1,' ',a.nombre1)) asc;";
+            string query = "SELECT CONCAT(a.apellido1,' ',a.nombre1), a.cedula_alumno FROM alumno a JOIN asiste asi ON asi.cedula_alumno=a.cedula_alumno JOIN grupo g ON g.id_grupo=asi.id_grupo where a.estado = 'Cursando' and curdate() BETWEEN g.fecha_inicio AND g.fecha_fin and g.turno = '"+turno+"' and g.nombre_curso = '"+curso+ "' and asi.fecha = '0001-01-01' AND g.id_grupo='"+id+"' GROUP BY a.cedula_alumno order by (CONCAT(a.apellido1,' ',a.nombre1)) asc;";
             MySqlDataAdapter datosConsulta = objetoConexion.consultarDatos(query);
             dataTable = new DataTable();
             datosConsulta.Fill(dataTable);
