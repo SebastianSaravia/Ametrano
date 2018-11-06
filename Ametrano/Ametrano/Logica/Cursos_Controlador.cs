@@ -778,6 +778,35 @@ namespace Ametrano.Logica
             return datosParaRetornar;
 
         }
+        public string[] obtenerDatosGrupo(int id_grupo)
+        {
+            string[] retorno = new String[4];
+
+            string sqlQuery = "select serial,fecha_inicio,fecha_fin, turno from grupo where id_grupo = " + id_grupo;
+            MySqlDataAdapter sqlDatos = objetoConexion.consultarDatos(sqlQuery);
+            DataTable tableDatos = new DataTable();
+            sqlDatos.Fill(tableDatos);
+
+            if (tableDatos.Rows.Count > 0)
+            {
+                retorno[0] = tableDatos.Rows[0][0].ToString();
+                retorno[1] = tableDatos.Rows[0][1].ToString();
+                retorno[2] = tableDatos.Rows[0][2].ToString();
+                retorno[3] = tableDatos.Rows[0][3].ToString();
+            }
+
+
+
+
+            return retorno;
+        }
+
+        public int actualizarGrupo(int id_grupo, string serial, string fecha_inicio, string fecha_fin, string turno)
+        {
+            string sqlQuery = "update grupo set grupo.serial = '" + serial + "', grupo.fecha_inicio = '" + fecha_inicio + "', grupo.fecha_fin = '" + fecha_fin + "', grupo.turno = '" + turno + "' where id_grupo = " + id_grupo;
+            int rowsAffected = objetoConexion.sqlInsertUpdate(sqlQuery);
+            return rowsAffected;
+        }
         
     }
 

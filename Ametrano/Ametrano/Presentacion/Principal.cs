@@ -39,6 +39,7 @@ namespace Ametrano.Presentacion
         private dynamic[] eventoClickAgregarAlumnoCurso = new dynamic[2];
         private dynamic[] eventoClickListarPeriodosAsistencia = new dynamic[2];
         private dynamic[] eventoClickCursoViaticos = new dynamic[2];
+        private dynamic[] eventoClickListarPeriodosModificarGrupo = new dynamic[2];
         private DatosAlumno datosAlumno = new DatosAlumno();
         private DatosAlumno datosAlumnoConsulta = new DatosAlumno();
         private DatosAlumno datosAlumnoModificacion = new DatosAlumno();
@@ -131,6 +132,9 @@ namespace Ametrano.Presentacion
             boxBuscarAlumno.SelectedIndex = 0;
             boxTurnoAlumno.SelectedIndex = 0;
             boxTurnoAlumno_2.SelectedIndex = 0;
+            boxTurnoModificarGrupo.SelectedIndex = 0;
+            boxCursoModificarGrupo.SelectedIndex = 0;
+            boxCursoModificarGrupo.SelectedIndex = 0;
 
             dateTimeFechaAsistencia.Value = DateTime.Now;
             dateTimeFechaAsistencia_2.Value = DateTime.Now;
@@ -867,7 +871,7 @@ namespace Ametrano.Presentacion
                     personasCargo[5] = txtCargaSemanalCuidadoAlumno.Text;
                 }
 
-                if (boxTrabajoCuidandoAlumno.SelectedIndex == 0)
+                if (boxTrabajoCuidandoAlumno.SelectedIndex == 0 || boxTrabajoCuidandoAlumno.SelectedIndex == 2)
                 {
                     personasCargo[6] = "0";
                 }
@@ -1132,7 +1136,14 @@ namespace Ametrano.Presentacion
 
                 //Hogar
 
-                lblJefeHogarAlumno.Text = "Jefe de hogar: " + diccionarioDeAlumno["hogar_jefe"];
+                if (diccionarioDeAlumno["hogar_jefe"].Equals("0"))
+                {
+                    lblJefeHogarAlumno.Text = "Jefe de hogar: " + "NO";
+                }
+                else
+                {
+                    lblJefeHogarAlumno.Text = "Jefe de hogar: " + "SI";
+                }
 
                 if (diccionarioDeAlumno["hogar_cantidad_hijos"].Equals("-1"))
                 {
@@ -1146,17 +1157,54 @@ namespace Ametrano.Presentacion
                 }
 
                 //Trabajo
+                if (diccionarioDeAlumno["trabajo_trabajo_alguna_vez"].Equals("0"))
+                {
+                    lblTrabajoAlgunaVezAlumno.Text = "Trabajo aluna vez: " + "NO";
+                }else
+                {
+                    lblTrabajoAlgunaVezAlumno.Text = "Trabajo aluna vez: " + "SI";
+                }
+                if (diccionarioDeAlumno["trabajo_trabaja_actualmente"].Equals("0"))
+                {
+                    lblTrabajaActualmenteAlumno.Text = "Trabaja actualmente: " + "NO";
+                }
+                else
+                {
+                    lblTrabajaActualmenteAlumno.Text = "Trabaja actualmente: " + "SI";
+                }
+                if(diccionarioDeAlumno["trabajo_tiempo_desempleado"].Equals("Tiempo desempleado"))
+                {
+                    lblTiempoDesempleadoAlumno.Text = "Tiempo desempleado: " + "Sin Dato";
+                }
+                else
+                {
+                    lblTiempoDesempleadoAlumno.Text = "Tiempo desempleado: " + diccionarioDeAlumno["trabajo_tiempo_desempleado"];
+                }
+                if(diccionarioDeAlumno["trabajo_horas_jornada"].Equals("Horas de jornada"))
+                {
+                    lblHorasJornadaLaboralAlumno.Text = "Horas de jornada laboral: " + "Sin Dato";
 
-                lblTrabajoAlgunaVezAlumno.Text = "Trabajo aluna vez: " + diccionarioDeAlumno["trabajo_trabajo_alguna_vez"];
-                lblTrabajaActualmenteAlumno.Text = "Trabaja actualmente: " + diccionarioDeAlumno["trabajo_trabaja_actualmente"];
-                lblTiempoDesempleadoAlumno.Text = "Tiempo desempleado: " + diccionarioDeAlumno["trabajo_tiempo_desempleado"];
-                lblHorasJornadaLaboralAlumno.Text = "Horas de jornada laboral: " + diccionarioDeAlumno["trabajo_horas_jornada"];
-                lblIngresoMensualAlumno.Text = "Ingreso mensual: " + diccionarioDeAlumno["trabajo_ingreso_mensual"];
+                }
+                else
+                {
+                    lblHorasJornadaLaboralAlumno.Text = "Horas de jornada laboral: " + diccionarioDeAlumno["trabajo_horas_jornada"];
+
+                }
+                if(diccionarioDeAlumno["trabajo_ingreso_mensual"].Equals("Ingreso mensual"))
+                {
+                    lblIngresoMensualAlumno.Text = "Ingreso mensual: " + "Sin Dato";
+
+                }
+                else
+                {
+                    lblIngresoMensualAlumno.Text = "Ingreso mensual: " + diccionarioDeAlumno["trabajo_ingreso_mensual"];
+
+                }
 
                 //Personas a cargo
                 if (diccionarioDeAlumno["personas_cargo_0_17"].Equals("0"))
                 {
-                    lbl0a17Alumno.Text = "De 0 a 17 años: " + "No aplica";
+                    lbl0a17Alumno.Text = "De 0 a 17 años: " + "Sin Dato";
                 }
                 else
                 {
@@ -1165,7 +1213,7 @@ namespace Ametrano.Presentacion
                 
                 if (diccionarioDeAlumno["personas_cargo_18_59"].Equals("0"))
                 {
-                    lbl18a59Alumno.Text = "De 18 a 59 años: " + "No aplica";
+                    lbl18a59Alumno.Text = "De 18 a 59 años: " + "Sin Dato";
                 }
                 else
                 {
@@ -1174,7 +1222,7 @@ namespace Ametrano.Presentacion
 
                 if (diccionarioDeAlumno["personas_cargo_60_mas"].Equals("0"))
                 {
-                    lbl60oMasAlumno.Text = "De 60 años o mas: " + "No aplica";
+                    lbl60oMasAlumno.Text = "De 60 años o mas: " + "Sin Dato";
 
                 }else
                 {
@@ -1183,29 +1231,29 @@ namespace Ametrano.Presentacion
                 }
                 if (diccionarioDeAlumno["personas_cargo_con_discapacidad"].Equals("0"))
                 {
-                    lblPersonaConDiscapacidadAlumno.Text = "Persona con discapacidad: " + "No aplica";
+                    lblPersonaConDiscapacidadAlumno.Text = "Persona con discapacidad: " + "NO";
 
                 }
                 else
                 {
-                    lblPersonaConDiscapacidadAlumno.Text = "Persona con discapacidad: " + diccionarioDeAlumno["personas_cargo_con_discapacidad"];
+                    lblPersonaConDiscapacidadAlumno.Text = "Persona con discapacidad: " + "SI";
 
                 }
 
                 if (diccionarioDeAlumno["personas_cargo_cuenta_con_apoyo"].Equals("0"))
                 {
-                    lblCuentaConApoyoAlumno.Text = "Cuenta con apoyo: " + "No aplica";
+                    lblCuentaConApoyoAlumno.Text = "Cuenta con apoyo: " + "NO";
 
                 }
                 else
                 {
-                    lblCuentaConApoyoAlumno.Text = "Cuenta con apoyo: " + diccionarioDeAlumno["personas_cargo_cuenta_con_apoyo"];
+                    lblCuentaConApoyoAlumno.Text = "Cuenta con apoyo: " + "SI";
 
                 }
 
                 if (diccionarioDeAlumno["personas_cargo_carga_semanal_cuidado"].Equals(""))
                 {
-                    lblCargaSemanalCuidadoAlumno.Text = "Carga semanal de cuidado: " + "No aplica";
+                    lblCargaSemanalCuidadoAlumno.Text = "Carga semanal de cuidado: " + "Sin Dato";
 
                 }
                 else
@@ -1216,17 +1264,17 @@ namespace Ametrano.Presentacion
 
                 if (diccionarioDeAlumno["personas_cargo_trabajo_cuidando"].Equals("0"))
                 {
-                    lblTrabajoAnteriormenteCuidandoAlumno.Text = "Trabajo anteriormente cuidando: " + "No aplica";
+                    lblTrabajoAnteriormenteCuidandoAlumno.Text = "Trabajo anteriormente cuidando: " + "NO";
 
                 }else
                 {
-                    lblTrabajoAnteriormenteCuidandoAlumno.Text = "Trabajo anteriormente cuidando: " + diccionarioDeAlumno["personas_cargo_trabajo_cuidando"];
+                    lblTrabajoAnteriormenteCuidandoAlumno.Text = "Trabajo anteriormente cuidando: " + "SI";
 
                 }
 
                 if (diccionarioDeAlumno["personas_cargo_experiencia_instituciones_cuidado"].Equals(""))
                 {
-                    lblExperienciaInstitucionesCuidadoAlumno.Text = "Experiencia en instituciones de cuidado: " + "No aplica";
+                    lblExperienciaInstitucionesCuidadoAlumno.Text = "Experiencia en instituciones de cuidado: " + "Sin Dato";
 
                 }else
                 {
@@ -1236,10 +1284,36 @@ namespace Ametrano.Presentacion
 
 
                 //Accesso a internet
+                if (diccionarioDeAlumno["internet_usa_internet"].Equals("0"))
+                {
+                    lblUsaInternetAlumno.Text = "Usa internet: " + "NO";
 
-                lblUsaInternetAlumno.Text = "Usa internet: " + diccionarioDeAlumno["internet_usa_internet"];
-                lblFacilAccesoInternetAlumno.Text = "Facil acceso a internet: " + diccionarioDeAlumno["internet_facil_acceso"];
-                lblMedioAccesoInternetAlumno.Text = "Medio de acceso a internet: " + diccionarioDeAlumno["internet_medio_acceso"];
+                }
+                else
+                {
+                    lblUsaInternetAlumno.Text = "Usa internet: " + "SI";
+
+                }
+                if (diccionarioDeAlumno["internet_facil_acceso"].Equals("0"))
+                {
+                    lblFacilAccesoInternetAlumno.Text = "Facil acceso a internet: " + "NO";
+
+                }
+                else
+                {
+                    lblFacilAccesoInternetAlumno.Text = "Facil acceso a internet: " + "SI";
+
+                }
+                if (diccionarioDeAlumno["internet_medio_acceso"].Equals("Medio de acceso a internet"))
+                {
+                    lblMedioAccesoInternetAlumno.Text = "Medio de acceso a internet: " + "Sin Dato";
+
+                }
+                else
+                {
+                    lblMedioAccesoInternetAlumno.Text = "Medio de acceso a internet: " + diccionarioDeAlumno["internet_medio_acceso"];
+
+                }
 
 
                 tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
@@ -3297,7 +3371,9 @@ namespace Ametrano.Presentacion
                     }
                     maskedTxtFechaNacimientoAlumno.Mask = "";
                     maskedTxtFechaNacimientoAlumno.Text = "Fecha de nacimiento";
-                    if(MessageBox.Show("¿Desea seguir ingresando alumnos para este curso?", "Pregunta", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+
+                    DialogResult resultado = MessageBox.Show("¿Desea seguir ingresando alumnos para este curso?", "Pregunta", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1);
+                    if (resultado == DialogResult.Yes)
                     {
                         limpiarFormulario(groupBox6);
                         limpiarFormulario(groupBox8);
@@ -3308,7 +3384,7 @@ namespace Ametrano.Presentacion
                         tabControlIngresarAlumno.Controls.Remove(tabPageIngresarAlumnoDatosInteres);
                         tabControlIngresarAlumno.Controls.Add(tabPageIngresarAlumnoDatosPersonales);
                     }
-                    else
+                    else if(resultado == DialogResult.No)
                     {
                         limpiarFormulario(tabPageIngresarAlumnoDatosPersonales);
                         limpiarFormulario(tabPageIngresarAlumnoDatosInteres);
@@ -4371,6 +4447,144 @@ namespace Ametrano.Presentacion
 
         }
 
-  
+        private void boxTurnoModificarGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxTurnoModificarGrupo.SelectedIndex != 0)
+            {
+                boxCursoModificarGrupo.Items.Clear();
+                boxCursoModificarGrupo.Items.Add("Curso...");
+                boxCursoModificarGrupo.SelectedIndex = 0;
+                string[] cursos = CurContr.listarCursoPorTurno(boxTurnoModificarGrupo.SelectedItem.ToString());
+                for (int i = 0; i < cursos.Length; i++)
+                {
+                    boxCursoModificarGrupo.Items.Add(cursos[i]);
+                }
+                boxCursoModificarGrupo.Enabled = true;
+            }
+            else
+            {
+                boxCursoModificarGrupo.Enabled = false;
+            }
+        }
+
+        private void boxCursoModificarGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            boxGrupoModificarGrupo.Items.Clear();
+            boxGrupoModificarGrupo.Items.Add("Grupo...");
+            boxGrupoModificarGrupo.SelectedIndex = 0;
+
+            try
+            {
+                if (boxCursoModificarGrupo.SelectedIndex != 0)
+                {
+                    boxGrupoModificarGrupo.Enabled = true;
+                    DataTable data = new DataTable();
+
+                    string turno = boxTurnoModificarGrupo.SelectedItem.ToString();
+                    string curso = boxCursoModificarGrupo.SelectedItem.ToString();
+                    string[] grupos = CurContr.ListarNumeroGrupo(curso, turno, out data);
+
+                    for (int i = 0; i < grupos.Length; i++)
+                    {
+
+                        boxGrupoModificarGrupo.Items.Add(grupos[i]);
+                    }
+                    eventoClickListarPeriodosModificarGrupo[0] = true;
+                    eventoClickListarPeriodosModificarGrupo[1] = data;
+                }
+                else
+                {
+                    boxGrupoModificarGrupo.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+
+
+            }
+        }
+
+        private void boxGrupoModificarGrupo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (boxGrupoModificarGrupo.SelectedIndex!=0)
+            {
+                if (eventoClickListarPeriodosModificarGrupo[0])
+                {
+                    DataTable datos = eventoClickListarPeriodosModificarGrupo[1];
+                    int id_grupo;
+                    int.TryParse(datos.Rows[boxGrupoModificarGrupo.SelectedIndex - 1][1].ToString(), out id_grupo);
+                    string[] infoGrupo = CurContr.obtenerDatosGrupo(id_grupo);
+                    if (infoGrupo.Length > 0)
+                    {
+                        txtNumeroModificarGrupo.Text = infoGrupo[0];
+                        dtpFechaInicioModificarGrupo.Value = DateTime.Parse(infoGrupo[1]);
+                        dtpFechaFinModificarGrupo.Value = DateTime.Parse(infoGrupo[2]);
+                        boxTurnoInformacionModificarGrupo.SelectedItem = infoGrupo[3];
+                        grpModificarGrupo.Enabled = true;
+                    }
+
+                }
+
+
+            }
+        }
+
+        private void btnGuardarModificarGrupo_Click(object sender, EventArgs e)
+        {
+            DateTime fechaInicio = dtpFechaInicioModificarGrupo.Value;
+            DateTime fechaFin = dtpFechaFinModificarGrupo.Value;
+            bool errores = false;
+            string mensaje = "Errores encontrados:";
+            if(fechaInicio == fechaFin)
+            {
+                errores = true;
+                mensaje += "\nLa fecha de inicio y fecha de fin no pueden ser iguales";
+            }
+            if(fechaInicio > fechaFin)
+            {
+                errores = true;
+                mensaje += "\nLa fecha de fin no puede ser menor a la fecha de inicio";
+            }
+            if (txtNumeroModificarGrupo.Text.Equals(controlador.mapTextBox[txtNumeroModificarGrupo.GetHashCode().ToString()]))
+            {
+                errores = true;
+                mensaje += "\nEl numero de grupo no puede estar en blanco";
+            }
+            if(boxTurnoInformacionModificarGrupo.SelectedIndex == 0)
+            {
+                errores = true;
+                mensaje += "\nDebe seleccionar un turno";
+            }
+
+
+
+            if (!errores)
+            {
+                string numero = txtNumeroModificarGrupo.Text;
+                string fechaInicioStr = fechaInicio.ToString("yyyy-MM-dd");
+                string fechaFinStr = fechaFin.ToString("yyyy-MM-dd");
+                string turno = boxTurnoInformacionModificarGrupo.SelectedItem.ToString();
+
+                DataTable datos = eventoClickListarPeriodosModificarGrupo[1];
+                int id_grupo;
+                int.TryParse(datos.Rows[boxGrupoModificarGrupo.SelectedIndex - 1][1].ToString(), out id_grupo);
+
+                if (CurContr.actualizarGrupo(id_grupo, numero, fechaInicioStr, fechaFinStr, turno)>0) {
+                    MessageBox.Show("Se ha actualizado el grupo con exito","Operacion exitosa",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    limpiarFormulario(modificarGrupo);
+                    grpModificarGrupo.Enabled = false;
+                }else
+                {
+                    MessageBox.Show("Error al actualizar el grupo", "Operacion no realizada", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+            }
+            else
+            {
+                MessageBox.Show(mensaje, "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
