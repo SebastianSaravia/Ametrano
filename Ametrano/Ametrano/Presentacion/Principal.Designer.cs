@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuImageButton2 = new Bunifu.Framework.UI.BunifuImageButton();
             this.btnCursos = new Bunifu.Framework.UI.BunifuImageButton();
@@ -3352,6 +3352,7 @@
             this.maskedTxtFechaNacimientoAlumno_2.Size = new System.Drawing.Size(151, 24);
             this.maskedTxtFechaNacimientoAlumno_2.TabIndex = 70;
             this.maskedTxtFechaNacimientoAlumno_2.Text = "Fecha de nacimiento";
+            this.maskedTxtFechaNacimientoAlumno_2.TextChanged += new System.EventHandler(this.maskedTxtFechaNacimientoAlumno_2_TextChanged);
             this.maskedTxtFechaNacimientoAlumno_2.Enter += new System.EventHandler(this.placeholderEventEnter);
             this.maskedTxtFechaNacimientoAlumno_2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Solo_numeros_KeyPress);
             this.maskedTxtFechaNacimientoAlumno_2.Leave += new System.EventHandler(this.placeholderEventLeave);
@@ -5613,10 +5614,10 @@
             // colAsistenciaAsistencias
             // 
             this.colAsistenciaAsistencias.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.NullValue = false;
-            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.NullValue = false;
+            this.colAsistenciaAsistencias.DefaultCellStyle = dataGridViewCellStyle9;
             this.colAsistenciaAsistencias.FillWeight = 71.06599F;
             this.colAsistenciaAsistencias.HeaderText = "Asistencias";
             this.colAsistenciaAsistencias.Name = "colAsistenciaAsistencias";

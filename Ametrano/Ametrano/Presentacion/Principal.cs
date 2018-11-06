@@ -1939,6 +1939,7 @@ namespace Ametrano.Presentacion
                 {
                     txtApellido2Alumno_2.Text = datosAlumnoDiccionario["apellido2"];
                 }
+                maskedTxtFechaNacimientoAlumno_2.Mask = "0000-00-00";
                 maskedTxtFechaNacimientoAlumno_2.Text = datosAlumnoDiccionario["fecha_nac"];
                 txtEdadAlumno_2.Text = datosAlumnoDiccionario["edad"];
                 if (datosAlumnoDiccionario["sexo"].Equals(""))
@@ -4584,6 +4585,30 @@ namespace Ametrano.Presentacion
             else
             {
                 MessageBox.Show(mensaje, "Errores encontrados", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void maskedTxtFechaNacimientoAlumno_2_TextChanged(object sender, EventArgs e)
+        {
+            if (maskedTxtFechaNacimientoAlumno_2.Text.Length == 10)
+            {
+                string fechaNacStr = maskedTxtFechaNacimientoAlumno_2.Text;
+
+                DateTime nacimiento;
+                DateTime.TryParse(maskedTxtFechaNacimientoAlumno_2.Text, out nacimiento);
+
+                int edad = controlador.buscarEdad(nacimiento.ToString("yyyy-MM-dd"));
+
+                if (edad > 110 || edad < 0)
+                {
+                    MessageBox.Show("Edad no valida, verifique", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtEdadAlumno_2.Text = controlador.mapTextBox[txtEdadAlumno_2.GetHashCode().ToString()];
+                    maskedTxtFechaNacimientoAlumno_2.Text = "    -  -";
+                }
+                else
+                {
+                    txtEdadAlumno_2.Text = edad + "";
+                }
             }
         }
     }
